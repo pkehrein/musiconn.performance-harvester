@@ -4,13 +4,13 @@ import os
 import requests
 import json
 
-location_links = {}
-series_links = {}
-source_links = {}
-person_links = {}
-subject_links = {}
-corporation_links = {}
-work_links = {}
+location_auth = {}
+series_auth = {}
+source_auth = {}
+person_auth = {}
+subject_auth = {}
+corporation_auth = {}
+work_auth = {}
 event_auth = {}
 save_meta = False
 
@@ -75,13 +75,13 @@ def save_json_category_data(category_data, file_path):
 
 
 def map_json_data(data, template, index):
-    global location_links
-    global series_links
-    global source_links
-    global person_links
-    global subject_links
-    global corporation_links
-    global work_links
+    global location_auth
+    global series_auth
+    global source_auth
+    global person_auth
+    global subject_auth
+    global corporation_auth
+    global work_auth
     global event_auth
     global save_meta
 
@@ -102,44 +102,44 @@ def map_event(data, template, index):
     template_prefix['schema:name'] = data_prefix['title']
     template_prefix['schema:temporalCoverage']['@value'] = parse_time(data_prefix)
     location_index = data_prefix['locations'][0]['location']
-    if str(location_index) not in location_links:
-        location_links[f'{location_index}'] = fetch_meta_data(location_index, 'location')
+    if str(location_index) not in location_auth:
+        location_auth[f'{location_index}'] = fetch_meta_data(location_index, 'location')
         save_meta = True
-    template_prefix['schema:location'] = location_links[f'{location_index}']
+    template_prefix['schema:location'] = location_auth[f'{location_index}']
     if data_prefix['names'] is not None:
         template_prefix['schema:alternateName'] = enrich_names(data_prefix)
     series_index = data_prefix['serials'][0]['series']
-    if str(series_index) not in series_links:
-        series_links[f'{series_index}'] = fetch_meta_data(series_index, 'series')
+    if str(series_index) not in series_auth:
+        series_auth[f'{series_index}'] = fetch_meta_data(series_index, 'series')
         save_meta = True
-    template_prefix['schema:superEvent'][0]['@id'] = series_links[f'{series_index}']
+    template_prefix['schema:superEvent'][0]['@id'] = series_auth[f'{series_index}']
     if data_prefix['sources'] is not None:
         sources = []
         for index, source in enumerate(data_prefix['sources']):
             source_index = data_prefix['sources'][index]['source']
-            if str(source_index) not in source_links:
-                source_links[f'{source_index}'] = fetch_meta_data(source_index, 'source')
+            if str(source_index) not in source_auth:
+                source_auth[f'{source_index}'] = fetch_meta_data(source_index, 'source')
                 save_meta = True
-            sources.append({'@id': copy.deepcopy(source_links[f'{source_index}'])})
+            sources.append({'@id': copy.deepcopy(source_auth[f'{source_index}'])})
         template_prefix['schema:recordedIn'] = sources
     if data_prefix['persons'] is not None or data_prefix['corporations'] is not None:
-        template_prefix['schema:performer'] = enrich_performers(data_prefix, True)
+        template_prefix['schema:performer'] = complete_event_performers(data_prefix, True)
 
     if data_prefix['performances'] is not None:
         works = []
         for index, work in enumerate(data_prefix['performances']):
             work_index = data_prefix['performances'][index]['work']
-            if str(work_index) not in work_links:
-                work_links[f'{work_index}'] = fetch_meta_data(work_index, 'work')
+            if str(work_index) not in work_auth:
+                work_auth[f'{work_index}'] = fetch_meta_data(work_index, 'work')
                 save_meta = True
             composers = []
             for comp_index, composer in enumerate(data_prefix['performances'][index]['composers']):
                 composer_index = data_prefix['performances'][index]['composers'][comp_index]['person']
-                if str(composer_index) not in person_links:
-                    person_links[f'{composer_index}'] = fetch_meta_data(composer_index, 'person')
+                if str(composer_index) not in person_auth:
+                    person_auth[f'{composer_index}'] = fetch_meta_data(composer_index, 'person')
                     save_meta = True
-                composers.append({"@type": "schema:Person", '@id': copy.deepcopy(person_links[f'{composer_index}'])})
-            works.append({'@id': work_links[f'{work_index}'], 'schema:author': composers})
+                composers.append({"@type": "schema:Person", '@id': copy.deepcopy(person_auth[f'{composer_index}'])})
+            works.append({'@id': work_auth[f'{work_index}'], 'schema:author': composers})
         template_prefix['schema:workPerformed'] = works
     if data_prefix['url'] is not None:
         template_prefix['schema:url'] = data_prefix['url']
@@ -160,17 +160,17 @@ def map_work(data, template, index):
     if data_prefix['names'] is not None:
         template_prefix['schema:alternateName'] = enrich_names(data_prefix)
     if data_prefix['persons'] is not None or data_prefix['corporations'] is not None:
-        template_prefix['schema:contributor'] = enrich_performers(data_prefix, False)
+        template_prefix['schema:contributor'] = complete_event_performers(data_prefix, False)
     if data_prefix['url'] is not None:
         template_prefix['schema:url'] = data_prefix['url']
     if data_prefix['genres'] is not None:
         genres = []
         for index, genre in enumerate(data_prefix['genres']):
             genre_index = data_prefix['genres'][index]['subject']
-            if str(genre_index) not in subject_links:
-                subject_links[f'{genre_index}'] = fetch_meta_data(genre_index, 'subject')
+            if str(genre_index) not in subject_auth:
+                subject_auth[f'{genre_index}'] = fetch_meta_data(genre_index, 'subject')
                 save_meta = True
-            genres.append({'@id': copy.deepcopy(subject_links[f'{genre_index}'])})
+            genres.append({'@id': copy.deepcopy(subject_auth[f'{genre_index}'])})
         template_prefix['schema:genre'] = genres
     if 'descriptions' in data_prefix and data_prefix['descriptions'] is not None:
         descriptions = []
@@ -183,19 +183,19 @@ def map_work(data, template, index):
         childs = []
         for index, child in enumerate(data_prefix['childs']):
             work_index = data_prefix['childs'][index]['work']
-            if str(work_index) not in work_links:
-                work_links[f'{work_index}'] = fetch_meta_data(work_index, 'work')
+            if str(work_index) not in work_auth:
+                work_auth[f'{work_index}'] = fetch_meta_data(work_index, 'work')
                 save_meta = True
-            childs.append({"@type": "schema:MusicComposition", 'id': copy.deepcopy(work_links[f'{work_index}'])})
+            childs.append({"@type": "schema:MusicComposition", 'id': copy.deepcopy(work_auth[f'{work_index}'])})
         template_prefix['schema:includedComposition'] = childs
     if 'composers' in data_prefix and data_prefix['composers'] is not None:
         composers = []
         for index, composer in enumerate(data_prefix['composers']):
             composer_index = data_prefix['composers'][index]['person']
-            if str(composer_index) not in person_links:
-                person_links[f'{composer_index}'] = fetch_meta_data(composer_index, 'person')
+            if str(composer_index) not in person_auth:
+                person_auth[f'{composer_index}'] = fetch_meta_data(composer_index, 'person')
                 save_meta = True
-            composers.append({"@type": "schema:Person", "@id": copy.deepcopy(person_links[f'{composer_index}'])})
+            composers.append({"@type": "schema:Person", "@id": copy.deepcopy(person_auth[f'{composer_index}'])})
         template_prefix['schema:composer'] = composers
     if 'events' in data_prefix and data_prefix['events'] is not None:
         events = []
@@ -208,38 +208,38 @@ def map_work(data, template, index):
         template_prefix['schema:subjectOf'] = events
 
 
-def enrich_performers(data_prefix, role):
+def complete_event_performers(data_prefix, role):
     global save_meta
     performers = []
     for index, person in enumerate(data_prefix['persons']):
         person_index = data_prefix['persons'][index]['person']
-        if str(person_index) not in person_links:
-            person_links[f'{person_index}'] = fetch_meta_data(person_index, 'person')
+        if str(person_index) not in person_auth:
+            person_auth[f'{person_index}'] = fetch_meta_data(person_index, 'person')
             save_meta = True
         if role:
             occupation_index = data_prefix['persons'][index]['subject']
-            if str(occupation_index) not in subject_links:
-                subject_links[f'{occupation_index}'] = fetch_meta_data(occupation_index, 'subject')
+            if str(occupation_index) not in subject_auth:
+                subject_auth[f'{occupation_index}'] = fetch_meta_data(occupation_index, 'subject')
                 save_meta = True
-            performers.append({'@type': 'schema:Person', '@id': copy.deepcopy(person_links[f'{person_index}']),
-                               'schema:hasOccupation': copy.deepcopy(subject_links[f'{occupation_index}'])})
+            performers.append({'@type': 'schema:Person', '@id': copy.deepcopy(person_auth[f'{person_index}']),
+                               'schema:hasOccupation': copy.deepcopy(subject_auth[f'{occupation_index}'])})
         else:
-            performers.append({'@type': 'schema:Person', '@id': copy.deepcopy(person_links[f'{person_index}'])})
+            performers.append({'@type': 'schema:Person', '@id': copy.deepcopy(person_auth[f'{person_index}'])})
     for index, corporation in enumerate(data_prefix['corporations']):
         corporation_index = data_prefix['corporations'][index]['corporation']
-        if str(corporation_index) not in corporation_links:
-            corporation_links[f'{corporation_index}'] = fetch_meta_data(corporation_index, 'corporation')
+        if str(corporation_index) not in corporation_auth:
+            corporation_auth[f'{corporation_index}'] = fetch_meta_data(corporation_index, 'corporation')
             save_meta = True
         if role:
             occupation_index = data_prefix['corporations'][index]['subject']
-            if str(occupation_index) not in subject_links:
-                subject_links[f'{occupation_index}'] = fetch_meta_data(occupation_index, 'subject')
+            if str(occupation_index) not in subject_auth:
+                subject_auth[f'{occupation_index}'] = fetch_meta_data(occupation_index, 'subject')
                 save_meta = True
             performers.append(
-                {'@type': 'schema:PerformingGroup', '@id': copy.deepcopy(corporation_links[f'{corporation_index}']),
-                 'schema:description': copy.deepcopy(subject_links[f'{occupation_index}'])})
+                {'@type': 'schema:PerformingGroup', '@id': copy.deepcopy(corporation_auth[f'{corporation_index}']),
+                 'schema:description': copy.deepcopy(subject_auth[f'{occupation_index}'])})
         else:
-            performers.append({'@type': 'schema:PerformingGroup', '@id': copy.deepcopy(corporation_links[f'{corporation_index}'])})
+            performers.append({'@type': 'schema:PerformingGroup', '@id': copy.deepcopy(corporation_auth[f'{corporation_index}'])})
     return performers
 
 
@@ -279,20 +279,20 @@ def process_json_data():
     save_json_category_data(mapped_work, f'work_feed/')
 
     if save_meta:
-        save_meta_data_to_json(location_links, 'meta/location.json')
-        save_meta_data_to_json(series_links, 'meta/series.json')
-        save_meta_data_to_json(source_links, 'meta/sources.json')
-        save_meta_data_to_json(person_links, 'meta/persons.json')
-        save_meta_data_to_json(subject_links, 'meta/subjects.json')
-        save_meta_data_to_json(corporation_links, 'meta/corporations.json')
-        save_meta_data_to_json(work_links, 'meta/works.json')
-        save_meta_data_to_json(event_auth, 'meta/events.json')
+        save_meta_data_to_json(location_auth, 'authorities/location.json')
+        save_meta_data_to_json(series_auth, 'authorities/series.json')
+        save_meta_data_to_json(source_auth, 'authorities/sources.json')
+        save_meta_data_to_json(person_auth, 'authorities/persons.json')
+        save_meta_data_to_json(subject_auth, 'authorities/subjects.json')
+        save_meta_data_to_json(corporation_auth, 'authorities/corporations.json')
+        save_meta_data_to_json(work_auth, 'authorities/works.json')
+        save_meta_data_to_json(event_auth, 'authorities/events.json')
 
 
 def fetch_meta_data(index, category):
     authority_linked = {}
     data = fetch_json_data(f"https://performance.musiconn.de/api?action=get&format=json&{category}={str(index)}")
-    link = format_link(data, category, index)
+    link = data[category][str(index)]['url']
     authority = {"gnd": None, "viaf": None}
     data_prefix = data[category][str(index)]
     if "authorities" in data_prefix and data_prefix["authorities"] is not None:
@@ -317,11 +317,6 @@ def fetch_authorities(authority_list):
     return data_list
 
 
-def format_link(meta_data, category, index):
-    link = meta_data[category][str(index)]['url']
-    return link
-
-
 def save_meta_data_to_json(data, file_path):
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
     with open(f"{file_path}", 'w', encoding='utf-8') as file:
@@ -330,45 +325,45 @@ def save_meta_data_to_json(data, file_path):
 
 
 def load_meta_data():
-    global location_links
-    global series_links
-    global source_links
-    global person_links
-    global subject_links
-    global corporation_links
-    global work_links
+    global location_auth
+    global series_auth
+    global source_auth
+    global person_auth
+    global subject_auth
+    global corporation_auth
+    global work_auth
     global event_auth
 
-    if os.path.exists('meta/location.json'):
-        with open('meta/location.json', 'r', encoding='utf-8') as file:
-            location_links = json.load(file)
+    if os.path.exists('authorities/location.json'):
+        with open('authorities/location.json', 'r', encoding='utf-8') as file:
+            location_auth = json.load(file)
 
-    if os.path.exists('meta/series.json'):
-        with open('meta/series.json', 'r', encoding='utf-8') as file:
-            series_links = json.load(file)
+    if os.path.exists('authorities/series.json'):
+        with open('authorities/series.json', 'r', encoding='utf-8') as file:
+            series_auth = json.load(file)
 
-    if os.path.exists('meta/sources.json'):
-        with open('meta/sources.json', 'r', encoding='utf-8') as file:
-            source_links = json.load(file)
+    if os.path.exists('authorities/sources.json'):
+        with open('authorities/sources.json', 'r', encoding='utf-8') as file:
+            source_auth = json.load(file)
 
-    if os.path.exists('meta/persons.json'):
-        with open('meta/persons.json', 'r', encoding='utf-8') as file:
-            person_links = json.load(file)
+    if os.path.exists('authorities/persons.json'):
+        with open('authorities/persons.json', 'r', encoding='utf-8') as file:
+            person_auth = json.load(file)
 
-    if os.path.exists('meta/subjects.json'):
-        with open('meta/subjects.json', 'r', encoding='utf-8') as file:
-            subject_links = json.load(file)
+    if os.path.exists('authorities/subjects.json'):
+        with open('authorities/subjects.json', 'r', encoding='utf-8') as file:
+            subject_auth = json.load(file)
 
-    if os.path.exists('meta/corporations.json'):
-        with open('meta/corporations.json', 'r', encoding='utf-8') as file:
-            corporation_links = json.load(file)
+    if os.path.exists('authorities/corporations.json'):
+        with open('authorities/corporations.json', 'r', encoding='utf-8') as file:
+            corporation_auth = json.load(file)
 
-    if os.path.exists('meta/works.json'):
-        with open('meta/works.json', 'r', encoding='utf-8') as file:
-            work_links = json.load(file)
+    if os.path.exists('authorities/works.json'):
+        with open('authorities/works.json', 'r', encoding='utf-8') as file:
+            work_auth = json.load(file)
 
-    if os.path.exists('meta/events.json'):
-        with open('meta/events.json', 'r', encoding='utf-8') as file:
+    if os.path.exists('authorities/events.json'):
+        with open('authorities/events.json', 'r', encoding='utf-8') as file:
             event_auth = json.load(file)
 
 
