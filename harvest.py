@@ -91,15 +91,6 @@ def map_json_data(data, template, index):
     if "work" in data:
         map_work(data, template, index)
 
-    if save_meta:
-        save_meta_data_to_json(location_links, 'meta/location.json')
-        save_meta_data_to_json(series_links, 'meta/series.json')
-        save_meta_data_to_json(source_links, 'meta/sources.json')
-        save_meta_data_to_json(person_links, 'meta/persons.json')
-        save_meta_data_to_json(subject_links, 'meta/subjects.json')
-        save_meta_data_to_json(corporation_links, 'meta/corporations.json')
-        save_meta_data_to_json(work_links, 'meta/works.json')
-        save_meta_data_to_json(event_auth, 'meta/events.json')
     return template
 
 
@@ -287,6 +278,16 @@ def process_json_data():
         mapped_work.append(copy.deepcopy(work))
     save_json_category_data(mapped_work, f'work_feed/')
 
+    if save_meta:
+        save_meta_data_to_json(location_links, 'meta/location.json')
+        save_meta_data_to_json(series_links, 'meta/series.json')
+        save_meta_data_to_json(source_links, 'meta/sources.json')
+        save_meta_data_to_json(person_links, 'meta/persons.json')
+        save_meta_data_to_json(subject_links, 'meta/subjects.json')
+        save_meta_data_to_json(corporation_links, 'meta/corporations.json')
+        save_meta_data_to_json(work_links, 'meta/works.json')
+        save_meta_data_to_json(event_auth, 'meta/events.json')
+
 
 def fetch_meta_data(index, category):
     authority_linked = {}
@@ -336,6 +337,7 @@ def load_meta_data():
     global subject_links
     global corporation_links
     global work_links
+    global event_auth
 
     if os.path.exists('meta/location.json'):
         with open('meta/location.json', 'r', encoding='utf-8') as file:
@@ -364,6 +366,10 @@ def load_meta_data():
     if os.path.exists('meta/works.json'):
         with open('meta/works.json', 'r', encoding='utf-8') as file:
             work_links = json.load(file)
+
+    if os.path.exists('meta/events.json'):
+        with open('meta/events.json', 'r', encoding='utf-8') as file:
+            event_auth = json.load(file)
 
 
 if __name__ == "__main__":
