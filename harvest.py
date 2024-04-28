@@ -142,7 +142,7 @@ def map_event(data, template, index):
             works.append({'@id': work_auth[f'{work_index}'], 'schema:author': composers})
         template_prefix['schema:workPerformed'] = works
     if data_prefix['url'] is not None:
-        template_prefix['schema:url'] = data_prefix['url']
+        template_prefix['@id'] = data_prefix['url']
 
 
 def enrich_names(data_prefix):
@@ -162,7 +162,7 @@ def map_work(data, template, index):
     if data_prefix['persons'] is not None or data_prefix['corporations'] is not None:
         template_prefix['schema:contributor'] = complete_event_performers(data_prefix, False)
     if data_prefix['url'] is not None:
-        template_prefix['schema:url'] = data_prefix['url']
+        template_prefix['@id'] = data_prefix['url']
     if data_prefix['genres'] is not None:
         genres = []
         for index, genre in enumerate(data_prefix['genres']):
