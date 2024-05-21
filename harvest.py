@@ -1,8 +1,14 @@
 import copy
 import os
-
 import requests
 import json
+import rdflib
+from rdflib import Graph, plugin
+from rdflib.plugin import register, Serializer
+from rdflib import URIRef, Literal, Namespace, BNode
+from rdflib.namespace import RDF, RDFS, OWL, SDO, XSD
+from datetime import date
+
 
 location_auth = {}
 series_auth = {}
@@ -13,6 +19,107 @@ corporation_auth = {}
 work_auth = {}
 event_auth = {}
 save_meta = False
+N4C = Namespace("https://nfdi4culture.de/id/")
+CTO = Namespace("https://nfdi4culture.de/ontology#")
+NFDICORE = Namespace("https://nfdi.fiz-karlsruhe.de/ontology#")
+
+
+def init_graph():
+    graph = Graph()
+    graph.remove((None, None, None))
+    graph.bind("cto", CTO)
+    graph.bind("nfdicore", NFDICORE)
+    graph.bind("n4c", N4C)
+    graph.add((N4C.E5378, SDO.dateModified, Literal(date.today(), datatype=XSD.date)))
+
+    return graph
+
+
+def add_events(events):
+    graph = init_graph()
+    for event in events:
+        event_id = URIRef(event['schema:event']['@id'])
+        bn = BNode()
+        graph.add((N4C.E5320, SDO.dataFeedElement, bn))
+        graph.add((bn, RDF.type, SDO.DataFeedItem))
+        graph.add((bn, SDO.item, event_id))
+        graph.add((event_id, RDF.type, CTO.DataFeedElement))
+        graph.add((event_id, RDF.type, CTO.Item))
+        graph.add((event_id, CTO.elementType, URIRef("http://vocab.getty.edu/aat/300069451")))
+        graph.add((event_id, NFDICORE.publisher, URIRef("https://nfdi4culture.de/id/E1841")))
+        graph.add((event_id, CTO.elementOf, URIRef("https://nfdi4culture.de/id/E5320")))
+        graph.add((event_id, CTO.title, Literal(event['schema:event']['schema:name'])))
+        graph.add((event_id, CTO.temporalCoverage, Literal(event['schema:event']['schema:temporalCoverage']['@value'])))
+
+        location = event['schema:event']['schema:location']
+        for loc in location:
+            if location[loc]['gnd'] is not None:
+                graph.add((event_id, CTO.relatedLocation, URIRef(location[loc]['gnd'])))
+                graph.add((event_id, CTO.gnd, URIRef(location[loc]['gnd'])))
+            if location[loc]['viaf'] is not None:
+                graph.add((event_id, CTO.relatedLocation, URIRef(location[loc]['viaf'])))
+                graph.add((event_id, CTO.viaf, URIRef(location[loc]['viaf'])))
+            if location[loc]['gnd'] is None and location[loc]['viaf'] is None:
+                graph.add((event_id, CTO.relatedLocation, URIRef(loc)))
+
+        for superEvent in event['schema:event']['schema:superEvent']:
+            series = superEvent['@id']
+            for ser in series:
+                if series[ser]['gnd'] is not None:
+                    graph.add((event_id, CTO.itemOf, URIRef(series[ser]['gnd'])))
+                    graph.add((event_id, CTO.gnd, URIRef(series[ser]['gnd'])))
+                if series[ser]['viaf'] is not None:
+                    graph.add((event_id, CTO.itemOf, URIRef(series[ser]['viaf'])))
+                    graph.add((event_id, CTO.viaf, URIRef(series[ser]['viaf'])))
+                if series[ser]['gnd'] is None and series[ser]['viaf'] is None:
+                    graph.add((event_id, CTO.itemOf, URIRef(ser)))
+
+        for record in event['schema:event']['schema:recordedIn']:
+            source = record['@id']
+            for sou in source:
+                if source[sou]['gnd'] is not None:
+                    graph.add((event_id, CTO.relatedItem, URIRef(source[sou]['gnd'])))
+                    graph.add((event_id, CTO.gnd, URIRef(source[sou]['gnd'])))
+                if source[sou]['viaf'] is not None:
+                    graph.add((event_id, CTO.relatedItem, URIRef(source[sou]['viaf'])))
+                    graph.add((event_id, CTO.viaf, URIRef(source[sou]['viaf'])))
+                if source[sou]['gnd'] is None and source[sou]['viaf'] is None:
+                    graph.add((event_id, CTO.relatedItem, URIRef(sou)))
+
+        for performer in event['schema:event']['schema:performer']:
+            if performer['@type'] == 'schema:Person':
+                for person in performer['@id']:
+                    if performer['@id'][person]['gnd'] is not None:
+                        graph.add((event_id, CTO.relatedPerson, URIRef(performer['@id'][person]['gnd'])))
+                        graph.add((event_id, CTO.gnd, URIRef(performer['@id'][person]['gnd'])))
+                    if performer['@id'][person]['viaf'] is not None:
+                        graph.add((event_id, CTO.relatedPerson, URIRef(performer['@id'][person]['viaf'])))
+                        graph.add((event_id, CTO.viaf, URIRef(performer['@id'][person]['viaf'])))
+                    if performer['@id'][person]['gnd'] is None and performer['@id'][person]['viaf'] is None:
+                        graph.add((event_id, CTO.relatedPerson, URIRef(person)))
+            if performer['@type'] == 'schema:PerformingGroup':
+                for group in performer['@id']:
+                    if performer['@id'][group]['gnd'] is not None:
+                        graph.add((event_id, CTO.relatedOrganization, URIRef(performer['@id'][group]['gnd'])))
+                        graph.add((event_id, CTO.gnd, URIRef(performer['@id'][group]['gnd'])))
+                    if performer['@id'][group]['viaf'] is not None:
+                        graph.add((event_id, CTO.relatedOrganization, URIRef(performer['@id'][group]['viaf'])))
+                        graph.add((event_id, CTO.viaf, URIRef(performer['@id'][group]['viaf'])))
+                    if performer['@id'][group]['gnd'] is None and performer['@id'][group]['viaf'] is None:
+                        graph.add((event_id, CTO.relatedOrganization, URIRef(group)))
+
+        for works in event['schema:event']['schema:workPerformed']:
+            for work in works['@id']:
+                if works['@id'][work]['gnd'] is not None:
+                    graph.add((event_id, CTO.relatedItem, URIRef(works['@id'][work]['gnd'])))
+                    graph.add((event_id, CTO.gnd, URIRef(works['@id'][work]['gnd'])))
+                if works['@id'][work]['viaf'] is not None:
+                    graph.add((event_id, CTO.relatedItem, URIRef(works['@id'][work]['viaf'])))
+                    graph.add((event_id, CTO.viaf, URIRef(works['@id'][work]['viaf'])))
+                if works['@id'][work]['gnd'] is None and works['@id'][work]['viaf'] is None:
+                    graph.add((event_id, CTO.relatedItem, URIRef(work)))
+
+    graph.serialize(destination='events.ttl')
 
 
 def parse_category_sizes(header):
@@ -269,6 +376,7 @@ def process_json_data():
         event = map_json_data(event, event_template, index)
         mapped_events.append(copy.deepcopy(event))
     save_json_category_data(mapped_events, f"event_feed/")
+    add_events(mapped_events)
 
     work_template = load_template('work')
     works = harvest_category(10, 'work')
