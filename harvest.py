@@ -1,14 +1,14 @@
 import copy
-import os
-import requests
 import json
-import rdflib
-from rdflib import Graph, plugin
-from rdflib.plugin import register, Serializer
-from rdflib import URIRef, Literal, Namespace, BNode
-from rdflib.namespace import RDF, RDFS, OWL, SDO, XSD
+import os
+import time
 from datetime import date
+from argparse import ArgumentParser
 
+import requests
+from rdflib import Graph
+from rdflib import URIRef, Literal, Namespace, BNode
+from rdflib.namespace import RDF, SDO, XSD
 
 location_auth = {}
 series_auth = {}
@@ -35,9 +35,9 @@ def init_graph():
     return graph
 
 
-def add_events(events):
-    graph = init_graph()
-    for event in events:
+def add_events(events, file_path):
+    for index, event in enumerate(events):
+        graph = init_graph()
         event_id = URIRef(event['schema:event']['@id'])
         bn = BNode()
         graph.add((N4C.E5320, SDO.dataFeedElement, bn))
@@ -122,8 +122,11 @@ def add_events(events):
                     graph.add((event_id, CTO.viaf, URIRef(works['@id'][work]['viaf'])))
                 if works['@id'][work]['gnd'] is None and works['@id'][work]['viaf'] is None:
                     graph.add((event_id, CTO.relatedItem, URIRef(work)))
-
-    graph.serialize(destination='events.ttl')
+        turtle_data = graph.serialize(format='turtle')
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        with open(f"{file_path}{str(index + 1).zfill(5)}.ttl", 'w', encoding='utf-8') as file:
+            file.write(turtle_data)
+        print(f"Saved turtle data to {file_path}{str(index + 1).zfill(5)}.ttl")
 
 
 def parse_category_sizes(header):
@@ -148,6 +151,13 @@ def parse_category_sizes(header):
     source_count = header['count']['source']
 
 
+def parse_arguments():
+    parser = ArgumentParser(description="Harvest data from the musiconn.performance-API and map it to JSON-LD and ttl")
+    parser.add_argument('-w', '--wait', type=int, default=0, help="Wait time in between API-Requests")
+    parser.add_argument('-c', '--count', type=int, default=0, help="Number of items to be harvested")
+    return parser.parse_args()
+
+
 def fetch_json_data(url):
     headers = {'Accept': 'application/json'}
     response = requests.get(url, headers)
@@ -162,13 +172,15 @@ def fetch_json_data(url):
         return None
 
 
-def harvest_category(category_count, category):
+def harvest_category(category_count, category, wait_time):
     category_container = []
     for i in range(1, category_count + 1):
         data = fetch_json_data(f"https://performance.musiconn.de/api?action=get&format=json&{category}={str(i)}")
         if data is not None:
             category_container.append(data)
             print(f"Harvested Item " + str(i) + " for Category: " + category)
+        if wait_time > 0:
+            time.sleep(wait_time)
     return category_container
 
 
@@ -182,7 +194,7 @@ def save_json_category_data(category_data, file_path):
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(f"{file_path}{str(index + 1).zfill(5)}.json", 'w', encoding='utf-8') as file:
             json.dump(data, file, indent=4)
-            print(f"\nData saved to {file_path}")
+            print(f"Data saved to {file_path}{str(index + 1).zfill(5)}.json")
 
 
 def map_json_data(data, template, index):
@@ -361,34 +373,37 @@ def parse_time(item):
         last_date = item['dates'][-1]
     else:
         last_date = first_date
-    time = f"{first_date}T{item['times'][0]['time']}/{last_date}T{item['times'][-1]['time']}"
-    return time
+    datetime = f"{first_date}T{item['times'][0]['time']}/{last_date}T{item['times'][-1]['time']}"
+    return datetime
 
 
-def generate_id(item):
-    return None
-
-
-def process_json_data():
+def process_json_data(wait_time, harvest_count):
     header = fetch_json_data("https://performance.musiconn.de/api?action=query&format=json&entity=null")
     parse_category_sizes(header)
+    harvest_count_event = harvest_count
+    harvest_count_work = harvest_count
+    if harvest_count == 0:
+        harvest_count_event = event_count
+        harvest_count_work = work_count
 
     event_template = load_template('event')
-    events = harvest_category(10, "event")
+    events = harvest_category(harvest_count_event, "event", wait_time)
     mapped_events = []
     for index, event in enumerate(events):
         event = map_json_data(event, event_template, index)
         mapped_events.append(copy.deepcopy(event))
-    save_json_category_data(mapped_events, f"event_feed/")
-    add_events(mapped_events)
+    save_json_category_data(mapped_events, "event_feed/")
+    add_events(mapped_events, "event_result/")
+    print(f"########## Finished harvesting category event ##########")
 
     work_template = load_template('work')
-    works = harvest_category(10, 'work')
+    works = harvest_category(harvest_count_work, 'work', wait_time)
     mapped_work = []
     for index, work in enumerate(works):
         work = map_json_data(work, work_template, index)
         mapped_work.append(copy.deepcopy(work))
     save_json_category_data(mapped_work, f'work_feed/')
+    print(f"########## Finished harvesting category work ##########")
 
     if save_meta:
         save_meta_data_to_json(location_auth, 'authorities/location.json')
@@ -480,6 +495,8 @@ def load_meta_data():
 
 
 if __name__ == "__main__":
+    args = parse_arguments()
+
     load_meta_data()
-    process_json_data()
+    process_json_data(args.wait, args.count)
 
