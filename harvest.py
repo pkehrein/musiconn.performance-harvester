@@ -44,12 +44,16 @@ def add_events(events):
         graph.add((bn, RDF.type, SDO.DataFeedItem))
         graph.add((bn, SDO.item, event_id))
         graph.add((event_id, RDF.type, CTO.DataFeedElement))
-        graph.add((event_id, RDF.type, CTO.Item))
+        graph.add((event_id, RDF.type, NFDICORE.Event))
         graph.add((event_id, CTO.elementType, URIRef("http://vocab.getty.edu/aat/300069451")))
         graph.add((event_id, NFDICORE.publisher, URIRef("https://nfdi4culture.de/id/E1841")))
         graph.add((event_id, CTO.elementOf, URIRef("https://nfdi4culture.de/id/E5320")))
         graph.add((event_id, CTO.title, Literal(event['schema:event']['schema:name'])))
-        graph.add((event_id, CTO.temporalCoverage, Literal(event['schema:event']['schema:temporalCoverage']['@value'])))
+        eventdate = event['schema:event']['schema:temporalCoverage']['@value']
+        startdate = eventdate[:eventdate.index('/')]
+        enddate = eventdate[(eventdate.index('/') + 1):]
+        graph.add((event_id, NFDICORE.startDate, Literal(startdate)))
+        graph.add((event_id, NFDICORE.endDate, Literal(enddate)))
 
         location = event['schema:event']['schema:location']
         for loc in location:
