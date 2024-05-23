@@ -47,7 +47,7 @@ def add_events(events, file_path):
         graph.add((event_id, RDF.type, NFDICORE.Event))
         graph.add((event_id, CTO.elementType, URIRef("http://vocab.getty.edu/aat/300069451")))
         graph.add((event_id, NFDICORE.publisher, URIRef("https://nfdi4culture.de/id/E1841")))
-        graph.add((event_id, CTO.elementOf, URIRef("https://nfdi4culture.de/id/E5320")))
+        graph.add((event_id, CTO.itemOf, URIRef("https://nfdi4culture.de/id/E5320")))
         graph.add((event_id, CTO.title, Literal(event['schema:event']['schema:name'])))
         eventdate = event['schema:event']['schema:temporalCoverage']['@value']
         startdate = eventdate[:eventdate.index('/')]
