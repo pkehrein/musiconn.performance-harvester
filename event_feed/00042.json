@@ -4,9 +4,14 @@
     },
     "@id": "https://nfdi4culture.de/id/E4255",
     "schema:event": {
-        "@id": "EVENT_ID",
+        "@id": "https://performance.musiconn.de/event/die-boheme-semperoper-dresden-1908-09-19-19-30",
         "schema:name": "Die Boh\u00e8me, Semperoper (Dresden), 19.9.1908, 19:30",
-        "schema:location": "https://performance.musiconn.de/location/semperoper-dresden",
+        "schema:location": {
+            "https://performance.musiconn.de/location/semperoper-dresden": {
+                "gnd": "https://d-nb.info/gnd/1054565813",
+                "viaf": "https://viaf.org/viaf/309654002"
+            }
+        },
         "schema:temporalCoverage": {
             "@type": "schema:DateTime",
             "@value": "1908-09-19T19:30:00/1908-09-19T22:45:00"
@@ -25,36 +30,64 @@
                 "@value": "202. Vorstellung"
             }
         ],
-        "schema:subjectOf": [
-            {
-                "@type": "schema:ResearchProject",
-                "@id": "PROJECT_ID"
-            }
-        ],
         "schema:superEvent": [
             {
                 "@type": "schema:Event",
-                "@id": "SERIAL_ID"
+                "@id": {
+                    "https://performance.musiconn.de/series/koenigliches-opernhaus-spielzeit-1908-1909": {
+                        "gnd": null,
+                        "viaf": null
+                    }
+                }
             }
         ],
         "schema:recordedIn": [
             {
-                "@id": "SOURCE_ID"
+                "@id": {
+                    "https://performance.musiconn.de/source/richard-wagner-walkuere-abschrift": {
+                        "gnd": null,
+                        "viaf": null
+                    }
+                }
             }
         ],
         "schema:performer": [
             {
-                "@type": "schema:Person",
-                "@id": "PERFORMER_ID",
-                "schema:hasOccupation": "PERFORMER_ROLE"
-            },
-            {
                 "@type": "schema:PerformingGroup",
-                "@id": "GROUP_ID",
-                "schema:description": "GROUP_ROLE"
+                "@id": {
+                    "https://performance.musiconn.de/corporation/saechsische-staatskapelle-dresden": {
+                        "gnd": "https://d-nb.info/gnd/5084847-1",
+                        "viaf": "https://viaf.org/viaf/158420977"
+                    }
+                },
+                "schema:description": {
+                    "https://performance.musiconn.de/subject/orchester": {
+                        "gnd": "https://d-nb.info/gnd/4172708-3",
+                        "viaf": null
+                    }
+                }
             }
         ],
-        "schema:url": "EVENT_URL",
-        "url": "https://performance.musiconn.de/event/die-boheme-semperoper-dresden-1908-09-19-19-30"
+        "schema:workPerformed": [
+            {
+                "@id": {
+                    "https://performance.musiconn.de/work/der-ring-des-nibelungen-erster-tag-die-walkuere-wagner-richard": {
+                        "gnd": "https://d-nb.info/gnd/300170548",
+                        "viaf": "https://viaf.org/viaf/316757488"
+                    }
+                },
+                "schema:author": [
+                    {
+                        "@type": "schema:Person",
+                        "@id": {
+                            "https://performance.musiconn.de/person/wagner-richard-1813-1883": {
+                                "gnd": "https://d-nb.info/gnd/118594117",
+                                "viaf": "https://viaf.org/viaf/29732107"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
     }
 }
