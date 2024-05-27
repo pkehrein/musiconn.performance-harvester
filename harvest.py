@@ -1,9 +1,10 @@
 import copy
 import json
 import os
+import re
 import time
-from datetime import date
 from argparse import ArgumentParser
+from datetime import date
 
 import requests
 from rdflib import Graph
@@ -24,6 +25,31 @@ save_meta = False
 N4C = Namespace("https://nfdi4culture.de/id/")
 CTO = Namespace("https://nfdi4culture.de/ontology#")
 NFDICORE = Namespace("https://nfdi.fiz-karlsruhe.de/ontology#")
+
+
+def concat_files():
+    header = True
+    with open("feed.ttl", 'w', encoding='utf-8') as file:
+        for filename in os.listdir('event_result/'):
+            filepath = os.path.join('event_result/', filename)
+            with open(filepath, 'r', encoding='utf-8') as readfile:
+                if header:
+                    modified_content = readfile.read()
+                    header = False
+                else:
+                    content = readfile.read()
+                    modified_content = remove_header(content)
+                file.write(modified_content + '\n')
+        for filename in os.listdir('work_result/'):
+            filepath = os.path.join('work_result/', filename)
+            with open(filepath, 'r', encoding='utf-8') as readfile:
+                file.write((remove_header(readfile.read())) + '\n')
+    print("##### Finished concatenating all turtle-files into one #####")
+
+
+def remove_header(content):
+    modified_content = re.sub('@.*\n', "", content)
+    return re.sub('.*schema:dateModified.*\n', "", modified_content)
 
 
 def init_graph():
@@ -243,8 +269,9 @@ def parse_category_sizes(header):
 def parse_arguments():
     parser = ArgumentParser(description="Harvest data from the musiconn.performance-API and map it to JSON-LD and ttl")
     parser.add_argument('-w', '--wait', type=float, default=0, help="Wait time in between API-Requests")
-    parser.add_argument('-c', '--count', type=int, default=0, help="Number of items to be harvested")
+    parser.add_argument('-c', '--count', type=int, default=0, help="Number of items to be harvested. Default is all items (Warning: This might take a long time!)")
     parser.add_argument('-b', '--startIndex', type=int, default=0, help="Index of the first Item to be harvested. Default is 0")
+    parser.add_argument('-F', '--singleFile', type=bool, default=False, help="Save all items in one graph and ttl-File. Default is false")
     return parser.parse_args()
 
 
@@ -488,7 +515,7 @@ def parse_time(item):
     return datetime
 
 
-def process_json_data(wait_time, harvest_count, start_index):
+def process_json_data(wait_time, harvest_count, start_index, single_file):
     header = fetch_json_data("https://performance.musiconn.de/api?action=query&format=json&entity=null", wait_time)
     parse_category_sizes(header)
     harvest_count_event = harvest_count
@@ -519,6 +546,9 @@ def process_json_data(wait_time, harvest_count, start_index):
         item_index += 1
     add_works(mapped_work, "work_result/", start_index)
     print(f"########## Finished harvesting and mapping category work ##########")
+
+    if single_file:
+        concat_files()
 
     if save_meta:
         save_meta_data_to_json(location_auth, 'authorities/location.json')
@@ -613,4 +643,4 @@ if __name__ == "__main__":
     args = parse_arguments()
 
     load_meta_data()
-    process_json_data(args.wait, args.count, args.startIndex)
+    process_json_data(args.wait, args.count, args.startIndex, args.singleFile)
