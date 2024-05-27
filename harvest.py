@@ -37,8 +37,8 @@ def init_graph():
     return graph
 
 
-def add_events(events, file_path):
-    for index, event in enumerate(events):
+def add_events(events, file_path, start_index):
+    for event in events:
         graph = init_graph()
         event_id = URIRef(event['schema:event']['@id'])
         bn = BNode()
@@ -80,60 +80,63 @@ def add_events(events, file_path):
                 if series[ser]['gnd'] is None and series[ser]['viaf'] is None:
                     graph.add((event_id, CTO.itemOf, URIRef(ser)))
 
-        for record in event['schema:event']['schema:recordedIn']:
-            source = record['@id']
-            for sou in source:
-                if source[sou]['gnd'] is not None:
-                    graph.add((event_id, CTO.relatedItem, URIRef(source[sou]['gnd'])))
-                    graph.add((event_id, CTO.gnd, URIRef(source[sou]['gnd'])))
-                if source[sou]['viaf'] is not None:
-                    graph.add((event_id, CTO.relatedItem, URIRef(source[sou]['viaf'])))
-                    graph.add((event_id, CTO.viaf, URIRef(source[sou]['viaf'])))
-                if source[sou]['gnd'] is None and source[sou]['viaf'] is None:
-                    graph.add((event_id, CTO.relatedItem, URIRef(sou)))
+        if event['schema:event']['schema:recordedIn'] is not None:
+            for record in event['schema:event']['schema:recordedIn']:
+                source = record['@id']
+                for sou in source:
+                    if source[sou]['gnd'] is not None:
+                        graph.add((event_id, CTO.relatedItem, URIRef(source[sou]['gnd'])))
+                        graph.add((event_id, CTO.gnd, URIRef(source[sou]['gnd'])))
+                    if source[sou]['viaf'] is not None:
+                        graph.add((event_id, CTO.relatedItem, URIRef(source[sou]['viaf'])))
+                        graph.add((event_id, CTO.viaf, URIRef(source[sou]['viaf'])))
+                    if source[sou]['gnd'] is None and source[sou]['viaf'] is None:
+                        graph.add((event_id, CTO.relatedItem, URIRef(sou)))
 
-        for performer in event['schema:event']['schema:performer']:
-            if performer['@type'] == 'schema:Person':
-                for person in performer['@id']:
-                    if performer['@id'][person]['gnd'] is not None:
-                        graph.add((event_id, CTO.relatedPerson, URIRef(performer['@id'][person]['gnd'])))
-                        graph.add((event_id, CTO.gnd, URIRef(performer['@id'][person]['gnd'])))
-                    if performer['@id'][person]['viaf'] is not None:
-                        graph.add((event_id, CTO.relatedPerson, URIRef(performer['@id'][person]['viaf'])))
-                        graph.add((event_id, CTO.viaf, URIRef(performer['@id'][person]['viaf'])))
-                    if performer['@id'][person]['gnd'] is None and performer['@id'][person]['viaf'] is None:
-                        graph.add((event_id, CTO.relatedPerson, URIRef(person)))
-            if performer['@type'] == 'schema:PerformingGroup':
-                for group in performer['@id']:
-                    if performer['@id'][group]['gnd'] is not None:
-                        graph.add((event_id, CTO.relatedOrganization, URIRef(performer['@id'][group]['gnd'])))
-                        graph.add((event_id, CTO.gnd, URIRef(performer['@id'][group]['gnd'])))
-                    if performer['@id'][group]['viaf'] is not None:
-                        graph.add((event_id, CTO.relatedOrganization, URIRef(performer['@id'][group]['viaf'])))
-                        graph.add((event_id, CTO.viaf, URIRef(performer['@id'][group]['viaf'])))
-                    if performer['@id'][group]['gnd'] is None and performer['@id'][group]['viaf'] is None:
-                        graph.add((event_id, CTO.relatedOrganization, URIRef(group)))
-
-        for works in event['schema:event']['schema:workPerformed']:
-            for work in works['@id']:
-                graph.add((event_id, CTO.relatedItem, URIRef(work)))
-                if works['@id'][work]['gnd'] is not None:
-                    graph.add((event_id, CTO.relatedItem, URIRef(works['@id'][work]['gnd'])))
-                    graph.add((event_id, CTO.gnd, URIRef(works['@id'][work]['gnd'])))
-                if works['@id'][work]['viaf'] is not None:
-                    graph.add((event_id, CTO.relatedItem, URIRef(works['@id'][work]['viaf'])))
-                    graph.add((event_id, CTO.viaf, URIRef(works['@id'][work]['viaf'])))
-                if works['@id'][work]['gnd'] is None and works['@id'][work]['viaf'] is None:
+        if event['schema:event']['schema:performer'] is not None:
+            for performer in event['schema:event']['schema:performer']:
+                if performer['@type'] == 'schema:Person':
+                    for person in performer['@id']:
+                        if performer['@id'][person]['gnd'] is not None:
+                            graph.add((event_id, CTO.relatedPerson, URIRef(performer['@id'][person]['gnd'])))
+                            graph.add((event_id, CTO.gnd, URIRef(performer['@id'][person]['gnd'])))
+                        if performer['@id'][person]['viaf'] is not None:
+                            graph.add((event_id, CTO.relatedPerson, URIRef(performer['@id'][person]['viaf'])))
+                            graph.add((event_id, CTO.viaf, URIRef(performer['@id'][person]['viaf'])))
+                        if performer['@id'][person]['gnd'] is None and performer['@id'][person]['viaf'] is None:
+                            graph.add((event_id, CTO.relatedPerson, URIRef(person)))
+                if performer['@type'] == 'schema:PerformingGroup':
+                    for group in performer['@id']:
+                        if performer['@id'][group]['gnd'] is not None:
+                            graph.add((event_id, CTO.relatedOrganization, URIRef(performer['@id'][group]['gnd'])))
+                            graph.add((event_id, CTO.gnd, URIRef(performer['@id'][group]['gnd'])))
+                        if performer['@id'][group]['viaf'] is not None:
+                            graph.add((event_id, CTO.relatedOrganization, URIRef(performer['@id'][group]['viaf'])))
+                            graph.add((event_id, CTO.viaf, URIRef(performer['@id'][group]['viaf'])))
+                        if performer['@id'][group]['gnd'] is None and performer['@id'][group]['viaf'] is None:
+                            graph.add((event_id, CTO.relatedOrganization, URIRef(group)))
+        if event['schema:event']['schema:workPerformed'] is not None:
+            for works in event['schema:event']['schema:workPerformed']:
+                for work in works['@id']:
                     graph.add((event_id, CTO.relatedItem, URIRef(work)))
+                    if works['@id'][work]['gnd'] is not None:
+                        graph.add((event_id, CTO.relatedItem, URIRef(works['@id'][work]['gnd'])))
+                        graph.add((event_id, CTO.gnd, URIRef(works['@id'][work]['gnd'])))
+                    if works['@id'][work]['viaf'] is not None:
+                        graph.add((event_id, CTO.relatedItem, URIRef(works['@id'][work]['viaf'])))
+                        graph.add((event_id, CTO.viaf, URIRef(works['@id'][work]['viaf'])))
+                    if works['@id'][work]['gnd'] is None and works['@id'][work]['viaf'] is None:
+                        graph.add((event_id, CTO.relatedItem, URIRef(work)))
         turtle_data = graph.serialize(format='turtle')
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
-        with open(f"{file_path}{str(index + 1).zfill(5)}.ttl", 'w', encoding='utf-8') as file:
+        with open(f"{file_path}{str(start_index + 1).zfill(5)}.ttl", 'w', encoding='utf-8') as file:
             file.write(turtle_data)
-        print(f"Saved turtle data to {file_path}{str(index + 1).zfill(5)}.ttl")
+        print(f"Saved turtle data to {file_path}{str(start_index + 1).zfill(5)}.ttl")
+        start_index += 1
 
 
-def add_works(works, file_path):
-    for index, work in enumerate(works):
+def add_works(works, file_path, start_index):
+    for work in works:
         graph = init_graph()
         work_id = URIRef(work['schema:MusicComposition']['@id'])
         bn = BNode()
@@ -187,43 +190,46 @@ def add_works(works, file_path):
                     graph.add((work_id, CTO.viaf, URIRef(compositions[comp_index]['@id'][composition_item]['viaf'])))
 
         events = work['schema:MusicComposition']['schema:subjectOf']
-        for event in events:
-            for event_item in event['@id']:
-                graph.add((work_id, SDO.subjectOf, URIRef(event_item)))
-                if event['@id'][event_item]['gnd'] is not None:
-                    graph.add((work_id, SDO.subjectOf, URIRef(event['@id'][event_item]['gnd'])))
-                    graph.add((work_id, CTO.gnd, URIRef(event['@id'][event_item]['gnd'])))
-                if event['@id'][event_item]['viaf'] is not None:
-                    graph.add((work_id, SDO.subjectOf, URIRef(event['@id'][event_item]['viaf'])))
-                    graph.add((work_id, CTO.viaf, URIRef(event['@id'][event_item]['viaf'])))
+        if events is not None:
+            for event in events:
+                for event_item in event['@id']:
+                    graph.add((work_id, SDO.subjectOf, URIRef(event_item)))
+                    if event['@id'][event_item]['gnd'] is not None:
+                        graph.add((work_id, SDO.subjectOf, URIRef(event['@id'][event_item]['gnd'])))
+                        graph.add((work_id, CTO.gnd, URIRef(event['@id'][event_item]['gnd'])))
+                    if event['@id'][event_item]['viaf'] is not None:
+                        graph.add((work_id, SDO.subjectOf, URIRef(event['@id'][event_item]['viaf'])))
+                        graph.add((work_id, CTO.viaf, URIRef(event['@id'][event_item]['viaf'])))
 
         contributors = work['schema:MusicComposition']['schema:contributor']
-        for contributor in contributors:
-            if contributor['@type'] == 'schema:Person':
-                for person in contributor['@id']:
-                    if contributor['@id'][person]['gnd'] is not None:
-                        graph.add((work_id, CTO.relatedPerson, URIRef(contributor['@id'][person]['gnd'])))
-                        graph.add((work_id, CTO.gnd, URIRef(contributor['@id'][person]['gnd'])))
-                    if contributor['@id'][person]['viaf'] is not None:
-                        graph.add((work_id, CTO.relatedPerson, URIRef(contributor['@id'][person]['viaf'])))
-                        graph.add((work_id, CTO.viaf, URIRef(contributor['@id'][person]['viaf'])))
-                    if contributor['@id'][person]['gnd'] is None and contributor['@id'][person]['viaf'] is None:
-                        graph.add((work_id, CTO.relatedPerson, URIRef(person)))
-            if contributor['@type'] == 'schema:PerformingGroup':
-                for group in contributor['@id']:
-                    if contributor['@id'][group]['gnd'] is not None:
-                        graph.add((work_id, CTO.relatedOrganization, URIRef(contributor['@id'][group]['gnd'])))
-                        graph.add((work_id, CTO.gnd, URIRef(contributor['@id'][group]['gnd'])))
-                    if contributor['@id'][group]['viaf'] is not None:
-                        graph.add((work_id, CTO.relatedOrganization, URIRef(contributor['@id'][group]['viaf'])))
-                        graph.add((work_id, CTO.viaf, URIRef(contributor['@id'][group]['viaf'])))
-                    if contributor['@id'][group]['gnd'] is None and contributor['@id'][group]['viaf'] is None:
-                        graph.add((work_id, CTO.relatedOrganization, URIRef(group)))
+        if contributors is not None:
+            for contributor in contributors:
+                if contributor['@type'] == 'schema:Person':
+                    for person in contributor['@id']:
+                        if contributor['@id'][person]['gnd'] is not None:
+                            graph.add((work_id, CTO.relatedPerson, URIRef(contributor['@id'][person]['gnd'])))
+                            graph.add((work_id, CTO.gnd, URIRef(contributor['@id'][person]['gnd'])))
+                        if contributor['@id'][person]['viaf'] is not None:
+                            graph.add((work_id, CTO.relatedPerson, URIRef(contributor['@id'][person]['viaf'])))
+                            graph.add((work_id, CTO.viaf, URIRef(contributor['@id'][person]['viaf'])))
+                        if contributor['@id'][person]['gnd'] is None and contributor['@id'][person]['viaf'] is None:
+                            graph.add((work_id, CTO.relatedPerson, URIRef(person)))
+                if contributor['@type'] == 'schema:PerformingGroup':
+                    for group in contributor['@id']:
+                        if contributor['@id'][group]['gnd'] is not None:
+                            graph.add((work_id, CTO.relatedOrganization, URIRef(contributor['@id'][group]['gnd'])))
+                            graph.add((work_id, CTO.gnd, URIRef(contributor['@id'][group]['gnd'])))
+                        if contributor['@id'][group]['viaf'] is not None:
+                            graph.add((work_id, CTO.relatedOrganization, URIRef(contributor['@id'][group]['viaf'])))
+                            graph.add((work_id, CTO.viaf, URIRef(contributor['@id'][group]['viaf'])))
+                        if contributor['@id'][group]['gnd'] is None and contributor['@id'][group]['viaf'] is None:
+                            graph.add((work_id, CTO.relatedOrganization, URIRef(group)))
         turtle_data = graph.serialize(format='turtle')
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
-        with open(f"{file_path}{str(index + 1).zfill(5)}.ttl", 'w', encoding='utf-8') as file:
+        with open(f"{file_path}{str(start_index + 1).zfill(5)}.ttl", 'w', encoding='utf-8') as file:
             file.write(turtle_data)
-        print(f"Saved turtle data to {file_path}{str(index + 1).zfill(5)}.ttl")
+        print(f"Saved turtle data to {file_path}{str(start_index + 1).zfill(5)}.ttl")
+        start_index += 1
 
 
 def parse_category_sizes(header):
@@ -260,7 +266,8 @@ def fetch_json_data(url, wait_time):
 
 def harvest_category(category_count, category, wait_time, start_index):
     category_container = []
-    for i in range(start_index+1, category_count + 1):
+    offset = category_count + start_index
+    for i in range(start_index+1, offset + 1):
         data = fetch_json_data(f"https://performance.musiconn.de/api?action=get&format=json&{category}={str(i)}", wait_time)
         if data is not None:
             category_container.append(data)
@@ -327,11 +334,16 @@ def map_event(data, template, index, wait_time):
                 save_meta = True
             sources.append({'@id': copy.deepcopy(source_auth[f'{source_index}'])})
         template_prefix['schema:recordedIn'] = sources
+    else:
+        template_prefix['schema:recordedIn'] = []
     if 'persons' in data_prefix and data_prefix['persons'] is not None:
         template_prefix['schema:performer'] = complete_event_performers(data_prefix, True, wait_time, 'persons')
+    else:
+        template_prefix['schema:performer'] = []
     if 'corporations' in data_prefix and data_prefix['corporations'] is not None:
         template_prefix['schema:performer'] = complete_event_performers(data_prefix, True, wait_time, 'corporations')
-
+    elif 'persons' not in data_prefix:
+        template_prefix['schema:performer'] = []
     if 'performances' in data_prefix and data_prefix['performances'] is not None:
         works = []
         for works_index, work in enumerate(data_prefix['performances']):
@@ -348,6 +360,8 @@ def map_event(data, template, index, wait_time):
                 composers.append({"@type": "schema:Person", '@id': copy.deepcopy(person_auth[f'{composer_index}'])})
             works.append({'@id': work_auth[f'{work_index}'], 'schema:author': composers})
         template_prefix['schema:workPerformed'] = works
+    else:
+        template_prefix['schema:workPerformed'] = []
     if data_prefix['url'] is not None:
         template_prefix['@id'] = data_prefix['url']
 
@@ -368,8 +382,12 @@ def map_work(data, template, index, wait_time):
         template_prefix['schema:alternateName'] = enrich_names(data_prefix)
     if 'persons' in data_prefix and data_prefix['persons'] is not None:
         template_prefix['schema:contributor'] = complete_event_performers(data_prefix, False, wait_time, 'persons')
+    else:
+        template_prefix['schema:contributor'] = []
     if 'corporations' in data_prefix and data_prefix['corporations'] is not None:
         template_prefix['schema:contributor'] = complete_event_performers(data_prefix, False, wait_time, 'corporations')
+    elif 'persons' not in data_prefix:
+        template_prefix['schema:contributor'] = []
     if data_prefix['url'] is not None:
         template_prefix['@id'] = data_prefix['url']
     if 'genres' in data_prefix and data_prefix['genres'] is not None:
@@ -381,6 +399,8 @@ def map_work(data, template, index, wait_time):
                 save_meta = True
             genres.append({'@id': copy.deepcopy(subject_auth[f'{genre_index}'])})
         template_prefix['schema:genre'] = genres
+    else:
+        template_prefix['schema:genre'] = []
     if 'descriptions' in data_prefix and data_prefix['descriptions'] is not None:
         descriptions = []
         for description in data_prefix['descriptions']:
@@ -415,6 +435,8 @@ def map_work(data, template, index, wait_time):
                 save_meta = True
             events.append({'@type': 'schema:event', '@id': copy.deepcopy(event_auth[f'{event_index}'])})
         template_prefix['schema:subjectOf'] = events
+    else:
+        template_prefix['schema:subjectOf'] = []
 
 
 def complete_event_performers(data_prefix, role, wait_time, category):
@@ -471,30 +493,31 @@ def process_json_data(wait_time, harvest_count, start_index):
     parse_category_sizes(header)
     harvest_count_event = harvest_count
     harvest_count_work = harvest_count
-    if harvest_count == 0:
-        harvest_count_event = event_count
-        harvest_count_work = work_count
 
     event_template = load_template('event')
     events = harvest_category(harvest_count_event, "event", wait_time, start_index)
     mapped_events = []
+    item_index = start_index
     for index, event in enumerate(events):
-        event = map_json_data(event, event_template, index, wait_time)
+        event = map_json_data(event, event_template, item_index, wait_time)
         mapped_events.append(copy.deepcopy(event))
         print(f"Successfully mapped event {index+1}")
-        save_json_data(event, "event_feed/", index)
-    add_events(mapped_events, "event_result/")
+        save_json_data(event, "event_feed/", item_index)
+        item_index += 1
+    add_events(mapped_events, "event_result/", start_index)
     print(f"########## Finished harvesting and mapping category event ##########")
 
     work_template = load_template('work')
     works = harvest_category(harvest_count_work, 'work', wait_time, start_index)
     mapped_work = []
+    item_index = start_index
     for index, work in enumerate(works):
-        work = map_json_data(work, work_template, index, wait_time)
+        work = map_json_data(work, work_template, item_index, wait_time)
         mapped_work.append(copy.deepcopy(work))
         print(f"Successfully mapped work {index+1}")
-        save_json_data(work, f'work_feed/', index)
-    add_works(mapped_work, "work_result/")
+        save_json_data(work, f'work_feed/', item_index)
+        item_index += 1
+    add_works(mapped_work, "work_result/", start_index)
     print(f"########## Finished harvesting and mapping category work ##########")
 
     if save_meta:
