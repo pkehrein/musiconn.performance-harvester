@@ -4,9 +4,14 @@
     },
     "@id": "https://nfdi4culture.de/id/E4255",
     "schema:event": {
-        "@id": "EVENT_ID",
+        "@id": "https://performance.musiconn.de/event/siegfried-semperoper-dresden-1913-05-25-18-00",
         "schema:name": "Siegfried, Semperoper (Dresden), 25.5.1913, 18:00",
-        "schema:location": "https://performance.musiconn.de/location/semperoper-dresden",
+        "schema:location": {
+            "https://performance.musiconn.de/location/semperoper-dresden": {
+                "gnd": "https://d-nb.info/gnd/1054565813",
+                "viaf": "https://viaf.org/viaf/309654002"
+            }
+        },
         "schema:temporalCoverage": {
             "@type": "schema:DateTime",
             "@value": "1913-05-25T18:00:00/1913-05-25T22:30:00"
@@ -19,36 +24,48 @@
                 "@value": "Ged\u00e4chtnis-Auff\u00fchrung"
             }
         ],
-        "schema:subjectOf": [
-            {
-                "@type": "schema:ResearchProject",
-                "@id": "PROJECT_ID"
-            }
-        ],
         "schema:superEvent": [
             {
                 "@type": "schema:Event",
-                "@id": "SERIAL_ID"
+                "@id": {
+                    "https://performance.musiconn.de/series/koenigliches-hoftheater-spielzeit-1912-1913": {
+                        "gnd": null,
+                        "viaf": null
+                    }
+                }
             }
         ],
         "schema:recordedIn": [
             {
-                "@id": "SOURCE_ID"
+                "@id": {
+                    "https://performance.musiconn.de/source/koenigliches-hoftheater-theaterzettel-dresden-1912-1913": {
+                        "gnd": null,
+                        "viaf": null
+                    }
+                }
             }
         ],
-        "schema:performer": [
+        "schema:performer": [],
+        "schema:workPerformed": [
             {
-                "@type": "schema:Person",
-                "@id": "PERFORMER_ID",
-                "schema:hasOccupation": "PERFORMER_ROLE"
-            },
-            {
-                "@type": "schema:PerformingGroup",
-                "@id": "GROUP_ID",
-                "schema:description": "GROUP_ROLE"
+                "@id": {
+                    "https://performance.musiconn.de/work/der-ring-des-nibelungen-zweiter-tag-siegfried-wagner-richard": {
+                        "gnd": "https://d-nb.info/gnd/300170327",
+                        "viaf": "https://viaf.org/viaf/316757475"
+                    }
+                },
+                "schema:author": [
+                    {
+                        "@type": "schema:Person",
+                        "@id": {
+                            "https://performance.musiconn.de/person/wagner-richard-1813-1883": {
+                                "gnd": "https://d-nb.info/gnd/118594117",
+                                "viaf": "https://viaf.org/viaf/29732107"
+                            }
+                        }
+                    }
+                ]
             }
-        ],
-        "schema:url": "EVENT_URL",
-        "url": "https://performance.musiconn.de/event/siegfried-semperoper-dresden-1913-05-25-18-00"
+        ]
     }
 }

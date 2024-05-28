@@ -94,17 +94,18 @@ def add_events(events, file_path, start_index):
             if location[loc]['gnd'] is None and location[loc]['viaf'] is None:
                 graph.add((event_id, CTO.relatedLocation, URIRef(loc)))
 
-        for superEvent in event['schema:event']['schema:superEvent']:
-            series = superEvent['@id']
-            for ser in series:
-                if series[ser]['gnd'] is not None:
-                    graph.add((event_id, CTO.itemOf, URIRef(series[ser]['gnd'])))
-                    graph.add((event_id, CTO.gnd, URIRef(series[ser]['gnd'])))
-                if series[ser]['viaf'] is not None:
-                    graph.add((event_id, CTO.itemOf, URIRef(series[ser]['viaf'])))
-                    graph.add((event_id, CTO.viaf, URIRef(series[ser]['viaf'])))
-                if series[ser]['gnd'] is None and series[ser]['viaf'] is None:
-                    graph.add((event_id, CTO.itemOf, URIRef(ser)))
+        if event['schema:event']['schema:superEvent'] is not None:
+            for superEvent in event['schema:event']['schema:superEvent']:
+                series = superEvent['@id']
+                for ser in series:
+                    if series[ser]['gnd'] is not None:
+                        graph.add((event_id, CTO.itemOf, URIRef(series[ser]['gnd'])))
+                        graph.add((event_id, CTO.gnd, URIRef(series[ser]['gnd'])))
+                    if series[ser]['viaf'] is not None:
+                        graph.add((event_id, CTO.itemOf, URIRef(series[ser]['viaf'])))
+                        graph.add((event_id, CTO.viaf, URIRef(series[ser]['viaf'])))
+                    if series[ser]['gnd'] is None and series[ser]['viaf'] is None:
+                        graph.add((event_id, CTO.itemOf, URIRef(ser)))
 
         if event['schema:event']['schema:recordedIn'] is not None:
             for record in event['schema:event']['schema:recordedIn']:
@@ -340,18 +341,22 @@ def map_event(data, template, index, wait_time):
     template_prefix = template['schema:event']
     template_prefix['schema:name'] = data_prefix['title']
     template_prefix['schema:temporalCoverage']['@value'] = parse_time(data_prefix)
-    location_index = data_prefix['locations'][0]['location']
-    if str(location_index) not in location_auth:
-        location_auth[f'{location_index}'] = fetch_meta_data(location_index, 'location', wait_time)
-        save_meta = True
-    template_prefix['schema:location'] = location_auth[f'{location_index}']
+    if 'locations' in data_prefix:
+        location_index = data_prefix['locations'][0]['location']
+        if str(location_index) not in location_auth:
+            location_auth[f'{location_index}'] = fetch_meta_data(location_index, 'location', wait_time)
+            save_meta = True
+        template_prefix['schema:location'] = location_auth[f'{location_index}']
     if data_prefix['names'] is not None:
         template_prefix['schema:alternateName'] = enrich_names(data_prefix)
-    series_index = data_prefix['serials'][0]['series']
-    if str(series_index) not in series_auth:
-        series_auth[f'{series_index}'] = fetch_meta_data(series_index, 'series', wait_time)
-        save_meta = True
-    template_prefix['schema:superEvent'][0]['@id'] = series_auth[f'{series_index}']
+    if 'serials' in data_prefix and data_prefix['serials'] is not None:
+        series_index = data_prefix['serials'][0]['series']
+        if str(series_index) not in series_auth:
+            series_auth[f'{series_index}'] = fetch_meta_data(series_index, 'series', wait_time)
+            save_meta = True
+        template_prefix['schema:superEvent'][0]['@id'] = series_auth[f'{series_index}']
+    else:
+        template_prefix['schema:superEvent'][0]['@id'] = {}
     if 'sources' in data_prefix and data_prefix['sources'] is not None:
         sources = []
         for sources_index, source in enumerate(data_prefix['sources']):
@@ -444,6 +449,8 @@ def map_work(data, template, index, wait_time):
                 save_meta = True
             childs.append({"@type": "schema:MusicComposition", '@id': copy.deepcopy(work_auth[f'{work_index}'])})
         template_prefix['schema:includedComposition'] = childs
+    else:
+        template_prefix['schema:includedComposition'] = []
     if 'composers' in data_prefix and data_prefix['composers'] is not None:
         composers = []
         for comp_index, composer in enumerate(data_prefix['composers']):
@@ -511,7 +518,10 @@ def parse_time(item):
         last_date = item['dates'][-1]
     else:
         last_date = first_date
-    datetime = f"{first_date}T{item['times'][0]['time']}/{last_date}T{item['times'][-1]['time']}"
+    if 'times' in item:
+        datetime = f"{first_date}T{item['times'][0]['time']}/{last_date}T{item['times'][-1]['time']}"
+    else:
+        datetime = f"{first_date}/{last_date}"
     return datetime
 
 

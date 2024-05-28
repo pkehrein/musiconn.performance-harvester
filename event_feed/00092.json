@@ -4,9 +4,14 @@
     },
     "@id": "https://nfdi4culture.de/id/E4255",
     "schema:event": {
-        "@id": "EVENT_ID",
+        "@id": "https://performance.musiconn.de/event/176-vorstellung-semperoper-dresden-1909-08-28-19-00",
         "schema:name": "176. Vorstellung, Semperoper (Dresden), 28.8.1909, 19:00",
-        "schema:location": "https://performance.musiconn.de/location/semperoper-dresden",
+        "schema:location": {
+            "https://performance.musiconn.de/location/semperoper-dresden": {
+                "gnd": "https://d-nb.info/gnd/1054565813",
+                "viaf": "https://viaf.org/viaf/309654002"
+            }
+        },
         "schema:temporalCoverage": {
             "@type": "schema:DateTime",
             "@value": "1909-08-28T19:00:00/1909-08-28T22:15:00"
@@ -16,36 +21,48 @@
                 "@value": "176. Vorstellung"
             }
         ],
-        "schema:subjectOf": [
-            {
-                "@type": "schema:ResearchProject",
-                "@id": "PROJECT_ID"
-            }
-        ],
         "schema:superEvent": [
             {
                 "@type": "schema:Event",
-                "@id": "SERIAL_ID"
+                "@id": {
+                    "https://performance.musiconn.de/series/koenigliches-opernhaus-saison-1909-1910": {
+                        "gnd": null,
+                        "viaf": null
+                    }
+                }
             }
         ],
         "schema:recordedIn": [
             {
-                "@id": "SOURCE_ID"
+                "@id": {
+                    "https://performance.musiconn.de/source/koenigliches-hoftheater-theaterzettel-dresden-1909-1910": {
+                        "gnd": null,
+                        "viaf": null
+                    }
+                }
             }
         ],
-        "schema:performer": [
+        "schema:performer": [],
+        "schema:workPerformed": [
             {
-                "@type": "schema:Person",
-                "@id": "PERFORMER_ID",
-                "schema:hasOccupation": "PERFORMER_ROLE"
-            },
-            {
-                "@type": "schema:PerformingGroup",
-                "@id": "GROUP_ID",
-                "schema:description": "GROUP_ROLE"
+                "@id": {
+                    "https://performance.musiconn.de/work/le-nozze-di-figaro-mozart-wolfgang-amadeus": {
+                        "gnd": "https://d-nb.info/gnd/300109849",
+                        "viaf": "https://viaf.org/viaf/308699110"
+                    }
+                },
+                "schema:author": [
+                    {
+                        "@type": "schema:Person",
+                        "@id": {
+                            "https://performance.musiconn.de/person/mozart-wolfgang-amadeus-1756-1791": {
+                                "gnd": "https://d-nb.info/gnd/118584596",
+                                "viaf": "https://viaf.org/viaf/32197206"
+                            }
+                        }
+                    }
+                ]
             }
-        ],
-        "schema:url": "EVENT_URL",
-        "url": "https://performance.musiconn.de/event/176-vorstellung-semperoper-dresden-1909-08-28-19-00"
+        ]
     }
 }
