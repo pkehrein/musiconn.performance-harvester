@@ -29,6 +29,7 @@ NFDICORE = Namespace("https://nfdi.fiz-karlsruhe.de/ontology#")
 
 def concat_files():
     header = True
+    count = 0
     with open("feed.ttl", 'w', encoding='utf-8') as file:
         for filename in os.listdir('event_result/'):
             filepath = os.path.join('event_result/', filename)
@@ -40,11 +41,13 @@ def concat_files():
                     content = readfile.read()
                     modified_content = remove_header(content)
                 file.write(modified_content + '\n')
+            count += 1
         for filename in os.listdir('work_result/'):
             filepath = os.path.join('work_result/', filename)
             with open(filepath, 'r', encoding='utf-8') as readfile:
                 file.write((remove_header(readfile.read())) + '\n')
-    print("##### Finished concatenating all turtle-files into one #####")
+            count += 1
+    print(f"##### Finished concatenating {count} turtle-files into feed.ttl #####")
 
 
 def remove_header(content):
@@ -77,22 +80,24 @@ def add_events(events, file_path, start_index):
         graph.add((event_id, NFDICORE.publisher, URIRef("https://nfdi4culture.de/id/E1841")))
         graph.add((event_id, CTO.elementOf, URIRef("https://nfdi4culture.de/id/E5320")))
         graph.add((event_id, CTO.title, Literal(event['schema:event']['schema:name'])))
-        eventdate = event['schema:event']['schema:temporalCoverage']['@value']
-        startdate = eventdate[:eventdate.index('/')]
-        enddate = eventdate[(eventdate.index('/') + 1):]
-        graph.add((event_id, NFDICORE.startDate, Literal(startdate)))
-        graph.add((event_id, NFDICORE.endDate, Literal(enddate)))
+        if event['schema:event']['schema:temporalCoverage']['@value'] is not None:
+            eventdate = event['schema:event']['schema:temporalCoverage']['@value']
+            startdate = eventdate[:eventdate.index('/')]
+            enddate = eventdate[(eventdate.index('/') + 1):]
+            graph.add((event_id, NFDICORE.startDate, Literal(startdate)))
+            graph.add((event_id, NFDICORE.endDate, Literal(enddate)))
 
-        location = event['schema:event']['schema:location']
-        for loc in location:
-            if location[loc]['gnd'] is not None:
-                graph.add((event_id, CTO.relatedLocation, URIRef(location[loc]['gnd'])))
-                graph.add((event_id, CTO.gnd, URIRef(location[loc]['gnd'])))
-            if location[loc]['viaf'] is not None:
-                graph.add((event_id, CTO.relatedLocation, URIRef(location[loc]['viaf'])))
-                graph.add((event_id, CTO.viaf, URIRef(location[loc]['viaf'])))
-            if location[loc]['gnd'] is None and location[loc]['viaf'] is None:
-                graph.add((event_id, CTO.relatedLocation, URIRef(loc)))
+        if event['schema:event']['schema:location'] is not None:
+            location = event['schema:event']['schema:location']
+            for loc in location:
+                if location[loc]['gnd'] is not None:
+                    graph.add((event_id, CTO.relatedLocation, URIRef(location[loc]['gnd'])))
+                    graph.add((event_id, CTO.gnd, URIRef(location[loc]['gnd'])))
+                if location[loc]['viaf'] is not None:
+                    graph.add((event_id, CTO.relatedLocation, URIRef(location[loc]['viaf'])))
+                    graph.add((event_id, CTO.viaf, URIRef(location[loc]['viaf'])))
+                if location[loc]['gnd'] is None and location[loc]['viaf'] is None:
+                    graph.add((event_id, CTO.relatedLocation, URIRef(loc)))
 
         if event['schema:event']['schema:superEvent'] is not None:
             for superEvent in event['schema:event']['schema:superEvent']:
@@ -210,10 +215,12 @@ def add_works(works, file_path, start_index):
             for composition_item in compositions[comp_index]['@id']:
                 graph.add((work_id, SDO.includedComposition, URIRef(composition_item)))
                 if compositions[comp_index]['@id'][composition_item]['gnd'] is not None:
-                    graph.add((work_id, SDO.includedComposition, URIRef(compositions[comp_index]['@id'][composition_item]['gnd'])))
+                    graph.add((work_id, SDO.includedComposition,
+                               URIRef(compositions[comp_index]['@id'][composition_item]['gnd'])))
                     graph.add((work_id, CTO.gnd, URIRef(compositions[comp_index]['@id'][composition_item]['gnd'])))
                 if compositions[comp_index]['@id'][composition_item]['viaf'] is not None:
-                    graph.add((work_id, SDO.includedComposition, URIRef(compositions[comp_index]['@id'][composition_item]['viaf'])))
+                    graph.add((work_id, SDO.includedComposition,
+                               URIRef(compositions[comp_index]['@id'][composition_item]['viaf'])))
                     graph.add((work_id, CTO.viaf, URIRef(compositions[comp_index]['@id'][composition_item]['viaf'])))
 
         events = work['schema:MusicComposition']['schema:subjectOf']
@@ -270,9 +277,25 @@ def parse_category_sizes(header):
 def parse_arguments():
     parser = ArgumentParser(description="Harvest data from the musiconn.performance-API and map it to JSON-LD and ttl")
     parser.add_argument('-w', '--wait', type=float, default=0, help="Wait time in between API-Requests")
-    parser.add_argument('-c', '--count', type=int, default=0, help="Number of items to be harvested. Default is all items (Warning: This might take a long time!)")
-    parser.add_argument('-b', '--startIndex', type=int, default=0, help="Index of the first Item to be harvested. Default is 0")
-    parser.add_argument('-F', '--singleFile', type=bool, default=False, help="Save all items in one graph and ttl-File. Default is false")
+    parser.add_argument('-c', '--count', type=int, default=0,
+                        help="Number of items to be harvested. Default is all items (Warning: This might take a long "
+                             "time!)")
+    parser.add_argument('-a', '--startIndexEvent', type=int, default=0,
+                        help="Index of the first Event to be harvested. Default is 0")
+    parser.add_argument('-b', '--startIndexWork', type=int, default=0, help="Index of the first work to be harvested. "
+                                                                            "Default is 0")
+    parser.add_argument('-F', '--singleFile', action='store_true',
+                        help="Save all items in one graph and ttl-File.")
+    parser.add_argument('-e', '--loadEvents', action='store_true', help="Load cached events to transform to "
+                                                                        "turtle instead of harvesting them first")
+    parser.add_argument('-l', '--loadWorks', action='store_true', help="Load cached works to transform to turtle "
+                                                                       "instead of harvesting them first")
+    parser.add_argument('-E', '--disableEvents', action='store_true', help="Disable harvesting, mapping and "
+                                                                           "transformation to turtle for the "
+                                                                           "item-type event")
+    parser.add_argument('-W', '--disableWorks', action='store_true', help="Disable harvesting, mapping and "
+                                                                          "transformation to turtle for the "
+                                                                          "item-type work")
     return parser.parse_args()
 
 
@@ -294,9 +317,11 @@ def fetch_json_data(url, wait_time):
 
 def harvest_category(category_count, category, wait_time, start_index):
     category_container = []
-    offset = category_count + start_index
-    for i in range(start_index+1, offset + 1):
-        data = fetch_json_data(f"https://performance.musiconn.de/api?action=get&format=json&{category}={str(i)}", wait_time)
+    if category_count < start_index:
+        category_count = category_count + start_index
+    for i in range(start_index + 1, category_count + 1):
+        data = fetch_json_data(f"https://performance.musiconn.de/api?action=get&format=json&{category}={str(i)}",
+                               wait_time)
         if data is not None:
             category_container.append(data)
             print(f"Harvested Item " + str(i) + " for Category: " + category)
@@ -340,13 +365,18 @@ def map_event(data, template, index, wait_time):
     data_prefix = data['event'][str(index + 1)]
     template_prefix = template['schema:event']
     template_prefix['schema:name'] = data_prefix['title']
-    template_prefix['schema:temporalCoverage']['@value'] = parse_time(data_prefix)
+    if 'dates' in data_prefix:
+        template_prefix['schema:temporalCoverage']['@value'] = parse_time(data_prefix)
+    else:
+        template_prefix['schema:temporalCoverage']['@value'] = None
     if 'locations' in data_prefix:
         location_index = data_prefix['locations'][0]['location']
         if str(location_index) not in location_auth:
             location_auth[f'{location_index}'] = fetch_meta_data(location_index, 'location', wait_time)
             save_meta = True
         template_prefix['schema:location'] = location_auth[f'{location_index}']
+    else:
+        template_prefix['schema:location'] = None
     if data_prefix['names'] is not None:
         template_prefix['schema:alternateName'] = enrich_names(data_prefix)
     if 'serials' in data_prefix and data_prefix['serials'] is not None:
@@ -384,12 +414,13 @@ def map_event(data, template, index, wait_time):
                 work_auth[f'{work_index}'] = fetch_meta_data(work_index, 'work', wait_time)
                 save_meta = True
             composers = []
-            for comp_index, composer in enumerate(data_prefix['performances'][works_index]['composers']):
-                composer_index = data_prefix['performances'][works_index]['composers'][comp_index]['person']
-                if str(composer_index) not in person_auth:
-                    person_auth[f'{composer_index}'] = fetch_meta_data(composer_index, 'person', wait_time)
-                    save_meta = True
-                composers.append({"@type": "schema:Person", '@id': copy.deepcopy(person_auth[f'{composer_index}'])})
+            if 'composers' in data_prefix['performances'][works_index]:
+                for comp_index, composer in enumerate(data_prefix['performances'][works_index]['composers']):
+                    composer_index = data_prefix['performances'][works_index]['composers'][comp_index]['person']
+                    if str(composer_index) not in person_auth:
+                        person_auth[f'{composer_index}'] = fetch_meta_data(composer_index, 'person', wait_time)
+                        save_meta = True
+                    composers.append({"@type": "schema:Person", '@id': copy.deepcopy(person_auth[f'{composer_index}'])})
             works.append({'@id': work_auth[f'{work_index}'], 'schema:author': composers})
         template_prefix['schema:workPerformed'] = works
     else:
@@ -407,7 +438,7 @@ def enrich_names(data_prefix):
 
 def map_work(data, template, index, wait_time):
     global save_meta
-    data_prefix = data['work'][str(index+1)]
+    data_prefix = data['work'][str(index + 1)]
     template_prefix = template['schema:MusicComposition']
     template_prefix['schema:name'] = data_prefix['title']
     if data_prefix['names'] is not None:
@@ -483,14 +514,20 @@ def complete_event_performers(data_prefix, role, wait_time, category):
                 person_auth[f'{person_index}'] = fetch_meta_data(person_index, 'person', wait_time)
                 save_meta = True
             if role:
-                occupation_index = data_prefix['persons'][index]['subject']
-                if str(occupation_index) not in subject_auth:
-                    subject_auth[f'{occupation_index}'] = fetch_meta_data(occupation_index, 'subject', wait_time)
-                    save_meta = True
-                performers.append({'@type': 'schema:Person', '@id': copy.deepcopy(person_auth[f'{person_index}']),
-                                   'schema:hasOccupation': copy.deepcopy(subject_auth[f'{occupation_index}'])})
+                if 'subject' in data_prefix['persons'][index]:
+                    occupation_index = data_prefix['persons'][index]['subject']
+                    if str(occupation_index) not in subject_auth:
+                        subject_auth[f'{occupation_index}'] = fetch_meta_data(occupation_index, 'subject', wait_time)
+                        save_meta = True
+                        performers.append(
+                            {'@type': 'schema:Person', '@id': copy.deepcopy(person_auth[f'{person_index}']),
+                             'schema:hasOccupation': copy.deepcopy(subject_auth[f'{occupation_index}'])})
+                else:
+                    performers.append({'@type': 'schema:Person', '@id': copy.deepcopy(person_auth[f'{person_index}']),
+                                       'schema:hasOccupation': None})
             else:
                 performers.append({'@type': 'schema:Person', '@id': copy.deepcopy(person_auth[f'{person_index}'])})
+            print(f"Successfully added performer {person_index}")
     if category == 'corporations':
         for index, corporation in enumerate(data_prefix['corporations']):
             corporation_index = data_prefix['corporations'][index]['corporation']
@@ -498,15 +535,24 @@ def complete_event_performers(data_prefix, role, wait_time, category):
                 corporation_auth[f'{corporation_index}'] = fetch_meta_data(corporation_index, 'corporation', wait_time)
                 save_meta = True
             if role:
-                occupation_index = data_prefix['corporations'][index]['subject']
-                if str(occupation_index) not in subject_auth:
-                    subject_auth[f'{occupation_index}'] = fetch_meta_data(occupation_index, 'subject', wait_time)
-                    save_meta = True
-                performers.append(
-                    {'@type': 'schema:PerformingGroup', '@id': copy.deepcopy(corporation_auth[f'{corporation_index}']),
-                     'schema:description': copy.deepcopy(subject_auth[f'{occupation_index}'])})
+                if 'subject' in data_prefix['corporations'][index]:
+                    occupation_index = data_prefix['corporations'][index]['subject']
+                    if str(occupation_index) not in subject_auth:
+                        subject_auth[f'{occupation_index}'] = fetch_meta_data(occupation_index, 'subject', wait_time)
+                        save_meta = True
+                        performers.append(
+                            {'@type': 'schema:PerformingGroup',
+                             '@id': copy.deepcopy(corporation_auth[f'{corporation_index}']),
+                             'schema:description': copy.deepcopy(subject_auth[f'{occupation_index}'])})
+                else:
+                    performers.append(
+                        {'@type': 'schema:PerformingGroup',
+                         '@id': copy.deepcopy(corporation_auth[f'{corporation_index}']),
+                         'schema:description': None})
             else:
-                performers.append({'@type': 'schema:PerformingGroup', '@id': copy.deepcopy(corporation_auth[f'{corporation_index}'])})
+                performers.append(
+                    {'@type': 'schema:PerformingGroup', '@id': copy.deepcopy(corporation_auth[f'{corporation_index}'])})
+            print(f"Successfully added corporation {corporation_index}")
     return performers
 
 
@@ -525,37 +571,66 @@ def parse_time(item):
     return datetime
 
 
-def process_json_data(wait_time, harvest_count, start_index, single_file):
+def process_json_data(wait_time, harvest_count, start_index_event, start_index_work, single_file, load_events, load_works,
+                      disable_events, disable_works):
     header = fetch_json_data("https://performance.musiconn.de/api?action=query&format=json&entity=null", wait_time)
     parse_category_sizes(header)
-    harvest_count_event = harvest_count
-    harvest_count_work = harvest_count
+    if harvest_count > 0:
+        harvest_count_event = harvest_count
+        harvest_count_work = harvest_count
+    else:
+        harvest_count_event = event_count
+        harvest_count_work = work_count
+    if not disable_events:
+        mapped_events = []
+        offset = 0
+        if load_events:
+            if start_index_event == 0:
+                offset += 1
+            file_names = sorted(os.listdir('event_feed/'))
+            file_index = file_names.index(f"{str(start_index_event + offset).zfill(5)}.json")
+            for filename in file_names[file_index:]:
+                filepath = os.path.join('event_feed/', filename)
+                with open(filepath, 'r', encoding='utf-8') as readfile:
+                    mapped_events.append(json.load(readfile))
 
-    event_template = load_template('event')
-    events = harvest_category(harvest_count_event, "event", wait_time, start_index)
-    mapped_events = []
-    item_index = start_index
-    for index, event in enumerate(events):
-        event = map_json_data(event, event_template, item_index, wait_time)
-        mapped_events.append(copy.deepcopy(event))
-        print(f"Successfully mapped event {index+1}")
-        save_json_data(event, "event_feed/", item_index)
-        item_index += 1
-    add_events(mapped_events, "event_result/", start_index)
-    print(f"########## Finished harvesting and mapping category event ##########")
+        else:
+            event_template = load_template('event')
+            events = harvest_category(harvest_count_event, "event", wait_time, start_index_event)
+            item_index = start_index_event
+            for index, event in enumerate(events):
+                event = map_json_data(event, event_template, item_index, wait_time)
+                mapped_events.append(copy.deepcopy(event))
+                print(f"Successfully mapped event {index + 1}")
+                save_json_data(event, "event_feed/", item_index)
+                item_index += 1
+        add_events(mapped_events, "event_result/", start_index_event)
+        print(f"########## Finished harvesting and mapping category event ##########")
 
-    work_template = load_template('work')
-    works = harvest_category(harvest_count_work, 'work', wait_time, start_index)
-    mapped_work = []
-    item_index = start_index
-    for index, work in enumerate(works):
-        work = map_json_data(work, work_template, item_index, wait_time)
-        mapped_work.append(copy.deepcopy(work))
-        print(f"Successfully mapped work {index+1}")
-        save_json_data(work, f'work_feed/', item_index)
-        item_index += 1
-    add_works(mapped_work, "work_result/", start_index)
-    print(f"########## Finished harvesting and mapping category work ##########")
+    if not disable_works:
+        mapped_work = []
+        offset = 0
+        if load_works:
+            if start_index_work == 0:
+                offset += 1
+            file_names = sorted(os.listdir('work_feed/'))
+            file_index = file_names.index(f"{str(start_index_work + offset).zfill(5)}.json")
+            for filename in file_names[file_index:]:
+                filepath = os.path.join('work_feed/', filename)
+                with open(filepath, 'r', encoding='utf-8') as readfile:
+                    mapped_work.append(json.load(readfile))
+        else:
+            work_template = load_template('work')
+            works = harvest_category(harvest_count_work, 'work', wait_time, start_index_work)
+            item_index = start_index_work
+            for index, work in enumerate(works):
+                work = map_json_data(work, work_template, item_index, wait_time)
+                mapped_work.append(copy.deepcopy(work))
+                print(f"Successfully mapped work {index + 1}")
+                save_json_data(work, f'work_feed/', item_index)
+                item_index += 1
+        add_works(mapped_work, "work_result/", start_index_work)
+        print(f"########## Finished harvesting and mapping category work ##########")
 
     if single_file:
         concat_files()
@@ -573,26 +648,29 @@ def process_json_data(wait_time, harvest_count, start_index, single_file):
 
 def fetch_meta_data(index, category, wait_time):
     authority_linked = {}
-    data = fetch_json_data(f"https://performance.musiconn.de/api?action=get&format=json&{category}={str(index)}", wait_time)
-    link = data[category][str(index)]['url']
-    authority = {"gnd": None, "viaf": None}
-    data_prefix = data[category][str(index)]
-    if "authorities" in data_prefix and data_prefix["authorities"] is not None:
-        authorities = fetch_authorities(data_prefix["authorities"], wait_time)
-        for item in authorities:
-            authority_link = item['url']
-            if "gnd" in authority_link:
-                authority["gnd"] = authority_link
-            if "viaf" in authority_link:
-                authority["viaf"] = authority_link
-    authority_linked[link] = authority
+    data = fetch_json_data(f"https://performance.musiconn.de/api?action=get&format=json&{category}={str(index)}",
+                           wait_time)
+    if 'url' in data[category][str(index)]:
+        link = data[category][str(index)]['url']
+        authority = {"gnd": None, "viaf": None}
+        data_prefix = data[category][str(index)]
+        if "authorities" in data_prefix and data_prefix["authorities"] is not None:
+            authorities = fetch_authorities(data_prefix["authorities"], wait_time)
+            for item in authorities:
+                authority_link = item['url']
+                if "gnd" in authority_link:
+                    authority["gnd"] = authority_link
+                if "viaf" in authority_link:
+                    authority["viaf"] = authority_link
+        authority_linked[link] = authority
     return authority_linked
 
 
 def fetch_authorities(authority_list, wait_time):
     data_list = []
     for authority in authority_list:
-        auth_data = fetch_json_data(f"https://performance.musiconn.de/api?action=get&format=json&authority={authority['authority']}", wait_time)
+        auth_data = fetch_json_data(
+            f"https://performance.musiconn.de/api?action=get&format=json&authority={authority['authority']}", wait_time)
         if auth_data:
             auth_link = auth_data["authority"][str(authority['authority'])]['links'][0]
             data_list.append(auth_link)
@@ -653,4 +731,5 @@ if __name__ == "__main__":
     args = parse_arguments()
 
     load_meta_data()
-    process_json_data(args.wait, args.count, args.startIndex, args.singleFile)
+    process_json_data(args.wait, args.count, args.startIndexEvent, args.startIndexWork, args.singleFile,
+                      args.loadEvents, args.loadWorks, args.disableEvents, args.disableWorks)
