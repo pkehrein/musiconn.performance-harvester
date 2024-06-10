@@ -61,7 +61,7 @@ def init_graph():
     graph.bind("cto", CTO)
     graph.bind("nfdicore", NFDICORE)
     graph.bind("n4c", N4C)
-    graph.add((N4C.E5378, SDO.dateModified, Literal(date.today(), datatype=XSD.date)))
+    graph.add((N4C.E5320, SDO.dateModified, Literal(date.today(), datatype=XSD.date)))
 
     return graph
 
