@@ -4,9 +4,14 @@
     },
     "@id": "https://nfdi4culture.de/id/E4255",
     "schema:event": {
-        "@id": "EVENT_ID",
+        "@id": "https://performance.musiconn.de/event/tiefland-semperoper-dresden-1909-08-09-19-30",
         "schema:name": "Tiefland, Semperoper (Dresden), 9.8.1909, 19:30",
-        "schema:location": "https://performance.musiconn.de/location/semperoper-dresden",
+        "schema:location": {
+            "https://performance.musiconn.de/location/semperoper-dresden": {
+                "gnd": "https://d-nb.info/gnd/1054565813",
+                "viaf": "https://viaf.org/viaf/309654002"
+            }
+        },
         "schema:temporalCoverage": {
             "@type": "schema:DateTime",
             "@value": "1909-08-09T19:30:00/1909-08-09T22:00:00"
@@ -19,36 +24,48 @@
                 "@value": "157. Vorstellung"
             }
         ],
-        "schema:subjectOf": [
-            {
-                "@type": "schema:ResearchProject",
-                "@id": "PROJECT_ID"
-            }
-        ],
         "schema:superEvent": [
             {
                 "@type": "schema:Event",
-                "@id": "SERIAL_ID"
+                "@id": {
+                    "https://performance.musiconn.de/series/koenigliches-opernhaus-saison-1909-1910": {
+                        "gnd": null,
+                        "viaf": null
+                    }
+                }
             }
         ],
         "schema:recordedIn": [
             {
-                "@id": "SOURCE_ID"
+                "@id": {
+                    "https://performance.musiconn.de/source/koenigliches-hoftheater-theaterzettel-dresden-1909-1910": {
+                        "gnd": null,
+                        "viaf": null
+                    }
+                }
             }
         ],
-        "schema:performer": [
+        "schema:performer": [],
+        "schema:workPerformed": [
             {
-                "@type": "schema:Person",
-                "@id": "PERFORMER_ID",
-                "schema:hasOccupation": "PERFORMER_ROLE"
-            },
-            {
-                "@type": "schema:PerformingGroup",
-                "@id": "GROUP_ID",
-                "schema:description": "GROUP_ROLE"
+                "@id": {
+                    "https://performance.musiconn.de/work/tiefland-albert-eugen-d": {
+                        "gnd": "https://d-nb.info/gnd/300001703",
+                        "viaf": "https://viaf.org/viaf/178688489"
+                    }
+                },
+                "schema:author": [
+                    {
+                        "@type": "schema:Person",
+                        "@id": {
+                            "https://performance.musiconn.de/person/albert-eugen-d-1864-1932": {
+                                "gnd": "https://d-nb.info/gnd/118501437",
+                                "viaf": "https://viaf.org/viaf/34642370"
+                            }
+                        }
+                    }
+                ]
             }
-        ],
-        "schema:url": "EVENT_URL",
-        "url": "https://performance.musiconn.de/event/tiefland-semperoper-dresden-1909-08-09-19-30"
+        ]
     }
 }
