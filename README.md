@@ -19,6 +19,10 @@ Clone the repository or download the harvest.py file and the templates directory
 
 ``pip install requests rdflib``
 
+If you want to start from scratch and harvest all data on your own, you can use the branch clean of this repository:
+
+``git checkout clean``
+
 ## Usage
 
 Run the script with the following command:
