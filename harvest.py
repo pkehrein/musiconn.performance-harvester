@@ -177,7 +177,6 @@ def add_works(works, file_path, start_index):
         graph.add((bn, SDO.item, work_id))
         graph.add((work_id, RDF.type, CTO.DataFeedElement))
         graph.add((work_id, RDF.type, SDO.MusicComposition))
-        # graph.add((work_id, CTO.elementType, URIRef("http://vocab.getty.edu/aat/300069451")))
         graph.add((work_id, NFDICORE.publisher, URIRef("https://nfdi4culture.de/id/E1841")))
         graph.add((work_id, CTO.elementOf, URIRef("https://nfdi4culture.de/id/E5320")))
         graph.add((work_id, CTO.title, Literal(work['schema:MusicComposition']['schema:name'])))
@@ -276,7 +275,7 @@ def parse_category_sizes(header):
 
 def parse_arguments():
     parser = ArgumentParser(description="Harvest data from the musiconn.performance-API and map it to JSON-LD and ttl")
-    parser.add_argument('-w', '--wait', type=float, default=0, help="Wait time in between API-Requests")
+    parser.add_argument('-w', '--wait', type=float, default=1, help="Wait time in between API-Requests")
     parser.add_argument('-c', '--count', type=int, default=0,
                         help="Number of items to be harvested. Default is all items (Warning: This might take a long "
                              "time!)")
