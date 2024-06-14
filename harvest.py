@@ -275,7 +275,8 @@ def parse_category_sizes(header):
 
 def parse_arguments():
     parser = ArgumentParser(description="Harvest data from the musiconn.performance-API and map it to JSON-LD and ttl")
-    parser.add_argument('-w', '--wait', type=float, default=1, help="Wait time in between API-Requests")
+    parser.add_argument('-w', '--wait', type=float, default=1, help="Wait time in between API-Requests to reduce "
+                                                                    "load. Default is one second")
     parser.add_argument('-c', '--count', type=int, default=0,
                         help="Number of items to be harvested. Default is all items (Warning: This might take a long "
                              "time!)")
