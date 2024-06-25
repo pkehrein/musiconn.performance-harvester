@@ -1,13 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/les-preludes-liszt-franz> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/les-preludes-liszt-franz> ] .
 
-<https://performance.musiconn.de/work/les-preludes-liszt-franz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/les-preludes-liszt-franz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/konzert-christuskirche-dresden-1945-08-03-18-00>,
+        <https://performance.musiconn.de/event/konzert-dresden-1943-11-28-16-00>,
+        <https://performance.musiconn.de/event/konzert-neues-dresdner-revue-und-variete-theater-1945-08-26-11-00>,
+        <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1882-01-21-19-30>,
+        <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1886-10-09-19-30>,
+        <https://performance.musiconn.de/event/waldpark-serenade-kurpark-bad-weisser-hirsch-dresden-1945-08-08-18-00>,
+        <https://performance.musiconn.de/event/waldparkkonzert-dresden-1944-07-24>,
+        <https://performance.musiconn.de/event/zweites-museums-concert-grosser-konzertsaal-frankfurt-a-m-1891-10-30-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Gültige Werkverzeichniszählung: R 4141854 ist das Jahr der Uraufführung; Werk ist spätestens 1848 entstandenSymphonische Dichtung Nr. 3 nach A. de LamartineEs gibt Bearbeitungen für Klavier 4-händig R 317, für Klavier (2) R 359" ;
     cto:elementOf n4c:E5320 ;
@@ -69,13 +77,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/45144814273718687574>,
         <https://viaf.org/viaf/64199483>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    schema:subjectOf <https://performance.musiconn.de/event/konzert-christuskirche-dresden-1945-08-03-18-00>,
-        <https://performance.musiconn.de/event/konzert-dresden-1943-11-28-16-00>,
-        <https://performance.musiconn.de/event/konzert-neues-dresdner-revue-und-variete-theater-1945-08-26-11-00>,
-        <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1882-01-21-19-30>,
-        <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1886-10-09-19-30>,
-        <https://performance.musiconn.de/event/waldpark-serenade-kurpark-bad-weisser-hirsch-dresden-1945-08-08-18-00>,
-        <https://performance.musiconn.de/event/waldparkkonzert-dresden-1944-07-24>,
-        <https://performance.musiconn.de/event/zweites-museums-concert-grosser-konzertsaal-frankfurt-a-m-1891-10-30-18-30> .
+        <https://viaf.org/viaf/8413148122912495200001> .
 

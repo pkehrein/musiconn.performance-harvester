@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/romanzen-und-balladen-op-145-schumann-robert> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/romanzen-und-balladen-op-145-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/romanzen-und-balladen-op-145-schumann-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/romanzen-und-balladen-op-145-schumann-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300146361>,
+        <https://d-nb.info/gnd/30014637X>,
+        <https://performance.musiconn.de/work/romanzen-und-balladen-nr-11-schumann-robert>,
+        <https://performance.musiconn.de/work/romanzen-und-balladen-nr-13-schumann-robert>,
+        <https://viaf.org/viaf/181294983>,
+        <https://viaf.org/viaf/215925059> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "5 Stücke, auch als Heft 3 (Stücke 11-15) bezeichnet.Umfasst Romanzen und Balladen Nr. 11-15: Der Schmied, Die Nonne, Der Sänger, John Anderson, Romanze vom Gänsebuben" ;
     cto:elementOf n4c:E5320 ;
@@ -23,11 +29,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Romanzen und Balladen, op. 145 (Schumann, Robert)" ;
     cto:viaf <https://viaf.org/viaf/181294983>,
         <https://viaf.org/viaf/215925059>,
-        <https://viaf.org/viaf/7575259> ;
-    schema:includedComposition <https://d-nb.info/gnd/300146361>,
-        <https://d-nb.info/gnd/30014637X>,
-        <https://performance.musiconn.de/work/romanzen-und-balladen-nr-11-schumann-robert>,
-        <https://performance.musiconn.de/work/romanzen-und-balladen-nr-13-schumann-robert>,
-        <https://viaf.org/viaf/181294983>,
-        <https://viaf.org/viaf/215925059> .
+        <https://viaf.org/viaf/7575259> .
 

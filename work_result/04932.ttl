@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/messe-agnus-dei-thomas-kurt> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/messe-agnus-dei-thomas-kurt> ] .
 
-<https://performance.musiconn.de/work/messe-agnus-dei-thomas-kurt> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/messe-agnus-dei-thomas-kurt> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/60-volkstuemliches-konzert-dom-koenigsberg-1935-10-24-20-00>,
+        <https://performance.musiconn.de/event/dresdenes-krusta-kora-garigs-koncerts-dreifaltigkeitskathedrale-liepaja-1936-09-23-20-00>,
+        <https://performance.musiconn.de/event/drezdenes-krusta-baznicas-kora-garigs-koncerts-sankt-trinitatis-kirche-mitau-1936-10-03-19-00>,
+        <https://performance.musiconn.de/event/geistliche-abendmusik-des-dresdner-kreuzchores-sankt-petri-kirche-riga-1936-09-25-20-00>,
+        <https://performance.musiconn.de/event/kirchenkonzert-des-dresdener-kreuzchores-deutsche-kirche-helsinki-1936-10-01-20-00>,
+        <https://performance.musiconn.de/event/konsert-stads-kyrka-arvika-1937-10-29-20-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118757288>,
@@ -24,11 +30,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Messe. Agnus Dei (Thomas, Kurt)" ;
     cto:viaf <https://viaf.org/viaf/139053206>,
         <https://viaf.org/viaf/150245159>,
-        <https://viaf.org/viaf/42028115> ;
-    schema:subjectOf <https://performance.musiconn.de/event/60-volkstuemliches-konzert-dom-koenigsberg-1935-10-24-20-00>,
-        <https://performance.musiconn.de/event/dresdenes-krusta-kora-garigs-koncerts-dreifaltigkeitskathedrale-liepaja-1936-09-23-20-00>,
-        <https://performance.musiconn.de/event/drezdenes-krusta-baznicas-kora-garigs-koncerts-sankt-trinitatis-kirche-mitau-1936-10-03-19-00>,
-        <https://performance.musiconn.de/event/geistliche-abendmusik-des-dresdner-kreuzchores-sankt-petri-kirche-riga-1936-09-25-20-00>,
-        <https://performance.musiconn.de/event/kirchenkonzert-des-dresdener-kreuzchores-deutsche-kirche-helsinki-1936-10-01-20-00>,
-        <https://performance.musiconn.de/event/konsert-stads-kyrka-arvika-1937-10-29-20-00> .
+        <https://viaf.org/viaf/42028115> .
 

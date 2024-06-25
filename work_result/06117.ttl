@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/ein-carnevalscherz-schreiner-adolf> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/ein-carnevalscherz-schreiner-adolf> ] .
 
-<https://performance.musiconn.de/work/ein-carnevalscherz-schreiner-adolf> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/ein-carnevalscherz-schreiner-adolf> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-02-16-16-00>,
+        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-02-16-19-30>,
+        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-02-18-19-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Es gibt noch einen Komponisten mit dem gleichen Namen (geb. 1842). Wahrscheinlicher ist jedoch der hier angegebene." ;
     cto:elementOf n4c:E5320 ;
@@ -21,8 +24,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/50450478> ;
     cto:title "Ein Carnevalscherz (Schreiner, Adolf)" ;
     cto:viaf <https://viaf.org/viaf/50450478>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    schema:subjectOf <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-02-16-16-00>,
-        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-02-16-19-30>,
-        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-02-18-19-30> .
+        <https://viaf.org/viaf/8413148122912495200001> .
 

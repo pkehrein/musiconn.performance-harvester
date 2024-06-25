@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/zavoronok-tiscenko-boris-ivanovic> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/zavoronok-tiscenko-boris-ivanovic> ] .
 
-<https://performance.musiconn.de/work/zavoronok-tiscenko-boris-ivanovic> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/zavoronok-tiscenko-boris-ivanovic> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1220337471>,
+        <https://performance.musiconn.de/work/zavoronok-suite-tiscenko-boris-ivanovic>,
+        <https://viaf.org/viaf/1550160425261368320000> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Schauspielmusik zum Drama von Jean Anouilh" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/2659576> ;
     cto:title "Žavoronok (Tiščenko, Boris Ivanovič)" ;
     cto:viaf <https://viaf.org/viaf/1550160425261368320000>,
-        <https://viaf.org/viaf/2659576> ;
-    schema:includedComposition <https://d-nb.info/gnd/1220337471>,
-        <https://performance.musiconn.de/work/zavoronok-suite-tiscenko-boris-ivanovic>,
-        <https://viaf.org/viaf/1550160425261368320000> .
+        <https://viaf.org/viaf/2659576> .
 

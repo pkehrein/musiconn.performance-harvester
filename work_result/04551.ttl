@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/louise-charpentier-gustave> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/louise-charpentier-gustave> ] .
 
-<https://performance.musiconn.de/work/louise-charpentier-gustave> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/louise-charpentier-gustave> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300036043>,
+        <https://performance.musiconn.de/work/louise-arie-charpentier-gustave>,
+        <https://performance.musiconn.de/work/louise-depuis-le-jour-charpentier-gustave>,
+        <https://viaf.org/viaf/178247607> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/louise-semperoper-dresden-1912-04-14-19-00>,
+        <https://performance.musiconn.de/event/lousie-semperoper-dresden-1912-03-16-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Oper in 4 Akten" ;
     cto:elementOf n4c:E5320 ;
@@ -23,11 +29,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Louise (Charpentier, Gustave)" ;
     cto:viaf <https://viaf.org/viaf/158420977>,
         <https://viaf.org/viaf/178247607>,
-        <https://viaf.org/viaf/27251362> ;
-    schema:includedComposition <https://d-nb.info/gnd/300036043>,
-        <https://performance.musiconn.de/work/louise-arie-charpentier-gustave>,
-        <https://performance.musiconn.de/work/louise-depuis-le-jour-charpentier-gustave>,
-        <https://viaf.org/viaf/178247607> ;
-    schema:subjectOf <https://performance.musiconn.de/event/louise-semperoper-dresden-1912-04-14-19-00>,
-        <https://performance.musiconn.de/event/lousie-semperoper-dresden-1912-03-16-19-00> .
+        <https://viaf.org/viaf/27251362> .
 

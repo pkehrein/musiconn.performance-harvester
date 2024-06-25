@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/ciganske-melodie-dvorak-antonin> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/ciganske-melodie-dvorak-antonin> ] .
 
-<https://performance.musiconn.de/work/ciganske-melodie-dvorak-antonin> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/ciganske-melodie-dvorak-antonin> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/30004724X>,
+        <https://performance.musiconn.de/work/ciganske-melodie-kdyz-mne-stara-matka-dvorak-antonin>,
+        <https://viaf.org/viaf/179420647> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "7 Lieder: Dusk Má píseň zas mi láskou zní (Mein Lied ertönt, ein Liebespsalm). Aj! Kterak trojhranec můj přerozkošně zvoní (Ei, wie mein Triangel wunderherrlich läutet).l A les je tichý kolem kol (Rings ist der Wald so stumm und still). Když mne stará matka zpívat, zpívat učívala (Als die alte Mutter). Danci Struna naladěna, hochu, toč se v kole (Reingestimmt die Saiten). Široké rukávy a široké gatě (In dem weiten, breiten, luft’gen Leinenkleide). Dejte klec jestřábu ze zlata ryzého (Horstet hoch der Habicht auf den Felsenhöhen)" ;
     cto:elementOf n4c:E5320 ;
@@ -23,8 +26,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Cigánské melodie (Dvořák, Antonín)" ;
     cto:viaf <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/179420647>,
-        <https://viaf.org/viaf/71577743> ;
-    schema:includedComposition <https://d-nb.info/gnd/30004724X>,
-        <https://performance.musiconn.de/work/ciganske-melodie-kdyz-mne-stara-matka-dvorak-antonin>,
-        <https://viaf.org/viaf/179420647> .
+        <https://viaf.org/viaf/71577743> .
 

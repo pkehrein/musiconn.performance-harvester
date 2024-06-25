@@ -1,13 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sinfonien-nr-9-op-125-d-moll-beethoven-ludwig-van> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sinfonien-nr-9-op-125-d-moll-beethoven-ludwig-van> ] .
 
-<https://performance.musiconn.de/work/sinfonien-nr-9-op-125-d-moll-beethoven-ludwig-van> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sinfonien-nr-9-op-125-d-moll-beethoven-ludwig-van> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300631693>,
+        <https://d-nb.info/gnd/300898487>,
+        <https://performance.musiconn.de/work/sinfonien-nr-9-op-125-d-moll-adagio-molto-e-cantabile-beethoven-ludwig-van>,
+        <https://performance.musiconn.de/work/sinfonien-nr-9-op-125-d-moll-auswahl-beethoven-ludwig-van>,
+        <https://performance.musiconn.de/work/sinfonien-nr-9-op-125-d-moll-presto-beethoven-ludwig-van>,
+        <https://performance.musiconn.de/work/sinfonien-nr-9-op-125-d-moll-presto-rezitativ-beethoven-ludwig-van>,
+        <https://viaf.org/viaf/192595365>,
+        <https://viaf.org/viaf/198538497> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/11-museums-concert-grosser-konzertsaal-frankfurt-a-m-1866-03-02-18-30>,
+        <https://performance.musiconn.de/event/12-museums-concert-grosser-konzertsaal-frankfurt-a-m-1872-03-15-18-30>,
+        <https://performance.musiconn.de/event/12-museums-concert-grosser-konzertsaal-frankfurt-a-m-1876-03-31-18-30>,
+        <https://performance.musiconn.de/event/12-museums-concert-grosser-konzertsaal-frankfurt-a-m-1879-03-14-18-30>,
+        <https://performance.musiconn.de/event/2-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-10-22-18-30>,
+        <https://performance.musiconn.de/event/6-sinfonie-konzert-der-generaldirektion-der-koenigl-musikalischen-kapelle-semperoper-dresden-1913-03-16-19-30>,
+        <https://performance.musiconn.de/event/7-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1911-04-09-19-30>,
+        <https://performance.musiconn.de/event/8-anrechts-konzert-gewerbehaus-dresden-gewerbehaus-saal-1944-01-19-16-30>,
+        <https://performance.musiconn.de/event/auffuehrung-semperoper-dresden-1911-05-07-18-30>,
+        <https://performance.musiconn.de/event/elftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1883-03-02-18-30>,
+        <https://performance.musiconn.de/event/general-probe-zu-der-am-palmsonntag-stattfindenden-grossen-musik-auffuehrung-semperoper-dresden-1905-04-15-19-00>,
+        <https://performance.musiconn.de/event/general-probe-zu-der-am-palmsonntag-stattfindenden-grossen-musik-auffuehrung-semperoper-dresden-1906-04-07>,
+        <https://performance.musiconn.de/event/general-probe-zu-der-am-palmsonntag-stattfindenden-grossen-musik-auffuehrung-semperoper-dresden-1907-03-23-19-00>,
+        <https://performance.musiconn.de/event/general-probe-zum-6-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1913-03-15-19-30>,
+        <https://performance.musiconn.de/event/general-probe-zum-7-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1911-04-08-19-30>,
+        <https://performance.musiconn.de/event/grosse-musikauffuehrung-interimstheater-am-zwingerwall-dresden-1877-03-25-19-00>,
+        <https://performance.musiconn.de/event/grosse-musikauffuehrung-semperoper-dresden-1905-04-16-19-00>,
+        <https://performance.musiconn.de/event/grosse-musikauffuehrung-semperoper-dresden-1906-04-08-19-00>,
+        <https://performance.musiconn.de/event/grosse-musikauffuehrung-semperoper-dresden-1907-03-24-19-00>,
+        <https://performance.musiconn.de/event/konzert-gewerbehaus-dresden-gewerbehaus-saal-1944-01-20-16-30>,
+        <https://performance.musiconn.de/event/sechstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1890-12-19-18-30>,
+        <https://performance.musiconn.de/event/siebentes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1896-01-10-19-00>,
+        <https://performance.musiconn.de/event/zwoelftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1889-03-29-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10003121-3>,
@@ -384,36 +415,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/5336155105826276320007>,
         <https://viaf.org/viaf/69150030500310961612>,
         <https://viaf.org/viaf/8413148122912495200001>,
-        <https://viaf.org/viaf/90145542390596640357> ;
-    schema:includedComposition <https://d-nb.info/gnd/300631693>,
-        <https://d-nb.info/gnd/300898487>,
-        <https://performance.musiconn.de/work/sinfonien-nr-9-op-125-d-moll-adagio-molto-e-cantabile-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-nr-9-op-125-d-moll-auswahl-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-nr-9-op-125-d-moll-presto-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-nr-9-op-125-d-moll-presto-rezitativ-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/192595365>,
-        <https://viaf.org/viaf/198538497> ;
-    schema:subjectOf <https://performance.musiconn.de/event/11-museums-concert-grosser-konzertsaal-frankfurt-a-m-1866-03-02-18-30>,
-        <https://performance.musiconn.de/event/12-museums-concert-grosser-konzertsaal-frankfurt-a-m-1872-03-15-18-30>,
-        <https://performance.musiconn.de/event/12-museums-concert-grosser-konzertsaal-frankfurt-a-m-1876-03-31-18-30>,
-        <https://performance.musiconn.de/event/12-museums-concert-grosser-konzertsaal-frankfurt-a-m-1879-03-14-18-30>,
-        <https://performance.musiconn.de/event/2-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-10-22-18-30>,
-        <https://performance.musiconn.de/event/6-sinfonie-konzert-der-generaldirektion-der-koenigl-musikalischen-kapelle-semperoper-dresden-1913-03-16-19-30>,
-        <https://performance.musiconn.de/event/7-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1911-04-09-19-30>,
-        <https://performance.musiconn.de/event/8-anrechts-konzert-gewerbehaus-dresden-gewerbehaus-saal-1944-01-19-16-30>,
-        <https://performance.musiconn.de/event/auffuehrung-semperoper-dresden-1911-05-07-18-30>,
-        <https://performance.musiconn.de/event/elftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1883-03-02-18-30>,
-        <https://performance.musiconn.de/event/general-probe-zu-der-am-palmsonntag-stattfindenden-grossen-musik-auffuehrung-semperoper-dresden-1905-04-15-19-00>,
-        <https://performance.musiconn.de/event/general-probe-zu-der-am-palmsonntag-stattfindenden-grossen-musik-auffuehrung-semperoper-dresden-1906-04-07>,
-        <https://performance.musiconn.de/event/general-probe-zu-der-am-palmsonntag-stattfindenden-grossen-musik-auffuehrung-semperoper-dresden-1907-03-23-19-00>,
-        <https://performance.musiconn.de/event/general-probe-zum-6-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1913-03-15-19-30>,
-        <https://performance.musiconn.de/event/general-probe-zum-7-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1911-04-08-19-30>,
-        <https://performance.musiconn.de/event/grosse-musikauffuehrung-interimstheater-am-zwingerwall-dresden-1877-03-25-19-00>,
-        <https://performance.musiconn.de/event/grosse-musikauffuehrung-semperoper-dresden-1905-04-16-19-00>,
-        <https://performance.musiconn.de/event/grosse-musikauffuehrung-semperoper-dresden-1906-04-08-19-00>,
-        <https://performance.musiconn.de/event/grosse-musikauffuehrung-semperoper-dresden-1907-03-24-19-00>,
-        <https://performance.musiconn.de/event/konzert-gewerbehaus-dresden-gewerbehaus-saal-1944-01-20-16-30>,
-        <https://performance.musiconn.de/event/sechstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1890-12-19-18-30>,
-        <https://performance.musiconn.de/event/siebentes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1896-01-10-19-00>,
-        <https://performance.musiconn.de/event/zwoelftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1889-03-29-18-30> .
+        <https://viaf.org/viaf/90145542390596640357> .
 

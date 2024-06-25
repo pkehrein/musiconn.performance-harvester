@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/credo-symphoniacum-olsson-otto> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/credo-symphoniacum-olsson-otto> ] .
 
-<https://performance.musiconn.de/work/credo-symphoniacum-olsson-otto> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/credo-symphoniacum-olsson-otto> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1173343490>,
+        <https://performance.musiconn.de/work/credo-symphoniacum-introduction-und-allegro-olsson-otto>,
+        <https://viaf.org/viaf/179320343> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Sätze: 1. Introduction und allegro (Credo in unum Deum) / 2. Choral (Jesus Christus nostra salus) / 3. Finale (Veni Creator Spiritus)" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/44486030> ;
     cto:title "Credo Symphoniacum (Olsson, Otto)" ;
     cto:viaf <https://viaf.org/viaf/179320343>,
-        <https://viaf.org/viaf/44486030> ;
-    schema:includedComposition <https://d-nb.info/gnd/1173343490>,
-        <https://performance.musiconn.de/work/credo-symphoniacum-introduction-und-allegro-olsson-otto>,
-        <https://viaf.org/viaf/179320343> .
+        <https://viaf.org/viaf/44486030> .
 

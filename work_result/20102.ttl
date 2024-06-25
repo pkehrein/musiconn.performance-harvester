@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/quintette-floete-oboe-violine-viola-violoncello-b-280-282-pleyel-ignaz> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/quintette-floete-oboe-violine-viola-violoncello-b-280-282-pleyel-ignaz> ] .
 
-<https://performance.musiconn.de/work/quintette-floete-oboe-violine-viola-violoncello-b-280-282-pleyel-ignaz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/quintette-floete-oboe-violine-viola-violoncello-b-280-282-pleyel-ignaz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1172357641>,
+        <https://performance.musiconn.de/work/quintette-floete-oboe-violine-viola-violoncello-b-280-282-b-282-pleyel-ignaz>,
+        <https://viaf.org/viaf/7585154387358030970006> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfasst drei Quintette in G-Dur, C-Dur und Es Dur" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/71657816> ;
     cto:title "Quintette, Flöte, Oboe, Violine, Viola, Violoncello, B 280-282 (Pleyel, Ignaz)" ;
     cto:viaf <https://viaf.org/viaf/71657816>,
-        <https://viaf.org/viaf/7585154387358030970006> ;
-    schema:includedComposition <https://d-nb.info/gnd/1172357641>,
-        <https://performance.musiconn.de/work/quintette-floete-oboe-violine-viola-violoncello-b-280-282-b-282-pleyel-ignaz>,
         <https://viaf.org/viaf/7585154387358030970006> .
 

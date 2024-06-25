@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-k-191-196-dittersdorf-karl-ditters-von> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-k-191-196-dittersdorf-karl-ditters-von> ] .
 
-<https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-k-191-196-dittersdorf-karl-ditters-von> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-k-191-196-dittersdorf-karl-ditters-von> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300300891>,
+        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-k-195-es-dur-dittersdorf-karl-ditters-von>,
+        <https://viaf.org/viaf/215928976> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Besteht aus 6 Quartetten" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/27251577> ;
     cto:title "Quartette, Violine (2), Viola, Violoncello, K 191-196 (Dittersdorf, Karl Ditters von)" ;
     cto:viaf <https://viaf.org/viaf/215928976>,
-        <https://viaf.org/viaf/27251577> ;
-    schema:includedComposition <https://d-nb.info/gnd/300300891>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-k-195-es-dur-dittersdorf-karl-ditters-von>,
-        <https://viaf.org/viaf/215928976> .
+        <https://viaf.org/viaf/27251577> .
 

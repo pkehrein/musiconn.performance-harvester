@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/chanson-damour-taubert-wilhelm> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/chanson-damour-taubert-wilhelm> ] .
 
-<https://performance.musiconn.de/work/chanson-damour-taubert-wilhelm> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/chanson-damour-taubert-wilhelm> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1890-11-23-19-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1120617715>,
@@ -18,6 +19,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/95208474> ;
     cto:title "Chanson d'amour (Taubert, Wilhelm)" ;
     cto:viaf <https://viaf.org/viaf/8413148122912495200001>,
-        <https://viaf.org/viaf/95208474> ;
-    schema:subjectOf <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1890-11-23-19-30> .
+        <https://viaf.org/viaf/95208474> .
 

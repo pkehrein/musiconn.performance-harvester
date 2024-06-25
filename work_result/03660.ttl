@@ -1,13 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/eine-kleine-nachtmusik-mozart-wolfgang-amadeus> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/eine-kleine-nachtmusik-mozart-wolfgang-amadeus> ] .
 
-<https://performance.musiconn.de/work/eine-kleine-nachtmusik-mozart-wolfgang-amadeus> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/eine-kleine-nachtmusik-mozart-wolfgang-amadeus> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300108516>,
+        <https://d-nb.info/gnd/300832745>,
+        <https://performance.musiconn.de/work/eine-kleine-nachtmusik-4-satz-mozart-wolfgang-amadeus>,
+        <https://performance.musiconn.de/work/eine-kleine-nachtmusik-allegro-mozart-wolfgang-amadeus> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/konzert-31-volksschule-dresden-1945-07-26-18-00>,
+        <https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-gemeindesaal-versoehnungskirche-dresden-1945-11-10-18-00>,
+        <https://performance.musiconn.de/event/konzert-goldner-loewe-niedersedlitz-1945-08-02-17-30>,
+        <https://performance.musiconn.de/event/matinee-1945-07-01-10-30>,
+        <https://performance.musiconn.de/event/zwingerserenade-dresden-1944-09-02> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10074974-4>,
@@ -95,14 +104,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/293131291>,
         <https://viaf.org/viaf/3150148037702288350008>,
         <https://viaf.org/viaf/32197206>,
-        <https://viaf.org/viaf/33146825124407631545> ;
-    schema:includedComposition <https://d-nb.info/gnd/300108516>,
-        <https://d-nb.info/gnd/300832745>,
-        <https://performance.musiconn.de/work/eine-kleine-nachtmusik-4-satz-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/eine-kleine-nachtmusik-allegro-mozart-wolfgang-amadeus> ;
-    schema:subjectOf <https://performance.musiconn.de/event/konzert-31-volksschule-dresden-1945-07-26-18-00>,
-        <https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-gemeindesaal-versoehnungskirche-dresden-1945-11-10-18-00>,
-        <https://performance.musiconn.de/event/konzert-goldner-loewe-niedersedlitz-1945-08-02-17-30>,
-        <https://performance.musiconn.de/event/matinee-1945-07-01-10-30>,
-        <https://performance.musiconn.de/event/zwingerserenade-dresden-1944-09-02> .
+        <https://viaf.org/viaf/33146825124407631545> .
 

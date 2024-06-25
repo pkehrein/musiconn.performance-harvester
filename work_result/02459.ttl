@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-g-dur-haydn-joseph> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-g-dur-haydn-joseph> ] .
 
-<https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-g-dur-haydn-joseph> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-g-dur-haydn-joseph> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/achter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1881-02-11-19-00>,
+        <https://performance.musiconn.de/event/neunter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1895-03-15-19-00>,
+        <https://performance.musiconn.de/event/sechster-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1875-12-20-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10201326-3>,
@@ -47,8 +50,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/150441287>,
         <https://viaf.org/viaf/231499364>,
         <https://viaf.org/viaf/312835127>,
-        <https://viaf.org/viaf/95146280> ;
-    schema:subjectOf <https://performance.musiconn.de/event/achter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1881-02-11-19-00>,
-        <https://performance.musiconn.de/event/neunter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1895-03-15-19-00>,
-        <https://performance.musiconn.de/event/sechster-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1875-12-20-19-00> .
+        <https://viaf.org/viaf/95146280> .
 

@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/baal-1> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/baal-1> ] .
 
-<https://performance.musiconn.de/work/baal-1> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/baal-1> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1229974571>,
+        <https://performance.musiconn.de/work/ballade-vom-ertrunkenen-maedchen-weill-kurt>,
+        <https://viaf.org/viaf/175587732> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Die Liedtexte wurden von Ralph Manheim und John Willett ins Englische übersetzt5 Lieder, die Bowie während der Vorbereitung auf seine Rolle im 1981 erschienenen Film \"Baal\" im September 1981 in den Hansa-Tonstudios in Berlin mit Produzent Tony Visconti einspielteenthaltene Songs: Baal's Hymn, Remembering Marie A, Ballad Of The Adventurers, The Drowned Girl, Dirty SongGleichzeitig mit der Erstsendung des Fernsehfilms am 02.02.1982 veröffentlichte RCA die EP. - Laufzeit: ca. 11 Minuten" ;
     cto:elementOf n4c:E5320 ;
@@ -17,8 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/27487880> ;
     cto:title "Baal" ;
     cto:viaf <https://viaf.org/viaf/175587732>,
-        <https://viaf.org/viaf/27487880> ;
-    schema:includedComposition <https://d-nb.info/gnd/1229974571>,
-        <https://performance.musiconn.de/work/ballade-vom-ertrunkenen-maedchen-weill-kurt>,
-        <https://viaf.org/viaf/175587732> .
+        <https://viaf.org/viaf/27487880> .
 

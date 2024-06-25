@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/der-geistliche-kalender-unser-lieben-fraue-traum-sendt-willy> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/der-geistliche-kalender-unser-lieben-fraue-traum-sendt-willy> ] .
 
-<https://performance.musiconn.de/work/der-geistliche-kalender-unser-lieben-fraue-traum-sendt-willy> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/der-geistliche-kalender-unser-lieben-fraue-traum-sendt-willy> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/weihnachtsliederabend-des-kreuzchors-kreuzkirche-dresden-1936-12-22-20-15> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1063750407>,
@@ -20,6 +21,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/311758143> ;
     cto:title "Der geistliche Kalender. Unser lieben Fraue Traum (Sendt, Willy)" ;
     cto:viaf <https://viaf.org/viaf/139053206>,
-        <https://viaf.org/viaf/311758143> ;
-    schema:subjectOf <https://performance.musiconn.de/event/weihnachtsliederabend-des-kreuzchors-kreuzkirche-dresden-1936-12-22-20-15> .
+        <https://viaf.org/viaf/311758143> .
 

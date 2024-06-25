@@ -1,13 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/quartette-violine-viola-violoncello-klavier-nr-1-op-25-g-moll-brahms-johannes> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/quartette-violine-viola-violoncello-klavier-nr-1-op-25-g-moll-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/quartette-violine-viola-violoncello-klavier-nr-1-op-25-g-moll-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/quartette-violine-viola-violoncello-klavier-nr-1-op-25-g-moll-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/klavierquartett-nr-1-g-moll-op-25-orchesterfassung-von-arnold-schoenberg-brahms-johannes>,
+        <https://performance.musiconn.de/work/quartette-op-25-fassung-orchester-brahms-johannes-schoenberg-arnold> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/erster-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1873-10-27-19-00>,
+        <https://performance.musiconn.de/event/siebenter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1895-02-15-19-00>,
+        <https://performance.musiconn.de/event/zehnter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1889-03-22-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10185429-8>,
@@ -63,10 +68,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/221396927>,
         <https://viaf.org/viaf/245218111>,
         <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/7573295> ;
-    schema:includedComposition <https://performance.musiconn.de/work/klavierquartett-nr-1-g-moll-op-25-orchesterfassung-von-arnold-schoenberg-brahms-johannes>,
-        <https://performance.musiconn.de/work/quartette-op-25-fassung-orchester-brahms-johannes-schoenberg-arnold> ;
-    schema:subjectOf <https://performance.musiconn.de/event/erster-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1873-10-27-19-00>,
-        <https://performance.musiconn.de/event/siebenter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1895-02-15-19-00>,
-        <https://performance.musiconn.de/event/zehnter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1889-03-22-19-00> .
+        <https://viaf.org/viaf/7573295> .
 

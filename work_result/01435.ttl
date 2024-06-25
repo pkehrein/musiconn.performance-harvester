@@ -1,13 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-h-26a-die-teilung-der-erde-haydn-joseph> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-h-26a-die-teilung-der-erde-haydn-joseph> ] .
 
-<https://performance.musiconn.de/work/lieder-h-26a-die-teilung-der-erde-haydn-joseph> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-h-26a-die-teilung-der-erde-haydn-joseph> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/lieder-h-26a-die-teilung-der-erde-bearbeitung-von-a-schmitt-haydn-joseph> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/7-museums-concert-grosser-konzertsaal-frankfurt-a-m-1862-02-14-18-30>,
+        <https://performance.musiconn.de/event/abokonzert-10-zweites-gewandhaus-leipzig-1923-01-01>,
+        <https://performance.musiconn.de/event/sonderkonzert-vii-hauptpruefung-am-koeniglichen-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1876-06-28-18-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116175907>,
@@ -26,9 +30,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Lieder H 26a. Die Teilung der Erde (Haydn, Joseph)" ;
     cto:viaf <https://viaf.org/viaf/37676873>,
         <https://viaf.org/viaf/44485505>,
-        <https://viaf.org/viaf/95146280> ;
-    schema:includedComposition <https://performance.musiconn.de/work/lieder-h-26a-die-teilung-der-erde-bearbeitung-von-a-schmitt-haydn-joseph> ;
-    schema:subjectOf <https://performance.musiconn.de/event/7-museums-concert-grosser-konzertsaal-frankfurt-a-m-1862-02-14-18-30>,
-        <https://performance.musiconn.de/event/abokonzert-10-zweites-gewandhaus-leipzig-1923-01-01>,
-        <https://performance.musiconn.de/event/sonderkonzert-vii-hauptpruefung-am-koeniglichen-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1876-06-28-18-00> .
+        <https://viaf.org/viaf/95146280> .
 

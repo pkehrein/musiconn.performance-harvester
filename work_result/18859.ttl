@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gesaenge-op-16-eyken-heinrich-van> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gesaenge-op-16-eyken-heinrich-van> ] .
 
-<https://performance.musiconn.de/work/gesaenge-op-16-eyken-heinrich-van> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gesaenge-op-16-eyken-heinrich-van> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1288956029>,
+        <https://performance.musiconn.de/work/gesaenge-op-16-lied-der-walkuere-eyken-heinrich-van>,
+        <https://viaf.org/viaf/185777842> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfasst 2 Gesänge: Geister am Mummelsee. - Lied der Walküre" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/6066942> ;
     cto:title "Gesänge, op. 16 (Eyken, Heinrich van)" ;
     cto:viaf <https://viaf.org/viaf/185777842>,
-        <https://viaf.org/viaf/6066942> ;
-    schema:includedComposition <https://d-nb.info/gnd/1288956029>,
-        <https://performance.musiconn.de/work/gesaenge-op-16-lied-der-walkuere-eyken-heinrich-van>,
-        <https://viaf.org/viaf/185777842> .
+        <https://viaf.org/viaf/6066942> .
 

@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/konzerte-hwv-295-300-haendel-georg-friedrich> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/konzerte-hwv-295-300-haendel-georg-friedrich> ] .
 
-<https://performance.musiconn.de/work/konzerte-hwv-295-300-haendel-georg-friedrich> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/konzerte-hwv-295-300-haendel-georg-friedrich> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300065108>,
+        <https://performance.musiconn.de/work/konzerte-hwv-295-300-konzert-hwv-296a-haendel-georg-friedrich>,
+        <https://viaf.org/viaf/200778025> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Besetzung: HWV 295 und 296 für Orgel und Orchester, HWV 297 - 300 für Orgel solo" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/5126950> ;
     cto:title "Konzerte, HWV 295-300 (Händel, Georg Friedrich)" ;
     cto:viaf <https://viaf.org/viaf/200778025>,
-        <https://viaf.org/viaf/5126950> ;
-    schema:includedComposition <https://d-nb.info/gnd/300065108>,
-        <https://performance.musiconn.de/work/konzerte-hwv-295-300-konzert-hwv-296a-haendel-georg-friedrich>,
-        <https://viaf.org/viaf/200778025> .
+        <https://viaf.org/viaf/5126950> .
 

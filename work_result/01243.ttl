@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gesaenge-aus-dem-spanischen-liederbuch-op-4-jensen-adolf> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gesaenge-aus-dem-spanischen-liederbuch-op-4-jensen-adolf> ] .
 
-<https://performance.musiconn.de/work/gesaenge-aus-dem-spanischen-liederbuch-op-4-jensen-adolf> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gesaenge-aus-dem-spanischen-liederbuch-op-4-jensen-adolf> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1227934467>,
+        <https://performance.musiconn.de/work/gesaenge-aus-dem-spanischen-liederbuche-sie-blasen-zum-abmarsch-jensen-adolf> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/117102946>,
@@ -15,7 +17,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/117102946>,
         <https://viaf.org/viaf/22327623> ;
     cto:title "Gesänge aus dem Spanischen Liederbuch op. 4 (Jensen, Adolf)" ;
-    cto:viaf <https://viaf.org/viaf/22327623> ;
-    schema:includedComposition <https://d-nb.info/gnd/1227934467>,
-        <https://performance.musiconn.de/work/gesaenge-aus-dem-spanischen-liederbuche-sie-blasen-zum-abmarsch-jensen-adolf> .
+    cto:viaf <https://viaf.org/viaf/22327623> .
 

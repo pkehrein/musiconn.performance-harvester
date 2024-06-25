@@ -1,28 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/an-die-musik-schubert-franz> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/an-die-musik-schubert-franz> ] .
 
-<https://performance.musiconn.de/work/an-die-musik-schubert-franz> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118610961>,
-        <https://d-nb.info/gnd/4035669-3>,
-        <https://d-nb.info/gnd/815129-5> ;
-    cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/815129-5>,
-        <https://performance.musiconn.de/corporation/verein-der-musikfreunde-jena>,
-        <https://viaf.org/viaf/133022259> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118610961>,
-        <https://viaf.org/viaf/29719275> ;
-    cto:title "An die Musik (Schubert, Franz)" ;
-    cto:viaf <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/29719275> ;
-    schema:subjectOf <https://performance.musiconn.de/event/1-volks-concert-hamburger-volksoper-hamburg-1903-11-05-20-00>,
+<https://performance.musiconn.de/work/an-die-musik-schubert-franz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/1-volks-concert-hamburger-volksoper-hamburg-1903-11-05-20-00>,
         <https://performance.musiconn.de/event/2-volks-concert-hamburger-volksoper-hamburg-1900-11-27-20-00>,
         <https://performance.musiconn.de/event/3-vereinskonzert-rathaus-muenster-westf-friedenssaal-1874-11-07>,
         <https://performance.musiconn.de/event/3-volks-concert-hamburger-volksoper-hamburg-1900-02-06-20-00>,
@@ -52,5 +38,19 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/vesper-kreuzkirche-dresden-1917-05-05-14-00>,
         <https://performance.musiconn.de/event/vierter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1908-11-13-19-00>,
         <https://performance.musiconn.de/event/zwoelfter-letzter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1918-05-01-19-00>,
-        <https://performance.musiconn.de/event/zwoelftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1887-04-01-18-30> .
+        <https://performance.musiconn.de/event/zwoelftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1887-04-01-18-30> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/118610961>,
+        <https://d-nb.info/gnd/4035669-3>,
+        <https://d-nb.info/gnd/815129-5> ;
+    cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/815129-5>,
+        <https://performance.musiconn.de/corporation/verein-der-musikfreunde-jena>,
+        <https://viaf.org/viaf/133022259> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118610961>,
+        <https://viaf.org/viaf/29719275> ;
+    cto:title "An die Musik (Schubert, Franz)" ;
+    cto:viaf <https://viaf.org/viaf/133022259>,
+        <https://viaf.org/viaf/29719275> .
 

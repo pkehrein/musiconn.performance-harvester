@@ -1,13 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-op-96-brahms-johannes> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-op-96-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/lieder-op-96-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-op-96-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300026013>,
+        <https://d-nb.info/gnd/300193505>,
+        <https://d-nb.info/gnd/300672993>,
+        <https://performance.musiconn.de/work/lieder-op-96-der-tod-das-ist-die-kuehle-nacht-brahms-johannes>,
+        <https://performance.musiconn.de/work/lieder-op-96-meerfahrt-brahms-johannes>,
+        <https://performance.musiconn.de/work/lieder-op-96-wir-wandelten-brahms-johannes>,
+        <https://viaf.org/viaf/175006089>,
+        <https://viaf.org/viaf/176403339>,
+        <https://viaf.org/viaf/178158863> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118514253>,
@@ -22,14 +31,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:viaf <https://viaf.org/viaf/175006089>,
         <https://viaf.org/viaf/176403339>,
         <https://viaf.org/viaf/178158863>,
-        <https://viaf.org/viaf/7573295> ;
-    schema:includedComposition <https://d-nb.info/gnd/300026013>,
-        <https://d-nb.info/gnd/300193505>,
-        <https://d-nb.info/gnd/300672993>,
-        <https://performance.musiconn.de/work/lieder-op-96-der-tod-das-ist-die-kuehle-nacht-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-op-96-meerfahrt-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-op-96-wir-wandelten-brahms-johannes>,
-        <https://viaf.org/viaf/175006089>,
-        <https://viaf.org/viaf/176403339>,
-        <https://viaf.org/viaf/178158863> .
+        <https://viaf.org/viaf/7573295> .
 

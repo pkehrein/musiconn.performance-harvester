@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sonaten-org-op-65-nr-1-4-satz-mendelssohn-bartholdy-felix> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sonaten-org-op-65-nr-1-4-satz-mendelssohn-bartholdy-felix> ] .
 
-<https://performance.musiconn.de/work/sonaten-org-op-65-nr-1-4-satz-mendelssohn-bartholdy-felix> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sonaten-org-op-65-nr-1-4-satz-mendelssohn-bartholdy-felix> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/5-museums-concert-grosser-konzertsaal-frankfurt-a-m-1866-12-07-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1170699928>,
@@ -20,6 +21,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/7321154198331620230006> ;
     cto:title "Sonaten, Org, op. 65 Nr. 1. 4. Satz (Mendelssohn Bartholdy, Felix)" ;
     cto:viaf <https://viaf.org/viaf/2665666>,
-        <https://viaf.org/viaf/7321154198331620230006> ;
-    schema:subjectOf <https://performance.musiconn.de/event/5-museums-concert-grosser-konzertsaal-frankfurt-a-m-1866-12-07-18-30> .
+        <https://viaf.org/viaf/7321154198331620230006> .
 

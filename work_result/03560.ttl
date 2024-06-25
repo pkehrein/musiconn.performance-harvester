@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/canzonette-ed-arie-fesch-willem-de> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/canzonette-ed-arie-fesch-willem-de> ] .
 
-<https://performance.musiconn.de/work/canzonette-ed-arie-fesch-willem-de> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/canzonette-ed-arie-fesch-willem-de> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/127337777X>,
+        <https://performance.musiconn.de/work/canzonette-ed-arie-tu-fai-la-superbetta-fesch-willem-de>,
+        <https://viaf.org/viaf/1066166959200747160002> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfasst 17 Kanzonetten und 3 Arien" ;
     cto:elementOf n4c:E5320 ;
@@ -21,8 +24,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/82763350> ;
     cto:title "Canzonette ed Arie (Fesch, Willem de)" ;
     cto:viaf <https://viaf.org/viaf/1066166959200747160002>,
-        <https://viaf.org/viaf/82763350> ;
-    schema:includedComposition <https://d-nb.info/gnd/127337777X>,
-        <https://performance.musiconn.de/work/canzonette-ed-arie-tu-fai-la-superbetta-fesch-willem-de>,
-        <https://viaf.org/viaf/1066166959200747160002> .
+        <https://viaf.org/viaf/82763350> .
 

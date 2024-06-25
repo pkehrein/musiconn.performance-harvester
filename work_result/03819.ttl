@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/albumblatt-wagner-richard> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/albumblatt-wagner-richard> ] .
 
-<https://performance.musiconn.de/work/albumblatt-wagner-richard> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/albumblatt-wagner-richard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/1-sinfonie-konzert-der-generaldirektion-der-koenigl-musikalischen-kapelle-und-der-hoftheater-semperoper-dresden-1906-10-26-19-00>,
+        <https://performance.musiconn.de/event/fuenftes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1895-12-13-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118594117>,
@@ -18,7 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/76509756> ;
     cto:title "Albumblatt (Wagner, Richard)" ;
     cto:viaf <https://viaf.org/viaf/29732107>,
-        <https://viaf.org/viaf/76509756> ;
-    schema:subjectOf <https://performance.musiconn.de/event/1-sinfonie-konzert-der-generaldirektion-der-koenigl-musikalischen-kapelle-und-der-hoftheater-semperoper-dresden-1906-10-26-19-00>,
-        <https://performance.musiconn.de/event/fuenftes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1895-12-13-19-00> .
+        <https://viaf.org/viaf/76509756> .
 

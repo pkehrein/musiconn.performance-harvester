@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/dichterliebe-ich-will-meine-seele-tauchen-schumann-robert> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/dichterliebe-ich-will-meine-seele-tauchen-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/dichterliebe-ich-will-meine-seele-tauchen-schumann-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/dichterliebe-ich-will-meine-seele-tauchen-schumann-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/12-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-03-19-18-30>,
+        <https://performance.musiconn.de/event/fuenfter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1883-12-28-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116851686>,
@@ -24,7 +26,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Dichterliebe. Ich will meine Seele tauchen (Schumann, Robert)" ;
     cto:viaf <https://viaf.org/viaf/17984231>,
         <https://viaf.org/viaf/59851181>,
-        <https://viaf.org/viaf/7575259> ;
-    schema:subjectOf <https://performance.musiconn.de/event/12-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-03-19-18-30>,
-        <https://performance.musiconn.de/event/fuenfter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1883-12-28-19-00> .
+        <https://viaf.org/viaf/7575259> .
 

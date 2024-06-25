@@ -1,13 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-fuer-sopran-und-klavier-walter-ludwig> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-fuer-sopran-und-klavier-walter-ludwig> ] .
 
-<https://performance.musiconn.de/work/lieder-fuer-sopran-und-klavier-walter-ludwig> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-fuer-sopran-und-klavier-walter-ludwig> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1225879434>,
+        <https://d-nb.info/gnd/1225879469>,
+        <https://d-nb.info/gnd/1225879523>,
+        <https://performance.musiconn.de/work/lieder-fuer-sopran-und-klavier-dauer-walter-ludwig>,
+        <https://performance.musiconn.de/work/lieder-fuer-sopran-und-klavier-sonate-walter-ludwig>,
+        <https://performance.musiconn.de/work/lieder-fuer-sopran-und-klavier-zugvoegel-walter-ludwig>,
+        <https://viaf.org/viaf/5845161211850940070003>,
+        <https://viaf.org/viaf/7157161211399140070008>,
+        <https://viaf.org/viaf/8694161211833640070001> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "enthält: 1. Zugvögel; 2. Dauer; 3. Sonate" ;
     cto:elementOf n4c:E5320 ;
@@ -23,14 +32,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:viaf <https://viaf.org/viaf/5845161211850940070003>,
         <https://viaf.org/viaf/7157161211399140070008>,
         <https://viaf.org/viaf/79975175>,
-        <https://viaf.org/viaf/8694161211833640070001> ;
-    schema:includedComposition <https://d-nb.info/gnd/1225879434>,
-        <https://d-nb.info/gnd/1225879469>,
-        <https://d-nb.info/gnd/1225879523>,
-        <https://performance.musiconn.de/work/lieder-fuer-sopran-und-klavier-dauer-walter-ludwig>,
-        <https://performance.musiconn.de/work/lieder-fuer-sopran-und-klavier-sonate-walter-ludwig>,
-        <https://performance.musiconn.de/work/lieder-fuer-sopran-und-klavier-zugvoegel-walter-ludwig>,
-        <https://viaf.org/viaf/5845161211850940070003>,
-        <https://viaf.org/viaf/7157161211399140070008>,
         <https://viaf.org/viaf/8694161211833640070001> .
 

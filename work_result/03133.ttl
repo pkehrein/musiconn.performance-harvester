@@ -1,13 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/konzerte-violine-orchester-kv-219-a-dur-mozart-wolfgang-amadeus> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/konzerte-violine-orchester-kv-219-a-dur-mozart-wolfgang-amadeus> ] .
 
-<https://performance.musiconn.de/work/konzerte-violine-orchester-kv-219-a-dur-mozart-wolfgang-amadeus> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/konzerte-violine-orchester-kv-219-a-dur-mozart-wolfgang-amadeus> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/konzerte-violine-orchester-a-dur-adagio-mozart-wolfgang-amadeus> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/konzert-ballsaal-constantia-dresden-1945-07-28-18-00>,
+        <https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-boehner-theater-dresden-1945-10-25-18-00>,
+        <https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-donaths-neue-welt-dresden-1945-11-01>,
+        <https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-dresden-1945-10-07>,
+        <https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-gemeindesaal-versoehnungskirche-dresden-1945-11-10-18-00>,
+        <https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-kirchgemeindesaal-strehlen-dresden-1945-10-19-18-00>,
+        <https://performance.musiconn.de/event/waldpark-serenade-kurpark-bad-weisser-hirsch-dresden-1945-09-05-18-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Tonart und Zählung nicht im Werkverzeichnis enthalten" ;
     cto:elementOf n4c:E5320 ;
@@ -90,13 +98,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/435144783046765467239>,
         <https://viaf.org/viaf/45144814273718687574>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    schema:includedComposition <https://performance.musiconn.de/work/konzerte-violine-orchester-a-dur-adagio-mozart-wolfgang-amadeus> ;
-    schema:subjectOf <https://performance.musiconn.de/event/konzert-ballsaal-constantia-dresden-1945-07-28-18-00>,
-        <https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-boehner-theater-dresden-1945-10-25-18-00>,
-        <https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-donaths-neue-welt-dresden-1945-11-01>,
-        <https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-dresden-1945-10-07>,
-        <https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-gemeindesaal-versoehnungskirche-dresden-1945-11-10-18-00>,
-        <https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-kirchgemeindesaal-strehlen-dresden-1945-10-19-18-00>,
-        <https://performance.musiconn.de/event/waldpark-serenade-kurpark-bad-weisser-hirsch-dresden-1945-09-05-18-00> .
+        <https://viaf.org/viaf/8413148122912495200001> .
 

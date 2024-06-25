@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/fra-holbergs-tid-grieg-edvard> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/fra-holbergs-tid-grieg-edvard> ] .
 
-<https://performance.musiconn.de/work/fra-holbergs-tid-grieg-edvard> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/fra-holbergs-tid-grieg-edvard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300552300>,
+        <https://performance.musiconn.de/work/fra-holbergs-tid-praeludium-grieg-edvard>,
+        <https://viaf.org/viaf/202950118> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "5 Sätze: Praeludium (Allegro vivace), Sarabande (Andante), Gavotte (Allegretto), Air (Andante religioso), Rigaudon (Allegro con brio)existiert auch als Fassung für Streichorchester" ;
     cto:elementOf n4c:E5320 ;
@@ -32,8 +35,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/133420726>,
         <https://viaf.org/viaf/174024482>,
         <https://viaf.org/viaf/202950118>,
-        <https://viaf.org/viaf/46946549> ;
-    schema:includedComposition <https://d-nb.info/gnd/300552300>,
-        <https://performance.musiconn.de/work/fra-holbergs-tid-praeludium-grieg-edvard>,
-        <https://viaf.org/viaf/202950118> .
+        <https://viaf.org/viaf/46946549> .
 

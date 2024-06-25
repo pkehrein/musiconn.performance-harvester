@@ -1,13 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-mwv-r-26-e-moll-mendelssohn-bartholdy-felix> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-mwv-r-26-e-moll-mendelssohn-bartholdy-felix> ] .
 
-<https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-mwv-r-26-e-moll-mendelssohn-bartholdy-felix> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-mwv-r-26-e-moll-mendelssohn-bartholdy-felix> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/siebenter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1881-01-28-19-00>,
+        <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1837-12-17>,
+        <https://performance.musiconn.de/event/vierter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1884-12-12-19-00>,
+        <https://performance.musiconn.de/event/zehnter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1879-03-03-19-00>,
+        <https://performance.musiconn.de/event/zweiter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1873-11-10-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Widmung an \"Kronprinz Oskar von Schweden\"" ;
     cto:elementOf n4c:E5320 ;
@@ -23,10 +28,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/2665666> ;
     cto:title "Quartette, Violine (2), Viola, Violoncello, MWV R 26 (e-Moll) (Mendelssohn Bartholdy, Felix)" ;
     cto:viaf <https://viaf.org/viaf/158415425>,
-        <https://viaf.org/viaf/2665666> ;
-    schema:subjectOf <https://performance.musiconn.de/event/siebenter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1881-01-28-19-00>,
-        <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1837-12-17>,
-        <https://performance.musiconn.de/event/vierter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1884-12-12-19-00>,
-        <https://performance.musiconn.de/event/zehnter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1879-03-03-19-00>,
-        <https://performance.musiconn.de/event/zweiter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1873-11-10-19-00> .
+        <https://viaf.org/viaf/2665666> .
 

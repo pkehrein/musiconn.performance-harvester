@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/rondos-violoncello-klavier-b-171-g-moll-dvorak-antonin> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/rondos-violoncello-klavier-b-171-g-moll-dvorak-antonin> ] .
 
-<https://performance.musiconn.de/work/rondos-violoncello-klavier-b-171-g-moll-dvorak-antonin> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/rondos-violoncello-klavier-b-171-g-moll-dvorak-antonin> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300047940>,
+        <https://performance.musiconn.de/work/rondos-violoncello-orchester-b-171-dvorak-antonin> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1078514259>,
@@ -25,7 +27,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Rondos, Violoncello, Klavier, B 171 (g-Moll) (Dvořák, Antonín)" ;
     cto:viaf <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/71577743> ;
-    schema:includedComposition <https://d-nb.info/gnd/300047940>,
-        <https://performance.musiconn.de/work/rondos-violoncello-orchester-b-171-dvorak-antonin> .
+        <https://viaf.org/viaf/71577743> .
 

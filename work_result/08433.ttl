@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/staendchen-d-920-schubert-franz> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/staendchen-d-920-schubert-franz> ] .
 
-<https://performance.musiconn.de/work/staendchen-d-920-schubert-franz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/staendchen-d-920-schubert-franz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/staendchen-d-920-bearbeitung-singstimme-orchester-schubert-franz> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Es gibt noch eine Fassung für Frauen-Chor (D 921)" ;
     cto:elementOf n4c:E5320 ;
@@ -21,6 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/29719275> ;
     cto:title "Ständchen, D 920 (Schubert, Franz)" ;
     cto:viaf <https://viaf.org/viaf/150245159>,
-        <https://viaf.org/viaf/29719275> ;
-    schema:includedComposition <https://performance.musiconn.de/work/staendchen-d-920-bearbeitung-singstimme-orchester-schubert-franz> .
+        <https://viaf.org/viaf/29719275> .
 

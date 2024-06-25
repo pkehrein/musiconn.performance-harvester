@@ -1,13 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-35-d-moll-david-ferdinand> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-35-d-moll-david-ferdinand> ] .
 
-<https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-35-d-moll-david-ferdinand> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-35-d-moll-david-ferdinand> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1266116222>,
+        <https://d-nb.info/gnd/1277024626>,
+        <https://d-nb.info/gnd/1277024642>,
+        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-35-d-moll-adagio-david-ferdinand>,
+        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-35-d-moll-allegro-serioso-david-ferdinand>,
+        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-35-d-moll-vivace-david-ferdinand> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/drittes-museumsconcert-grosser-konzertsaal-frankfurt-a-m-1861-12-20-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "5. Violinkonzert in d-Moll, op. 35. Entstehungszeit: ca. 1857" ;
     cto:elementOf n4c:E5320 ;
@@ -29,12 +36,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Konzerte, Violine, Orchester, Nr. 5, op. 35 (d-Moll) (David, Ferdinand)" ;
     cto:viaf <https://viaf.org/viaf/136181816>,
         <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/59269150> ;
-    schema:includedComposition <https://d-nb.info/gnd/1266116222>,
-        <https://d-nb.info/gnd/1277024626>,
-        <https://d-nb.info/gnd/1277024642>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-35-d-moll-adagio-david-ferdinand>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-35-d-moll-allegro-serioso-david-ferdinand>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-35-d-moll-vivace-david-ferdinand> ;
-    schema:subjectOf <https://performance.musiconn.de/event/drittes-museumsconcert-grosser-konzertsaal-frankfurt-a-m-1861-12-20-18-30> .
+        <https://viaf.org/viaf/59269150> .
 

@@ -1,13 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/bunte-reihe-menuett-david-ferdinand> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/bunte-reihe-menuett-david-ferdinand> ] .
 
-<https://performance.musiconn.de/work/bunte-reihe-menuett-david-ferdinand> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/bunte-reihe-menuett-david-ferdinand> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1875-06-26-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-im-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1861-04-20-18-00>,
+        <https://performance.musiconn.de/event/hauptpruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1851-06-25-18-00>,
+        <https://performance.musiconn.de/event/musikalische-auffuehrung-in-gegenwart-sr-majestaet-des-koenigs-ihrer-majestaet-der-koenigin-und-ihrer-koenigl-hoheit-prinzess-sophie-erstes-gewandhaus-leipzig-1862-07-03-20-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/102199191>,
@@ -263,9 +267,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/7727165709987849380002>,
         <https://viaf.org/viaf/774325>,
         <https://viaf.org/viaf/88281228>,
-        <https://viaf.org/viaf/9830165709995049380009> ;
-    schema:subjectOf <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1875-06-26-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-im-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1861-04-20-18-00>,
-        <https://performance.musiconn.de/event/hauptpruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1851-06-25-18-00>,
-        <https://performance.musiconn.de/event/musikalische-auffuehrung-in-gegenwart-sr-majestaet-des-koenigs-ihrer-majestaet-der-koenigin-und-ihrer-koenigl-hoheit-prinzess-sophie-erstes-gewandhaus-leipzig-1862-07-03-20-00> .
+        <https://viaf.org/viaf/9830165709995049380009> .
 

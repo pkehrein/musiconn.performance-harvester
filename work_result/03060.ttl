@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/vittoria-mio-core-carissimi-giacomo> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/vittoria-mio-core-carissimi-giacomo> ] .
 
-<https://performance.musiconn.de/work/vittoria-mio-core-carissimi-giacomo> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/vittoria-mio-core-carissimi-giacomo> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/achtes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1895-02-08-19-00>,
+        <https://performance.musiconn.de/event/zehntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1890-02-14-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118668404>,
@@ -24,7 +26,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Vittoria, mio core (Carissimi, Giacomo)" ;
     cto:viaf <https://viaf.org/viaf/14957743>,
         <https://viaf.org/viaf/157753597>,
-        <https://viaf.org/viaf/221396927> ;
-    schema:subjectOf <https://performance.musiconn.de/event/achtes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1895-02-08-19-00>,
-        <https://performance.musiconn.de/event/zehntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1890-02-14-18-30> .
+        <https://viaf.org/viaf/221396927> .
 

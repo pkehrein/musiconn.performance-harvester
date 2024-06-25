@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/serenaden-klavier-op-35-jadassohn-salomon> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/serenaden-klavier-op-35-jadassohn-salomon> ] .
 
-<https://performance.musiconn.de/work/serenaden-klavier-op-35-jadassohn-salomon> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/serenaden-klavier-op-35-jadassohn-salomon> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/serenaden-klavier-op-35-menuett-scherzo-jadassohn-salomon>,
+        <https://performance.musiconn.de/work/serenaden-scherzo-jadassohn-salomon> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "1. Marsch2. Adagio3. Scherzo (Fis-Dur)4. Steyrisch5. Intermezzo6. Andantino7. Minuetto8. Finale" ;
     cto:elementOf n4c:E5320 ;
@@ -17,7 +19,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/119258021>,
         <https://viaf.org/viaf/41951798> ;
     cto:title "Serenaden, Klavier, op. 35 (Jadassohn, Salomon)" ;
-    cto:viaf <https://viaf.org/viaf/41951798> ;
-    schema:includedComposition <https://performance.musiconn.de/work/serenaden-klavier-op-35-menuett-scherzo-jadassohn-salomon>,
-        <https://performance.musiconn.de/work/serenaden-scherzo-jadassohn-salomon> .
+    cto:viaf <https://viaf.org/viaf/41951798> .
 

@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/neues-vom-tage-hindemith-paul> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/neues-vom-tage-hindemith-paul> ] .
 
-<https://performance.musiconn.de/work/neues-vom-tage-hindemith-paul> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/neues-vom-tage-hindemith-paul> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1045210811>,
+        <https://performance.musiconn.de/work/neues-vom-tage-ouvertuere-hindemith-paul> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Oper in 3 Akten; Neufassung (2 Akte) komponiert 1953/54" ;
     cto:elementOf n4c:E5320 ;
@@ -18,7 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/118551256>,
         <https://viaf.org/viaf/24622167> ;
     cto:title "Neues vom Tage (Hindemith, Paul)" ;
-    cto:viaf <https://viaf.org/viaf/24622167> ;
-    schema:includedComposition <https://d-nb.info/gnd/1045210811>,
-        <https://performance.musiconn.de/work/neues-vom-tage-ouvertuere-hindemith-paul> .
+    cto:viaf <https://viaf.org/viaf/24622167> .
 

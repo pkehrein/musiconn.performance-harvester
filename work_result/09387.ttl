@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gesaenge-op-1-franz-robert> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gesaenge-op-1-franz-robert> ] .
 
-<https://performance.musiconn.de/work/gesaenge-op-1-franz-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gesaenge-op-1-franz-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/gesaenge-op-1-fuer-einen-franz-robert>,
+        <https://performance.musiconn.de/work/gesaenge-op-1-nun-holt-mir-eine-kanne-wein-franz-robert>,
+        <https://performance.musiconn.de/work/gesaenge-op-1-voeglein-wohin-so-schnell-franz-robert> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "12 Gesänge: Ihr Auge ; Nachtlied ; Die Lotosblume ; Nun holt mir eine Kanne Wein ; O säh' ich auf der Heide ; Tanzlied im Mai ; Sonntag ; Für Einen ; Jagdlied ; Schlummerlied ; Vöglein, wohin so schnell ; In meinem Garten" ;
     cto:elementOf n4c:E5320 ;
@@ -17,8 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/118702955>,
         <https://viaf.org/viaf/27110440> ;
     cto:title "Gesänge, op. 1 (Franz, Robert)" ;
-    cto:viaf <https://viaf.org/viaf/27110440> ;
-    schema:includedComposition <https://performance.musiconn.de/work/gesaenge-op-1-fuer-einen-franz-robert>,
-        <https://performance.musiconn.de/work/gesaenge-op-1-nun-holt-mir-eine-kanne-wein-franz-robert>,
-        <https://performance.musiconn.de/work/gesaenge-op-1-voeglein-wohin-so-schnell-franz-robert> .
+    cto:viaf <https://viaf.org/viaf/27110440> .
 

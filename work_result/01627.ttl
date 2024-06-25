@@ -1,13 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/ouvertuere-scherzo-und-finale-schumann-robert> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/ouvertuere-scherzo-und-finale-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/ouvertuere-scherzo-und-finale-schumann-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/ouvertuere-scherzo-und-finale-schumann-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1180641663>,
+        <https://performance.musiconn.de/work/ouvertuere-scherzo-und-finale-ouvertuere-schumann-robert>,
+        <https://viaf.org/viaf/6944155286654587180008> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/3-museums-concert-grosser-konzertsaal-frankfurt-a-m-1864-11-11-18-30>,
+        <https://performance.musiconn.de/event/6-museums-concert-grosser-konzertsaal-frankfurt-a-m-1871-12-22-18-30>,
+        <https://performance.musiconn.de/event/6-sinfonie-konzert-der-generaldirektion-der-koenigl-musikalischen-kapelle-und-der-hoftheater-semperoper-dresden-1905-03-31-19-00>,
+        <https://performance.musiconn.de/event/fuenftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1882-12-08-18-30>,
+        <https://performance.musiconn.de/event/zehntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1880-02-13> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1045527-9>,
@@ -53,13 +61,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/221396927>,
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/6944155286654587180008>,
-        <https://viaf.org/viaf/7575259> ;
-    schema:includedComposition <https://d-nb.info/gnd/1180641663>,
-        <https://performance.musiconn.de/work/ouvertuere-scherzo-und-finale-ouvertuere-schumann-robert>,
-        <https://viaf.org/viaf/6944155286654587180008> ;
-    schema:subjectOf <https://performance.musiconn.de/event/3-museums-concert-grosser-konzertsaal-frankfurt-a-m-1864-11-11-18-30>,
-        <https://performance.musiconn.de/event/6-museums-concert-grosser-konzertsaal-frankfurt-a-m-1871-12-22-18-30>,
-        <https://performance.musiconn.de/event/6-sinfonie-konzert-der-generaldirektion-der-koenigl-musikalischen-kapelle-und-der-hoftheater-semperoper-dresden-1905-03-31-19-00>,
-        <https://performance.musiconn.de/event/fuenftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1882-12-08-18-30>,
-        <https://performance.musiconn.de/event/zehntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1880-02-13> .
+        <https://viaf.org/viaf/7575259> .
 

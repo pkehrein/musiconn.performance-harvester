@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-und-gesaenge-op-127-schumann-robert> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-und-gesaenge-op-127-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/lieder-und-gesaenge-op-127-schumann-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-und-gesaenge-op-127-schumann-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/120915787X>,
+        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-127-mein-altes-ross-schumann-robert>,
+        <https://viaf.org/viaf/174893889> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Fünf Lieder und ein Lied im Anhang." ;
     cto:elementOf n4c:E5320 ;
@@ -21,8 +24,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/7575259> ;
     cto:title "Lieder und Gesänge, op. 127 (Schumann, Robert)" ;
     cto:viaf <https://viaf.org/viaf/174893889>,
-        <https://viaf.org/viaf/7575259> ;
-    schema:includedComposition <https://d-nb.info/gnd/120915787X>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-127-mein-altes-ross-schumann-robert>,
-        <https://viaf.org/viaf/174893889> .
+        <https://viaf.org/viaf/7575259> .
 

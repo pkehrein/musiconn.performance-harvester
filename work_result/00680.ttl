@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/liebestraeume-o-lieb-solang-du-lieben-kannst-liszt-franz> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/liebestraeume-o-lieb-solang-du-lieben-kannst-liszt-franz> ] .
 
-<https://performance.musiconn.de/work/liebestraeume-o-lieb-solang-du-lieben-kannst-liszt-franz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/liebestraeume-o-lieb-solang-du-lieben-kannst-liszt-franz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/liebestraum-3-fassung-harfe-liszt-franz> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/gesangsauffuehrung-der-alumnen-und-kurrendaner-der-kreuzschule-zoologischer-garten-dresden-saal-1916-03-07-20-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1097790312>,
@@ -30,7 +32,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:viaf <https://viaf.org/viaf/15514346>,
         <https://viaf.org/viaf/2146216756709092804>,
         <https://viaf.org/viaf/39641435>,
-        <https://viaf.org/viaf/64199483> ;
-    schema:includedComposition <https://performance.musiconn.de/work/liebestraum-3-fassung-harfe-liszt-franz> ;
-    schema:subjectOf <https://performance.musiconn.de/event/gesangsauffuehrung-der-alumnen-und-kurrendaner-der-kreuzschule-zoologischer-garten-dresden-saal-1916-03-07-20-00> .
+        <https://viaf.org/viaf/64199483> .
 

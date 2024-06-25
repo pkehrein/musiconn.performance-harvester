@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/oktette-floete-oboe-klarinette-2-horn-2-fagott-2-op-156-b-dur-lachner-franz-paul> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/oktette-floete-oboe-klarinette-2-horn-2-fagott-2-op-156-b-dur-lachner-franz-paul> ] .
 
-<https://performance.musiconn.de/work/oktette-floete-oboe-klarinette-2-horn-2-fagott-2-op-156-b-dur-lachner-franz-paul> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/oktette-floete-oboe-klarinette-2-horn-2-fagott-2-op-156-b-dur-lachner-franz-paul> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/5-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1872-12-30-19-00>,
+        <https://performance.musiconn.de/event/siebenter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1874-01-26-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118725815>,
@@ -24,7 +26,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/person/zesewitz-m>,
         <https://viaf.org/viaf/71548338> ;
     cto:title "Oktette, Flöte, Oboe, Klarinette (2), Horn (2), Fagott (2), op. 156 (B-Dur) (Lachner, Franz Paul)" ;
-    cto:viaf <https://viaf.org/viaf/71548338> ;
-    schema:subjectOf <https://performance.musiconn.de/event/5-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1872-12-30-19-00>,
-        <https://performance.musiconn.de/event/siebenter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1874-01-26-19-00> .
+    cto:viaf <https://viaf.org/viaf/71548338> .
 

@@ -1,13 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/suiten-orchester-nr-1-op-113-d-moll-lachner-franz-paul> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/suiten-orchester-nr-1-op-113-d-moll-lachner-franz-paul> ] .
 
-<https://performance.musiconn.de/work/suiten-orchester-nr-1-op-113-d-moll-lachner-franz-paul> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/suiten-orchester-nr-1-op-113-d-moll-lachner-franz-paul> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1106402596>,
+        <https://performance.musiconn.de/work/suiten-orchester-nr-1-op-113-d-moll-marche-celebre-lachner-franz-paul>,
+        <https://viaf.org/viaf/43147121678626390052> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/zehntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1885-02-20-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "besteht aus 4 Sätzen: Präludium, Menuett, Variationen und Marsch, Introduktion und Fugees existiert ebenfalls eine von Lachner arrangierte Fassung für Klavier vierhändig" ;
     cto:elementOf n4c:E5320 ;
@@ -27,9 +31,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:viaf <https://viaf.org/viaf/136181816>,
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/43147121678626390052>,
-        <https://viaf.org/viaf/71548338> ;
-    schema:includedComposition <https://d-nb.info/gnd/1106402596>,
-        <https://performance.musiconn.de/work/suiten-orchester-nr-1-op-113-d-moll-marche-celebre-lachner-franz-paul>,
-        <https://viaf.org/viaf/43147121678626390052> ;
-    schema:subjectOf <https://performance.musiconn.de/event/zehntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1885-02-20-18-30> .
+        <https://viaf.org/viaf/71548338> .
 

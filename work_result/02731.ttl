@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/polonaise-es-dur-fassung-blumner-sigismund> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/polonaise-es-dur-fassung-blumner-sigismund> ] .
 
-<https://performance.musiconn.de/work/polonaise-es-dur-fassung-blumner-sigismund> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/polonaise-es-dur-fassung-blumner-sigismund> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/vierter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1878-11-25-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Bearbeitung für Klaviersolo von S. Blumner der Polonaise in Es-Dur, op. 72 von F. Schubert" ;
     cto:elementOf n4c:E5320 ;
@@ -17,6 +18,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/116210222>,
         <https://viaf.org/viaf/40124169> ;
     cto:title "Polonaise (Es-dur) / Fassung (Blumner, Sigismund)" ;
-    cto:viaf <https://viaf.org/viaf/40124169> ;
-    schema:subjectOf <https://performance.musiconn.de/event/vierter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1878-11-25-19-00> .
+    cto:viaf <https://viaf.org/viaf/40124169> .
 

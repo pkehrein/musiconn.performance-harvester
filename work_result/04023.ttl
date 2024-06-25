@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/ihr-werdet-weinen-und-heulen-bach-johann-sebastian> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/ihr-werdet-weinen-und-heulen-bach-johann-sebastian> ] .
 
-<https://performance.musiconn.de/work/ihr-werdet-weinen-und-heulen-bach-johann-sebastian> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/ihr-werdet-weinen-und-heulen-bach-johann-sebastian> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/ihr-werdet-weinen-und-heulen-auswahl-bach-johann-sebastian> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1837-07-23> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Kantate zum Sonntag Jubilate (Dominica Jubilate)" ;
     cto:elementOf n4c:E5320 ;
@@ -25,7 +27,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Ihr werdet weinen und heulen (Bach, Johann Sebastian)" ;
     cto:viaf <https://viaf.org/viaf/12304462>,
         <https://viaf.org/viaf/136181816>,
-        <https://viaf.org/viaf/150245159> ;
-    schema:includedComposition <https://performance.musiconn.de/work/ihr-werdet-weinen-und-heulen-auswahl-bach-johann-sebastian> ;
-    schema:subjectOf <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1837-07-23> .
+        <https://viaf.org/viaf/150245159> .
 

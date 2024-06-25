@@ -1,13 +1,31 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/manon-massenet-jules> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/manon-massenet-jules> ] .
 
-<https://performance.musiconn.de/work/manon-massenet-jules> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/manon-massenet-jules> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1189357763>,
+        <https://d-nb.info/gnd/300100043>,
+        <https://performance.musiconn.de/work/manon-allons-il-le-faut-rezitativ-und-arie-massenet-jules>,
+        <https://performance.musiconn.de/work/manon-en-ferment-les-yeux-massenet-jules>,
+        <https://performance.musiconn.de/work/manon-nest-ce-plus-ma-main-que-cette-main-presse-massenet-jules>,
+        <https://performance.musiconn.de/work/manon-obeissons-quand-leur-voix-appelle-massenet-jules>,
+        <https://performance.musiconn.de/work/manon-toi-vous-ah-perfide-manon-massenet-jules>,
+        <https://viaf.org/viaf/181564717>,
+        <https://viaf.org/viaf/4295156253569908110008> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/manon-semperoper-dresden-1903-11-28-19-00>,
+        <https://performance.musiconn.de/event/manon-semperoper-dresden-1903-12-13-19-30>,
+        <https://performance.musiconn.de/event/manon-semperoper-dresden-1904-01-20-19-00>,
+        <https://performance.musiconn.de/event/manon-semperoper-dresden-1904-06-20-19-00>,
+        <https://performance.musiconn.de/event/manon-semperoper-dresden-1904-10-02-19-00>,
+        <https://performance.musiconn.de/event/manon-semperoper-dresden-1904-11-08-19-00>,
+        <https://performance.musiconn.de/event/manon-semperoper-dresden-1905-01-12-19-00>,
+        <https://performance.musiconn.de/event/manon-semperoper-dresden-1905-02-25-19-00>,
+        <https://performance.musiconn.de/event/manon-semperoper-dresden-1906-10-19-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118578723>,
@@ -24,23 +42,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:viaf <https://viaf.org/viaf/14959005>,
         <https://viaf.org/viaf/158420977>,
         <https://viaf.org/viaf/181564717>,
-        <https://viaf.org/viaf/4295156253569908110008> ;
-    schema:includedComposition <https://d-nb.info/gnd/1189357763>,
-        <https://d-nb.info/gnd/300100043>,
-        <https://performance.musiconn.de/work/manon-allons-il-le-faut-rezitativ-und-arie-massenet-jules>,
-        <https://performance.musiconn.de/work/manon-en-ferment-les-yeux-massenet-jules>,
-        <https://performance.musiconn.de/work/manon-nest-ce-plus-ma-main-que-cette-main-presse-massenet-jules>,
-        <https://performance.musiconn.de/work/manon-obeissons-quand-leur-voix-appelle-massenet-jules>,
-        <https://performance.musiconn.de/work/manon-toi-vous-ah-perfide-manon-massenet-jules>,
-        <https://viaf.org/viaf/181564717>,
-        <https://viaf.org/viaf/4295156253569908110008> ;
-    schema:subjectOf <https://performance.musiconn.de/event/manon-semperoper-dresden-1903-11-28-19-00>,
-        <https://performance.musiconn.de/event/manon-semperoper-dresden-1903-12-13-19-30>,
-        <https://performance.musiconn.de/event/manon-semperoper-dresden-1904-01-20-19-00>,
-        <https://performance.musiconn.de/event/manon-semperoper-dresden-1904-06-20-19-00>,
-        <https://performance.musiconn.de/event/manon-semperoper-dresden-1904-10-02-19-00>,
-        <https://performance.musiconn.de/event/manon-semperoper-dresden-1904-11-08-19-00>,
-        <https://performance.musiconn.de/event/manon-semperoper-dresden-1905-01-12-19-00>,
-        <https://performance.musiconn.de/event/manon-semperoper-dresden-1905-02-25-19-00>,
-        <https://performance.musiconn.de/event/manon-semperoper-dresden-1906-10-19-19-00> .
+        <https://viaf.org/viaf/4295156253569908110008> .
 

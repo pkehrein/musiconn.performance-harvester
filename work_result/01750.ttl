@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/grandes-etudes-de-paganini-nr-3-liszt-franz> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/grandes-etudes-de-paganini-nr-3-liszt-franz> ] .
 
-<https://performance.musiconn.de/work/grandes-etudes-de-paganini-nr-3-liszt-franz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/grandes-etudes-de-paganini-nr-3-liszt-franz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/8-museums-concert-grosser-konzertsaal-frankfurt-a-m-1866-01-19-18-30>,
+        <https://performance.musiconn.de/event/achtes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1896-02-02-17-30>,
+        <https://performance.musiconn.de/event/concert-des-universitaets-saengervereins-zu-st-pauli-semperoper-dresden-1901-11-29-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1144189780>,
@@ -54,8 +57,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/64199483>,
         <https://viaf.org/viaf/64747332>,
         <https://viaf.org/viaf/71577325>,
-        <https://viaf.org/viaf/76631552> ;
-    schema:subjectOf <https://performance.musiconn.de/event/8-museums-concert-grosser-konzertsaal-frankfurt-a-m-1866-01-19-18-30>,
-        <https://performance.musiconn.de/event/achtes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1896-02-02-17-30>,
-        <https://performance.musiconn.de/event/concert-des-universitaets-saengervereins-zu-st-pauli-semperoper-dresden-1901-11-29-19-00> .
+        <https://viaf.org/viaf/76631552> .
 

@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/villanellen-buch-5-marenzio-luca> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/villanellen-buch-5-marenzio-luca> ] .
 
-<https://performance.musiconn.de/work/villanellen-buch-5-marenzio-luca> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/villanellen-buch-5-marenzio-luca> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1175160989>,
+        <https://performance.musiconn.de/work/villanellen-buch-5-se-la-vostra-partita-marenzio-luca>,
+        <https://viaf.org/viaf/178074384> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "1. Si dolci son i strai 2. Ahime ch'io peno 3. Dunque sol per amare 4. Se per servirti ogn'hora 5. Se m'uccidi crudele 6. Non posso piu soffrire 7. Seguir'una ch'odia 8. Poi che di si vil foco 9. Io son pur sciolto Amor 10. Tu m'uccidi cor mio 11. La farfalla 12. Donna che con l'ardore 13. Io son rimaso solo 14. La bella donna mia 15. Viva fiamma d'Amor 16. Ecco il dardo col qual 17. Ahime qual'empia sorte 18. Coro e dolce conforto 19. Poi che da voi ben mio 20. Molti animai selvaggi 21. Di pianti e di sospir 22. Hor gitevi a fidare 23. Lungi dal mio bel 24. Se la vostra partita 25. Non piu gl'Arabi sumi" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/2656905> ;
     cto:title "Villanellen, Buch 5 (Marenzio, Luca)" ;
     cto:viaf <https://viaf.org/viaf/178074384>,
-        <https://viaf.org/viaf/2656905> ;
-    schema:includedComposition <https://d-nb.info/gnd/1175160989>,
-        <https://performance.musiconn.de/work/villanellen-buch-5-se-la-vostra-partita-marenzio-luca>,
-        <https://viaf.org/viaf/178074384> .
+        <https://viaf.org/viaf/2656905> .
 

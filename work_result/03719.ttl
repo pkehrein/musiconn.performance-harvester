@@ -1,13 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/ich-liebe-dich-grieg-edvard> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/ich-liebe-dich-grieg-edvard> ] .
 
-<https://performance.musiconn.de/work/ich-liebe-dich-grieg-edvard> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/ich-liebe-dich-grieg-edvard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/concert-mit-orchester-von-emmy-teleky-gewerbehaus-dresden-gewerbehaus-saal-1893-10-13-19-00>,
+        <https://performance.musiconn.de/event/fuenftes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1894-12-28-19-00>,
+        <https://performance.musiconn.de/event/patriotische-festlichkeit-zur-feier-des-50-jaehrigen-militaer-jubilaeums-sr-majestaet-des-koenigs-albert-von-sachsen-tivoli-dresden-1893-10-24-20-00>,
+        <https://performance.musiconn.de/event/xi-stiftungs-fest-gewerbehaus-dresden-gewerbehaus-saal-1892-11-04> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Unklar, welches Werk" ;
     cto:elementOf n4c:E5320 ;
@@ -53,9 +57,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/52435105>,
         <https://viaf.org/viaf/67232281>,
         <https://viaf.org/viaf/72138969>,
-        <https://viaf.org/viaf/754627> ;
-    schema:subjectOf <https://performance.musiconn.de/event/concert-mit-orchester-von-emmy-teleky-gewerbehaus-dresden-gewerbehaus-saal-1893-10-13-19-00>,
-        <https://performance.musiconn.de/event/fuenftes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1894-12-28-19-00>,
-        <https://performance.musiconn.de/event/patriotische-festlichkeit-zur-feier-des-50-jaehrigen-militaer-jubilaeums-sr-majestaet-des-koenigs-albert-von-sachsen-tivoli-dresden-1893-10-24-20-00>,
-        <https://performance.musiconn.de/event/xi-stiftungs-fest-gewerbehaus-dresden-gewerbehaus-saal-1892-11-04> .
+        <https://viaf.org/viaf/754627> .
 

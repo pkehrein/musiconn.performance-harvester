@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sprueche-des-aelteren-spervogel-hirsch-karl> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sprueche-des-aelteren-spervogel-hirsch-karl> ] .
 
-<https://performance.musiconn.de/work/sprueche-des-aelteren-spervogel-hirsch-karl> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sprueche-des-aelteren-spervogel-hirsch-karl> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1194325068>,
+        <https://d-nb.info/gnd/1194326870>,
+        <https://d-nb.info/gnd/1194327184>,
+        <https://performance.musiconn.de/work/sprueche-des-aelteren-spervogel-das-himmelreich-hirsch-karl>,
+        <https://performance.musiconn.de/work/sprueche-des-aelteren-spervogel-dem-unendlichen-hirsch-karl>,
+        <https://performance.musiconn.de/work/sprueche-des-aelteren-spervogel-ostern-hirsch-karl> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "5 Sprüche" ;
     cto:elementOf n4c:E5320 ;
@@ -20,11 +26,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/116905182>,
         <https://viaf.org/viaf/45066359> ;
     cto:title "Sprüche des älteren Spervogel (Hirsch, Karl)" ;
-    cto:viaf <https://viaf.org/viaf/45066359> ;
-    schema:includedComposition <https://d-nb.info/gnd/1194325068>,
-        <https://d-nb.info/gnd/1194326870>,
-        <https://d-nb.info/gnd/1194327184>,
-        <https://performance.musiconn.de/work/sprueche-des-aelteren-spervogel-das-himmelreich-hirsch-karl>,
-        <https://performance.musiconn.de/work/sprueche-des-aelteren-spervogel-dem-unendlichen-hirsch-karl>,
-        <https://performance.musiconn.de/work/sprueche-des-aelteren-spervogel-ostern-hirsch-karl> .
+    cto:viaf <https://viaf.org/viaf/45066359> .
 

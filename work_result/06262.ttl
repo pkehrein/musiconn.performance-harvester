@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/rokoko-berger-august> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/rokoko-berger-august> ] .
 
-<https://performance.musiconn.de/work/rokoko-berger-august> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/rokoko-berger-august> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/126-vorstellung-semperoper-dresden-1905-05-20-19-00>,
+        <https://performance.musiconn.de/event/127-vorstellung-semperoper-dresden-1905-05-21-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Tanzbild von August Berger" ;
     cto:elementOf n4c:E5320 ;
@@ -17,7 +19,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/1020380977>,
         <https://viaf.org/viaf/316485625> ;
     cto:title "Rokoko (Berger, August)" ;
-    cto:viaf <https://viaf.org/viaf/316485625> ;
-    schema:subjectOf <https://performance.musiconn.de/event/126-vorstellung-semperoper-dresden-1905-05-20-19-00>,
-        <https://performance.musiconn.de/event/127-vorstellung-semperoper-dresden-1905-05-21-19-00> .
+    cto:viaf <https://viaf.org/viaf/316485625> .
 

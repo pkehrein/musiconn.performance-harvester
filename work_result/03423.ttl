@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-von-af-von-schack-staendchen-strauss-richard> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-von-af-von-schack-staendchen-strauss-richard> ] .
 
-<https://performance.musiconn.de/work/lieder-von-af-von-schack-staendchen-strauss-richard> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-von-af-von-schack-staendchen-strauss-richard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/lieder-von-af-von-schack-staendchen-fassung-singstimme-orchester-strauss-richard>,
+        <https://performance.musiconn.de/work/lieder-von-af-von-schack-staendchen-fassung-singstimme-orchester-strauss-richard-1> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/sechstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1889-12-20-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/11861911X>,
@@ -25,8 +28,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Lieder von A.F. von Schack. Ständchen (Strauss, Richard)" ;
     cto:viaf <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/139053206>,
-        <https://viaf.org/viaf/24796264> ;
-    schema:includedComposition <https://performance.musiconn.de/work/lieder-von-af-von-schack-staendchen-fassung-singstimme-orchester-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-von-af-von-schack-staendchen-fassung-singstimme-orchester-strauss-richard-1> ;
-    schema:subjectOf <https://performance.musiconn.de/event/sechstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1889-12-20-18-30> .
+        <https://viaf.org/viaf/24796264> .
 

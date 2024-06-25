@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/die-parias-fassung-seidel-friedrich-ludwig> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/die-parias-fassung-seidel-friedrich-ludwig> ] .
 
-<https://performance.musiconn.de/work/die-parias-fassung-seidel-friedrich-ludwig> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/die-parias-fassung-seidel-friedrich-ludwig> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/die-parias-fassung-seidel-friedrich-ludwig-1> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Übersetzt und bearbeitet von Ferdinand von Biedenfeld" ;
     cto:elementOf n4c:E5320 ;
@@ -17,6 +18,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/10218206X>,
         <https://viaf.org/viaf/2853075> ;
     cto:title "Die Parias / Fassung (Seidel, Friedrich Ludwig)" ;
-    cto:viaf <https://viaf.org/viaf/2853075> ;
-    schema:includedComposition <https://performance.musiconn.de/work/die-parias-fassung-seidel-friedrich-ludwig-1> .
+    cto:viaf <https://viaf.org/viaf/2853075> .
 

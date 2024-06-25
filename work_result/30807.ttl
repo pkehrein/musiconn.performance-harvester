@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/stuecke-streichorchester-1988-schmidt-hansjuergen> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/stuecke-streichorchester-1988-schmidt-hansjuergen> ] .
 
-<https://performance.musiconn.de/work/stuecke-streichorchester-1988-schmidt-hansjuergen> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/stuecke-streichorchester-1988-schmidt-hansjuergen> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1217440194>,
+        <https://d-nb.info/gnd/1217440348>,
+        <https://performance.musiconn.de/work/stuecke-streichorchester-1988-nr-3-schmidt-hansjuergen>,
+        <https://performance.musiconn.de/work/stuecke-streichorchester-1988-nr-4-schmidt-hansjuergen>,
+        <https://viaf.org/viaf/4665160001839830300004>,
+        <https://viaf.org/viaf/6852160001846330300004> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/103780831>,
@@ -20,11 +26,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Stücke, Streichorchester (1988) (Schmidt, Hansjürgen)" ;
     cto:viaf <https://viaf.org/viaf/4665160001839830300004>,
         <https://viaf.org/viaf/5349412>,
-        <https://viaf.org/viaf/6852160001846330300004> ;
-    schema:includedComposition <https://d-nb.info/gnd/1217440194>,
-        <https://d-nb.info/gnd/1217440348>,
-        <https://performance.musiconn.de/work/stuecke-streichorchester-1988-nr-3-schmidt-hansjuergen>,
-        <https://performance.musiconn.de/work/stuecke-streichorchester-1988-nr-4-schmidt-hansjuergen>,
-        <https://viaf.org/viaf/4665160001839830300004>,
         <https://viaf.org/viaf/6852160001846330300004> .
 

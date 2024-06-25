@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-op-58-taubert-wilhelm> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-op-58-taubert-wilhelm> ] .
 
-<https://performance.musiconn.de/work/lieder-op-58-taubert-wilhelm> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-op-58-taubert-wilhelm> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1227207778>,
+        <https://performance.musiconn.de/work/lieder-op-58-wo-sind-all-die-blumen-hin-taubert-wilhelm>,
+        <https://viaf.org/viaf/3565161392915158480002> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "12 Lieder (Der Mond der scheint, – Ein scheckiges Pferd – Schick’ herüber – Hopp, Reiterlein, reite – Armes Bäumchen – Wo sind all’ die Blumen hin? – Es ist kein Mäuschen – Kikriki! – Es kam ein Herr – Ringel, Reihe! – Maikäfer summ – Wettermann heisst mein Hahn)" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/95208474> ;
     cto:title "Lieder, op. 58 (Taubert, Wilhelm)" ;
     cto:viaf <https://viaf.org/viaf/3565161392915158480002>,
-        <https://viaf.org/viaf/95208474> ;
-    schema:includedComposition <https://d-nb.info/gnd/1227207778>,
-        <https://performance.musiconn.de/work/lieder-op-58-wo-sind-all-die-blumen-hin-taubert-wilhelm>,
-        <https://viaf.org/viaf/3565161392915158480002> .
+        <https://viaf.org/viaf/95208474> .
 

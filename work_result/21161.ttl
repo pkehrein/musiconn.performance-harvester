@@ -1,13 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/neue-arien-in-6-zehen-eingetheilet-krieger-adam> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/neue-arien-in-6-zehen-eingetheilet-krieger-adam> ] .
 
-<https://performance.musiconn.de/work/neue-arien-in-6-zehen-eingetheilet-krieger-adam> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/neue-arien-in-6-zehen-eingetheilet-krieger-adam> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1250789184>,
+        <https://d-nb.info/gnd/1250794927>,
+        <https://d-nb.info/gnd/1250795567>,
+        <https://d-nb.info/gnd/1250795842>,
+        <https://performance.musiconn.de/work/neue-arien-der-augen-schein-krieger-adam>,
+        <https://performance.musiconn.de/work/neue-arien-der-liebe-macht-krieger-adam>,
+        <https://performance.musiconn.de/work/neue-arien-der-unbestand-krieger-adam>,
+        <https://performance.musiconn.de/work/neue-arien-wer-sich-verliebt-krieger-adam> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118724428>,
@@ -20,13 +28,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/118724428>,
         <https://viaf.org/viaf/71585930> ;
     cto:title "Neue Arien in 6 Zehen eingetheilet (Krieger, Adam)" ;
-    cto:viaf <https://viaf.org/viaf/71585930> ;
-    schema:includedComposition <https://d-nb.info/gnd/1250789184>,
-        <https://d-nb.info/gnd/1250794927>,
-        <https://d-nb.info/gnd/1250795567>,
-        <https://d-nb.info/gnd/1250795842>,
-        <https://performance.musiconn.de/work/neue-arien-der-augen-schein-krieger-adam>,
-        <https://performance.musiconn.de/work/neue-arien-der-liebe-macht-krieger-adam>,
-        <https://performance.musiconn.de/work/neue-arien-der-unbestand-krieger-adam>,
-        <https://performance.musiconn.de/work/neue-arien-wer-sich-verliebt-krieger-adam> .
+    cto:viaf <https://viaf.org/viaf/71585930> .
 

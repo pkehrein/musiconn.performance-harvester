@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/tableaux-symphoniques-tinel-edgar> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/tableaux-symphoniques-tinel-edgar> ] .
 
-<https://performance.musiconn.de/work/tableaux-symphoniques-tinel-edgar> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/tableaux-symphoniques-tinel-edgar> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1050940989>,
+        <https://performance.musiconn.de/work/tableaux-symphoniques-feest-in-de-tempel-van-jupiter-tinel-edgar>,
+        <https://viaf.org/viaf/178212298> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1050940989>,
@@ -16,8 +19,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/66732393> ;
     cto:title "Tableaux symphoniques (Tinel, Edgar)" ;
     cto:viaf <https://viaf.org/viaf/178212298>,
-        <https://viaf.org/viaf/66732393> ;
-    schema:includedComposition <https://d-nb.info/gnd/1050940989>,
-        <https://performance.musiconn.de/work/tableaux-symphoniques-feest-in-de-tempel-van-jupiter-tinel-edgar>,
-        <https://viaf.org/viaf/178212298> .
+        <https://viaf.org/viaf/66732393> .
 

@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/deutsche-volkslieder-woo-grimm-julius-otto> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/deutsche-volkslieder-woo-grimm-julius-otto> ] .
 
-<https://performance.musiconn.de/work/deutsche-volkslieder-woo-grimm-julius-otto> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/deutsche-volkslieder-woo-grimm-julius-otto> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/deutsche-volkslieder-woo-ach-ach-ich-armes-klosterfraeulein-grimm-julius-otto>,
+        <https://performance.musiconn.de/work/deutsche-volkslieder-woo-die-wollust-in-den-maien-grimm-julius-otto>,
+        <https://performance.musiconn.de/work/deutsche-volkslieder-woo-so-will-ich-frisch-und-froehlich-sein-grimm-julius-otto>,
+        <https://performance.musiconn.de/work/deutsche-volkslieder-woo-verstohlen-geht-der-mond-auf-grimm-julius-otto>,
+        <https://performance.musiconn.de/work/deutsche-volkslieder-woo-von-allen-schoenen-kindern-in-der-welt-grimm-julius-otto>,
+        <https://performance.musiconn.de/work/deutsche-volkslieder-woo-wach-auf-meins-herzens-schoene-grimm-julius-otto> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "1. Ich fahr dahin2. Wach auf (mein’s Herzens Schöne)3. Verstohlen geht der Mond auf4. Von allen schönen Kindern (auf der Welt)5. Im tiefen Wald (im Dornenhag)6. Die Wollust in den Maien7. Ach, ach, ich armes Klosterfräulein8. So will ich frisch und fröhlich sein" ;
     cto:elementOf n4c:E5320 ;
@@ -19,11 +25,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/116843217>,
         <https://viaf.org/viaf/54910787> ;
     cto:title "Deutsche Volkslieder, WoO (Grimm, Julius Otto)" ;
-    cto:viaf <https://viaf.org/viaf/54910787> ;
-    schema:includedComposition <https://performance.musiconn.de/work/deutsche-volkslieder-woo-ach-ach-ich-armes-klosterfraeulein-grimm-julius-otto>,
-        <https://performance.musiconn.de/work/deutsche-volkslieder-woo-die-wollust-in-den-maien-grimm-julius-otto>,
-        <https://performance.musiconn.de/work/deutsche-volkslieder-woo-so-will-ich-frisch-und-froehlich-sein-grimm-julius-otto>,
-        <https://performance.musiconn.de/work/deutsche-volkslieder-woo-verstohlen-geht-der-mond-auf-grimm-julius-otto>,
-        <https://performance.musiconn.de/work/deutsche-volkslieder-woo-von-allen-schoenen-kindern-in-der-welt-grimm-julius-otto>,
-        <https://performance.musiconn.de/work/deutsche-volkslieder-woo-wach-auf-meins-herzens-schoene-grimm-julius-otto> .
+    cto:viaf <https://viaf.org/viaf/54910787> .
 

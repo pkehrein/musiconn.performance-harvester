@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gesaenge-fuer-altstimme-zwei-floeten-und-harfe-jahn-raimund> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gesaenge-fuer-altstimme-zwei-floeten-und-harfe-jahn-raimund> ] .
 
-<https://performance.musiconn.de/work/gesaenge-fuer-altstimme-zwei-floeten-und-harfe-jahn-raimund> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gesaenge-fuer-altstimme-zwei-floeten-und-harfe-jahn-raimund> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1225903580>,
+        <https://d-nb.info/gnd/122590370X>,
+        <https://performance.musiconn.de/work/gesaenge-fuer-altstimme-zwei-floeten-und-harfe-bumerang-jahn-raimund>,
+        <https://performance.musiconn.de/work/gesaenge-fuer-altstimme-zwei-floeten-und-harfe-kindergebetchen-jahn-raimund>,
+        <https://viaf.org/viaf/1348161211479340070009>,
+        <https://viaf.org/viaf/3011161211964340070007> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "enthält: 1. Bumerang, op. 25 II Nr. 7; 2. Kindergebetchen, op. 25 II Nr. 4" ;
     cto:elementOf n4c:E5320 ;
@@ -21,11 +27,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Gesänge für Altstimme, zwei Flöten und Harfe (Jahn, Raimund)" ;
     cto:viaf <https://viaf.org/viaf/1348161211479340070009>,
         <https://viaf.org/viaf/3011161211964340070007>,
-        <https://viaf.org/viaf/304930663> ;
-    schema:includedComposition <https://d-nb.info/gnd/1225903580>,
-        <https://d-nb.info/gnd/122590370X>,
-        <https://performance.musiconn.de/work/gesaenge-fuer-altstimme-zwei-floeten-und-harfe-bumerang-jahn-raimund>,
-        <https://performance.musiconn.de/work/gesaenge-fuer-altstimme-zwei-floeten-und-harfe-kindergebetchen-jahn-raimund>,
-        <https://viaf.org/viaf/1348161211479340070009>,
-        <https://viaf.org/viaf/3011161211964340070007> .
+        <https://viaf.org/viaf/304930663> .
 

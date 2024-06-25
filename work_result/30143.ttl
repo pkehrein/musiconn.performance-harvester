@@ -1,13 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/impressionen-fuer-klavier-borchert-heinz> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/impressionen-fuer-klavier-borchert-heinz> ] .
 
-<https://performance.musiconn.de/work/impressionen-fuer-klavier-borchert-heinz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/impressionen-fuer-klavier-borchert-heinz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1222288346>,
+        <https://d-nb.info/gnd/1222288591>,
+        <https://d-nb.info/gnd/1222288877>,
+        <https://performance.musiconn.de/work/impressionen-fuer-klavier-impression-a-la-nuit-borchert-heinz>,
+        <https://performance.musiconn.de/work/impressionen-fuer-klavier-papillons-en-vein-plent-borchert-heinz>,
+        <https://performance.musiconn.de/work/impressionen-fuer-klavier-soleil-borchert-heinz>,
+        <https://viaf.org/viaf/1451160668131303560008>,
+        <https://viaf.org/viaf/3984160667951303560007>,
+        <https://viaf.org/viaf/6996160667897603560008> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfassen: Impression á la nuit, Soleil, Papillons en vein plent" ;
     cto:elementOf n4c:E5320 ;
@@ -23,14 +32,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:viaf <https://viaf.org/viaf/1451160668131303560008>,
         <https://viaf.org/viaf/3984160667951303560007>,
         <https://viaf.org/viaf/6996160667897603560008>,
-        <https://viaf.org/viaf/79581226> ;
-    schema:includedComposition <https://d-nb.info/gnd/1222288346>,
-        <https://d-nb.info/gnd/1222288591>,
-        <https://d-nb.info/gnd/1222288877>,
-        <https://performance.musiconn.de/work/impressionen-fuer-klavier-impression-a-la-nuit-borchert-heinz>,
-        <https://performance.musiconn.de/work/impressionen-fuer-klavier-papillons-en-vein-plent-borchert-heinz>,
-        <https://performance.musiconn.de/work/impressionen-fuer-klavier-soleil-borchert-heinz>,
-        <https://viaf.org/viaf/1451160668131303560008>,
-        <https://viaf.org/viaf/3984160667951303560007>,
-        <https://viaf.org/viaf/6996160667897603560008> .
+        <https://viaf.org/viaf/79581226> .
 

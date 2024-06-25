@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/choralmusik-fuer-blaeser-und-orgel-graap-lothar> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/choralmusik-fuer-blaeser-und-orgel-graap-lothar> ] .
 
-<https://performance.musiconn.de/work/choralmusik-fuer-blaeser-und-orgel-graap-lothar> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/choralmusik-fuer-blaeser-und-orgel-graap-lothar> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/der-mond-ist-aufgegangen-graap-lothar-1>,
+        <https://performance.musiconn.de/work/grosser-gott-wir-loben-dich-graap-lothar-1> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "für Bläser und Orgel" ;
     cto:elementOf n4c:E5320 ;
@@ -15,7 +17,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/123837685>,
         <https://viaf.org/viaf/32914569> ;
     cto:title "Choralmusik für Bläser und Orgel (Graap, Lothar)" ;
-    cto:viaf <https://viaf.org/viaf/32914569> ;
-    schema:includedComposition <https://performance.musiconn.de/work/der-mond-ist-aufgegangen-graap-lothar-1>,
-        <https://performance.musiconn.de/work/grosser-gott-wir-loben-dich-graap-lothar-1> .
+    cto:viaf <https://viaf.org/viaf/32914569> .
 

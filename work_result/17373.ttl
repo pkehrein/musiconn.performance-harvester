@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/schulwerk-fuer-instrumental-zusammenspiel-hindemith-paul> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/schulwerk-fuer-instrumental-zusammenspiel-hindemith-paul> ] .
 
-<https://performance.musiconn.de/work/schulwerk-fuer-instrumental-zusammenspiel-hindemith-paul> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/schulwerk-fuer-instrumental-zusammenspiel-hindemith-paul> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300527187>,
+        <https://performance.musiconn.de/work/schulwerk-fuer-instrumental-zusammenspiel-nr-3-hindemith-paul>,
+        <https://viaf.org/viaf/201864464> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "4 Teile: I. Neun Stücke für zwei Geigen oder zweistimmigen Geigenchor, II. Acht Kanons für zwei Geigen oder zweistimmigen Geigenchor mit begleitender 3. Geige oder Bratsche, III. Acht Stücke für zwei Geigen, Bratsche und Cello (einzeln oder chorisch besetzt, auch für 2 V., Br., Vc. und Kb., 1961), IV. Fünf Stücke für Streichorchester (für weiter Fortgeschrittene. Vollkommene Ausnutzung der ersten Lage in allen Streichinstrumenten)" ;
     cto:elementOf n4c:E5320 ;
@@ -18,8 +21,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/24622167> ;
     cto:title "Schulwerk für Instrumental-Zusammenspiel (Hindemith, Paul)" ;
     cto:viaf <https://viaf.org/viaf/201864464>,
-        <https://viaf.org/viaf/24622167> ;
-    schema:includedComposition <https://d-nb.info/gnd/300527187>,
-        <https://performance.musiconn.de/work/schulwerk-fuer-instrumental-zusammenspiel-nr-3-hindemith-paul>,
-        <https://viaf.org/viaf/201864464> .
+        <https://viaf.org/viaf/24622167> .
 

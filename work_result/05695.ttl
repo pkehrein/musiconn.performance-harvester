@@ -1,13 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sinfonien-nr-6-a-moll-mahler-gustav> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sinfonien-nr-6-a-moll-mahler-gustav> ] .
 
-<https://performance.musiconn.de/work/sinfonien-nr-6-a-moll-mahler-gustav> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sinfonien-nr-6-a-moll-mahler-gustav> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300939272>,
+        <https://performance.musiconn.de/work/sinfonien-nr-6-a-moll-andante-moderato-mahler-gustav>,
+        <https://performance.musiconn.de/work/sinfonien-nr-6-a-moll-scherzo-wuchtig-mahler-gustav>,
+        <https://viaf.org/viaf/201875592> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Revisionen 1906 und 1907" ;
     cto:elementOf n4c:E5320 ;
@@ -48,9 +52,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/267260658>,
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/45144814273718687574>,
-        <https://viaf.org/viaf/61732497> ;
-    schema:includedComposition <https://d-nb.info/gnd/300939272>,
-        <https://performance.musiconn.de/work/sinfonien-nr-6-a-moll-andante-moderato-mahler-gustav>,
-        <https://performance.musiconn.de/work/sinfonien-nr-6-a-moll-scherzo-wuchtig-mahler-gustav>,
-        <https://viaf.org/viaf/201875592> .
+        <https://viaf.org/viaf/61732497> .
 

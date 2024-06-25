@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/atem-meier-burkhard> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/atem-meier-burkhard> ] .
 
-<https://performance.musiconn.de/work/atem-meier-burkhard> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/atem-meier-burkhard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1221095943>,
+        <https://d-nb.info/gnd/1221096648>,
+        <https://performance.musiconn.de/work/aus-einem-juni-meier-burkhard>,
+        <https://performance.musiconn.de/work/die-eine-rose-ueberwaeltigt-alles-meier-burkhard>,
+        <https://viaf.org/viaf/2173160546915910240003>,
+        <https://viaf.org/viaf/4888160546924310240007> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Vier Lieder für hohe Stimme u. Klavier nach Texten von Eva Strittmatter" ;
     cto:elementOf n4c:E5320 ;
@@ -26,11 +32,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:viaf <https://viaf.org/viaf/2173160546915910240003>,
         <https://viaf.org/viaf/23373541>,
         <https://viaf.org/viaf/4888160546924310240007>,
-        <https://viaf.org/viaf/80049598> ;
-    schema:includedComposition <https://d-nb.info/gnd/1221095943>,
-        <https://d-nb.info/gnd/1221096648>,
-        <https://performance.musiconn.de/work/aus-einem-juni-meier-burkhard>,
-        <https://performance.musiconn.de/work/die-eine-rose-ueberwaeltigt-alles-meier-burkhard>,
-        <https://viaf.org/viaf/2173160546915910240003>,
-        <https://viaf.org/viaf/4888160546924310240007> .
+        <https://viaf.org/viaf/80049598> .
 

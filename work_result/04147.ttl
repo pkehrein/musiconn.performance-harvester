@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/der-kreuzchorengel-himmel-und-hoellenfahrt-reinhold-otto> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/der-kreuzchorengel-himmel-und-hoellenfahrt-reinhold-otto> ] .
 
-<https://performance.musiconn.de/work/der-kreuzchorengel-himmel-und-hoellenfahrt-reinhold-otto> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/der-kreuzchorengel-himmel-und-hoellenfahrt-reinhold-otto> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/73-fastnachtskonzert-des-kreuzchors-vereinshaus-zinzendorfstrasse-17-dresden-1934-02-13-19-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Singspiel in 3 AufzügenText von Paul Dittrich (nach einer Legende von Rudolf Kirsten, Ortmannsdorf)" ;
     cto:elementOf n4c:E5320 ;
@@ -17,6 +18,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/133556182>,
         <https://viaf.org/viaf/13503230> ;
     cto:title "Der Kreuzchorengel Himmel- und Höllenfahrt (Reinhold, Otto)" ;
-    cto:viaf <https://viaf.org/viaf/13503230> ;
-    schema:subjectOf <https://performance.musiconn.de/event/73-fastnachtskonzert-des-kreuzchors-vereinshaus-zinzendorfstrasse-17-dresden-1934-02-13-19-30> .
+    cto:viaf <https://viaf.org/viaf/13503230> .
 

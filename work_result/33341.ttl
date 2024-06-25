@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sonaten-git-op-22-sor-fernando> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sonaten-git-op-22-sor-fernando> ] .
 
-<https://performance.musiconn.de/work/sonaten-git-op-22-sor-fernando> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sonaten-git-op-22-sor-fernando> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/115348305X>,
+        <https://performance.musiconn.de/work/sonaten-gitarre-op-22-rondo-sor-fernando>,
+        <https://viaf.org/viaf/1205152025916803600008> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Grand Sonata" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/197693> ;
     cto:title "Sonaten, Git, op. 22 (Sor, Fernando)" ;
     cto:viaf <https://viaf.org/viaf/1205152025916803600008>,
-        <https://viaf.org/viaf/197693> ;
-    schema:includedComposition <https://d-nb.info/gnd/115348305X>,
-        <https://performance.musiconn.de/work/sonaten-gitarre-op-22-rondo-sor-fernando>,
-        <https://viaf.org/viaf/1205152025916803600008> .
+        <https://viaf.org/viaf/197693> .
 

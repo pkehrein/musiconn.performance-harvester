@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-op-7-ritter-alexander> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-op-7-ritter-alexander> ] .
 
-<https://performance.musiconn.de/work/lieder-op-7-ritter-alexander> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-op-7-ritter-alexander> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1268669563>,
+        <https://performance.musiconn.de/work/lieder-op-7-in-lust-und-schmerzen-ritter-alexander>,
+        <https://viaf.org/viaf/6199166414919602740000> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "WV ist nicht Bestandteil der maßgeblichen Werkverzeichisse nach RDA; umfasst 3 Lieder: Ich weil' in tiefer Einsamkeit. - Das Flüchtige. - In Lust und Schmerzen" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/3278109> ;
     cto:title "Lieder, op. 7 (Ritter, Alexander)" ;
     cto:viaf <https://viaf.org/viaf/3278109>,
-        <https://viaf.org/viaf/6199166414919602740000> ;
-    schema:includedComposition <https://d-nb.info/gnd/1268669563>,
-        <https://performance.musiconn.de/work/lieder-op-7-in-lust-und-schmerzen-ritter-alexander>,
         <https://viaf.org/viaf/6199166414919602740000> .
 

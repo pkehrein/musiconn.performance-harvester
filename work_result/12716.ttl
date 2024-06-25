@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/christus-der-auferstandene-schreck-gustav> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/christus-der-auferstandene-schreck-gustav> ] .
 
-<https://performance.musiconn.de/work/christus-der-auferstandene-schreck-gustav> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/christus-der-auferstandene-schreck-gustav> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/christus-der-auferstandene-saget-den-verzagten-herzen-schreck-gustav>,
+        <https://performance.musiconn.de/work/christus-der-auferstandene-selig-ist-der-die-anfechtung-erduldet-schreck-gustav> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/achtzehntes-abonnement-concert-zweites-gewandhaus-leipzig-1892-03-03> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Oratorium für Soli, Chor, OOrg; bestehend aus 6 Teilen: 1. Die Auferstehung, 2. Der Gang zum Grabe, 3. Die Jünger von Emmaus, 4. In Jerusalem, 5. Am See Tiberias, 6. Die HimmelfahrtUraufführung: 1892 im Gewandhaus Leipzig" ;
     cto:elementOf n4c:E5320 ;
@@ -25,8 +28,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Christus, der Auferstandene (Schreck, Gustav)" ;
     cto:viaf <https://viaf.org/viaf/131864116>,
         <https://viaf.org/viaf/136181816>,
-        <https://viaf.org/viaf/5118943> ;
-    schema:includedComposition <https://performance.musiconn.de/work/christus-der-auferstandene-saget-den-verzagten-herzen-schreck-gustav>,
-        <https://performance.musiconn.de/work/christus-der-auferstandene-selig-ist-der-die-anfechtung-erduldet-schreck-gustav> ;
-    schema:subjectOf <https://performance.musiconn.de/event/achtzehntes-abonnement-concert-zweites-gewandhaus-leipzig-1892-03-03> .
+        <https://viaf.org/viaf/5118943> .
 

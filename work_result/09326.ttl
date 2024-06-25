@@ -1,13 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/quartette-sopran-alt-tenor-bass-klavier-op-92-brahms-johannes> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/quartette-sopran-alt-tenor-bass-klavier-op-92-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/quartette-sopran-alt-tenor-bass-klavier-op-92-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/quartette-sopran-alt-tenor-bass-klavier-op-92-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/123614287X>,
+        <https://d-nb.info/gnd/1236142993>,
+        <https://d-nb.info/gnd/1236143078>,
+        <https://performance.musiconn.de/work/quartette-op-92-abendlied-brahms-johannes>,
+        <https://performance.musiconn.de/work/quartette-op-92-spaetherbst-brahms-johannes>,
+        <https://performance.musiconn.de/work/quartette-sopran-alt-tenor-bass-klavier-op-92-nr-3-brahms-johannes>,
+        <https://performance.musiconn.de/work/quartette-sopran-alt-tenor-bass-klavier-op-92-warum-brahms-johannes> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "4 Werke: O schöne Nacht (Georg Friedrich Daumer). Spätherbst (Hermann Allmers). Abendlied (Friedrich Hebbel). Warum (Johann Wolfgang von Goethe)" ;
     cto:elementOf n4c:E5320 ;
@@ -20,12 +27,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/118514253>,
         <https://viaf.org/viaf/7573295> ;
     cto:title "Quartette, Sopran, Alt, Tenor, Bass, Klavier, op. 92 (Brahms, Johannes)" ;
-    cto:viaf <https://viaf.org/viaf/7573295> ;
-    schema:includedComposition <https://d-nb.info/gnd/123614287X>,
-        <https://d-nb.info/gnd/1236142993>,
-        <https://d-nb.info/gnd/1236143078>,
-        <https://performance.musiconn.de/work/quartette-op-92-abendlied-brahms-johannes>,
-        <https://performance.musiconn.de/work/quartette-op-92-spaetherbst-brahms-johannes>,
-        <https://performance.musiconn.de/work/quartette-sopran-alt-tenor-bass-klavier-op-92-nr-3-brahms-johannes>,
-        <https://performance.musiconn.de/work/quartette-sopran-alt-tenor-bass-klavier-op-92-warum-brahms-johannes> .
+    cto:viaf <https://viaf.org/viaf/7573295> .
 

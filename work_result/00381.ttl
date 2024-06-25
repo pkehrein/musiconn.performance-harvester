@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/choralvorspiele-op-122-o-welt-ich-muss-dich-lassen-brahms-johannes> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/choralvorspiele-op-122-o-welt-ich-muss-dich-lassen-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/choralvorspiele-op-122-o-welt-ich-muss-dich-lassen-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/choralvorspiele-op-122-o-welt-ich-muss-dich-lassen-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/kirchenkonzert-des-dresdener-kreuzchores-deutsche-kirche-helsinki-1936-10-01-20-00>,
+        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1912-11-23-14-00>,
+        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-01-18-18-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118514253>,
@@ -25,8 +28,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Choralvorspiele op. 122. O Welt, ich muss dich lassen (Brahms, Johannes)" ;
     cto:viaf <https://viaf.org/viaf/143854617>,
         <https://viaf.org/viaf/22407862>,
-        <https://viaf.org/viaf/7573295> ;
-    schema:subjectOf <https://performance.musiconn.de/event/kirchenkonzert-des-dresdener-kreuzchores-deutsche-kirche-helsinki-1936-10-01-20-00>,
-        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1912-11-23-14-00>,
-        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-01-18-18-00> .
+        <https://viaf.org/viaf/7573295> .
 

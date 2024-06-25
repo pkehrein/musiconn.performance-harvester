@@ -1,13 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/konzerte-violine-orchester-op-32-beriot-charles-auguste-de> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/konzerte-violine-orchester-op-32-beriot-charles-auguste-de> ] .
 
-<https://performance.musiconn.de/work/konzerte-violine-orchester-op-32-beriot-charles-auguste-de> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/konzerte-violine-orchester-op-32-beriot-charles-auguste-de> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1259069931>,
+        <https://d-nb.info/gnd/1259069990>,
+        <https://performance.musiconn.de/work/konzerte-violine-nr-2-op-32-h-moll-rondo-russe-fassung-violine-klavier-beriot-charles-auguste-de>,
+        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-2-op-32-h-moll-andantino-beriot-charles-auguste-de>,
+        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-2-op-32-h-moll-rondo-russe-beriot-charles-auguste-de> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/11613481X>,
@@ -22,10 +27,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/76513486> ;
     cto:title "Konzerte, Violine, Orchester, op. 32 (Bériot, Charles-Auguste de)" ;
     cto:viaf <https://viaf.org/viaf/10601121>,
-        <https://viaf.org/viaf/76513486> ;
-    schema:includedComposition <https://d-nb.info/gnd/1259069931>,
-        <https://d-nb.info/gnd/1259069990>,
-        <https://performance.musiconn.de/work/konzerte-violine-nr-2-op-32-h-moll-rondo-russe-fassung-violine-klavier-beriot-charles-auguste-de>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-2-op-32-h-moll-andantino-beriot-charles-auguste-de>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-2-op-32-h-moll-rondo-russe-beriot-charles-auguste-de> .
+        <https://viaf.org/viaf/76513486> .
 

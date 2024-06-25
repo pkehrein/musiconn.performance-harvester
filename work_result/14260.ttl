@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-op-13-schillings-max-von> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-op-13-schillings-max-von> ] .
 
-<https://performance.musiconn.de/work/lieder-op-13-schillings-max-von> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-op-13-schillings-max-von> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/lieder-op-13-maerchen-schillings-max-von> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Laut Grove Music Online 5 Lieder" ;
     cto:elementOf n4c:E5320 ;
@@ -17,6 +18,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/11875503X>,
         <https://viaf.org/viaf/32184594> ;
     cto:title "Lieder, op. 13 (Schillings, Max von)" ;
-    cto:viaf <https://viaf.org/viaf/32184594> ;
-    schema:includedComposition <https://performance.musiconn.de/work/lieder-op-13-maerchen-schillings-max-von> .
+    cto:viaf <https://viaf.org/viaf/32184594> .
 

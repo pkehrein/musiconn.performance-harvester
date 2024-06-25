@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/stuecke-orgel-op-56-weihnachtsmusik-lange-samuel-de> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/stuecke-orgel-op-56-weihnachtsmusik-lange-samuel-de> ] .
 
-<https://performance.musiconn.de/work/stuecke-orgel-op-56-weihnachtsmusik-lange-samuel-de> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/stuecke-orgel-op-56-weihnachtsmusik-lange-samuel-de> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1183131267>,
+        <https://d-nb.info/gnd/1183135866>,
+        <https://performance.musiconn.de/work/stuecke-orgel-op-56-weihnachtsmusik-gesang-der-hirten-lange-samuel-de>,
+        <https://performance.musiconn.de/work/stuecke-orgel-op-56-weihnachtsmusik-pastorale-lange-samuel-de>,
+        <https://viaf.org/viaf/1698155566429713380000>,
+        <https://viaf.org/viaf/8941155566448013380002> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/103819843>,
@@ -28,11 +34,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/2972155566482213380003>,
         <https://viaf.org/viaf/34648433>,
         <https://viaf.org/viaf/79623600>,
-        <https://viaf.org/viaf/8941155566448013380002> ;
-    schema:includedComposition <https://d-nb.info/gnd/1183131267>,
-        <https://d-nb.info/gnd/1183135866>,
-        <https://performance.musiconn.de/work/stuecke-orgel-op-56-weihnachtsmusik-gesang-der-hirten-lange-samuel-de>,
-        <https://performance.musiconn.de/work/stuecke-orgel-op-56-weihnachtsmusik-pastorale-lange-samuel-de>,
-        <https://viaf.org/viaf/1698155566429713380000>,
         <https://viaf.org/viaf/8941155566448013380002> .
 

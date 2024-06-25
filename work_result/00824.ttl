@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/geistliche-gesaenge-gemischter-chor-op-38a-radecke-robert> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/geistliche-gesaenge-gemischter-chor-op-38a-radecke-robert> ] .
 
-<https://performance.musiconn.de/work/geistliche-gesaenge-gemischter-chor-op-38a-radecke-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/geistliche-gesaenge-gemischter-chor-op-38a-radecke-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1197652000>,
+        <https://performance.musiconn.de/work/geistliche-gesaenge-gemischter-chor-op-38a-gebet-radecke-robert> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "6 geistliche Gesänge f. gem. Chor (vornehmlich Kirchenchor)op. 38b für Männerchor" ;
     cto:elementOf n4c:E5320 ;
@@ -18,7 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/116322160>,
         <https://viaf.org/viaf/64755166> ;
     cto:title "Geistliche Gesänge, Gemischter Chor, op. 38a (Radecke, Robert)" ;
-    cto:viaf <https://viaf.org/viaf/64755166> ;
-    schema:includedComposition <https://d-nb.info/gnd/1197652000>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-gemischter-chor-op-38a-gebet-radecke-robert> .
+    cto:viaf <https://viaf.org/viaf/64755166> .
 

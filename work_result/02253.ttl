@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gesaenge-op-15-ehmant-anselm> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gesaenge-op-15-ehmant-anselm> ] .
 
-<https://performance.musiconn.de/work/gesaenge-op-15-ehmant-anselm> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gesaenge-op-15-ehmant-anselm> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1284220052>,
+        <https://d-nb.info/gnd/1292801395>,
+        <https://performance.musiconn.de/work/gesaenge-op-15-die-liebe-sass-als-nachtigall-ehmant-anselm>,
+        <https://performance.musiconn.de/work/gesaenge-op-15-die-trepp-hinunter-geschwungen-ehmant-anselm>,
+        <https://viaf.org/viaf/1233167988954833830003>,
+        <https://viaf.org/viaf/478168740937079530006> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfasst 10 Gesänge: Wiegenlied. - Die Liebe sass als Nachtigall. - Jasminenstrauch. - Der gefangene Sänger-Zwiegesang. - Lied der Vögelein. - Sonntags am Rhein. - Frühlingsgruss. - Die Trepp’ hinunter geschwungen. - Das sterbende Kind" ;
     cto:elementOf n4c:E5320 ;
@@ -21,11 +27,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Gesänge, op. 15 (Ehmant, Anselm)" ;
     cto:viaf <https://viaf.org/viaf/1233167988954833830003>,
         <https://viaf.org/viaf/306413099>,
-        <https://viaf.org/viaf/478168740937079530006> ;
-    schema:includedComposition <https://d-nb.info/gnd/1284220052>,
-        <https://d-nb.info/gnd/1292801395>,
-        <https://performance.musiconn.de/work/gesaenge-op-15-die-liebe-sass-als-nachtigall-ehmant-anselm>,
-        <https://performance.musiconn.de/work/gesaenge-op-15-die-trepp-hinunter-geschwungen-ehmant-anselm>,
-        <https://viaf.org/viaf/1233167988954833830003>,
         <https://viaf.org/viaf/478168740937079530006> .
 

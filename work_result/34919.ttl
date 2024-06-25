@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/michel-ange-isouard-niccolo> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/michel-ange-isouard-niccolo> ] .
 
-<https://performance.musiconn.de/work/michel-ange-isouard-niccolo> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/michel-ange-isouard-niccolo> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/michel-angelo-fassung-isouard-niccolo> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Oper in 1 Akt ; UA Paris 1802" ;
     cto:elementOf n4c:E5320 ;
@@ -15,6 +16,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/118983849>,
         <https://viaf.org/viaf/39428131> ;
     cto:title "Michel-Ange (Isouard, Niccolò)" ;
-    cto:viaf <https://viaf.org/viaf/39428131> ;
-    schema:includedComposition <https://performance.musiconn.de/work/michel-angelo-fassung-isouard-niccolo> .
+    cto:viaf <https://viaf.org/viaf/39428131> .
 

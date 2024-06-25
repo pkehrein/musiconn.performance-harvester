@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/aus-verborgenem-tal-rheinberger-joseph> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/aus-verborgenem-tal-rheinberger-joseph> ] .
 
-<https://performance.musiconn.de/work/aus-verborgenem-tal-rheinberger-joseph> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/aus-verborgenem-tal-rheinberger-joseph> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/aus-verborgenem-tal-nachruf-rheinberger-joseph> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "14 Lieder für mittlere Singstimme und Klavier" ;
     cto:elementOf n4c:E5320 ;
@@ -15,6 +16,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/118744828>,
         <https://viaf.org/viaf/197428> ;
     cto:title "Aus verborgenem Tal (Rheinberger, Joseph)" ;
-    cto:viaf <https://viaf.org/viaf/197428> ;
-    schema:includedComposition <https://performance.musiconn.de/work/aus-verborgenem-tal-nachruf-rheinberger-joseph> .
+    cto:viaf <https://viaf.org/viaf/197428> .
 
