@@ -193,7 +193,7 @@ def add_works(works, file_path, start_index):
         descriptions = work['schema:MusicComposition']['schema:description']
         if descriptions is not None:
             for desc_index, description in enumerate(descriptions):
-                graph.add((work_id, CTO.abstract, Literal(descriptions[desc_index]['@value'])))
+                graph.add((work_id, CTO.abstract, Literal((descriptions[desc_index]['@value']).replace("\n", ""))))
         genres = work['schema:MusicComposition']['schema:genre']
         if genres is not None:
             for genre in genres:
