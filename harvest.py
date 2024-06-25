@@ -40,19 +40,26 @@ def concat_files():
                 else:
                     content = readfile.read()
                     modified_content = remove_header(content)
-                file.write(modified_content + '\n')
+                file.write(modified_content)
             count += 1
         for filename in os.listdir('work_result/'):
             filepath = os.path.join('work_result/', filename)
             with open(filepath, 'r', encoding='utf-8') as readfile:
-                file.write((remove_header(readfile.read())) + '\n')
+                file.write((remove_header(readfile.read())))
             count += 1
+    with open("feed.ttl", 'r', encoding='utf-8') as file:
+        check_file(file.read())
     print(f"##### Finished concatenating {count} turtle-files into feed.ttl #####")
 
 
 def remove_header(content):
     modified_content = re.sub('@.*\n', "", content)
     return re.sub('.*schema:dateModified.*\n', "", modified_content)
+
+
+def check_file(content):
+    check = Graph()
+    check.parse(data=content, format='turtle')
 
 
 def init_graph():
@@ -158,6 +165,7 @@ def add_events(events, file_path, start_index):
                     if works['@id'][work]['gnd'] is None and works['@id'][work]['viaf'] is None:
                         graph.add((event_id, CTO.relatedItem, URIRef(work)))
         turtle_data = graph.serialize(format='turtle')
+        check_file(turtle_data)
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(f"{file_path}{str(start_index + 1).zfill(5)}.ttl", 'w', encoding='utf-8') as file:
             file.write(turtle_data)
@@ -193,7 +201,7 @@ def add_works(works, file_path, start_index):
         descriptions = work['schema:MusicComposition']['schema:description']
         if descriptions is not None:
             for desc_index, description in enumerate(descriptions):
-                graph.add((work_id, CTO.abstract, Literal((descriptions[desc_index]['@value']).replace("\n", ""))))
+                graph.add((work_id, CTO.abstract, Literal(((descriptions[desc_index]['@value']).replace("\n", "")).replace("@", "(at)"))))
         genres = work['schema:MusicComposition']['schema:genre']
         if genres is not None:
             for genre in genres:
@@ -256,6 +264,7 @@ def add_works(works, file_path, start_index):
                         if contributor['@id'][group]['gnd'] is None and contributor['@id'][group]['viaf'] is None:
                             graph.add((work_id, CTO.relatedOrganization, URIRef(group)))
         turtle_data = graph.serialize(format='turtle')
+        check_file(turtle_data)
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(f"{file_path}{str(start_index + 1).zfill(5)}.ttl", 'w', encoding='utf-8') as file:
             file.write(turtle_data)
