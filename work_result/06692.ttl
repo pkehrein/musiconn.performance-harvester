@@ -1,13 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/wie-der-hirsch-schreit-nach-frischem-wasser-der-42-psalm-mendelssohn-bartholdy-felix> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/wie-der-hirsch-schreit-nach-frischem-wasser-der-42-psalm-mendelssohn-bartholdy-felix> ] .
 
-<https://performance.musiconn.de/work/wie-der-hirsch-schreit-nach-frischem-wasser-der-42-psalm-mendelssohn-bartholdy-felix> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/wie-der-hirsch-schreit-nach-frischem-wasser-der-42-psalm-mendelssohn-bartholdy-felix> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/der-42-psalm-auswahl-mendelssohn-bartholdy-felix>,
+        <https://performance.musiconn.de/work/der-42-psalm-meine-traenen-sind-meine-speise-mendelssohn-bartholdy-felix>,
+        <https://performance.musiconn.de/work/der-42-psalm-was-betruebst-du-dich-meine-seele-mendelssohn-bartholdy-felix> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/konzert-oetkerhalle-bielefeld-2006-01-26> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Psalmvertonung des 42. PsalmsHebräisch-protestantische Psalmzählung" ;
     cto:elementOf n4c:E5320 ;
@@ -45,9 +49,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/150245159>,
         <https://viaf.org/viaf/154494011>,
         <https://viaf.org/viaf/157753597>,
-        <https://viaf.org/viaf/2665666> ;
-    schema:includedComposition <https://performance.musiconn.de/work/der-42-psalm-auswahl-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/der-42-psalm-meine-traenen-sind-meine-speise-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/der-42-psalm-was-betruebst-du-dich-meine-seele-mendelssohn-bartholdy-felix> ;
-    schema:subjectOf <https://performance.musiconn.de/event/konzert-oetkerhalle-bielefeld-2006-01-26> .
+        <https://viaf.org/viaf/2665666> .
 

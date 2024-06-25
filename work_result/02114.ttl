@@ -1,13 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gesaenge-op-14-franz-robert> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gesaenge-op-14-franz-robert> ] .
 
-<https://performance.musiconn.de/work/gesaenge-op-14-franz-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gesaenge-op-14-franz-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/113609380X>,
+        <https://d-nb.info/gnd/1293517836>,
+        <https://performance.musiconn.de/work/gesaenge-op-14-frage-nicht-franz-robert>,
+        <https://performance.musiconn.de/work/gesaenge-op-14-waldfahrt-franz-robert>,
+        <https://performance.musiconn.de/work/gesaenge-op-14-widmung-franz-robert>,
+        <https://viaf.org/viaf/178739886>,
+        <https://viaf.org/viaf/5090168850995167620004> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "6 Gesänge: Widmung ; Lenz ; Waldfahrt ; Hatte Liebchen zwei ; Liebesfrühling ; Frage" ;
     cto:elementOf n4c:E5320 ;
@@ -21,12 +28,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Gesänge, op. 14 (Franz, Robert)" ;
     cto:viaf <https://viaf.org/viaf/178739886>,
         <https://viaf.org/viaf/27110440>,
-        <https://viaf.org/viaf/5090168850995167620004> ;
-    schema:includedComposition <https://d-nb.info/gnd/113609380X>,
-        <https://d-nb.info/gnd/1293517836>,
-        <https://performance.musiconn.de/work/gesaenge-op-14-frage-nicht-franz-robert>,
-        <https://performance.musiconn.de/work/gesaenge-op-14-waldfahrt-franz-robert>,
-        <https://performance.musiconn.de/work/gesaenge-op-14-widmung-franz-robert>,
-        <https://viaf.org/viaf/178739886>,
         <https://viaf.org/viaf/5090168850995167620004> .
 

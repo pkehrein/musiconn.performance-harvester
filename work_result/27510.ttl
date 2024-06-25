@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sonate-da-chiesa-viola-damore-orgel-martin-frank> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sonate-da-chiesa-viola-damore-orgel-martin-frank> ] .
 
-<https://performance.musiconn.de/work/sonate-da-chiesa-viola-damore-orgel-martin-frank> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sonate-da-chiesa-viola-damore-orgel-martin-frank> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/sonata-da-chiesa-fassung-floete-und-streichorchester-martin-frank> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Aufführungsdauer: 14 MinutenVersion für Flöte und Orgel 1941 ; Version für Viola d'amore und Streichorchester 1952" ;
     cto:elementOf n4c:E5320 ;
@@ -21,6 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/14958975> ;
     cto:title "Sonate da chiesa, Viola d'amore, Orgel (Martin, Frank)" ;
     cto:viaf <https://viaf.org/viaf/14958975>,
-        <https://viaf.org/viaf/231499364> ;
-    schema:includedComposition <https://performance.musiconn.de/work/sonata-da-chiesa-fassung-floete-und-streichorchester-martin-frank> .
+        <https://viaf.org/viaf/231499364> .
 

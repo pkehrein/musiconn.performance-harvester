@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/der-kuss-duett-smetana-bedrich> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/der-kuss-duett-smetana-bedrich> ] .
 
-<https://performance.musiconn.de/work/der-kuss-duett-smetana-bedrich> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/der-kuss-duett-smetana-bedrich> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/matinee-semperoper-dresden-1905-03-19-12-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "unbekanntes Duett" ;
     cto:elementOf n4c:E5320 ;
@@ -17,6 +18,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/118615017>,
         <https://viaf.org/viaf/95207407> ;
     cto:title "Der Kuss. Duett (Smetana, Bedřich)" ;
-    cto:viaf <https://viaf.org/viaf/95207407> ;
-    schema:subjectOf <https://performance.musiconn.de/event/matinee-semperoper-dresden-1905-03-19-12-30> .
+    cto:viaf <https://viaf.org/viaf/95207407> .
 

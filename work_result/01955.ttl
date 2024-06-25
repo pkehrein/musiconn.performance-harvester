@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/melodies-caracteristiques-rosenhain-jakob> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/melodies-caracteristiques-rosenhain-jakob> ] .
 
-<https://performance.musiconn.de/work/melodies-caracteristiques-rosenhain-jakob> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/melodies-caracteristiques-rosenhain-jakob> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1294249789>,
+        <https://performance.musiconn.de/work/melodies-caracteristiques-ballade-rosenhain-jakob>,
+        <https://viaf.org/viaf/2601168850942567620004> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfasst 2 Stücke: Ballade. - Chanson slave" ;
     cto:elementOf n4c:E5320 ;
@@ -21,8 +24,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/56875520> ;
     cto:title "Mélodies caractéristiques (Rosenhain, Jakob)" ;
     cto:viaf <https://viaf.org/viaf/2601168850942567620004>,
-        <https://viaf.org/viaf/56875520> ;
-    schema:includedComposition <https://d-nb.info/gnd/1294249789>,
-        <https://performance.musiconn.de/work/melodies-caracteristiques-ballade-rosenhain-jakob>,
-        <https://viaf.org/viaf/2601168850942567620004> .
+        <https://viaf.org/viaf/56875520> .
 

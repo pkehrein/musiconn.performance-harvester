@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/zaide-mozart-wolfgang-amadeus> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/zaide-mozart-wolfgang-amadeus> ] .
 
-<https://performance.musiconn.de/work/zaide-mozart-wolfgang-amadeus> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/zaide-mozart-wolfgang-amadeus> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1190843749>,
+        <https://d-nb.info/gnd/300112025>,
+        <https://performance.musiconn.de/work/zaide-nur-mutig-mein-herze-mozart-wolfgang-amadeus>,
+        <https://performance.musiconn.de/work/zaide-o-selige-wonne-mozart-wolfgang-amadeus>,
+        <https://performance.musiconn.de/work/zaide-ouvertuere-mozart-wolfgang-amadeus>,
+        <https://viaf.org/viaf/206835433> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "deutsches Singspiel in 2 Akten; Fragment; Uraufführung 1879/1880 Frankfurt" ;
     cto:elementOf n4c:E5320 ;
@@ -20,11 +26,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/32197206> ;
     cto:title "Zaide (Mozart, Wolfgang Amadeus)" ;
     cto:viaf <https://viaf.org/viaf/206835433>,
-        <https://viaf.org/viaf/32197206> ;
-    schema:includedComposition <https://d-nb.info/gnd/1190843749>,
-        <https://d-nb.info/gnd/300112025>,
-        <https://performance.musiconn.de/work/zaide-nur-mutig-mein-herze-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/zaide-o-selige-wonne-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/zaide-ouvertuere-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/206835433> .
+        <https://viaf.org/viaf/32197206> .
 

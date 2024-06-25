@@ -1,13 +1,24 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-humperdinck-engelbert> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-humperdinck-engelbert> ] .
 
-<https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-humperdinck-engelbert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-humperdinck-engelbert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300077769>,
+        <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-auswahl-humperdinck-engelbert>,
+        <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-daheim-humperdinck-engelbert>,
+        <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-die-vierzehn-engel-humperdinck-engelbert>,
+        <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-ein-maennlein-steht-im-walde-humperdinck-engelbert>,
+        <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-melodien-humperdinck-engelbert>,
+        <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-vorspiel-humperdinck-engelbert>,
+        <https://viaf.org/viaf/177408894> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/die-abreise-semperoper-dresden-1907-08-28-19-30>,
+        <https://performance.musiconn.de/event/haensel-und-gretel-semperoper-dresden-1908-12-03-18-00>,
+        <https://performance.musiconn.de/event/haensel-und-gretel-semperoper-dresden-1908-12-07-18-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "durchkomponierte Märchenoper in 3 Bildern" ;
     cto:elementOf n4c:E5320 ;
@@ -27,16 +38,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:viaf <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/136079893>,
         <https://viaf.org/viaf/177408894>,
-        <https://viaf.org/viaf/71578307> ;
-    schema:includedComposition <https://d-nb.info/gnd/300077769>,
-        <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-auswahl-humperdinck-engelbert>,
-        <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-daheim-humperdinck-engelbert>,
-        <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-die-vierzehn-engel-humperdinck-engelbert>,
-        <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-ein-maennlein-steht-im-walde-humperdinck-engelbert>,
-        <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-melodien-humperdinck-engelbert>,
-        <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-vorspiel-humperdinck-engelbert>,
-        <https://viaf.org/viaf/177408894> ;
-    schema:subjectOf <https://performance.musiconn.de/event/die-abreise-semperoper-dresden-1907-08-28-19-30>,
-        <https://performance.musiconn.de/event/haensel-und-gretel-semperoper-dresden-1908-12-03-18-00>,
-        <https://performance.musiconn.de/event/haensel-und-gretel-semperoper-dresden-1908-12-07-18-00> .
+        <https://viaf.org/viaf/71578307> .
 

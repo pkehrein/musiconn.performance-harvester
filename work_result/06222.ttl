@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/ich-freue-mich-in-dir> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/ich-freue-mich-in-dir> ] .
 
-<https://performance.musiconn.de/work/ich-freue-mich-in-dir> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/ich-freue-mich-in-dir> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/konzert-in-der-schwarzenberger-kirche-sankt-georg-schwarzenberg-erzgebirge-1937-12-06-18-00>,
+        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1937-12-04-18-00>,
+        <https://performance.musiconn.de/event/weihnachtskonzert-des-dresdner-kreuzchores-sankt-georg-schwarzenberg-erzgebirge-1937-12-06-20-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/117287474>,
@@ -20,8 +23,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/44565021> ;
     cto:title "Ich freue mich in dir" ;
     cto:viaf <https://viaf.org/viaf/139053206>,
-        <https://viaf.org/viaf/44565021> ;
-    schema:subjectOf <https://performance.musiconn.de/event/konzert-in-der-schwarzenberger-kirche-sankt-georg-schwarzenberg-erzgebirge-1937-12-06-18-00>,
-        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1937-12-04-18-00>,
-        <https://performance.musiconn.de/event/weihnachtskonzert-des-dresdner-kreuzchores-sankt-georg-schwarzenberg-erzgebirge-1937-12-06-20-00> .
+        <https://viaf.org/viaf/44565021> .
 

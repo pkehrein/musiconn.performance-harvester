@@ -1,13 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/canzoni-per-sonare-con-ogni-sorte-di-stromenti> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/canzoni-per-sonare-con-ogni-sorte-di-stromenti> ] .
 
-<https://performance.musiconn.de/work/canzoni-per-sonare-con-ogni-sorte-di-stromenti> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/canzoni-per-sonare-con-ogni-sorte-di-stromenti> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/30005596X>,
+        <https://d-nb.info/gnd/300055978>,
+        <https://d-nb.info/gnd/300364458>,
+        <https://performance.musiconn.de/work/kanzonen-1608-gabrieli-giovanni>,
+        <https://performance.musiconn.de/work/kanzonen-1608-la-spiritata-gabrieli-giovanni>,
+        <https://performance.musiconn.de/work/kanzonen-1608-sol-sol-la-sol-fa-mi-gabrieli-giovanni>,
+        <https://viaf.org/viaf/177028662>,
+        <https://viaf.org/viaf/199702413>,
+        <https://viaf.org/viaf/200785536> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "In Venedig herausgegeben von Alessandro Rauerij; Sammlung von 36 Stücken für 4-8 beliebige Instrumente u.a. von Giovanni Gabrieli, Merulo, Frescobaldi und Giovanni Battista Grillo; gezählt als Libro 1, ob es ein Libro 2 gibt ist nicht bekannt" ;
     cto:elementOf n4c:E5320 ;
@@ -21,14 +30,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:viaf <https://viaf.org/viaf/177028662>,
         <https://viaf.org/viaf/199702413>,
         <https://viaf.org/viaf/200785536>,
-        <https://viaf.org/viaf/76500260> ;
-    schema:includedComposition <https://d-nb.info/gnd/30005596X>,
-        <https://d-nb.info/gnd/300055978>,
-        <https://d-nb.info/gnd/300364458>,
-        <https://performance.musiconn.de/work/kanzonen-1608-gabrieli-giovanni>,
-        <https://performance.musiconn.de/work/kanzonen-1608-la-spiritata-gabrieli-giovanni>,
-        <https://performance.musiconn.de/work/kanzonen-1608-sol-sol-la-sol-fa-mi-gabrieli-giovanni>,
-        <https://viaf.org/viaf/177028662>,
-        <https://viaf.org/viaf/199702413>,
-        <https://viaf.org/viaf/200785536> .
+        <https://viaf.org/viaf/76500260> .
 

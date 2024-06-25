@@ -1,13 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/zampa-herold-ferdinand> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/zampa-herold-ferdinand> ] .
 
-<https://performance.musiconn.de/work/zampa-herold-ferdinand> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/zampa-herold-ferdinand> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300073313>,
+        <https://performance.musiconn.de/work/zampa-ouvertuere-herold-ferdinand>,
+        <https://performance.musiconn.de/work/zampa-rezitativ-und-arie-herold-ferdinand>,
+        <https://viaf.org/viaf/175422893> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/zampa-oder-die-marmorbraut-interimstheater-am-zwingerwall-dresden-1877-04-07-19-00>,
+        <https://performance.musiconn.de/event/zampa-oder-die-marmorbraut-interimstheater-am-zwingerwall-dresden-1877-06-22-19-00>,
+        <https://performance.musiconn.de/event/zampa-oder-die-marmorbraut-interimstheater-am-zwingerwall-dresden-1877-08-11-19-00>,
+        <https://performance.musiconn.de/event/zampa-oder-die-marmorbraut-interimstheater-am-zwingerwall-dresden-1877-12-15-19-00>,
+        <https://performance.musiconn.de/event/zampa-oder-die-marmorbraut-morettisches-opernhaus-dresden-1836-05-01-18-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Oper in 3 Akten ; UA Paris 1831" ;
     cto:elementOf n4c:E5320 ;
@@ -23,14 +32,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Zampa (Hérold, Ferdinand)" ;
     cto:viaf <https://viaf.org/viaf/158420977>,
         <https://viaf.org/viaf/175422893>,
-        <https://viaf.org/viaf/95194516> ;
-    schema:includedComposition <https://d-nb.info/gnd/300073313>,
-        <https://performance.musiconn.de/work/zampa-ouvertuere-herold-ferdinand>,
-        <https://performance.musiconn.de/work/zampa-rezitativ-und-arie-herold-ferdinand>,
-        <https://viaf.org/viaf/175422893> ;
-    schema:subjectOf <https://performance.musiconn.de/event/zampa-oder-die-marmorbraut-interimstheater-am-zwingerwall-dresden-1877-04-07-19-00>,
-        <https://performance.musiconn.de/event/zampa-oder-die-marmorbraut-interimstheater-am-zwingerwall-dresden-1877-06-22-19-00>,
-        <https://performance.musiconn.de/event/zampa-oder-die-marmorbraut-interimstheater-am-zwingerwall-dresden-1877-08-11-19-00>,
-        <https://performance.musiconn.de/event/zampa-oder-die-marmorbraut-interimstheater-am-zwingerwall-dresden-1877-12-15-19-00>,
-        <https://performance.musiconn.de/event/zampa-oder-die-marmorbraut-morettisches-opernhaus-dresden-1836-05-01-18-00> .
+        <https://viaf.org/viaf/95194516> .
 

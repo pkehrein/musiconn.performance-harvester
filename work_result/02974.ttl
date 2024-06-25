@@ -1,13 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-aus-jucunde-von-hermann-rollet-schumann-clara> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-aus-jucunde-von-hermann-rollet-schumann-clara> ] .
 
-<https://performance.musiconn.de/work/lieder-aus-jucunde-von-hermann-rollet-schumann-clara> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-aus-jucunde-von-hermann-rollet-schumann-clara> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1195728018>,
+        <https://performance.musiconn.de/work/an-einem-lichten-morgen-schumann-clara>,
+        <https://performance.musiconn.de/work/liebeszauber-schumann-clara>,
+        <https://performance.musiconn.de/work/lieder-aus-jucunde-von-hermann-rollet-o-lust-o-lust-schumann-clara>,
+        <https://viaf.org/viaf/2875156990987761180001> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/11861164X>,
@@ -18,10 +23,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/44499359> ;
     cto:title "Lieder aus Jucunde von Hermann Rollet (Schumann, Clara)" ;
     cto:viaf <https://viaf.org/viaf/2875156990987761180001>,
-        <https://viaf.org/viaf/44499359> ;
-    schema:includedComposition <https://d-nb.info/gnd/1195728018>,
-        <https://performance.musiconn.de/work/an-einem-lichten-morgen-schumann-clara>,
-        <https://performance.musiconn.de/work/liebeszauber-schumann-clara>,
-        <https://performance.musiconn.de/work/lieder-aus-jucunde-von-hermann-rollet-o-lust-o-lust-schumann-clara>,
-        <https://viaf.org/viaf/2875156990987761180001> .
+        <https://viaf.org/viaf/44499359> .
 

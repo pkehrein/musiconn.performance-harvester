@@ -1,13 +1,23 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/messen-kv-427-mozart-wolfgang-amadeus> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/messen-kv-427-mozart-wolfgang-amadeus> ] .
 
-<https://performance.musiconn.de/work/messen-kv-427-mozart-wolfgang-amadeus> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/messen-kv-427-mozart-wolfgang-amadeus> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300259875>,
+        <https://d-nb.info/gnd/301015732>,
+        <https://performance.musiconn.de/work/messen-kv-427-auswahl-mozart-wolfgang-amadeus>,
+        <https://performance.musiconn.de/work/messen-kv-427-credo-mozart-wolfgang-amadeus>,
+        <https://performance.musiconn.de/work/messen-kv-427-et-incarnatus-est-mozart-wolfgang-amadeus>,
+        <https://performance.musiconn.de/work/messen-kv-427-gloria-mozart-wolfgang-amadeus>,
+        <https://performance.musiconn.de/work/messen-kv-427-gratias-mozart-wolfgang-amadeus>,
+        <https://performance.musiconn.de/work/messen-kv-427-kyrie-mozart-wolfgang-amadeus>,
+        <https://viaf.org/viaf/217009083>,
+        <https://viaf.org/viaf/219960461> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "KV 427 ist die maßgebliche Werkverzeichniszählung" ;
     cto:elementOf n4c:E5320 ;
@@ -92,15 +102,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/221396927>,
         <https://viaf.org/viaf/267260658>,
         <https://viaf.org/viaf/32197206>,
-        <https://viaf.org/viaf/598145857929623020680> ;
-    schema:includedComposition <https://d-nb.info/gnd/300259875>,
-        <https://d-nb.info/gnd/301015732>,
-        <https://performance.musiconn.de/work/messen-kv-427-auswahl-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/messen-kv-427-credo-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/messen-kv-427-et-incarnatus-est-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/messen-kv-427-gloria-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/messen-kv-427-gratias-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/messen-kv-427-kyrie-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/217009083>,
-        <https://viaf.org/viaf/219960461> .
+        <https://viaf.org/viaf/598145857929623020680> .
 

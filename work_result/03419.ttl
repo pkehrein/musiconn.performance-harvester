@@ -1,13 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/davidde-penitente-mozart-wolfgang-amadeus> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/davidde-penitente-mozart-wolfgang-amadeus> ] .
 
-<https://performance.musiconn.de/work/davidde-penitente-mozart-wolfgang-amadeus> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/davidde-penitente-mozart-wolfgang-amadeus> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1045000930>,
+        <https://performance.musiconn.de/work/davidde-penitente-arie-mozart-wolfgang-amadeus>,
+        <https://performance.musiconn.de/work/davidde-penitente-auswahl-mozart-wolfgang-amadeus>,
+        <https://performance.musiconn.de/work/davidde-penitente-fassung-mozart-wolfgang-amadeus>,
+        <https://performance.musiconn.de/work/davidde-penitente-fra-loscure-ombre-funestre-mozart-wolfgang-amadeus>,
+        <https://viaf.org/viaf/305433930> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1838-02-25> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Zusammengestellt aus der Messe KV 427 und 2 Arien." ;
     cto:elementOf n4c:E5320 ;
@@ -33,12 +40,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:viaf <https://viaf.org/viaf/143234837>,
         <https://viaf.org/viaf/305433930>,
         <https://viaf.org/viaf/32197206>,
-        <https://viaf.org/viaf/38146822017907380456> ;
-    schema:includedComposition <https://d-nb.info/gnd/1045000930>,
-        <https://performance.musiconn.de/work/davidde-penitente-arie-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/davidde-penitente-auswahl-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/davidde-penitente-fassung-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/davidde-penitente-fra-loscure-ombre-funestre-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/305433930> ;
-    schema:subjectOf <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1838-02-25> .
+        <https://viaf.org/viaf/38146822017907380456> .
 

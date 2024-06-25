@@ -1,13 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/peer-gynt-suite-nr-2-op-55-grieg-edvard> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/peer-gynt-suite-nr-2-op-55-grieg-edvard> ] .
 
-<https://performance.musiconn.de/work/peer-gynt-suite-nr-2-op-55-grieg-edvard> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/peer-gynt-suite-nr-2-op-55-grieg-edvard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1080338802>,
+        <https://d-nb.info/gnd/300062559>,
+        <https://performance.musiconn.de/work/peer-gynt-suite-nr-2-op-55-peer-gynts-hjemfart-grieg-edvard>,
+        <https://performance.musiconn.de/work/peer-gynt-suite-nr-2-op-55-solveigs-sang-grieg-edvard>,
+        <https://performance.musiconn.de/work/peer-gynt-suiten-nr-1-und-nr-2-auswahl-grieg-edvard>,
+        <https://viaf.org/viaf/105145067107066630728>,
+        <https://viaf.org/viaf/213419989> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/waldpark-serenade-kurpark-bad-weisser-hirsch-dresden-1945-08-12-17-00>,
+        <https://performance.musiconn.de/event/waldpark-serenade-kurpark-bad-weisser-hirsch-dresden-1945-09-09-17-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfasst 5 Sätze: Bruderovet. Ingrids klage (Der Brautraub. Ingrids Klage). Arabisk dans (Arabischer Tanz). Peer Gynts hjemfart (Peer Gynts Heimkehr). Solveigs sang (Solveigs Lied). Dans av Dovregubbens datter (Tanz der Bergkönigstochter)außerdem existieren noch Versionen für Klavier zu vier und zu zwei Händen" ;
     cto:elementOf n4c:E5320 ;
@@ -41,14 +50,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/161076872>,
         <https://viaf.org/viaf/213419989>,
         <https://viaf.org/viaf/46946549>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    schema:includedComposition <https://d-nb.info/gnd/1080338802>,
-        <https://d-nb.info/gnd/300062559>,
-        <https://performance.musiconn.de/work/peer-gynt-suite-nr-2-op-55-peer-gynts-hjemfart-grieg-edvard>,
-        <https://performance.musiconn.de/work/peer-gynt-suite-nr-2-op-55-solveigs-sang-grieg-edvard>,
-        <https://performance.musiconn.de/work/peer-gynt-suiten-nr-1-und-nr-2-auswahl-grieg-edvard>,
-        <https://viaf.org/viaf/105145067107066630728>,
-        <https://viaf.org/viaf/213419989> ;
-    schema:subjectOf <https://performance.musiconn.de/event/waldpark-serenade-kurpark-bad-weisser-hirsch-dresden-1945-08-12-17-00>,
-        <https://performance.musiconn.de/event/waldpark-serenade-kurpark-bad-weisser-hirsch-dresden-1945-09-09-17-00> .
+        <https://viaf.org/viaf/8413148122912495200001> .
 

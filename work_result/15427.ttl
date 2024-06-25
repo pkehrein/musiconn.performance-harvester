@@ -1,13 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-op-20-hildach-eugen> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-op-20-hildach-eugen> ] .
 
-<https://performance.musiconn.de/work/lieder-op-20-hildach-eugen> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-op-20-hildach-eugen> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1286161983>,
+        <https://d-nb.info/gnd/1286162564>,
+        <https://performance.musiconn.de/work/lieder-op-20-in-meiner-heimat-hildach-eugen>,
+        <https://performance.musiconn.de/work/lieder-op-20-maedchenlied-hildach-eugen> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfasst 5 Lieder: Wintermorgen. - In meiner Heimat. - Mädchenlied. - Schlosserlied. - Bitte" ;
     cto:elementOf n4c:E5320 ;
@@ -19,9 +23,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/116801743>,
         <https://viaf.org/viaf/37676576> ;
     cto:title "Lieder, op. 20 (Hildach, Eugen)" ;
-    cto:viaf <https://viaf.org/viaf/37676576> ;
-    schema:includedComposition <https://d-nb.info/gnd/1286161983>,
-        <https://d-nb.info/gnd/1286162564>,
-        <https://performance.musiconn.de/work/lieder-op-20-in-meiner-heimat-hildach-eugen>,
-        <https://performance.musiconn.de/work/lieder-op-20-maedchenlied-hildach-eugen> .
+    cto:viaf <https://viaf.org/viaf/37676576> .
 

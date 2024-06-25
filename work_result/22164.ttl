@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/praeludien-klavier-l-123-debussy-claude> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/praeludien-klavier-l-123-debussy-claude> ] .
 
-<https://performance.musiconn.de/work/praeludien-klavier-l-123-debussy-claude> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/praeludien-klavier-l-123-debussy-claude> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1161873155>,
+        <https://d-nb.info/gnd/300042396>,
+        <https://performance.musiconn.de/work/praeludien-klavier-l-123-feux-dartifice-debussy-claude>,
+        <https://performance.musiconn.de/work/praeludien-klavier-l-123-general-lavine-eccentric-debussy-claude>,
+        <https://viaf.org/viaf/179476574>,
+        <https://viaf.org/viaf/7299153063151319320000> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfasst 12 Präludien" ;
     cto:elementOf n4c:E5320 ;
@@ -21,11 +27,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Präludien, Klavier, L 123 (Debussy, Claude)" ;
     cto:viaf <https://viaf.org/viaf/179476574>,
         <https://viaf.org/viaf/6219636>,
-        <https://viaf.org/viaf/7299153063151319320000> ;
-    schema:includedComposition <https://d-nb.info/gnd/1161873155>,
-        <https://d-nb.info/gnd/300042396>,
-        <https://performance.musiconn.de/work/praeludien-klavier-l-123-feux-dartifice-debussy-claude>,
-        <https://performance.musiconn.de/work/praeludien-klavier-l-123-general-lavine-eccentric-debussy-claude>,
-        <https://viaf.org/viaf/179476574>,
         <https://viaf.org/viaf/7299153063151319320000> .
 

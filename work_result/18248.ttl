@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/histoire-du-soldat-stravinsky-igor> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/histoire-du-soldat-stravinsky-igor> ] .
 
-<https://performance.musiconn.de/work/histoire-du-soldat-stravinsky-igor> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/histoire-du-soldat-stravinsky-igor> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1257643290>,
+        <https://performance.musiconn.de/work/histoire-du-soldat-suite-stravinsky-igor> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Es existiert eine Aufführungsvariante/Fassung von 1920 ohne Sprecher, Schauspieler und Tänzerin, die als \"Grande Suite\" oder \"Konzertsuite\" bezeichnet wird. Es existiert jedoch kein Musikdruck mit diesem Titel." ;
     cto:elementOf n4c:E5320 ;
@@ -27,7 +29,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Histoire du soldat (Stravinsky, Igor)" ;
     cto:viaf <https://viaf.org/viaf/150597343>,
         <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/17309155> ;
-    schema:includedComposition <https://d-nb.info/gnd/1257643290>,
-        <https://performance.musiconn.de/work/histoire-du-soldat-suite-stravinsky-igor> .
+        <https://viaf.org/viaf/17309155> .
 

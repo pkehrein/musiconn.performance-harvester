@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/wiegenlied-aus-gotters-esther-fleischmann-johann-f-a> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/wiegenlied-aus-gotters-esther-fleischmann-johann-f-a> ] .
 
-<https://performance.musiconn.de/work/wiegenlied-aus-gotters-esther-fleischmann-johann-f-a> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/wiegenlied-aus-gotters-esther-fleischmann-johann-f-a> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/wiegenlied-fassung-fuer-gemischten-chor-mozart-wolfgang-amadeus> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/konzert-des-kreuzchores-dresden-hotel-drei-kronen-zittau-1936-12-13>,
+        <https://performance.musiconn.de/event/konzert-des-kreuzchores-dresden-schuetzenhaus-dippoldiswalde-1936-12-10> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Wurde Wolfgang Amadeus Mozart und Bernhard Fliess zugeschriebenAlternative Besetzung mit Singstimme/Klavier oder Singstimme/Harfe" ;
     cto:elementOf n4c:E5320 ;
@@ -25,8 +28,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Wiegenlied aus Gotters Esther (Fleischmann, Johann F. A.)" ;
     cto:viaf <https://viaf.org/viaf/138977589>,
         <https://viaf.org/viaf/139053206>,
-        <https://viaf.org/viaf/45242870> ;
-    schema:includedComposition <https://performance.musiconn.de/work/wiegenlied-fassung-fuer-gemischten-chor-mozart-wolfgang-amadeus> ;
-    schema:subjectOf <https://performance.musiconn.de/event/konzert-des-kreuzchores-dresden-hotel-drei-kronen-zittau-1936-12-13>,
-        <https://performance.musiconn.de/event/konzert-des-kreuzchores-dresden-schuetzenhaus-dippoldiswalde-1936-12-10> .
+        <https://viaf.org/viaf/45242870> .
 

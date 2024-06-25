@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/beethovens-lieder-von-goethe-liszt-franz> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/beethovens-lieder-von-goethe-liszt-franz> ] .
 
-<https://performance.musiconn.de/work/beethovens-lieder-von-goethe-liszt-franz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/beethovens-lieder-von-goethe-liszt-franz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300258992>,
+        <https://performance.musiconn.de/work/beethovens-lieder-von-goethe-mignon-liszt-franz>,
+        <https://viaf.org/viaf/202942410> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "aus op. 765, 83 u. 84 von Beethoven6 Werke: Mignon. Mit einem gemalten Bande. Freudvoll und leidvoll. Es war einmal ein König. Wonne der Wehmut. Die Trommel gerühret" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/64199483> ;
     cto:title "Beethovens Lieder von Goethe (Liszt, Franz)" ;
     cto:viaf <https://viaf.org/viaf/202942410>,
-        <https://viaf.org/viaf/64199483> ;
-    schema:includedComposition <https://d-nb.info/gnd/300258992>,
-        <https://performance.musiconn.de/work/beethovens-lieder-von-goethe-mignon-liszt-franz>,
-        <https://viaf.org/viaf/202942410> .
+        <https://viaf.org/viaf/64199483> .
 

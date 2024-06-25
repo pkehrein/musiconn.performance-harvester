@@ -1,13 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/orgelstuecke-wulff-woesten-johannes> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/orgelstuecke-wulff-woesten-johannes> ] .
 
-<https://performance.musiconn.de/work/orgelstuecke-wulff-woesten-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/orgelstuecke-wulff-woesten-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1221827561>,
+        <https://d-nb.info/gnd/1221828096>,
+        <https://d-nb.info/gnd/1221828193>,
+        <https://performance.musiconn.de/work/orgelstuecke-bordun-variation-wulff-woesten-johannes>,
+        <https://performance.musiconn.de/work/orgelstuecke-passacaglia-wulff-woesten-johannes>,
+        <https://performance.musiconn.de/work/orgelstuecke-toccata-wulff-woesten-johannes>,
+        <https://viaf.org/viaf/2036160606837716300006>,
+        <https://viaf.org/viaf/487160606884916300009>,
+        <https://viaf.org/viaf/5540160606846516300001> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "enthält: Passacaglia, Toccata, Bordun-Variation" ;
     cto:elementOf n4c:E5320 ;
@@ -23,14 +32,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:viaf <https://viaf.org/viaf/2036160606837716300006>,
         <https://viaf.org/viaf/487160606884916300009>,
         <https://viaf.org/viaf/5540160606846516300001>,
-        <https://viaf.org/viaf/80066530> ;
-    schema:includedComposition <https://d-nb.info/gnd/1221827561>,
-        <https://d-nb.info/gnd/1221828096>,
-        <https://d-nb.info/gnd/1221828193>,
-        <https://performance.musiconn.de/work/orgelstuecke-bordun-variation-wulff-woesten-johannes>,
-        <https://performance.musiconn.de/work/orgelstuecke-passacaglia-wulff-woesten-johannes>,
-        <https://performance.musiconn.de/work/orgelstuecke-toccata-wulff-woesten-johannes>,
-        <https://viaf.org/viaf/2036160606837716300006>,
-        <https://viaf.org/viaf/487160606884916300009>,
-        <https://viaf.org/viaf/5540160606846516300001> .
+        <https://viaf.org/viaf/80066530> .
 

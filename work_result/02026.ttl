@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/fantasien-klavier-mwv-u-71-e-moll-mendelssohn-bartholdy-felix> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/fantasien-klavier-mwv-u-71-e-moll-mendelssohn-bartholdy-felix> ] .
 
-<https://performance.musiconn.de/work/fantasien-klavier-mwv-u-71-e-moll-mendelssohn-bartholdy-felix> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/fantasien-klavier-mwv-u-71-e-moll-mendelssohn-bartholdy-felix> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/7-museums-concert-grosser-konzertsaal-frankfurt-a-m-1873-01-03-18-30>,
+        <https://performance.musiconn.de/event/neuntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1883-02-02-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116029579>,
@@ -38,7 +40,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/32262032>,
         <https://viaf.org/viaf/44499359>,
         <https://viaf.org/viaf/64190901>,
-        <https://viaf.org/viaf/8138422> ;
-    schema:subjectOf <https://performance.musiconn.de/event/7-museums-concert-grosser-konzertsaal-frankfurt-a-m-1873-01-03-18-30>,
-        <https://performance.musiconn.de/event/neuntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1883-02-02-18-30> .
+        <https://viaf.org/viaf/8138422> .
 

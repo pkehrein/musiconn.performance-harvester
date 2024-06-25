@@ -1,13 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-und-romanzen-op-14-brahms-johannes> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-und-romanzen-op-14-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/lieder-und-romanzen-op-14-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-und-romanzen-op-14-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1044141654>,
+        <https://d-nb.info/gnd/1044142278>,
+        <https://d-nb.info/gnd/300563353>,
+        <https://performance.musiconn.de/work/lieder-und-romanzen-op-14-ein-sonett-brahms-johannes>,
+        <https://performance.musiconn.de/work/lieder-und-romanzen-op-14-staendchen-brahms-johannes>,
+        <https://performance.musiconn.de/work/lieder-und-romanzen-op-14-vor-dem-fenster-brahms-johannes>,
+        <https://viaf.org/viaf/174130342>,
+        <https://viaf.org/viaf/181388843>,
+        <https://viaf.org/viaf/305347786> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfasst 8 Stücke:1. Vor dem Fenster2. Vom verwundeten Knaben3. Murrays Ermordung4. Ein Sonett5. Trennung6. Gang zur Liebsten7. Ständchen8. SehnsuchtStimmlage der Singstimme nicht näher spezifiziert" ;
     cto:elementOf n4c:E5320 ;
@@ -25,14 +34,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:viaf <https://viaf.org/viaf/174130342>,
         <https://viaf.org/viaf/181388843>,
         <https://viaf.org/viaf/305347786>,
-        <https://viaf.org/viaf/7573295> ;
-    schema:includedComposition <https://d-nb.info/gnd/1044141654>,
-        <https://d-nb.info/gnd/1044142278>,
-        <https://d-nb.info/gnd/300563353>,
-        <https://performance.musiconn.de/work/lieder-und-romanzen-op-14-ein-sonett-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-und-romanzen-op-14-staendchen-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-und-romanzen-op-14-vor-dem-fenster-brahms-johannes>,
-        <https://viaf.org/viaf/174130342>,
-        <https://viaf.org/viaf/181388843>,
-        <https://viaf.org/viaf/305347786> .
+        <https://viaf.org/viaf/7573295> .
 

@@ -1,13 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/la-traviata-fantasie-verdi-giuseppe> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/la-traviata-fantasie-verdi-giuseppe> ] .
 
-<https://performance.musiconn.de/work/la-traviata-fantasie-verdi-giuseppe> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/la-traviata-fantasie-verdi-giuseppe> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1889-10-13-16-00>,
+        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1889-10-27-19-30>,
+        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1889-12-12-19-30>,
+        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-03-16-19-30>,
+        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-03-23-16-00>,
+        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-04-13-19-30>,
+        <https://performance.musiconn.de/event/familien-abend-des-gewerbe-vereins-gewerbehaus-dresden-gewerbehaus-saal-1881-02-02-20-00>,
+        <https://performance.musiconn.de/event/letztes-concert-gewerbehaus-dresden-gewerbehaus-saal-1890-04-15-19-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Unbekanntes Stück" ;
     cto:elementOf n4c:E5320 ;
@@ -25,13 +33,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "La Traviata. Fantasie (Verdi, Giuseppe)" ;
     cto:viaf <https://viaf.org/viaf/131976266>,
         <https://viaf.org/viaf/22329110>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    schema:subjectOf <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1889-10-13-16-00>,
-        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1889-10-27-19-30>,
-        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1889-12-12-19-30>,
-        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-03-16-19-30>,
-        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-03-23-16-00>,
-        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-04-13-19-30>,
-        <https://performance.musiconn.de/event/familien-abend-des-gewerbe-vereins-gewerbehaus-dresden-gewerbehaus-saal-1881-02-02-20-00>,
-        <https://performance.musiconn.de/event/letztes-concert-gewerbehaus-dresden-gewerbehaus-saal-1890-04-15-19-30> .
+        <https://viaf.org/viaf/8413148122912495200001> .
 

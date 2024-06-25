@@ -1,13 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-95-f-moll-beethoven-ludwig-van> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-95-f-moll-beethoven-ludwig-van> ] .
 
-<https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-95-f-moll-beethoven-ludwig-van> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-95-f-moll-beethoven-ludwig-van> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/10-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1877-03-05-19-00>,
+        <https://performance.musiconn.de/event/9-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1872-02-19-19-00>,
+        <https://performance.musiconn.de/event/achter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1880-02-02-19-00>,
+        <https://performance.musiconn.de/event/dritter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1891-11-20-19-00>,
+        <https://performance.musiconn.de/event/neunter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1885-02-27-19-00>,
+        <https://performance.musiconn.de/event/vierter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1887-12-30-19-00>,
+        <https://performance.musiconn.de/event/vierter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1893-12-08-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10130780-9>,
@@ -100,12 +107,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/312835127>,
         <https://viaf.org/viaf/316016552>,
         <https://viaf.org/viaf/32182557>,
-        <https://viaf.org/viaf/33146825124407631545> ;
-    schema:subjectOf <https://performance.musiconn.de/event/10-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1877-03-05-19-00>,
-        <https://performance.musiconn.de/event/9-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1872-02-19-19-00>,
-        <https://performance.musiconn.de/event/achter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1880-02-02-19-00>,
-        <https://performance.musiconn.de/event/dritter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1891-11-20-19-00>,
-        <https://performance.musiconn.de/event/neunter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1885-02-27-19-00>,
-        <https://performance.musiconn.de/event/vierter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1887-12-30-19-00>,
-        <https://performance.musiconn.de/event/vierter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1893-12-08-19-00> .
+        <https://viaf.org/viaf/33146825124407631545> .
 

@@ -1,13 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/aufforderung-zum-tanze-weber-carl-maria-von-1> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/aufforderung-zum-tanze-weber-carl-maria-von-1> ] .
 
-<https://performance.musiconn.de/work/aufforderung-zum-tanze-weber-carl-maria-von-1> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/aufforderung-zum-tanze-weber-carl-maria-von-1> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/aufforderung-zum-tanz-arrangiert-tausig-weber-carl-maria-von>,
+        <https://performance.musiconn.de/work/aufforderung-zum-tanz-arrangiert-weingartner-weber-carl-maria-von>,
+        <https://performance.musiconn.de/work/aufforderung-zum-tanze-arrangiert-berlioz-weber-carl-maria-von> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/concert-deuben-dresden-1887-11-23>,
+        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1886-12-18-19-30>,
+        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1887-11-24-19-30>,
+        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-04-10-19-30>,
+        <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1890-11-23-19-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "J 260 ist die maßgebliche Werkverzeichniszählung" ;
     cto:elementOf n4c:E5320 ;
@@ -33,13 +41,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/14959938>,
         <https://viaf.org/viaf/221396927>,
         <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    schema:includedComposition <https://performance.musiconn.de/work/aufforderung-zum-tanz-arrangiert-tausig-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/aufforderung-zum-tanz-arrangiert-weingartner-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/aufforderung-zum-tanze-arrangiert-berlioz-weber-carl-maria-von> ;
-    schema:subjectOf <https://performance.musiconn.de/event/concert-deuben-dresden-1887-11-23>,
-        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1886-12-18-19-30>,
-        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1887-11-24-19-30>,
-        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-04-10-19-30>,
-        <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1890-11-23-19-30> .
+        <https://viaf.org/viaf/8413148122912495200001> .
 

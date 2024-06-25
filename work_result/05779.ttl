@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/djamileh-klage-bizet-georges> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/djamileh-klage-bizet-georges> ] .
 
-<https://performance.musiconn.de/work/djamileh-klage-bizet-georges> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/djamileh-klage-bizet-georges> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/154-vorstellung-semperoper-dresden-1907-06-23-19-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Tanzszene aus Djamileh" ;
     cto:elementOf n4c:E5320 ;
@@ -19,6 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/10032551> ;
     cto:title "Djamileh. Klage (Bizet, Georges)" ;
     cto:viaf <https://viaf.org/viaf/10032551>,
-        <https://viaf.org/viaf/158420977> ;
-    schema:subjectOf <https://performance.musiconn.de/event/154-vorstellung-semperoper-dresden-1907-06-23-19-30> .
+        <https://viaf.org/viaf/158420977> .
 

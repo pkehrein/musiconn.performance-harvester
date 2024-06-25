@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/ich-weiss-die-quelle-hirschfeld-caspar-rene> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/ich-weiss-die-quelle-hirschfeld-caspar-rene> ] .
 
-<https://performance.musiconn.de/work/ich-weiss-die-quelle-hirschfeld-caspar-rene> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/ich-weiss-die-quelle-hirschfeld-caspar-rene> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/gewebter-schmetterling-hirschfeld-caspar-rene>,
+        <https://performance.musiconn.de/work/ich-weiss-die-quelle-ich-weiss-die-quelle-hirschfeld-caspar-rene>,
+        <https://performance.musiconn.de/work/schlaf-und-tod-hirschfeld-caspar-rene> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Drei Lieder für Mezzosopran, Klavier, Violoncello und Vibraphon op. 1 nach Texten von Pablo Neruda, Georg Trakl u. André Gide - (1982)" ;
     cto:elementOf n4c:E5320 ;
@@ -17,8 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/129359726>,
         <https://viaf.org/viaf/10922324> ;
     cto:title "Ich weiß die Quelle (Hirschfeld, Caspar René)" ;
-    cto:viaf <https://viaf.org/viaf/10922324> ;
-    schema:includedComposition <https://performance.musiconn.de/work/gewebter-schmetterling-hirschfeld-caspar-rene>,
-        <https://performance.musiconn.de/work/ich-weiss-die-quelle-ich-weiss-die-quelle-hirschfeld-caspar-rene>,
-        <https://performance.musiconn.de/work/schlaf-und-tod-hirschfeld-caspar-rene> .
+    cto:viaf <https://viaf.org/viaf/10922324> .
 

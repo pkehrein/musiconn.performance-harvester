@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/septette-op-20-es-dur-beethoven-ludwig-van> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/septette-op-20-es-dur-beethoven-ludwig-van> ] .
 
-<https://performance.musiconn.de/work/septette-op-20-es-dur-beethoven-ludwig-van> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/septette-op-20-es-dur-beethoven-ludwig-van> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300653638>,
+        <https://performance.musiconn.de/work/septette-op-20-es-dur-adagio-cantabile-beethoven-ludwig-van>,
+        <https://viaf.org/viaf/195821419> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-04-02-19-30>,
+        <https://performance.musiconn.de/event/dritter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1896-11-20-19-00>,
+        <https://performance.musiconn.de/event/erster-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1882-10-20-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10185429-8>,
@@ -74,11 +80,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/236028016>,
         <https://viaf.org/viaf/241852217>,
         <https://viaf.org/viaf/32182557>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    schema:includedComposition <https://d-nb.info/gnd/300653638>,
-        <https://performance.musiconn.de/work/septette-op-20-es-dur-adagio-cantabile-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/195821419> ;
-    schema:subjectOf <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-04-02-19-30>,
-        <https://performance.musiconn.de/event/dritter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1896-11-20-19-00>,
-        <https://performance.musiconn.de/event/erster-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1882-10-20-19-00> .
+        <https://viaf.org/viaf/8413148122912495200001> .
 

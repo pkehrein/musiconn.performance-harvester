@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/kirchen-musik-mendelssohn-bartholdy-felix> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/kirchen-musik-mendelssohn-bartholdy-felix> ] .
 
-<https://performance.musiconn.de/work/kirchen-musik-mendelssohn-bartholdy-felix> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/kirchen-musik-mendelssohn-bartholdy-felix> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300101716>,
+        <https://d-nb.info/gnd/300101783>,
+        <https://performance.musiconn.de/work/kirchen-musik-aus-tiefer-not-mendelssohn-bartholdy-felix>,
+        <https://performance.musiconn.de/work/kirchen-musik-mitten-wir-im-leben-sind-mendelssohn-bartholdy-felix>,
+        <https://viaf.org/viaf/178615236>,
+        <https://viaf.org/viaf/178815577> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "3 Werke: Choral Aus tiefer Not. Ave Maria. Choral Mitten wir im Leben sindFür gemischten Chor (teilweise mit Orgel bzw. Instrumentalbegleitung)" ;
     cto:elementOf n4c:E5320 ;
@@ -21,11 +27,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Kirchen-Musik (Mendelssohn Bartholdy, Felix)" ;
     cto:viaf <https://viaf.org/viaf/178615236>,
         <https://viaf.org/viaf/178815577>,
-        <https://viaf.org/viaf/2665666> ;
-    schema:includedComposition <https://d-nb.info/gnd/300101716>,
-        <https://d-nb.info/gnd/300101783>,
-        <https://performance.musiconn.de/work/kirchen-musik-aus-tiefer-not-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/kirchen-musik-mitten-wir-im-leben-sind-mendelssohn-bartholdy-felix>,
-        <https://viaf.org/viaf/178615236>,
-        <https://viaf.org/viaf/178815577> .
+        <https://viaf.org/viaf/2665666> .
 

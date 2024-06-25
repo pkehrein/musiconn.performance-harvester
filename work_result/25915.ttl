@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/booke-of-songs-or-ayres-no-2-dowland-john> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/booke-of-songs-or-ayres-no-2-dowland-john> ] .
 
-<https://performance.musiconn.de/work/booke-of-songs-or-ayres-no-2-dowland-john> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/booke-of-songs-or-ayres-no-2-dowland-john> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300046197>,
+        <https://performance.musiconn.de/work/booke-of-songs-or-ayres-no-2-fine-knacks-for-ladies-dowland-john>,
+        <https://viaf.org/viaf/180437324> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "vermutlich 23 weltliche Lieder, für 1 Singstimme und 1 Instrument (z.B. Laute)" ;
     cto:elementOf n4c:E5320 ;
@@ -17,8 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/14744124> ;
     cto:title "Booke of songs or ayres, no. 2 (Dowland, John)" ;
     cto:viaf <https://viaf.org/viaf/14744124>,
-        <https://viaf.org/viaf/180437324> ;
-    schema:includedComposition <https://d-nb.info/gnd/300046197>,
-        <https://performance.musiconn.de/work/booke-of-songs-or-ayres-no-2-fine-knacks-for-ladies-dowland-john>,
         <https://viaf.org/viaf/180437324> .
 

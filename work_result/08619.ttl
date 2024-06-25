@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/frische-teutsche-liedlein> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/frische-teutsche-liedlein> ] .
 
-<https://performance.musiconn.de/work/frische-teutsche-liedlein> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/frische-teutsche-liedlein> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1185826653>,
+        <https://performance.musiconn.de/work/frische-teutsche-liedlein-theil-2>,
+        <https://viaf.org/viaf/7398155769100227880006> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Fünfteilige Liedsammlung mit 380 mehrstimmigen, vorwiegend weltlichen deutschen Lieder (erschienen 1539–1556)" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/115736493> ;
     cto:title "Frische teutsche Liedlein" ;
     cto:viaf <https://viaf.org/viaf/115736493>,
-        <https://viaf.org/viaf/7398155769100227880006> ;
-    schema:includedComposition <https://d-nb.info/gnd/1185826653>,
-        <https://performance.musiconn.de/work/frische-teutsche-liedlein-theil-2>,
         <https://viaf.org/viaf/7398155769100227880006> .
 

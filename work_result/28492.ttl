@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/praeludien-klavier-op-34-schostakowitsch-dmitri-d> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/praeludien-klavier-op-34-schostakowitsch-dmitri-d> ] .
 
-<https://performance.musiconn.de/work/praeludien-klavier-op-34-schostakowitsch-dmitri-d> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/praeludien-klavier-op-34-schostakowitsch-dmitri-d> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/praeludien-klavier-op-34-auswahl-schostakowitsch-dmitri-d> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "24 Präludien" ;
     cto:elementOf n4c:E5320 ;
@@ -17,6 +18,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/118642472>,
         <https://viaf.org/viaf/89612684> ;
     cto:title "Präludien, Klavier, op. 34 (Schostakowitsch, Dmitri D.)" ;
-    cto:viaf <https://viaf.org/viaf/89612684> ;
-    schema:includedComposition <https://performance.musiconn.de/work/praeludien-klavier-op-34-auswahl-schostakowitsch-dmitri-d> .
+    cto:viaf <https://viaf.org/viaf/89612684> .
 

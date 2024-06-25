@@ -1,13 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/konzerte-violine-violoncello-orchester-op-102-a-moll-brahms-johannes> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/konzerte-violine-violoncello-orchester-op-102-a-moll-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/konzerte-violine-violoncello-orchester-op-102-a-moll-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/konzerte-violine-violoncello-orchester-op-102-a-moll-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/1-sinfonie-konzert-der-generaldirektion-der-koenigl-musikalischen-kapelle-und-der-hoftheater-semperoper-dresden-1910-10-21-19-30>,
+        <https://performance.musiconn.de/event/1-sonderkonzert-gewerbehaus-dresden-gewerbehaus-saal-1943-11-18-18-00>,
+        <https://performance.musiconn.de/event/neuntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1892-02-19-18-30>,
+        <https://performance.musiconn.de/event/siebentes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1894-01-19-19-00>,
+        <https://performance.musiconn.de/event/viertes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1887-11-18-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10139909-1>,
@@ -81,10 +86,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/45144814273718687574>,
         <https://viaf.org/viaf/598145857929623020680>,
         <https://viaf.org/viaf/6145375896183680052>,
-        <https://viaf.org/viaf/7573295> ;
-    schema:subjectOf <https://performance.musiconn.de/event/1-sinfonie-konzert-der-generaldirektion-der-koenigl-musikalischen-kapelle-und-der-hoftheater-semperoper-dresden-1910-10-21-19-30>,
-        <https://performance.musiconn.de/event/1-sonderkonzert-gewerbehaus-dresden-gewerbehaus-saal-1943-11-18-18-00>,
-        <https://performance.musiconn.de/event/neuntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1892-02-19-18-30>,
-        <https://performance.musiconn.de/event/siebentes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1894-01-19-19-00>,
-        <https://performance.musiconn.de/event/viertes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1887-11-18-18-30> .
+        <https://viaf.org/viaf/7573295> .
 

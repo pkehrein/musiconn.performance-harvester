@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lyse-motetter-i-stereo-hoybye-john> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lyse-motetter-i-stereo-hoybye-john> ] .
 
-<https://performance.musiconn.de/work/lyse-motetter-i-stereo-hoybye-john> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lyse-motetter-i-stereo-hoybye-john> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1138046450>,
+        <https://performance.musiconn.de/work/lyse-motetter-i-stereo-jubilate-deo-psalm-100-hoybye-john>,
+        <https://viaf.org/viaf/4419150264376605860001> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Drei Motetten: Cantate Domini (SSAATTBB). Haec dies (SSAATTBB) and three soloists (soprano/alto). Jubilate Deo (2xSATB)" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/38258496> ;
     cto:title "Lyse motetter i stereo (Høybye, John)" ;
     cto:viaf <https://viaf.org/viaf/38258496>,
-        <https://viaf.org/viaf/4419150264376605860001> ;
-    schema:includedComposition <https://d-nb.info/gnd/1138046450>,
-        <https://performance.musiconn.de/work/lyse-motetter-i-stereo-jubilate-deo-psalm-100-hoybye-john>,
         <https://viaf.org/viaf/4419150264376605860001> .
 

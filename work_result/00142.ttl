@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/der-herr-ist-mein-getreuer-hirt-richter-otto> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/der-herr-ist-mein-getreuer-hirt-richter-otto> ] .
 
-<https://performance.musiconn.de/work/der-herr-ist-mein-getreuer-hirt-richter-otto> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/der-herr-ist-mein-getreuer-hirt-richter-otto> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1913-04-05-14-00>,
+        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-08-29-18-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "SATB" ;
     cto:elementOf n4c:E5320 ;
@@ -21,7 +23,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/56181866> ;
     cto:title "Der Herr ist mein getreuer Hirt (Richter, Otto)" ;
     cto:viaf <https://viaf.org/viaf/139053206>,
-        <https://viaf.org/viaf/56181866> ;
-    schema:subjectOf <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1913-04-05-14-00>,
-        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-08-29-18-00> .
+        <https://viaf.org/viaf/56181866> .
 

@@ -1,21 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/hamchabe-es-haner-alman-samuel> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/hamchabe-es-haner-alman-samuel> ] .
 
-<https://performance.musiconn.de/work/hamchabe-es-haner-alman-samuel> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1137955244>,
-        <https://d-nb.info/gnd/4131189-9> ;
-    cto:isPartOf <https://d-nb.info/gnd/4131189-9> ;
-    cto:relatedPerson <https://d-nb.info/gnd/1137955244> ;
-    cto:title "Ham'chabe es haner (Alman, Samuel)" ;
-    schema:subjectOf <https://performance.musiconn.de/event/2-dienstagskonzert-neues-gewandhaus-leipzig-1981-11-17>,
+<https://performance.musiconn.de/work/hamchabe-es-haner-alman-samuel> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/2-dienstagskonzert-neues-gewandhaus-leipzig-1981-11-17>,
         <https://performance.musiconn.de/event/24-wohltaetigkeitskonzert-zugunsten-des-ignatz-bubis-gedenkstipendienfonds-fuer-juedische-studien-an-der-universitaet-tel-aviv-und-amit-for-ethiopian-jews-zur-foerderung-der-integration-aethiopischer-immigranten-in-israel-konzerthaus-berlin-2001-03-11-11-00>,
         <https://performance.musiconn.de/event/3-synagogalkonzert-kulturpalast-dresden-festsaal-1988-11-20-15-30>,
         <https://performance.musiconn.de/event/benefizkonzert-fuer-den-foerderverein-haus-des-lebens-mahn-und-begegnungsstaette-juedischer-friedhof-halle-sankt-ulrich-halle-saale-2000-04-02-17-00>,
@@ -213,5 +206,12 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/woche-der-bruederlichkeit-heilig-geist-kirche-bad-oeynhausen-2006-03-05-17-00>,
         <https://performance.musiconn.de/event/woche-der-bruederlichkeit-marienkirche-herford-2006-03-04-18-00>,
         <https://performance.musiconn.de/event/woche-der-bruederlichkeit-philanthropin-frankfurt-am-main-1990-03-10-20-00>,
-        <https://performance.musiconn.de/event/wohltaetigkeitskonzert-zugunsten-tschernobylgeschaedigter-kinder-berliner-philharmonie-berlin-kammermusiksaal-1991-11-03-11-00> .
+        <https://performance.musiconn.de/event/wohltaetigkeitskonzert-zugunsten-tschernobylgeschaedigter-kinder-berliner-philharmonie-berlin-kammermusiksaal-1991-11-03-11-00> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/1137955244>,
+        <https://d-nb.info/gnd/4131189-9> ;
+    cto:isPartOf <https://d-nb.info/gnd/4131189-9> ;
+    cto:relatedPerson <https://d-nb.info/gnd/1137955244> ;
+    cto:title "Ham'chabe es haner (Alman, Samuel)" .
 

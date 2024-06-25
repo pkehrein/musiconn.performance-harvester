@@ -1,13 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/anacreon-ou-lamour-fugitif-cherubini-luigi> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/anacreon-ou-lamour-fugitif-cherubini-luigi> ] .
 
-<https://performance.musiconn.de/work/anacreon-ou-lamour-fugitif-cherubini-luigi> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/anacreon-ou-lamour-fugitif-cherubini-luigi> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300036566>,
+        <https://performance.musiconn.de/work/anacreon-1-akt-cherubini-luigi>,
+        <https://performance.musiconn.de/work/anacreon-finale-cherubini-luigi>,
+        <https://performance.musiconn.de/work/anacreon-ouvertuere-cherubini-luigi>,
+        <https://viaf.org/viaf/180233295> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "2-aktige \"Ballettoper\"Uraufführung 1803" ;
     cto:elementOf n4c:E5320 ;
@@ -23,10 +28,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Anacréon ou L'amour fugitif (Cherubini, Luigi)" ;
     cto:viaf <https://viaf.org/viaf/180233295>,
         <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/88663809> ;
-    schema:includedComposition <https://d-nb.info/gnd/300036566>,
-        <https://performance.musiconn.de/work/anacreon-1-akt-cherubini-luigi>,
-        <https://performance.musiconn.de/work/anacreon-finale-cherubini-luigi>,
-        <https://performance.musiconn.de/work/anacreon-ouvertuere-cherubini-luigi>,
-        <https://viaf.org/viaf/180233295> .
+        <https://viaf.org/viaf/88663809> .
 

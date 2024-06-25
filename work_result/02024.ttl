@@ -1,13 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/liebeslieder-op-52-brahms-johannes> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/liebeslieder-op-52-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/liebeslieder-op-52-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/liebeslieder-op-52-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1235490122>,
+        <https://performance.musiconn.de/work/liebeslieder-op-52-am-donaustrande-brahms-johannes>,
+        <https://performance.musiconn.de/work/liebeslieder-op-52-auswahl-brahms-johannes>,
+        <https://performance.musiconn.de/work/liebeslieder-op-52-ein-kleiner-huebscher-vogel-brahms-johannes> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/ii-konzert-volkshaus-jena-1940-05-05-19-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "18 Walzer für vierstimmigen (SATB) Gesang und Klavier zu vier Händen" ;
     cto:elementOf n4c:E5320 ;
@@ -36,10 +41,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/133844163>,
         <https://viaf.org/viaf/1831145857100822922173>,
         <https://viaf.org/viaf/231499364>,
-        <https://viaf.org/viaf/7573295> ;
-    schema:includedComposition <https://d-nb.info/gnd/1235490122>,
-        <https://performance.musiconn.de/work/liebeslieder-op-52-am-donaustrande-brahms-johannes>,
-        <https://performance.musiconn.de/work/liebeslieder-op-52-auswahl-brahms-johannes>,
-        <https://performance.musiconn.de/work/liebeslieder-op-52-ein-kleiner-huebscher-vogel-brahms-johannes> ;
-    schema:subjectOf <https://performance.musiconn.de/event/ii-konzert-volkshaus-jena-1940-05-05-19-30> .
+        <https://viaf.org/viaf/7573295> .
 

@@ -1,13 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/mon-coeur-se-recommende-a-vous-eccard-johannes> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/mon-coeur-se-recommende-a-vous-eccard-johannes> ] .
 
-<https://performance.musiconn.de/work/mon-coeur-se-recommende-a-vous-eccard-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/mon-coeur-se-recommende-a-vous-eccard-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1185416862>,
+        <https://d-nb.info/gnd/1185417095>,
+        <https://d-nb.info/gnd/1185417311>,
+        <https://performance.musiconn.de/work/mon-coeur-se-recommende-a-vous-agnus-dei-eccard-johannes>,
+        <https://performance.musiconn.de/work/mon-coeur-se-recommende-a-vous-kyrie-eccard-johannes>,
+        <https://performance.musiconn.de/work/mon-coeur-se-recommende-a-vous-osanna-eccard-johannes>,
+        <https://performance.musiconn.de/work/mon-coeur-se-recommende-a-vous-sanctus-eccard-johannes> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Parodiemesse auf Orlando di Lassos Chanson \"Mon coeur se recommende à vous\"" ;
     cto:elementOf n4c:E5320 ;
@@ -20,12 +27,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/118528688>,
         <https://viaf.org/viaf/76499950> ;
     cto:title "Mon coeur se recommende à vous (Eccard, Johannes)" ;
-    cto:viaf <https://viaf.org/viaf/76499950> ;
-    schema:includedComposition <https://d-nb.info/gnd/1185416862>,
-        <https://d-nb.info/gnd/1185417095>,
-        <https://d-nb.info/gnd/1185417311>,
-        <https://performance.musiconn.de/work/mon-coeur-se-recommende-a-vous-agnus-dei-eccard-johannes>,
-        <https://performance.musiconn.de/work/mon-coeur-se-recommende-a-vous-kyrie-eccard-johannes>,
-        <https://performance.musiconn.de/work/mon-coeur-se-recommende-a-vous-osanna-eccard-johannes>,
-        <https://performance.musiconn.de/work/mon-coeur-se-recommende-a-vous-sanctus-eccard-johannes> .
+    cto:viaf <https://viaf.org/viaf/76499950> .
 

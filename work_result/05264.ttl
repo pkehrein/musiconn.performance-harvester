@@ -1,13 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/zigeunerlieder-hochgetuermte-rimaflut-brahms-johannes> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/zigeunerlieder-hochgetuermte-rimaflut-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/zigeunerlieder-hochgetuermte-rimaflut-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/zigeunerlieder-hochgetuermte-rimaflut-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/dresdeni-kreuzkoori-kontserdi-kava-deutsches-theater-tartu-1936-09-26>,
+        <https://performance.musiconn.de/event/dresdeni-kreuzkoori-kontserdi-kava-estnisches-schauspielhaus-tallinn-1936-09-28>,
+        <https://performance.musiconn.de/event/kleines-konzert-in-der-deutschen-schule-deutsche-schule-helsinki-1936-09-30-09-30>,
+        <https://performance.musiconn.de/event/konzert-des-dresdner-kreuzchors-schwarzhaeupterhaus-riga-1936-09-24-20-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118514253>,
@@ -24,9 +28,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Zigeunerlieder. Hochgetürmte Rimaflut (Brahms, Johannes)" ;
     cto:viaf <https://viaf.org/viaf/139053206>,
         <https://viaf.org/viaf/150245159>,
-        <https://viaf.org/viaf/7573295> ;
-    schema:subjectOf <https://performance.musiconn.de/event/dresdeni-kreuzkoori-kontserdi-kava-deutsches-theater-tartu-1936-09-26>,
-        <https://performance.musiconn.de/event/dresdeni-kreuzkoori-kontserdi-kava-estnisches-schauspielhaus-tallinn-1936-09-28>,
-        <https://performance.musiconn.de/event/kleines-konzert-in-der-deutschen-schule-deutsche-schule-helsinki-1936-09-30-09-30>,
-        <https://performance.musiconn.de/event/konzert-des-dresdner-kreuzchors-schwarzhaeupterhaus-riga-1936-09-24-20-00> .
+        <https://viaf.org/viaf/7573295> .
 

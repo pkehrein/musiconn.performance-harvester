@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/digte-fra-fiskerjenten-af-bj-bjornson-grieg-edvard> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/digte-fra-fiskerjenten-af-bj-bjornson-grieg-edvard> ] .
 
-<https://performance.musiconn.de/work/digte-fra-fiskerjenten-af-bj-bjornson-grieg-edvard> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/digte-fra-fiskerjenten-af-bj-bjornson-grieg-edvard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1168671469>,
+        <https://performance.musiconn.de/work/digte-fra-fiskerjenten-af-bj-bjornson-god-morgen-grieg-edvard>,
+        <https://viaf.org/viaf/294164784> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Vier Lieder: Det første møde (Erstes Begegnen). God morgen (Guten Morgen). Jeg giver mit digt til våren (Dem Lenz soll mein Lied erklingen). Tak for dit råd (Dein Rat ist wohl gut" ;
     cto:elementOf n4c:E5320 ;
@@ -17,8 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/46946549> ;
     cto:title "Digte fra \"Fiskerjenten\" af BJ. Bjørnson (Grieg, Edvard)" ;
     cto:viaf <https://viaf.org/viaf/294164784>,
-        <https://viaf.org/viaf/46946549> ;
-    schema:includedComposition <https://d-nb.info/gnd/1168671469>,
-        <https://performance.musiconn.de/work/digte-fra-fiskerjenten-af-bj-bjornson-god-morgen-grieg-edvard>,
-        <https://viaf.org/viaf/294164784> .
+        <https://viaf.org/viaf/46946549> .
 

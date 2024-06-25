@@ -1,13 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lemminkaeinen-suite-sibelius-jean> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lemminkaeinen-suite-sibelius-jean> ] .
 
-<https://performance.musiconn.de/work/lemminkaeinen-suite-sibelius-jean> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lemminkaeinen-suite-sibelius-jean> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300148313>,
+        <https://d-nb.info/gnd/300148321>,
+        <https://performance.musiconn.de/work/lemminkaeinen-suite-tuonelan-joutsen-sibelius-jean>,
+        <https://performance.musiconn.de/work/lemminkaeis-sarja-lemminkaeinen-palaa-koititienoille-sibelius-jean>,
+        <https://performance.musiconn.de/work/zwei-legenden-aus-dem-finnischen-volksepos-kalevala-a-der-schwan-von-tuonela-b-lemminkaeinen-zie-sibelius-jean>,
+        <https://viaf.org/viaf/183475543>,
+        <https://viaf.org/viaf/231992113> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1078514259>,
@@ -24,12 +31,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:viaf <https://viaf.org/viaf/183475543>,
         <https://viaf.org/viaf/231992113>,
         <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/59270886> ;
-    schema:includedComposition <https://d-nb.info/gnd/300148313>,
-        <https://d-nb.info/gnd/300148321>,
-        <https://performance.musiconn.de/work/lemminkaeinen-suite-tuonelan-joutsen-sibelius-jean>,
-        <https://performance.musiconn.de/work/lemminkaeis-sarja-lemminkaeinen-palaa-koititienoille-sibelius-jean>,
-        <https://performance.musiconn.de/work/zwei-legenden-aus-dem-finnischen-volksepos-kalevala-a-der-schwan-von-tuonela-b-lemminkaeinen-zie-sibelius-jean>,
-        <https://viaf.org/viaf/183475543>,
-        <https://viaf.org/viaf/231992113> .
+        <https://viaf.org/viaf/59270886> .
 

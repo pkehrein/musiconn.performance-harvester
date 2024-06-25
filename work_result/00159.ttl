@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/geistliche-gesaenge-op-75-draeseke-felix> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/geistliche-gesaenge-op-75-draeseke-felix> ] .
 
-<https://performance.musiconn.de/work/geistliche-gesaenge-op-75-draeseke-felix> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/geistliche-gesaenge-op-75-draeseke-felix> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1204888671>,
+        <https://performance.musiconn.de/work/geistliche-gesaenge-op-75-dem-herrn-sei-lob-und-ehr-draeseke-felix> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "3 geistliche Gesänge" ;
     cto:elementOf n4c:E5320 ;
@@ -18,7 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/118907735>,
         <https://viaf.org/viaf/51953861> ;
     cto:title "Geistliche Gesänge, op. 75 (Draeseke, Felix)" ;
-    cto:viaf <https://viaf.org/viaf/51953861> ;
-    schema:includedComposition <https://d-nb.info/gnd/1204888671>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-75-dem-herrn-sei-lob-und-ehr-draeseke-felix> .
+    cto:viaf <https://viaf.org/viaf/51953861> .
 

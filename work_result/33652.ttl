@@ -1,13 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/suite-in-vier-saetzen-luck-hans> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/suite-in-vier-saetzen-luck-hans> ] .
 
-<https://performance.musiconn.de/work/suite-in-vier-saetzen-luck-hans> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/suite-in-vier-saetzen-luck-hans> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/suite-in-4-saetzen-akkordeonorch-elegie-luck-hans>,
+        <https://performance.musiconn.de/work/suite-in-4-saetzen-akkordeonorch-marsch-luck-hans>,
+        <https://performance.musiconn.de/work/suite-in-4-saetzen-akkordeonorch-tanz-luck-hans>,
+        <https://performance.musiconn.de/work/suite-in-4-saetzen-akkordeonorch-vorspiel-luck-hans> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/134448952>,
@@ -16,9 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/134448952>,
         <https://viaf.org/viaf/85435651> ;
     cto:title "Suite in vier Sätzen (Luck, Hans)" ;
-    cto:viaf <https://viaf.org/viaf/85435651> ;
-    schema:includedComposition <https://performance.musiconn.de/work/suite-in-4-saetzen-akkordeonorch-elegie-luck-hans>,
-        <https://performance.musiconn.de/work/suite-in-4-saetzen-akkordeonorch-marsch-luck-hans>,
-        <https://performance.musiconn.de/work/suite-in-4-saetzen-akkordeonorch-tanz-luck-hans>,
-        <https://performance.musiconn.de/work/suite-in-4-saetzen-akkordeonorch-vorspiel-luck-hans> .
+    cto:viaf <https://viaf.org/viaf/85435651> .
 

@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/nikita-versinin-kabalevskij-dmitrij-borisovic> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/nikita-versinin-kabalevskij-dmitrij-borisovic> ] .
 
-<https://performance.musiconn.de/work/nikita-versinin-kabalevskij-dmitrij-borisovic> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/nikita-versinin-kabalevskij-dmitrij-borisovic> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/nikita-versinin-ausschnitte-kabalevskij-dmitrij-borisovic> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Oper nach \"Bronepoezd 14-69\" von V. V. Ivanov, Libretto S. A. Cenina." ;
     cto:elementOf n4c:E5320 ;
@@ -17,6 +18,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/11945002X>,
         <https://viaf.org/viaf/103990744> ;
     cto:title "Nikita Veršinin (Kabalevskij, Dmitrij Borisovič)" ;
-    cto:viaf <https://viaf.org/viaf/103990744> ;
-    schema:includedComposition <https://performance.musiconn.de/work/nikita-versinin-ausschnitte-kabalevskij-dmitrij-borisovic> .
+    cto:viaf <https://viaf.org/viaf/103990744> .
 

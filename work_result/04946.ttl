@@ -1,13 +1,25 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/der-bettelstudent-milloecker-carl> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/der-bettelstudent-milloecker-carl> ] .
 
-<https://performance.musiconn.de/work/der-bettelstudent-milloecker-carl> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/der-bettelstudent-milloecker-carl> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1185513450>,
+        <https://d-nb.info/gnd/300104936>,
+        <https://performance.musiconn.de/work/der-bettelstudent-ach-ich-hab-sie-ja-nur-auf-die-schulter-gekuesst-milloecker-carl>,
+        <https://performance.musiconn.de/work/der-bettelstudent-auftrittslied-des-ollendorf-milloecker-carl>,
+        <https://performance.musiconn.de/work/der-bettelstudent-auswahl-milloecker-carl-1>,
+        <https://performance.musiconn.de/work/der-bettelstudent-fantasie-milloecker-carl>,
+        <https://performance.musiconn.de/work/der-bettelstudent-ich-setz-den-fall-milloecker-carl>,
+        <https://performance.musiconn.de/work/der-bettelstudent-laura-walzer-milloecker-carl>,
+        <https://performance.musiconn.de/work/der-bettelstudent-ouvertuere-milloecker-carl>,
+        <https://performance.musiconn.de/work/melodien-aus-der-operette-der-bettelstudent-milloecker-carl>,
+        <https://viaf.org/viaf/88144783020250911763> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/kultur-abend-odeum-dresden-1935-11-15-20-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1185513450>,
@@ -20,17 +32,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/69733921> ;
     cto:title "Der Bettelstudent (Millöcker, Carl)" ;
     cto:viaf <https://viaf.org/viaf/69733921>,
-        <https://viaf.org/viaf/88144783020250911763> ;
-    schema:includedComposition <https://d-nb.info/gnd/1185513450>,
-        <https://d-nb.info/gnd/300104936>,
-        <https://performance.musiconn.de/work/der-bettelstudent-ach-ich-hab-sie-ja-nur-auf-die-schulter-gekuesst-milloecker-carl>,
-        <https://performance.musiconn.de/work/der-bettelstudent-auftrittslied-des-ollendorf-milloecker-carl>,
-        <https://performance.musiconn.de/work/der-bettelstudent-auswahl-milloecker-carl-1>,
-        <https://performance.musiconn.de/work/der-bettelstudent-fantasie-milloecker-carl>,
-        <https://performance.musiconn.de/work/der-bettelstudent-ich-setz-den-fall-milloecker-carl>,
-        <https://performance.musiconn.de/work/der-bettelstudent-laura-walzer-milloecker-carl>,
-        <https://performance.musiconn.de/work/der-bettelstudent-ouvertuere-milloecker-carl>,
-        <https://performance.musiconn.de/work/melodien-aus-der-operette-der-bettelstudent-milloecker-carl>,
-        <https://viaf.org/viaf/88144783020250911763> ;
-    schema:subjectOf <https://performance.musiconn.de/event/kultur-abend-odeum-dresden-1935-11-15-20-00> .
+        <https://viaf.org/viaf/88144783020250911763> .
 

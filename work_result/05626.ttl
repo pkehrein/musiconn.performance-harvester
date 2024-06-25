@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/variationen-ueber-ein-thema-aus-dem-oratorium-judas-maccabaeus-von-georg-friedrich-haendel-beethoven-ludwig-van> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/variationen-ueber-ein-thema-aus-dem-oratorium-judas-maccabaeus-von-georg-friedrich-haendel-beethoven-ludwig-van> ] .
 
-<https://performance.musiconn.de/work/variationen-ueber-ein-thema-aus-dem-oratorium-judas-maccabaeus-von-georg-friedrich-haendel-beethoven-ludwig-van> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/variationen-ueber-ein-thema-aus-dem-oratorium-judas-maccabaeus-von-georg-friedrich-haendel-beethoven-ludwig-van> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/advents-tee-konzert-hotel-bellevue-dresden-1936-12-11>,
+        <https://performance.musiconn.de/event/schulandacht-in-der-kreuzschule-kreuzschule-georgplatz-dresden-1936-12-21> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "12 Variationen" ;
     cto:elementOf n4c:E5320 ;
@@ -21,7 +23,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/32182557> ;
     cto:title "Variationen über ein Thema aus dem Oratorium \"Judas Maccabaeus\" von Georg Friedrich Händel (Beethoven, Ludwig van)" ;
     cto:viaf <https://viaf.org/viaf/125164781>,
-        <https://viaf.org/viaf/32182557> ;
-    schema:subjectOf <https://performance.musiconn.de/event/advents-tee-konzert-hotel-bellevue-dresden-1936-12-11>,
-        <https://performance.musiconn.de/event/schulandacht-in-der-kreuzschule-kreuzschule-georgplatz-dresden-1936-12-21> .
+        <https://viaf.org/viaf/32182557> .
 

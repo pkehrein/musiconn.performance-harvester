@@ -1,13 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/aennchen-von-tharau-hofmann-heinrich> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/aennchen-von-tharau-hofmann-heinrich> ] .
 
-<https://performance.musiconn.de/work/aennchen-von-tharau-hofmann-heinrich> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/aennchen-von-tharau-hofmann-heinrich> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1284118681>,
+        <https://performance.musiconn.de/work/aennchen-von-tharau-heilge-nacht-in-deiner-stille-hofmann-heinrich>,
+        <https://performance.musiconn.de/work/aennchen-von-tharau-heilge-nacht-in-deiner-stille-hofmann-heinrich-1>,
+        <https://performance.musiconn.de/work/aennchen-von-tharau-monolog-des-simon-dach-hofmann-heinrich>,
+        <https://viaf.org/viaf/4519167988969433830009> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/aennchen-von-tharau-semperoper-dresden-1879-03-27-19-00>,
+        <https://performance.musiconn.de/event/aennchen-von-tharau-semperoper-dresden-1879-03-30-19-00>,
+        <https://performance.musiconn.de/event/aennchen-von-tharau-semperoper-dresden-1879-04-29-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116951346>,
@@ -20,13 +28,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Ännchen von Tharau (Hofmann, Heinrich)" ;
     cto:viaf <https://viaf.org/viaf/158420977>,
         <https://viaf.org/viaf/37680687>,
-        <https://viaf.org/viaf/4519167988969433830009> ;
-    schema:includedComposition <https://d-nb.info/gnd/1284118681>,
-        <https://performance.musiconn.de/work/aennchen-von-tharau-heilge-nacht-in-deiner-stille-hofmann-heinrich>,
-        <https://performance.musiconn.de/work/aennchen-von-tharau-heilge-nacht-in-deiner-stille-hofmann-heinrich-1>,
-        <https://performance.musiconn.de/work/aennchen-von-tharau-monolog-des-simon-dach-hofmann-heinrich>,
-        <https://viaf.org/viaf/4519167988969433830009> ;
-    schema:subjectOf <https://performance.musiconn.de/event/aennchen-von-tharau-semperoper-dresden-1879-03-27-19-00>,
-        <https://performance.musiconn.de/event/aennchen-von-tharau-semperoper-dresden-1879-03-30-19-00>,
-        <https://performance.musiconn.de/event/aennchen-von-tharau-semperoper-dresden-1879-04-29-19-00> .
+        <https://viaf.org/viaf/4519167988969433830009> .
 

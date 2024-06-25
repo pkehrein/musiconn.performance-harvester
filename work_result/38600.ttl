@@ -1,13 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/dodici-liriche-capuis-matilde> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/dodici-liriche-capuis-matilde> ] .
 
-<https://performance.musiconn.de/work/dodici-liriche-capuis-matilde> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/dodici-liriche-capuis-matilde> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/dodici-liriche-il-sentiero-capuis-matilde>,
+        <https://performance.musiconn.de/work/dodici-liriche-io-voglio-morire-capuis-matilde>,
+        <https://performance.musiconn.de/work/dodici-liriche-questa-notte-capuis-matilde>,
+        <https://performance.musiconn.de/work/implorazione-capuis-matilde>,
+        <https://performance.musiconn.de/work/lallegro-viandante-capuis-matilde> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/120491095>,
@@ -16,10 +21,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/120491095>,
         <https://viaf.org/viaf/57447030> ;
     cto:title "Dodici Liriche (Capuis, Matilde)" ;
-    cto:viaf <https://viaf.org/viaf/57447030> ;
-    schema:includedComposition <https://performance.musiconn.de/work/dodici-liriche-il-sentiero-capuis-matilde>,
-        <https://performance.musiconn.de/work/dodici-liriche-io-voglio-morire-capuis-matilde>,
-        <https://performance.musiconn.de/work/dodici-liriche-questa-notte-capuis-matilde>,
-        <https://performance.musiconn.de/work/implorazione-capuis-matilde>,
-        <https://performance.musiconn.de/work/lallegro-viandante-capuis-matilde> .
+    cto:viaf <https://viaf.org/viaf/57447030> .
 

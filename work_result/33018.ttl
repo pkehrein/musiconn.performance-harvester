@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/i-gioielli-della-madonna-wolf-ferrari-ermanno> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/i-gioielli-della-madonna-wolf-ferrari-ermanno> ] .
 
-<https://performance.musiconn.de/work/i-gioielli-della-madonna-wolf-ferrari-ermanno> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/i-gioielli-della-madonna-wolf-ferrari-ermanno> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/i-gioielli-della-madonna-intermezzo-wolf-ferrari-ermanno>,
+        <https://performance.musiconn.de/work/i-gioielli-della-madonna-zwei-intermezzi-wolf-ferrari-ermanno> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Volksoper über das \"neapolitanische Leben\"; 3 Akte; 2 Versionen: 1. Version von 1911, Uraufführung in Berlin; 2. Version von 1933, Erstaufführung in Hannover, laut MGG 2 jeweils unter dem deutschen Titel, in der Übersetzung von Hans Liebstöckl" ;
     cto:elementOf n4c:E5320 ;
@@ -17,7 +19,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/118634879>,
         <https://viaf.org/viaf/29719748> ;
     cto:title "I gioielli della Madonna (Wolf-Ferrari, Ermanno)" ;
-    cto:viaf <https://viaf.org/viaf/29719748> ;
-    schema:includedComposition <https://performance.musiconn.de/work/i-gioielli-della-madonna-intermezzo-wolf-ferrari-ermanno>,
-        <https://performance.musiconn.de/work/i-gioielli-della-madonna-zwei-intermezzi-wolf-ferrari-ermanno> .
+    cto:viaf <https://viaf.org/viaf/29719748> .
 

@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gesellschaftliche-gesaenge-op-11-eisenhofer-franz-xaver> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gesellschaftliche-gesaenge-op-11-eisenhofer-franz-xaver> ] .
 
-<https://performance.musiconn.de/work/gesellschaftliche-gesaenge-op-11-eisenhofer-franz-xaver> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gesellschaftliche-gesaenge-op-11-eisenhofer-franz-xaver> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1292744049>,
+        <https://performance.musiconn.de/work/gesellschaftliche-gesaenge-op-11-staendchen-zum-namensfest-eisenhofer-franz-xaver>,
+        <https://viaf.org/viaf/4460168740914579530004> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfasst 6 Gesänge: Die drei Sterne. - An Laura. - Kuss-Lehre. - Ständchen zum Namensfest. - Ständchen zum Abschied. - Gute Nacht" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/27821928> ;
     cto:title "Gesellschaftliche Gesänge, op. 11 (Eisenhofer, Franz Xaver)" ;
     cto:viaf <https://viaf.org/viaf/27821928>,
-        <https://viaf.org/viaf/4460168740914579530004> ;
-    schema:includedComposition <https://d-nb.info/gnd/1292744049>,
-        <https://performance.musiconn.de/work/gesellschaftliche-gesaenge-op-11-staendchen-zum-namensfest-eisenhofer-franz-xaver>,
         <https://viaf.org/viaf/4460168740914579530004> .
 

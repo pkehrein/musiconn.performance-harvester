@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gesaenge-frauen-chor-horn-2-harfe-op-17-es-toent-ein-voller-harfenklang-brahms-johannes> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gesaenge-frauen-chor-horn-2-harfe-op-17-es-toent-ein-voller-harfenklang-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/gesaenge-frauen-chor-horn-2-harfe-op-17-es-toent-ein-voller-harfenklang-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gesaenge-frauen-chor-horn-2-harfe-op-17-es-toent-ein-voller-harfenklang-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/6-kammerkonzert-schloss-albrechtsberg-dresden-2002-06-23-19-00>,
+        <https://performance.musiconn.de/event/abokonzert-20-zweites-gewandhaus-leipzig-1903-03-05>,
+        <https://performance.musiconn.de/event/achtes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1900-02-18-17-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118514253>,
@@ -28,8 +31,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:viaf <https://viaf.org/viaf/125161774>,
         <https://viaf.org/viaf/136181816>,
         <https://viaf.org/viaf/174024482>,
-        <https://viaf.org/viaf/7573295> ;
-    schema:subjectOf <https://performance.musiconn.de/event/6-kammerkonzert-schloss-albrechtsberg-dresden-2002-06-23-19-00>,
-        <https://performance.musiconn.de/event/abokonzert-20-zweites-gewandhaus-leipzig-1903-03-05>,
-        <https://performance.musiconn.de/event/achtes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1900-02-18-17-30> .
+        <https://viaf.org/viaf/7573295> .
 

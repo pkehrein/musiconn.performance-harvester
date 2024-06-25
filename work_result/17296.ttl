@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-frauen-singstimme-3-klavier-op-114-schumann-robert> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-frauen-singstimme-3-klavier-op-114-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/lieder-frauen-singstimme-3-klavier-op-114-schumann-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-frauen-singstimme-3-klavier-op-114-schumann-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300145683>,
+        <https://performance.musiconn.de/work/lieder-frauenst-1-2-3-kl-op-114-naenie-schumann-robert>,
+        <https://viaf.org/viaf/211712114> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfasst 3 Lieder: Nänie. Triolett. Spruch" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/7575259> ;
     cto:title "Lieder, Frauen-Singstimme (3), Klavier, op. 114 (Schumann, Robert)" ;
     cto:viaf <https://viaf.org/viaf/211712114>,
-        <https://viaf.org/viaf/7575259> ;
-    schema:includedComposition <https://d-nb.info/gnd/300145683>,
-        <https://performance.musiconn.de/work/lieder-frauenst-1-2-3-kl-op-114-naenie-schumann-robert>,
-        <https://viaf.org/viaf/211712114> .
+        <https://viaf.org/viaf/7575259> .
 

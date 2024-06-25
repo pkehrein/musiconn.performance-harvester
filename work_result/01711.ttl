@@ -1,13 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sinfonien-d-589-c-dur-schubert-franz> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sinfonien-d-589-c-dur-schubert-franz> ] .
 
-<https://performance.musiconn.de/work/sinfonien-d-589-c-dur-schubert-franz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sinfonien-d-589-c-dur-schubert-franz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1115366629>,
+        <https://performance.musiconn.de/work/sinfonien-d-589-c-dur-3-satz-schubert-franz>,
+        <https://viaf.org/viaf/3639147605355057760004> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/sechstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1885-12-18-18-30>,
+        <https://performance.musiconn.de/event/zwoelftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1878-03-29> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1078514259>,
@@ -34,10 +39,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/221396927>,
         <https://viaf.org/viaf/29719275>,
         <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/3639147605355057760004> ;
-    schema:includedComposition <https://d-nb.info/gnd/1115366629>,
-        <https://performance.musiconn.de/work/sinfonien-d-589-c-dur-3-satz-schubert-franz>,
-        <https://viaf.org/viaf/3639147605355057760004> ;
-    schema:subjectOf <https://performance.musiconn.de/event/sechstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1885-12-18-18-30>,
-        <https://performance.musiconn.de/event/zwoelftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1878-03-29> .
+        <https://viaf.org/viaf/3639147605355057760004> .
 

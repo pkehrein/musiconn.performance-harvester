@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sargino-ossia-lallievo-dellamore-arie-paer-ferdinando> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sargino-ossia-lallievo-dellamore-arie-paer-ferdinando> ] .
 
-<https://performance.musiconn.de/work/sargino-ossia-lallievo-dellamore-arie-paer-ferdinando> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sargino-ossia-lallievo-dellamore-arie-paer-ferdinando> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/sargino-fassung-1808-paer-ferdinando>,
+        <https://performance.musiconn.de/work/sargino-fassung-1826-paer-ferdinando> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/100001718>,
@@ -20,7 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/42026205> ;
     cto:title "Sargino ossia l’allievo dell’amore. Arie (Paër, Ferdinando)" ;
     cto:viaf <https://viaf.org/viaf/156570451>,
-        <https://viaf.org/viaf/42026205> ;
-    schema:includedComposition <https://performance.musiconn.de/work/sargino-fassung-1808-paer-ferdinando>,
-        <https://performance.musiconn.de/work/sargino-fassung-1826-paer-ferdinando> .
+        <https://viaf.org/viaf/42026205> .
 

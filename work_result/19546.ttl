@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/ondine-henze-hans-werner> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/ondine-henze-hans-werner> ] .
 
-<https://performance.musiconn.de/work/ondine-henze-hans-werner> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/ondine-henze-hans-werner> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/ondine-spiel-der-tritonen-henze-hans-werner>,
+        <https://performance.musiconn.de/work/ondine-trois-pas-de-tritons-henze-hans-werner>,
+        <https://performance.musiconn.de/work/undine-suite-nr-2-henze-hans-werner> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118549383>,
@@ -16,8 +19,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/118549383>,
         <https://viaf.org/viaf/97898884> ;
     cto:title "Ondine (Henze, Hans Werner)" ;
-    cto:viaf <https://viaf.org/viaf/97898884> ;
-    schema:includedComposition <https://performance.musiconn.de/work/ondine-spiel-der-tritonen-henze-hans-werner>,
-        <https://performance.musiconn.de/work/ondine-trois-pas-de-tritons-henze-hans-werner>,
-        <https://performance.musiconn.de/work/undine-suite-nr-2-henze-hans-werner> .
+    cto:viaf <https://viaf.org/viaf/97898884> .
 

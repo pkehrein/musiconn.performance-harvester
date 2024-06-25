@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gesaenge-op-10-fuer-musik-franz-robert> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gesaenge-op-10-fuer-musik-franz-robert> ] .
 
-<https://performance.musiconn.de/work/gesaenge-op-10-fuer-musik-franz-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gesaenge-op-10-fuer-musik-franz-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/1-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1884-10-21>,
+        <https://performance.musiconn.de/event/6-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1893-01-20-19-30>,
+        <https://performance.musiconn.de/event/7-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1880-01-20>,
+        <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1877-02-02>,
+        <https://performance.musiconn.de/event/abokonzert-11-zweites-gewandhaus-leipzig-1893-12-21>,
+        <https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1889-11-08-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116088206>,
@@ -37,11 +43,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/27110440>,
         <https://viaf.org/viaf/3217532>,
         <https://viaf.org/viaf/5089547>,
-        <https://viaf.org/viaf/59855252> ;
-    schema:subjectOf <https://performance.musiconn.de/event/1-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1884-10-21>,
-        <https://performance.musiconn.de/event/6-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1893-01-20-19-30>,
-        <https://performance.musiconn.de/event/7-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1880-01-20>,
-        <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1877-02-02>,
-        <https://performance.musiconn.de/event/abokonzert-11-zweites-gewandhaus-leipzig-1893-12-21>,
-        <https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1889-11-08-18-30> .
+        <https://viaf.org/viaf/59855252> .
 

@@ -1,13 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sonaten-violine-klavier-op-30-beethoven-ludwig-van> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sonaten-violine-klavier-op-30-beethoven-ludwig-van> ] .
 
-<https://performance.musiconn.de/work/sonaten-violine-klavier-op-30-beethoven-ludwig-van> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sonaten-violine-klavier-op-30-beethoven-ludwig-van> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300017111>,
+        <https://d-nb.info/gnd/30001712X>,
+        <https://performance.musiconn.de/work/sonaten-violine-klavier-op-30-nr-1-beethoven-ludwig-van>,
+        <https://performance.musiconn.de/work/sonaten-violine-klavier-op-30-nr-2-beethoven-ludwig-van>,
+        <https://viaf.org/viaf/206833040>,
+        <https://viaf.org/viaf/219932557> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/vierzehnter-letzter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1925-04-14-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/117466964>,
@@ -28,12 +35,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/14959597>,
         <https://viaf.org/viaf/206833040>,
         <https://viaf.org/viaf/219932557>,
-        <https://viaf.org/viaf/32182557> ;
-    schema:includedComposition <https://d-nb.info/gnd/300017111>,
-        <https://d-nb.info/gnd/30001712X>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-op-30-nr-1-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-op-30-nr-2-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/206833040>,
-        <https://viaf.org/viaf/219932557> ;
-    schema:subjectOf <https://performance.musiconn.de/event/vierzehnter-letzter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1925-04-14-19-00> .
+        <https://viaf.org/viaf/32182557> .
 

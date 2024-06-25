@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/muzyka-k-tragedii-sekspira-korol-lir-balakirev-milij-a> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/muzyka-k-tragedii-sekspira-korol-lir-balakirev-milij-a> ] .
 
-<https://performance.musiconn.de/work/muzyka-k-tragedii-sekspira-korol-lir-balakirev-milij-a> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/muzyka-k-tragedii-sekspira-korol-lir-balakirev-milij-a> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300583753>,
+        <https://performance.musiconn.de/work/muzyka-k-tragedii-sekspira-korol-lir-uvertjura-balakirev-milij-a>,
+        <https://viaf.org/viaf/181903219> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Schauspielmusik zu Shakespeares Tragödie; Es existiert ein Arrangement des Komponisten, komponiert 1902-1906." ;
     cto:elementOf n4c:E5320 ;
@@ -17,8 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/61730949> ;
     cto:title "Muzyka k tragedii Šekspira \"Korol' Lir\" (Balakirev, Milij A.)" ;
     cto:viaf <https://viaf.org/viaf/181903219>,
-        <https://viaf.org/viaf/61730949> ;
-    schema:includedComposition <https://d-nb.info/gnd/300583753>,
-        <https://performance.musiconn.de/work/muzyka-k-tragedii-sekspira-korol-lir-uvertjura-balakirev-milij-a>,
-        <https://viaf.org/viaf/181903219> .
+        <https://viaf.org/viaf/61730949> .
 

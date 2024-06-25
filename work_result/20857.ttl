@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/des-knaben-wunderhorn> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/des-knaben-wunderhorn> ] .
 
-<https://performance.musiconn.de/work/des-knaben-wunderhorn> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/des-knaben-wunderhorn> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1156656427>,
+        <https://performance.musiconn.de/work/lass-rauschen-lieb-lass-rauschen>,
+        <https://viaf.org/viaf/3084152502802410800007> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Zeit- und Sachbezug: Sammlung von Volksliedtexten, Hauptwerk der Romantik. - Inhalt: Anthologie in 3 Teilen, Liebes-, Soldaten-, Wander- und Kinderlieder vom Mittelalter bis ins 18. Jahrhundert. Anders als die Kindermärchen der Grimms arrangierten Arnim und Brentano die überlieferten Texte neu, d.h. sie passten die Mundart der zeitgenössischen Sprache an und überarbeiteten den Inhalt künstlerisch. Die Liedersammlung zielte auf ein an gepflegter Unterhaltung interessiertes gebildetes Publikum. - Überlieferung: Bd. 1 erschien 1805, vordatiert auf 1806, Bde. 2 und 3 folgten 1808, vermehrte (Teil-)Auflagen 1819, 1845-54." ;
     cto:elementOf n4c:E5320 ;
@@ -21,8 +24,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/40111596> ;
     cto:title "Des Knaben Wunderhorn" ;
     cto:viaf <https://viaf.org/viaf/3084152502802410800007>,
-        <https://viaf.org/viaf/40111596> ;
-    schema:includedComposition <https://d-nb.info/gnd/1156656427>,
-        <https://performance.musiconn.de/work/lass-rauschen-lieb-lass-rauschen>,
-        <https://viaf.org/viaf/3084152502802410800007> .
+        <https://viaf.org/viaf/40111596> .
 

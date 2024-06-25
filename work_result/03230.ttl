@@ -1,13 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/les-soirees-musicales-la-danza-rossini-gioachino> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/les-soirees-musicales-la-danza-rossini-gioachino> ] .
 
-<https://performance.musiconn.de/work/les-soirees-musicales-la-danza-rossini-gioachino> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/les-soirees-musicales-la-danza-rossini-gioachino> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/les-soirees-musicales-la-danza-arrangement-rossini-gioachino> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1854-03-21>,
+        <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1877-04-13>,
+        <https://performance.musiconn.de/event/viertes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1886-12-03-18-30>,
+        <https://performance.musiconn.de/event/zwoelftes-abonnement-concert-zweites-gewandhaus-leipzig-1887-01-13> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116290058X>,
@@ -26,10 +31,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Les soirées musicales. La danza (Rossini, Gioachino)" ;
     cto:viaf <https://viaf.org/viaf/3212158675960627500009>,
         <https://viaf.org/viaf/34644407>,
-        <https://viaf.org/viaf/67217364> ;
-    schema:includedComposition <https://performance.musiconn.de/work/les-soirees-musicales-la-danza-arrangement-rossini-gioachino> ;
-    schema:subjectOf <https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1854-03-21>,
-        <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1877-04-13>,
-        <https://performance.musiconn.de/event/viertes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1886-12-03-18-30>,
-        <https://performance.musiconn.de/event/zwoelftes-abonnement-concert-zweites-gewandhaus-leipzig-1887-01-13> .
+        <https://viaf.org/viaf/67217364> .
 

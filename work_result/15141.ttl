@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/i-rantzau-mascagni-pietro> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/i-rantzau-mascagni-pietro> ] .
 
-<https://performance.musiconn.de/work/i-rantzau-mascagni-pietro> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/i-rantzau-mascagni-pietro> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1182933688>,
+        <https://performance.musiconn.de/work/i-rantzau-vorspiel-mascagni-pietro>,
+        <https://viaf.org/viaf/1395155566454213380000> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Uraufführung 1892Oper in 4 AktenLibretto nach Erckmann-Chatrian" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/12492045> ;
     cto:title "I Rantzau (Mascagni, Pietro)" ;
     cto:viaf <https://viaf.org/viaf/12492045>,
-        <https://viaf.org/viaf/1395155566454213380000> ;
-    schema:includedComposition <https://d-nb.info/gnd/1182933688>,
-        <https://performance.musiconn.de/work/i-rantzau-vorspiel-mascagni-pietro>,
         <https://viaf.org/viaf/1395155566454213380000> .
 

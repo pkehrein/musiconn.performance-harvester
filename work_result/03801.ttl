@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/poeme-lyrique-glazunov-aleksandr-konstantinovic> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/poeme-lyrique-glazunov-aleksandr-konstantinovic> ] .
 
-<https://performance.musiconn.de/work/poeme-lyrique-glazunov-aleksandr-konstantinovic> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/poeme-lyrique-glazunov-aleksandr-konstantinovic> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/5-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1907-02-26-19-00>,
+        <https://performance.musiconn.de/event/drittes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1895-11-10-17-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118695312>,
@@ -18,7 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/14958284> ;
     cto:title "Poème lyrique (Glazunov, Aleksandr Konstantinovič)" ;
     cto:viaf <https://viaf.org/viaf/14958284>,
-        <https://viaf.org/viaf/158420977> ;
-    schema:subjectOf <https://performance.musiconn.de/event/5-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1907-02-26-19-00>,
-        <https://performance.musiconn.de/event/drittes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1895-11-10-17-30> .
+        <https://viaf.org/viaf/158420977> .
 

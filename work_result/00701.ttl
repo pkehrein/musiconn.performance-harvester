@@ -1,13 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/crucifixus-lotti-antonio> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/crucifixus-lotti-antonio> ] .
 
-<https://performance.musiconn.de/work/crucifixus-lotti-antonio> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/crucifixus-lotti-antonio> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1209286211>,
+        <https://d-nb.info/gnd/1209299461>,
+        <https://performance.musiconn.de/work/crucifixus-a-6-voci-c-moll-lotti-antonio>,
+        <https://performance.musiconn.de/work/crucifixus-a-8-voci-c-moll-lotti-antonio>,
+        <https://viaf.org/viaf/3298158858096644490007>,
+        <https://viaf.org/viaf/3307158858096644490000> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1916-03-18-14-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1086556658>,
@@ -26,12 +33,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/133844163>,
         <https://viaf.org/viaf/139053206>,
         <https://viaf.org/viaf/3298158858096644490007>,
-        <https://viaf.org/viaf/3307158858096644490000> ;
-    schema:includedComposition <https://d-nb.info/gnd/1209286211>,
-        <https://d-nb.info/gnd/1209299461>,
-        <https://performance.musiconn.de/work/crucifixus-a-6-voci-c-moll-lotti-antonio>,
-        <https://performance.musiconn.de/work/crucifixus-a-8-voci-c-moll-lotti-antonio>,
-        <https://viaf.org/viaf/3298158858096644490007>,
-        <https://viaf.org/viaf/3307158858096644490000> ;
-    schema:subjectOf <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1916-03-18-14-00> .
+        <https://viaf.org/viaf/3307158858096644490000> .
 

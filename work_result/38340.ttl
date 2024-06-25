@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/baal> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/baal> ] .
 
-<https://performance.musiconn.de/work/baal> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/baal> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/122950088X>,
+        <https://performance.musiconn.de/work/baal-1>,
+        <https://viaf.org/viaf/5576161634383910850002> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Produktion der BBC. - Erstsendung: 02.03.1982. - Laufzeit: 64 Minutenfreie Filmbearbeitung nach der 3. Fassung des Baal-Stoffes von Brecht mit David Bowie in der Hauptrolle des Baal machte das Stück im anglo-amerikanischen Raum bekannt (Kindler)" ;
     cto:elementOf n4c:E5320 ;
@@ -17,8 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/27487880> ;
     cto:title "Baal" ;
     cto:viaf <https://viaf.org/viaf/27487880>,
-        <https://viaf.org/viaf/5576161634383910850002> ;
-    schema:includedComposition <https://d-nb.info/gnd/122950088X>,
-        <https://performance.musiconn.de/work/baal-1>,
         <https://viaf.org/viaf/5576161634383910850002> .
 

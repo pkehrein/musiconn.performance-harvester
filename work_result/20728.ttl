@@ -1,13 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/miroirs-ravel-maurice> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/miroirs-ravel-maurice> ] .
 
-<https://performance.musiconn.de/work/miroirs-ravel-maurice> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/miroirs-ravel-maurice> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300125496>,
+        <https://d-nb.info/gnd/30012550X>,
+        <https://d-nb.info/gnd/300125518>,
+        <https://performance.musiconn.de/work/miroirs-noctuelles-ravel-maurice>,
+        <https://performance.musiconn.de/work/miroirs-oiseaux-tristes-ravel-maurice>,
+        <https://performance.musiconn.de/work/miroirs-une-barque-sur-locean-ravel-maurice>,
+        <https://viaf.org/viaf/125146462708127772139>,
+        <https://viaf.org/viaf/183547377>,
+        <https://viaf.org/viaf/183949904> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "5 Stücke" ;
     cto:elementOf n4c:E5320 ;
@@ -25,14 +34,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/183547377>,
         <https://viaf.org/viaf/183949904>,
         <https://viaf.org/viaf/2657495>,
-        <https://viaf.org/viaf/30669427> ;
-    schema:includedComposition <https://d-nb.info/gnd/300125496>,
-        <https://d-nb.info/gnd/30012550X>,
-        <https://d-nb.info/gnd/300125518>,
-        <https://performance.musiconn.de/work/miroirs-noctuelles-ravel-maurice>,
-        <https://performance.musiconn.de/work/miroirs-oiseaux-tristes-ravel-maurice>,
-        <https://performance.musiconn.de/work/miroirs-une-barque-sur-locean-ravel-maurice>,
-        <https://viaf.org/viaf/125146462708127772139>,
-        <https://viaf.org/viaf/183547377>,
-        <https://viaf.org/viaf/183949904> .
+        <https://viaf.org/viaf/30669427> .
 

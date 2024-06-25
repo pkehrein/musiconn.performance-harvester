@@ -1,13 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/knjaz-igor-borodin-aleksandr-porfirevic> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/knjaz-igor-borodin-aleksandr-porfirevic> ] .
 
-<https://performance.musiconn.de/work/knjaz-igor-borodin-aleksandr-porfirevic> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/knjaz-igor-borodin-aleksandr-porfirevic> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300023464>,
+        <https://d-nb.info/gnd/300212674>,
+        <https://performance.musiconn.de/work/knjaz-igor-arie-borodin-aleksandr-porfirevic>,
+        <https://performance.musiconn.de/work/knjaz-igor-ouvertuere-borodin-aleksandr-porfirevic>,
+        <https://performance.musiconn.de/work/knjaz-igor-poloveckaja-pljaska-s-chorom-borodin-aleksandr-porfirevic>,
+        <https://viaf.org/viaf/174266921>,
+        <https://viaf.org/viaf/214741965> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "1890 ist das Jahr der UraufführungVollendet und instrumentiert von Rimskij-Korsakov und GlazunovOper in 4 Akten mit Prolog" ;
     cto:elementOf n4c:E5320 ;
@@ -21,12 +28,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Knjazʹ Igorʹ (Borodin, Aleksandr Porfirʹevič)" ;
     cto:viaf <https://viaf.org/viaf/174266921>,
         <https://viaf.org/viaf/214741965>,
-        <https://viaf.org/viaf/32192773> ;
-    schema:includedComposition <https://d-nb.info/gnd/300023464>,
-        <https://d-nb.info/gnd/300212674>,
-        <https://performance.musiconn.de/work/knjaz-igor-arie-borodin-aleksandr-porfirevic>,
-        <https://performance.musiconn.de/work/knjaz-igor-ouvertuere-borodin-aleksandr-porfirevic>,
-        <https://performance.musiconn.de/work/knjaz-igor-poloveckaja-pljaska-s-chorom-borodin-aleksandr-porfirevic>,
-        <https://viaf.org/viaf/174266921>,
-        <https://viaf.org/viaf/214741965> .
+        <https://viaf.org/viaf/32192773> .
 

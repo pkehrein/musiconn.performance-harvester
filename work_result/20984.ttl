@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sonaten-klavier-op-14-beethoven-ludwig-van> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sonaten-klavier-op-14-beethoven-ludwig-van> ] .
 
-<https://performance.musiconn.de/work/sonaten-klavier-op-14-beethoven-ludwig-van> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sonaten-klavier-op-14-beethoven-ludwig-van> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300016603>,
+        <https://d-nb.info/gnd/30001662X>,
+        <https://performance.musiconn.de/work/sonaten-klavier-op-14-nr-1-beethoven-ludwig-van>,
+        <https://performance.musiconn.de/work/sonaten-klavier-op-14-nr-2-beethoven-ludwig-van>,
+        <https://viaf.org/viaf/215922025>,
+        <https://viaf.org/viaf/219160628> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Zwei Sonaten (Nr. 9 und Nr. 10)" ;
     cto:elementOf n4c:E5320 ;
@@ -21,11 +27,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Sonaten, Klavier, op. 14 (Beethoven, Ludwig van)" ;
     cto:viaf <https://viaf.org/viaf/215922025>,
         <https://viaf.org/viaf/219160628>,
-        <https://viaf.org/viaf/32182557> ;
-    schema:includedComposition <https://d-nb.info/gnd/300016603>,
-        <https://d-nb.info/gnd/30001662X>,
-        <https://performance.musiconn.de/work/sonaten-klavier-op-14-nr-1-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sonaten-klavier-op-14-nr-2-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/215922025>,
-        <https://viaf.org/viaf/219160628> .
+        <https://viaf.org/viaf/32182557> .
 

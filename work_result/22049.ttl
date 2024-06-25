@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/alte-weisen-wolf-hugo> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/alte-weisen-wolf-hugo> ] .
 
-<https://performance.musiconn.de/work/alte-weisen-wolf-hugo> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/alte-weisen-wolf-hugo> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300312911>,
+        <https://d-nb.info/gnd/300319371>,
+        <https://performance.musiconn.de/work/alte-weisen-tretet-ein-hoher-krieger-wolf-hugo>,
+        <https://performance.musiconn.de/work/alte-weisen-wie-glaenzt-der-helle-mond-wolf-hugo>,
+        <https://viaf.org/viaf/185726617>,
+        <https://viaf.org/viaf/207918966> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118634712>,
@@ -19,12 +25,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/120704169> ;
     cto:title "Alte Weisen (Wolf, Hugo)" ;
     cto:viaf <https://viaf.org/viaf/120704169>,
-        <https://viaf.org/viaf/185726617>,
-        <https://viaf.org/viaf/207918966> ;
-    schema:includedComposition <https://d-nb.info/gnd/300312911>,
-        <https://d-nb.info/gnd/300319371>,
-        <https://performance.musiconn.de/work/alte-weisen-tretet-ein-hoher-krieger-wolf-hugo>,
-        <https://performance.musiconn.de/work/alte-weisen-wie-glaenzt-der-helle-mond-wolf-hugo>,
         <https://viaf.org/viaf/185726617>,
         <https://viaf.org/viaf/207918966> .
 

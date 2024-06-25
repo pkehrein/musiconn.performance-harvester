@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/durchs-fenster-knorr-iwan> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/durchs-fenster-knorr-iwan> ] .
 
-<https://performance.musiconn.de/work/durchs-fenster-knorr-iwan> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/durchs-fenster-knorr-iwan> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1297433459>,
+        <https://performance.musiconn.de/work/durchs-fenster-ouvertuere-knorr-iwan>,
+        <https://viaf.org/viaf/3231169084850490310004> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Oper in 1 Akt; UA 1908 in Karlsruhe" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/27247829> ;
     cto:title "Durchs Fenster (Knorr, Iwan)" ;
     cto:viaf <https://viaf.org/viaf/27247829>,
-        <https://viaf.org/viaf/3231169084850490310004> ;
-    schema:includedComposition <https://d-nb.info/gnd/1297433459>,
-        <https://performance.musiconn.de/work/durchs-fenster-ouvertuere-knorr-iwan>,
         <https://viaf.org/viaf/3231169084850490310004> .
 

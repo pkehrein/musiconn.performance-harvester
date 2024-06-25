@@ -1,13 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/kanzonen-1608-gabrieli-giovanni> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/kanzonen-1608-gabrieli-giovanni> ] .
 
-<https://performance.musiconn.de/work/kanzonen-1608-gabrieli-giovanni> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/kanzonen-1608-gabrieli-giovanni> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/30005596X>,
+        <https://d-nb.info/gnd/300055978>,
+        <https://performance.musiconn.de/work/kanzonen-1608-la-spiritata-gabrieli-giovanni>,
+        <https://performance.musiconn.de/work/kanzonen-1608-sol-sol-la-sol-fa-mi-gabrieli-giovanni>,
+        <https://viaf.org/viaf/177028662>,
+        <https://viaf.org/viaf/199702413> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Werkzählung nach R. Charteris nicht maßgeblich" ;
     cto:elementOf n4c:E5320 ;
@@ -21,11 +27,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Kanzonen (1608) (Gabrieli, Giovanni)" ;
     cto:viaf <https://viaf.org/viaf/177028662>,
         <https://viaf.org/viaf/199702413>,
-        <https://viaf.org/viaf/37101750> ;
-    schema:includedComposition <https://d-nb.info/gnd/30005596X>,
-        <https://d-nb.info/gnd/300055978>,
-        <https://performance.musiconn.de/work/kanzonen-1608-la-spiritata-gabrieli-giovanni>,
-        <https://performance.musiconn.de/work/kanzonen-1608-sol-sol-la-sol-fa-mi-gabrieli-giovanni>,
-        <https://viaf.org/viaf/177028662>,
-        <https://viaf.org/viaf/199702413> .
+        <https://viaf.org/viaf/37101750> .
 

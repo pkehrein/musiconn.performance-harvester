@@ -1,13 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/der-vampyr-marschner-heinrich> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/der-vampyr-marschner-heinrich> ] .
 
-<https://performance.musiconn.de/work/der-vampyr-marschner-heinrich> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/der-vampyr-marschner-heinrich> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1272370011>,
+        <https://d-nb.info/gnd/300633890>,
+        <https://performance.musiconn.de/work/der-vampyr-arie-marschner-heinrich>,
+        <https://performance.musiconn.de/work/der-vampyr-ouvertuere-marschner-heinrich>,
+        <https://performance.musiconn.de/work/der-vampyr-wie-ein-schoener-fruehlingsmorgen-marschner-heinrich>,
+        <https://viaf.org/viaf/215937267>,
+        <https://viaf.org/viaf/8857166838932936200002> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/der-vampyr-koenigliches-hoftheater-dresden-1850-12-18-18-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Oper in 2 Akten; der Klavierausz. trägt die Opuszählung 42UA am 29.03.1828" ;
     cto:elementOf n4c:E5320 ;
@@ -21,13 +29,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:title "Der Vampyr (Marschner, Heinrich)" ;
     cto:viaf <https://viaf.org/viaf/215937267>,
         <https://viaf.org/viaf/54183923>,
-        <https://viaf.org/viaf/8857166838932936200002> ;
-    schema:includedComposition <https://d-nb.info/gnd/1272370011>,
-        <https://d-nb.info/gnd/300633890>,
-        <https://performance.musiconn.de/work/der-vampyr-arie-marschner-heinrich>,
-        <https://performance.musiconn.de/work/der-vampyr-ouvertuere-marschner-heinrich>,
-        <https://performance.musiconn.de/work/der-vampyr-wie-ein-schoener-fruehlingsmorgen-marschner-heinrich>,
-        <https://viaf.org/viaf/215937267>,
-        <https://viaf.org/viaf/8857166838932936200002> ;
-    schema:subjectOf <https://performance.musiconn.de/event/der-vampyr-koenigliches-hoftheater-dresden-1850-12-18-18-00> .
+        <https://viaf.org/viaf/8857166838932936200002> .
 

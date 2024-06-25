@@ -1,13 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/le-carnaval-des-animaux-saint-saens-camille> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/le-carnaval-des-animaux-saint-saens-camille> ] .
 
-<https://performance.musiconn.de/work/le-carnaval-des-animaux-saint-saens-camille> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/le-carnaval-des-animaux-saint-saens-camille> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1076929060>,
+        <https://d-nb.info/gnd/300133618>,
+        <https://performance.musiconn.de/work/le-carnaval-des-animaux-le-cygne-bearbeitung-saint-saens-camille>,
+        <https://performance.musiconn.de/work/le-carnaval-des-animaux-le-cygne-saint-saens-camille>,
+        <https://performance.musiconn.de/work/le-carnaval-des-animaux-lelephant-saint-saens-camille>,
+        <https://viaf.org/viaf/177405863>,
+        <https://viaf.org/viaf/743150808942419000002> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "umfasst 14 Stücke; es gibt eine Fassung für Klavier vierhändig" ;
     cto:elementOf n4c:E5320 ;
@@ -27,12 +34,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:viaf <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/177405863>,
         <https://viaf.org/viaf/743150808942419000002>,
-        <https://viaf.org/viaf/7575200> ;
-    schema:includedComposition <https://d-nb.info/gnd/1076929060>,
-        <https://d-nb.info/gnd/300133618>,
-        <https://performance.musiconn.de/work/le-carnaval-des-animaux-le-cygne-bearbeitung-saint-saens-camille>,
-        <https://performance.musiconn.de/work/le-carnaval-des-animaux-le-cygne-saint-saens-camille>,
-        <https://performance.musiconn.de/work/le-carnaval-des-animaux-lelephant-saint-saens-camille>,
-        <https://viaf.org/viaf/177405863>,
-        <https://viaf.org/viaf/743150808942419000002> .
+        <https://viaf.org/viaf/7575200> .
 

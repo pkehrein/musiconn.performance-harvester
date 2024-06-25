@@ -1,13 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/festsprueche-op-48-grell-eduard> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/festsprueche-op-48-grell-eduard> ] .
 
-<https://performance.musiconn.de/work/festsprueche-op-48-grell-eduard> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/festsprueche-op-48-grell-eduard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1195736916>,
+        <https://d-nb.info/gnd/1195737106>,
+        <https://performance.musiconn.de/work/festsprueche-op-48-frohlocket-ihr-voelker-der-erde-grell-eduard>,
+        <https://performance.musiconn.de/work/festsprueche-op-48-lasset-uns-frohlocken-grell-eduard> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "33 Festsprüche in 6 Heften" ;
     cto:elementOf n4c:E5320 ;
@@ -19,9 +23,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/118542001>,
         <https://viaf.org/viaf/31871241> ;
     cto:title "Festsprüche, op. 48 (Grell, Eduard)" ;
-    cto:viaf <https://viaf.org/viaf/31871241> ;
-    schema:includedComposition <https://d-nb.info/gnd/1195736916>,
-        <https://d-nb.info/gnd/1195737106>,
-        <https://performance.musiconn.de/work/festsprueche-op-48-frohlocket-ihr-voelker-der-erde-grell-eduard>,
-        <https://performance.musiconn.de/work/festsprueche-op-48-lasset-uns-frohlocken-grell-eduard> .
+    cto:viaf <https://viaf.org/viaf/31871241> .
 

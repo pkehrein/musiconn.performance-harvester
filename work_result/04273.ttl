@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/fantasie-und-fuge-orgel-op-135b-d-moll-reger-max> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/fantasie-und-fuge-orgel-op-135b-d-moll-reger-max> ] .
 
-<https://performance.musiconn.de/work/fantasie-und-fuge-orgel-op-135b-d-moll-reger-max> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/fantasie-und-fuge-orgel-op-135b-d-moll-reger-max> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/konzert-dresdener-kreuzchor-kreuzkirche-lauban-1933-09-04-20-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118598988>,
@@ -19,6 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/person/kunze-wilhelm-1895>,
         <https://viaf.org/viaf/34644344> ;
     cto:title "Fantasie und Fuge, Orgel, op. 135b (d-Moll) (Reger, Max)" ;
-    cto:viaf <https://viaf.org/viaf/34644344> ;
-    schema:subjectOf <https://performance.musiconn.de/event/konzert-dresdener-kreuzchor-kreuzkirche-lauban-1933-09-04-20-00> .
+    cto:viaf <https://viaf.org/viaf/34644344> .
 

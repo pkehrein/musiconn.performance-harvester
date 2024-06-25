@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/trios-violine-viola-violoncello-op-77b-a-moll-reger-max> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/trios-violine-viola-violoncello-op-77b-a-moll-reger-max> ] .
 
-<https://performance.musiconn.de/work/trios-violine-viola-violoncello-op-77b-a-moll-reger-max> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/trios-violine-viola-violoncello-op-77b-a-moll-reger-max> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/trios-violine-viola-violoncello-op-77b-a-moll-agitato-reger-max>,
+        <https://performance.musiconn.de/work/trios-violine-viola-violoncello-op-77b-a-moll-larghetto-reger-max>,
+        <https://performance.musiconn.de/work/trios-violine-viola-violoncello-op-77b-a-moll-sostenuto-allegro-reger-max> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10185429-8>,
@@ -32,8 +35,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/135896526>,
         <https://viaf.org/viaf/142053100>,
         <https://viaf.org/viaf/145566004>,
-        <https://viaf.org/viaf/34644344> ;
-    schema:includedComposition <https://performance.musiconn.de/work/trios-violine-viola-violoncello-op-77b-a-moll-agitato-reger-max>,
-        <https://performance.musiconn.de/work/trios-violine-viola-violoncello-op-77b-a-moll-larghetto-reger-max>,
-        <https://performance.musiconn.de/work/trios-violine-viola-violoncello-op-77b-a-moll-sostenuto-allegro-reger-max> .
+        <https://viaf.org/viaf/34644344> .
 

@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/musikalische-andachten-teil-1-herr-jesu-christ-hammerschmidt-andreas> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/musikalische-andachten-teil-1-herr-jesu-christ-hammerschmidt-andreas> ] .
 
-<https://performance.musiconn.de/work/musikalische-andachten-teil-1-herr-jesu-christ-hammerschmidt-andreas> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/musikalische-andachten-teil-1-herr-jesu-christ-hammerschmidt-andreas> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/musikalische-andachten-teil-1-herr-jesu-christ-arrangiert-hammerschmidt-andreas> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/119309025>,
@@ -16,6 +17,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/119309025>,
         <https://viaf.org/viaf/196372> ;
     cto:title "Musikalische Andachten, Teil 1. Herr Jesu Christ (Hammerschmidt, Andreas)" ;
-    cto:viaf <https://viaf.org/viaf/196372> ;
-    schema:includedComposition <https://performance.musiconn.de/work/musikalische-andachten-teil-1-herr-jesu-christ-arrangiert-hammerschmidt-andreas> .
+    cto:viaf <https://viaf.org/viaf/196372> .
 

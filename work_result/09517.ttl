@@ -1,13 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/jocelyn-godard-benjamin> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/jocelyn-godard-benjamin> ] .
 
-<https://performance.musiconn.de/work/jocelyn-godard-benjamin> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/jocelyn-godard-benjamin> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300060440>,
+        <https://performance.musiconn.de/work/jocelyn-oh-ne-teveille-pas-encore-fassung-violoncello-klavier-godard-benjamin>,
+        <https://performance.musiconn.de/work/jocelyn-oh-ne-teveille-pas-encore-godard-benjamin>,
+        <https://viaf.org/viaf/177384991> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "1888 ist das Jahr der Uraufführung; 4 Akte" ;
     cto:elementOf n4c:E5320 ;
@@ -17,9 +21,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
     cto:relatedPerson <https://d-nb.info/gnd/116695110> ;
     cto:title "Jocelyn (Godard, Benjamin)" ;
-    cto:viaf <https://viaf.org/viaf/177384991> ;
-    schema:includedComposition <https://d-nb.info/gnd/300060440>,
-        <https://performance.musiconn.de/work/jocelyn-oh-ne-teveille-pas-encore-fassung-violoncello-klavier-godard-benjamin>,
-        <https://performance.musiconn.de/work/jocelyn-oh-ne-teveille-pas-encore-godard-benjamin>,
-        <https://viaf.org/viaf/177384991> .
+    cto:viaf <https://viaf.org/viaf/177384991> .
 

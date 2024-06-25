@@ -1,13 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/konzerte-violoncello-orchester-nr-3-op-46-e-moll-gruetzmacher-friedrich> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/konzerte-violoncello-orchester-nr-3-op-46-e-moll-gruetzmacher-friedrich> ] .
 
-<https://performance.musiconn.de/work/konzerte-violoncello-orchester-nr-3-op-46-e-moll-gruetzmacher-friedrich> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/konzerte-violoncello-orchester-nr-3-op-46-e-moll-gruetzmacher-friedrich> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:subjectOf <https://performance.musiconn.de/event/achtes-abonnement-concert-erstes-gewandhaus-leipzig-1858-12-02>,
+        <https://performance.musiconn.de/event/hauptpruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1876-06-01-18-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Bei MGG online ist das Violoncellokonzert in E-Dur angegeben (Stand 30.05.2018). Dies ist ein Schreibfehler." ;
     cto:elementOf n4c:E5320 ;
@@ -21,7 +23,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/76581551> ;
     cto:title "Konzerte, Violoncello, Orchester, Nr. 3, op. 46 (e-Moll) (Grützmacher, Friedrich)" ;
     cto:viaf <https://viaf.org/viaf/136181816>,
-        <https://viaf.org/viaf/76581551> ;
-    schema:subjectOf <https://performance.musiconn.de/event/achtes-abonnement-concert-erstes-gewandhaus-leipzig-1858-12-02>,
-        <https://performance.musiconn.de/event/hauptpruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1876-06-01-18-00> .
+        <https://viaf.org/viaf/76581551> .
 

@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/fest-buss-und-danklieder-hammerschmidt-andreas> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/fest-buss-und-danklieder-hammerschmidt-andreas> ] .
 
-<https://performance.musiconn.de/work/fest-buss-und-danklieder-hammerschmidt-andreas> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/fest-buss-und-danklieder-hammerschmidt-andreas> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1182783597>,
+        <https://performance.musiconn.de/work/fest-buss-und-danklieder-ach-wie-fluechtig-ach-wie-nichtig-hammerschmidt-andreas>,
+        <https://viaf.org/viaf/336155566475713380006> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1182783597>,
@@ -18,8 +21,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/196372> ;
     cto:title "Fest-, Buß- und Danklieder (Hammerschmidt, Andreas)" ;
     cto:viaf <https://viaf.org/viaf/196372>,
-        <https://viaf.org/viaf/336155566475713380006> ;
-    schema:includedComposition <https://d-nb.info/gnd/1182783597>,
-        <https://performance.musiconn.de/work/fest-buss-und-danklieder-ach-wie-fluechtig-ach-wie-nichtig-hammerschmidt-andreas>,
         <https://viaf.org/viaf/336155566475713380006> .
 

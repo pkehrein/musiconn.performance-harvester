@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/faniska-cherubini-luigi> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/faniska-cherubini-luigi> ] .
 
-<https://performance.musiconn.de/work/faniska-cherubini-luigi> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/faniska-cherubini-luigi> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/300310048>,
+        <https://performance.musiconn.de/work/faniska-ouvertuere-cherubini-luigi>,
+        <https://viaf.org/viaf/175208901> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Oper in 3 Akten. Libretto: J. von Sonnleithner" ;
     cto:elementOf n4c:E5320 ;
@@ -17,8 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/88663809> ;
     cto:title "Faniska (Cherubini, Luigi)" ;
     cto:viaf <https://viaf.org/viaf/175208901>,
-        <https://viaf.org/viaf/88663809> ;
-    schema:includedComposition <https://d-nb.info/gnd/300310048>,
-        <https://performance.musiconn.de/work/faniska-ouvertuere-cherubini-luigi>,
-        <https://viaf.org/viaf/175208901> .
+        <https://viaf.org/viaf/88663809> .
 

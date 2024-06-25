@@ -4,12 +4,11 @@ import os
 import re
 import time
 from argparse import ArgumentParser
-from datetime import date
 
 import requests
 from rdflib import Graph
 from rdflib import URIRef, Literal, Namespace, BNode
-from rdflib.namespace import RDF, SDO, XSD
+from rdflib.namespace import RDF
 
 location_auth = {}
 series_auth = {}
@@ -25,6 +24,7 @@ save_meta = False
 N4C = Namespace("https://nfdi4culture.de/id/")
 CTO = Namespace("https://nfdi4culture.de/ontology#")
 NFDICORE = Namespace("https://nfdi.fiz-karlsruhe.de/ontology#")
+SCHEMA = Namespace("http://schema.org/")
 
 
 def concat_files():
@@ -58,7 +58,7 @@ def remove_header(content):
 
 
 def check_file(content):
-    check = Graph()
+    check = init_graph()
     check.parse(data=content, format='turtle')
 
 
@@ -68,6 +68,7 @@ def init_graph():
     graph.bind("cto", CTO)
     graph.bind("nfdicore", NFDICORE)
     graph.bind("n4c", N4C)
+    graph.bind("schema", SCHEMA)
     return graph
 
 
@@ -76,9 +77,9 @@ def add_events(events, file_path, start_index):
         graph = init_graph()
         event_id = URIRef(event['schema:event']['@id'])
         bn = BNode()
-        graph.add((N4C.E5320, SDO.dataFeedElement, bn))
-        graph.add((bn, RDF.type, SDO.DataFeedItem))
-        graph.add((bn, SDO.item, event_id))
+        graph.add((N4C.E5320, SCHEMA.dataFeedElement, bn))
+        graph.add((bn, RDF.type, SCHEMA.DataFeedItem))
+        graph.add((bn, SCHEMA.item, event_id))
         graph.add((event_id, RDF.type, CTO.DataFeedElement))
         graph.add((event_id, RDF.type, NFDICORE.Event))
         graph.add((event_id, CTO.elementType, URIRef("http://vocab.getty.edu/aat/300069451")))
@@ -165,7 +166,6 @@ def add_events(events, file_path, start_index):
                     if works['@id'][work]['gnd'] is None and works['@id'][work]['viaf'] is None:
                         graph.add((event_id, CTO.relatedItem, URIRef(work)))
         turtle_data = graph.serialize(format='turtle')
-        check_file(turtle_data)
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(f"{file_path}{str(start_index + 1).zfill(5)}.ttl", 'w', encoding='utf-8') as file:
             file.write(turtle_data)
@@ -178,11 +178,11 @@ def add_works(works, file_path, start_index):
         graph = init_graph()
         work_id = URIRef(work['schema:MusicComposition']['@id'])
         bn = BNode()
-        graph.add((N4C.E5320, SDO.dataFeedElement, bn))
-        graph.add((bn, RDF.type, SDO.DataFeedItem))
-        graph.add((bn, SDO.item, work_id))
+        graph.add((N4C.E5320, SCHEMA.dataFeedElement, bn))
+        graph.add((bn, RDF.type, SCHEMA.DataFeedItem))
+        graph.add((bn, SCHEMA.item, work_id))
         graph.add((work_id, RDF.type, CTO.DataFeedElement))
-        graph.add((work_id, RDF.type, SDO.MusicComposition))
+        graph.add((work_id, RDF.type, SCHEMA.MusicComposition))
         graph.add((work_id, NFDICORE.publisher, URIRef("https://nfdi4culture.de/id/E1841")))
         graph.add((work_id, CTO.elementOf, URIRef("https://nfdi4culture.de/id/E5320")))
         graph.add((work_id, CTO.title, Literal(work['schema:MusicComposition']['schema:name'])))
@@ -218,13 +218,13 @@ def add_works(works, file_path, start_index):
         compositions = work['schema:MusicComposition']['schema:includedComposition']
         for comp_index, composition in enumerate(compositions):
             for composition_item in compositions[comp_index]['@id']:
-                graph.add((work_id, SDO.includedComposition, URIRef(composition_item)))
+                graph.add((work_id, SCHEMA.includedComposition, URIRef(composition_item)))
                 if compositions[comp_index]['@id'][composition_item]['gnd'] is not None:
-                    graph.add((work_id, SDO.includedComposition,
+                    graph.add((work_id, SCHEMA.includedComposition,
                                URIRef(compositions[comp_index]['@id'][composition_item]['gnd'])))
                     graph.add((work_id, CTO.gnd, URIRef(compositions[comp_index]['@id'][composition_item]['gnd'])))
                 if compositions[comp_index]['@id'][composition_item]['viaf'] is not None:
-                    graph.add((work_id, SDO.includedComposition,
+                    graph.add((work_id, SCHEMA.includedComposition,
                                URIRef(compositions[comp_index]['@id'][composition_item]['viaf'])))
                     graph.add((work_id, CTO.viaf, URIRef(compositions[comp_index]['@id'][composition_item]['viaf'])))
 
@@ -232,12 +232,12 @@ def add_works(works, file_path, start_index):
         if events is not None:
             for event in events:
                 for event_item in event['@id']:
-                    graph.add((work_id, SDO.subjectOf, URIRef(event_item)))
+                    graph.add((work_id, SCHEMA.subjectOf, URIRef(event_item)))
                     if event['@id'][event_item]['gnd'] is not None:
-                        graph.add((work_id, SDO.subjectOf, URIRef(event['@id'][event_item]['gnd'])))
+                        graph.add((work_id, SCHEMA.subjectOf, URIRef(event['@id'][event_item]['gnd'])))
                         graph.add((work_id, CTO.gnd, URIRef(event['@id'][event_item]['gnd'])))
                     if event['@id'][event_item]['viaf'] is not None:
-                        graph.add((work_id, SDO.subjectOf, URIRef(event['@id'][event_item]['viaf'])))
+                        graph.add((work_id, SCHEMA.subjectOf, URIRef(event['@id'][event_item]['viaf'])))
                         graph.add((work_id, CTO.viaf, URIRef(event['@id'][event_item]['viaf'])))
 
         contributors = work['schema:MusicComposition']['schema:contributor']
@@ -264,7 +264,6 @@ def add_works(works, file_path, start_index):
                         if contributor['@id'][group]['gnd'] is None and contributor['@id'][group]['viaf'] is None:
                             graph.add((work_id, CTO.relatedOrganization, URIRef(group)))
         turtle_data = graph.serialize(format='turtle')
-        check_file(turtle_data)
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(f"{file_path}{str(start_index + 1).zfill(5)}.ttl", 'w', encoding='utf-8') as file:
             file.write(turtle_data)

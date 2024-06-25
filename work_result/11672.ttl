@@ -1,13 +1,14 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/six-etudes-de-salon-op-77-wallace-william-vincent> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/six-etudes-de-salon-op-77-wallace-william-vincent> ] .
 
-<https://performance.musiconn.de/work/six-etudes-de-salon-op-77-wallace-william-vincent> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/six-etudes-de-salon-op-77-wallace-william-vincent> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/six-etudes-de-salon-op-77-la-rapidite-wallace-william-vincent> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "I. La GrâceII. La RapiditéIII. La ForceIV. Il SostenutoV. La ClassiqueVI. Les Arpèges" ;
     cto:elementOf n4c:E5320 ;
@@ -17,6 +18,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/119555875>,
         <https://viaf.org/viaf/49423983> ;
     cto:title "Six Études de Salon, op. 77 (Wallace, William Vincent)" ;
-    cto:viaf <https://viaf.org/viaf/49423983> ;
-    schema:includedComposition <https://performance.musiconn.de/work/six-etudes-de-salon-op-77-la-rapidite-wallace-william-vincent> .
+    cto:viaf <https://viaf.org/viaf/49423983> .
 

@@ -1,13 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/ezio-haendel-georg-friedrich> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/ezio-haendel-georg-friedrich> ] .
 
-<https://performance.musiconn.de/work/ezio-haendel-georg-friedrich> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/ezio-haendel-georg-friedrich> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1171963793>,
+        <https://performance.musiconn.de/work/ezio-arie-fuer-bariton-haendel-georg-friedrich>,
+        <https://performance.musiconn.de/work/ezio-caro-padre-haendel-georg-friedrich>,
+        <https://performance.musiconn.de/work/ezio-nasce-al-bosco-in-rozza-cuna-haendel-georg-friedrich>,
+        <https://performance.musiconn.de/work/ezio-rezitativ-und-arie-des-varo-haendel-georg-friedrich>,
+        <https://performance.musiconn.de/work/ezio-tutta-racolta-ancor-haendel-georg-friedrich>,
+        <https://viaf.org/viaf/2503154329455526970007> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Dramma per musica in 3 Akten" ;
     cto:elementOf n4c:E5320 ;
@@ -17,12 +24,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/5126950> ;
     cto:title "Ezio (Händel, Georg Friedrich)" ;
     cto:viaf <https://viaf.org/viaf/2503154329455526970007>,
-        <https://viaf.org/viaf/5126950> ;
-    schema:includedComposition <https://d-nb.info/gnd/1171963793>,
-        <https://performance.musiconn.de/work/ezio-arie-fuer-bariton-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/ezio-caro-padre-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/ezio-nasce-al-bosco-in-rozza-cuna-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/ezio-rezitativ-und-arie-des-varo-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/ezio-tutta-racolta-ancor-haendel-georg-friedrich>,
-        <https://viaf.org/viaf/2503154329455526970007> .
+        <https://viaf.org/viaf/5126950> .
 

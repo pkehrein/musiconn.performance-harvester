@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/medea-in-corinto-mayr-johann-simon> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/medea-in-corinto-mayr-johann-simon> ] .
 
-<https://performance.musiconn.de/work/medea-in-corinto-mayr-johann-simon> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/medea-in-corinto-mayr-johann-simon> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://d-nb.info/gnd/1193607272>,
+        <https://performance.musiconn.de/work/medea-in-corinto-ouvertuere-mayr-johann-simon>,
+        <https://viaf.org/viaf/408156762886041300003> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Melodrama in 2 Akten; 1813 ist das Jahr der Uraufführung in Neapel" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/54185531> ;
     cto:title "Medea in Corinto (Mayr, Johann Simon)" ;
     cto:viaf <https://viaf.org/viaf/408156762886041300003>,
-        <https://viaf.org/viaf/54185531> ;
-    schema:includedComposition <https://d-nb.info/gnd/1193607272>,
-        <https://performance.musiconn.de/work/medea-in-corinto-ouvertuere-mayr-johann-simon>,
-        <https://viaf.org/viaf/408156762886041300003> .
+        <https://viaf.org/viaf/54185531> .
 

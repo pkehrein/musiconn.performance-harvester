@@ -1,13 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/catulli-carmina-orff-carl> ] .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/catulli-carmina-orff-carl> ] .
 
-<https://performance.musiconn.de/work/catulli-carmina-orff-carl> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/catulli-carmina-orff-carl> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    schema1:includedComposition <https://performance.musiconn.de/work/catulli-carmina-miser-catulle-orff-carl>,
+        <https://performance.musiconn.de/work/catulli-carmina-odi-et-amo-orff-carl>,
+        <https://performance.musiconn.de/work/catulli-carmina-vivamus-mea-lesbia-orff-carl> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Szenische Kantate nach Gedichten des römischen Schriftstellers Catull in 3 Akten" ;
     cto:elementOf n4c:E5320 ;
@@ -31,8 +34,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/31147266870435482326>,
         <https://viaf.org/viaf/79918949>,
         <https://viaf.org/viaf/80028344>,
-        <https://viaf.org/viaf/8537476> ;
-    schema:includedComposition <https://performance.musiconn.de/work/catulli-carmina-miser-catulle-orff-carl>,
-        <https://performance.musiconn.de/work/catulli-carmina-odi-et-amo-orff-carl>,
-        <https://performance.musiconn.de/work/catulli-carmina-vivamus-mea-lesbia-orff-carl> .
+        <https://viaf.org/viaf/8537476> .
 
