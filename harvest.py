@@ -25,6 +25,7 @@ N4C = Namespace("https://nfdi4culture.de/id/")
 CTO = Namespace("https://nfdi4culture.de/ontology#")
 NFDICORE = Namespace("https://nfdi.fiz-karlsruhe.de/ontology#")
 SCHEMA = Namespace("http://schema.org/")
+RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 
 
 def concat_files():
@@ -85,7 +86,7 @@ def add_events(events, file_path, start_index):
         graph.add((event_id, CTO.elementType, URIRef("http://vocab.getty.edu/aat/300069451")))
         graph.add((event_id, NFDICORE.publisher, URIRef("https://nfdi4culture.de/id/E1841")))
         graph.add((event_id, CTO.elementOf, URIRef("https://nfdi4culture.de/id/E5320")))
-        graph.add((event_id, CTO.title, Literal(event['schema:event']['schema:name'])))
+        graph.add((event_id, RDFS.label, Literal(event['schema:event']['schema:name'])))
         if event['schema:event']['schema:temporalCoverage']['@value'] is not None:
             eventdate = event['schema:event']['schema:temporalCoverage']['@value']
             startdate = eventdate[:eventdate.index('/')]
@@ -185,7 +186,7 @@ def add_works(works, file_path, start_index):
         graph.add((work_id, RDF.type, SCHEMA.MusicComposition))
         graph.add((work_id, NFDICORE.publisher, URIRef("https://nfdi4culture.de/id/E1841")))
         graph.add((work_id, CTO.elementOf, URIRef("https://nfdi4culture.de/id/E5320")))
-        graph.add((work_id, CTO.title, Literal(work['schema:MusicComposition']['schema:name'])))
+        graph.add((work_id, RDFS.label, Literal(work['schema:MusicComposition']['schema:name'])))
 
         composers = work['schema:MusicComposition']['schema:composer']
         for composer in composers:
