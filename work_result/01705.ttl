@@ -1,15 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-9-op-55-d-moll-adagio-spohr-louis> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-9-op-55-d-moll-adagio-spohr-louis> ] .
 
-<https://performance.musiconn.de/work/konzerte-violine-orchester-nr-9-op-55-d-moll-adagio-spohr-louis> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/konzerte-violine-orchester-nr-9-op-55-d-moll-adagio-spohr-louis> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Konzerte, Violine, Orchester, Nr. 9, op. 55 (d-Moll). Adagio (Spohr, Louis)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/12-museums-concert-grosser-konzertsaal-frankfurt-a-m-1881-03-18-18-30>,
+        <https://performance.musiconn.de/event/2-museums-concert-grosser-konzertsaal-frankfurt-a-m-1865-10-27-18-30>,
+        <https://performance.musiconn.de/event/4-museums-concert-grosser-konzertsaal-frankfurt-a-m-1876-11-24-18-30>,
+        <https://performance.musiconn.de/event/concert-mit-orchester-von-margarete-stern-gewerbehaus-dresden-gewerbehaus-saal-1889-11-20-19-00>,
+        <https://performance.musiconn.de/event/zweites-museums-concert-grosser-konzertsaal-frankfurt-a-m-1885-10-23-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1045527-9>,
@@ -32,15 +37,9 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/8413148122912495200001> ;
     cto:relatedPerson <https://d-nb.info/gnd/118616366>,
         <https://viaf.org/viaf/54210590> ;
-    cto:title "Konzerte, Violine, Orchester, Nr. 9, op. 55 (d-Moll). Adagio (Spohr, Louis)" ;
     cto:viaf <https://viaf.org/viaf/156570451>,
         <https://viaf.org/viaf/161076872>,
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/54210590>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    schema:subjectOf <https://performance.musiconn.de/event/12-museums-concert-grosser-konzertsaal-frankfurt-a-m-1881-03-18-18-30>,
-        <https://performance.musiconn.de/event/2-museums-concert-grosser-konzertsaal-frankfurt-a-m-1865-10-27-18-30>,
-        <https://performance.musiconn.de/event/4-museums-concert-grosser-konzertsaal-frankfurt-a-m-1876-11-24-18-30>,
-        <https://performance.musiconn.de/event/concert-mit-orchester-von-margarete-stern-gewerbehaus-dresden-gewerbehaus-saal-1889-11-20-19-00>,
-        <https://performance.musiconn.de/event/zweites-museums-concert-grosser-konzertsaal-frankfurt-a-m-1885-10-23-18-30> .
+        <https://viaf.org/viaf/8413148122912495200001> .
 

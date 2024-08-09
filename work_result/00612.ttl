@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/fantasie-und-fuge-orgel-bwv-537-c-moll-bach-johann-sebastian> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/fantasie-und-fuge-orgel-bwv-537-c-moll-bach-johann-sebastian> ] .
 
-<https://performance.musiconn.de/work/fantasie-und-fuge-orgel-bwv-537-c-moll-bach-johann-sebastian> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/fantasie-und-fuge-orgel-bwv-537-c-moll-bach-johann-sebastian> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Fantasie und Fuge, Orgel, BWV 537 (c-Moll) (Bach, Johann Sebastian)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/fantasie-und-fuge-orgel-bwv-537-c-moll-fantasie-bach-johann-sebastian> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1916-03-18-14-00>,
+        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1934-03-03-18-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Entstehungszeit unbekannt" ;
     cto:elementOf n4c:E5320 ;
@@ -24,10 +27,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/person/hoepner-paul>,
         <https://viaf.org/viaf/12304462>,
         <https://viaf.org/viaf/143854617> ;
-    cto:title "Fantasie und Fuge, Orgel, BWV 537 (c-Moll) (Bach, Johann Sebastian)" ;
     cto:viaf <https://viaf.org/viaf/12304462>,
-        <https://viaf.org/viaf/143854617> ;
-    schema:includedComposition <https://performance.musiconn.de/work/fantasie-und-fuge-orgel-bwv-537-c-moll-fantasie-bach-johann-sebastian> ;
-    schema:subjectOf <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1916-03-18-14-00>,
-        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1934-03-03-18-00> .
+        <https://viaf.org/viaf/143854617> .
 

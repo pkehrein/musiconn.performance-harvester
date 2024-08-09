@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/concertino-fuer-horn-und-orgel-op-39-huettel-walter> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/concertino-fuer-horn-und-orgel-op-39-huettel-walter> ] .
 
-<https://performance.musiconn.de/work/concertino-fuer-horn-und-orgel-op-39-huettel-walter> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/concertino-fuer-horn-und-orgel-op-39-huettel-walter> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Concertino für Horn und Orgel, op. 39 (Hüttel, Walter)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1229448705>,
+        <https://performance.musiconn.de/work/sinfonia-huettel-walter>,
+        <https://viaf.org/viaf/6688161634387210850002> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/109228758>,
@@ -18,10 +21,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4423016-3> ;
     cto:relatedPerson <https://d-nb.info/gnd/109228758>,
         <https://viaf.org/viaf/25166503> ;
-    cto:title "Concertino für Horn und Orgel, op. 39 (Hüttel, Walter)" ;
     cto:viaf <https://viaf.org/viaf/25166503>,
-        <https://viaf.org/viaf/6688161634387210850002> ;
-    schema:includedComposition <https://d-nb.info/gnd/1229448705>,
-        <https://performance.musiconn.de/work/sinfonia-huettel-walter>,
         <https://viaf.org/viaf/6688161634387210850002> .
 

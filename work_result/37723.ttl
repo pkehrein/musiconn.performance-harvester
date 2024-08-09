@@ -1,15 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/waldszenen-1986-wolschina-reinhard> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/waldszenen-1986-wolschina-reinhard> ] .
 
-<https://performance.musiconn.de/work/waldszenen-1986-wolschina-reinhard> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/waldszenen-1986-wolschina-reinhard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Waldszenen 1986 (Wolschina, Reinhard)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/103792228>,
@@ -18,7 +18,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://d-nb.info/gnd/134816781>,
         <https://viaf.org/viaf/119678110>,
         <https://viaf.org/viaf/4812437> ;
-    cto:title "Waldszenen 1986 (Wolschina, Reinhard)" ;
     cto:viaf <https://viaf.org/viaf/119678110>,
         <https://viaf.org/viaf/4812437> .
 

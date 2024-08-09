@@ -1,15 +1,23 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/manfred-schumann-robert> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/manfred-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/manfred-schumann-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/manfred-schumann-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Manfred (Schumann, Robert)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300145837>,
+        <https://performance.musiconn.de/work/manfred-fassung-r-pohl-schumann-robert>,
+        <https://performance.musiconn.de/work/manfred-ouvertuere-schumann-robert>,
+        <https://viaf.org/viaf/182666899> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/10-museums-concert-grosser-konzertsaal-frankfurt-a-m-1872-02-16-18-30>,
+        <https://performance.musiconn.de/event/11-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-03-05-18-30>,
+        <https://performance.musiconn.de/event/manfred-semperoper-dresden-1907-03-15-19-30>,
+        <https://performance.musiconn.de/event/neuntes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1897-02-19-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Dramatisches Gedicht in drei Abteilungen mit Musik; Ouvertüre für großes Orchester" ;
     cto:elementOf n4c:E5320 ;
@@ -78,7 +86,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/435144783046765467239> ;
     cto:relatedPerson <https://d-nb.info/gnd/118611666>,
         <https://viaf.org/viaf/7575259> ;
-    cto:title "Manfred (Schumann, Robert)" ;
     cto:viaf <https://viaf.org/viaf/122700506>,
         <https://viaf.org/viaf/122707566>,
         <https://viaf.org/viaf/128872437>,
@@ -98,13 +105,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/38146822017907380456>,
         <https://viaf.org/viaf/435144783046765467239>,
-        <https://viaf.org/viaf/7575259> ;
-    schema:includedComposition <https://d-nb.info/gnd/300145837>,
-        <https://performance.musiconn.de/work/manfred-fassung-r-pohl-schumann-robert>,
-        <https://performance.musiconn.de/work/manfred-ouvertuere-schumann-robert>,
-        <https://viaf.org/viaf/182666899> ;
-    schema:subjectOf <https://performance.musiconn.de/event/10-museums-concert-grosser-konzertsaal-frankfurt-a-m-1872-02-16-18-30>,
-        <https://performance.musiconn.de/event/11-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-03-05-18-30>,
-        <https://performance.musiconn.de/event/manfred-semperoper-dresden-1907-03-15-19-30>,
-        <https://performance.musiconn.de/event/neuntes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1897-02-19-19-00> .
+        <https://viaf.org/viaf/7575259> .
 

@@ -1,15 +1,25 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gesaenge-op-5-franz-robert> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gesaenge-op-5-franz-robert> ] .
 
-<https://performance.musiconn.de/work/gesaenge-op-5-franz-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gesaenge-op-5-franz-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Gesänge, op. 5 (Franz, Robert)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1225729084>,
+        <https://d-nb.info/gnd/1225729394>,
+        <https://d-nb.info/gnd/1225730481>,
+        <https://d-nb.info/gnd/1225733146>,
+        <https://performance.musiconn.de/work/gesaenge-op-5-aus-meinen-grossen-schmerzen-franz-robert>,
+        <https://performance.musiconn.de/work/gesaenge-op-5-genesung-franz-robert>,
+        <https://performance.musiconn.de/work/gesaenge-op-5-gute-nacht-franz-robert>,
+        <https://performance.musiconn.de/work/gesaenge-op-5-liebchen-ist-da-franz-robert>,
+        <https://viaf.org/viaf/182249894>,
+        <https://viaf.org/viaf/1909161211387240070007> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "12 Gesänge: Aus meinen großen Schmerzen ; Liebchen ist da ; Auf dem Meere ; Will über Nacht wohl übers Tal ; Mädchen mit dem roten Mündchen ; Ich hab' in deinem Auge ; Gute Nacht ; Ich lobe mir die Vöglelein ; Stiller Abend ; Erinnerung ; Hör ich das Liedchen klingen ; Genesung" ;
     cto:elementOf n4c:E5320 ;
@@ -20,18 +30,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://d-nb.info/gnd/1225733146> ;
     cto:relatedPerson <https://d-nb.info/gnd/118702955>,
         <https://viaf.org/viaf/27110440> ;
-    cto:title "Gesänge, op. 5 (Franz, Robert)" ;
     cto:viaf <https://viaf.org/viaf/182249894>,
         <https://viaf.org/viaf/1909161211387240070007>,
-        <https://viaf.org/viaf/27110440> ;
-    schema:includedComposition <https://d-nb.info/gnd/1225729084>,
-        <https://d-nb.info/gnd/1225729394>,
-        <https://d-nb.info/gnd/1225730481>,
-        <https://d-nb.info/gnd/1225733146>,
-        <https://performance.musiconn.de/work/gesaenge-op-5-aus-meinen-grossen-schmerzen-franz-robert>,
-        <https://performance.musiconn.de/work/gesaenge-op-5-genesung-franz-robert>,
-        <https://performance.musiconn.de/work/gesaenge-op-5-gute-nacht-franz-robert>,
-        <https://performance.musiconn.de/work/gesaenge-op-5-liebchen-ist-da-franz-robert>,
-        <https://viaf.org/viaf/182249894>,
-        <https://viaf.org/viaf/1909161211387240070007> .
+        <https://viaf.org/viaf/27110440> .
 

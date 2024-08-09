@@ -1,15 +1,27 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/italienisches-konzert-bach-johann-sebastian> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/italienisches-konzert-bach-johann-sebastian> ] .
 
-<https://performance.musiconn.de/work/italienisches-konzert-bach-johann-sebastian> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/italienisches-konzert-bach-johann-sebastian> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Italienisches Konzert (Bach, Johann Sebastian)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300181329>,
+        <https://performance.musiconn.de/work/italienisches-konzert-satz-1-bach-johann-sebastian>,
+        <https://viaf.org/viaf/207915485> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/4-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1861-11-26>,
+        <https://performance.musiconn.de/event/6-vereinskonzert-rathaus-muenster-westf-friedenssaal-1890-02-20>,
+        <https://performance.musiconn.de/event/74-fastnachtskonzert-des-kreuzchors-vereinshaus-zinzendorfstrasse-17-dresden-1935-03-05-19-30>,
+        <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1877-02-03>,
+        <https://performance.musiconn.de/event/abokonzert-12-zweites-gewandhaus-leipzig-1897-01-14>,
+        <https://performance.musiconn.de/event/cetvertaja-leningradskaja-muzykalnaja-vesna-sankt-petersburger-philharmonie-kleiner-saal-1968-04-24>,
+        <https://performance.musiconn.de/event/erstes-sonntags-konzert-grosser-konzertsaal-frankfurt-a-m-1912-11-17-17-30>,
+        <https://performance.musiconn.de/event/fuenfzehnter-letzter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1941-05-06-19-00>,
+        <https://performance.musiconn.de/event/zweiter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1929-10-25-19-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Wurde zusammen mit der Ouvertüre nach französischer Art BWV 831 als 2. Teil der Klavierübung veröffentlicht" ;
     cto:elementOf n4c:E5320 ;
@@ -23,20 +35,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/221396927> ;
     cto:relatedPerson <https://d-nb.info/gnd/11850553X>,
         <https://viaf.org/viaf/12304462> ;
-    cto:title "Italienisches Konzert (Bach, Johann Sebastian)" ;
     cto:viaf <https://viaf.org/viaf/12304462>,
         <https://viaf.org/viaf/207915485>,
-        <https://viaf.org/viaf/221396927> ;
-    schema:includedComposition <https://d-nb.info/gnd/300181329>,
-        <https://performance.musiconn.de/work/italienisches-konzert-satz-1-bach-johann-sebastian>,
-        <https://viaf.org/viaf/207915485> ;
-    schema:subjectOf <https://performance.musiconn.de/event/4-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1861-11-26>,
-        <https://performance.musiconn.de/event/6-vereinskonzert-rathaus-muenster-westf-friedenssaal-1890-02-20>,
-        <https://performance.musiconn.de/event/74-fastnachtskonzert-des-kreuzchors-vereinshaus-zinzendorfstrasse-17-dresden-1935-03-05-19-30>,
-        <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1877-02-03>,
-        <https://performance.musiconn.de/event/abokonzert-12-zweites-gewandhaus-leipzig-1897-01-14>,
-        <https://performance.musiconn.de/event/cetvertaja-leningradskaja-muzykalnaja-vesna-sankt-petersburger-philharmonie-kleiner-saal-1968-04-24>,
-        <https://performance.musiconn.de/event/erstes-sonntags-konzert-grosser-konzertsaal-frankfurt-a-m-1912-11-17-17-30>,
-        <https://performance.musiconn.de/event/fuenfzehnter-letzter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1941-05-06-19-00>,
-        <https://performance.musiconn.de/event/zweiter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1929-10-25-19-30> .
+        <https://viaf.org/viaf/221396927> .
 

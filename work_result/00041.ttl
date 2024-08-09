@@ -1,37 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/salome-strauss-richard> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/salome-strauss-richard> ] .
 
-<https://performance.musiconn.de/work/salome-strauss-richard> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Drama in einem Aufzug" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/11861911X>,
-        <https://d-nb.info/gnd/300157207>,
-        <https://d-nb.info/gnd/4043582-9>,
-        <https://d-nb.info/gnd/5084847-1> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
-        <https://viaf.org/viaf/158420977> ;
-    cto:relatedPerson <https://d-nb.info/gnd/11861911X>,
-        <https://viaf.org/viaf/24796264> ;
-    cto:title "Salome (Strauss, Richard)" ;
-    cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/180637175>,
-        <https://viaf.org/viaf/24796264> ;
-    schema:includedComposition <https://d-nb.info/gnd/300157207>,
+<https://performance.musiconn.de/work/salome-strauss-richard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Salome (Strauss, Richard)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300157207>,
         <https://performance.musiconn.de/work/salome-ankunft-des-jochanaan-strauss-richard>,
         <https://performance.musiconn.de/work/salome-fantasie-strauss-richard>,
         <https://performance.musiconn.de/work/salome-salomes-tanz-strauss-richard>,
         <https://viaf.org/viaf/180637175> ;
-    schema:subjectOf <https://performance.musiconn.de/event/salome-semperoper-dresden-1905-12-14-19-30>,
+    schema1:subjectOf <https://performance.musiconn.de/event/salome-semperoper-dresden-1905-12-14-19-30>,
         <https://performance.musiconn.de/event/salome-semperoper-dresden-1906-01-13-19-30>,
         <https://performance.musiconn.de/event/salome-semperoper-dresden-1906-01-18>,
         <https://performance.musiconn.de/event/salome-semperoper-dresden-1906-01-28-19-30>,
@@ -66,5 +50,20 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/salome-semperoper-dresden-1910-09-26-19-30>,
         <https://performance.musiconn.de/event/salome-semperoper-dresden-1910-11-25-19-30>,
         <https://performance.musiconn.de/event/salome-semperoper-dresden-1911-02-11-19-30>,
-        <https://performance.musiconn.de/event/salome-semperoper-dresden-1913-04-28-19-30> .
+        <https://performance.musiconn.de/event/salome-semperoper-dresden-1913-04-28-19-30> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "Drama in einem Aufzug" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/11861911X>,
+        <https://d-nb.info/gnd/300157207>,
+        <https://d-nb.info/gnd/4043582-9>,
+        <https://d-nb.info/gnd/5084847-1> ;
+    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
+        <https://viaf.org/viaf/158420977> ;
+    cto:relatedPerson <https://d-nb.info/gnd/11861911X>,
+        <https://viaf.org/viaf/24796264> ;
+    cto:viaf <https://viaf.org/viaf/158420977>,
+        <https://viaf.org/viaf/180637175>,
+        <https://viaf.org/viaf/24796264> .
 

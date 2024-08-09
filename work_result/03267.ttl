@@ -1,15 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/mein-liebster-ist-ein-weber-hildach-eugen> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/mein-liebster-ist-ein-weber-hildach-eugen> ] .
 
-<https://performance.musiconn.de/work/mein-liebster-ist-ein-weber-hildach-eugen> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/mein-liebster-ist-ein-weber-hildach-eugen> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Mein Liebster ist ein Weber (Hildach, Eugen)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116493119>,
@@ -27,7 +27,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/35209844>,
         <https://viaf.org/viaf/37676576>,
         <https://viaf.org/viaf/74038494> ;
-    cto:title "Mein Liebster ist ein Weber (Hildach, Eugen)" ;
     cto:viaf <https://viaf.org/viaf/32766728>,
         <https://viaf.org/viaf/35209844>,
         <https://viaf.org/viaf/37676576>,

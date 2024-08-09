@@ -1,15 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-30-schumann-robert> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-30-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-30-schumann-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-30-schumann-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Gedichte nach Emanuel Geibel, op. 30 (Schumann, Robert)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1104863596>,
+        <https://d-nb.info/gnd/1193447607>,
+        <https://d-nb.info/gnd/30014492X>,
+        <https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-30-der-hidalgo-schumann-robert>,
+        <https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-30-der-knabe-mit-dem-wunderhorn-schumann-robert>,
+        <https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-30-der-page-schumann-robert>,
+        <https://viaf.org/viaf/184896032> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfasst drei Lieder" ;
     cto:elementOf n4c:E5320 ;
@@ -21,14 +28,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
     cto:relatedPerson <https://d-nb.info/gnd/118611666>,
         <https://viaf.org/viaf/7575259> ;
-    cto:title "Gedichte nach Emanuel Geibel, op. 30 (Schumann, Robert)" ;
     cto:viaf <https://viaf.org/viaf/184896032>,
-        <https://viaf.org/viaf/7575259> ;
-    schema:includedComposition <https://d-nb.info/gnd/1104863596>,
-        <https://d-nb.info/gnd/1193447607>,
-        <https://d-nb.info/gnd/30014492X>,
-        <https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-30-der-hidalgo-schumann-robert>,
-        <https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-30-der-knabe-mit-dem-wunderhorn-schumann-robert>,
-        <https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-30-der-page-schumann-robert>,
-        <https://viaf.org/viaf/184896032> .
+        <https://viaf.org/viaf/7575259> .
 

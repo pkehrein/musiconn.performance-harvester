@@ -1,15 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-59-nr-3-beethoven-ludwig-van> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-59-nr-3-beethoven-ludwig-van> ] .
 
-<https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-59-nr-3-beethoven-ludwig-van> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-59-nr-3-beethoven-ludwig-van> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Quartette, Violine (2), Viola, Violoncello, op. 59. Nr. 3 (Beethoven, Ludwig van)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1288673558>,
+        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-59-nr-3-menuett-beethoven-ludwig-van> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/erster-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1883-10-26-19-00>,
+        <https://performance.musiconn.de/event/fuenfter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1875-12-06-19-00>,
+        <https://performance.musiconn.de/event/siebenter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1881-01-28-19-00>,
+        <https://performance.musiconn.de/event/vierter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1892-12-23-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Gezählt als Quartett Nr. 9" ;
     cto:elementOf n4c:E5320 ;
@@ -76,7 +82,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/312835127> ;
     cto:relatedPerson <https://d-nb.info/gnd/118508288>,
         <https://viaf.org/viaf/32182557> ;
-    cto:title "Quartette, Violine (2), Viola, Violoncello, op. 59. Nr. 3 (Beethoven, Ludwig van)" ;
     cto:viaf <https://viaf.org/viaf/121136117>,
         <https://viaf.org/viaf/122507568>,
         <https://viaf.org/viaf/124827297>,
@@ -95,11 +100,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/158776496>,
         <https://viaf.org/viaf/231499364>,
         <https://viaf.org/viaf/312835127>,
-        <https://viaf.org/viaf/32182557> ;
-    schema:includedComposition <https://d-nb.info/gnd/1288673558>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-59-nr-3-menuett-beethoven-ludwig-van> ;
-    schema:subjectOf <https://performance.musiconn.de/event/erster-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1883-10-26-19-00>,
-        <https://performance.musiconn.de/event/fuenfter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1875-12-06-19-00>,
-        <https://performance.musiconn.de/event/siebenter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1881-01-28-19-00>,
-        <https://performance.musiconn.de/event/vierter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1892-12-23-19-00> .
+        <https://viaf.org/viaf/32182557> .
 

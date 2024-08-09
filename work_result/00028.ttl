@@ -1,36 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/tristan-und-isolde-wagner-richard> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/tristan-und-isolde-wagner-richard> ] .
 
-<https://performance.musiconn.de/work/tristan-und-isolde-wagner-richard> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Handlung in drei Aufzügen" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118594117>,
-        <https://d-nb.info/gnd/1203821549>,
-        <https://d-nb.info/gnd/300170521>,
-        <https://d-nb.info/gnd/30017053X>,
-        <https://d-nb.info/gnd/4043582-9>,
-        <https://d-nb.info/gnd/5084847-1> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
-        <https://viaf.org/viaf/158420977> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118594117>,
-        <https://viaf.org/viaf/29732107> ;
-    cto:title "Tristan und Isolde (Wagner, Richard)" ;
-    cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/176605842>,
-        <https://viaf.org/viaf/184691190>,
-        <https://viaf.org/viaf/205762999>,
-        <https://viaf.org/viaf/29732107> ;
-    schema:includedComposition <https://d-nb.info/gnd/1203821549>,
+<https://performance.musiconn.de/work/tristan-und-isolde-wagner-richard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Tristan und Isolde (Wagner, Richard)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1203821549>,
         <https://d-nb.info/gnd/300170521>,
         <https://d-nb.info/gnd/30017053X>,
         <https://performance.musiconn.de/work/tristan-und-isolde-aufzug-1-einleitung-wagner-richard>,
@@ -40,7 +20,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/176605842>,
         <https://viaf.org/viaf/184691190>,
         <https://viaf.org/viaf/205762999> ;
-    schema:subjectOf <https://performance.musiconn.de/event/tristan-und-isolde-1909-11-06-18-00>,
+    schema1:subjectOf <https://performance.musiconn.de/event/tristan-und-isolde-1909-11-06-18-00>,
         <https://performance.musiconn.de/event/tristan-und-isolde-1910-03-01-18-00>,
         <https://performance.musiconn.de/event/tristan-und-isolde-semperoper-dresden-1904-02-13-18-00>,
         <https://performance.musiconn.de/event/tristan-und-isolde-semperoper-dresden-1904-04-16-18-00>,
@@ -56,5 +36,24 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/tristan-und-isolde-semperoper-dresden-1909-09-01-18-00>,
         <https://performance.musiconn.de/event/tristan-und-isolde-semperoper-dresden-1911-04-25-18-00>,
         <https://performance.musiconn.de/event/tristan-und-isolde-semperoper-dresden-1913-03-08-18-00>,
-        <https://performance.musiconn.de/event/tristan-und-isolde-semperoper-dresden-1913-06-10-18-00> .
+        <https://performance.musiconn.de/event/tristan-und-isolde-semperoper-dresden-1913-06-10-18-00> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "Handlung in drei Aufzügen" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/118594117>,
+        <https://d-nb.info/gnd/1203821549>,
+        <https://d-nb.info/gnd/300170521>,
+        <https://d-nb.info/gnd/30017053X>,
+        <https://d-nb.info/gnd/4043582-9>,
+        <https://d-nb.info/gnd/5084847-1> ;
+    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
+        <https://viaf.org/viaf/158420977> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118594117>,
+        <https://viaf.org/viaf/29732107> ;
+    cto:viaf <https://viaf.org/viaf/158420977>,
+        <https://viaf.org/viaf/176605842>,
+        <https://viaf.org/viaf/184691190>,
+        <https://viaf.org/viaf/205762999>,
+        <https://viaf.org/viaf/29732107> .
 

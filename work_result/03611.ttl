@@ -1,18 +1,23 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/eine-faust-symphonie-liszt-franz> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/eine-faust-symphonie-liszt-franz> ] .
 
-<https://performance.musiconn.de/work/eine-faust-symphonie-liszt-franz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/eine-faust-symphonie-liszt-franz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Eine Faust-Symphonie (Liszt, Franz)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300259034>,
+        <https://performance.musiconn.de/work/eine-faust-symphonie-gretchen-liszt-franz>,
+        <https://performance.musiconn.de/work/eine-faust-symphonie-mephistopheles-liszt-franz> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/1-sinfonie-konzert-der-generaldirektion-der-koenigl-musikalischen-kapelle-und-der-hoftheater-semperoper-dresden-1911-10-20-19-30>,
+        <https://performance.musiconn.de/event/fuenftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1893-12-15-19-00>,
+        <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1879-12-16-19-30> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """maßgebliche Werkverzeichniszählung lautet R 425
-Es gibt eine Version für 2 Klaviere mit der Werkverzeichniszählung R 369; eine weitere Version ist für Klavier, sie umfaßt aber nur den zweiten Satz und wird als neues Werk gesehen ("Gretchen" R 180)""" ;
+    cto:abstract "maßgebliche Werkverzeichniszählung lautet R 425Es gibt eine Version für 2 Klaviere mit der Werkverzeichniszählung R 369; eine weitere Version ist für Klavier, sie umfaßt aber nur den zweiten Satz und wird als neues Werk gesehen (\"Gretchen\" R 180)" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10303007-4>,
         <https://d-nb.info/gnd/1043914420>,
@@ -94,7 +99,6 @@ Es gibt eine Version für 2 Klaviere mit der Werkverzeichniszählung R 369; eine
         <https://viaf.org/viaf/8413148122912495200001> ;
     cto:relatedPerson <https://d-nb.info/gnd/118573527>,
         <https://viaf.org/viaf/64199483> ;
-    cto:title "Eine Faust-Symphonie (Liszt, Franz)" ;
     cto:viaf <https://viaf.org/viaf/127567876>,
         <https://viaf.org/viaf/128114842>,
         <https://viaf.org/viaf/129632587>,
@@ -116,11 +120,5 @@ Es gibt eine Version für 2 Klaviere mit der Werkverzeichniszählung R 369; eine
         <https://viaf.org/viaf/305342798>,
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/64199483>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    schema:includedComposition <https://d-nb.info/gnd/300259034>,
-        <https://performance.musiconn.de/work/eine-faust-symphonie-gretchen-liszt-franz>,
-        <https://performance.musiconn.de/work/eine-faust-symphonie-mephistopheles-liszt-franz> ;
-    schema:subjectOf <https://performance.musiconn.de/event/1-sinfonie-konzert-der-generaldirektion-der-koenigl-musikalischen-kapelle-und-der-hoftheater-semperoper-dresden-1911-10-20-19-30>,
-        <https://performance.musiconn.de/event/fuenftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1893-12-15-19-00>,
-        <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1879-12-16-19-30> .
+        <https://viaf.org/viaf/8413148122912495200001> .
 

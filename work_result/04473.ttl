@@ -1,15 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/choraele-orgel-fwv-38-e-dur-franck-cesar> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/choraele-orgel-fwv-38-e-dur-franck-cesar> ] .
 
-<https://performance.musiconn.de/work/choraele-orgel-fwv-38-e-dur-franck-cesar> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/choraele-orgel-fwv-38-e-dur-franck-cesar> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Choräle, Orgel, FWV 38 (E-Dur) (Franck, César)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/konsert-caroli-kyrka-boras-1937-11-02-19-30>,
+        <https://performance.musiconn.de/event/singen-des-chores-vom-heiligen-kreuz-aus-dresden-christuskirche-aachen-1934-10-06-20-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118534645>,
@@ -24,9 +26,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://d-nb.info/gnd/14368700X>,
         <https://viaf.org/viaf/100995831>,
         <https://viaf.org/viaf/66651702> ;
-    cto:title "Choräle, Orgel, FWV 38 (E-Dur) (Franck, César)" ;
     cto:viaf <https://viaf.org/viaf/100995831>,
-        <https://viaf.org/viaf/66651702> ;
-    schema:subjectOf <https://performance.musiconn.de/event/konsert-caroli-kyrka-boras-1937-11-02-19-30>,
-        <https://performance.musiconn.de/event/singen-des-chores-vom-heiligen-kreuz-aus-dresden-christuskirche-aachen-1934-10-06-20-00> .
+        <https://viaf.org/viaf/66651702> .
 

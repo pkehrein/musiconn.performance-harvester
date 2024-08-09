@@ -1,18 +1,23 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-op-48-brahms-johannes> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-op-48-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/lieder-op-48-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-op-48-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Lieder, op. 48 (Brahms, Johannes)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/30002584X>,
+        <https://d-nb.info/gnd/300478925>,
+        <https://performance.musiconn.de/work/lieder-op-48-der-gang-zum-liebchen-brahms-johannes>,
+        <https://performance.musiconn.de/work/lieder-op-48-herbstgefuehl-brahms-johannes>,
+        <https://viaf.org/viaf/293869456>,
+        <https://viaf.org/viaf/5882158006004802100004> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Umfasst 7 Lieder: Der Gang zum Liebchen. Der Überläufer. Liebesklage des Mädchen. Gold überwiegt die Liebe. Trost in Tränen. Vergangen ist mir Glück und Heil. Herbstgefühl
-Stimmlage der Singstimme nicht näher spezifiziert""" ;
+    cto:abstract "Umfasst 7 Lieder: Der Gang zum Liebchen. Der Überläufer. Liebesklage des Mädchen. Gold überwiegt die Liebe. Trost in Tränen. Vergangen ist mir Glück und Heil. HerbstgefühlStimmlage der Singstimme nicht näher spezifiziert" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118514253>,
         <https://d-nb.info/gnd/30002584X>,
@@ -21,14 +26,7 @@ Stimmlage der Singstimme nicht näher spezifiziert""" ;
     cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
     cto:relatedPerson <https://d-nb.info/gnd/118514253>,
         <https://viaf.org/viaf/7573295> ;
-    cto:title "Lieder, op. 48 (Brahms, Johannes)" ;
     cto:viaf <https://viaf.org/viaf/293869456>,
         <https://viaf.org/viaf/5882158006004802100004>,
-        <https://viaf.org/viaf/7573295> ;
-    schema:includedComposition <https://d-nb.info/gnd/30002584X>,
-        <https://d-nb.info/gnd/300478925>,
-        <https://performance.musiconn.de/work/lieder-op-48-der-gang-zum-liebchen-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-op-48-herbstgefuehl-brahms-johannes>,
-        <https://viaf.org/viaf/293869456>,
-        <https://viaf.org/viaf/5882158006004802100004> .
+        <https://viaf.org/viaf/7573295> .
 

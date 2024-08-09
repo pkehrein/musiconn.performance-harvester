@@ -1,15 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/cantiones-sacrae-sweelinck-jan-pieterszoon> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/cantiones-sacrae-sweelinck-jan-pieterszoon> ] .
 
-<https://performance.musiconn.de/work/cantiones-sacrae-sweelinck-jan-pieterszoon> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/cantiones-sacrae-sweelinck-jan-pieterszoon> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Cantiones sacrae (Sweelinck, Jan Pieterszoon)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1165812819>,
+        <https://d-nb.info/gnd/300397135>,
+        <https://performance.musiconn.de/work/cantiones-sacrae-hodie-christus-natus-est-sweelinck-jan-pieterszoon>,
+        <https://performance.musiconn.de/work/cantiones-sacrae-venite-exultemus-domino-sweelinck-jan-pieterszoon>,
+        <https://viaf.org/viaf/177378566>,
+        <https://viaf.org/viaf/180755665> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Besetzung: 5 Vokalstimmen (solistisch oder chorisch) und Basso continuo (ad libitum)" ;
     cto:elementOf n4c:E5320 ;
@@ -18,14 +24,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://d-nb.info/gnd/300397135> ;
     cto:relatedPerson <https://d-nb.info/gnd/118799517>,
         <https://viaf.org/viaf/89618631> ;
-    cto:title "Cantiones sacrae (Sweelinck, Jan Pieterszoon)" ;
     cto:viaf <https://viaf.org/viaf/177378566>,
         <https://viaf.org/viaf/180755665>,
-        <https://viaf.org/viaf/89618631> ;
-    schema:includedComposition <https://d-nb.info/gnd/1165812819>,
-        <https://d-nb.info/gnd/300397135>,
-        <https://performance.musiconn.de/work/cantiones-sacrae-hodie-christus-natus-est-sweelinck-jan-pieterszoon>,
-        <https://performance.musiconn.de/work/cantiones-sacrae-venite-exultemus-domino-sweelinck-jan-pieterszoon>,
-        <https://viaf.org/viaf/177378566>,
-        <https://viaf.org/viaf/180755665> .
+        <https://viaf.org/viaf/89618631> .
 

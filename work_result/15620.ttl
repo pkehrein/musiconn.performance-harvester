@@ -1,15 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/feuervogel-suite-stravinsky-igor> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/feuervogel-suite-stravinsky-igor> ] .
 
-<https://performance.musiconn.de/work/feuervogel-suite-stravinsky-igor> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/feuervogel-suite-stravinsky-igor> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Feuervogel-Suite (Stravinsky, Igor)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Enthält: Introductionenchanté de Kastchei ; Supplications de l'oiseau de feu ; Jeu des princesses avec les pommes d'or ; Ronde des princesses ; Danse infernale de tous les sujets de Kastchei" ;
     cto:elementOf n4c:E5320 ;
@@ -30,7 +30,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/267260658> ;
     cto:relatedPerson <https://d-nb.info/gnd/118642545>,
         <https://viaf.org/viaf/17309155> ;
-    cto:title "Feuervogel-Suite (Stravinsky, Igor)" ;
     cto:viaf <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/140496825>,
         <https://viaf.org/viaf/17309155>,

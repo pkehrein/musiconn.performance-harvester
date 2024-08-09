@@ -1,40 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sinfonien-hob-1-82-87-haydn-joseph> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sinfonien-hob-1-82-87-haydn-joseph> ] .
 
-<https://performance.musiconn.de/work/sinfonien-hob-1-82-87-haydn-joseph> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Umfasst sechs Sinfonien" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118547356>,
-        <https://d-nb.info/gnd/1198222166>,
-        <https://d-nb.info/gnd/300856784>,
-        <https://d-nb.info/gnd/4055087-4>,
-        <https://d-nb.info/gnd/4530309-5>,
-        <https://d-nb.info/gnd/4530311-3>,
-        <https://d-nb.info/gnd/4530312-5>,
-        <https://d-nb.info/gnd/4530316-2>,
-        <https://d-nb.info/gnd/4530321-6> ;
-    cto:isPartOf <https://d-nb.info/gnd/4055087-4> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118547356>,
-        <https://viaf.org/viaf/95146280> ;
-    cto:title "Sinfonien, Hob 1 82-87 (Haydn, Joseph)" ;
-    cto:viaf <https://viaf.org/viaf/174590426>,
-        <https://viaf.org/viaf/181865933>,
-        <https://viaf.org/viaf/190440398>,
-        <https://viaf.org/viaf/194764524>,
-        <https://viaf.org/viaf/214000279>,
-        <https://viaf.org/viaf/219194321>,
-        <https://viaf.org/viaf/4097157282928803640008>,
-        <https://viaf.org/viaf/95146280> ;
-    schema:includedComposition <https://d-nb.info/gnd/1198222166>,
+<https://performance.musiconn.de/work/sinfonien-hob-1-82-87-haydn-joseph> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sinfonien, Hob 1 82-87 (Haydn, Joseph)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1198222166>,
         <https://d-nb.info/gnd/300856784>,
         <https://d-nb.info/gnd/4530309-5>,
         <https://d-nb.info/gnd/4530311-3>,
@@ -54,5 +30,28 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/194764524>,
         <https://viaf.org/viaf/214000279>,
         <https://viaf.org/viaf/219194321>,
-        <https://viaf.org/viaf/4097157282928803640008> .
+        <https://viaf.org/viaf/4097157282928803640008> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "Umfasst sechs Sinfonien" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/118547356>,
+        <https://d-nb.info/gnd/1198222166>,
+        <https://d-nb.info/gnd/300856784>,
+        <https://d-nb.info/gnd/4055087-4>,
+        <https://d-nb.info/gnd/4530309-5>,
+        <https://d-nb.info/gnd/4530311-3>,
+        <https://d-nb.info/gnd/4530312-5>,
+        <https://d-nb.info/gnd/4530316-2>,
+        <https://d-nb.info/gnd/4530321-6> ;
+    cto:isPartOf <https://d-nb.info/gnd/4055087-4> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118547356>,
+        <https://viaf.org/viaf/95146280> ;
+    cto:viaf <https://viaf.org/viaf/174590426>,
+        <https://viaf.org/viaf/181865933>,
+        <https://viaf.org/viaf/190440398>,
+        <https://viaf.org/viaf/194764524>,
+        <https://viaf.org/viaf/214000279>,
+        <https://viaf.org/viaf/219194321>,
+        <https://viaf.org/viaf/4097157282928803640008>,
+        <https://viaf.org/viaf/95146280> .
 

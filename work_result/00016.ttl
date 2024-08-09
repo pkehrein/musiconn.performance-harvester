@@ -1,40 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/cavalleria-rusticana-mascagni-pietro> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/cavalleria-rusticana-mascagni-pietro> ] .
 
-<https://performance.musiconn.de/work/cavalleria-rusticana-mascagni-pietro> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Melodramma in einem Akt nach Giovanni Verga" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118782428>,
-        <https://d-nb.info/gnd/300099843>,
-        <https://d-nb.info/gnd/4043582-9>,
-        <https://d-nb.info/gnd/5061214-1>,
-        <https://d-nb.info/gnd/5084847-1>,
-        <https://d-nb.info/gnd/815129-5> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5061214-1>,
-        <https://d-nb.info/gnd/5084847-1>,
-        <https://d-nb.info/gnd/815129-5>,
-        <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/263538429> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118782428>,
-        <https://viaf.org/viaf/12492045> ;
-    cto:title "Cavalleria rusticana (Mascagni, Pietro)" ;
-    cto:viaf <https://viaf.org/viaf/12492045>,
-        <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/186301100>,
-        <https://viaf.org/viaf/263538429> ;
-    schema:includedComposition <https://d-nb.info/gnd/300099843>,
+<https://performance.musiconn.de/work/cavalleria-rusticana-mascagni-pietro> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Cavalleria rusticana (Mascagni, Pietro)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300099843>,
         <https://performance.musiconn.de/work/cavalleria-rusticana-duett-mascagni-pietro>,
         <https://performance.musiconn.de/work/cavalleria-rusticana-intermezzo-sinfonico-mascagni-pietro>,
         <https://performance.musiconn.de/work/cavalleria-rusticana-lolas-lied-mascagni-pietro>,
@@ -42,7 +18,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/work/cavalleria-rusticana-vospiel-und-siciliana-mascagni-pietro>,
         <https://performance.musiconn.de/work/melodien-aus-der-oper-cavalleria-rusticana-mascagni-pietro>,
         <https://viaf.org/viaf/186301100> ;
-    schema:subjectOf <https://performance.musiconn.de/event/110-vorstellung-semperoper-dresden-1906-05-09-19-30>,
+    schema1:subjectOf <https://performance.musiconn.de/event/110-vorstellung-semperoper-dresden-1906-05-09-19-30>,
         <https://performance.musiconn.de/event/120-vorstellung-semperoper-dresden-1905-05-14-19-00>,
         <https://performance.musiconn.de/event/121-vorstellung-semperoper-dresden-1907-05-20-19-00>,
         <https://performance.musiconn.de/event/13-vorstellung-semperoper-dresden-1906-01-15>,
@@ -71,5 +47,28 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/musiktheaterveranstaltung-der-saechsischen-staatskapelle-dresden-semperoper-dresden-1913-02-28-19-30>,
         <https://performance.musiconn.de/event/musiktheaterveranstaltung-der-saechsischen-staatskapelle-dresden-semperoper-dresden-1913-04-15-19-30>,
         <https://performance.musiconn.de/event/musiktheaterveranstaltung-der-saechsischen-staatskapelle-dresden-semperoper-dresden-1913-05-19-19-30>,
-        <https://performance.musiconn.de/event/musiktheaterveranstaltung-der-saechsischen-staatskapelle-dresden-semperoper-dresden-1913-06-17-19-30> .
+        <https://performance.musiconn.de/event/musiktheaterveranstaltung-der-saechsischen-staatskapelle-dresden-semperoper-dresden-1913-06-17-19-30> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "Melodramma in einem Akt nach Giovanni Verga" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/118782428>,
+        <https://d-nb.info/gnd/300099843>,
+        <https://d-nb.info/gnd/4043582-9>,
+        <https://d-nb.info/gnd/5061214-1>,
+        <https://d-nb.info/gnd/5084847-1>,
+        <https://d-nb.info/gnd/815129-5> ;
+    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/5061214-1>,
+        <https://d-nb.info/gnd/5084847-1>,
+        <https://d-nb.info/gnd/815129-5>,
+        <https://viaf.org/viaf/133022259>,
+        <https://viaf.org/viaf/158420977>,
+        <https://viaf.org/viaf/263538429> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118782428>,
+        <https://viaf.org/viaf/12492045> ;
+    cto:viaf <https://viaf.org/viaf/12492045>,
+        <https://viaf.org/viaf/133022259>,
+        <https://viaf.org/viaf/158420977>,
+        <https://viaf.org/viaf/186301100>,
+        <https://viaf.org/viaf/263538429> .
 

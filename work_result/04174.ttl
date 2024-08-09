@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/stabat-mater-b-71-dvorak-antonin> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/stabat-mater-b-71-dvorak-antonin> ] .
 
-<https://performance.musiconn.de/work/stabat-mater-b-71-dvorak-antonin> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/stabat-mater-b-71-dvorak-antonin> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Stabat mater, B 71 (Dvořák, Antonín)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/stabat-mater-b-71-coro-eja-mater-fons-amoris-dvorak-antonin>,
+        <https://performance.musiconn.de/work/stabat-mater-b-71-coro-virgo-virginum-praeclara-dvorak-antonin> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/stabat-mater-kreuzkirche-dresden-1934-03-10-20-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Besetzung: Soli, gemischter Chor und Orchester; Text vermutlich von Jacopone da Todi" ;
     cto:elementOf n4c:E5320 ;
@@ -73,7 +76,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/45144814273718687574> ;
     cto:relatedPerson <https://d-nb.info/gnd/11852836X>,
         <https://viaf.org/viaf/71577743> ;
-    cto:title "Stabat mater, B 71 (Dvořák, Antonín)" ;
     cto:viaf <https://viaf.org/viaf/122707566>,
         <https://viaf.org/viaf/128872437>,
         <https://viaf.org/viaf/132012390>,
@@ -92,8 +94,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/267260658>,
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/45144814273718687574>,
-        <https://viaf.org/viaf/71577743> ;
-    schema:includedComposition <https://performance.musiconn.de/work/stabat-mater-b-71-coro-eja-mater-fons-amoris-dvorak-antonin>,
-        <https://performance.musiconn.de/work/stabat-mater-b-71-coro-virgo-virginum-praeclara-dvorak-antonin> ;
-    schema:subjectOf <https://performance.musiconn.de/event/stabat-mater-kreuzkirche-dresden-1934-03-10-20-00> .
+        <https://viaf.org/viaf/71577743> .
 

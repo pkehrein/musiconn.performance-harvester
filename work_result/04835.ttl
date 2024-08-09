@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sinfonien-b-141-d-moll-dvorak-antonin> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sinfonien-b-141-d-moll-dvorak-antonin> ] .
 
-<https://performance.musiconn.de/work/sinfonien-b-141-d-moll-dvorak-antonin> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sinfonien-b-141-d-moll-dvorak-antonin> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sinfonien, B 141 (d-Moll) (Dvořák, Antonín)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/konzert-drei-grosser-meister-gewerbehaus-dresden-gewerbehaus-saal-1944-02-02-17-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Zu Dvoraks Lebzeiten wurde diese Sinfonie als die 2. gezählt." ;
     cto:elementOf n4c:E5320 ;
@@ -40,7 +41,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/45144814273718687574> ;
     cto:relatedPerson <https://d-nb.info/gnd/11852836X>,
         <https://viaf.org/viaf/71577743> ;
-    cto:title "Sinfonien, B 141 (d-Moll) (Dvořák, Antonín)" ;
     cto:viaf <https://viaf.org/viaf/132559294>,
         <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/139053206>,
@@ -48,6 +48,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/435144783046765467239>,
         <https://viaf.org/viaf/45144814273718687574>,
-        <https://viaf.org/viaf/71577743> ;
-    schema:subjectOf <https://performance.musiconn.de/event/konzert-drei-grosser-meister-gewerbehaus-dresden-gewerbehaus-saal-1944-02-02-17-00> .
+        <https://viaf.org/viaf/71577743> .
 

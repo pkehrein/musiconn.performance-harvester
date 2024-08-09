@@ -1,61 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/die-zauberfloete-mozart-wolfgang-amadeus> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/die-zauberfloete-mozart-wolfgang-amadeus> ] .
 
-<https://performance.musiconn.de/work/die-zauberfloete-mozart-wolfgang-amadeus> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Oper in 2 Akten
-UA am 30.09.1791""" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1075221048>,
-        <https://d-nb.info/gnd/1075231000>,
-        <https://d-nb.info/gnd/118584596>,
-        <https://d-nb.info/gnd/300112076>,
-        <https://d-nb.info/gnd/300112084>,
-        <https://d-nb.info/gnd/300112092>,
-        <https://d-nb.info/gnd/300112106>,
-        <https://d-nb.info/gnd/300112114>,
-        <https://d-nb.info/gnd/300112122>,
-        <https://d-nb.info/gnd/300112130>,
-        <https://d-nb.info/gnd/300112149>,
-        <https://d-nb.info/gnd/300112165>,
-        <https://d-nb.info/gnd/300112181>,
-        <https://d-nb.info/gnd/300112203>,
-        <https://d-nb.info/gnd/300333226>,
-        <https://d-nb.info/gnd/300458835>,
-        <https://d-nb.info/gnd/4043582-9>,
-        <https://d-nb.info/gnd/5084847-1> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
-        <https://viaf.org/viaf/158420977> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118584596>,
-        <https://viaf.org/viaf/32197206> ;
-    cto:title "Die Zauberflöte (Mozart, Wolfgang Amadeus)" ;
-    cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/174198907>,
-        <https://viaf.org/viaf/176401772>,
-        <https://viaf.org/viaf/177803935>,
-        <https://viaf.org/viaf/180635187>,
-        <https://viaf.org/viaf/181054259>,
-        <https://viaf.org/viaf/181445685>,
-        <https://viaf.org/viaf/181479118>,
-        <https://viaf.org/viaf/183947448>,
-        <https://viaf.org/viaf/183978512>,
-        <https://viaf.org/viaf/186304624>,
-        <https://viaf.org/viaf/191503128>,
-        <https://viaf.org/viaf/198524517>,
-        <https://viaf.org/viaf/308292403>,
-        <https://viaf.org/viaf/317060619>,
-        <https://viaf.org/viaf/317060827>,
-        <https://viaf.org/viaf/32197206> ;
-    schema:includedComposition <https://d-nb.info/gnd/1075221048>,
+<https://performance.musiconn.de/work/die-zauberfloete-mozart-wolfgang-amadeus> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Die Zauberflöte (Mozart, Wolfgang Amadeus)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1075221048>,
         <https://d-nb.info/gnd/1075231000>,
         <https://d-nb.info/gnd/300112076>,
         <https://d-nb.info/gnd/300112084>,
@@ -107,7 +62,7 @@ UA am 30.09.1791""" ;
         <https://viaf.org/viaf/308292403>,
         <https://viaf.org/viaf/317060619>,
         <https://viaf.org/viaf/317060827> ;
-    schema:subjectOf <https://performance.musiconn.de/event/die-zauberfloete-1909-11-21-19-00>,
+    schema1:subjectOf <https://performance.musiconn.de/event/die-zauberfloete-1909-11-21-19-00>,
         <https://performance.musiconn.de/event/die-zauberfloete-interimstheater-am-zwingerwall-dresden-1877-09-09-19-00>,
         <https://performance.musiconn.de/event/die-zauberfloete-interimstheater-am-zwingerwall-dresden-1877-11-22-19-00>,
         <https://performance.musiconn.de/event/die-zauberfloete-interimstheater-am-zwingerwall-dresden-1877-12-25-19-00>,
@@ -153,5 +108,48 @@ UA am 30.09.1791""" ;
         <https://performance.musiconn.de/event/die-zauberfloete-semperoper-dresden-1912-05-02-19-00>,
         <https://performance.musiconn.de/event/die-zauberfloete-semperoper-dresden-1913-03-10-19-00>,
         <https://performance.musiconn.de/event/die-zauberfloete-semperoper-dresden-1913-04-16-19-00>,
-        <https://performance.musiconn.de/event/die-zauberfloete-semperoper-dresden-1913-06-28-19-30> .
+        <https://performance.musiconn.de/event/die-zauberfloete-semperoper-dresden-1913-06-28-19-30> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "Oper in 2 AktenUA am 30.09.1791" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/1075221048>,
+        <https://d-nb.info/gnd/1075231000>,
+        <https://d-nb.info/gnd/118584596>,
+        <https://d-nb.info/gnd/300112076>,
+        <https://d-nb.info/gnd/300112084>,
+        <https://d-nb.info/gnd/300112092>,
+        <https://d-nb.info/gnd/300112106>,
+        <https://d-nb.info/gnd/300112114>,
+        <https://d-nb.info/gnd/300112122>,
+        <https://d-nb.info/gnd/300112130>,
+        <https://d-nb.info/gnd/300112149>,
+        <https://d-nb.info/gnd/300112165>,
+        <https://d-nb.info/gnd/300112181>,
+        <https://d-nb.info/gnd/300112203>,
+        <https://d-nb.info/gnd/300333226>,
+        <https://d-nb.info/gnd/300458835>,
+        <https://d-nb.info/gnd/4043582-9>,
+        <https://d-nb.info/gnd/5084847-1> ;
+    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
+        <https://viaf.org/viaf/158420977> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118584596>,
+        <https://viaf.org/viaf/32197206> ;
+    cto:viaf <https://viaf.org/viaf/158420977>,
+        <https://viaf.org/viaf/174198907>,
+        <https://viaf.org/viaf/176401772>,
+        <https://viaf.org/viaf/177803935>,
+        <https://viaf.org/viaf/180635187>,
+        <https://viaf.org/viaf/181054259>,
+        <https://viaf.org/viaf/181445685>,
+        <https://viaf.org/viaf/181479118>,
+        <https://viaf.org/viaf/183947448>,
+        <https://viaf.org/viaf/183978512>,
+        <https://viaf.org/viaf/186304624>,
+        <https://viaf.org/viaf/191503128>,
+        <https://viaf.org/viaf/198524517>,
+        <https://viaf.org/viaf/308292403>,
+        <https://viaf.org/viaf/317060619>,
+        <https://viaf.org/viaf/317060827>,
+        <https://viaf.org/viaf/32197206> .
 

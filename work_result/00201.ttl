@@ -1,15 +1,34 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-wach-auf-wagner-richard> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-wach-auf-wagner-richard> ] .
 
-<https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-wach-auf-wagner-richard> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-wach-auf-wagner-richard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Die Meistersinger von Nürnberg. Wach auf (Wagner, Richard)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/der-kreuzchor-singt-boerse-coswig-1938-01-23-20-00>,
+        <https://performance.musiconn.de/event/der-kreuzchor-singt-hotel-hammer-dresden-striesen-1938-02-05-20-00>,
+        <https://performance.musiconn.de/event/der-kreuzchor-singt-hotel-koenig-albert-hoehe-rabenau-1938-02-04-20-00>,
+        <https://performance.musiconn.de/event/der-kreuzchor-singt-turnhalle-rabenau-oelsa-1938-02-06-20-00>,
+        <https://performance.musiconn.de/event/deutscher-nsdap-kunstabend-hotel-deutsches-haus-1933-10-03>,
+        <https://performance.musiconn.de/event/dresdner-kreuzchor-hamburger-hof-meissen-1937-01-26>,
+        <https://performance.musiconn.de/event/feier-zur-erinnerung-an-den-100-geburtstag-richard-wagners-kreuzschule-georgplatz-dresden-1913-05-28-11-30>,
+        <https://performance.musiconn.de/event/feierstunde-fuer-das-erntedankfest-schwarzhaeupterhaus-riga-1936-10-04-17-00>,
+        <https://performance.musiconn.de/event/fest-konzert-anlaesslich-des-national-feiertages-des-deutschen-volkes-europa-schiff-1930-1935-05-01-11-30>,
+        <https://performance.musiconn.de/event/gautreffen-der-nsdap-gewerbehaus-dresden-1935-05-25-12-30>,
+        <https://performance.musiconn.de/event/jugendkulturstunde-des-standortes-meissen-hamburger-hof-meissen-1937-01-26>,
+        <https://performance.musiconn.de/event/konsert-klosters-kyrka-eskilstuna-1937-10-26-17-00>,
+        <https://performance.musiconn.de/event/konzert-des-dresdner-kreuz-chores-vereinshaus-zinzendorfstrasse-17-dresden-1935-12-13-19-30>,
+        <https://performance.musiconn.de/event/konzert-in-weinboehla-zentralgasthof-weinboehla-1937-02-20>,
+        <https://performance.musiconn.de/event/konzert-schuetzenhaus-radeberg-1938-02-22-20-00>,
+        <https://performance.musiconn.de/event/schuelerkonzert-schuetzenhaus-bischofswerda-1937-05-31-17-00>,
+        <https://performance.musiconn.de/event/schulsammlung-im-kreis-dresden-dreikoenigschule-dresden-neustadt-1937-01-21-20-00>,
+        <https://performance.musiconn.de/event/veranstaltung-fuer-kinder-staedtischer-ausstellungspalast-dresden-1937-01-13-15-00>,
+        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1916-11-11-14-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1087287-5>,
@@ -35,31 +54,11 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/150245159> ;
     cto:relatedPerson <https://d-nb.info/gnd/118594117>,
         <https://viaf.org/viaf/29732107> ;
-    cto:title "Die Meistersinger von Nürnberg. Wach auf (Wagner, Richard)" ;
     cto:viaf <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/136181816>,
         <https://viaf.org/viaf/138543768>,
         <https://viaf.org/viaf/139053206>,
         <https://viaf.org/viaf/149559676>,
         <https://viaf.org/viaf/150245159>,
-        <https://viaf.org/viaf/29732107> ;
-    schema:subjectOf <https://performance.musiconn.de/event/der-kreuzchor-singt-boerse-coswig-1938-01-23-20-00>,
-        <https://performance.musiconn.de/event/der-kreuzchor-singt-hotel-hammer-dresden-striesen-1938-02-05-20-00>,
-        <https://performance.musiconn.de/event/der-kreuzchor-singt-hotel-koenig-albert-hoehe-rabenau-1938-02-04-20-00>,
-        <https://performance.musiconn.de/event/der-kreuzchor-singt-turnhalle-rabenau-oelsa-1938-02-06-20-00>,
-        <https://performance.musiconn.de/event/deutscher-nsdap-kunstabend-hotel-deutsches-haus-1933-10-03>,
-        <https://performance.musiconn.de/event/dresdner-kreuzchor-hamburger-hof-meissen-1937-01-26>,
-        <https://performance.musiconn.de/event/feier-zur-erinnerung-an-den-100-geburtstag-richard-wagners-kreuzschule-georgplatz-dresden-1913-05-28-11-30>,
-        <https://performance.musiconn.de/event/feierstunde-fuer-das-erntedankfest-schwarzhaeupterhaus-riga-1936-10-04-17-00>,
-        <https://performance.musiconn.de/event/fest-konzert-anlaesslich-des-national-feiertages-des-deutschen-volkes-europa-schiff-1930-1935-05-01-11-30>,
-        <https://performance.musiconn.de/event/gautreffen-der-nsdap-gewerbehaus-dresden-1935-05-25-12-30>,
-        <https://performance.musiconn.de/event/jugendkulturstunde-des-standortes-meissen-hamburger-hof-meissen-1937-01-26>,
-        <https://performance.musiconn.de/event/konsert-klosters-kyrka-eskilstuna-1937-10-26-17-00>,
-        <https://performance.musiconn.de/event/konzert-des-dresdner-kreuz-chores-vereinshaus-zinzendorfstrasse-17-dresden-1935-12-13-19-30>,
-        <https://performance.musiconn.de/event/konzert-in-weinboehla-zentralgasthof-weinboehla-1937-02-20>,
-        <https://performance.musiconn.de/event/konzert-schuetzenhaus-radeberg-1938-02-22-20-00>,
-        <https://performance.musiconn.de/event/schuelerkonzert-schuetzenhaus-bischofswerda-1937-05-31-17-00>,
-        <https://performance.musiconn.de/event/schulsammlung-im-kreis-dresden-dreikoenigschule-dresden-neustadt-1937-01-21-20-00>,
-        <https://performance.musiconn.de/event/veranstaltung-fuer-kinder-staedtischer-ausstellungspalast-dresden-1937-01-13-15-00>,
-        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1916-11-11-14-00> .
+        <https://viaf.org/viaf/29732107> .
 

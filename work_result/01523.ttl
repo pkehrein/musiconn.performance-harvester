@@ -1,15 +1,23 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/konzerte-violine-violoncello-klavier-orchester-op-56-c-dur-beethoven-ludwig-van> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/konzerte-violine-violoncello-klavier-orchester-op-56-c-dur-beethoven-ludwig-van> ] .
 
-<https://performance.musiconn.de/work/konzerte-violine-violoncello-klavier-orchester-op-56-c-dur-beethoven-ludwig-van> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/konzerte-violine-violoncello-klavier-orchester-op-56-c-dur-beethoven-ludwig-van> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Konzerte, Violine, Violoncello, Klavier, Orchester, op. 56 (C-Dur) (Beethoven, Ludwig van)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1156211395>,
+        <https://performance.musiconn.de/work/konzerte-violine-violoncello-klavier-orchester-op-56-rondo-alle-polacca-beethoven-ludwig-van>,
+        <https://viaf.org/viaf/2375152451236006650006> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/10-museums-concert-grosser-konzertsaal-frankfurt-a-m-1865-02-24-18-30>,
+        <https://performance.musiconn.de/event/10-museums-concert-grosser-konzertsaal-frankfurt-a-m-1876-03-03-18-30>,
+        <https://performance.musiconn.de/event/7-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-01-08-18-30>,
+        <https://performance.musiconn.de/event/concert-mit-orchester-von-margarete-stern-gewerbehaus-dresden-gewerbehaus-saal-1889-11-20-19-00>,
+        <https://performance.musiconn.de/event/zweites-museums-concert-grosser-konzertsaal-frankfurt-a-m-1881-10-21-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1021524-4>,
@@ -56,7 +64,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/8413148122912495200001> ;
     cto:relatedPerson <https://d-nb.info/gnd/118508288>,
         <https://viaf.org/viaf/32182557> ;
-    cto:title "Konzerte, Violine, Violoncello, Klavier, Orchester, op. 56 (C-Dur) (Beethoven, Ludwig van)" ;
     cto:viaf <https://viaf.org/viaf/131976266>,
         <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/136181816>,
@@ -70,13 +77,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/435144783046765467239>,
         <https://viaf.org/viaf/45144814273718687574>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    schema:includedComposition <https://d-nb.info/gnd/1156211395>,
-        <https://performance.musiconn.de/work/konzerte-violine-violoncello-klavier-orchester-op-56-rondo-alle-polacca-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/2375152451236006650006> ;
-    schema:subjectOf <https://performance.musiconn.de/event/10-museums-concert-grosser-konzertsaal-frankfurt-a-m-1865-02-24-18-30>,
-        <https://performance.musiconn.de/event/10-museums-concert-grosser-konzertsaal-frankfurt-a-m-1876-03-03-18-30>,
-        <https://performance.musiconn.de/event/7-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-01-08-18-30>,
-        <https://performance.musiconn.de/event/concert-mit-orchester-von-margarete-stern-gewerbehaus-dresden-gewerbehaus-saal-1889-11-20-19-00>,
-        <https://performance.musiconn.de/event/zweites-museums-concert-grosser-konzertsaal-frankfurt-a-m-1881-10-21-18-30> .
+        <https://viaf.org/viaf/8413148122912495200001> .
 

@@ -1,18 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/jiddische-gesaenge-heyn-thomas> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/jiddische-gesaenge-heyn-thomas> ] .
 
-<https://performance.musiconn.de/work/jiddische-gesaenge-heyn-thomas> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/jiddische-gesaenge-heyn-thomas> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Jiddische Gesänge (Heyn, Thomas)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Originalfassung
-Das Werk existiert in weiteren Fassungen: Fassung für Singstimme, Klarinette und Klavier; Fassung für Singstimme, Violine und Gitarre""" ;
+    cto:abstract "OriginalfassungDas Werk existiert in weiteren Fassungen: Fassung für Singstimme, Klarinette und Klavier; Fassung für Singstimme, Violine und Gitarre" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/134634675>,
         <https://d-nb.info/gnd/140950796>,
@@ -22,7 +21,6 @@ Das Werk existiert in weiteren Fassungen: Fassung für Singstimme, Klarinette un
         <https://d-nb.info/gnd/140950796>,
         <https://viaf.org/viaf/120214983>,
         <https://viaf.org/viaf/6583270> ;
-    cto:title "Jiddische Gesänge (Heyn, Thomas)" ;
     cto:viaf <https://viaf.org/viaf/120214983>,
         <https://viaf.org/viaf/6583270> .
 

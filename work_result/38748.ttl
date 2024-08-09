@@ -1,15 +1,25 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-35-d-moll-allegro-serioso-david-ferdinand> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-35-d-moll-allegro-serioso-david-ferdinand> ] .
 
-<https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-35-d-moll-allegro-serioso-david-ferdinand> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-35-d-moll-allegro-serioso-david-ferdinand> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Konzerte, Violine, Orchester, Nr. 5, op. 35 (d-Moll). Allegro serioso (David, Ferdinand)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1863-04-18-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1864-04-08-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1866-04-16-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1868-05-09-15-30>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1873-05-08-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1875-05-27-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-im-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1861-04-20-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-im-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1862-03-23-18-00>,
+        <https://performance.musiconn.de/event/hauptpruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1869-04-08-18-00>,
+        <https://performance.musiconn.de/event/hauptpruefung-am-koeniglichen-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1876-05-27-18-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/102199191>,
@@ -46,7 +56,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/59269150>,
         <https://viaf.org/viaf/64765834>,
         <https://viaf.org/viaf/8524432> ;
-    cto:title "Konzerte, Violine, Orchester, Nr. 5, op. 35 (d-Moll). Allegro serioso (David, Ferdinand)" ;
     cto:viaf <https://viaf.org/viaf/1076165750878954220002>,
         <https://viaf.org/viaf/194211147>,
         <https://viaf.org/viaf/2577158551004916540008>,
@@ -56,15 +65,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/5764165750895654220001>,
         <https://viaf.org/viaf/59269150>,
         <https://viaf.org/viaf/64765834>,
-        <https://viaf.org/viaf/8524432> ;
-    schema:subjectOf <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1863-04-18-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1864-04-08-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1866-04-16-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1868-05-09-15-30>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1873-05-08-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1875-05-27-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-im-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1861-04-20-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-im-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1862-03-23-18-00>,
-        <https://performance.musiconn.de/event/hauptpruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1869-04-08-18-00>,
-        <https://performance.musiconn.de/event/hauptpruefung-am-koeniglichen-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1876-05-27-18-00> .
+        <https://viaf.org/viaf/8524432> .
 

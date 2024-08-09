@@ -1,15 +1,25 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/das-goldene-kreuz-bruell-ignaz> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/das-goldene-kreuz-bruell-ignaz> ] .
 
-<https://performance.musiconn.de/work/das-goldene-kreuz-bruell-ignaz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/das-goldene-kreuz-bruell-ignaz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Das goldene Kreuz (Brüll, Ignaz)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/das-goldene-kreuz-1909-12-29-19-30>,
+        <https://performance.musiconn.de/event/das-goldene-kreuz-1910-01-08-19-30>,
+        <https://performance.musiconn.de/event/das-goldene-kreuz-albert-theater-dresden-1877-03-01-19-00>,
+        <https://performance.musiconn.de/event/das-goldene-kreuz-albert-theater-dresden-1877-05-06-19-00>,
+        <https://performance.musiconn.de/event/das-goldene-kreuz-interimstheater-am-zwingerwall-dresden-1877-02-15-19-00>,
+        <https://performance.musiconn.de/event/das-goldene-kreuz-interimstheater-am-zwingerwall-dresden-1877-06-14-19-00>,
+        <https://performance.musiconn.de/event/das-goldene-kreuz-interimstheater-am-zwingerwall-dresden-1877-08-09-19-00>,
+        <https://performance.musiconn.de/event/das-goldene-kreuz-interimstheater-am-zwingerwall-dresden-1877-09-22-19-00>,
+        <https://performance.musiconn.de/event/das-goldene-kreuz-semperoper-dresden-1878-06-08-19-00>,
+        <https://performance.musiconn.de/event/das-goldene-kreuz-semperoper-dresden-1878-06-11-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118660284>,
@@ -20,17 +30,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/158420977> ;
     cto:relatedPerson <https://d-nb.info/gnd/118660284>,
         <https://viaf.org/viaf/102407348> ;
-    cto:title "Das goldene Kreuz (Brüll, Ignaz)" ;
     cto:viaf <https://viaf.org/viaf/102407348>,
-        <https://viaf.org/viaf/158420977> ;
-    schema:subjectOf <https://performance.musiconn.de/event/das-goldene-kreuz-1909-12-29-19-30>,
-        <https://performance.musiconn.de/event/das-goldene-kreuz-1910-01-08-19-30>,
-        <https://performance.musiconn.de/event/das-goldene-kreuz-albert-theater-dresden-1877-03-01-19-00>,
-        <https://performance.musiconn.de/event/das-goldene-kreuz-albert-theater-dresden-1877-05-06-19-00>,
-        <https://performance.musiconn.de/event/das-goldene-kreuz-interimstheater-am-zwingerwall-dresden-1877-02-15-19-00>,
-        <https://performance.musiconn.de/event/das-goldene-kreuz-interimstheater-am-zwingerwall-dresden-1877-06-14-19-00>,
-        <https://performance.musiconn.de/event/das-goldene-kreuz-interimstheater-am-zwingerwall-dresden-1877-08-09-19-00>,
-        <https://performance.musiconn.de/event/das-goldene-kreuz-interimstheater-am-zwingerwall-dresden-1877-09-22-19-00>,
-        <https://performance.musiconn.de/event/das-goldene-kreuz-semperoper-dresden-1878-06-08-19-00>,
-        <https://performance.musiconn.de/event/das-goldene-kreuz-semperoper-dresden-1878-06-11-19-00> .
+        <https://viaf.org/viaf/158420977> .
 

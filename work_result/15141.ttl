@@ -1,19 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/i-rantzau-mascagni-pietro> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/i-rantzau-mascagni-pietro> ] .
 
-<https://performance.musiconn.de/work/i-rantzau-mascagni-pietro> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/i-rantzau-mascagni-pietro> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "I Rantzau (Mascagni, Pietro)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1182933688>,
+        <https://performance.musiconn.de/work/i-rantzau-vorspiel-mascagni-pietro>,
+        <https://viaf.org/viaf/1395155566454213380000> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Uraufführung 1892
-Oper in 4 Akten
-Libretto nach Erckmann-Chatrian""" ;
+    cto:abstract "Uraufführung 1892Oper in 4 AktenLibretto nach Erckmann-Chatrian" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1182933688>,
         <https://d-nb.info/gnd/118782428>,
@@ -21,10 +22,6 @@ Libretto nach Erckmann-Chatrian""" ;
     cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
     cto:relatedPerson <https://d-nb.info/gnd/118782428>,
         <https://viaf.org/viaf/12492045> ;
-    cto:title "I Rantzau (Mascagni, Pietro)" ;
     cto:viaf <https://viaf.org/viaf/12492045>,
-        <https://viaf.org/viaf/1395155566454213380000> ;
-    schema:includedComposition <https://d-nb.info/gnd/1182933688>,
-        <https://performance.musiconn.de/work/i-rantzau-vorspiel-mascagni-pietro>,
         <https://viaf.org/viaf/1395155566454213380000> .
 

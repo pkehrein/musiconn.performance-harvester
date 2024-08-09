@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-hob-15-2426-nr-2-haydn-joseph> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-hob-15-2426-nr-2-haydn-joseph> ] .
 
-<https://performance.musiconn.de/work/trios-violine-violoncello-klavier-hob-15-2426-nr-2-haydn-joseph> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/trios-violine-violoncello-klavier-hob-15-2426-nr-2-haydn-joseph> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Trios, Violine, Violoncello, Klavier, Hob 15 24–26. Nr. 2 (Haydn, Joseph)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300977727>,
+        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-hob-15-2426-nr-25-rondo-allongarese-haydn-joseph>,
+        <https://viaf.org/viaf/95144648409911325198> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Sätze: Andante. Poco Adagio-Cantabile. Rondo all'Ongarese-Presto" ;
     cto:elementOf n4c:E5320 ;
@@ -25,12 +28,8 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/168199674> ;
     cto:relatedPerson <https://d-nb.info/gnd/118547356>,
         <https://viaf.org/viaf/95146280> ;
-    cto:title "Trios, Violine, Violoncello, Klavier, Hob 15 24–26. Nr. 2 (Haydn, Joseph)" ;
     cto:viaf <https://viaf.org/viaf/145590429>,
         <https://viaf.org/viaf/168199674>,
         <https://viaf.org/viaf/95144648409911325198>,
-        <https://viaf.org/viaf/95146280> ;
-    schema:includedComposition <https://d-nb.info/gnd/300977727>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-hob-15-2426-nr-25-rondo-allongarese-haydn-joseph>,
-        <https://viaf.org/viaf/95144648409911325198> .
+        <https://viaf.org/viaf/95146280> .
 

@@ -1,15 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/l-arlesienne-suite-1-bizet-georges> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/l-arlesienne-suite-1-bizet-georges> ] .
 
-<https://performance.musiconn.de/work/l-arlesienne-suite-1-bizet-georges> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/l-arlesienne-suite-1-bizet-georges> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "L' Arlésienne. Suite 1 (Bizet, Georges)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/l-arlesienne-suite-1-minuetto-bizet-georges>,
+        <https://performance.musiconn.de/work/l-arlesienne-suite-1-prelude-minuetto-bizet-georges> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/3-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1910-12-16-19-30>,
+        <https://performance.musiconn.de/event/fuenftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1882-12-08-18-30>,
+        <https://performance.musiconn.de/event/heitere-musik-dresden-1944-07-23> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10340736-4>,
@@ -44,7 +49,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545> ;
     cto:relatedPerson <https://d-nb.info/gnd/118511440>,
         <https://viaf.org/viaf/10032551> ;
-    cto:title "L' Arlésienne. Suite 1 (Bizet, Georges)" ;
     cto:viaf <https://viaf.org/viaf/10032551>,
         <https://viaf.org/viaf/131976266>,
         <https://viaf.org/viaf/133022259>,
@@ -53,10 +57,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/158420977>,
         <https://viaf.org/viaf/161076872>,
         <https://viaf.org/viaf/221396927>,
-        <https://viaf.org/viaf/33146825124407631545> ;
-    schema:includedComposition <https://performance.musiconn.de/work/l-arlesienne-suite-1-minuetto-bizet-georges>,
-        <https://performance.musiconn.de/work/l-arlesienne-suite-1-prelude-minuetto-bizet-georges> ;
-    schema:subjectOf <https://performance.musiconn.de/event/3-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1910-12-16-19-30>,
-        <https://performance.musiconn.de/event/fuenftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1882-12-08-18-30>,
-        <https://performance.musiconn.de/event/heitere-musik-dresden-1944-07-23> .
+        <https://viaf.org/viaf/33146825124407631545> .
 

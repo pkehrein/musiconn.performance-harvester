@@ -1,15 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/adelaide-beethoven-ludwig-van> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/adelaide-beethoven-ludwig-van> ] .
 
-<https://performance.musiconn.de/work/adelaide-beethoven-ludwig-van> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/adelaide-beethoven-ludwig-van> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Adelaide (Beethoven, Ludwig van)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/adelaide-berarb-a-schoenberg-beethoven-ludwig-van> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/achtes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1878-01-25>,
+        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1879-12-25-16-00>,
+        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-02-16-16-00>,
+        <https://performance.musiconn.de/event/elftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1884-03-14-18-30>,
+        <https://performance.musiconn.de/event/extra-concert-gewerbehaus-dresden-gewerbehaus-saal-1890-01-21-19-30>,
+        <https://performance.musiconn.de/event/letztes-concert-gewerbehaus-dresden-gewerbehaus-saal-1890-04-15-19-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1120617715>,
@@ -23,15 +30,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/8413148122912495200001> ;
     cto:relatedPerson <https://d-nb.info/gnd/118508288>,
         <https://viaf.org/viaf/32182557> ;
-    cto:title "Adelaide (Beethoven, Ludwig van)" ;
     cto:viaf <https://viaf.org/viaf/221396927>,
         <https://viaf.org/viaf/32182557>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    schema:includedComposition <https://performance.musiconn.de/work/adelaide-berarb-a-schoenberg-beethoven-ludwig-van> ;
-    schema:subjectOf <https://performance.musiconn.de/event/achtes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1878-01-25>,
-        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1879-12-25-16-00>,
-        <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1890-02-16-16-00>,
-        <https://performance.musiconn.de/event/elftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1884-03-14-18-30>,
-        <https://performance.musiconn.de/event/extra-concert-gewerbehaus-dresden-gewerbehaus-saal-1890-01-21-19-30>,
-        <https://performance.musiconn.de/event/letztes-concert-gewerbehaus-dresden-gewerbehaus-saal-1890-04-15-19-30> .
+        <https://viaf.org/viaf/8413148122912495200001> .
 

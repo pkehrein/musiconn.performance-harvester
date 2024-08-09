@@ -1,15 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/die-tageszeiten-telemann-georg-philipp> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/die-tageszeiten-telemann-georg-philipp> ] .
 
-<https://performance.musiconn.de/work/die-tageszeiten-telemann-georg-philipp> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/die-tageszeiten-telemann-georg-philipp> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Die Tageszeiten (Telemann, Georg Philipp)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1177087294>,
+        <https://performance.musiconn.de/work/die-tageszeiten-der-morgen-telemann-georg-philipp> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Weltliche Kantate" ;
     cto:elementOf n4c:E5320 ;
@@ -19,8 +21,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4029509-6> ;
     cto:relatedPerson <https://d-nb.info/gnd/11862119X>,
         <https://viaf.org/viaf/71579513> ;
-    cto:title "Die Tageszeiten (Telemann, Georg Philipp)" ;
-    cto:viaf <https://viaf.org/viaf/71579513> ;
-    schema:includedComposition <https://d-nb.info/gnd/1177087294>,
-        <https://performance.musiconn.de/work/die-tageszeiten-der-morgen-telemann-georg-philipp> .
+    cto:viaf <https://viaf.org/viaf/71579513> .
 

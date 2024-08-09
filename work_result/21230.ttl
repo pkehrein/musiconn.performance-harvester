@@ -1,18 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/zwei-herzen-im-dreivierteltakt-stolz-robert> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/zwei-herzen-im-dreivierteltakt-stolz-robert> ] .
 
-<https://performance.musiconn.de/work/zwei-herzen-im-dreivierteltakt-stolz-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/zwei-herzen-im-dreivierteltakt-stolz-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Zwei Herzen im Dreivierteltakt (Stolz, Robert)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Walzerlied aus dem Film "Zwei Herzen im Dreivierteltakt"
-Das Werk wurde außerdem verwendet für die Operette "Der verlorene Walzer (Zwei Herzen im Dreivierteltakt)\"""" ;
+    cto:abstract "Walzerlied aus dem Film \"Zwei Herzen im Dreivierteltakt\"Das Werk wurde außerdem verwendet für die Operette \"Der verlorene Walzer (Zwei Herzen im Dreivierteltakt)\"" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1054054118>,
         <https://d-nb.info/gnd/116319496>,
@@ -28,7 +27,6 @@ Das Werk wurde außerdem verwendet für die Operette "Der verlorene Walzer (Zwei
         <https://viaf.org/viaf/309645165>,
         <https://viaf.org/viaf/37663780>,
         <https://viaf.org/viaf/66892163> ;
-    cto:title "Zwei Herzen im Dreivierteltakt (Stolz, Robert)" ;
     cto:viaf <https://viaf.org/viaf/19867137>,
         <https://viaf.org/viaf/309645165>,
         <https://viaf.org/viaf/37663780>,

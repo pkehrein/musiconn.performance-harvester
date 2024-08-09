@@ -1,33 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-mondnacht-schumann-robert> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-mondnacht-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-mondnacht-schumann-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118611666>,
-        <https://d-nb.info/gnd/2074419-5>,
-        <https://d-nb.info/gnd/4035669-3>,
-        <https://d-nb.info/gnd/815129-5> ;
-    cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/2074419-5>,
-        <https://d-nb.info/gnd/815129-5>,
-        <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/139053206> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118611666>,
-        <https://viaf.org/viaf/7575259> ;
-    cto:title "Liederkreis nach Joseph Freiherrn von Eichendorff. Mondnacht (Schumann, Robert)" ;
-    cto:viaf <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/139053206>,
-        <https://viaf.org/viaf/7575259> ;
-    schema:subjectOf <https://performance.musiconn.de/event/1-grosses-konzert-vereinshaus-zinzendorfstrasse-17-dresden-1915-11-09-19-30>,
+<https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-mondnacht-schumann-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Liederkreis nach Joseph Freiherrn von Eichendorff. Mondnacht (Schumann, Robert)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/1-grosses-konzert-vereinshaus-zinzendorfstrasse-17-dresden-1915-11-09-19-30>,
         <https://performance.musiconn.de/event/1-kammermusik-abend-industrie-und-handelskammer-boerse-festsaal-frankfurt-am-main-1956-09-27-20-00>,
         <https://performance.musiconn.de/event/1-museums-concert-grosser-konzertsaal-frankfurt-a-m-1868-10-09-18-30>,
         <https://performance.musiconn.de/event/10-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1898-03-25-19-30>,
@@ -76,5 +59,21 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/zwinger-serenade-der-dresdner-philharmonie-zwinger-dresden-1937-06-12-20-30>,
         <https://performance.musiconn.de/event/zwinger-serenade-zwinger-dresden-1942-06-13-19-30>,
         <https://performance.musiconn.de/event/zwoelfter-letzter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1919-05-30-19-00>,
-        <https://performance.musiconn.de/event/zwoelftes-abonnement-concert-erstes-gewandhaus-leipzig-1876-01-13> .
+        <https://performance.musiconn.de/event/zwoelftes-abonnement-concert-erstes-gewandhaus-leipzig-1876-01-13> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/118611666>,
+        <https://d-nb.info/gnd/2074419-5>,
+        <https://d-nb.info/gnd/4035669-3>,
+        <https://d-nb.info/gnd/815129-5> ;
+    cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/2074419-5>,
+        <https://d-nb.info/gnd/815129-5>,
+        <https://viaf.org/viaf/133022259>,
+        <https://viaf.org/viaf/139053206> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118611666>,
+        <https://viaf.org/viaf/7575259> ;
+    cto:viaf <https://viaf.org/viaf/133022259>,
+        <https://viaf.org/viaf/139053206>,
+        <https://viaf.org/viaf/7575259> .
 

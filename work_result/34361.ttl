@@ -1,22 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-fuer-sopran-und-klavier-1925-nach-gedichten-von-r-m-rilke-bach-maria> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-fuer-sopran-und-klavier-1925-nach-gedichten-von-r-m-rilke-bach-maria> ] .
 
-<https://performance.musiconn.de/work/lieder-fuer-sopran-und-klavier-1925-nach-gedichten-von-r-m-rilke-bach-maria> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-fuer-sopran-und-klavier-1925-nach-gedichten-von-r-m-rilke-bach-maria> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Lieder für Sopran und Klavier (1925) nach Gedichten von R. M. Rilke (Bach, Maria)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """"Im Frühling oder im Traum"
-"Ich liebe vergessene Flurmadonnen"
-"I mulini (Die Mühlen)"
-"Wir wandeln Gott entgegen"
-"Frühlingsnacht"
-"Du gehst mit\"""" ;
+    cto:abstract "\"Im Frühling oder im Traum\"\"Ich liebe vergessene Flurmadonnen\"\"I mulini (Die Mühlen)\"\"Wir wandeln Gott entgegen\"\"Frühlingsnacht\"\"Du gehst mit\"" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/119524007>,
         <https://d-nb.info/gnd/4297924-9> ;
@@ -25,6 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/person/lettenbauer-renate>,
         <https://performance.musiconn.de/person/prossel-elisabeth>,
         <https://viaf.org/viaf/67278030> ;
-    cto:title "Lieder für Sopran und Klavier (1925) nach Gedichten von R. M. Rilke (Bach, Maria)" ;
     cto:viaf <https://viaf.org/viaf/67278030> .
 

@@ -1,30 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/serse-haendel-georg-friedrich> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/serse-haendel-georg-friedrich> ] .
 
-<https://performance.musiconn.de/work/serse-haendel-georg-friedrich> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Dramma per musica in 3 Akten; laut HWV Libretto nach Niccolò Minato und Silvio Stampiglia, aber eigentlicher Textverfasser unbekannt" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1171498861>,
-        <https://d-nb.info/gnd/118544489>,
-        <https://d-nb.info/gnd/300065760>,
-        <https://d-nb.info/gnd/300286740> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118544489>,
-        <https://viaf.org/viaf/5126950> ;
-    cto:title "Serse (Händel, Georg Friedrich)" ;
-    cto:viaf <https://viaf.org/viaf/175627964>,
-        <https://viaf.org/viaf/184079971>,
-        <https://viaf.org/viaf/4414154260389324480001>,
-        <https://viaf.org/viaf/5126950> ;
-    schema:includedComposition <https://d-nb.info/gnd/1171498861>,
+<https://performance.musiconn.de/work/serse-haendel-georg-friedrich> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Serse (Händel, Georg Friedrich)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1171498861>,
         <https://d-nb.info/gnd/300065760>,
         <https://d-nb.info/gnd/300286740>,
         <https://performance.musiconn.de/work/serse-frondi-tenere-e-belle-rezitativ-und-arie-haendel-georg-friedrich>,
@@ -34,5 +20,18 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/work/serse-rezitativ-und-arie-haendel-georg-friedrich-1>,
         <https://viaf.org/viaf/175627964>,
         <https://viaf.org/viaf/184079971>,
-        <https://viaf.org/viaf/4414154260389324480001> .
+        <https://viaf.org/viaf/4414154260389324480001> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "Dramma per musica in 3 Akten; laut HWV Libretto nach Niccolò Minato und Silvio Stampiglia, aber eigentlicher Textverfasser unbekannt" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/1171498861>,
+        <https://d-nb.info/gnd/118544489>,
+        <https://d-nb.info/gnd/300065760>,
+        <https://d-nb.info/gnd/300286740> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118544489>,
+        <https://viaf.org/viaf/5126950> ;
+    cto:viaf <https://viaf.org/viaf/175627964>,
+        <https://viaf.org/viaf/184079971>,
+        <https://viaf.org/viaf/4414154260389324480001>,
+        <https://viaf.org/viaf/5126950> .
 

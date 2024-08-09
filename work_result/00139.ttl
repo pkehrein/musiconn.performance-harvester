@@ -1,15 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/christ-lag-in-todes-banden-es-war-ein-wunderlicher-krieg-bach-johann-sebastian> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/christ-lag-in-todes-banden-es-war-ein-wunderlicher-krieg-bach-johann-sebastian> ] .
 
-<https://performance.musiconn.de/work/christ-lag-in-todes-banden-es-war-ein-wunderlicher-krieg-bach-johann-sebastian> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/christ-lag-in-todes-banden-es-war-ein-wunderlicher-krieg-bach-johann-sebastian> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Christ lag in Todes Banden. Es war ein wunderlicher Krieg (Bach, Johann Sebastian)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/am-1-feiertag-sophienkirche-dresden-1913-03-23-11-30>,
+        <https://performance.musiconn.de/event/am-1-feiertag-sophienkirche-dresden-1918-03-31-11-30>,
+        <https://performance.musiconn.de/event/am-1-ostertage-kreuzkirche-dresden-1917-04-08-09-30>,
+        <https://performance.musiconn.de/event/am-1-ostertage-sophienkirche-dresden-1917-04-08-11-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/11850553X>,
@@ -23,12 +27,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/146006730> ;
     cto:relatedPerson <https://d-nb.info/gnd/11850553X>,
         <https://viaf.org/viaf/12304462> ;
-    cto:title "Christ lag in Todes Banden. Es war ein wunderlicher Krieg (Bach, Johann Sebastian)" ;
     cto:viaf <https://viaf.org/viaf/12304462>,
         <https://viaf.org/viaf/139053206>,
-        <https://viaf.org/viaf/146006730> ;
-    schema:subjectOf <https://performance.musiconn.de/event/am-1-feiertag-sophienkirche-dresden-1913-03-23-11-30>,
-        <https://performance.musiconn.de/event/am-1-feiertag-sophienkirche-dresden-1918-03-31-11-30>,
-        <https://performance.musiconn.de/event/am-1-ostertage-kreuzkirche-dresden-1917-04-08-09-30>,
-        <https://performance.musiconn.de/event/am-1-ostertage-sophienkirche-dresden-1917-04-08-11-30> .
+        <https://viaf.org/viaf/146006730> .
 

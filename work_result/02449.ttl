@@ -1,15 +1,23 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-80-nr-3-haydn-joseph> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-80-nr-3-haydn-joseph> ] .
 
-<https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-80-nr-3-haydn-joseph> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-80-nr-3-haydn-joseph> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Quartette, Violine (2), Viola, Violoncello, Hob 3 75-80. Nr. 3 (Haydn, Joseph)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1224197356>,
+        <https://d-nb.info/gnd/300893132>,
+        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-80-nr-77-c-dur-2-satz-haydn-joseph>,
+        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-80-nr-77-c-dur-arr-haydn-joseph>,
+        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-80-nr-77-c-dur-menuett-haydn-joseph>,
+        <https://viaf.org/viaf/201874207>,
+        <https://viaf.org/viaf/290160978140917940001> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/9-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1882-02-24-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10311058-6>,
@@ -43,7 +51,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/264131606> ;
     cto:relatedPerson <https://d-nb.info/gnd/118547356>,
         <https://viaf.org/viaf/95146280> ;
-    cto:title "Quartette, Violine (2), Viola, Violoncello, Hob 3 75-80. Nr. 3 (Haydn, Joseph)" ;
     cto:viaf <https://viaf.org/viaf/122777336>,
         <https://viaf.org/viaf/129526398>,
         <https://viaf.org/viaf/134996717>,
@@ -53,13 +60,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/201874207>,
         <https://viaf.org/viaf/264131606>,
         <https://viaf.org/viaf/290160978140917940001>,
-        <https://viaf.org/viaf/95146280> ;
-    schema:includedComposition <https://d-nb.info/gnd/1224197356>,
-        <https://d-nb.info/gnd/300893132>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-80-nr-77-c-dur-2-satz-haydn-joseph>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-80-nr-77-c-dur-arr-haydn-joseph>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-80-nr-77-c-dur-menuett-haydn-joseph>,
-        <https://viaf.org/viaf/201874207>,
-        <https://viaf.org/viaf/290160978140917940001> ;
-    schema:subjectOf <https://performance.musiconn.de/event/9-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1882-02-24-19-00> .
+        <https://viaf.org/viaf/95146280> .
 

@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gasparone-wie-freu-ich-mich-milloecker-carl> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gasparone-wie-freu-ich-mich-milloecker-carl> ] .
 
-<https://performance.musiconn.de/work/gasparone-wie-freu-ich-mich-milloecker-carl> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gasparone-wie-freu-ich-mich-milloecker-carl> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Gasparone. Wie freu ich mich (Millöcker, Carl)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/adventsfeier-wandelhalle-neues-rathaus-dresden-wandelhalle-1935-12-15-17-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/117108995>,
@@ -23,8 +24,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/person/stiller-albert>,
         <https://viaf.org/viaf/69699565>,
         <https://viaf.org/viaf/69733921> ;
-    cto:title "Gasparone. Wie freu ich mich (Millöcker, Carl)" ;
     cto:viaf <https://viaf.org/viaf/69699565>,
-        <https://viaf.org/viaf/69733921> ;
-    schema:subjectOf <https://performance.musiconn.de/event/adventsfeier-wandelhalle-neues-rathaus-dresden-wandelhalle-1935-12-15-17-30> .
+        <https://viaf.org/viaf/69733921> .
 

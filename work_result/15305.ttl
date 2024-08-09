@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/suite-im-alten-stil-op-81-kronke-emil> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/suite-im-alten-stil-op-81-kronke-emil> ] .
 
-<https://performance.musiconn.de/work/suite-im-alten-stil-op-81-kronke-emil> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/suite-im-alten-stil-op-81-kronke-emil> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Suite im alten Stil, op. 81 (Kronke, Emil)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/suite-im-alten-stil-sarabande-kronke-emil> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/134674162>,
@@ -17,7 +18,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4184006-9> ;
     cto:relatedPerson <https://d-nb.info/gnd/134674162>,
         <https://viaf.org/viaf/79724747> ;
-    cto:title "Suite im alten Stil, op. 81 (Kronke, Emil)" ;
-    cto:viaf <https://viaf.org/viaf/79724747> ;
-    schema:includedComposition <https://performance.musiconn.de/work/suite-im-alten-stil-sarabande-kronke-emil> .
+    cto:viaf <https://viaf.org/viaf/79724747> .
 

@@ -1,15 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/trio-nr-4-es-dur-devienne-francois> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/trio-nr-4-es-dur-devienne-francois> ] .
 
-<https://performance.musiconn.de/work/trio-nr-4-es-dur-devienne-francois> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/trio-nr-4-es-dur-devienne-francois> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Trio Nr. 4 Es-Dur (Devienne, François)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/104003499>,
@@ -22,7 +22,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/32182952>,
         <https://viaf.org/viaf/42032175>,
         <https://viaf.org/viaf/79171604> ;
-    cto:title "Trio Nr. 4 Es-Dur (Devienne, François)" ;
     cto:viaf <https://viaf.org/viaf/32182952>,
         <https://viaf.org/viaf/42032175>,
         <https://viaf.org/viaf/79171604> .

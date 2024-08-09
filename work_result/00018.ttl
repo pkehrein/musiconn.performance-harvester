@@ -1,54 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/der-freischuetz-weber-carl-maria-von> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/der-freischuetz-weber-carl-maria-von> ] .
 
-<https://performance.musiconn.de/work/der-freischuetz-weber-carl-maria-von> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "J 277 ist die maßgebliche Werkverzeichniszählung" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1048598187>,
-        <https://d-nb.info/gnd/106954521X>,
-        <https://d-nb.info/gnd/1119371066>,
-        <https://d-nb.info/gnd/1140667874>,
-        <https://d-nb.info/gnd/118629662>,
-        <https://d-nb.info/gnd/300171498>,
-        <https://d-nb.info/gnd/30017151X>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/300171536>,
-        <https://d-nb.info/gnd/300171544>,
-        <https://d-nb.info/gnd/300333307>,
-        <https://d-nb.info/gnd/4043582-9>,
-        <https://d-nb.info/gnd/5084847-1>,
-        <https://d-nb.info/gnd/815129-5> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
-        <https://d-nb.info/gnd/815129-5>,
-        <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/158420977> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118629662>,
-        <https://viaf.org/viaf/14959938> ;
-    cto:title "Der Freischütz (Weber, Carl Maria von)" ;
-    cto:viaf <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/14959938>,
-        <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/179427451>,
-        <https://viaf.org/viaf/182026312>,
-        <https://viaf.org/viaf/183702492>,
-        <https://viaf.org/viaf/184277403>,
-        <https://viaf.org/viaf/184792248>,
-        <https://viaf.org/viaf/185919700>,
-        <https://viaf.org/viaf/231986118>,
-        <https://viaf.org/viaf/4463151112576837180000>,
-        <https://viaf.org/viaf/7300147967371284200001> ;
-    schema:includedComposition <https://d-nb.info/gnd/1048598187>,
+<https://performance.musiconn.de/work/der-freischuetz-weber-carl-maria-von> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Der Freischütz (Weber, Carl Maria von)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1048598187>,
         <https://d-nb.info/gnd/106954521X>,
         <https://d-nb.info/gnd/1119371066>,
         <https://d-nb.info/gnd/1140667874>,
@@ -90,7 +52,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/231986118>,
         <https://viaf.org/viaf/4463151112576837180000>,
         <https://viaf.org/viaf/7300147967371284200001> ;
-    schema:subjectOf <https://performance.musiconn.de/event/der-freischuetz-1903-09-21-19-30>,
+    schema1:subjectOf <https://performance.musiconn.de/event/der-freischuetz-1903-09-21-19-30>,
         <https://performance.musiconn.de/event/der-freischuetz-1910-01-17-19-30>,
         <https://performance.musiconn.de/event/der-freischuetz-albert-theater-dresden-1877-01-21-19-00>,
         <https://performance.musiconn.de/event/der-freischuetz-interimstheater-am-zwingerwall-dresden-1877-01-01-19-00>,
@@ -171,5 +133,42 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/der-freischuetz-semperoper-dresden-1912-03-14-19-30>,
         <https://performance.musiconn.de/event/der-freischuetz-semperoper-dresden-1913-01-03-19-30>,
         <https://performance.musiconn.de/event/der-freischuetz-semperoper-dresden-1913-04-20-19-30>,
-        <https://performance.musiconn.de/event/der-freischuetz-semperoper-dresden-1913-06-23-19-30> .
+        <https://performance.musiconn.de/event/der-freischuetz-semperoper-dresden-1913-06-23-19-30> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "J 277 ist die maßgebliche Werkverzeichniszählung" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/1048598187>,
+        <https://d-nb.info/gnd/106954521X>,
+        <https://d-nb.info/gnd/1119371066>,
+        <https://d-nb.info/gnd/1140667874>,
+        <https://d-nb.info/gnd/118629662>,
+        <https://d-nb.info/gnd/300171498>,
+        <https://d-nb.info/gnd/30017151X>,
+        <https://d-nb.info/gnd/300171528>,
+        <https://d-nb.info/gnd/300171536>,
+        <https://d-nb.info/gnd/300171544>,
+        <https://d-nb.info/gnd/300333307>,
+        <https://d-nb.info/gnd/4043582-9>,
+        <https://d-nb.info/gnd/5084847-1>,
+        <https://d-nb.info/gnd/815129-5> ;
+    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
+        <https://d-nb.info/gnd/815129-5>,
+        <https://viaf.org/viaf/133022259>,
+        <https://viaf.org/viaf/158420977> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118629662>,
+        <https://viaf.org/viaf/14959938> ;
+    cto:viaf <https://viaf.org/viaf/133022259>,
+        <https://viaf.org/viaf/14959938>,
+        <https://viaf.org/viaf/158420977>,
+        <https://viaf.org/viaf/177811557>,
+        <https://viaf.org/viaf/179427451>,
+        <https://viaf.org/viaf/182026312>,
+        <https://viaf.org/viaf/183702492>,
+        <https://viaf.org/viaf/184277403>,
+        <https://viaf.org/viaf/184792248>,
+        <https://viaf.org/viaf/185919700>,
+        <https://viaf.org/viaf/231986118>,
+        <https://viaf.org/viaf/4463151112576837180000>,
+        <https://viaf.org/viaf/7300147967371284200001> .
 

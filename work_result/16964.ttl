@@ -1,15 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/la-vida-breve-falla-manuel-de> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/la-vida-breve-falla-manuel-de> ] .
 
-<https://performance.musiconn.de/work/la-vida-breve-falla-manuel-de> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/la-vida-breve-falla-manuel-de> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "La vida breve (Falla, Manuel de)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300051247>,
+        <https://performance.musiconn.de/work/la-vida-breve-danza-espanola-no-1-falla-manuel-de>,
+        <https://performance.musiconn.de/work/la-vida-breve-intermezzo-und-spanischer-tanz-falla-manuel-de>,
+        <https://performance.musiconn.de/work/la-vida-breve-vivent-ceux-qui-rient-falla-manuel-de>,
+        <https://performance.musiconn.de/work/la-vida-breve-zwischenspiel-und-tanz-falla-manuel-de>,
+        <https://viaf.org/viaf/183476104> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118531883>,
@@ -22,15 +28,8 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/133022259> ;
     cto:relatedPerson <https://d-nb.info/gnd/118531883>,
         <https://viaf.org/viaf/42025164> ;
-    cto:title "La vida breve (Falla, Manuel de)" ;
     cto:viaf <https://viaf.org/viaf/122923997>,
         <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/183476104>,
-        <https://viaf.org/viaf/42025164> ;
-    schema:includedComposition <https://d-nb.info/gnd/300051247>,
-        <https://performance.musiconn.de/work/la-vida-breve-danza-espanola-no-1-falla-manuel-de>,
-        <https://performance.musiconn.de/work/la-vida-breve-intermezzo-und-spanischer-tanz-falla-manuel-de>,
-        <https://performance.musiconn.de/work/la-vida-breve-vivent-ceux-qui-rient-falla-manuel-de>,
-        <https://performance.musiconn.de/work/la-vida-breve-zwischenspiel-und-tanz-falla-manuel-de>,
-        <https://viaf.org/viaf/183476104> .
+        <https://viaf.org/viaf/42025164> .
 

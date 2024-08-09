@@ -1,18 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/solidaritaetslied-meier-burkhard> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/solidaritaetslied-meier-burkhard> ] .
 
-<https://performance.musiconn.de/work/solidaritaetslied-meier-burkhard> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/solidaritaetslied-meier-burkhard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Solidaritätslied (Meier, Burkhard)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Text: Andrea Kieselbach
-falsche Schreibweise von Winnie Mandela im Müller ("Winni")""" ;
+    cto:abstract "Text: Andrea Kieselbachfalsche Schreibweise von Winnie Mandela im Müller (\"Winni\")" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1191302997>,
         <https://d-nb.info/gnd/134586166>,
@@ -22,7 +21,6 @@ falsche Schreibweise von Winnie Mandela im Müller ("Winni")""" ;
         <https://d-nb.info/gnd/134586166>,
         <https://viaf.org/viaf/2332156434629312120001>,
         <https://viaf.org/viaf/23373541> ;
-    cto:title "Solidaritätslied (Meier, Burkhard)" ;
     cto:viaf <https://viaf.org/viaf/2332156434629312120001>,
         <https://viaf.org/viaf/23373541> .
 

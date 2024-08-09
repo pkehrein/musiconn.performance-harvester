@@ -1,37 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/la-dame-blanche-boieldieu-francois-adrien> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/la-dame-blanche-boieldieu-francois-adrien> ] .
 
-<https://performance.musiconn.de/work/la-dame-blanche-boieldieu-francois-adrien> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118512978>,
-        <https://d-nb.info/gnd/300022808>,
-        <https://d-nb.info/gnd/4043582-9>,
-        <https://d-nb.info/gnd/5084847-1> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
-        <https://viaf.org/viaf/158420977> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118512978>,
-        <https://viaf.org/viaf/73962796> ;
-    cto:title "La dame blanche (Boieldieu, François Adrien)" ;
-    cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/176640702>,
-        <https://viaf.org/viaf/73962796> ;
-    schema:includedComposition <https://d-nb.info/gnd/300022808>,
+<https://performance.musiconn.de/work/la-dame-blanche-boieldieu-francois-adrien> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "La dame blanche (Boieldieu, François Adrien)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300022808>,
         <https://performance.musiconn.de/work/la-dame-blanche-fassung-1826-boieldieu-francois-adrien>,
         <https://performance.musiconn.de/work/la-dame-blanche-fassung-boieldieu-francois-adrien>,
         <https://performance.musiconn.de/work/la-dame-blanche-komm-o-holde-dame-boieldieu-francois-adrien>,
         <https://performance.musiconn.de/work/la-dame-blanche-ouvertuere-boieldieu-francois-adrien>,
         <https://viaf.org/viaf/176640702> ;
-    schema:subjectOf <https://performance.musiconn.de/event/die-weisse-dame-interimstheater-am-zwingerwall-dresden-1877-10-25-19-00>,
+    schema1:subjectOf <https://performance.musiconn.de/event/die-weisse-dame-interimstheater-am-zwingerwall-dresden-1877-10-25-19-00>,
         <https://performance.musiconn.de/event/die-weisse-dame-koenigliches-hoftheater-dresden-1850-11-16-18-00>,
         <https://performance.musiconn.de/event/die-weisse-dame-koenigliches-hoftheater-dresden-1850-12-29-18-00>,
         <https://performance.musiconn.de/event/die-weisse-dame-koenigliches-hoftheater-dresden-1860-01-07-18-00>,
@@ -53,5 +38,19 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/die-weisse-dame-semperoper-dresden-1878-02-09-19-00>,
         <https://performance.musiconn.de/event/die-weisse-dame-semperoper-dresden-1878-02-17-19-00>,
         <https://performance.musiconn.de/event/die-weisse-dame-semperoper-dresden-1878-02-28-19-00>,
-        <https://performance.musiconn.de/event/die-weisse-dame-semperoper-dresden-1878-10-17-19-00> .
+        <https://performance.musiconn.de/event/die-weisse-dame-semperoper-dresden-1878-10-17-19-00> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/118512978>,
+        <https://d-nb.info/gnd/300022808>,
+        <https://d-nb.info/gnd/4043582-9>,
+        <https://d-nb.info/gnd/5084847-1> ;
+    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
+        <https://viaf.org/viaf/158420977> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118512978>,
+        <https://viaf.org/viaf/73962796> ;
+    cto:viaf <https://viaf.org/viaf/158420977>,
+        <https://viaf.org/viaf/176640702>,
+        <https://viaf.org/viaf/73962796> .
 

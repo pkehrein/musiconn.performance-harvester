@@ -1,15 +1,28 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/romeo-et-juliette-berlioz-hector> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/romeo-et-juliette-berlioz-hector> ] .
 
-<https://performance.musiconn.de/work/romeo-et-juliette-berlioz-hector> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/romeo-et-juliette-berlioz-hector> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Roméo et Juliette (Berlioz, Hector)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/121816865X>,
+        <https://d-nb.info/gnd/300019408>,
+        <https://performance.musiconn.de/work/romeo-et-juliette-2-satz-berlioz-hector>,
+        <https://performance.musiconn.de/work/romeo-et-juliette-andante-allegro-berlioz-hector>,
+        <https://performance.musiconn.de/work/romeo-et-juliette-grande-fete-chez-capulet-berlioz-hector>,
+        <https://performance.musiconn.de/work/romeo-et-juliette-romeo-allein-berlioz-hector>,
+        <https://performance.musiconn.de/work/romeo-et-juliette-scene-damour-la-reine-maab-berlioz-hector>,
+        <https://performance.musiconn.de/work/romeo-et-juliette-vier-saetze-berlioz-hector>,
+        <https://performance.musiconn.de/work/romeo-und-julia-op-17-daraus-orchesterstuecke-berlioz-hector>,
+        <https://performance.musiconn.de/work/romeo-und-julia-scherzo-berlioz-hector>,
+        <https://performance.musiconn.de/work/romeo-und-julia-sehnsucht-berlioz-hector> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/neuntes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1895-02-22-19-00-1>,
+        <https://performance.musiconn.de/event/zwoelftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1892-04-01-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1078514259>,
@@ -32,23 +45,9 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545> ;
     cto:relatedPerson <https://d-nb.info/gnd/118509675>,
         <https://viaf.org/viaf/71577105> ;
-    cto:title "Roméo et Juliette (Berlioz, Hector)" ;
     cto:viaf <https://viaf.org/viaf/128872437>,
         <https://viaf.org/viaf/136181816>,
         <https://viaf.org/viaf/161076872>,
         <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/71577105> ;
-    schema:includedComposition <https://d-nb.info/gnd/121816865X>,
-        <https://d-nb.info/gnd/300019408>,
-        <https://performance.musiconn.de/work/romeo-et-juliette-2-satz-berlioz-hector>,
-        <https://performance.musiconn.de/work/romeo-et-juliette-andante-allegro-berlioz-hector>,
-        <https://performance.musiconn.de/work/romeo-et-juliette-grande-fete-chez-capulet-berlioz-hector>,
-        <https://performance.musiconn.de/work/romeo-et-juliette-romeo-allein-berlioz-hector>,
-        <https://performance.musiconn.de/work/romeo-et-juliette-scene-damour-la-reine-maab-berlioz-hector>,
-        <https://performance.musiconn.de/work/romeo-et-juliette-vier-saetze-berlioz-hector>,
-        <https://performance.musiconn.de/work/romeo-und-julia-op-17-daraus-orchesterstuecke-berlioz-hector>,
-        <https://performance.musiconn.de/work/romeo-und-julia-scherzo-berlioz-hector>,
-        <https://performance.musiconn.de/work/romeo-und-julia-sehnsucht-berlioz-hector> ;
-    schema:subjectOf <https://performance.musiconn.de/event/neuntes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1895-02-22-19-00-1>,
-        <https://performance.musiconn.de/event/zwoelftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1892-04-01-18-30> .
+        <https://viaf.org/viaf/71577105> .
 

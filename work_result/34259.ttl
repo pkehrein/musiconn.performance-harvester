@@ -1,18 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/messa-et-salmi-dixit-dominus-1-monteverdi-claudio> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/messa-et-salmi-dixit-dominus-1-monteverdi-claudio> ] .
 
-<https://performance.musiconn.de/work/messa-et-salmi-dixit-dominus-1-monteverdi-claudio> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/messa-et-salmi-dixit-dominus-1-monteverdi-claudio> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Messa et salmi. Dixit Dominus. 1 (Monteverdi, Claudio)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Besetzung: Chor 1: SATB + Chor 2: SATB, Basso continuo
-Nach Oxford Music Online müsste es die 3. Fassung sein""" ;
+    cto:abstract "Besetzung: Chor 1: SATB + Chor 2: SATB, Basso continuoNach Oxford Music Online müsste es die 3. Fassung sein" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/111521991X>,
         <https://d-nb.info/gnd/118583700>,
@@ -25,7 +24,6 @@ Nach Oxford Music Online müsste es die 3. Fassung sein""" ;
         <https://viaf.org/viaf/135053939> ;
     cto:relatedPerson <https://d-nb.info/gnd/118583700>,
         <https://viaf.org/viaf/44485902> ;
-    cto:title "Messa et salmi. Dixit Dominus. 1 (Monteverdi, Claudio)" ;
     cto:viaf <https://viaf.org/viaf/127509643>,
         <https://viaf.org/viaf/135053939>,
         <https://viaf.org/viaf/44485902> .

@@ -1,15 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/geistliche-kammermusik-simon-hermann> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/geistliche-kammermusik-simon-hermann> ] .
 
-<https://performance.musiconn.de/work/geistliche-kammermusik-simon-hermann> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/geistliche-kammermusik-simon-hermann> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Geistliche Kammermusik (Simon, Hermann)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Enthalten: 1. \"Aller Augen warten auf dich\" (Psalm 145) für Bass-Solo mit Violoncello; 2. Biblisches Terzett (1. Kor. 13,12) für Sopran-, Alt- und Bass-Solo mit Harfe; 3. \"Esto fidelis usque ad mortem\" (Ap. 2,10) für Tenor-Solo, zwei Trompeten und Orgel" ;
     cto:elementOf n4c:E5320 ;
@@ -24,7 +24,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/139053206> ;
     cto:relatedPerson <https://d-nb.info/gnd/128725397>,
         <https://viaf.org/viaf/42897281> ;
-    cto:title "Geistliche Kammermusik (Simon, Hermann)" ;
     cto:viaf <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/139053206>,
         <https://viaf.org/viaf/42897281> .

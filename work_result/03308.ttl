@@ -1,26 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/balladen-op-129-der-noeck-loewe-carl> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/balladen-op-129-der-noeck-loewe-carl> ] .
 
-<https://performance.musiconn.de/work/balladen-op-129-der-noeck-loewe-carl> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118573934>,
-        <https://d-nb.info/gnd/4004344-7> ;
-    cto:isPartOf <https://d-nb.info/gnd/4004344-7> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/verein-der-musikfreunde-jena> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118573934>,
-        <https://viaf.org/viaf/32183840> ;
-    cto:title "Balladen, op. 129. Der Nöck (Loewe, Carl)" ;
-    cto:viaf <https://viaf.org/viaf/32183840> ;
-    schema:subjectOf <https://performance.musiconn.de/event/2-caecilienfestkonzert-muenster-westf-1893-11-19>,
+<https://performance.musiconn.de/work/balladen-op-129-der-noeck-loewe-carl> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Balladen, op. 129. Der Nöck (Loewe, Carl)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/2-caecilienfestkonzert-muenster-westf-1893-11-19>,
         <https://performance.musiconn.de/event/3-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1899-11-17-19-30>,
         <https://performance.musiconn.de/event/3-volkstuemliches-akadem-konzert-volkshaus-jena-1935-02-17-20-00>,
         <https://performance.musiconn.de/event/abokonzert-13-zweites-gewandhaus-leipzig-1903-01-15>,
@@ -31,5 +21,14 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/zehntes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1899-02-17-19-00>,
         <https://performance.musiconn.de/event/zehntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1888-02-17-18-30>,
         <https://performance.musiconn.de/event/zehntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1889-03-01-18-30>,
-        <https://performance.musiconn.de/event/zwoelfter-letzter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1918-05-01-19-00> .
+        <https://performance.musiconn.de/event/zwoelfter-letzter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1918-05-01-19-00> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/118573934>,
+        <https://d-nb.info/gnd/4004344-7> ;
+    cto:isPartOf <https://d-nb.info/gnd/4004344-7> ;
+    cto:relatedOrganization <https://performance.musiconn.de/corporation/verein-der-musikfreunde-jena> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118573934>,
+        <https://viaf.org/viaf/32183840> ;
+    cto:viaf <https://viaf.org/viaf/32183840> .
 

@@ -1,15 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-45-f-dur-moscheles-ignaz> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-45-f-dur-moscheles-ignaz> ] .
 
-<https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-45-f-dur-moscheles-ignaz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-45-f-dur-moscheles-ignaz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Konzerte, Klavier, Orchester, Nr. 1, op. 45 (F-Dur) (Moscheles, Ignaz)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1257378872>,
+        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-45-f-dur-allegro-maestoso-moscheles-ignaz> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118785028>,
@@ -20,8 +22,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://d-nb.info/gnd/4164065-2> ;
     cto:relatedPerson <https://d-nb.info/gnd/118785028>,
         <https://viaf.org/viaf/56797125> ;
-    cto:title "Konzerte, Klavier, Orchester, Nr. 1, op. 45 (F-Dur) (Moscheles, Ignaz)" ;
-    cto:viaf <https://viaf.org/viaf/56797125> ;
-    schema:includedComposition <https://d-nb.info/gnd/1257378872>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-45-f-dur-allegro-maestoso-moscheles-ignaz> .
+    cto:viaf <https://viaf.org/viaf/56797125> .
 

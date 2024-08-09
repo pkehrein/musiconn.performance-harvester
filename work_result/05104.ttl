@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/good-bye-tosti-francesco-paolo> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/good-bye-tosti-francesco-paolo> ] .
 
-<https://performance.musiconn.de/work/good-bye-tosti-francesco-paolo> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/good-bye-tosti-francesco-paolo> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Good-bye (Tosti, Francesco Paolo)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/adventsfeier-festsaal-neues-rathaus-dresden-festsaal-1935-12-15-17-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/11605915X>,
@@ -22,8 +23,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://d-nb.info/gnd/119246635>,
         <https://viaf.org/viaf/46947921>,
         <https://viaf.org/viaf/54333486> ;
-    cto:title "Good-bye (Tosti, Francesco Paolo)" ;
     cto:viaf <https://viaf.org/viaf/46947921>,
-        <https://viaf.org/viaf/54333486> ;
-    schema:subjectOf <https://performance.musiconn.de/event/adventsfeier-festsaal-neues-rathaus-dresden-festsaal-1935-12-15-17-30> .
+        <https://viaf.org/viaf/54333486> .
 

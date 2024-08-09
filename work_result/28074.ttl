@@ -1,18 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sulamit-palestrina-giovanni-pierluigi-da-keussler-gerhard-von> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sulamit-palestrina-giovanni-pierluigi-da-keussler-gerhard-von> ] .
 
-<https://performance.musiconn.de/work/sulamit-palestrina-giovanni-pierluigi-da-keussler-gerhard-von> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sulamit-palestrina-giovanni-pierluigi-da-keussler-gerhard-von> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sulamit (Palestrina, Giovanni Pierluigi da, Keußler, Gerhard von)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Madrigaleske Handlung in drei Szenen mit Instrumental-Pastoriten als Zwischenspielen aus Palestrinas Lied der Lieder ins Deutsche übertragen und für einen Konzertgebrauch zusammengefügt von Gerhard von Keußler.
-Als Prolog und Epilog wurden vier Madrigale und eine Canzone Palestrinas gewählt""" ;
+    cto:abstract "Madrigaleske Handlung in drei Szenen mit Instrumental-Pastoriten als Zwischenspielen aus Palestrinas Lied der Lieder ins Deutsche übertragen und für einen Konzertgebrauch zusammengefügt von Gerhard von Keußler.Als Prolog und Epilog wurden vier Madrigale und eine Canzone Palestrinas gewählt" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116152427>,
         <https://d-nb.info/gnd/118818686>,
@@ -27,7 +26,6 @@ Als Prolog und Epilog wurden vier Madrigale und eine Canzone Palestrinas gewähl
     cto:relatedPerson <https://d-nb.info/gnd/116152427>,
         <https://d-nb.info/gnd/118818686>,
         <https://viaf.org/viaf/92280854> ;
-    cto:title "Sulamit (Palestrina, Giovanni Pierluigi da, Keußler, Gerhard von)" ;
     cto:viaf <https://viaf.org/viaf/128872437>,
         <https://viaf.org/viaf/131976266>,
         <https://viaf.org/viaf/92280854> .

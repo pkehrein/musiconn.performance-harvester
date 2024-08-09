@@ -1,15 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/konzerte-violine-orchester-mwv-o-14-e-moll-allegretto-non-troppo-mendelssohn-bartholdy-felix> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/konzerte-violine-orchester-mwv-o-14-e-moll-allegretto-non-troppo-mendelssohn-bartholdy-felix> ] .
 
-<https://performance.musiconn.de/work/konzerte-violine-orchester-mwv-o-14-e-moll-allegretto-non-troppo-mendelssohn-bartholdy-felix> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/konzerte-violine-orchester-mwv-o-14-e-moll-allegretto-non-troppo-mendelssohn-bartholdy-felix> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Konzerte, Violine, Orchester, MWV O 14 (e-Moll). Allegretto non troppo (Mendelssohn Bartholdy, Felix)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1877-02-03>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1863-04-18-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-im-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1861-04-06-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-im-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1862-03-23-18-00>,
+        <https://performance.musiconn.de/event/musikalische-auffuehrung-in-gegenwart-sr-majestaet-des-koenigs-ihrer-majestaet-der-koenigin-und-ihrer-koenigl-hoheit-prinzess-sophie-erstes-gewandhaus-leipzig-1862-07-03-20-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1160724601>,
@@ -30,14 +35,8 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/2736257>,
         <https://viaf.org/viaf/5242152865702104940006>,
         <https://viaf.org/viaf/64765834> ;
-    cto:title "Konzerte, Violine, Orchester, MWV O 14 (e-Moll). Allegretto non troppo (Mendelssohn Bartholdy, Felix)" ;
     cto:viaf <https://viaf.org/viaf/2665666>,
         <https://viaf.org/viaf/2736257>,
         <https://viaf.org/viaf/5242152865702104940006>,
-        <https://viaf.org/viaf/64765834> ;
-    schema:subjectOf <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1877-02-03>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1863-04-18-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-im-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1861-04-06-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-im-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1862-03-23-18-00>,
-        <https://performance.musiconn.de/event/musikalische-auffuehrung-in-gegenwart-sr-majestaet-des-koenigs-ihrer-majestaet-der-koenigin-und-ihrer-koenigl-hoheit-prinzess-sophie-erstes-gewandhaus-leipzig-1862-07-03-20-00> .
+        <https://viaf.org/viaf/64765834> .
 

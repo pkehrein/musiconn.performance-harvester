@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/hary-janos-kodaly-zoltan> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/hary-janos-kodaly-zoltan> ] .
 
-<https://performance.musiconn.de/work/hary-janos-kodaly-zoltan> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/hary-janos-kodaly-zoltan> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Háry János (Kodály, Zoltán)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1124857524>,
+        <https://performance.musiconn.de/work/hary-janos-suite-kodaly-zoltan>,
+        <https://viaf.org/viaf/180340600> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1124857524>,
@@ -19,11 +22,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/221396927> ;
     cto:relatedPerson <https://d-nb.info/gnd/118564145>,
         <https://viaf.org/viaf/27266146> ;
-    cto:title "Háry János (Kodály, Zoltán)" ;
     cto:viaf <https://viaf.org/viaf/180340600>,
         <https://viaf.org/viaf/221396927>,
-        <https://viaf.org/viaf/27266146> ;
-    schema:includedComposition <https://d-nb.info/gnd/1124857524>,
-        <https://performance.musiconn.de/work/hary-janos-suite-kodaly-zoltan>,
-        <https://viaf.org/viaf/180340600> .
+        <https://viaf.org/viaf/27266146> .
 

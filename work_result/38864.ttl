@@ -1,18 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/quartette-streichinstrument-4-d-moll-haydn-joseph> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/quartette-streichinstrument-4-d-moll-haydn-joseph> ] .
 
-<https://performance.musiconn.de/work/quartette-streichinstrument-4-d-moll-haydn-joseph> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/quartette-streichinstrument-4-d-moll-haydn-joseph> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Quartette, Streichinstrument (4), d-Moll (Haydn, Joseph)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1877-11-13>,
+        <https://performance.musiconn.de/event/einladung-des-conservatoriums-der-musik-zu-leipzig-zur-feier-des-geburtstages-sr-majestaet-des-koenigs-johann-conservatorium-der-musik-1862-12-12-18-30>,
+        <https://performance.musiconn.de/event/erste-abonnements-soiree-fuer-kammermusik-hotel-koenig-von-england-muenster-kleiner-saal-des-herrn-gerbaulet-1862-02-01> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """nicht identifizierbares Werk
-mutmaßlich Hob 3 22, Hob 3 43 Hob 3 76 oder Hob 3 83""" ;
+    cto:abstract "nicht identifizierbares Werkmutmaßlich Hob 3 22, Hob 3 43 Hob 3 76 oder Hob 3 83" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1076496261>,
         <https://d-nb.info/gnd/118547356>,
@@ -39,14 +41,10 @@ mutmaßlich Hob 3 22, Hob 3 43 Hob 3 76 oder Hob 3 83""" ;
         <https://viaf.org/viaf/44152742895627730847>,
         <https://viaf.org/viaf/95146280>,
         <https://viaf.org/viaf/9830165709995049380009> ;
-    cto:title "Quartette, Streichinstrument (4), d-Moll (Haydn, Joseph)" ;
     cto:viaf <https://viaf.org/viaf/3032165750885954220001>,
         <https://viaf.org/viaf/317089816>,
         <https://viaf.org/viaf/364165750876154220004>,
         <https://viaf.org/viaf/44152742895627730847>,
         <https://viaf.org/viaf/95146280>,
-        <https://viaf.org/viaf/9830165709995049380009> ;
-    schema:subjectOf <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1877-11-13>,
-        <https://performance.musiconn.de/event/einladung-des-conservatoriums-der-musik-zu-leipzig-zur-feier-des-geburtstages-sr-majestaet-des-koenigs-johann-conservatorium-der-musik-1862-12-12-18-30>,
-        <https://performance.musiconn.de/event/erste-abonnements-soiree-fuer-kammermusik-hotel-koenig-von-england-muenster-kleiner-saal-des-herrn-gerbaulet-1862-02-01> .
+        <https://viaf.org/viaf/9830165709995049380009> .
 

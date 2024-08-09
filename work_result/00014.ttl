@@ -1,34 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/samson-et-dalila-saint-saens-camille> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/samson-et-dalila-saint-saens-camille> ] .
 
-<https://performance.musiconn.de/work/samson-et-dalila-saint-saens-camille> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/11875081X>,
-        <https://d-nb.info/gnd/300133944>,
-        <https://d-nb.info/gnd/300133952>,
-        <https://d-nb.info/gnd/300133960>,
-        <https://d-nb.info/gnd/4043582-9>,
-        <https://d-nb.info/gnd/5084847-1> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
-        <https://viaf.org/viaf/158420977> ;
-    cto:relatedPerson <https://d-nb.info/gnd/11875081X>,
-        <https://viaf.org/viaf/7575200> ;
-    cto:title "Samson et Dalila (Saint-Saëns, Camille)" ;
-    cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/184688671>,
-        <https://viaf.org/viaf/186507063>,
-        <https://viaf.org/viaf/7575200> ;
-    schema:includedComposition <https://d-nb.info/gnd/300133944>,
+<https://performance.musiconn.de/work/samson-et-dalila-saint-saens-camille> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Samson et Dalila (Saint-Saëns, Camille)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300133944>,
         <https://d-nb.info/gnd/300133952>,
         <https://d-nb.info/gnd/300133960>,
         <https://performance.musiconn.de/work/melodien-aus-der-oper-samson-et-dalila-saint-saens-camille>,
@@ -41,7 +23,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/work/samson-et-dalila-samson-recherchant-ma-presence-saint-saens-camille>,
         <https://viaf.org/viaf/184688671>,
         <https://viaf.org/viaf/186507063> ;
-    schema:subjectOf <https://performance.musiconn.de/event/samson-und-dalila-1910-01-16-19-30>,
+    schema1:subjectOf <https://performance.musiconn.de/event/samson-und-dalila-1910-01-16-19-30>,
         <https://performance.musiconn.de/event/samson-und-dalila-semperoper-dresden-1901-12-18-19-30>,
         <https://performance.musiconn.de/event/samson-und-dalila-semperoper-dresden-1902-08-26-19-30>,
         <https://performance.musiconn.de/event/samson-und-dalila-semperoper-dresden-1903-09-02-19-30>,
@@ -63,5 +45,22 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/samson-und-dalila-semperoper-dresden-1910-12-28-19-30>,
         <https://performance.musiconn.de/event/samson-und-dalila-semperoper-dresden-1911-03-12-19-30>,
         <https://performance.musiconn.de/event/samson-und-dalila-semperoper-dresden-1913-01-30-19-30>,
-        <https://performance.musiconn.de/event/samson-und-dalila-semperoper-dresden-1913-04-10-19-30> .
+        <https://performance.musiconn.de/event/samson-und-dalila-semperoper-dresden-1913-04-10-19-30> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/11875081X>,
+        <https://d-nb.info/gnd/300133944>,
+        <https://d-nb.info/gnd/300133952>,
+        <https://d-nb.info/gnd/300133960>,
+        <https://d-nb.info/gnd/4043582-9>,
+        <https://d-nb.info/gnd/5084847-1> ;
+    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
+        <https://viaf.org/viaf/158420977> ;
+    cto:relatedPerson <https://d-nb.info/gnd/11875081X>,
+        <https://viaf.org/viaf/7575200> ;
+    cto:viaf <https://viaf.org/viaf/158420977>,
+        <https://viaf.org/viaf/184688671>,
+        <https://viaf.org/viaf/186507063>,
+        <https://viaf.org/viaf/7575200> .
 

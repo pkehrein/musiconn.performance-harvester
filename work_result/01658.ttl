@@ -1,34 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/fantasien-klavier-d-760-c-dur-schubert-franz> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/fantasien-klavier-d-760-c-dur-schubert-franz> ] .
 
-<https://performance.musiconn.de/work/fantasien-klavier-d-760-c-dur-schubert-franz> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118610961>,
-        <https://d-nb.info/gnd/3000108-0>,
-        <https://d-nb.info/gnd/4153682-4>,
-        <https://d-nb.info/gnd/815129-5> ;
-    cto:isPartOf <https://d-nb.info/gnd/4153682-4> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3000108-0>,
-        <https://d-nb.info/gnd/815129-5>,
-        <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/221396927> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118610961>,
-        <https://viaf.org/viaf/29719275> ;
-    cto:title "Fantasien, Klavier, D 760 (C-Dur) (Schubert, Franz)" ;
-    cto:viaf <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/221396927>,
-        <https://viaf.org/viaf/29719275> ;
-    schema:includedComposition <https://performance.musiconn.de/work/wandererfantasie-bearb-v-f-listz-schubert-franz> ;
-    schema:subjectOf <https://performance.musiconn.de/event/10-anrechtskonzert-gewerbehaus-dresden-gewerbehaus-saal-1940-02-21-20-00>,
+<https://performance.musiconn.de/work/fantasien-klavier-d-760-c-dur-schubert-franz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Fantasien, Klavier, D 760 (C-Dur) (Schubert, Franz)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/wandererfantasie-bearb-v-f-listz-schubert-franz> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/10-anrechtskonzert-gewerbehaus-dresden-gewerbehaus-saal-1940-02-21-20-00>,
         <https://performance.musiconn.de/event/2-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1921-10-24-19-30>,
         <https://performance.musiconn.de/event/2-sinfonie-konzert-der-generaldirektion-der-koenigl-musikalischen-kapelle-und-der-hoftheater-semperoper-dresden-1905-11-21-19-00>,
         <https://performance.musiconn.de/event/3-ausserordentliches-konzert-kulturpalast-dresden-festsaal-2003-12-06-19-30>,
@@ -50,5 +33,21 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/sechstes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1916-01-07-19-00>,
         <https://performance.musiconn.de/event/sonderkonzert-kulturpalast-dresden-festsaal-2003-12-07-11-00>,
         <https://performance.musiconn.de/event/viertes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1892-12-02-18-30>,
-        <https://performance.musiconn.de/event/zweiter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1877-10-29-19-00> .
+        <https://performance.musiconn.de/event/zweiter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1877-10-29-19-00> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/118610961>,
+        <https://d-nb.info/gnd/3000108-0>,
+        <https://d-nb.info/gnd/4153682-4>,
+        <https://d-nb.info/gnd/815129-5> ;
+    cto:isPartOf <https://d-nb.info/gnd/4153682-4> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/3000108-0>,
+        <https://d-nb.info/gnd/815129-5>,
+        <https://viaf.org/viaf/133022259>,
+        <https://viaf.org/viaf/221396927> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118610961>,
+        <https://viaf.org/viaf/29719275> ;
+    cto:viaf <https://viaf.org/viaf/133022259>,
+        <https://viaf.org/viaf/221396927>,
+        <https://viaf.org/viaf/29719275> .
 

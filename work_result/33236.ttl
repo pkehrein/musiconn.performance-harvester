@@ -1,26 +1,23 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/tampet-anonym> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/tampet-anonym> ] .
 
-<https://performance.musiconn.de/work/tampet-anonym> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/tampet-anonym> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Tampet ([anonym])" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/tampet-arrangiert> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """unklar, welche Melodie
-
-Der deutsche Volkstanz Tampet entstand in Thüringen. Der Tampet (von frz. tempête= Gewitter) beruht auf dem gesellschaftlichen Kontratanz (Contredanse) des 18. und 19. Jahrhunderts.""" ;
+    cto:abstract "unklar, welche MelodieDer deutsche Volkstanz Tampet entstand in Thüringen. Der Tampet (von frz. tempête= Gewitter) beruht auf dem gesellschaftlichen Kontratanz (Contredanse) des 18. und 19. Jahrhunderts." ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/4063869-8>,
         <https://d-nb.info/gnd/4184445-2> ;
     cto:isPartOf <https://d-nb.info/gnd/4063869-8>,
         <https://d-nb.info/gnd/4184445-2> ;
     cto:relatedPerson <https://performance.musiconn.de/person/anonym>,
-        <https://performance.musiconn.de/person/wuerfel-reinhard> ;
-    cto:title "Tampet ([anonym])" ;
-    schema:includedComposition <https://performance.musiconn.de/work/tampet-arrangiert> .
+        <https://performance.musiconn.de/person/wuerfel-reinhard> .
 

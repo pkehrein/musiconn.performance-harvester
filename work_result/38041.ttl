@@ -1,15 +1,24 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/visionen-buchholz-thomas> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/visionen-buchholz-thomas> ] .
 
-<https://performance.musiconn.de/work/visionen-buchholz-thomas> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/visionen-buchholz-thomas> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Visionen (Buchholz, Thomas)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1225515645>,
+        <https://d-nb.info/gnd/1225515769>,
+        <https://d-nb.info/gnd/1225515912>,
+        <https://performance.musiconn.de/work/visionen-flucht-buchholz-thomas>,
+        <https://performance.musiconn.de/work/visionen-gestutzte-eiche-buchholz-thomas>,
+        <https://performance.musiconn.de/work/visionen-licht-in-der-nacht-buchholz-thomas>,
+        <https://viaf.org/viaf/2102161152494235190003>,
+        <https://viaf.org/viaf/6349161152507335190008>,
+        <https://viaf.org/viaf/951161152490535190001> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "enthält: 1. Flucht, 2. Licht in der Nacht, 3. Gestutzte Eiche" ;
     cto:elementOf n4c:E5320 ;
@@ -21,18 +30,8 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
     cto:relatedPerson <https://d-nb.info/gnd/134952898>,
         <https://viaf.org/viaf/84190519> ;
-    cto:title "Visionen (Buchholz, Thomas)" ;
     cto:viaf <https://viaf.org/viaf/2102161152494235190003>,
         <https://viaf.org/viaf/6349161152507335190008>,
         <https://viaf.org/viaf/84190519>,
-        <https://viaf.org/viaf/951161152490535190001> ;
-    schema:includedComposition <https://d-nb.info/gnd/1225515645>,
-        <https://d-nb.info/gnd/1225515769>,
-        <https://d-nb.info/gnd/1225515912>,
-        <https://performance.musiconn.de/work/visionen-flucht-buchholz-thomas>,
-        <https://performance.musiconn.de/work/visionen-gestutzte-eiche-buchholz-thomas>,
-        <https://performance.musiconn.de/work/visionen-licht-in-der-nacht-buchholz-thomas>,
-        <https://viaf.org/viaf/2102161152494235190003>,
-        <https://viaf.org/viaf/6349161152507335190008>,
         <https://viaf.org/viaf/951161152490535190001> .
 

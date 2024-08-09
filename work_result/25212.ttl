@@ -1,15 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-nach-gedichten-v-j-v-eichendorff-pfitzner-hans> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-nach-gedichten-v-j-v-eichendorff-pfitzner-hans> ] .
 
-<https://performance.musiconn.de/work/lieder-nach-gedichten-v-j-v-eichendorff-pfitzner-hans> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-nach-gedichten-v-j-v-eichendorff-pfitzner-hans> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Lieder nach Gedichten v. J. v. Eichendorff (Pfitzner, Hans)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1045699748>,
+        <https://d-nb.info/gnd/1169159354>,
+        <https://performance.musiconn.de/work/lieder-nach-gedichten-v-j-v-eichendorff-der-gaertner-pfitzner-hans>,
+        <https://performance.musiconn.de/work/lieder-nach-gedichten-v-j-v-eichendorff-die-einsame-pfitzner-hans>,
+        <https://viaf.org/viaf/305920790> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Insgesamt 5 Lieder" ;
     cto:elementOf n4c:E5320 ;
@@ -26,14 +31,8 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/42037999>,
         <https://viaf.org/viaf/66652706>,
         <https://viaf.org/viaf/80112246> ;
-    cto:title "Lieder nach Gedichten v. J. v. Eichendorff (Pfitzner, Hans)" ;
     cto:viaf <https://viaf.org/viaf/305920790>,
         <https://viaf.org/viaf/42037999>,
         <https://viaf.org/viaf/66652706>,
-        <https://viaf.org/viaf/80112246> ;
-    schema:includedComposition <https://d-nb.info/gnd/1045699748>,
-        <https://d-nb.info/gnd/1169159354>,
-        <https://performance.musiconn.de/work/lieder-nach-gedichten-v-j-v-eichendorff-der-gaertner-pfitzner-hans>,
-        <https://performance.musiconn.de/work/lieder-nach-gedichten-v-j-v-eichendorff-die-einsame-pfitzner-hans>,
-        <https://viaf.org/viaf/305920790> .
+        <https://viaf.org/viaf/80112246> .
 

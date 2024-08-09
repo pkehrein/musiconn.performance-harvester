@@ -1,15 +1,23 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/coppelia-delibes-leo> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/coppelia-delibes-leo> ] .
 
-<https://performance.musiconn.de/work/coppelia-delibes-leo> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/coppelia-delibes-leo> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Coppélia (Delibes, Léo)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300042736>,
+        <https://performance.musiconn.de/work/coppelia-ballade-thema-und-variationen-delibes-leo>,
+        <https://performance.musiconn.de/work/coppelia-musik-der-automaten-und-valse-delibes-leo>,
+        <https://performance.musiconn.de/work/coppelia-suite-delibes-leo>,
+        <https://performance.musiconn.de/work/coppelia-variationen-delibes-leo>,
+        <https://viaf.org/viaf/175770555> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/167ste-vorstellung-semperoper-dresden-1902-08-25-19-30>,
+        <https://performance.musiconn.de/event/242-vorstellung-semperoper-dresden-1901-12-01-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118924265>,
@@ -21,16 +29,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/161076872> ;
     cto:relatedPerson <https://d-nb.info/gnd/118924265>,
         <https://viaf.org/viaf/29641114> ;
-    cto:title "Coppélia (Delibes, Léo)" ;
     cto:viaf <https://viaf.org/viaf/161076872>,
         <https://viaf.org/viaf/175770555>,
-        <https://viaf.org/viaf/29641114> ;
-    schema:includedComposition <https://d-nb.info/gnd/300042736>,
-        <https://performance.musiconn.de/work/coppelia-ballade-thema-und-variationen-delibes-leo>,
-        <https://performance.musiconn.de/work/coppelia-musik-der-automaten-und-valse-delibes-leo>,
-        <https://performance.musiconn.de/work/coppelia-suite-delibes-leo>,
-        <https://performance.musiconn.de/work/coppelia-variationen-delibes-leo>,
-        <https://viaf.org/viaf/175770555> ;
-    schema:subjectOf <https://performance.musiconn.de/event/167ste-vorstellung-semperoper-dresden-1902-08-25-19-30>,
-        <https://performance.musiconn.de/event/242-vorstellung-semperoper-dresden-1901-12-01-19-00> .
+        <https://viaf.org/viaf/29641114> .
 

@@ -1,29 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/salvum-fac-regem-richter-ernst-friedrich-eduard> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/salvum-fac-regem-richter-ernst-friedrich-eduard> ] .
 
-<https://performance.musiconn.de/work/salvum-fac-regem-richter-ernst-friedrich-eduard> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/116510927>,
-        <https://d-nb.info/gnd/1212749-8>,
-        <https://d-nb.info/gnd/4040357-9> ;
-    cto:isPartOf <https://d-nb.info/gnd/4040357-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/1212749-8>,
-        <https://viaf.org/viaf/150245159> ;
-    cto:relatedPerson <https://d-nb.info/gnd/116510927>,
-        <https://viaf.org/viaf/99646133> ;
-    cto:title "Salvum fac regem (Richter, Ernst Friedrich Eduard)" ;
-    cto:viaf <https://viaf.org/viaf/150245159>,
-        <https://viaf.org/viaf/99646133> ;
-    schema:subjectOf <https://performance.musiconn.de/event/einladung-des-conservatoriums-der-musik-zu-leipzig-zur-feier-des-geburtstages-12-december-seines-erhabenen-protectors-sr-majestaet-des-koenigs-johann-conservatorium-der-musik-1872-12-13-18-00>,
+<https://performance.musiconn.de/work/salvum-fac-regem-richter-ernst-friedrich-eduard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Salvum fac regem (Richter, Ernst Friedrich Eduard)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/einladung-des-conservatoriums-der-musik-zu-leipzig-zur-feier-des-geburtstages-12-december-seines-erhabenen-protectors-sr-majestaet-des-koenigs-johann-conservatorium-der-musik-1872-12-13-18-00>,
         <https://performance.musiconn.de/event/einladung-des-conservatoriums-der-musik-zu-leipzig-zur-vorfeier-des-geburstages-sr-majestaet-des-koenigs-johann-conservatorium-der-musik-1869-12-11-18-00>,
         <https://performance.musiconn.de/event/einladung-des-conservatoriums-der-musik-zur-vorfeier-seines-erhabenen-protectors-sr-majestaet-des-koenigs-albert-conservatorium-der-musik-1874-04-22-18-00>,
         <https://performance.musiconn.de/event/einladung-und-programm-zur-nachfeier-des-geburtstages-sr-majestaet-des-koenigs-johann-conservatorium-der-musik-1856-12-13-18-30>,
@@ -48,5 +35,17 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/politischer-festakt-leipzig-1872-12-12>,
         <https://performance.musiconn.de/event/politischer-festakt-leipzig-1884-03-22>,
         <https://performance.musiconn.de/event/politischer-festakt-leipzig-1884-04-23>,
-        <https://performance.musiconn.de/event/politischer-festakt-leipzig-1886-03-22> .
+        <https://performance.musiconn.de/event/politischer-festakt-leipzig-1886-03-22> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/116510927>,
+        <https://d-nb.info/gnd/1212749-8>,
+        <https://d-nb.info/gnd/4040357-9> ;
+    cto:isPartOf <https://d-nb.info/gnd/4040357-9> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/1212749-8>,
+        <https://viaf.org/viaf/150245159> ;
+    cto:relatedPerson <https://d-nb.info/gnd/116510927>,
+        <https://viaf.org/viaf/99646133> ;
+    cto:viaf <https://viaf.org/viaf/150245159>,
+        <https://viaf.org/viaf/99646133> .
 

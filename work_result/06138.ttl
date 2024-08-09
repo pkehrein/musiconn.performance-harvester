@@ -1,15 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/serenaden-orchester-op-86-e-dur-huber-hans> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/serenaden-orchester-op-86-e-dur-huber-hans> ] .
 
-<https://performance.musiconn.de/work/serenaden-orchester-op-86-e-dur-huber-hans> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/serenaden-orchester-op-86-e-dur-huber-hans> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Serenaden, Orchester, op. 86 (E-Dur) (Huber, Hans)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1186808411>,
+        <https://performance.musiconn.de/work/serenaden-orchester-op-86-e-dur-scherzo-huber-hans> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1186808411>,
@@ -18,8 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4181030-2> ;
     cto:relatedPerson <https://d-nb.info/gnd/118707469>,
         <https://viaf.org/viaf/24796083> ;
-    cto:title "Serenaden, Orchester, op. 86 (E-Dur) (Huber, Hans)" ;
-    cto:viaf <https://viaf.org/viaf/24796083> ;
-    schema:includedComposition <https://d-nb.info/gnd/1186808411>,
-        <https://performance.musiconn.de/work/serenaden-orchester-op-86-e-dur-scherzo-huber-hans> .
+    cto:viaf <https://viaf.org/viaf/24796083> .
 

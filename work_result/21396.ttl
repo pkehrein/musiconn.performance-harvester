@@ -1,15 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/chaconnen-violine-basso-continuo-g-moll-vitali-tomaso-antonio> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/chaconnen-violine-basso-continuo-g-moll-vitali-tomaso-antonio> ] .
 
-<https://performance.musiconn.de/work/chaconnen-violine-basso-continuo-g-moll-vitali-tomaso-antonio> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/chaconnen-violine-basso-continuo-g-moll-vitali-tomaso-antonio> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Chaconnen, Violine, Basso continuo (g-Moll) (Vitali, Tomaso Antonio)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/5-konzert-junger-kuenstler-alte-oper-frankfurt-am-main-hindemith-saal-1988-03-21-18-00>,
+        <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1877-05-12>,
+        <https://performance.musiconn.de/event/hauptpruefung-am-koeniglichen-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1877-04-28-18-00>,
+        <https://performance.musiconn.de/event/musikalischer-abend-volkshaus-jena-grosser-saal-1931-12-26-20-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/117489964>,
@@ -27,12 +31,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/49416037>,
         <https://viaf.org/viaf/50004254>,
         <https://viaf.org/viaf/95213587> ;
-    cto:title "Chaconnen, Violine, Basso continuo (g-Moll) (Vitali, Tomaso Antonio)" ;
     cto:viaf <https://viaf.org/viaf/49416037>,
         <https://viaf.org/viaf/50004254>,
-        <https://viaf.org/viaf/95213587> ;
-    schema:subjectOf <https://performance.musiconn.de/event/5-konzert-junger-kuenstler-alte-oper-frankfurt-am-main-hindemith-saal-1988-03-21-18-00>,
-        <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1877-05-12>,
-        <https://performance.musiconn.de/event/hauptpruefung-am-koeniglichen-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1877-04-28-18-00>,
-        <https://performance.musiconn.de/event/musikalischer-abend-volkshaus-jena-grosser-saal-1931-12-26-20-00> .
+        <https://viaf.org/viaf/95213587> .
 

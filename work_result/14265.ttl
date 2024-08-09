@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/ispanskoe-kapriccio-rimskij-korsakov-nikolaj> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/ispanskoe-kapriccio-rimskij-korsakov-nikolaj> ] .
 
-<https://performance.musiconn.de/work/ispanskoe-kapriccio-rimskij-korsakov-nikolaj> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/ispanskoe-kapriccio-rimskij-korsakov-nikolaj> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Ispanskoe kapriččio (Rimskij-Korsakov, Nikolaj)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/capriccio-espagnol-variazioni-rimskij-korsakov-nikolaj> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10321010-6>,
@@ -40,7 +41,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/45144814273718687574> ;
     cto:relatedPerson <https://d-nb.info/gnd/118601067>,
         <https://viaf.org/viaf/73859252> ;
-    cto:title "Ispanskoe kapriččio (Rimskij-Korsakov, Nikolaj)" ;
     cto:viaf <https://viaf.org/viaf/131976266>,
         <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/161076872>,
@@ -48,6 +48,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/435144783046765467239>,
         <https://viaf.org/viaf/45144814273718687574>,
-        <https://viaf.org/viaf/73859252> ;
-    schema:includedComposition <https://performance.musiconn.de/work/capriccio-espagnol-variazioni-rimskij-korsakov-nikolaj> .
+        <https://viaf.org/viaf/73859252> .
 

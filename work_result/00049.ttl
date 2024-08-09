@@ -1,55 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/geistliche-konzerte-swv-306-337-schuetz-heinrich> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/geistliche-konzerte-swv-306-337-schuetz-heinrich> ] .
 
-<https://performance.musiconn.de/work/geistliche-konzerte-swv-306-337-schuetz-heinrich> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1095908014>,
-        <https://d-nb.info/gnd/1095911783>,
-        <https://d-nb.info/gnd/1095917838>,
-        <https://d-nb.info/gnd/1095918419>,
-        <https://d-nb.info/gnd/11861116X>,
-        <https://d-nb.info/gnd/1224484800>,
-        <https://d-nb.info/gnd/300143052>,
-        <https://d-nb.info/gnd/300143095>,
-        <https://d-nb.info/gnd/300143109>,
-        <https://d-nb.info/gnd/300199872>,
-        <https://d-nb.info/gnd/300211619>,
-        <https://d-nb.info/gnd/300292376>,
-        <https://d-nb.info/gnd/300293720>,
-        <https://d-nb.info/gnd/300293739>,
-        <https://d-nb.info/gnd/300506635>,
-        <https://d-nb.info/gnd/300731663>,
-        <https://d-nb.info/gnd/300731671> ;
-    cto:relatedPerson <https://d-nb.info/gnd/11861116X>,
-        <https://viaf.org/viaf/59270840> ;
-    cto:title "Geistliche Konzerte, SWV 306-337 (Schütz, Heinrich)" ;
-    cto:viaf <https://viaf.org/viaf/175770913>,
-        <https://viaf.org/viaf/177498753>,
-        <https://viaf.org/viaf/177895929>,
-        <https://viaf.org/viaf/178147883>,
-        <https://viaf.org/viaf/178552490>,
-        <https://viaf.org/viaf/181378336>,
-        <https://viaf.org/viaf/181712367>,
-        <https://viaf.org/viaf/183605678>,
-        <https://viaf.org/viaf/184216847>,
-        <https://viaf.org/viaf/185021038>,
-        <https://viaf.org/viaf/185558315>,
-        <https://viaf.org/viaf/198525350>,
-        <https://viaf.org/viaf/211715577>,
-        <https://viaf.org/viaf/215928747>,
-        <https://viaf.org/viaf/35146030660235862728>,
-        <https://viaf.org/viaf/59270840>,
-        <https://viaf.org/viaf/6593155286653587180004> ;
-    schema:includedComposition <https://d-nb.info/gnd/1095908014>,
+<https://performance.musiconn.de/work/geistliche-konzerte-swv-306-337-schuetz-heinrich> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Geistliche Konzerte, SWV 306-337 (Schütz, Heinrich)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1095908014>,
         <https://d-nb.info/gnd/1095911783>,
         <https://d-nb.info/gnd/1095917838>,
         <https://d-nb.info/gnd/1095918419>,
@@ -97,5 +58,43 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/211715577>,
         <https://viaf.org/viaf/215928747>,
         <https://viaf.org/viaf/35146030660235862728>,
+        <https://viaf.org/viaf/6593155286653587180004> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/1095908014>,
+        <https://d-nb.info/gnd/1095911783>,
+        <https://d-nb.info/gnd/1095917838>,
+        <https://d-nb.info/gnd/1095918419>,
+        <https://d-nb.info/gnd/11861116X>,
+        <https://d-nb.info/gnd/1224484800>,
+        <https://d-nb.info/gnd/300143052>,
+        <https://d-nb.info/gnd/300143095>,
+        <https://d-nb.info/gnd/300143109>,
+        <https://d-nb.info/gnd/300199872>,
+        <https://d-nb.info/gnd/300211619>,
+        <https://d-nb.info/gnd/300292376>,
+        <https://d-nb.info/gnd/300293720>,
+        <https://d-nb.info/gnd/300293739>,
+        <https://d-nb.info/gnd/300506635>,
+        <https://d-nb.info/gnd/300731663>,
+        <https://d-nb.info/gnd/300731671> ;
+    cto:relatedPerson <https://d-nb.info/gnd/11861116X>,
+        <https://viaf.org/viaf/59270840> ;
+    cto:viaf <https://viaf.org/viaf/175770913>,
+        <https://viaf.org/viaf/177498753>,
+        <https://viaf.org/viaf/177895929>,
+        <https://viaf.org/viaf/178147883>,
+        <https://viaf.org/viaf/178552490>,
+        <https://viaf.org/viaf/181378336>,
+        <https://viaf.org/viaf/181712367>,
+        <https://viaf.org/viaf/183605678>,
+        <https://viaf.org/viaf/184216847>,
+        <https://viaf.org/viaf/185021038>,
+        <https://viaf.org/viaf/185558315>,
+        <https://viaf.org/viaf/198525350>,
+        <https://viaf.org/viaf/211715577>,
+        <https://viaf.org/viaf/215928747>,
+        <https://viaf.org/viaf/35146030660235862728>,
+        <https://viaf.org/viaf/59270840>,
         <https://viaf.org/viaf/6593155286653587180004> .
 

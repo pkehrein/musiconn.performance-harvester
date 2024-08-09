@@ -1,18 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/stella-maris-kaiser-alfred> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/stella-maris-kaiser-alfred> ] .
 
-<https://performance.musiconn.de/work/stella-maris-kaiser-alfred> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/stella-maris-kaiser-alfred> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Stella maris (Kaiser, Alfred)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/stella-maris-semperoper-dresden-1912-10-04-19-30>,
+        <https://performance.musiconn.de/event/stella-maris-semperoper-dresden-1913-02-14-19-30> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Musikalisches Schauspiel in drei Auszügen von Henry Revers.
-Musik von Alfred Kaiser""" ;
+    cto:abstract "Musikalisches Schauspiel in drei Auszügen von Henry Revers.Musik von Alfred Kaiser" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/133558010>,
         <https://d-nb.info/gnd/5084847-1> ;
@@ -20,9 +21,6 @@ Musik von Alfred Kaiser""" ;
         <https://viaf.org/viaf/158420977> ;
     cto:relatedPerson <https://d-nb.info/gnd/133558010>,
         <https://viaf.org/viaf/22403512> ;
-    cto:title "Stella maris (Kaiser, Alfred)" ;
     cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/22403512> ;
-    schema:subjectOf <https://performance.musiconn.de/event/stella-maris-semperoper-dresden-1912-10-04-19-30>,
-        <https://performance.musiconn.de/event/stella-maris-semperoper-dresden-1913-02-14-19-30> .
+        <https://viaf.org/viaf/22403512> .
 

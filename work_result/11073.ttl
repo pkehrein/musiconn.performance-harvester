@@ -1,15 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-op-178-reinecke-carl> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-op-178-reinecke-carl> ] .
 
-<https://performance.musiconn.de/work/lieder-op-178-reinecke-carl> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-op-178-reinecke-carl> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Lieder, op. 178 (Reinecke, Carl)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1233842897>,
+        <https://d-nb.info/gnd/1233842943>,
+        <https://performance.musiconn.de/work/lieder-singstimme-klavier-op-178-nachtgesang-reinecke-carl>,
+        <https://performance.musiconn.de/work/lieder-singstimme-klavier-op-178-wegewart-reinecke-carl>,
+        <https://viaf.org/viaf/7015162181258708290002>,
+        <https://viaf.org/viaf/9298162181267708290009> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "6 Lieder" ;
     cto:elementOf n4c:E5320 ;
@@ -20,14 +26,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
     cto:relatedPerson <https://d-nb.info/gnd/119388472>,
         <https://viaf.org/viaf/49409212> ;
-    cto:title "Lieder, op. 178 (Reinecke, Carl)" ;
     cto:viaf <https://viaf.org/viaf/49409212>,
-        <https://viaf.org/viaf/7015162181258708290002>,
-        <https://viaf.org/viaf/9298162181267708290009> ;
-    schema:includedComposition <https://d-nb.info/gnd/1233842897>,
-        <https://d-nb.info/gnd/1233842943>,
-        <https://performance.musiconn.de/work/lieder-singstimme-klavier-op-178-nachtgesang-reinecke-carl>,
-        <https://performance.musiconn.de/work/lieder-singstimme-klavier-op-178-wegewart-reinecke-carl>,
         <https://viaf.org/viaf/7015162181258708290002>,
         <https://viaf.org/viaf/9298162181267708290009> .
 

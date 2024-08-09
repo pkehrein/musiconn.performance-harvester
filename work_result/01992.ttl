@@ -1,15 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sinfonien-hob-1-90-92-nr-3-haydn-joseph> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sinfonien-hob-1-90-92-nr-3-haydn-joseph> ] .
 
-<https://performance.musiconn.de/work/sinfonien-hob-1-90-92-nr-3-haydn-joseph> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sinfonien-hob-1-90-92-nr-3-haydn-joseph> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sinfonien, Hob 1 90-92. Nr. 3 (Haydn, Joseph)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/2-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1906-11-09-19-00>,
+        <https://performance.musiconn.de/event/4-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-11-19-18-30>,
+        <https://performance.musiconn.de/event/8-museums-concert-grosser-konzertsaal-frankfurt-a-m-1881-01-21-18-30>,
+        <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1890-03-22-19-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1078513163>,
@@ -46,7 +50,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/8413148122912495200001> ;
     cto:relatedPerson <https://d-nb.info/gnd/118547356>,
         <https://viaf.org/viaf/95146280> ;
-    cto:title "Sinfonien, Hob 1 90-92. Nr. 3 (Haydn, Joseph)" ;
     cto:viaf <https://viaf.org/viaf/131976266>,
         <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/136181816>,
@@ -56,9 +59,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/45144814273718687574>,
         <https://viaf.org/viaf/8413148122912495200001>,
-        <https://viaf.org/viaf/95146280> ;
-    schema:subjectOf <https://performance.musiconn.de/event/2-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1906-11-09-19-00>,
-        <https://performance.musiconn.de/event/4-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-11-19-18-30>,
-        <https://performance.musiconn.de/event/8-museums-concert-grosser-konzertsaal-frankfurt-a-m-1881-01-21-18-30>,
-        <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1890-03-22-19-30> .
+        <https://viaf.org/viaf/95146280> .
 

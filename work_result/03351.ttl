@@ -1,15 +1,23 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/aus-italien-strauss-richard> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/aus-italien-strauss-richard> ] .
 
-<https://performance.musiconn.de/work/aus-italien-strauss-richard> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/aus-italien-strauss-richard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Aus Italien (Strauss, Richard)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1183153163>,
+        <https://d-nb.info/gnd/300315708>,
+        <https://performance.musiconn.de/work/aus-italien-am-strande-von-sorrent-strauss-richard>,
+        <https://performance.musiconn.de/work/aus-italien-auf-der-campagna-strauss-richard>,
+        <https://viaf.org/viaf/179632171>,
+        <https://viaf.org/viaf/895155566452513380006> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/fuenftes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1895-12-13-19-00>,
+        <https://performance.musiconn.de/event/siebentes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1889-01-18-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10344764-7>,
@@ -43,7 +51,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/435144783046765467239> ;
     cto:relatedPerson <https://d-nb.info/gnd/11861911X>,
         <https://viaf.org/viaf/24796264> ;
-    cto:title "Aus Italien (Strauss, Richard)" ;
     cto:viaf <https://viaf.org/viaf/131976266>,
         <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/136181816>,
@@ -54,13 +61,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/24796264>,
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/435144783046765467239>,
-        <https://viaf.org/viaf/895155566452513380006> ;
-    schema:includedComposition <https://d-nb.info/gnd/1183153163>,
-        <https://d-nb.info/gnd/300315708>,
-        <https://performance.musiconn.de/work/aus-italien-am-strande-von-sorrent-strauss-richard>,
-        <https://performance.musiconn.de/work/aus-italien-auf-der-campagna-strauss-richard>,
-        <https://viaf.org/viaf/179632171>,
-        <https://viaf.org/viaf/895155566452513380006> ;
-    schema:subjectOf <https://performance.musiconn.de/event/fuenftes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1895-12-13-19-00>,
-        <https://performance.musiconn.de/event/siebentes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1889-01-18-18-30> .
+        <https://viaf.org/viaf/895155566452513380006> .
 

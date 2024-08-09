@@ -1,15 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/morceaux-klavier-op-51-melancholie-rubinstejn-anton-g> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/morceaux-klavier-op-51-melancholie-rubinstejn-anton-g> ] .
 
-<https://performance.musiconn.de/work/morceaux-klavier-op-51-melancholie-rubinstejn-anton-g> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/morceaux-klavier-op-51-melancholie-rubinstejn-anton-g> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Morceaux, Klavier, op. 51. Mélancholie (Rubinštejn, Anton G.)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/viertes-abonnement-concert-erstes-gewandhaus-leipzig-1884-10-30>,
+        <https://performance.musiconn.de/event/zwoelftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1884-03-28-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116584319>,
@@ -20,9 +22,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://d-nb.info/gnd/118926802>,
         <https://viaf.org/viaf/197535>,
         <https://viaf.org/viaf/8143458> ;
-    cto:title "Morceaux, Klavier, op. 51. Mélancholie (Rubinštejn, Anton G.)" ;
     cto:viaf <https://viaf.org/viaf/197535>,
-        <https://viaf.org/viaf/8143458> ;
-    schema:subjectOf <https://performance.musiconn.de/event/viertes-abonnement-concert-erstes-gewandhaus-leipzig-1884-10-30>,
-        <https://performance.musiconn.de/event/zwoelftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1884-03-28-18-30> .
+        <https://viaf.org/viaf/8143458> .
 

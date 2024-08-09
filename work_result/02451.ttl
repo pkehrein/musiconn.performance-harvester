@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-d-898-b-dur-schubert-franz> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-d-898-b-dur-schubert-franz> ] .
 
-<https://performance.musiconn.de/work/trios-violine-violoncello-klavier-d-898-b-dur-schubert-franz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/trios-violine-violoncello-klavier-d-898-b-dur-schubert-franz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Trios, Violine, Violoncello, Klavier, D 898 (B-Dur) (Schubert, Franz)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/siebenter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1878-01-28-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10283642-5>,
@@ -40,7 +41,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/305263687> ;
     cto:relatedPerson <https://d-nb.info/gnd/118610961>,
         <https://viaf.org/viaf/29719275> ;
-    cto:title "Trios, Violine, Violoncello, Klavier, D 898 (B-Dur) (Schubert, Franz)" ;
     cto:viaf <https://viaf.org/viaf/121018404>,
         <https://viaf.org/viaf/123955648>,
         <https://viaf.org/viaf/130473177>,
@@ -48,6 +48,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/153220419>,
         <https://viaf.org/viaf/234816634>,
         <https://viaf.org/viaf/29719275>,
-        <https://viaf.org/viaf/305263687> ;
-    schema:subjectOf <https://performance.musiconn.de/event/siebenter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1878-01-28-19-00> .
+        <https://viaf.org/viaf/305263687> .
 

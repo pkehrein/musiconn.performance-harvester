@@ -1,15 +1,23 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/fiori-musicali-frescobaldi-girolamo> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/fiori-musicali-frescobaldi-girolamo> ] .
 
-<https://performance.musiconn.de/work/fiori-musicali-frescobaldi-girolamo> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/fiori-musicali-frescobaldi-girolamo> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Fiori musicali (Frescobaldi, Girolamo)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1264409826>,
+        <https://d-nb.info/gnd/1292600160>,
+        <https://d-nb.info/gnd/300054548>,
+        <https://performance.musiconn.de/work/fiori-musicali-recerar-cromaticho-post-il-credo-frescobaldi-girolamo>,
+        <https://performance.musiconn.de/work/fiori-musicali-toccata-cromaticha-per-lelevatione-frescobaldi-girolamo>,
+        <https://performance.musiconn.de/work/fiori-musicali-toccata-per-lelevazione-frescobaldi-girolamo>,
+        <https://performance.musiconn.de/work/messa-della-domenica-frescobaldi-girolamo>,
+        <https://viaf.org/viaf/217003900> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Besetzung: \"In partitura a quattro\" (vermutlich Orgel); besteht aus 3 Messzyklen" ;
     cto:elementOf n4c:E5320 ;
@@ -21,15 +29,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4129031-8> ;
     cto:relatedPerson <https://d-nb.info/gnd/118896229>,
         <https://viaf.org/viaf/61731810> ;
-    cto:title "Fiori musicali (Frescobaldi, Girolamo)" ;
     cto:viaf <https://viaf.org/viaf/217003900>,
-        <https://viaf.org/viaf/61731810> ;
-    schema:includedComposition <https://d-nb.info/gnd/1264409826>,
-        <https://d-nb.info/gnd/1292600160>,
-        <https://d-nb.info/gnd/300054548>,
-        <https://performance.musiconn.de/work/fiori-musicali-recerar-cromaticho-post-il-credo-frescobaldi-girolamo>,
-        <https://performance.musiconn.de/work/fiori-musicali-toccata-cromaticha-per-lelevatione-frescobaldi-girolamo>,
-        <https://performance.musiconn.de/work/fiori-musicali-toccata-per-lelevazione-frescobaldi-girolamo>,
-        <https://performance.musiconn.de/work/messa-della-domenica-frescobaldi-girolamo>,
-        <https://viaf.org/viaf/217003900> .
+        <https://viaf.org/viaf/61731810> .
 

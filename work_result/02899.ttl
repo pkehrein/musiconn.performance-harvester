@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gedichte-und-requiem-nach-nikolaus-lenau-meine-rose-schumann-robert> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gedichte-und-requiem-nach-nikolaus-lenau-meine-rose-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/gedichte-und-requiem-nach-nikolaus-lenau-meine-rose-schumann-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gedichte-und-requiem-nach-nikolaus-lenau-meine-rose-schumann-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Gedichte und Requiem nach Nikolaus Lenau. Meine Rose (Schumann, Robert)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/5-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1881-12-30-19-00>,
+        <https://performance.musiconn.de/event/fuenfter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1888-01-13-19-00>,
+        <https://performance.musiconn.de/event/zehntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1882-02-17-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116331631>,
@@ -43,7 +46,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/71578471>,
         <https://viaf.org/viaf/7575259>,
         <https://viaf.org/viaf/8162618> ;
-    cto:title "Gedichte und Requiem nach Nikolaus Lenau. Meine Rose (Schumann, Robert)" ;
     cto:viaf <https://viaf.org/viaf/19865145>,
         <https://viaf.org/viaf/27252981>,
         <https://viaf.org/viaf/5089547>,
@@ -52,8 +54,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/59851181>,
         <https://viaf.org/viaf/71578471>,
         <https://viaf.org/viaf/7575259>,
-        <https://viaf.org/viaf/8162618> ;
-    schema:subjectOf <https://performance.musiconn.de/event/5-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1881-12-30-19-00>,
-        <https://performance.musiconn.de/event/fuenfter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1888-01-13-19-00>,
-        <https://performance.musiconn.de/event/zehntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1882-02-17-18-30> .
+        <https://viaf.org/viaf/8162618> .
 

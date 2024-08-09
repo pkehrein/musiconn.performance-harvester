@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/silfo-y-ondina-piazzolla-astor> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/silfo-y-ondina-piazzolla-astor> ] .
 
-<https://performance.musiconn.de/work/silfo-y-ondina-piazzolla-astor> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/silfo-y-ondina-piazzolla-astor> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Silfo y ondina (Piazzolla, Astor)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/110240389X>,
+        <https://performance.musiconn.de/work/silfo-y-ondina-soledad-piazzolla-astor>,
+        <https://viaf.org/viaf/184953486> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "dreiteiliges Werk; Besetzung ist nicht eindeutig zu ermitteln, scheint hier aber original zu sein" ;
     cto:elementOf n4c:E5320 ;
@@ -17,10 +20,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://d-nb.info/gnd/119262444> ;
     cto:relatedPerson <https://d-nb.info/gnd/119262444>,
         <https://viaf.org/viaf/103647944> ;
-    cto:title "Silfo y ondina (Piazzolla, Astor)" ;
     cto:viaf <https://viaf.org/viaf/103647944>,
-        <https://viaf.org/viaf/184953486> ;
-    schema:includedComposition <https://d-nb.info/gnd/110240389X>,
-        <https://performance.musiconn.de/work/silfo-y-ondina-soledad-piazzolla-astor>,
         <https://viaf.org/viaf/184953486> .
 

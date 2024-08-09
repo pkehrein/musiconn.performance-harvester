@@ -1,15 +1,23 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-21-a-moll-molique-bernhard> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-21-a-moll-molique-bernhard> ] .
 
-<https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-21-a-moll-molique-bernhard> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-21-a-moll-molique-bernhard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Konzerte, Violine, Orchester, Nr. 5, op. 21 (a-Moll) (Molique, Bernhard)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1259380734>,
+        <https://d-nb.info/gnd/1264359632>,
+        <https://d-nb.info/gnd/1264359705>,
+        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-21-a-moll-allegro-molique-bernhard>,
+        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-21-a-moll-andante-molique-bernhard>,
+        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-21-a-moll-rondo-molique-bernhard> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/3-museums-concert-grosser-konzertsaal-frankfurt-a-m-1874-11-06-18-30>,
+        <https://performance.musiconn.de/event/elftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1882-03-03-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1078514259>,
@@ -35,18 +43,9 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545> ;
     cto:relatedPerson <https://d-nb.info/gnd/117120251>,
         <https://viaf.org/viaf/69119325> ;
-    cto:title "Konzerte, Violine, Orchester, Nr. 5, op. 21 (a-Moll) (Molique, Bernhard)" ;
     cto:viaf <https://viaf.org/viaf/136181816>,
         <https://viaf.org/viaf/157753597>,
         <https://viaf.org/viaf/161076872>,
         <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/69119325> ;
-    schema:includedComposition <https://d-nb.info/gnd/1259380734>,
-        <https://d-nb.info/gnd/1264359632>,
-        <https://d-nb.info/gnd/1264359705>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-21-a-moll-allegro-molique-bernhard>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-21-a-moll-andante-molique-bernhard>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-21-a-moll-rondo-molique-bernhard> ;
-    schema:subjectOf <https://performance.musiconn.de/event/3-museums-concert-grosser-konzertsaal-frankfurt-a-m-1874-11-06-18-30>,
-        <https://performance.musiconn.de/event/elftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1882-03-03-18-30> .
+        <https://viaf.org/viaf/69119325> .
 

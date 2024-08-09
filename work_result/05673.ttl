@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/deutsche-lieder-dorn-heinrich-ludwig-egmont> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/deutsche-lieder-dorn-heinrich-ludwig-egmont> ] .
 
-<https://performance.musiconn.de/work/deutsche-lieder-dorn-heinrich-ludwig-egmont> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/deutsche-lieder-dorn-heinrich-ludwig-egmont> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Deutsche Lieder (Dorn, Heinrich Ludwig Egmont)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1183164033>,
+        <https://performance.musiconn.de/work/deutsche-lieder-das-maedchen-an-den-mond-dorn-heinrich-ludwig-egmont>,
+        <https://viaf.org/viaf/6572155566442713380007> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116182776>,
@@ -18,10 +21,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
     cto:relatedPerson <https://d-nb.info/gnd/116182776>,
         <https://viaf.org/viaf/59829615> ;
-    cto:title "Deutsche Lieder (Dorn, Heinrich Ludwig Egmont)" ;
     cto:viaf <https://viaf.org/viaf/59829615>,
-        <https://viaf.org/viaf/6572155566442713380007> ;
-    schema:includedComposition <https://d-nb.info/gnd/1183164033>,
-        <https://performance.musiconn.de/work/deutsche-lieder-das-maedchen-an-den-mond-dorn-heinrich-ludwig-egmont>,
         <https://viaf.org/viaf/6572155566442713380007> .
 

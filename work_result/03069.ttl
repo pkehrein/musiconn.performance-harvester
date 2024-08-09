@@ -1,31 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/romanzen-singstimme-klavier-op-33-so-willst-du-des-armen-brahms-johannes> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/romanzen-singstimme-klavier-op-33-so-willst-du-des-armen-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/romanzen-singstimme-klavier-op-33-so-willst-du-des-armen-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1078514259>,
-        <https://d-nb.info/gnd/118514253>,
-        <https://d-nb.info/gnd/4035669-3>,
-        <https://d-nb.info/gnd/4050494-3> ;
-    cto:isPartOf <https://d-nb.info/gnd/4035669-3>,
-        <https://d-nb.info/gnd/4050494-3> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/1078514259>,
-        <https://viaf.org/viaf/33146825124407631545> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118514253>,
-        <https://viaf.org/viaf/7573295> ;
-    cto:title "Romanzen, Singstimme, Klavier, op. 33. So willst du des Armen (Brahms, Johannes)" ;
-    cto:viaf <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/7573295> ;
-    schema:subjectOf <https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1897-10-19>,
+<https://performance.musiconn.de/work/romanzen-singstimme-klavier-op-33-so-willst-du-des-armen-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Romanzen, Singstimme, Klavier, op. 33. So willst du des Armen (Brahms, Johannes)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1897-10-19>,
         <https://performance.musiconn.de/event/1-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1912-10-14-20-00>,
         <https://performance.musiconn.de/event/2-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1882-11-07>,
         <https://performance.musiconn.de/event/2-caecilienfestkonzert-muenster-westf-1884-11-30>,
@@ -40,5 +25,19 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/fuenftes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1904-12-09-19-00>,
         <https://performance.musiconn.de/event/sechstes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1897-01-08-19-00>,
         <https://performance.musiconn.de/event/siebentes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1896-01-19-17-30>,
-        <https://performance.musiconn.de/event/vierzehntes-abonnement-concert-erstes-gewandhaus-leipzig-1877-01-18> .
+        <https://performance.musiconn.de/event/vierzehntes-abonnement-concert-erstes-gewandhaus-leipzig-1877-01-18> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/1078514259>,
+        <https://d-nb.info/gnd/118514253>,
+        <https://d-nb.info/gnd/4035669-3>,
+        <https://d-nb.info/gnd/4050494-3> ;
+    cto:isPartOf <https://d-nb.info/gnd/4035669-3>,
+        <https://d-nb.info/gnd/4050494-3> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/1078514259>,
+        <https://viaf.org/viaf/33146825124407631545> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118514253>,
+        <https://viaf.org/viaf/7573295> ;
+    cto:viaf <https://viaf.org/viaf/33146825124407631545>,
+        <https://viaf.org/viaf/7573295> .
 

@@ -1,15 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/bau-die-heimat-auf-dobias-vaclav> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/bau-die-heimat-auf-dobias-vaclav> ] .
 
-<https://performance.musiconn.de/work/bau-die-heimat-auf-dobias-vaclav> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/bau-die-heimat-auf-dobias-vaclav> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Bau die Heimat auf (Dobiáš, Václav)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/103882928>,
@@ -23,7 +23,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/5336155105826276320007> ;
     cto:relatedPerson <https://d-nb.info/gnd/103882928>,
         <https://viaf.org/viaf/49490523> ;
-    cto:title "Bau die Heimat auf (Dobiáš, Václav)" ;
     cto:viaf <https://viaf.org/viaf/317087247>,
         <https://viaf.org/viaf/49490523>,
         <https://viaf.org/viaf/5336155105826276320007> .

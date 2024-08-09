@@ -1,24 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/kanzonen-orgel-1986-albrecht-christoph> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/kanzonen-orgel-1986-albrecht-christoph> ] .
 
-<https://performance.musiconn.de/work/kanzonen-orgel-1986-albrecht-christoph> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/kanzonen-orgel-1986-albrecht-christoph> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Kanzonen, Orgel (1986) (Albrecht, Christoph)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Uraufgeführt am 3.9.1986 Arp-Schnitger-Orgel in Norden/Ostfriesland
-Orgelintavolierung von Motetten aus d. "Israelsbrünnlein" von Johann Herman Schein""" ;
+    cto:abstract "Uraufgeführt am 3.9.1986 Arp-Schnitger-Orgel in Norden/OstfrieslandOrgelintavolierung von Motetten aus d. \"Israelsbrünnlein\" von Johann Herman Schein" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/134069498>,
         <https://d-nb.info/gnd/4327215-0> ;
     cto:isPartOf <https://d-nb.info/gnd/4327215-0> ;
     cto:relatedPerson <https://d-nb.info/gnd/134069498>,
         <https://viaf.org/viaf/47969912> ;
-    cto:title "Kanzonen, Orgel (1986) (Albrecht, Christoph)" ;
     cto:viaf <https://viaf.org/viaf/47969912> .
 

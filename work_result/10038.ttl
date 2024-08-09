@@ -1,18 +1,25 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/die-lustige-witwe-lehar-franz> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/die-lustige-witwe-lehar-franz> ] .
 
-<https://performance.musiconn.de/work/die-lustige-witwe-lehar-franz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/die-lustige-witwe-lehar-franz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Die lustige Witwe (Lehár, Franz)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1160404569>,
+        <https://performance.musiconn.de/work/die-lustige-witwe-arie-lehar-franz>,
+        <https://performance.musiconn.de/work/die-lustige-witwe-ballsirenen-walzer-lehar-franz>,
+        <https://performance.musiconn.de/work/die-lustige-witwe-intermezzo-lehar-franz>,
+        <https://performance.musiconn.de/work/die-lustige-witwe-komm-in-den-kleinen-pavillon-lehar-franz>,
+        <https://performance.musiconn.de/work/die-lustige-witwe-ouvertuere-lehar-franz>,
+        <https://performance.musiconn.de/work/die-lustige-witwe-weiber-marsch-lehar-franz>,
+        <https://viaf.org/viaf/183690303> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Operette in 3 Akten nach L'attaché d'ambassade von Henri Meilhac
-Uraufführung: 30.12.1905 im Theater an der Wien""" ;
+    cto:abstract "Operette in 3 Akten nach L'attaché d'ambassade von Henri MeilhacUraufführung: 30.12.1905 im Theater an der Wien" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1160404569>,
         <https://d-nb.info/gnd/118571036>,
@@ -20,15 +27,6 @@ Uraufführung: 30.12.1905 im Theater an der Wien""" ;
     cto:isPartOf <https://d-nb.info/gnd/4043602-0> ;
     cto:relatedPerson <https://d-nb.info/gnd/118571036>,
         <https://viaf.org/viaf/61732356> ;
-    cto:title "Die lustige Witwe (Lehár, Franz)" ;
     cto:viaf <https://viaf.org/viaf/183690303>,
-        <https://viaf.org/viaf/61732356> ;
-    schema:includedComposition <https://d-nb.info/gnd/1160404569>,
-        <https://performance.musiconn.de/work/die-lustige-witwe-arie-lehar-franz>,
-        <https://performance.musiconn.de/work/die-lustige-witwe-ballsirenen-walzer-lehar-franz>,
-        <https://performance.musiconn.de/work/die-lustige-witwe-intermezzo-lehar-franz>,
-        <https://performance.musiconn.de/work/die-lustige-witwe-komm-in-den-kleinen-pavillon-lehar-franz>,
-        <https://performance.musiconn.de/work/die-lustige-witwe-ouvertuere-lehar-franz>,
-        <https://performance.musiconn.de/work/die-lustige-witwe-weiber-marsch-lehar-franz>,
-        <https://viaf.org/viaf/183690303> .
+        <https://viaf.org/viaf/61732356> .
 

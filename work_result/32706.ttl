@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/suiten-violoncello-klavier-bogdanov-berezovskij-valerian-m> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/suiten-violoncello-klavier-bogdanov-berezovskij-valerian-m> ] .
 
-<https://performance.musiconn.de/work/suiten-violoncello-klavier-bogdanov-berezovskij-valerian-m> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/suiten-violoncello-klavier-bogdanov-berezovskij-valerian-m> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Suiten, Violoncello, Klavier (Bogdanov-Berezovskij, Valerian M.)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/suiten-violoncello-klavier-auswahl-bogdanov-berezovskij-valerian-m> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1031837418>,
@@ -21,8 +22,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/person/alkanov-nikolaj>,
         <https://viaf.org/viaf/296715784>,
         <https://viaf.org/viaf/61801159> ;
-    cto:title "Suiten, Violoncello, Klavier (Bogdanov-Berezovskij, Valerian M.)" ;
     cto:viaf <https://viaf.org/viaf/296715784>,
-        <https://viaf.org/viaf/61801159> ;
-    schema:includedComposition <https://performance.musiconn.de/work/suiten-violoncello-klavier-auswahl-bogdanov-berezovskij-valerian-m> .
+        <https://viaf.org/viaf/61801159> .
 

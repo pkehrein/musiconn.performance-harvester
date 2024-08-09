@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-op-85-allerseelen-lassen-eduard> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-op-85-allerseelen-lassen-eduard> ] .
 
-<https://performance.musiconn.de/work/lieder-op-85-allerseelen-lassen-eduard> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-op-85-allerseelen-lassen-eduard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Lieder, op. 85. Allerseelen (Lassen, Eduard)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/fuenftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1887-12-02-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116453222>,
@@ -26,10 +27,8 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/2744804>,
         <https://viaf.org/viaf/30307789>,
         <https://viaf.org/viaf/67217364> ;
-    cto:title "Lieder, op. 85. Allerseelen (Lassen, Eduard)" ;
     cto:viaf <https://viaf.org/viaf/15036598>,
         <https://viaf.org/viaf/2744804>,
         <https://viaf.org/viaf/30307789>,
-        <https://viaf.org/viaf/67217364> ;
-    schema:subjectOf <https://performance.musiconn.de/event/fuenftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1887-12-02-18-30> .
+        <https://viaf.org/viaf/67217364> .
 

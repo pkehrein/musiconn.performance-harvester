@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/mazurken-klavier-op-56-chopin-frederic> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/mazurken-klavier-op-56-chopin-frederic> ] .
 
-<https://performance.musiconn.de/work/mazurken-klavier-op-56-chopin-frederic> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/mazurken-klavier-op-56-chopin-frederic> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Mazurken, Klavier, op. 56 (Chopin, Frédéric)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1046125168>,
+        <https://performance.musiconn.de/work/mazurken-klavier-op-56-nr-2-chopin-frederic>,
+        <https://viaf.org/viaf/305928920> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "3 Mazurken: h-Moll, C-Dur, c-Moll" ;
     cto:elementOf n4c:E5320 ;
@@ -19,10 +22,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4276508-0> ;
     cto:relatedPerson <https://d-nb.info/gnd/118520539>,
         <https://viaf.org/viaf/71319254> ;
-    cto:title "Mazurken, Klavier, op. 56 (Chopin, Frédéric)" ;
     cto:viaf <https://viaf.org/viaf/305928920>,
-        <https://viaf.org/viaf/71319254> ;
-    schema:includedComposition <https://d-nb.info/gnd/1046125168>,
-        <https://performance.musiconn.de/work/mazurken-klavier-op-56-nr-2-chopin-frederic>,
-        <https://viaf.org/viaf/305928920> .
+        <https://viaf.org/viaf/71319254> .
 

@@ -1,18 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/kontertaenze-oboe-2-horn-2-violine-2-bassinstrument-kv-462-mozart-wolfgang-amadeus> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/kontertaenze-oboe-2-horn-2-violine-2-bassinstrument-kv-462-mozart-wolfgang-amadeus> ] .
 
-<https://performance.musiconn.de/work/kontertaenze-oboe-2-horn-2-violine-2-bassinstrument-kv-462-mozart-wolfgang-amadeus> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/kontertaenze-oboe-2-horn-2-violine-2-bassinstrument-kv-462-mozart-wolfgang-amadeus> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Kontertänze, Oboe (2), Horn (2), Violine (2), Bassinstrument, KV 462 (Mozart, Wolfgang Amadeus)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Umfasst 6 Tänze in C-, Es-, B-, D-, B- und F-Dur; die Blasinstrumente seien nach KV von Mozart nachträglich hinzugefügt worden
-KV 462 ist die maßgebliche Werkverzeichniszählung""" ;
+    cto:abstract "Umfasst 6 Tänze in C-, Es-, B-, D-, B- und F-Dur; die Blasinstrumente seien nach KV von Mozart nachträglich hinzugefügt wordenKV 462 ist die maßgebliche Werkverzeichniszählung" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118584596>,
         <https://d-nb.info/gnd/4148300-5>,
@@ -22,7 +21,6 @@ KV 462 ist die maßgebliche Werkverzeichniszählung""" ;
         <https://viaf.org/viaf/133022259> ;
     cto:relatedPerson <https://d-nb.info/gnd/118584596>,
         <https://viaf.org/viaf/32197206> ;
-    cto:title "Kontertänze, Oboe (2), Horn (2), Violine (2), Bassinstrument, KV 462 (Mozart, Wolfgang Amadeus)" ;
     cto:viaf <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/32197206> .
 

@@ -1,18 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/une-tabatiere-a-musique-ljadov-anatolij-k> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/une-tabatiere-a-musique-ljadov-anatolij-k> ] .
 
-<https://performance.musiconn.de/work/une-tabatiere-a-musique-ljadov-anatolij-k> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/une-tabatiere-a-musique-ljadov-anatolij-k> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Une tabatière à musique (Ljadov, Anatolij K.)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Seinem ältestem Sohn, Michajl Ljadov (1887-1942), gewidmet
-bearb. für Piccolofl., 2 Fl., 3 Klar., Hf. und Glockenspiel, 1897""" ;
+    cto:abstract "Seinem ältestem Sohn, Michajl Ljadov (1887-1942), gewidmetbearb. für Piccolofl., 2 Fl., 3 Klar., Hf. und Glockenspiel, 1897" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118573632>,
         <https://d-nb.info/gnd/365223-3>,
@@ -25,7 +24,6 @@ bearb. für Piccolofl., 2 Fl., 3 Klar., Hf. und Glockenspiel, 1897""" ;
         <https://viaf.org/viaf/133022259> ;
     cto:relatedPerson <https://d-nb.info/gnd/118573632>,
         <https://viaf.org/viaf/54333042> ;
-    cto:title "Une tabatière à musique (Ljadov, Anatolij K.)" ;
     cto:viaf <https://viaf.org/viaf/131976266>,
         <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/54333042> .

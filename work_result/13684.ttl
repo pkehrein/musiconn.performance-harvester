@@ -1,15 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/hommage-a-haendel-moscheles-ignaz> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/hommage-a-haendel-moscheles-ignaz> ] .
 
-<https://performance.musiconn.de/work/hommage-a-haendel-moscheles-ignaz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/hommage-a-haendel-moscheles-ignaz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Hommage à Händel (Moscheles, Ignaz)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "2 Sätze" ;
     cto:elementOf n4c:E5320 ;
@@ -74,7 +74,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/64165326421316290004>,
         <https://viaf.org/viaf/794165871011264270002>,
         <https://viaf.org/viaf/879165709998549380005> ;
-    cto:title "Hommage à Händel (Moscheles, Ignaz)" ;
     cto:viaf <https://viaf.org/viaf/1789165814896759860001>,
         <https://viaf.org/viaf/2211165628832642480006>,
         <https://viaf.org/viaf/262888546>,

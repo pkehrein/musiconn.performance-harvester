@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/dona-nobis-pacem-promnitz-rainer> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/dona-nobis-pacem-promnitz-rainer> ] .
 
-<https://performance.musiconn.de/work/dona-nobis-pacem-promnitz-rainer> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/dona-nobis-pacem-promnitz-rainer> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Dona nobis pacem (Promnitz, Rainer)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/dona-nobis-pacem-fassung-fuer-violine-viola-violoncello-kontrabass-und-klavier-1986-2017-promnitz-rainer> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Fassung für Violine, Viola, Violoncello, Kontrabass und Klavier (1986/2017) in musiconn.performance als Werk unter der ID 12141 verzeichnet" ;
     cto:elementOf n4c:E5320 ;
@@ -19,7 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:relatedPerson <https://d-nb.info/gnd/1061750876>,
         <https://performance.musiconn.de/person/juch-gisela>,
         <https://viaf.org/viaf/311652967> ;
-    cto:title "Dona nobis pacem (Promnitz, Rainer)" ;
-    cto:viaf <https://viaf.org/viaf/311652967> ;
-    schema:includedComposition <https://performance.musiconn.de/work/dona-nobis-pacem-fassung-fuer-violine-viola-violoncello-kontrabass-und-klavier-1986-2017-promnitz-rainer> .
+    cto:viaf <https://viaf.org/viaf/311652967> .
 

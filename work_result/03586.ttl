@@ -1,15 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/quintette-klarinette-violine-2-viola-violoncello-op-115-h-moll-brahms-johannes> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/quintette-klarinette-violine-2-viola-violoncello-op-115-h-moll-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/quintette-klarinette-violine-2-viola-violoncello-op-115-h-moll-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/quintette-klarinette-violine-2-viola-violoncello-op-115-h-moll-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Quintette, Klarinette, Violine (2), Viola, Violoncello, op. 115 (h-Moll) (Brahms, Johannes)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1085675033>,
+        <https://performance.musiconn.de/work/quintette-klarinette-violine-2-viola-violoncello-op-115-h-moll-andantino-brahms-johannes>,
+        <https://viaf.org/viaf/400145858089323021993> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/zehnter-letzter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1897-04-13-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10185429-8>,
@@ -61,7 +65,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/305934267> ;
     cto:relatedPerson <https://d-nb.info/gnd/118514253>,
         <https://viaf.org/viaf/7573295> ;
-    cto:title "Quintette, Klarinette, Violine (2), Viola, Violoncello, op. 115 (h-Moll) (Brahms, Johannes)" ;
     cto:viaf <https://viaf.org/viaf/121015775>,
         <https://viaf.org/viaf/121134188>,
         <https://viaf.org/viaf/134631920>,
@@ -76,9 +79,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/264131606>,
         <https://viaf.org/viaf/305934267>,
         <https://viaf.org/viaf/400145858089323021993>,
-        <https://viaf.org/viaf/7573295> ;
-    schema:includedComposition <https://d-nb.info/gnd/1085675033>,
-        <https://performance.musiconn.de/work/quintette-klarinette-violine-2-viola-violoncello-op-115-h-moll-andantino-brahms-johannes>,
-        <https://viaf.org/viaf/400145858089323021993> ;
-    schema:subjectOf <https://performance.musiconn.de/event/zehnter-letzter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1897-04-13-19-00> .
+        <https://viaf.org/viaf/7573295> .
 

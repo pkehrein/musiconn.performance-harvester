@@ -1,18 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/musique-de-table-telemann-georg-philipp> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/musique-de-table-telemann-georg-philipp> ] .
 
-<https://performance.musiconn.de/work/musique-de-table-telemann-georg-philipp> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/musique-de-table-telemann-georg-philipp> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Musique de table (Telemann, Georg Philipp)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1048570509>,
+        <https://performance.musiconn.de/work/musique-de-table-production-1-telemann-georg-philipp>,
+        <https://viaf.org/viaf/180084239> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Umfasst 18 Werke in unterschiedlichen Besetzungen in 3 Teilen mit jeweils 6 Werken: Ouvertüre, Quartett, Konzert, Trio, Solo/Sonate, Conclusion/Sinfonie
-Production 1: TWV 55 e 1, 43 G 2, 53 A 2, 42 Es 1, 41 h 4, 50 5; Production 2: TWV 55 D 1, 43 d 1, 53 F 1, 42 e 2, 41 A 4, 50 9; Production 3: TWV 55 B 1, 43 e 2, 54 Es 1, 42 D 5, 41 g 6, 50 10 (TWV Band3, Seite 278)""" ;
+    cto:abstract "Umfasst 18 Werke in unterschiedlichen Besetzungen in 3 Teilen mit jeweils 6 Werken: Ouvertüre, Quartett, Konzert, Trio, Solo/Sonate, Conclusion/SinfonieProduction 1: TWV 55 e 1, 43 G 2, 53 A 2, 42 Es 1, 41 h 4, 50 5; Production 2: TWV 55 D 1, 43 d 1, 53 F 1, 42 e 2, 41 A 4, 50 9; Production 3: TWV 55 B 1, 43 e 2, 54 Es 1, 42 D 5, 41 g 6, 50 10 (TWV Band3, Seite 278)" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1048570509>,
         <https://d-nb.info/gnd/118578766>,
@@ -21,11 +23,7 @@ Production 1: TWV 55 e 1, 43 G 2, 53 A 2, 42 Es 1, 41 h 4, 50 5; Production 2: T
         <https://d-nb.info/gnd/11862119X>,
         <https://viaf.org/viaf/226810696>,
         <https://viaf.org/viaf/71579513> ;
-    cto:title "Musique de table (Telemann, Georg Philipp)" ;
     cto:viaf <https://viaf.org/viaf/180084239>,
         <https://viaf.org/viaf/226810696>,
-        <https://viaf.org/viaf/71579513> ;
-    schema:includedComposition <https://d-nb.info/gnd/1048570509>,
-        <https://performance.musiconn.de/work/musique-de-table-production-1-telemann-georg-philipp>,
-        <https://viaf.org/viaf/180084239> .
+        <https://viaf.org/viaf/71579513> .
 

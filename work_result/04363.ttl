@@ -1,15 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/etueden-klavier-buch-2-ligeti-gyoergy> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/etueden-klavier-buch-2-ligeti-gyoergy> ] .
 
-<https://performance.musiconn.de/work/etueden-klavier-buch-2-ligeti-gyoergy> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/etueden-klavier-buch-2-ligeti-gyoergy> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Etüden, Klavier, Buch 2 (Ligeti, György)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1043468137>,
+        <https://d-nb.info/gnd/300930860>,
+        <https://performance.musiconn.de/work/etueden-klavier-buch-2-der-zauberlehrling-ligeti-gyoergy>,
+        <https://performance.musiconn.de/work/etueden-klavier-buch-2-en-suspens-ligeti-gyoergy>,
+        <https://viaf.org/viaf/177235162>,
+        <https://viaf.org/viaf/178447152> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1043468137>,
@@ -19,14 +25,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4123166-1> ;
     cto:relatedPerson <https://d-nb.info/gnd/118572911>,
         <https://viaf.org/viaf/61732409> ;
-    cto:title "Etüden, Klavier, Buch 2 (Ligeti, György)" ;
     cto:viaf <https://viaf.org/viaf/177235162>,
         <https://viaf.org/viaf/178447152>,
-        <https://viaf.org/viaf/61732409> ;
-    schema:includedComposition <https://d-nb.info/gnd/1043468137>,
-        <https://d-nb.info/gnd/300930860>,
-        <https://performance.musiconn.de/work/etueden-klavier-buch-2-der-zauberlehrling-ligeti-gyoergy>,
-        <https://performance.musiconn.de/work/etueden-klavier-buch-2-en-suspens-ligeti-gyoergy>,
-        <https://viaf.org/viaf/177235162>,
-        <https://viaf.org/viaf/178447152> .
+        <https://viaf.org/viaf/61732409> .
 

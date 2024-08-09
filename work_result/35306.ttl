@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/palmira-regina-di-persia-salieri-antonio> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/palmira-regina-di-persia-salieri-antonio> ] .
 
-<https://performance.musiconn.de/work/palmira-regina-di-persia-salieri-antonio> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/palmira-regina-di-persia-salieri-antonio> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Palmira, regina di Persia (Salieri, Antonio)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/palmira-regina-di-persia-fassung-salieri-antonio> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "\"Dramma eroicomico\", 2 Akte; Libretto nach Voltaires La Princesse de Babylone" ;
     cto:elementOf n4c:E5320 ;
@@ -18,7 +19,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4139453-7> ;
     cto:relatedPerson <https://d-nb.info/gnd/118750909>,
         <https://viaf.org/viaf/17408816> ;
-    cto:title "Palmira, regina di Persia (Salieri, Antonio)" ;
-    cto:viaf <https://viaf.org/viaf/17408816> ;
-    schema:includedComposition <https://performance.musiconn.de/work/palmira-regina-di-persia-fassung-salieri-antonio> .
+    cto:viaf <https://viaf.org/viaf/17408816> .
 

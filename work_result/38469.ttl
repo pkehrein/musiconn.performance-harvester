@@ -1,35 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/communiones-totius-anni-quibus-in-solennioribus-festis-sanctae-romanae-ecclesiae-zielenski-mikolaj> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/communiones-totius-anni-quibus-in-solennioribus-festis-sanctae-romanae-ecclesiae-zielenski-mikolaj> ] .
 
-<https://performance.musiconn.de/work/communiones-totius-anni-quibus-in-solennioribus-festis-sanctae-romanae-ecclesiae-zielenski-mikolaj> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Ansetzung nach RISM
-57 Werke für 1 bis 6 Stimmen und Instrumente mit Orgel""" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1115219634>,
-        <https://d-nb.info/gnd/1117064662>,
-        <https://d-nb.info/gnd/1190333724>,
-        <https://d-nb.info/gnd/1263956440>,
-        <https://d-nb.info/gnd/1263960502>,
-        <https://d-nb.info/gnd/1263960693>,
-        <https://d-nb.info/gnd/1263960820>,
-        <https://d-nb.info/gnd/134633725> ;
-    cto:isPartOf <https://d-nb.info/gnd/1115219634> ;
-    cto:relatedPerson <https://d-nb.info/gnd/134633725>,
-        <https://viaf.org/viaf/39570485> ;
-    cto:title "Communiones totius anni quibus in solennioribus festis Sanctae Romanae Ecclesiae (Zieleński, Mikołaj)" ;
-    cto:viaf <https://viaf.org/viaf/181736967>,
-        <https://viaf.org/viaf/299932167>,
-        <https://viaf.org/viaf/39570485> ;
-    schema:includedComposition <https://d-nb.info/gnd/1117064662>,
+<https://performance.musiconn.de/work/communiones-totius-anni-quibus-in-solennioribus-festis-sanctae-romanae-ecclesiae-zielenski-mikolaj> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Communiones totius anni quibus in solennioribus festis Sanctae Romanae Ecclesiae (Zieleński, Mikołaj)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1117064662>,
         <https://d-nb.info/gnd/1190333724>,
         <https://d-nb.info/gnd/1263956440>,
         <https://d-nb.info/gnd/1263960502>,
@@ -42,5 +23,22 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/work/communiones-totius-anni-quibus-in-solennioribus-festis-sanctae-romanae-ecclesiae-per-signum-crucis-zielenski-mikolaj>,
         <https://performance.musiconn.de/work/communiones-totius-anni-quibus-in-solennioribus-festis-sanctae-romanae-ecclesiae-viderunt-omnes-fines-terrae-zielenski-mikolaj>,
         <https://viaf.org/viaf/181736967>,
-        <https://viaf.org/viaf/299932167> .
+        <https://viaf.org/viaf/299932167> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "Ansetzung nach RISM57 Werke für 1 bis 6 Stimmen und Instrumente mit Orgel" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/1115219634>,
+        <https://d-nb.info/gnd/1117064662>,
+        <https://d-nb.info/gnd/1190333724>,
+        <https://d-nb.info/gnd/1263956440>,
+        <https://d-nb.info/gnd/1263960502>,
+        <https://d-nb.info/gnd/1263960693>,
+        <https://d-nb.info/gnd/1263960820>,
+        <https://d-nb.info/gnd/134633725> ;
+    cto:isPartOf <https://d-nb.info/gnd/1115219634> ;
+    cto:relatedPerson <https://d-nb.info/gnd/134633725>,
+        <https://viaf.org/viaf/39570485> ;
+    cto:viaf <https://viaf.org/viaf/181736967>,
+        <https://viaf.org/viaf/299932167>,
+        <https://viaf.org/viaf/39570485> .
 

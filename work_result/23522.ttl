@@ -1,15 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sonata-mozart-wolfgang-amadeus> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sonata-mozart-wolfgang-amadeus> ] .
 
-<https://performance.musiconn.de/work/sonata-mozart-wolfgang-amadeus> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sonata-mozart-wolfgang-amadeus> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sonata (Mozart, Wolfgang Amadeus)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "unklar, welches Werk" ;
     cto:elementOf n4c:E5320 ;
@@ -23,7 +23,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://d-nb.info/gnd/134938380>,
         <https://viaf.org/viaf/32197206>,
         <https://viaf.org/viaf/53724735> ;
-    cto:title "Sonata (Mozart, Wolfgang Amadeus)" ;
     cto:viaf <https://viaf.org/viaf/32197206>,
         <https://viaf.org/viaf/53724735> .
 

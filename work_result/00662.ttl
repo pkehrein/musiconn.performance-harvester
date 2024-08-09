@@ -1,15 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/deutsche-kirchenlieder-mozart-wolfgang-amadeus> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/deutsche-kirchenlieder-mozart-wolfgang-amadeus> ] .
 
-<https://performance.musiconn.de/work/deutsche-kirchenlieder-mozart-wolfgang-amadeus> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/deutsche-kirchenlieder-mozart-wolfgang-amadeus> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Deutsche Kirchenlieder (Mozart, Wolfgang Amadeus)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/119306886X>,
+        <https://d-nb.info/gnd/1193069203>,
+        <https://performance.musiconn.de/work/deutsche-kirchenlieder-als-aus-aegypten-mozart-wolfgang-amadeus>,
+        <https://performance.musiconn.de/work/deutsche-kirchenlieder-o-gottes-lamm-mozart-wolfgang-amadeus> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Insgesamt 2 Lieder" ;
     cto:elementOf n4c:E5320 ;
@@ -20,10 +24,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
     cto:relatedPerson <https://d-nb.info/gnd/118584596>,
         <https://viaf.org/viaf/32197206> ;
-    cto:title "Deutsche Kirchenlieder (Mozart, Wolfgang Amadeus)" ;
-    cto:viaf <https://viaf.org/viaf/32197206> ;
-    schema:includedComposition <https://d-nb.info/gnd/119306886X>,
-        <https://d-nb.info/gnd/1193069203>,
-        <https://performance.musiconn.de/work/deutsche-kirchenlieder-als-aus-aegypten-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/deutsche-kirchenlieder-o-gottes-lamm-mozart-wolfgang-amadeus> .
+    cto:viaf <https://viaf.org/viaf/32197206> .
 

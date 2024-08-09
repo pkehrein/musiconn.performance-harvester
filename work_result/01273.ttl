@@ -1,31 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/dinorah-meyerbeer-giacomo> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/dinorah-meyerbeer-giacomo> ] .
 
-<https://performance.musiconn.de/work/dinorah-meyerbeer-giacomo> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Komische Oper in drei Akten nach der Erzählung \"La chasse aux trésors\" von Emile Souvestre" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1179237455>,
-        <https://d-nb.info/gnd/118581945>,
-        <https://d-nb.info/gnd/4043582-9> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118581945>,
-        <https://viaf.org/viaf/71578779> ;
-    cto:title "Dinorah (Meyerbeer, Giacomo)" ;
-    cto:viaf <https://viaf.org/viaf/179227033>,
-        <https://viaf.org/viaf/71578779> ;
-    schema:includedComposition <https://d-nb.info/gnd/1179237455>,
+<https://performance.musiconn.de/work/dinorah-meyerbeer-giacomo> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Dinorah (Meyerbeer, Giacomo)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1179237455>,
         <https://performance.musiconn.de/work/dinorah-ouvertuere-meyerbeer-giacomo>,
         <https://viaf.org/viaf/179227033> ;
-    schema:subjectOf <https://performance.musiconn.de/event/dinorah-oder-die-wallfahrt-nach-ploermel-koenigliches-hoftheater-dresden-1860-01-21-18-00>,
+    schema1:subjectOf <https://performance.musiconn.de/event/dinorah-oder-die-wallfahrt-nach-ploermel-koenigliches-hoftheater-dresden-1860-01-21-18-00>,
         <https://performance.musiconn.de/event/dinorah-oder-die-wallfahrt-nach-ploermel-koenigliches-hoftheater-dresden-1860-01-23-18-00>,
         <https://performance.musiconn.de/event/dinorah-oder-die-wallfahrt-nach-ploermel-koenigliches-hoftheater-dresden-1860-01-25-18-00>,
         <https://performance.musiconn.de/event/dinorah-oder-die-wallfahrt-nach-ploermel-koenigliches-hoftheater-dresden-1860-01-29-18-00>,
@@ -42,5 +30,16 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/dinorah-oder-die-wallfahrt-nach-ploermel-koenigliches-hoftheater-dresden-1860-10-20-18-00>,
         <https://performance.musiconn.de/event/dinorah-oder-die-wallfahrt-nach-ploermel-koenigliches-hoftheater-dresden-1861-04-21-18-00>,
         <https://performance.musiconn.de/event/dinorah-oder-die-wallfahrt-nach-ploermel-koenigliches-hoftheater-dresden-1861-04-30-18-00>,
-        <https://performance.musiconn.de/event/dinorah-oder-die-wallfahrt-nach-ploermel-koenigliches-hoftheater-dresden-1862-12-10-18-30> .
+        <https://performance.musiconn.de/event/dinorah-oder-die-wallfahrt-nach-ploermel-koenigliches-hoftheater-dresden-1862-12-10-18-30> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "Komische Oper in drei Akten nach der Erzählung \"La chasse aux trésors\" von Emile Souvestre" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/1179237455>,
+        <https://d-nb.info/gnd/118581945>,
+        <https://d-nb.info/gnd/4043582-9> ;
+    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118581945>,
+        <https://viaf.org/viaf/71578779> ;
+    cto:viaf <https://viaf.org/viaf/179227033>,
+        <https://viaf.org/viaf/71578779> .
 

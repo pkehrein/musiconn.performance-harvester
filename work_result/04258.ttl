@@ -1,15 +1,46 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/fest-und-gedenksprueche-brahms-johannes> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/fest-und-gedenksprueche-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/fest-und-gedenksprueche-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/fest-und-gedenksprueche-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Fest- und Gedenksprüche (Brahms, Johannes)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300025165>,
+        <https://d-nb.info/gnd/300025173>,
+        <https://d-nb.info/gnd/300443404>,
+        <https://performance.musiconn.de/work/fest-und-gedenksprueche-auswahl-brahms-johannes>,
+        <https://performance.musiconn.de/work/fest-und-gedenksprueche-unsere-vaeter-hofften-auf-dich-brahms-johannes>,
+        <https://performance.musiconn.de/work/fest-und-gedenksprueche-wenn-ein-starker-gewappneter-brahms-johannes>,
+        <https://performance.musiconn.de/work/fest-und-gedenksprueche-wo-ist-ein-so-herrlich-volk-brahms-johannes>,
+        <https://viaf.org/viaf/191506099>,
+        <https://viaf.org/viaf/214736926>,
+        <https://viaf.org/viaf/215922284> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/1-orgelstunde-tonhalle-duesseldorf-1934-09-30-20-00>,
+        <https://performance.musiconn.de/event/chor-und-orgel-musik-auferstehungskirche-dueren-1934-10-07-20-00>,
+        <https://performance.musiconn.de/event/deutscher-nsdap-kunstabend-hotel-deutsches-haus-1933-10-03>,
+        <https://performance.musiconn.de/event/dresdener-kreuzchor-baltimore-md-1935-03-31>,
+        <https://performance.musiconn.de/event/dresdner-kreuzchor-old-zion-lutheran-church-philadelphia-1935-03-29-20-00>,
+        <https://performance.musiconn.de/event/ii-konzert-volkshaus-jena-1940-05-05-19-30>,
+        <https://performance.musiconn.de/event/konzert-des-dresdener-kreuzchors-niederwiesa-1933-09-05-20-00>,
+        <https://performance.musiconn.de/event/konzert-des-dresdener-kreuzchors-oetkerhalle-bielefeld-1934-09-29-20-15>,
+        <https://performance.musiconn.de/event/konzert-des-dresdner-kreuzchors-konzert-und-ballhaus-tivoli-freiberg-1936-09-15-20-00>,
+        <https://performance.musiconn.de/event/konzert-des-dresdner-kreuzchors-sachsenhof-grossenhain-1936-10-29-20-00>,
+        <https://performance.musiconn.de/event/konzert-des-kreuzchors-hotel-stadt-dresden-kamenz-1936-03-12-19-30>,
+        <https://performance.musiconn.de/event/konzert-dresdener-kreuzchor-kreuzkirche-lauban-1933-09-04-20-00>,
+        <https://performance.musiconn.de/event/konzert-dresdner-kreuzchor-salvatorkirche-breslau-1933-09-08-20-00>,
+        <https://performance.musiconn.de/event/konzert-in-weinboehla-zentralgasthof-weinboehla-1937-02-20>,
+        <https://performance.musiconn.de/event/kreuzchor-dresden-bachkirche-arnstadt-1933-10-08-20-00>,
+        <https://performance.musiconn.de/event/kreuzchor-vesper-matthaeikirche-duesseldorf-1934-10-02-20-00>,
+        <https://performance.musiconn.de/event/popular-farewell-concert-1935-04-24-20-30>,
+        <https://performance.musiconn.de/event/tagung-der-kirchenmusiker-in-marienburg-burg-marienburg-malbork-mittelschloss-grosser-remter-1936-10-08-12-00>,
+        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-01-18-18-00>,
+        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-08-22-18-00>,
+        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1937-01-30-18-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Drei Stücke: Unsere Väter hofften auf dich. Wenn ein starker Gewappneter. Wo ist ein so herrlich Volk" ;
     cto:elementOf n4c:E5320 ;
@@ -34,7 +65,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/157753597> ;
     cto:relatedPerson <https://d-nb.info/gnd/118514253>,
         <https://viaf.org/viaf/7573295> ;
-    cto:title "Fest- und Gedenksprüche (Brahms, Johannes)" ;
     cto:viaf <https://viaf.org/viaf/139053206>,
         <https://viaf.org/viaf/147478436>,
         <https://viaf.org/viaf/150245159>,
@@ -42,36 +72,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/191506099>,
         <https://viaf.org/viaf/214736926>,
         <https://viaf.org/viaf/215922284>,
-        <https://viaf.org/viaf/7573295> ;
-    schema:includedComposition <https://d-nb.info/gnd/300025165>,
-        <https://d-nb.info/gnd/300025173>,
-        <https://d-nb.info/gnd/300443404>,
-        <https://performance.musiconn.de/work/fest-und-gedenksprueche-auswahl-brahms-johannes>,
-        <https://performance.musiconn.de/work/fest-und-gedenksprueche-unsere-vaeter-hofften-auf-dich-brahms-johannes>,
-        <https://performance.musiconn.de/work/fest-und-gedenksprueche-wenn-ein-starker-gewappneter-brahms-johannes>,
-        <https://performance.musiconn.de/work/fest-und-gedenksprueche-wo-ist-ein-so-herrlich-volk-brahms-johannes>,
-        <https://viaf.org/viaf/191506099>,
-        <https://viaf.org/viaf/214736926>,
-        <https://viaf.org/viaf/215922284> ;
-    schema:subjectOf <https://performance.musiconn.de/event/1-orgelstunde-tonhalle-duesseldorf-1934-09-30-20-00>,
-        <https://performance.musiconn.de/event/chor-und-orgel-musik-auferstehungskirche-dueren-1934-10-07-20-00>,
-        <https://performance.musiconn.de/event/deutscher-nsdap-kunstabend-hotel-deutsches-haus-1933-10-03>,
-        <https://performance.musiconn.de/event/dresdener-kreuzchor-baltimore-md-1935-03-31>,
-        <https://performance.musiconn.de/event/dresdner-kreuzchor-old-zion-lutheran-church-philadelphia-1935-03-29-20-00>,
-        <https://performance.musiconn.de/event/ii-konzert-volkshaus-jena-1940-05-05-19-30>,
-        <https://performance.musiconn.de/event/konzert-des-dresdener-kreuzchors-niederwiesa-1933-09-05-20-00>,
-        <https://performance.musiconn.de/event/konzert-des-dresdener-kreuzchors-oetkerhalle-bielefeld-1934-09-29-20-15>,
-        <https://performance.musiconn.de/event/konzert-des-dresdner-kreuzchors-konzert-und-ballhaus-tivoli-freiberg-1936-09-15-20-00>,
-        <https://performance.musiconn.de/event/konzert-des-dresdner-kreuzchors-sachsenhof-grossenhain-1936-10-29-20-00>,
-        <https://performance.musiconn.de/event/konzert-des-kreuzchors-hotel-stadt-dresden-kamenz-1936-03-12-19-30>,
-        <https://performance.musiconn.de/event/konzert-dresdener-kreuzchor-kreuzkirche-lauban-1933-09-04-20-00>,
-        <https://performance.musiconn.de/event/konzert-dresdner-kreuzchor-salvatorkirche-breslau-1933-09-08-20-00>,
-        <https://performance.musiconn.de/event/konzert-in-weinboehla-zentralgasthof-weinboehla-1937-02-20>,
-        <https://performance.musiconn.de/event/kreuzchor-dresden-bachkirche-arnstadt-1933-10-08-20-00>,
-        <https://performance.musiconn.de/event/kreuzchor-vesper-matthaeikirche-duesseldorf-1934-10-02-20-00>,
-        <https://performance.musiconn.de/event/popular-farewell-concert-1935-04-24-20-30>,
-        <https://performance.musiconn.de/event/tagung-der-kirchenmusiker-in-marienburg-burg-marienburg-malbork-mittelschloss-grosser-remter-1936-10-08-12-00>,
-        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-01-18-18-00>,
-        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-08-22-18-00>,
-        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1937-01-30-18-00> .
+        <https://viaf.org/viaf/7573295> .
 

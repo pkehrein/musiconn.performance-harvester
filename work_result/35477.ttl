@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/alexis-und-susetta-oder-die-italienische-weinlese-bei-montolivetto-umlauf-michael> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/alexis-und-susetta-oder-die-italienische-weinlese-bei-montolivetto-umlauf-michael> ] .
 
-<https://performance.musiconn.de/work/alexis-und-susetta-oder-die-italienische-weinlese-bei-montolivetto-umlauf-michael> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/alexis-und-susetta-oder-die-italienische-weinlese-bei-montolivetto-umlauf-michael> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Alexis und Susetta, oder Die italienische Weinlese bei Mont'olivetto (Umlauf, Michael)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/alexis-und-susetta-oder-die-italienische-weinlese-bei-montolivetto-fassung-umlauf-michael> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Gattung: Komisches Ballet; Choreografie: Antoine Titus" ;
     cto:elementOf n4c:E5320 ;
@@ -18,7 +19,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4004351-4> ;
     cto:relatedPerson <https://d-nb.info/gnd/139625143>,
         <https://viaf.org/viaf/29060556> ;
-    cto:title "Alexis und Susetta, oder Die italienische Weinlese bei Mont'olivetto (Umlauf, Michael)" ;
-    cto:viaf <https://viaf.org/viaf/29060556> ;
-    schema:includedComposition <https://performance.musiconn.de/work/alexis-und-susetta-oder-die-italienische-weinlese-bei-montolivetto-fassung-umlauf-michael> .
+    cto:viaf <https://viaf.org/viaf/29060556> .
 

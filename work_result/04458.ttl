@@ -1,19 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sola-soletta-conversi-girolamo> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sola-soletta-conversi-girolamo> ] .
 
-<https://performance.musiconn.de/work/sola-soletta-conversi-girolamo> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sola-soletta-conversi-girolamo> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sola soletta (Conversi, Girolamo)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/konzert-des-dresdener-kreuzchors-oetkerhalle-bielefeld-1934-09-29-20-15> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Im Sammelwerk "The first booke of consort lessons ; Consort lessons ; made by diuers exquisite authors, for six instruments to play together, the treble lute, the pandora, the cittern, the base-violl, the flute & treble-violl", hrsg. von Thomas Morley, abgedruckt
-Digitalisat Erstausgabe
-Autorschaft unsicher, teilweise auch Thomas Morley zugeschrieben""" ;
+    cto:abstract "Im Sammelwerk \"The first booke of consort lessons ; Consort lessons ; made by diuers exquisite authors, for six instruments to play together, the treble lute, the pandora, the cittern, the base-violl, the flute & treble-violl\", hrsg. von Thomas Morley, abgedrucktDigitalisat ErstausgabeAutorschaft unsicher, teilweise auch Thomas Morley zugeschrieben" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/130257842>,
         <https://d-nb.info/gnd/2074419-5> ;
@@ -21,8 +20,6 @@ Autorschaft unsicher, teilweise auch Thomas Morley zugeschrieben""" ;
         <https://viaf.org/viaf/139053206> ;
     cto:relatedPerson <https://d-nb.info/gnd/130257842>,
         <https://viaf.org/viaf/23241937> ;
-    cto:title "Sola soletta (Conversi, Girolamo)" ;
     cto:viaf <https://viaf.org/viaf/139053206>,
-        <https://viaf.org/viaf/23241937> ;
-    schema:subjectOf <https://performance.musiconn.de/event/konzert-des-dresdener-kreuzchors-oetkerhalle-bielefeld-1934-09-29-20-15> .
+        <https://viaf.org/viaf/23241937> .
 

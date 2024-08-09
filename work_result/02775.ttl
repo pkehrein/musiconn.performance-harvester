@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/liederzyklus-vergiss-mein-nicht-hofmann-heinrich> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/liederzyklus-vergiss-mein-nicht-hofmann-heinrich> ] .
 
-<https://performance.musiconn.de/work/liederzyklus-vergiss-mein-nicht-hofmann-heinrich> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/liederzyklus-vergiss-mein-nicht-hofmann-heinrich> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Liederzyklus. Vergiss mein nicht (Hofmann, Heinrich)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/neuntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1880-01-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116124253>,
@@ -22,8 +23,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/person/schimon-regan-anna-1841>,
         <https://viaf.org/viaf/35200131>,
         <https://viaf.org/viaf/37680687> ;
-    cto:title "Liederzyklus. Vergiss mein nicht (Hofmann, Heinrich)" ;
     cto:viaf <https://viaf.org/viaf/35200131>,
-        <https://viaf.org/viaf/37680687> ;
-    schema:subjectOf <https://performance.musiconn.de/event/neuntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1880-01-30> .
+        <https://viaf.org/viaf/37680687> .
 

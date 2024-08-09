@@ -1,18 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sonate-aus-h-darmstadt-hans> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sonate-aus-h-darmstadt-hans> ] .
 
-<https://performance.musiconn.de/work/sonate-aus-h-darmstadt-hans> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sonate-aus-h-darmstadt-hans> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sonate aus h' (Darmstadt, Hans)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Umfasst: Psalm – Chaconne en rondeau – Pedalsolo – Improvisata; Anhang: Orgelchoral "Ein feste Burg ist unser Gott"
-Aufführungsdauer: 16:30 Minuten""" ;
+    cto:abstract "Umfasst: Psalm – Chaconne en rondeau – Pedalsolo – Improvisata; Anhang: Orgelchoral \"Ein feste Burg ist unser Gott\"Aufführungsdauer: 16:30 Minuten" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/123221374>,
         <https://d-nb.info/gnd/134404718>,
@@ -22,7 +21,6 @@ Aufführungsdauer: 16:30 Minuten""" ;
         <https://d-nb.info/gnd/134404718>,
         <https://viaf.org/viaf/45203149>,
         <https://viaf.org/viaf/76500287> ;
-    cto:title "Sonate aus h' (Darmstadt, Hans)" ;
     cto:viaf <https://viaf.org/viaf/45203149>,
         <https://viaf.org/viaf/76500287> .
 

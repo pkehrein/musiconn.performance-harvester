@@ -1,25 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/bez-solnca-bearbeitung-fuer-orchester-und-bassstimme-von-denisov-edison-musorgskij-modest-petrovic> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/bez-solnca-bearbeitung-fuer-orchester-und-bassstimme-von-denisov-edison-musorgskij-modest-petrovic> ] .
 
-<https://performance.musiconn.de/work/bez-solnca-bearbeitung-fuer-orchester-und-bassstimme-von-denisov-edison-musorgskij-modest-petrovic> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/bez-solnca-bearbeitung-fuer-orchester-und-bassstimme-von-denisov-edison-musorgskij-modest-petrovic> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Bez solnca / Bearbeitung für Orchester und Bassstimme von Denisov, Edison (Musorgskij, Modest Petrovič)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Original (1874) für Klavier und Singstimme
-
-Umfasst 6 Lieder:
-1. V četyrëch stenach (In vier Wänden)
-2. Menja ty v tolpe ne uznala (Ich sah dich in wogender Menge)
-3. Okončen prazdnyj šumnyi denʹ (Das Werk des Tages ist vollbracht)
-4. Skučaj (Wie öd!)
-5. Elegija (Elegie)
-6. Nad rekoj (Am Flusse)""" ;
+    cto:abstract "Original (1874) für Klavier und SingstimmeUmfasst 6 Lieder:1. V četyrëch stenach (In vier Wänden)2. Menja ty v tolpe ne uznala (Ich sah dich in wogender Menge)3. Okončen prazdnyj šumnyi denʹ (Das Werk des Tages ist vollbracht)4. Skučaj (Wie öd!)5. Elegija (Elegie)6. Nad rekoj (Am Flusse)" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118641255>,
         <https://d-nb.info/gnd/1212434-5>,
@@ -31,7 +23,6 @@ Umfasst 6 Lieder:
         <https://viaf.org/viaf/167731630> ;
     cto:relatedPerson <https://d-nb.info/gnd/118641255>,
         <https://viaf.org/viaf/49408900> ;
-    cto:title "Bez solnca / Bearbeitung für Orchester und Bassstimme von Denisov, Edison (Musorgskij, Modest Petrovič)" ;
     cto:viaf <https://viaf.org/viaf/167731630>,
         <https://viaf.org/viaf/49408900> .
 

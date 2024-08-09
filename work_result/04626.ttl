@@ -1,15 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/eugen-onegin-arie-tschaikowski-peter-i> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/eugen-onegin-arie-tschaikowski-peter-i> ] .
 
-<https://performance.musiconn.de/work/eugen-onegin-arie-tschaikowski-peter-i> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/eugen-onegin-arie-tschaikowski-peter-i> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Eugen Onegin. Arie (Tschaikowski, Peter I.)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/konzert-kirchgemeindesaal-strehlen-dresden-1945-06-29-18-00>,
+        <https://performance.musiconn.de/event/konzert-neues-dresdner-revue-und-variete-theater-1945-09-23-11-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118638157>,
@@ -23,10 +25,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/221396927> ;
     cto:relatedPerson <https://d-nb.info/gnd/118638157>,
         <https://viaf.org/viaf/99258155> ;
-    cto:title "Eugen Onegin. Arie (Tschaikowski, Peter I.)" ;
     cto:viaf <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/221396927>,
-        <https://viaf.org/viaf/99258155> ;
-    schema:subjectOf <https://performance.musiconn.de/event/konzert-kirchgemeindesaal-strehlen-dresden-1945-06-29-18-00>,
-        <https://performance.musiconn.de/event/konzert-neues-dresdner-revue-und-variete-theater-1945-09-23-11-00> .
+        <https://viaf.org/viaf/99258155> .
 

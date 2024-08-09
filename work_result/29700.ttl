@@ -1,15 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/anna-katarina-krtschil-henry> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/anna-katarina-krtschil-henry> ] .
 
-<https://performance.musiconn.de/work/anna-katarina-krtschil-henry> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/anna-katarina-krtschil-henry> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Anna Katarina (Krtschil, Henry)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "eines von vier Liedern nach Texten von Rainer Kirsch" ;
     cto:elementOf n4c:E5320 ;
@@ -20,6 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/person/gregorek-karin>,
         <https://performance.musiconn.de/person/ruttke-klarissa>,
         <https://viaf.org/viaf/59268377> ;
-    cto:title "Anna Katarina (Krtschil, Henry)" ;
     cto:viaf <https://viaf.org/viaf/59268377> .
 

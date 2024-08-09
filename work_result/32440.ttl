@@ -1,15 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/potpourri-aus-die-dollarprinzessin-fetras-oscar> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/potpourri-aus-die-dollarprinzessin-fetras-oscar> ] .
 
-<https://performance.musiconn.de/work/potpourri-aus-die-dollarprinzessin-fetras-oscar> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/potpourri-aus-die-dollarprinzessin-fetras-oscar> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Potpourri aus \"Die Dollarprinzessin\" (Fetrás, Oscar)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Potpourri aus Leo Falls \"Die Dollarprinzessin\"" ;
     cto:elementOf n4c:E5320 ;
@@ -21,7 +21,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/131976266> ;
     cto:relatedPerson <https://d-nb.info/gnd/11647548X>,
         <https://viaf.org/viaf/49977677> ;
-    cto:title "Potpourri aus \"Die Dollarprinzessin\" (Fetrás, Oscar)" ;
     cto:viaf <https://viaf.org/viaf/131976266>,
         <https://viaf.org/viaf/49977677> .
 

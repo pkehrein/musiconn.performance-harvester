@@ -1,19 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/orgelchoraele-spitta-heinrich> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/orgelchoraele-spitta-heinrich> ] .
 
-<https://performance.musiconn.de/work/orgelchoraele-spitta-heinrich> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/orgelchoraele-spitta-heinrich> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Orgelchoräle (Spitta, Heinrich)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Zwei Orgelchoräle, Werk 3
-a) Es ist das Heil uns kommen her
-b) Aus tiefer Not schrei ich zu dir""" ;
+    cto:abstract "Zwei Orgelchoräle, Werk 3a) Es ist das Heil uns kommen herb) Aus tiefer Not schrei ich zu dir" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/121301435>,
         <https://d-nb.info/gnd/14261615X>,
@@ -23,7 +21,6 @@ b) Aus tiefer Not schrei ich zu dir""" ;
         <https://d-nb.info/gnd/14261615X>,
         <https://viaf.org/viaf/143854617>,
         <https://viaf.org/viaf/52542005> ;
-    cto:title "Orgelchoräle (Spitta, Heinrich)" ;
     cto:viaf <https://viaf.org/viaf/143854617>,
         <https://viaf.org/viaf/52542005> .
 

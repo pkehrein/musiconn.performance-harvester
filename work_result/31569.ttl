@@ -1,20 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/taktasch-sinfonie-ismagilowa-leila> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/taktasch-sinfonie-ismagilowa-leila> ] .
 
-<https://performance.musiconn.de/work/taktasch-sinfonie-ismagilowa-leila> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/taktasch-sinfonie-ismagilowa-leila> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Taktasch-Sinfonie (Ismagilowa, Leila)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/4063783-9> ;
     cto:isPartOf <https://d-nb.info/gnd/4063783-9> ;
     cto:relatedOrganization <https://performance.musiconn.de/corporation/hallesche-philharmonie-orchester> ;
-    cto:relatedPerson <https://performance.musiconn.de/person/ismagilowa-leila> ;
-    cto:title "Taktasch-Sinfonie (Ismagilowa, Leila)" .
+    cto:relatedPerson <https://performance.musiconn.de/person/ismagilowa-leila> .
 

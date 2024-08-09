@@ -1,15 +1,25 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/cantiones-sacrae-scheidt-samuel> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/cantiones-sacrae-scheidt-samuel> ] .
 
-<https://performance.musiconn.de/work/cantiones-sacrae-scheidt-samuel> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/cantiones-sacrae-scheidt-samuel> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Cantiones sacrae (Scheidt, Samuel)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1170743285>,
+        <https://d-nb.info/gnd/300136846>,
+        <https://d-nb.info/gnd/300136870>,
+        <https://performance.musiconn.de/work/cantiones-sacrae-ein-feste-burg-ist-unser-gott-scheidt-samuel>,
+        <https://performance.musiconn.de/work/cantiones-sacrae-gott-der-vater-wohn-uns-bei-scheidt-samuel>,
+        <https://performance.musiconn.de/work/cantiones-sacrae-nun-komm-der-heiden-heiland-scheidt-samuel>,
+        <https://performance.musiconn.de/work/cantiones-sacrae-surrexit-christus-hodie-scheidt-samuel>,
+        <https://viaf.org/viaf/1446154198349520230002>,
+        <https://viaf.org/viaf/182997543>,
+        <https://viaf.org/viaf/207914365> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Besetzung: für 2 - 8 (10) Singstimmen (solistisch oder chorisch); 38 Stücke" ;
     cto:elementOf n4c:E5320 ;
@@ -19,19 +29,8 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://d-nb.info/gnd/300136870> ;
     cto:relatedPerson <https://d-nb.info/gnd/118754394>,
         <https://viaf.org/viaf/64193069> ;
-    cto:title "Cantiones sacrae (Scheidt, Samuel)" ;
     cto:viaf <https://viaf.org/viaf/1446154198349520230002>,
         <https://viaf.org/viaf/182997543>,
         <https://viaf.org/viaf/207914365>,
-        <https://viaf.org/viaf/64193069> ;
-    schema:includedComposition <https://d-nb.info/gnd/1170743285>,
-        <https://d-nb.info/gnd/300136846>,
-        <https://d-nb.info/gnd/300136870>,
-        <https://performance.musiconn.de/work/cantiones-sacrae-ein-feste-burg-ist-unser-gott-scheidt-samuel>,
-        <https://performance.musiconn.de/work/cantiones-sacrae-gott-der-vater-wohn-uns-bei-scheidt-samuel>,
-        <https://performance.musiconn.de/work/cantiones-sacrae-nun-komm-der-heiden-heiland-scheidt-samuel>,
-        <https://performance.musiconn.de/work/cantiones-sacrae-surrexit-christus-hodie-scheidt-samuel>,
-        <https://viaf.org/viaf/1446154198349520230002>,
-        <https://viaf.org/viaf/182997543>,
-        <https://viaf.org/viaf/207914365> .
+        <https://viaf.org/viaf/64193069> .
 

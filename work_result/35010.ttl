@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/der-fischer-und-das-milchmaedchen-oder-viel-laerm-um-einen-kuss-meyerbeer-giacomo> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/der-fischer-und-das-milchmaedchen-oder-viel-laerm-um-einen-kuss-meyerbeer-giacomo> ] .
 
-<https://performance.musiconn.de/work/der-fischer-und-das-milchmaedchen-oder-viel-laerm-um-einen-kuss-meyerbeer-giacomo> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/der-fischer-und-das-milchmaedchen-oder-viel-laerm-um-einen-kuss-meyerbeer-giacomo> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Der Fischer und das Milchmädchen, oder Viel Lärm um einen Kuss (Meyerbeer, Giacomo)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/der-fischer-und-das-milchmaedchen-oder-viel-laerm-um-einen-kuss-fassung-meyerbeer-giacomo> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Ballett in 1 Akt." ;
     cto:elementOf n4c:E5320 ;
@@ -18,7 +19,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4143955-7> ;
     cto:relatedPerson <https://d-nb.info/gnd/118581945>,
         <https://viaf.org/viaf/71578779> ;
-    cto:title "Der Fischer und das Milchmädchen, oder Viel Lärm um einen Kuss (Meyerbeer, Giacomo)" ;
-    cto:viaf <https://viaf.org/viaf/71578779> ;
-    schema:includedComposition <https://performance.musiconn.de/work/der-fischer-und-das-milchmaedchen-oder-viel-laerm-um-einen-kuss-fassung-meyerbeer-giacomo> .
+    cto:viaf <https://viaf.org/viaf/71578779> .
 

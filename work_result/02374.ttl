@@ -1,15 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-op-70-nr-2-beethoven-ludwig-van> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-op-70-nr-2-beethoven-ludwig-van> ] .
 
-<https://performance.musiconn.de/work/trios-violine-violoncello-klavier-op-70-nr-2-beethoven-ludwig-van> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/trios-violine-violoncello-klavier-op-70-nr-2-beethoven-ludwig-van> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Trios, Violine, Violoncello, Klavier, op. 70. Nr. 2 (Beethoven, Ludwig van)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1278278907>,
+        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-op-70-nr-2-es-dur-allegro-ma-non-troppo-beethoven-ludwig-van> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/dritter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1889-11-15-19-00>,
+        <https://performance.musiconn.de/event/siebenter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1879-01-20-19-00>,
+        <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1843-12-03>,
+        <https://performance.musiconn.de/event/vierter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1873-12-08-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10138435-X>,
@@ -35,17 +41,10 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/244310838> ;
     cto:relatedPerson <https://d-nb.info/gnd/118508288>,
         <https://viaf.org/viaf/32182557> ;
-    cto:title "Trios, Violine, Violoncello, Klavier, op. 70. Nr. 2 (Beethoven, Ludwig van)" ;
     cto:viaf <https://viaf.org/viaf/122781959>,
         <https://viaf.org/viaf/139389194>,
         <https://viaf.org/viaf/141914216>,
         <https://viaf.org/viaf/143236650>,
         <https://viaf.org/viaf/244310838>,
-        <https://viaf.org/viaf/32182557> ;
-    schema:includedComposition <https://d-nb.info/gnd/1278278907>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-op-70-nr-2-es-dur-allegro-ma-non-troppo-beethoven-ludwig-van> ;
-    schema:subjectOf <https://performance.musiconn.de/event/dritter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1889-11-15-19-00>,
-        <https://performance.musiconn.de/event/siebenter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1879-01-20-19-00>,
-        <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1843-12-03>,
-        <https://performance.musiconn.de/event/vierter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1873-12-08-19-00> .
+        <https://viaf.org/viaf/32182557> .
 

@@ -1,15 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-op-1-nr-1-es-dur-beethoven-ludwig-van> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-op-1-nr-1-es-dur-beethoven-ludwig-van> ] .
 
-<https://performance.musiconn.de/work/trios-violine-violoncello-klavier-op-1-nr-1-es-dur-beethoven-ludwig-van> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/trios-violine-violoncello-klavier-op-1-nr-1-es-dur-beethoven-ludwig-van> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Trios, Violine, Violoncello, Klavier, op. 1. Nr. 1 (Es-Dur) (Beethoven, Ludwig van)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/5-konzert-junger-kuenstler-alte-oper-frankfurt-am-main-hindemith-saal-1987-03-06-18-00>,
+        <https://performance.musiconn.de/event/7-kammermusik-konzert-ev-vereinshaus-neue-schlesingergasse-1949-04-29-19-00>,
+        <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1878-01-21>,
+        <https://performance.musiconn.de/event/concert-zum-besten-des-katholischen-frauen-vereins-rathaus-muenster-westf-friedenssaal-1870-11-20>,
+        <https://performance.musiconn.de/event/zehnter-nachgeholter-letzter-kammermusik-abend-frankfurt-am-main-1942-05-26>,
+        <https://performance.musiconn.de/event/zweiter-kammermusik-abend-frankfurt-am-main-1926-10-12> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1075172446>,
@@ -31,16 +37,9 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/317059257> ;
     cto:relatedPerson <https://d-nb.info/gnd/118508288>,
         <https://viaf.org/viaf/32182557> ;
-    cto:title "Trios, Violine, Violoncello, Klavier, op. 1. Nr. 1 (Es-Dur) (Beethoven, Ludwig van)" ;
     cto:viaf <https://viaf.org/viaf/109146937736113830059>,
         <https://viaf.org/viaf/129526398>,
         <https://viaf.org/viaf/130308310>,
         <https://viaf.org/viaf/317059257>,
-        <https://viaf.org/viaf/32182557> ;
-    schema:subjectOf <https://performance.musiconn.de/event/5-konzert-junger-kuenstler-alte-oper-frankfurt-am-main-hindemith-saal-1987-03-06-18-00>,
-        <https://performance.musiconn.de/event/7-kammermusik-konzert-ev-vereinshaus-neue-schlesingergasse-1949-04-29-19-00>,
-        <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1878-01-21>,
-        <https://performance.musiconn.de/event/concert-zum-besten-des-katholischen-frauen-vereins-rathaus-muenster-westf-friedenssaal-1870-11-20>,
-        <https://performance.musiconn.de/event/zehnter-nachgeholter-letzter-kammermusik-abend-frankfurt-am-main-1942-05-26>,
-        <https://performance.musiconn.de/event/zweiter-kammermusik-abend-frankfurt-am-main-1926-10-12> .
+        <https://viaf.org/viaf/32182557> .
 

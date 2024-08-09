@@ -1,15 +1,23 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/konzerte-violine-orchester-op-23-allegro-david-ferdinand> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/konzerte-violine-orchester-op-23-allegro-david-ferdinand> ] .
 
-<https://performance.musiconn.de/work/konzerte-violine-orchester-op-23-allegro-david-ferdinand> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/konzerte-violine-orchester-op-23-allegro-david-ferdinand> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Konzerte, Violine, Orchester, op. 23. Allegro (David, Ferdinand)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1854-03-06-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1865-04-08-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1866-05-01-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1869-04-21-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1870-05-13-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1873-05-17-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1874-05-13-18-00>,
+        <https://performance.musiconn.de/event/hauptpruefung-am-koeniglichen-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1876-06-15-18-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/102199191>,
@@ -40,7 +48,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/59269150>,
         <https://viaf.org/viaf/6343165272097810690005>,
         <https://viaf.org/viaf/7286165271947110690008> ;
-    cto:title "Konzerte, Violine, Orchester, op. 23. Allegro (David, Ferdinand)" ;
     cto:viaf <https://viaf.org/viaf/107443908>,
         <https://viaf.org/viaf/1223165628878942480001>,
         <https://viaf.org/viaf/1460158630974323370003>,
@@ -48,13 +55,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/5794155345602406430004>,
         <https://viaf.org/viaf/59269150>,
         <https://viaf.org/viaf/6343165272097810690005>,
-        <https://viaf.org/viaf/7286165271947110690008> ;
-    schema:subjectOf <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1854-03-06-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1865-04-08-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1866-05-01-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1869-04-21-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1870-05-13-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1873-05-17-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1874-05-13-18-00>,
-        <https://performance.musiconn.de/event/hauptpruefung-am-koeniglichen-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1876-06-15-18-00> .
+        <https://viaf.org/viaf/7286165271947110690008> .
 

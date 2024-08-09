@@ -1,15 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/wenn-laut-der-ruf-der-kriegstrompete-braust-byrd-william> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/wenn-laut-der-ruf-der-kriegstrompete-braust-byrd-william> ] .
 
-<https://performance.musiconn.de/work/wenn-laut-der-ruf-der-kriegstrompete-braust-byrd-william> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/wenn-laut-der-ruf-der-kriegstrompete-braust-byrd-william> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Wenn laut der Ruf der Kriegstrompete braust (Byrd, William)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/der-kreuzchor-singt-boerse-coswig-1938-01-23-20-00>,
+        <https://performance.musiconn.de/event/der-kreuzchor-singt-hotel-hammer-dresden-striesen-1938-02-05-20-00>,
+        <https://performance.musiconn.de/event/der-kreuzchor-singt-hotel-koenig-albert-hoehe-rabenau-1938-02-04-20-00>,
+        <https://performance.musiconn.de/event/der-kreuzchor-singt-turnhalle-rabenau-oelsa-1938-02-06-20-00>,
+        <https://performance.musiconn.de/event/konzert-schuetzenhaus-radeberg-1938-02-22-20-00>,
+        <https://performance.musiconn.de/event/vom-alten-lateinisches-kirchenlied-zum-deutschen-volkslied-der-gegenwart-haus-der-dresdner-kaufmannschaft-1935-02-09> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Fünfstimmiges Madrigal" ;
     cto:elementOf n4c:E5320 ;
@@ -21,13 +27,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/139053206> ;
     cto:relatedPerson <https://d-nb.info/gnd/118675109>,
         <https://viaf.org/viaf/112781480> ;
-    cto:title "Wenn laut der Ruf der Kriegstrompete braust (Byrd, William)" ;
     cto:viaf <https://viaf.org/viaf/112781480>,
-        <https://viaf.org/viaf/139053206> ;
-    schema:subjectOf <https://performance.musiconn.de/event/der-kreuzchor-singt-boerse-coswig-1938-01-23-20-00>,
-        <https://performance.musiconn.de/event/der-kreuzchor-singt-hotel-hammer-dresden-striesen-1938-02-05-20-00>,
-        <https://performance.musiconn.de/event/der-kreuzchor-singt-hotel-koenig-albert-hoehe-rabenau-1938-02-04-20-00>,
-        <https://performance.musiconn.de/event/der-kreuzchor-singt-turnhalle-rabenau-oelsa-1938-02-06-20-00>,
-        <https://performance.musiconn.de/event/konzert-schuetzenhaus-radeberg-1938-02-22-20-00>,
-        <https://performance.musiconn.de/event/vom-alten-lateinisches-kirchenlied-zum-deutschen-volkslied-der-gegenwart-haus-der-dresdner-kaufmannschaft-1935-02-09> .
+        <https://viaf.org/viaf/139053206> .
 

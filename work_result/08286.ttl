@@ -1,18 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/war-requiem-britten-benjamin> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/war-requiem-britten-benjamin> ] .
 
-<https://performance.musiconn.de/work/war-requiem-britten-benjamin> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/war-requiem-britten-benjamin> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "War requiem (Britten, Benjamin)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Text: Requiem-Text (lateinisch) und Gedichte von Wilfred Owen (englisch)
-Besetzung: Sopran, Tenor, Bariton, Chor, Orchester, Kammerorchester, Kinderchor, Orgel""" ;
+    cto:abstract "Text: Requiem-Text (lateinisch) und Gedichte von Wilfred Owen (englisch)Besetzung: Sopran, Tenor, Bariton, Chor, Orchester, Kammerorchester, Kinderchor, Orgel" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10276109-7>,
         <https://d-nb.info/gnd/1087287-5>,
@@ -51,7 +50,6 @@ Besetzung: Sopran, Tenor, Bariton, Chor, Orchester, Kammerorchester, Kinderchor,
         <https://viaf.org/viaf/263538429> ;
     cto:relatedPerson <https://d-nb.info/gnd/118515527>,
         <https://viaf.org/viaf/2655519> ;
-    cto:title "War requiem (Britten, Benjamin)" ;
     cto:viaf <https://viaf.org/viaf/128316778>,
         <https://viaf.org/viaf/130299615>,
         <https://viaf.org/viaf/133022259>,

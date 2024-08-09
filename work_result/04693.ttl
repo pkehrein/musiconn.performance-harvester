@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/die-schoene-galathee-ouvertuere-suppe-franz-von> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/die-schoene-galathee-ouvertuere-suppe-franz-von> ] .
 
-<https://performance.musiconn.de/work/die-schoene-galathee-ouvertuere-suppe-franz-von> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/die-schoene-galathee-ouvertuere-suppe-franz-von> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Die schöne Galathée. Ouvertüre (Suppé, Franz von)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/popular-farewell-concert-1935-04-24-20-30>,
+        <https://performance.musiconn.de/event/waldpark-serenade-kurpark-bad-weisser-hirsch-dresden-1945-08-12-17-00>,
+        <https://performance.musiconn.de/event/waldpark-serenade-kurpark-bad-weisser-hirsch-dresden-1945-09-09-17-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118757873>,
@@ -26,11 +29,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/161076872> ;
     cto:relatedPerson <https://d-nb.info/gnd/118757873>,
         <https://viaf.org/viaf/24788570> ;
-    cto:title "Die schöne Galathée. Ouvertüre (Suppé, Franz von)" ;
     cto:viaf <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/161076872>,
-        <https://viaf.org/viaf/24788570> ;
-    schema:subjectOf <https://performance.musiconn.de/event/popular-farewell-concert-1935-04-24-20-30>,
-        <https://performance.musiconn.de/event/waldpark-serenade-kurpark-bad-weisser-hirsch-dresden-1945-08-12-17-00>,
-        <https://performance.musiconn.de/event/waldpark-serenade-kurpark-bad-weisser-hirsch-dresden-1945-09-09-17-00> .
+        <https://viaf.org/viaf/24788570> .
 

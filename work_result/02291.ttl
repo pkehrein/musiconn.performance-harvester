@@ -1,15 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sextette-violine-2-viola-2-violoncello-2-op-18-b-dur-brahms-johannes> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sextette-violine-2-viola-2-violoncello-2-op-18-b-dur-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/sextette-violine-2-viola-2-violoncello-2-op-18-b-dur-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sextette-violine-2-viola-2-violoncello-2-op-18-b-dur-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sextette, Violine (2), Viola (2), Violoncello (2), op. 18 (B-Dur) (Brahms, Johannes)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/dritter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1888-12-14-19-00>,
+        <https://performance.musiconn.de/event/neunter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1881-02-25-19-00>,
+        <https://performance.musiconn.de/event/neunter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1895-03-15-19-00>,
+        <https://performance.musiconn.de/event/zehnter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1890-03-22-19-00>,
+        <https://performance.musiconn.de/event/zweiter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1882-11-03-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10185429-8>,
@@ -47,7 +52,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/36145857787523021018> ;
     cto:relatedPerson <https://d-nb.info/gnd/118514253>,
         <https://viaf.org/viaf/7573295> ;
-    cto:title "Sextette, Violine (2), Viola (2), Violoncello (2), op. 18 (B-Dur) (Brahms, Johannes)" ;
     cto:viaf <https://viaf.org/viaf/121015775>,
         <https://viaf.org/viaf/127309091>,
         <https://viaf.org/viaf/129526398>,
@@ -57,10 +61,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/159584485>,
         <https://viaf.org/viaf/245218111>,
         <https://viaf.org/viaf/36145857787523021018>,
-        <https://viaf.org/viaf/7573295> ;
-    schema:subjectOf <https://performance.musiconn.de/event/dritter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1888-12-14-19-00>,
-        <https://performance.musiconn.de/event/neunter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1881-02-25-19-00>,
-        <https://performance.musiconn.de/event/neunter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1895-03-15-19-00>,
-        <https://performance.musiconn.de/event/zehnter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1890-03-22-19-00>,
-        <https://performance.musiconn.de/event/zweiter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1882-11-03-19-00> .
+        <https://viaf.org/viaf/7573295> .
 

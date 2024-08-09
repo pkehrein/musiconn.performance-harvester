@@ -1,46 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/aida-verdi-giuseppe> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/aida-verdi-giuseppe> ] .
 
-<https://performance.musiconn.de/work/aida-verdi-giuseppe> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Oper in 4 Akten; 1871 ist das Jahr der Uraufführung" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1120617715>,
-        <https://d-nb.info/gnd/1169067344>,
-        <https://d-nb.info/gnd/118626523>,
-        <https://d-nb.info/gnd/1290731071>,
-        <https://d-nb.info/gnd/30016498X>,
-        <https://d-nb.info/gnd/300165005>,
-        <https://d-nb.info/gnd/300165048>,
-        <https://d-nb.info/gnd/30032345X>,
-        <https://d-nb.info/gnd/4043582-9>,
-        <https://d-nb.info/gnd/5084847-1> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/1120617715>,
-        <https://d-nb.info/gnd/5084847-1>,
-        <https://performance.musiconn.de/corporation/syracuse-music-festival-association-chorus>,
-        <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118626523>,
-        <https://viaf.org/viaf/22329110> ;
-    cto:title "Aida (Verdi, Giuseppe)" ;
-    cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/183465766>,
-        <https://viaf.org/viaf/185507082>,
-        <https://viaf.org/viaf/185890743>,
-        <https://viaf.org/viaf/195813023>,
-        <https://viaf.org/viaf/22329110>,
-        <https://viaf.org/viaf/3228154015351009310009>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    schema:includedComposition <https://d-nb.info/gnd/1169067344>,
+<https://performance.musiconn.de/work/aida-verdi-giuseppe> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Aida (Verdi, Giuseppe)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1169067344>,
         <https://d-nb.info/gnd/1290731071>,
         <https://d-nb.info/gnd/30016498X>,
         <https://d-nb.info/gnd/300165005>,
@@ -66,7 +36,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/185890743>,
         <https://viaf.org/viaf/195813023>,
         <https://viaf.org/viaf/3228154015351009310009> ;
-    schema:subjectOf <https://performance.musiconn.de/event/aida-interimstheater-am-zwingerwall-dresden-1877-01-02-19-00>,
+    schema1:subjectOf <https://performance.musiconn.de/event/aida-interimstheater-am-zwingerwall-dresden-1877-01-02-19-00>,
         <https://performance.musiconn.de/event/aida-interimstheater-am-zwingerwall-dresden-1877-01-07-19-00>,
         <https://performance.musiconn.de/event/aida-interimstheater-am-zwingerwall-dresden-1877-01-13-19-00>,
         <https://performance.musiconn.de/event/aida-interimstheater-am-zwingerwall-dresden-1877-01-25-19-00>,
@@ -143,5 +113,34 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/aida-semperoper-dresden-1913-05-16-19-30>,
         <https://performance.musiconn.de/event/aida-semperoper-dresden-1913-06-15-19-30>,
         <https://performance.musiconn.de/event/auffuehrung-oper-koeln-koeln-2003-04-14-20-00>,
-        <https://performance.musiconn.de/event/first-concert-alhambra-syracuse-ny-1909-04-12-19-45> .
+        <https://performance.musiconn.de/event/first-concert-alhambra-syracuse-ny-1909-04-12-19-45> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "Oper in 4 Akten; 1871 ist das Jahr der Uraufführung" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/1120617715>,
+        <https://d-nb.info/gnd/1169067344>,
+        <https://d-nb.info/gnd/118626523>,
+        <https://d-nb.info/gnd/1290731071>,
+        <https://d-nb.info/gnd/30016498X>,
+        <https://d-nb.info/gnd/300165005>,
+        <https://d-nb.info/gnd/300165048>,
+        <https://d-nb.info/gnd/30032345X>,
+        <https://d-nb.info/gnd/4043582-9>,
+        <https://d-nb.info/gnd/5084847-1> ;
+    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/1120617715>,
+        <https://d-nb.info/gnd/5084847-1>,
+        <https://performance.musiconn.de/corporation/syracuse-music-festival-association-chorus>,
+        <https://viaf.org/viaf/158420977>,
+        <https://viaf.org/viaf/8413148122912495200001> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118626523>,
+        <https://viaf.org/viaf/22329110> ;
+    cto:viaf <https://viaf.org/viaf/158420977>,
+        <https://viaf.org/viaf/183465766>,
+        <https://viaf.org/viaf/185507082>,
+        <https://viaf.org/viaf/185890743>,
+        <https://viaf.org/viaf/195813023>,
+        <https://viaf.org/viaf/22329110>,
+        <https://viaf.org/viaf/3228154015351009310009>,
+        <https://viaf.org/viaf/8413148122912495200001> .
 

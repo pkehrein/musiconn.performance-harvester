@@ -1,15 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/romanzen-und-balladen-op-64-die-soldatenbraut-schumann-robert> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/romanzen-und-balladen-op-64-die-soldatenbraut-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/romanzen-und-balladen-op-64-die-soldatenbraut-schumann-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/romanzen-und-balladen-op-64-die-soldatenbraut-schumann-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Romanzen und Balladen, op. 64. Die Soldatenbraut (Schumann, Robert)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/5-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-12-03-18-30>,
+        <https://performance.musiconn.de/event/7-museums-concert-grosser-konzertsaal-frankfurt-a-m-1881-01-07-18-30>,
+        <https://performance.musiconn.de/event/erstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1877-10-12>,
+        <https://performance.musiconn.de/event/patriotische-festlichkeit-zur-feier-des-50-jaehrigen-militaer-jubilaeums-sr-majestaet-des-koenigs-albert-von-sachsen-tivoli-dresden-1893-10-24-20-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118611666> ;
@@ -17,10 +21,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/corporation/verein-der-musikfreunde-jena> ;
     cto:relatedPerson <https://d-nb.info/gnd/118611666>,
         <https://viaf.org/viaf/7575259> ;
-    cto:title "Romanzen und Balladen, op. 64. Die Soldatenbraut (Schumann, Robert)" ;
-    cto:viaf <https://viaf.org/viaf/7575259> ;
-    schema:subjectOf <https://performance.musiconn.de/event/5-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-12-03-18-30>,
-        <https://performance.musiconn.de/event/7-museums-concert-grosser-konzertsaal-frankfurt-a-m-1881-01-07-18-30>,
-        <https://performance.musiconn.de/event/erstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1877-10-12>,
-        <https://performance.musiconn.de/event/patriotische-festlichkeit-zur-feier-des-50-jaehrigen-militaer-jubilaeums-sr-majestaet-des-koenigs-albert-von-sachsen-tivoli-dresden-1893-10-24-20-00> .
+    cto:viaf <https://viaf.org/viaf/7575259> .
 

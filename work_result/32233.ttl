@@ -1,18 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/leti-moe-serdce-cisko-oles-s> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/leti-moe-serdce-cisko-oles-s> ] .
 
-<https://performance.musiconn.de/work/leti-moe-serdce-cisko-oles-s> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/leti-moe-serdce-cisko-oles-s> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Leti moe serdce (Čiško, Olesʹ S.)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """auf ein Gedicht von Ė. Bagrickij
-Begleitung wohl original Klavier, auch mit Cello angegeben.""" ;
+    cto:abstract "auf ein Gedicht von Ė. BagrickijBegleitung wohl original Klavier, auch mit Cello angegeben." ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1053061021>,
         <https://d-nb.info/gnd/1237489393>,
@@ -23,6 +22,5 @@ Begleitung wohl original Klavier, auch mit Cello angegeben.""" ;
     cto:relatedPerson <https://d-nb.info/gnd/1053061021>,
         <https://d-nb.info/gnd/1237489393>,
         <https://viaf.org/viaf/276313820> ;
-    cto:title "Leti moe serdce (Čiško, Olesʹ S.)" ;
     cto:viaf <https://viaf.org/viaf/276313820> .
 

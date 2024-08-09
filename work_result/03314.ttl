@@ -1,15 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/griselda-per-la-gloria-dadorarvi-bononcini-giovanni> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/griselda-per-la-gloria-dadorarvi-bononcini-giovanni> ] .
 
-<https://performance.musiconn.de/work/griselda-per-la-gloria-dadorarvi-bononcini-giovanni> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/griselda-per-la-gloria-dadorarvi-bononcini-giovanni> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Griselda. Per la gloria d'adorarvi (Bononcini, Giovanni)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/elftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1888-03-02-18-30>,
+        <https://performance.musiconn.de/event/sechstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1889-01-04-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Sopran-Arie des Ernesto" ;
     cto:elementOf n4c:E5320 ;
@@ -24,10 +26,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545> ;
     cto:relatedPerson <https://d-nb.info/gnd/121260631>,
         <https://viaf.org/viaf/46945678> ;
-    cto:title "Griselda. Per la gloria d'adorarvi (Bononcini, Giovanni)" ;
     cto:viaf <https://viaf.org/viaf/131976266>,
         <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/46945678> ;
-    schema:subjectOf <https://performance.musiconn.de/event/elftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1888-03-02-18-30>,
-        <https://performance.musiconn.de/event/sechstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1889-01-04-18-30> .
+        <https://viaf.org/viaf/46945678> .
 

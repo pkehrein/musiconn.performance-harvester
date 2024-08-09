@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/anacreon-chez-polycrate-gretry-andre-ernest-modeste> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/anacreon-chez-polycrate-gretry-andre-ernest-modeste> ] .
 
-<https://performance.musiconn.de/work/anacreon-chez-polycrate-gretry-andre-ernest-modeste> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/anacreon-chez-polycrate-gretry-andre-ernest-modeste> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Anacréon chez Polycrate (Grétry, André-Ernest-Modeste)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1280293446>,
+        <https://performance.musiconn.de/work/anacreon-chez-polycrate-songe-enchanteur-gretry-andre-ernest-modeste>,
+        <https://viaf.org/viaf/5275167625771803660006> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118542079>,
@@ -18,10 +21,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
     cto:relatedPerson <https://d-nb.info/gnd/118542079>,
         <https://viaf.org/viaf/51884495> ;
-    cto:title "Anacréon chez Polycrate (Grétry, André-Ernest-Modeste)" ;
     cto:viaf <https://viaf.org/viaf/51884495>,
-        <https://viaf.org/viaf/5275167625771803660006> ;
-    schema:includedComposition <https://d-nb.info/gnd/1280293446>,
-        <https://performance.musiconn.de/work/anacreon-chez-polycrate-songe-enchanteur-gretry-andre-ernest-modeste>,
         <https://viaf.org/viaf/5275167625771803660006> .
 

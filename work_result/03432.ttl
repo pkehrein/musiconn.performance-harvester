@@ -1,51 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/etueden-klavier-op-10-chopin-frederic> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/etueden-klavier-op-10-chopin-frederic> ] .
 
-<https://performance.musiconn.de/work/etueden-klavier-op-10-chopin-frederic> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Insgesamt 12 Etüden" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1079454667>,
-        <https://d-nb.info/gnd/1079454721>,
-        <https://d-nb.info/gnd/1143242963>,
-        <https://d-nb.info/gnd/118520539>,
-        <https://d-nb.info/gnd/300036884>,
-        <https://d-nb.info/gnd/300036892>,
-        <https://d-nb.info/gnd/300036906>,
-        <https://d-nb.info/gnd/300036914>,
-        <https://d-nb.info/gnd/300216548>,
-        <https://d-nb.info/gnd/300237537>,
-        <https://d-nb.info/gnd/300605528>,
-        <https://d-nb.info/gnd/300644612>,
-        <https://d-nb.info/gnd/300667183>,
-        <https://d-nb.info/gnd/4123166-1> ;
-    cto:isPartOf <https://d-nb.info/gnd/4123166-1> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118520539>,
-        <https://performance.musiconn.de/person/maurer-helmut>,
-        <https://viaf.org/viaf/71319254> ;
-    cto:title "Etüden, Klavier, op. 10 (Chopin, Frédéric)" ;
-    cto:viaf <https://viaf.org/viaf/147144898780850290224>,
-        <https://viaf.org/viaf/153144898792850290218>,
-        <https://viaf.org/viaf/180445829>,
-        <https://viaf.org/viaf/184685057>,
-        <https://viaf.org/viaf/189343695>,
-        <https://viaf.org/viaf/191495396>,
-        <https://viaf.org/viaf/202953440>,
-        <https://viaf.org/viaf/209876921>,
-        <https://viaf.org/viaf/212883160>,
-        <https://viaf.org/viaf/218096682>,
-        <https://viaf.org/viaf/219161104>,
-        <https://viaf.org/viaf/71319254>,
-        <https://viaf.org/viaf/780151002097230280007> ;
-    schema:includedComposition <https://d-nb.info/gnd/1079454667>,
+<https://performance.musiconn.de/work/etueden-klavier-op-10-chopin-frederic> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Etüden, Klavier, op. 10 (Chopin, Frédéric)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1079454667>,
         <https://d-nb.info/gnd/1079454721>,
         <https://d-nb.info/gnd/1143242963>,
         <https://d-nb.info/gnd/300036884>,
@@ -80,5 +45,39 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/212883160>,
         <https://viaf.org/viaf/218096682>,
         <https://viaf.org/viaf/219161104>,
+        <https://viaf.org/viaf/780151002097230280007> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "Insgesamt 12 Etüden" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/1079454667>,
+        <https://d-nb.info/gnd/1079454721>,
+        <https://d-nb.info/gnd/1143242963>,
+        <https://d-nb.info/gnd/118520539>,
+        <https://d-nb.info/gnd/300036884>,
+        <https://d-nb.info/gnd/300036892>,
+        <https://d-nb.info/gnd/300036906>,
+        <https://d-nb.info/gnd/300036914>,
+        <https://d-nb.info/gnd/300216548>,
+        <https://d-nb.info/gnd/300237537>,
+        <https://d-nb.info/gnd/300605528>,
+        <https://d-nb.info/gnd/300644612>,
+        <https://d-nb.info/gnd/300667183>,
+        <https://d-nb.info/gnd/4123166-1> ;
+    cto:isPartOf <https://d-nb.info/gnd/4123166-1> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118520539>,
+        <https://performance.musiconn.de/person/maurer-helmut>,
+        <https://viaf.org/viaf/71319254> ;
+    cto:viaf <https://viaf.org/viaf/147144898780850290224>,
+        <https://viaf.org/viaf/153144898792850290218>,
+        <https://viaf.org/viaf/180445829>,
+        <https://viaf.org/viaf/184685057>,
+        <https://viaf.org/viaf/189343695>,
+        <https://viaf.org/viaf/191495396>,
+        <https://viaf.org/viaf/202953440>,
+        <https://viaf.org/viaf/209876921>,
+        <https://viaf.org/viaf/212883160>,
+        <https://viaf.org/viaf/218096682>,
+        <https://viaf.org/viaf/219161104>,
+        <https://viaf.org/viaf/71319254>,
         <https://viaf.org/viaf/780151002097230280007> .
 

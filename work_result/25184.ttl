@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/canciones-populares-espanolas-falla-manuel-de> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/canciones-populares-espanolas-falla-manuel-de> ] .
 
-<https://performance.musiconn.de/work/canciones-populares-espanolas-falla-manuel-de> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/canciones-populares-espanolas-falla-manuel-de> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Canciones populares españolas (Falla, Manuel de)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/canciones-populares-espanolas-seguidilla-murciana-falla-manuel-de> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfasst 7 Lieder" ;
     cto:elementOf n4c:E5320 ;
@@ -30,11 +31,9 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/44496298>,
         <https://viaf.org/viaf/62645354>,
         <https://viaf.org/viaf/64191971> ;
-    cto:title "Canciones populares españolas (Falla, Manuel de)" ;
     cto:viaf <https://viaf.org/viaf/113812484>,
         <https://viaf.org/viaf/42025164>,
         <https://viaf.org/viaf/44496298>,
         <https://viaf.org/viaf/62645354>,
-        <https://viaf.org/viaf/64191971> ;
-    schema:includedComposition <https://performance.musiconn.de/work/canciones-populares-espanolas-seguidilla-murciana-falla-manuel-de> .
+        <https://viaf.org/viaf/64191971> .
 

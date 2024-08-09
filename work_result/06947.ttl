@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sinfonien-nr-3-d-moll-mahler-gustav> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sinfonien-nr-3-d-moll-mahler-gustav> ] .
 
-<https://performance.musiconn.de/work/sinfonien-nr-3-d-moll-mahler-gustav> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sinfonien-nr-3-d-moll-mahler-gustav> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sinfonien, Nr. 3 (d-Moll) (Mahler, Gustav)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/113071019X>,
+        <https://performance.musiconn.de/work/sinfonien-nr-3-d-moll-comodo-scherzando-mahler-gustav>,
+        <https://performance.musiconn.de/work/sinfonien-nr-3-d-moll-es-sungen-drei-engel-mahler-gustav> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10126163-9>,
@@ -117,7 +120,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/45144814273718687574> ;
     cto:relatedPerson <https://d-nb.info/gnd/118576291>,
         <https://viaf.org/viaf/61732497> ;
-    cto:title "Sinfonien, Nr. 3 (d-Moll) (Mahler, Gustav)" ;
     cto:viaf <https://viaf.org/viaf/124162358>,
         <https://viaf.org/viaf/124489389>,
         <https://viaf.org/viaf/125247257>,
@@ -146,8 +148,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/312926498>,
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/45144814273718687574>,
-        <https://viaf.org/viaf/61732497> ;
-    schema:includedComposition <https://d-nb.info/gnd/113071019X>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-d-moll-comodo-scherzando-mahler-gustav>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-d-moll-es-sungen-drei-engel-mahler-gustav> .
+        <https://viaf.org/viaf/61732497> .
 

@@ -1,15 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/spanische-taenze-moszkowski-moritz> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/spanische-taenze-moszkowski-moritz> ] .
 
-<https://performance.musiconn.de/work/spanische-taenze-moszkowski-moritz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/spanische-taenze-moszkowski-moritz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Spanische Tänze (Moszkowski, Moritz)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/spanische-taenze-tanz-nr-5-fassung-orch-moszkowski-moritz>,
+        <https://performance.musiconn.de/work/spanische-taenze-zwei-taenze-fassung-orch-moszkowski-moritz> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "5 Tänze" ;
     cto:elementOf n4c:E5320 ;
@@ -18,8 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4059028-8> ;
     cto:relatedPerson <https://d-nb.info/gnd/116941391>,
         <https://viaf.org/viaf/54333331> ;
-    cto:title "Spanische Tänze (Moszkowski, Moritz)" ;
-    cto:viaf <https://viaf.org/viaf/54333331> ;
-    schema:includedComposition <https://performance.musiconn.de/work/spanische-taenze-tanz-nr-5-fassung-orch-moszkowski-moritz>,
-        <https://performance.musiconn.de/work/spanische-taenze-zwei-taenze-fassung-orch-moszkowski-moritz> .
+    cto:viaf <https://viaf.org/viaf/54333331> .
 

@@ -1,15 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/the-force-for-peace-in-war-coates-gloria> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/the-force-for-peace-in-war-coates-gloria> ] .
 
-<https://performance.musiconn.de/work/the-force-for-peace-in-war-coates-gloria> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/the-force-for-peace-in-war-coates-gloria> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "The Force for Peace in War (Coates, Gloria)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Musik zu diversen Texten in deutscher und englischer Sprache. Die Kantate besteht aus 8 Teilen: 1. Rezitativ: Telegramm von Dachau; 2. Arie: \"Junge Witwe\"; 3. Rezitativ: BBC Weather Report; 4. Arie: \"The Flying Bombers\"; 5. Rezitativ: Brief der Lehrerin Elfride Birndorfer; 6. Arie: \"Rinne, Regen, Rinne\"; 7. Interlude: \"Hiroshima is Bombed\"; 8. Arie: \"All These Dyings\"" ;
     cto:elementOf n4c:E5320 ;
@@ -22,7 +22,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/131240219> ;
     cto:relatedPerson <https://d-nb.info/gnd/116617691>,
         <https://viaf.org/viaf/32202939> ;
-    cto:title "The Force for Peace in War (Coates, Gloria)" ;
     cto:viaf <https://viaf.org/viaf/131240219>,
         <https://viaf.org/viaf/32202939> .
 

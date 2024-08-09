@@ -1,18 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/canzoni-overo-sonate-concertate-per-chiesa-e-camera-merula-tarquinio> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/canzoni-overo-sonate-concertate-per-chiesa-e-camera-merula-tarquinio> ] .
 
-<https://performance.musiconn.de/work/canzoni-overo-sonate-concertate-per-chiesa-e-camera-merula-tarquinio> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/canzoni-overo-sonate-concertate-per-chiesa-e-camera-merula-tarquinio> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Canzoni, overo sonate concertate per chiesa e camera (Merula, Tarquinio)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1257194305>,
+        <https://performance.musiconn.de/work/lara-merula-tarquinio> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Besetzung für 2 und 3 beliebige Instr.
-Umfasst 24 Werke: Sonate per due violini e basso continuo: 1. La Gallina 2. La Pedrina 3. La Caravaggia 4.La Treccha 5. La Pollachina 6. La Loda 7. La Pochettina 8. La Bellina 9. La Ghisa 10. La Cattarina 11. La Bianca 12. La Ruggiera - Sonate a violino, violone e basso continuo 13. La Maruta 14. La Merula 15. L'Arisia 16. La Dada 17. La Pighetta - Sonate a due violini, violone e basso continuo 18. Ruggiero 19. Ballo detto Eccardo 20. Chiaccona 21. L'ara 22. La Strada 23. Ballo detto Gennaro 24. Ballo detto Pollicio""" ;
+    cto:abstract "Besetzung für 2 und 3 beliebige Instr.Umfasst 24 Werke: Sonate per due violini e basso continuo: 1. La Gallina 2. La Pedrina 3. La Caravaggia 4.La Treccha 5. La Pollachina 6. La Loda 7. La Pochettina 8. La Bellina 9. La Ghisa 10. La Cattarina 11. La Bianca 12. La Ruggiera - Sonate a violino, violone e basso continuo 13. La Maruta 14. La Merula 15. L'Arisia 16. La Dada 17. La Pighetta - Sonate a due violini, violone e basso continuo 18. Ruggiero 19. Ballo detto Eccardo 20. Chiaccona 21. L'ara 22. La Strada 23. Ballo detto Gennaro 24. Ballo detto Pollicio" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/121540235>,
         <https://d-nb.info/gnd/1257194305>,
@@ -22,8 +23,5 @@ Umfasst 24 Werke: Sonate per due violini e basso continuo: 1. La Gallina 2. La P
         <https://d-nb.info/gnd/4327215-0> ;
     cto:relatedPerson <https://d-nb.info/gnd/121540235>,
         <https://viaf.org/viaf/49408826> ;
-    cto:title "Canzoni, overo sonate concertate per chiesa e camera (Merula, Tarquinio)" ;
-    cto:viaf <https://viaf.org/viaf/49408826> ;
-    schema:includedComposition <https://d-nb.info/gnd/1257194305>,
-        <https://performance.musiconn.de/work/lara-merula-tarquinio> .
+    cto:viaf <https://viaf.org/viaf/49408826> .
 

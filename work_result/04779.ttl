@@ -1,18 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sinfonien-nr-2-b-dur-taneev-sergej-ivanovic> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sinfonien-nr-2-b-dur-taneev-sergej-ivanovic> ] .
 
-<https://performance.musiconn.de/work/sinfonien-nr-2-b-dur-taneev-sergej-ivanovic> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sinfonien-nr-2-b-dur-taneev-sergej-ivanovic> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sinfonien, Nr. 2 (B-Dur) (Taneev, Sergej Ivanovič)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-ballsaal-constantia-dresden-1945-11-12-18-00> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Unvollendet, nur 3 Sätze
-IMSLP nennt die Tonart b-Moll, die MGG online B-Dur""" ;
+    cto:abstract "Unvollendet, nur 3 SätzeIMSLP nennt die Tonart b-Moll, die MGG online B-Dur" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118642669>,
         <https://d-nb.info/gnd/4055087-4>,
@@ -22,8 +22,6 @@ IMSLP nennt die Tonart b-Moll, die MGG online B-Dur""" ;
         <https://viaf.org/viaf/133022259> ;
     cto:relatedPerson <https://d-nb.info/gnd/118642669>,
         <https://viaf.org/viaf/59271006> ;
-    cto:title "Sinfonien, Nr. 2 (B-Dur) (Taneev, Sergej Ivanovič)" ;
     cto:viaf <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/59271006> ;
-    schema:subjectOf <https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-ballsaal-constantia-dresden-1945-11-12-18-00> .
+        <https://viaf.org/viaf/59271006> .
 

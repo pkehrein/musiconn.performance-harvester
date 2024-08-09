@@ -1,19 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/liebster-gott-wenn-werd-ich-sterben-bwv-82-bach-johann-sebastian> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/liebster-gott-wenn-werd-ich-sterben-bwv-82-bach-johann-sebastian> ] .
 
-<https://performance.musiconn.de/work/liebster-gott-wenn-werd-ich-sterben-bwv-82-bach-johann-sebastian> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/liebster-gott-wenn-werd-ich-sterben-bwv-82-bach-johann-sebastian> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Liebster Gott, wenn werd ich sterben, BWV 8.2 (Bach, Johann Sebastian)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1835-11-15>,
+        <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1837-11-05> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Kantate zum 16. Sonntag nach Trinitatis
-Spätfassung in D-Dur
-UA wahrscheinlich am 17.9.1747 in Leipzig""" ;
+    cto:abstract "Kantate zum 16. Sonntag nach TrinitatisSpätfassung in D-DurUA wahrscheinlich am 17.9.1747 in Leipzig" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1069137588>,
         <https://d-nb.info/gnd/1073210081>,
@@ -46,7 +46,6 @@ UA wahrscheinlich am 17.9.1747 in Leipzig""" ;
         <https://viaf.org/viaf/33152396>,
         <https://viaf.org/viaf/37723317>,
         <https://viaf.org/viaf/59825863> ;
-    cto:title "Liebster Gott, wenn werd ich sterben, BWV 8.2 (Bach, Johann Sebastian)" ;
     cto:viaf <https://viaf.org/viaf/12304462>,
         <https://viaf.org/viaf/15194078>,
         <https://viaf.org/viaf/17985071>,
@@ -55,7 +54,5 @@ UA wahrscheinlich am 17.9.1747 in Leipzig""" ;
         <https://viaf.org/viaf/316508689>,
         <https://viaf.org/viaf/33152396>,
         <https://viaf.org/viaf/37723317>,
-        <https://viaf.org/viaf/59825863> ;
-    schema:subjectOf <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1835-11-15>,
-        <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1837-11-05> .
+        <https://viaf.org/viaf/59825863> .
 

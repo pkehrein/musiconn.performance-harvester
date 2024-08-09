@@ -1,15 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sonaten-violine-klavier-nr-1-op-105-a-moll-schumann-robert> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sonaten-violine-klavier-nr-1-op-105-a-moll-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/sonaten-violine-klavier-nr-1-op-105-a-moll-schumann-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sonaten-violine-klavier-nr-1-op-105-a-moll-schumann-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sonaten, Violine, Klavier, Nr. 1, op. 105 (a-Moll) (Schumann, Robert)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/1-kammermusik-abend-alte-oper-frankfurt-a-main-grosser-saal-2006-10-12-20-00>,
+        <https://performance.musiconn.de/event/achter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1889-02-22-19-00>,
+        <https://performance.musiconn.de/event/einladung-des-conservatoriums-der-musik-zu-leipzig-zur-feier-des-geburtstages-sr-majestaet-des-koenigs-johann-conservatorium-der-musik-1859-12-12-18-00>,
+        <https://performance.musiconn.de/event/einladung-und-programm-zur-nachfeier-des-geburtstages-sr-majestaet-des-koenigs-johann-conservatorium-der-musik-1856-12-13-18-30>,
+        <https://performance.musiconn.de/event/zweite-kammermusik-universitaet-jena-aula-1948-11-29-19-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1154715108>,
@@ -49,7 +54,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/69177529>,
         <https://viaf.org/viaf/7575259>,
         <https://viaf.org/viaf/76509756> ;
-    cto:title "Sonaten, Violine, Klavier, Nr. 1, op. 105 (a-Moll) (Schumann, Robert)" ;
     cto:viaf <https://viaf.org/viaf/24852824>,
         <https://viaf.org/viaf/29779218>,
         <https://viaf.org/viaf/3246152200783314400002>,
@@ -60,10 +64,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/6561165628855042480001>,
         <https://viaf.org/viaf/69177529>,
         <https://viaf.org/viaf/7575259>,
-        <https://viaf.org/viaf/76509756> ;
-    schema:subjectOf <https://performance.musiconn.de/event/1-kammermusik-abend-alte-oper-frankfurt-a-main-grosser-saal-2006-10-12-20-00>,
-        <https://performance.musiconn.de/event/achter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1889-02-22-19-00>,
-        <https://performance.musiconn.de/event/einladung-des-conservatoriums-der-musik-zu-leipzig-zur-feier-des-geburtstages-sr-majestaet-des-koenigs-johann-conservatorium-der-musik-1859-12-12-18-00>,
-        <https://performance.musiconn.de/event/einladung-und-programm-zur-nachfeier-des-geburtstages-sr-majestaet-des-koenigs-johann-conservatorium-der-musik-1856-12-13-18-30>,
-        <https://performance.musiconn.de/event/zweite-kammermusik-universitaet-jena-aula-1948-11-29-19-30> .
+        <https://viaf.org/viaf/76509756> .
 

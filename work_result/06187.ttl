@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/les-templiers-ballettmusik-litolff-henry> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/les-templiers-ballettmusik-litolff-henry> ] .
 
-<https://performance.musiconn.de/work/les-templiers-ballettmusik-litolff-henry> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/les-templiers-ballettmusik-litolff-henry> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Les Templiers. Ballettmusik (Litolff, Henry)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1889-10-26-19-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "4 Sätze: Adagio, Auftritt der Zigeuner - Czardaz, Schmetterlings-Tanz, Die Bogenschützen des Königs" ;
     cto:elementOf n4c:E5320 ;
@@ -21,8 +22,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/8413148122912495200001> ;
     cto:relatedPerson <https://d-nb.info/gnd/11948756X>,
         <https://viaf.org/viaf/56796826> ;
-    cto:title "Les Templiers. Ballettmusik (Litolff, Henry)" ;
     cto:viaf <https://viaf.org/viaf/56796826>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    schema:subjectOf <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1889-10-26-19-30> .
+        <https://viaf.org/viaf/8413148122912495200001> .
 

@@ -1,28 +1,27 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/trakl-lieder-boesmans-philippe> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/trakl-lieder-boesmans-philippe> ] .
 
-<https://performance.musiconn.de/work/trakl-lieder-boesmans-philippe> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/trakl-lieder-boesmans-philippe> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Trakl-Lieder (Boesmans, Philippe)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/trakl-lieder-ausklang-boesmans-philippe>,
+        <https://performance.musiconn.de/work/trakl-lieder-im-herbst-boesmans-philippe>,
+        <https://performance.musiconn.de/work/trakl-lieder-nachts-boesmans-philippe>,
+        <https://performance.musiconn.de/work/trakl-lieder-rondel-boesmans-philippe>,
+        <https://performance.musiconn.de/work/trakl-lieder-schweigen-boesmans-philippe>,
+        <https://performance.musiconn.de/work/trakl-lieder-trompeten-boesmans-philippe>,
+        <https://performance.musiconn.de/work/trakl-lieder-vollendung-boesmans-philippe> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Deutsche Erstaufführung am 12.11.1995 in Frankfurt am Main (Vgl. MPE-ID 51155)" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/122929071> ;
     cto:relatedPerson <https://d-nb.info/gnd/122929071>,
         <https://viaf.org/viaf/117385546> ;
-    cto:title "Trakl-Lieder (Boesmans, Philippe)" ;
-    cto:viaf <https://viaf.org/viaf/117385546> ;
-    schema:includedComposition <https://performance.musiconn.de/work/trakl-lieder-ausklang-boesmans-philippe>,
-        <https://performance.musiconn.de/work/trakl-lieder-im-herbst-boesmans-philippe>,
-        <https://performance.musiconn.de/work/trakl-lieder-nachts-boesmans-philippe>,
-        <https://performance.musiconn.de/work/trakl-lieder-rondel-boesmans-philippe>,
-        <https://performance.musiconn.de/work/trakl-lieder-schweigen-boesmans-philippe>,
-        <https://performance.musiconn.de/work/trakl-lieder-trompeten-boesmans-philippe>,
-        <https://performance.musiconn.de/work/trakl-lieder-vollendung-boesmans-philippe> .
+    cto:viaf <https://viaf.org/viaf/117385546> .
 

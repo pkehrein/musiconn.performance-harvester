@@ -1,28 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/a-dudele-fassung-sander-werner> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/a-dudele-fassung-sander-werner> ] .
 
-<https://performance.musiconn.de/work/a-dudele-fassung-sander-werner> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Chassidische Weise, arrangiert von Werner Sander" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1144373794>,
-        <https://d-nb.info/gnd/116094001> ;
-    cto:relatedPerson <https://d-nb.info/gnd/1144373794>,
-        <https://d-nb.info/gnd/116094001>,
-        <https://viaf.org/viaf/22884362>,
-        <https://viaf.org/viaf/32264226> ;
-    cto:title "A dudele / Fassung (Sander, Werner)" ;
-    cto:viaf <https://viaf.org/viaf/22884362>,
-        <https://viaf.org/viaf/32264226> ;
-    schema:subjectOf <https://performance.musiconn.de/event/grassi-hofkonzert-grassimuseum-leipzig-innenhof-1987-07-03-19-30>,
+<https://performance.musiconn.de/work/a-dudele-fassung-sander-werner> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "A dudele / Fassung (Sander, Werner)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/grassi-hofkonzert-grassimuseum-leipzig-innenhof-1987-07-03-19-30>,
         <https://performance.musiconn.de/event/jubilaeumskonzert-20-jahre-leipziger-synagogalchor-neues-gewandhaus-leipzig-grosser-saal-1982-11-19-20-00>,
         <https://performance.musiconn.de/event/konzert-mit-synagogen-musik-deutsche-staatsoper-berlin-apollo-saal-1972-06-05-20-00>,
         <https://performance.musiconn.de/event/konzert-mit-synagogenmusik-und-jiddischer-folklore-kulturhaus-alfred-frank-leipzig-1978-01-13-19-30>,
@@ -33,5 +21,16 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/musikalisch-literarische-veranstaltung-altes-rathaus-leipzig-festsaal-1986-03-20>,
         <https://performance.musiconn.de/event/synagogen-musik-schauspielhaus-erfurt-1972-01-30-20-00>,
         <https://performance.musiconn.de/event/synagogenmusik-jiddische-lieder-und-gesaenge-messekonzert-kongresshalle-leipzig-weisser-saal-1971-03-14-20-00>,
-        <https://performance.musiconn.de/event/synagogenmusik-jiddische-und-hebraeische-folklore-in-freier-bearbeitung-stadtkirche-oederan-1999-07-03-17-00> .
+        <https://performance.musiconn.de/event/synagogenmusik-jiddische-und-hebraeische-folklore-in-freier-bearbeitung-stadtkirche-oederan-1999-07-03-17-00> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "Chassidische Weise, arrangiert von Werner Sander" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/1144373794>,
+        <https://d-nb.info/gnd/116094001> ;
+    cto:relatedPerson <https://d-nb.info/gnd/1144373794>,
+        <https://d-nb.info/gnd/116094001>,
+        <https://viaf.org/viaf/22884362>,
+        <https://viaf.org/viaf/32264226> ;
+    cto:viaf <https://viaf.org/viaf/22884362>,
+        <https://viaf.org/viaf/32264226> .
 

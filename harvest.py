@@ -4,12 +4,11 @@ import os
 import re
 import time
 from argparse import ArgumentParser
-from datetime import date
 
 import requests
 from rdflib import Graph
 from rdflib import URIRef, Literal, Namespace, BNode
-from rdflib.namespace import RDF, SDO, XSD
+from rdflib.namespace import RDF
 
 location_auth = {}
 series_auth = {}
@@ -25,6 +24,8 @@ save_meta = False
 N4C = Namespace("https://nfdi4culture.de/id/")
 CTO = Namespace("https://nfdi4culture.de/ontology#")
 NFDICORE = Namespace("https://nfdi.fiz-karlsruhe.de/ontology#")
+SCHEMA = Namespace("http://schema.org/")
+RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 
 
 def concat_files():
@@ -40,13 +41,15 @@ def concat_files():
                 else:
                     content = readfile.read()
                     modified_content = remove_header(content)
-                file.write(modified_content + '\n')
+                file.write(modified_content)
             count += 1
         for filename in os.listdir('work_result/'):
             filepath = os.path.join('work_result/', filename)
             with open(filepath, 'r', encoding='utf-8') as readfile:
-                file.write((remove_header(readfile.read())) + '\n')
+                file.write((remove_header(readfile.read())))
             count += 1
+    with open("feed.ttl", 'r', encoding='utf-8') as file:
+        check_file(file.read())
     print(f"##### Finished concatenating {count} turtle-files into feed.ttl #####")
 
 
@@ -55,14 +58,18 @@ def remove_header(content):
     return re.sub('.*schema:dateModified.*\n', "", modified_content)
 
 
+def check_file(content):
+    check = init_graph()
+    check.parse(data=content, format='turtle')
+
+
 def init_graph():
     graph = Graph()
     graph.remove((None, None, None))
     graph.bind("cto", CTO)
     graph.bind("nfdicore", NFDICORE)
     graph.bind("n4c", N4C)
-    graph.add((N4C.E5320, SDO.dateModified, Literal(date.today(), datatype=XSD.date)))
-
+    graph.bind("schema", SCHEMA)
     return graph
 
 
@@ -71,15 +78,15 @@ def add_events(events, file_path, start_index):
         graph = init_graph()
         event_id = URIRef(event['schema:event']['@id'])
         bn = BNode()
-        graph.add((N4C.E5320, SDO.dataFeedElement, bn))
-        graph.add((bn, RDF.type, SDO.DataFeedItem))
-        graph.add((bn, SDO.item, event_id))
+        graph.add((N4C.E5320, SCHEMA.dataFeedElement, bn))
+        graph.add((bn, RDF.type, SCHEMA.DataFeedItem))
+        graph.add((bn, SCHEMA.item, event_id))
         graph.add((event_id, RDF.type, CTO.DataFeedElement))
         graph.add((event_id, RDF.type, NFDICORE.Event))
         graph.add((event_id, CTO.elementType, URIRef("http://vocab.getty.edu/aat/300069451")))
         graph.add((event_id, NFDICORE.publisher, URIRef("https://nfdi4culture.de/id/E1841")))
         graph.add((event_id, CTO.elementOf, URIRef("https://nfdi4culture.de/id/E5320")))
-        graph.add((event_id, CTO.title, Literal(event['schema:event']['schema:name'])))
+        graph.add((event_id, RDFS.label, Literal(event['schema:event']['schema:name'])))
         if event['schema:event']['schema:temporalCoverage']['@value'] is not None:
             eventdate = event['schema:event']['schema:temporalCoverage']['@value']
             startdate = eventdate[:eventdate.index('/')]
@@ -172,14 +179,14 @@ def add_works(works, file_path, start_index):
         graph = init_graph()
         work_id = URIRef(work['schema:MusicComposition']['@id'])
         bn = BNode()
-        graph.add((N4C.E5320, SDO.dataFeedElement, bn))
-        graph.add((bn, RDF.type, SDO.DataFeedItem))
-        graph.add((bn, SDO.item, work_id))
+        graph.add((N4C.E5320, SCHEMA.dataFeedElement, bn))
+        graph.add((bn, RDF.type, SCHEMA.DataFeedItem))
+        graph.add((bn, SCHEMA.item, work_id))
         graph.add((work_id, RDF.type, CTO.DataFeedElement))
-        graph.add((work_id, RDF.type, SDO.MusicComposition))
+        graph.add((work_id, RDF.type, SCHEMA.MusicComposition))
         graph.add((work_id, NFDICORE.publisher, URIRef("https://nfdi4culture.de/id/E1841")))
         graph.add((work_id, CTO.elementOf, URIRef("https://nfdi4culture.de/id/E5320")))
-        graph.add((work_id, CTO.title, Literal(work['schema:MusicComposition']['schema:name'])))
+        graph.add((work_id, RDFS.label, Literal(work['schema:MusicComposition']['schema:name'])))
 
         composers = work['schema:MusicComposition']['schema:composer']
         for composer in composers:
@@ -195,7 +202,7 @@ def add_works(works, file_path, start_index):
         descriptions = work['schema:MusicComposition']['schema:description']
         if descriptions is not None:
             for desc_index, description in enumerate(descriptions):
-                graph.add((work_id, CTO.abstract, Literal(descriptions[desc_index]['@value'])))
+                graph.add((work_id, CTO.abstract, Literal(((descriptions[desc_index]['@value']).replace("\n", "")).replace("@", "(at)"))))
         genres = work['schema:MusicComposition']['schema:genre']
         if genres is not None:
             for genre in genres:
@@ -212,13 +219,13 @@ def add_works(works, file_path, start_index):
         compositions = work['schema:MusicComposition']['schema:includedComposition']
         for comp_index, composition in enumerate(compositions):
             for composition_item in compositions[comp_index]['@id']:
-                graph.add((work_id, SDO.includedComposition, URIRef(composition_item)))
+                graph.add((work_id, SCHEMA.includedComposition, URIRef(composition_item)))
                 if compositions[comp_index]['@id'][composition_item]['gnd'] is not None:
-                    graph.add((work_id, SDO.includedComposition,
+                    graph.add((work_id, SCHEMA.includedComposition,
                                URIRef(compositions[comp_index]['@id'][composition_item]['gnd'])))
                     graph.add((work_id, CTO.gnd, URIRef(compositions[comp_index]['@id'][composition_item]['gnd'])))
                 if compositions[comp_index]['@id'][composition_item]['viaf'] is not None:
-                    graph.add((work_id, SDO.includedComposition,
+                    graph.add((work_id, SCHEMA.includedComposition,
                                URIRef(compositions[comp_index]['@id'][composition_item]['viaf'])))
                     graph.add((work_id, CTO.viaf, URIRef(compositions[comp_index]['@id'][composition_item]['viaf'])))
 
@@ -226,12 +233,12 @@ def add_works(works, file_path, start_index):
         if events is not None:
             for event in events:
                 for event_item in event['@id']:
-                    graph.add((work_id, SDO.subjectOf, URIRef(event_item)))
+                    graph.add((work_id, SCHEMA.subjectOf, URIRef(event_item)))
                     if event['@id'][event_item]['gnd'] is not None:
-                        graph.add((work_id, SDO.subjectOf, URIRef(event['@id'][event_item]['gnd'])))
+                        graph.add((work_id, SCHEMA.subjectOf, URIRef(event['@id'][event_item]['gnd'])))
                         graph.add((work_id, CTO.gnd, URIRef(event['@id'][event_item]['gnd'])))
                     if event['@id'][event_item]['viaf'] is not None:
-                        graph.add((work_id, SDO.subjectOf, URIRef(event['@id'][event_item]['viaf'])))
+                        graph.add((work_id, SCHEMA.subjectOf, URIRef(event['@id'][event_item]['viaf'])))
                         graph.add((work_id, CTO.viaf, URIRef(event['@id'][event_item]['viaf'])))
 
         contributors = work['schema:MusicComposition']['schema:contributor']

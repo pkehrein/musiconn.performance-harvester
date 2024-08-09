@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/livre-dorgue-1-raison-andre> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/livre-dorgue-1-raison-andre> ] .
 
-<https://performance.musiconn.de/work/livre-dorgue-1-raison-andre> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/livre-dorgue-1-raison-andre> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Livre d'orgue, 1 (Raison, André)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/livre-dorgue-1-offerte-raison-andre> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "... contenant 5 messes suffisantes pour tous les tons de L’Eglise ou 15 Magnificats … et une Offerte, en action de grâce, pour L’heureuse convalescence du Roy en 1687" ;
     cto:elementOf n4c:E5320 ;
@@ -18,7 +19,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4043852-1> ;
     cto:relatedPerson <https://d-nb.info/gnd/124607950>,
         <https://viaf.org/viaf/54333589> ;
-    cto:title "Livre d'orgue, 1 (Raison, André)" ;
-    cto:viaf <https://viaf.org/viaf/54333589> ;
-    schema:includedComposition <https://performance.musiconn.de/work/livre-dorgue-1-offerte-raison-andre> .
+    cto:viaf <https://viaf.org/viaf/54333589> .
 

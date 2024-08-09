@@ -1,36 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/la-muette-de-portici-auber-daniel-francois-esprit> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/la-muette-de-portici-auber-daniel-francois-esprit> ] .
 
-<https://performance.musiconn.de/work/la-muette-de-portici-auber-daniel-francois-esprit> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Große Oper in fünf Akten, mit Ballett" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118646192>,
-        <https://d-nb.info/gnd/300003269>,
-        <https://d-nb.info/gnd/4043582-9>,
-        <https://d-nb.info/gnd/5084847-1> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
-        <https://viaf.org/viaf/158420977> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118646192>,
-        <https://viaf.org/viaf/7573044> ;
-    cto:title "La muette de Portici (Auber, Daniel-François-Esprit)" ;
-    cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/175023632>,
-        <https://viaf.org/viaf/7573044> ;
-    schema:includedComposition <https://d-nb.info/gnd/300003269>,
+<https://performance.musiconn.de/work/la-muette-de-portici-auber-daniel-francois-esprit> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "La muette de Portici (Auber, Daniel-François-Esprit)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300003269>,
         <https://performance.musiconn.de/work/la-muette-de-portici-fassung-auber-daniel-francois-esprit>,
         <https://performance.musiconn.de/work/la-muette-de-portici-ouvertuere-auber-daniel-francois-esprit>,
         <https://viaf.org/viaf/175023632> ;
-    schema:subjectOf <https://performance.musiconn.de/event/die-stumme-von-portici-koenigliches-hoftheater-dresden-1860-12-06-18-00>,
+    schema1:subjectOf <https://performance.musiconn.de/event/die-stumme-von-portici-koenigliches-hoftheater-dresden-1860-12-06-18-00>,
         <https://performance.musiconn.de/event/die-stumme-von-portici-koenigliches-hoftheater-dresden-1861-03-05-18-00>,
         <https://performance.musiconn.de/event/die-stumme-von-portici-koenigliches-hoftheater-dresden-1861-08-01-18-30>,
         <https://performance.musiconn.de/event/die-stumme-von-portici-koenigliches-hoftheater-dresden-1861-09-27-18-00>,
@@ -64,5 +48,20 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/die-stumme-von-portici-semperoper-dresden-1910-05-24-19-30>,
         <https://performance.musiconn.de/event/die-stumme-von-portici-semperoper-dresden-1910-05-28-19-30>,
         <https://performance.musiconn.de/event/die-stumme-von-portici-semperoper-dresden-1910-06-12-19-00>,
-        <https://performance.musiconn.de/event/die-stumme-von-portici-semperoper-dresden-1910-10-18-19-30> .
+        <https://performance.musiconn.de/event/die-stumme-von-portici-semperoper-dresden-1910-10-18-19-30> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "Große Oper in fünf Akten, mit Ballett" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/118646192>,
+        <https://d-nb.info/gnd/300003269>,
+        <https://d-nb.info/gnd/4043582-9>,
+        <https://d-nb.info/gnd/5084847-1> ;
+    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
+        <https://viaf.org/viaf/158420977> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118646192>,
+        <https://viaf.org/viaf/7573044> ;
+    cto:viaf <https://viaf.org/viaf/158420977>,
+        <https://viaf.org/viaf/175023632>,
+        <https://viaf.org/viaf/7573044> .
 

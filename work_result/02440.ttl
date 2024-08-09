@@ -1,15 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/variationen-ueber-ein-thema-von-joseph-haydn-brahms-johannes> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/variationen-ueber-ein-thema-von-joseph-haydn-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/variationen-ueber-ein-thema-von-joseph-haydn-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/variationen-ueber-ein-thema-von-joseph-haydn-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Variationen über ein Thema von Joseph Haydn (Brahms, Johannes)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/1-sinfonie-konzert-der-generaldirektion-der-koenigl-musikalischen-kapelle-und-der-hoftheater-semperoper-dresden-1910-10-21-19-30>,
+        <https://performance.musiconn.de/event/10-museums-concert-grosser-konzertsaal-frankfurt-a-m-1875-02-19-18-30>,
+        <https://performance.musiconn.de/event/9-museums-concert-grosser-konzertsaal-frankfurt-a-m-1876-02-18-18-30>,
+        <https://performance.musiconn.de/event/sechstes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1896-12-27-17-30>,
+        <https://performance.musiconn.de/event/zehntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1887-03-04-18-30>,
+        <https://performance.musiconn.de/event/zweites-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1894-11-09-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1021524-4>,
@@ -67,7 +73,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/45144814273718687574> ;
     cto:relatedPerson <https://d-nb.info/gnd/118514253>,
         <https://viaf.org/viaf/7573295> ;
-    cto:title "Variationen über ein Thema von Joseph Haydn (Brahms, Johannes)" ;
     cto:viaf <https://viaf.org/viaf/124209286>,
         <https://viaf.org/viaf/127659266>,
         <https://viaf.org/viaf/131976266>,
@@ -84,11 +89,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/435144783046765467239>,
         <https://viaf.org/viaf/45144814273718687574>,
-        <https://viaf.org/viaf/7573295> ;
-    schema:subjectOf <https://performance.musiconn.de/event/1-sinfonie-konzert-der-generaldirektion-der-koenigl-musikalischen-kapelle-und-der-hoftheater-semperoper-dresden-1910-10-21-19-30>,
-        <https://performance.musiconn.de/event/10-museums-concert-grosser-konzertsaal-frankfurt-a-m-1875-02-19-18-30>,
-        <https://performance.musiconn.de/event/9-museums-concert-grosser-konzertsaal-frankfurt-a-m-1876-02-18-18-30>,
-        <https://performance.musiconn.de/event/sechstes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1896-12-27-17-30>,
-        <https://performance.musiconn.de/event/zehntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1887-03-04-18-30>,
-        <https://performance.musiconn.de/event/zweites-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1894-11-09-19-00> .
+        <https://viaf.org/viaf/7573295> .
 

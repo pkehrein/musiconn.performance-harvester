@@ -1,23 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sonne-leuchte-mir-ins-herz-hinein-auswahl-golle-juergen> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sonne-leuchte-mir-ins-herz-hinein-auswahl-golle-juergen> ] .
 
-<https://performance.musiconn.de/work/sonne-leuchte-mir-ins-herz-hinein-auswahl-golle-juergen> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sonne-leuchte-mir-ins-herz-hinein-auswahl-golle-juergen> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sonne, leuchte mir ins Herz hinein. Auswahl (Golle, Jürgen)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/2-fuge-ein-musicus-wollt-froehlich-sein-unbekannt-golle-juergen>,
+        <https://performance.musiconn.de/work/3-alter-reim-unbekannt-golle-juergen>,
+        <https://performance.musiconn.de/work/sonne-leuchte-mir-ins-herz-hinein-tanzlied-gisela-steineckert-golle-juergen> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/12392488X> ;
     cto:relatedPerson <https://d-nb.info/gnd/12392488X>,
         <https://viaf.org/viaf/8307173> ;
-    cto:title "Sonne, leuchte mir ins Herz hinein. Auswahl (Golle, Jürgen)" ;
-    cto:viaf <https://viaf.org/viaf/8307173> ;
-    schema:includedComposition <https://performance.musiconn.de/work/2-fuge-ein-musicus-wollt-froehlich-sein-unbekannt-golle-juergen>,
-        <https://performance.musiconn.de/work/3-alter-reim-unbekannt-golle-juergen>,
-        <https://performance.musiconn.de/work/sonne-leuchte-mir-ins-herz-hinein-tanzlied-gisela-steineckert-golle-juergen> .
+    cto:viaf <https://viaf.org/viaf/8307173> .
 

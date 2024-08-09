@@ -1,15 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/kleine-geistliche-konzerte-swv-306-337-herr-ich-hoffe-darauf-dass-du-so-gnaedig-bist-schuetz-heinrich> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/kleine-geistliche-konzerte-swv-306-337-herr-ich-hoffe-darauf-dass-du-so-gnaedig-bist-schuetz-heinrich> ] .
 
-<https://performance.musiconn.de/work/kleine-geistliche-konzerte-swv-306-337-herr-ich-hoffe-darauf-dass-du-so-gnaedig-bist-schuetz-heinrich> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/kleine-geistliche-konzerte-swv-306-337-herr-ich-hoffe-darauf-dass-du-so-gnaedig-bist-schuetz-heinrich> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Kleine geistliche Konzerte, SWV 306 - 337. Herr, ich hoffe darauf, dass du so gnädig bist (Schütz, Heinrich)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/gottesdienst-thomaskirche-leipzig-2002-10-06>,
+        <https://performance.musiconn.de/event/gottesdienst-thomaskirche-leipzig-2002-10-31> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/11861116X>,
@@ -28,12 +30,9 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/79646585>,
         <https://viaf.org/viaf/8188564>,
         <https://viaf.org/viaf/88077663> ;
-    cto:title "Kleine geistliche Konzerte, SWV 306 - 337. Herr, ich hoffe darauf, dass du so gnädig bist (Schütz, Heinrich)" ;
     cto:viaf <https://viaf.org/viaf/25653998>,
         <https://viaf.org/viaf/59270840>,
         <https://viaf.org/viaf/79646585>,
         <https://viaf.org/viaf/8188564>,
-        <https://viaf.org/viaf/88077663> ;
-    schema:subjectOf <https://performance.musiconn.de/event/gottesdienst-thomaskirche-leipzig-2002-10-06>,
-        <https://performance.musiconn.de/event/gottesdienst-thomaskirche-leipzig-2002-10-31> .
+        <https://viaf.org/viaf/88077663> .
 

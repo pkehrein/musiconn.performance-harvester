@@ -1,18 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/praeludium-und-fuge-orgel-bwv-539-d-moll-bach-johann-sebastian> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/praeludium-und-fuge-orgel-bwv-539-d-moll-bach-johann-sebastian> ] .
 
-<https://performance.musiconn.de/work/praeludium-und-fuge-orgel-bwv-539-d-moll-bach-johann-sebastian> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/praeludium-und-fuge-orgel-bwv-539-d-moll-bach-johann-sebastian> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Präludium und Fuge, Orgel, BWV 539 (d-Moll) (Bach, Johann Sebastian)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/dresdner-kreuzchor-st-petri-dom-bremen-1936-10-10-20-00>,
+        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1914-10-03-14-00>,
+        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1915-10-02-14-00>,
+        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-07-04-18-00> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Entstehungszeit unbekannt. Das Präludium ist nach ca. 1723 entstanden
-Die Fuge ist eine Orgeltranskription der um 1720 entstandenen Fuge Violine solo BWV 1001/2. Ob die Zusammenfügung beider Sätze von Bach stammt, ist ungewiss""" ;
+    cto:abstract "Entstehungszeit unbekannt. Das Präludium ist nach ca. 1723 entstandenDie Fuge ist eine Orgeltranskription der um 1720 entstandenen Fuge Violine solo BWV 1001/2. Ob die Zusammenfügung beider Sätze von Bach stammt, ist ungewiss" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/108518532X>,
         <https://d-nb.info/gnd/11697575X>,
@@ -33,14 +36,9 @@ Die Fuge ist eine Orgeltranskription der um 1720 entstandenen Fuge Violine solo 
         <https://viaf.org/viaf/22407862>,
         <https://viaf.org/viaf/35222267>,
         <https://viaf.org/viaf/758145857125422922762> ;
-    cto:title "Präludium und Fuge, Orgel, BWV 539 (d-Moll) (Bach, Johann Sebastian)" ;
     cto:viaf <https://viaf.org/viaf/12304462>,
         <https://viaf.org/viaf/143854617>,
         <https://viaf.org/viaf/22407862>,
         <https://viaf.org/viaf/35222267>,
-        <https://viaf.org/viaf/758145857125422922762> ;
-    schema:subjectOf <https://performance.musiconn.de/event/dresdner-kreuzchor-st-petri-dom-bremen-1936-10-10-20-00>,
-        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1914-10-03-14-00>,
-        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1915-10-02-14-00>,
-        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-07-04-18-00> .
+        <https://viaf.org/viaf/758145857125422922762> .
 

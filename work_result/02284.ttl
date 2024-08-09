@@ -1,15 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-kv-465-c-dur-mozart-wolfgang-amadeus> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-kv-465-c-dur-mozart-wolfgang-amadeus> ] .
 
-<https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-kv-465-c-dur-mozart-wolfgang-amadeus> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-kv-465-c-dur-mozart-wolfgang-amadeus> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Quartette, Violine (2), Viola, Violoncello, KV 465 (C-Dur) (Mozart, Wolfgang Amadeus)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300994281>,
+        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-kv-465-c-dur-adagio-mozart-wolfgang-amadeus>,
+        <https://viaf.org/viaf/191522105> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/4-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1872-12-09-19-00>,
+        <https://performance.musiconn.de/event/achter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1881-02-11-19-00>,
+        <https://performance.musiconn.de/event/dritter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1878-11-11-19-00>,
+        <https://performance.musiconn.de/event/streichquartett-kleiner-konzertsaal-frankfurt-a-m-1891-11-15-11-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10185429-8>,
@@ -62,7 +69,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/312655640> ;
     cto:relatedPerson <https://d-nb.info/gnd/118584596>,
         <https://viaf.org/viaf/32197206> ;
-    cto:title "Quartette, Violine (2), Viola, Violoncello, KV 465 (C-Dur) (Mozart, Wolfgang Amadeus)" ;
     cto:viaf <https://viaf.org/viaf/121136117>,
         <https://viaf.org/viaf/121643420>,
         <https://viaf.org/viaf/126822075>,
@@ -77,12 +83,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/191522105>,
         <https://viaf.org/viaf/248743267>,
         <https://viaf.org/viaf/312655640>,
-        <https://viaf.org/viaf/32197206> ;
-    schema:includedComposition <https://d-nb.info/gnd/300994281>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-kv-465-c-dur-adagio-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/191522105> ;
-    schema:subjectOf <https://performance.musiconn.de/event/4-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1872-12-09-19-00>,
-        <https://performance.musiconn.de/event/achter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1881-02-11-19-00>,
-        <https://performance.musiconn.de/event/dritter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1878-11-11-19-00>,
-        <https://performance.musiconn.de/event/streichquartett-kleiner-konzertsaal-frankfurt-a-m-1891-11-15-11-00> .
+        <https://viaf.org/viaf/32197206> .
 

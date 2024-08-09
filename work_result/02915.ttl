@@ -1,15 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-30-der-knabe-mit-dem-wunderhorn-schumann-robert> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-30-der-knabe-mit-dem-wunderhorn-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-30-der-knabe-mit-dem-wunderhorn-schumann-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-30-der-knabe-mit-dem-wunderhorn-schumann-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Gedichte nach Emanuel Geibel, op. 30. Der Knabe mit dem Wunderhorn (Schumann, Robert)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/5-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1881-12-30-19-00>,
+        <https://performance.musiconn.de/event/fuenfter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1887-01-14-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116014326>,
@@ -43,7 +45,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/59851181>,
         <https://viaf.org/viaf/62289475>,
         <https://viaf.org/viaf/7575259> ;
-    cto:title "Gedichte nach Emanuel Geibel, op. 30. Der Knabe mit dem Wunderhorn (Schumann, Robert)" ;
     cto:viaf <https://viaf.org/viaf/124152743022127732946>,
         <https://viaf.org/viaf/13060568>,
         <https://viaf.org/viaf/19869403>,
@@ -52,7 +53,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/54890196>,
         <https://viaf.org/viaf/59851181>,
         <https://viaf.org/viaf/62289475>,
-        <https://viaf.org/viaf/7575259> ;
-    schema:subjectOf <https://performance.musiconn.de/event/5-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1881-12-30-19-00>,
-        <https://performance.musiconn.de/event/fuenfter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1887-01-14-19-00> .
+        <https://viaf.org/viaf/7575259> .
 

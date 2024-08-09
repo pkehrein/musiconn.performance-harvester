@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/melodie-rangstroem-ture> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/melodie-rangstroem-ture> ] .
 
-<https://performance.musiconn.de/work/melodie-rangstroem-ture> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/melodie-rangstroem-ture> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Melodie (Rangström, Ture)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/advents-tee-konzert-hotel-bellevue-dresden-1936-12-11> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/123772265>,
@@ -21,8 +22,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/person/kerstad-lisa>,
         <https://viaf.org/viaf/17416471>,
         <https://viaf.org/viaf/19719850> ;
-    cto:title "Melodie (Rangström, Ture)" ;
     cto:viaf <https://viaf.org/viaf/17416471>,
-        <https://viaf.org/viaf/19719850> ;
-    schema:subjectOf <https://performance.musiconn.de/event/advents-tee-konzert-hotel-bellevue-dresden-1936-12-11> .
+        <https://viaf.org/viaf/19719850> .
 

@@ -1,15 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/prodana-nevesta-oper-1866-smetana-bedrich> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/prodana-nevesta-oper-1866-smetana-bedrich> ] .
 
-<https://performance.musiconn.de/work/prodana-nevesta-oper-1866-smetana-bedrich> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/prodana-nevesta-oper-1866-smetana-bedrich> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Prodaná nevěsta (Oper, 1866) (Smetana, Bedřich)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1130488403>,
+        <https://performance.musiconn.de/work/die-verkaufte-braut-duett-smetana-bedrich>,
+        <https://performance.musiconn.de/work/die-verkaufte-braut-zirkusmusik-smetana-bedrich>,
+        <https://performance.musiconn.de/work/prodana-nevesta-arie-des-hans-smetana-bedrich>,
+        <https://performance.musiconn.de/work/prodana-nevesta-polka-mit-chor-smetana-bedrich>,
+        <https://performance.musiconn.de/work/prodana-nevesta-znam-jednu-divku-smetana-bedrich>,
+        <https://viaf.org/viaf/7993147967374184200003> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Oper in 2 Akten; es gibt noch eine Version von 1869 und 2 Versionen der Oper mit 3 Akten, die jedoch als neues Werk betrachtet werden" ;
     cto:elementOf n4c:E5320 ;
@@ -19,14 +26,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
     cto:relatedPerson <https://d-nb.info/gnd/118615017>,
         <https://viaf.org/viaf/95207407> ;
-    cto:title "Prodaná nevěsta (Oper, 1866) (Smetana, Bedřich)" ;
     cto:viaf <https://viaf.org/viaf/7993147967374184200003>,
-        <https://viaf.org/viaf/95207407> ;
-    schema:includedComposition <https://d-nb.info/gnd/1130488403>,
-        <https://performance.musiconn.de/work/die-verkaufte-braut-duett-smetana-bedrich>,
-        <https://performance.musiconn.de/work/die-verkaufte-braut-zirkusmusik-smetana-bedrich>,
-        <https://performance.musiconn.de/work/prodana-nevesta-arie-des-hans-smetana-bedrich>,
-        <https://performance.musiconn.de/work/prodana-nevesta-polka-mit-chor-smetana-bedrich>,
-        <https://performance.musiconn.de/work/prodana-nevesta-znam-jednu-divku-smetana-bedrich>,
-        <https://viaf.org/viaf/7993147967374184200003> .
+        <https://viaf.org/viaf/95207407> .
 

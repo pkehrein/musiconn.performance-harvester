@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/songes-of-sundrie-kindes-come-away-sweet-love-greaves-thomas> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/songes-of-sundrie-kindes-come-away-sweet-love-greaves-thomas> ] .
 
-<https://performance.musiconn.de/work/songes-of-sundrie-kindes-come-away-sweet-love-greaves-thomas> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/songes-of-sundrie-kindes-come-away-sweet-love-greaves-thomas> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Songes of sundrie kindes. Come away, sweet love (Greaves, Thomas)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/konzert-des-dresdener-kreuzchors-oetkerhalle-bielefeld-1934-09-29-20-15> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1212749-8>,
@@ -23,9 +24,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/150245159> ;
     cto:relatedPerson <https://d-nb.info/gnd/134831217>,
         <https://viaf.org/viaf/79804815> ;
-    cto:title "Songes of sundrie kindes. Come away, sweet love (Greaves, Thomas)" ;
     cto:viaf <https://viaf.org/viaf/139053206>,
         <https://viaf.org/viaf/150245159>,
-        <https://viaf.org/viaf/79804815> ;
-    schema:subjectOf <https://performance.musiconn.de/event/konzert-des-dresdener-kreuzchors-oetkerhalle-bielefeld-1934-09-29-20-15> .
+        <https://viaf.org/viaf/79804815> .
 

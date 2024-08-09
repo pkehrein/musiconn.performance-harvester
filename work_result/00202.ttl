@@ -1,29 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/rienzi-der-letzte-der-tribunen-erwacht-wagner-richard> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/rienzi-der-letzte-der-tribunen-erwacht-wagner-richard> ] .
 
-<https://performance.musiconn.de/work/rienzi-der-letzte-der-tribunen-erwacht-wagner-richard> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118594117>,
-        <https://d-nb.info/gnd/2074419-5>,
-        <https://d-nb.info/gnd/4043582-9> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/2074419-5>,
-        <https://viaf.org/viaf/139053206> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118594117>,
-        <https://viaf.org/viaf/29732107> ;
-    cto:title "Rienzi, der Letzte der Tribunen. Erwacht (Wagner, Richard)" ;
-    cto:viaf <https://viaf.org/viaf/139053206>,
-        <https://viaf.org/viaf/29732107> ;
-    schema:subjectOf <https://performance.musiconn.de/event/der-dresdner-kreuzchor-konzerthaus-glogau-1937-11-29-20-15>,
+<https://performance.musiconn.de/work/rienzi-der-letzte-der-tribunen-erwacht-wagner-richard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Rienzi, der Letzte der Tribunen. Erwacht (Wagner, Richard)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/der-dresdner-kreuzchor-konzerthaus-glogau-1937-11-29-20-15>,
         <https://performance.musiconn.de/event/der-kreuzchor-singt-boerse-coswig-1938-01-23-20-00>,
         <https://performance.musiconn.de/event/der-kreuzchor-singt-hotel-hammer-dresden-striesen-1938-02-05-20-00>,
         <https://performance.musiconn.de/event/der-kreuzchor-singt-hotel-koenig-albert-hoehe-rabenau-1938-02-04-20-00>,
@@ -48,5 +35,17 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/konzert-in-weinboehla-zentralgasthof-weinboehla-1937-02-20>,
         <https://performance.musiconn.de/event/konzert-schuetzenhaus-radeberg-1938-02-22-20-00>,
         <https://performance.musiconn.de/event/svensk-tyska-foereningen-stockholm-grand-hotel-stockholm-1937-10-21-20-00>,
-        <https://performance.musiconn.de/event/zur-ankunft-in-helsingfors-helsinki-messehalle-helsinki-1936-09-29-14-00> .
+        <https://performance.musiconn.de/event/zur-ankunft-in-helsingfors-helsinki-messehalle-helsinki-1936-09-29-14-00> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/118594117>,
+        <https://d-nb.info/gnd/2074419-5>,
+        <https://d-nb.info/gnd/4043582-9> ;
+    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/2074419-5>,
+        <https://viaf.org/viaf/139053206> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118594117>,
+        <https://viaf.org/viaf/29732107> ;
+    cto:viaf <https://viaf.org/viaf/139053206>,
+        <https://viaf.org/viaf/29732107> .
 

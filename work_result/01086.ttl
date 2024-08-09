@@ -1,15 +1,24 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/ich-weiss-dass-mein-erloeser-lebt-bach-johann-michael> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/ich-weiss-dass-mein-erloeser-lebt-bach-johann-michael> ] .
 
-<https://performance.musiconn.de/work/ich-weiss-dass-mein-erloeser-lebt-bach-johann-michael> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/ich-weiss-dass-mein-erloeser-lebt-bach-johann-michael> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Ich weiss, dass mein Erlöser lebt (Bach, Johann Michael)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/am-2-feiertag-kreuzkirche-dresden-1918-04-01-09-30>,
+        <https://performance.musiconn.de/event/gottesdienst-thomaskirche-leipzig-2006-04-30>,
+        <https://performance.musiconn.de/event/gottesdienst-thomaskirche-leipzig-2006-07-02>,
+        <https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-2006-05-18>,
+        <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2006-03-17>,
+        <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2006-03-18>,
+        <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2006-05-05>,
+        <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2006-05-06>,
+        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1918-03-09-14-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/104364467>,
@@ -27,18 +36,8 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/150245159> ;
     cto:relatedPerson <https://d-nb.info/gnd/104364467>,
         <https://viaf.org/viaf/69114714> ;
-    cto:title "Ich weiss, dass mein Erlöser lebt (Bach, Johann Michael)" ;
     cto:viaf <https://viaf.org/viaf/136181816>,
         <https://viaf.org/viaf/139053206>,
         <https://viaf.org/viaf/150245159>,
-        <https://viaf.org/viaf/69114714> ;
-    schema:subjectOf <https://performance.musiconn.de/event/am-2-feiertag-kreuzkirche-dresden-1918-04-01-09-30>,
-        <https://performance.musiconn.de/event/gottesdienst-thomaskirche-leipzig-2006-04-30>,
-        <https://performance.musiconn.de/event/gottesdienst-thomaskirche-leipzig-2006-07-02>,
-        <https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-2006-05-18>,
-        <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2006-03-17>,
-        <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2006-03-18>,
-        <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2006-05-05>,
-        <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2006-05-06>,
-        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1918-03-09-14-00> .
+        <https://viaf.org/viaf/69114714> .
 

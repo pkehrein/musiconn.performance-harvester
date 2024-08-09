@@ -1,31 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/la-forza-del-destino-verdi-giuseppe> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/la-forza-del-destino-verdi-giuseppe> ] .
 
-<https://performance.musiconn.de/work/la-forza-del-destino-verdi-giuseppe> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Oper in 4 Akten
-1862 ist das Jahr der Uraufführung
-Es gibt eine weitere Version, deren Uraufführung 1869 erfolgte
-Die Änderungen am Libretto zur 2. Version übernahm Antonio Ghislanzoni""" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118626523>,
-        <https://d-nb.info/gnd/300165633>,
-        <https://d-nb.info/gnd/4043582-9> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118626523>,
-        <https://viaf.org/viaf/22329110> ;
-    cto:title "La forza del destino (Verdi, Giuseppe)" ;
-    cto:viaf <https://viaf.org/viaf/186706068>,
-        <https://viaf.org/viaf/22329110> ;
-    schema:includedComposition <https://d-nb.info/gnd/300165633>,
+<https://performance.musiconn.de/work/la-forza-del-destino-verdi-giuseppe> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "La forza del destino (Verdi, Giuseppe)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300165633>,
         <https://performance.musiconn.de/work/la-forza-del-destino-arie-des-don-carlos-ouvertuere-verdi-giuseppe>,
         <https://performance.musiconn.de/work/la-forza-del-destino-arie-verdi-giuseppe>,
         <https://performance.musiconn.de/work/la-forza-del-destino-frieden-ruhe-frieden-verdi-giuseppe>,
@@ -34,5 +19,16 @@ Die Änderungen am Libretto zur 2. Version übernahm Antonio Ghislanzoni""" ;
         <https://performance.musiconn.de/work/la-forza-del-destino-pace-pace-mio-dio-verdi-giuseppe>,
         <https://performance.musiconn.de/work/la-forza-del-destino-quale-darmi-fragor-verdi-giuseppe>,
         <https://performance.musiconn.de/work/la-forza-del-destino-so-beginne-ich-warte-verdi-giuseppe>,
-        <https://viaf.org/viaf/186706068> .
+        <https://viaf.org/viaf/186706068> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "Oper in 4 Akten1862 ist das Jahr der UraufführungEs gibt eine weitere Version, deren Uraufführung 1869 erfolgteDie Änderungen am Libretto zur 2. Version übernahm Antonio Ghislanzoni" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/118626523>,
+        <https://d-nb.info/gnd/300165633>,
+        <https://d-nb.info/gnd/4043582-9> ;
+    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118626523>,
+        <https://viaf.org/viaf/22329110> ;
+    cto:viaf <https://viaf.org/viaf/186706068>,
+        <https://viaf.org/viaf/22329110> .
 

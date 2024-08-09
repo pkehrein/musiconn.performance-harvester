@@ -1,27 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/musicalische-seelenlust-theil-1-michael-tobias> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/musicalische-seelenlust-theil-1-michael-tobias> ] .
 
-<https://performance.musiconn.de/work/musicalische-seelenlust-theil-1-michael-tobias> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/102533431>,
-        <https://d-nb.info/gnd/1259296598>,
-        <https://d-nb.info/gnd/1259296962>,
-        <https://d-nb.info/gnd/30057388X> ;
-    cto:relatedPerson <https://d-nb.info/gnd/102533431>,
-        <https://viaf.org/viaf/76580801> ;
-    cto:title "Musicalische Seelenlust ..., Theil 1 (Michael, Tobias)" ;
-    cto:viaf <https://viaf.org/viaf/199716617>,
-        <https://viaf.org/viaf/76580801> ;
-    schema:includedComposition <https://d-nb.info/gnd/1259296598>,
+<https://performance.musiconn.de/work/musicalische-seelenlust-theil-1-michael-tobias> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Musicalische Seelenlust ..., Theil 1 (Michael, Tobias)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1259296598>,
         <https://d-nb.info/gnd/1259296962>,
         <https://d-nb.info/gnd/30057388X>,
         <https://performance.musiconn.de/work/musicalische-seelenlust-teil-1-aus-der-tiefe-rufe-ich-herr-zu-dir-michael-tobias>,
@@ -30,5 +19,15 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/work/musicalische-seelenlust-theil-1-gott-ist-unsre-zuversicht-michael-tobias>,
         <https://performance.musiconn.de/work/musicalische-seelenlust-theil-1-meine-schafe-hoeren-meine-stimme-michael-tobias>,
         <https://performance.musiconn.de/work/musikalische-seelenlust-teil-1-ich-bin-gewiss-michael-tobias>,
-        <https://viaf.org/viaf/199716617> .
+        <https://viaf.org/viaf/199716617> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/102533431>,
+        <https://d-nb.info/gnd/1259296598>,
+        <https://d-nb.info/gnd/1259296962>,
+        <https://d-nb.info/gnd/30057388X> ;
+    cto:relatedPerson <https://d-nb.info/gnd/102533431>,
+        <https://viaf.org/viaf/76580801> ;
+    cto:viaf <https://viaf.org/viaf/199716617>,
+        <https://viaf.org/viaf/76580801> .
 

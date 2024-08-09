@@ -1,15 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-ohne-worte-auswahl-mendelssohn-bartholdy-felix> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-ohne-worte-auswahl-mendelssohn-bartholdy-felix> ] .
 
-<https://performance.musiconn.de/work/lieder-ohne-worte-auswahl-mendelssohn-bartholdy-felix> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-ohne-worte-auswahl-mendelssohn-bartholdy-felix> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Lieder ohne Worte. Auswahl (Mendelssohn Bartholdy, Felix)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/2-caecilienfestkonzert-muenster-westf-1863-02-07>,
+        <https://performance.musiconn.de/event/2-vereinskonzert-hotel-koenig-von-england-muenster-saal-des-herrn-gerbaulet-1862-10-11>,
+        <https://performance.musiconn.de/event/2-vereinskonzert-rathaus-muenster-westf-friedenssaal-1873-10-25>,
+        <https://performance.musiconn.de/event/concert-von-julius-otto-grimm-rathaus-muenster-westf-friedenssaal-1867-03-28>,
+        <https://performance.musiconn.de/event/conservatorium-der-musik-leipzig-1860-11-04-19-00>,
+        <https://performance.musiconn.de/event/dritte-abonnements-soiree-fuer-kammermusik-rathaus-muenster-westf-kleiner-saal-1870-04-06>,
+        <https://performance.musiconn.de/event/drittes-oeffentliches-concert-des-musik-vereins-rathaus-muenster-westf-friedenssaal-1865-04-08> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "mehrere, nicht genauer definierte Werke" ;
     cto:elementOf n4c:E5320 ;
@@ -25,15 +32,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/2665666>,
         <https://viaf.org/viaf/54910787>,
         <https://viaf.org/viaf/56797125> ;
-    cto:title "Lieder ohne Worte. Auswahl (Mendelssohn Bartholdy, Felix)" ;
     cto:viaf <https://viaf.org/viaf/2665666>,
         <https://viaf.org/viaf/54910787>,
-        <https://viaf.org/viaf/56797125> ;
-    schema:subjectOf <https://performance.musiconn.de/event/2-caecilienfestkonzert-muenster-westf-1863-02-07>,
-        <https://performance.musiconn.de/event/2-vereinskonzert-hotel-koenig-von-england-muenster-saal-des-herrn-gerbaulet-1862-10-11>,
-        <https://performance.musiconn.de/event/2-vereinskonzert-rathaus-muenster-westf-friedenssaal-1873-10-25>,
-        <https://performance.musiconn.de/event/concert-von-julius-otto-grimm-rathaus-muenster-westf-friedenssaal-1867-03-28>,
-        <https://performance.musiconn.de/event/conservatorium-der-musik-leipzig-1860-11-04-19-00>,
-        <https://performance.musiconn.de/event/dritte-abonnements-soiree-fuer-kammermusik-rathaus-muenster-westf-kleiner-saal-1870-04-06>,
-        <https://performance.musiconn.de/event/drittes-oeffentliches-concert-des-musik-vereins-rathaus-muenster-westf-friedenssaal-1865-04-08> .
+        <https://viaf.org/viaf/56797125> .
 

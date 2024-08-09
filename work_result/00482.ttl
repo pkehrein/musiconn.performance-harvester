@@ -1,18 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/ich-bin-ein-guter-hirt-bach-johann-sebastian> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/ich-bin-ein-guter-hirt-bach-johann-sebastian> ] .
 
-<https://performance.musiconn.de/work/ich-bin-ein-guter-hirt-bach-johann-sebastian> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/ich-bin-ein-guter-hirt-bach-johann-sebastian> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Ich bin ein guter Hirt (Bach, Johann Sebastian)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1068560576>,
+        <https://performance.musiconn.de/work/ich-bin-ein-guter-hirt-ist-gott-mein-schutz-und-treuer-hirt-bach-johann-sebastian>,
+        <https://performance.musiconn.de/work/ich-bin-ein-guter-hirt-seht-was-die-liebe-tut-bach-johann-sebastian>,
+        <https://viaf.org/viaf/181484197> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Kantate zum Sonntag Misericordias Domini (Dominica Misericordias Domini)
-BWV 85 ist die maßgebliche Werkverzeichniszählung""" ;
+    cto:abstract "Kantate zum Sonntag Misericordias Domini (Dominica Misericordias Domini)BWV 85 ist die maßgebliche Werkverzeichniszählung" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1068560576>,
         <https://d-nb.info/gnd/11850553X>,
@@ -26,13 +29,8 @@ BWV 85 ist die maßgebliche Werkverzeichniszählung""" ;
         <https://viaf.org/viaf/150245159> ;
     cto:relatedPerson <https://d-nb.info/gnd/11850553X>,
         <https://viaf.org/viaf/12304462> ;
-    cto:title "Ich bin ein guter Hirt (Bach, Johann Sebastian)" ;
     cto:viaf <https://viaf.org/viaf/12304462>,
         <https://viaf.org/viaf/136181816>,
         <https://viaf.org/viaf/150245159>,
-        <https://viaf.org/viaf/181484197> ;
-    schema:includedComposition <https://d-nb.info/gnd/1068560576>,
-        <https://performance.musiconn.de/work/ich-bin-ein-guter-hirt-ist-gott-mein-schutz-und-treuer-hirt-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/ich-bin-ein-guter-hirt-seht-was-die-liebe-tut-bach-johann-sebastian>,
         <https://viaf.org/viaf/181484197> .
 

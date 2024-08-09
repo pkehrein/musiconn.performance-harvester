@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/dolorosa-jensen-adolf> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/dolorosa-jensen-adolf> ] .
 
-<https://performance.musiconn.de/work/dolorosa-jensen-adolf> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/dolorosa-jensen-adolf> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Dolorosa (Jensen, Adolf)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1268031461>,
+        <https://performance.musiconn.de/work/dolorosa-ich-hab-ihn-im-schlafe-zu-sehen-gemeint-jensen-adolf>,
+        <https://viaf.org/viaf/3965166360574107070008> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116042095>,
@@ -24,12 +27,8 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/22327623>,
         <https://viaf.org/viaf/32738501>,
         <https://viaf.org/viaf/52883458> ;
-    cto:title "Dolorosa (Jensen, Adolf)" ;
     cto:viaf <https://viaf.org/viaf/22327623>,
         <https://viaf.org/viaf/32738501>,
         <https://viaf.org/viaf/3965166360574107070008>,
-        <https://viaf.org/viaf/52883458> ;
-    schema:includedComposition <https://d-nb.info/gnd/1268031461>,
-        <https://performance.musiconn.de/work/dolorosa-ich-hab-ihn-im-schlafe-zu-sehen-gemeint-jensen-adolf>,
-        <https://viaf.org/viaf/3965166360574107070008> .
+        <https://viaf.org/viaf/52883458> .
 

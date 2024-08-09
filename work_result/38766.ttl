@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/toccate-ricercari-capricci-allemande-gigue-courante-sarabande-libro-4-froberger-johann-jacob> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/toccate-ricercari-capricci-allemande-gigue-courante-sarabande-libro-4-froberger-johann-jacob> ] .
 
-<https://performance.musiconn.de/work/toccate-ricercari-capricci-allemande-gigue-courante-sarabande-libro-4-froberger-johann-jacob> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/toccate-ricercari-capricci-allemande-gigue-courante-sarabande-libro-4-froberger-johann-jacob> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Toccate, ricercari, capricci, allemande, gigue, courante, sarabande, libro 4 (Froberger, Johann Jacob)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1120416213>,
+        <https://performance.musiconn.de/work/toccate-ricercari-capricci-allemande-gigue-courante-sarabande-libro-4-partita-nr-6-froberger-johann-jacob>,
+        <https://viaf.org/viaf/6272148122905695200004> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfasst 6 Toccatas, FbWV 107-112, 6 Ricercars, FbWV 407-412, 6 Capriccios, FbWV 507-508, 514-517, 6 Partitas, FbWV 607-612" ;
     cto:elementOf n4c:E5320 ;
@@ -27,10 +30,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://d-nb.info/gnd/4364833-2> ;
     cto:relatedPerson <https://d-nb.info/gnd/118536249>,
         <https://viaf.org/viaf/42025252> ;
-    cto:title "Toccate, ricercari, capricci, allemande, gigue, courante, sarabande, libro 4 (Froberger, Johann Jacob)" ;
     cto:viaf <https://viaf.org/viaf/42025252>,
-        <https://viaf.org/viaf/6272148122905695200004> ;
-    schema:includedComposition <https://d-nb.info/gnd/1120416213>,
-        <https://performance.musiconn.de/work/toccate-ricercari-capricci-allemande-gigue-courante-sarabande-libro-4-partita-nr-6-froberger-johann-jacob>,
         <https://viaf.org/viaf/6272148122905695200004> .
 

@@ -1,15 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/alle-voegel-sind-schon-da-anonym> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/alle-voegel-sind-schon-da-anonym> ] .
 
-<https://performance.musiconn.de/work/alle-voegel-sind-schon-da-anonym> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/alle-voegel-sind-schon-da-anonym> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Alle Vögel sind schon da ([anonym])" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/die-ns-kulturgemeinde-e-v-schuetzenhaus-bischofswerda-1937-05-31-20-15>,
+        <https://performance.musiconn.de/event/dresdener-reichsgartenschau-dresden-1936-05-06>,
+        <https://performance.musiconn.de/event/fest-konzert-anlaesslich-des-national-feiertages-des-deutschen-volkes-europa-schiff-1930-1935-05-01-11-30>,
+        <https://performance.musiconn.de/event/first-american-concert-tour-of-the-world-famous-dresdner-kreuzchor-municipal-auditorium-saint-louis-missouri-1935-04-09-20-30>,
+        <https://performance.musiconn.de/event/konzert-des-dresdner-kreuzchores-krone-bautzen-1937-05-29-20-00>,
+        <https://performance.musiconn.de/event/schuelerkonzert-schuetzenhaus-bischofswerda-1937-05-31-17-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Volkslied" ;
     cto:elementOf n4c:E5320 ;
@@ -22,12 +28,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/corporation/bordorchester-europa>,
         <https://viaf.org/viaf/139053206> ;
     cto:relatedPerson <https://performance.musiconn.de/person/anonym> ;
-    cto:title "Alle Vögel sind schon da ([anonym])" ;
-    cto:viaf <https://viaf.org/viaf/139053206> ;
-    schema:subjectOf <https://performance.musiconn.de/event/die-ns-kulturgemeinde-e-v-schuetzenhaus-bischofswerda-1937-05-31-20-15>,
-        <https://performance.musiconn.de/event/dresdener-reichsgartenschau-dresden-1936-05-06>,
-        <https://performance.musiconn.de/event/fest-konzert-anlaesslich-des-national-feiertages-des-deutschen-volkes-europa-schiff-1930-1935-05-01-11-30>,
-        <https://performance.musiconn.de/event/first-american-concert-tour-of-the-world-famous-dresdner-kreuzchor-municipal-auditorium-saint-louis-missouri-1935-04-09-20-30>,
-        <https://performance.musiconn.de/event/konzert-des-dresdner-kreuzchores-krone-bautzen-1937-05-29-20-00>,
-        <https://performance.musiconn.de/event/schuelerkonzert-schuetzenhaus-bischofswerda-1937-05-31-17-00> .
+    cto:viaf <https://viaf.org/viaf/139053206> .
 

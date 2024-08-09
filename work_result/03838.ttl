@@ -1,15 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/variationen-ueber-ah-vous-dirai-je-maman-mozart-wolfgang-amadeus> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/variationen-ueber-ah-vous-dirai-je-maman-mozart-wolfgang-amadeus> ] .
 
-<https://performance.musiconn.de/work/variationen-ueber-ah-vous-dirai-je-maman-mozart-wolfgang-amadeus> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/variationen-ueber-ah-vous-dirai-je-maman-mozart-wolfgang-amadeus> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Variationen über \"Ah, vous dirai-je, maman\" (Mozart, Wolfgang Amadeus)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/achtes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1896-01-24-19-00>,
+        <https://performance.musiconn.de/event/schulandacht-in-der-kreuzschule-kreuzschule-georgplatz-dresden-1936-12-21> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1078514259>,
@@ -23,10 +25,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545> ;
     cto:relatedPerson <https://d-nb.info/gnd/118584596>,
         <https://viaf.org/viaf/32197206> ;
-    cto:title "Variationen über \"Ah, vous dirai-je, maman\" (Mozart, Wolfgang Amadeus)" ;
     cto:viaf <https://viaf.org/viaf/125164781>,
         <https://viaf.org/viaf/32197206>,
-        <https://viaf.org/viaf/33146825124407631545> ;
-    schema:subjectOf <https://performance.musiconn.de/event/achtes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1896-01-24-19-00>,
-        <https://performance.musiconn.de/event/schulandacht-in-der-kreuzschule-kreuzschule-georgplatz-dresden-1936-12-21> .
+        <https://viaf.org/viaf/33146825124407631545> .
 

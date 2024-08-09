@@ -1,21 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/little-brown-jug-rosenthal-irving> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/little-brown-jug-rosenthal-irving> ] .
 
-<https://performance.musiconn.de/work/little-brown-jug-rosenthal-irving> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/little-brown-jug-rosenthal-irving> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Little Brown Jug (Rosenthal, Irving)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/5240652-0> ;
     cto:relatedOrganization <https://d-nb.info/gnd/5240652-0>,
         <https://viaf.org/viaf/135731573> ;
     cto:relatedPerson <https://performance.musiconn.de/person/rosenthal-irving> ;
-    cto:title "Little Brown Jug (Rosenthal, Irving)" ;
     cto:viaf <https://viaf.org/viaf/135731573> .
 

@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/aus-italien-gall-jan> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/aus-italien-gall-jan> ] .
 
-<https://performance.musiconn.de/work/aus-italien-gall-jan> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/aus-italien-gall-jan> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Aus Italien (Gall, Jan)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1272373673>,
+        <https://performance.musiconn.de/work/aus-italien-barcarole-gall-jan>,
+        <https://viaf.org/viaf/6125161392923158480004> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfasst 3 Lieder mit Texten von Thomas Moore, Heinrich Heine und August Kopisch" ;
     cto:elementOf n4c:E5320 ;
@@ -19,10 +22,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
     cto:relatedPerson <https://d-nb.info/gnd/103892532>,
         <https://viaf.org/viaf/120777884> ;
-    cto:title "Aus Italien (Gall, Jan)" ;
     cto:viaf <https://viaf.org/viaf/120777884>,
-        <https://viaf.org/viaf/6125161392923158480004> ;
-    schema:includedComposition <https://d-nb.info/gnd/1272373673>,
-        <https://performance.musiconn.de/work/aus-italien-barcarole-gall-jan>,
         <https://viaf.org/viaf/6125161392923158480004> .
 

@@ -1,19 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-singstimme-klavier-haas-joseph> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-singstimme-klavier-haas-joseph> ] .
 
-<https://performance.musiconn.de/work/lieder-singstimme-klavier-haas-joseph> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-singstimme-klavier-haas-joseph> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Lieder, Singstimme, Klavier (Haas, Joseph)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Warte, wenn wieder das Veilchen blüht
-Stilles, kleines Kämmerlein
-Auf blauer Himmelsaue""" ;
+    cto:abstract "Warte, wenn wieder das Veilchen blühtStilles, kleines KämmerleinAuf blauer Himmelsaue" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/117489964>,
         <https://d-nb.info/gnd/118699741>,
@@ -24,7 +22,6 @@ Auf blauer Himmelsaue""" ;
         <https://performance.musiconn.de/person/see-anneliese>,
         <https://viaf.org/viaf/50004254>,
         <https://viaf.org/viaf/61732024> ;
-    cto:title "Lieder, Singstimme, Klavier (Haas, Joseph)" ;
     cto:viaf <https://viaf.org/viaf/50004254>,
         <https://viaf.org/viaf/61732024> .
 

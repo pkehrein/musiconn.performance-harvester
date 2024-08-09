@@ -1,29 +1,23 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-op-18-sinding-christian> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-op-18-sinding-christian> ] .
 
-<https://performance.musiconn.de/work/lieder-op-18-sinding-christian> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-op-18-sinding-christian> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Lieder, op. 18 (Sinding, Christian)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/lieder-op-18-es-schrie-ein-vogel-sinding-christian> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """1. Bad i om en sang til vinen? / Heischt ihr Sang zum Weine?
-2. Ind i dit matgyldne solsilkehar / Dir in dein mattgold’nes, seidenes Haar
-3. Modern synger. "Gretchen ligger i kiste" / DIe Mutter singt
-4. Liden Kirsten. "Liden Kirsten hun sad så silde"
-5. Der skreg en fugl over øde hav / Es schrie ein Vogel
-6. Efter storm. "Bølgerne ruller så tungt ved nat" / Nach dem Sturm""" ;
+    cto:abstract "1. Bad i om en sang til vinen? / Heischt ihr Sang zum Weine?2. Ind i dit matgyldne solsilkehar / Dir in dein mattgold’nes, seidenes Haar3. Modern synger. \"Gretchen ligger i kiste\" / DIe Mutter singt4. Liden Kirsten. \"Liden Kirsten hun sad så silde\"5. Der skreg en fugl over øde hav / Es schrie ein Vogel6. Efter storm. \"Bølgerne ruller så tungt ved nat\" / Nach dem Sturm" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/117401234>,
         <https://d-nb.info/gnd/4035669-3> ;
     cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
     cto:relatedPerson <https://d-nb.info/gnd/117401234>,
         <https://viaf.org/viaf/64273550> ;
-    cto:title "Lieder, op. 18 (Sinding, Christian)" ;
-    cto:viaf <https://viaf.org/viaf/64273550> ;
-    schema:includedComposition <https://performance.musiconn.de/work/lieder-op-18-es-schrie-ein-vogel-sinding-christian> .
+    cto:viaf <https://viaf.org/viaf/64273550> .
 

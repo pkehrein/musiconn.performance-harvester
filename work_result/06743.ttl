@@ -1,19 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/himmelfahrtskantate-jcfb-f-3-b-bach-johann-christoph-friedrich> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/himmelfahrtskantate-jcfb-f-3-b-bach-johann-christoph-friedrich> ] .
 
-<https://performance.musiconn.de/work/himmelfahrtskantate-jcfb-f-3-b-bach-johann-christoph-friedrich> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/himmelfahrtskantate-jcfb-f-3-b-bach-johann-christoph-friedrich> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Himmelfahrtskantate, JCFB F 3 b (Bach, Johann Christoph Friedrich)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-2008-04-26> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Spätere Fassung
-Revidierung wohl nach 1783
-Kantate zu Christi Himmelfahrt""" ;
+    cto:abstract "Spätere FassungRevidierung wohl nach 1783Kantate zu Christi Himmelfahrt" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118651471>,
         <https://d-nb.info/gnd/1212749-8>,
@@ -35,12 +34,10 @@ Kantate zu Christi Himmelfahrt""" ;
         <https://viaf.org/viaf/312585420> ;
     cto:relatedPerson <https://d-nb.info/gnd/118651471>,
         <https://viaf.org/viaf/12490784> ;
-    cto:title "Himmelfahrtskantate, JCFB F 3 b (Bach, Johann Christoph Friedrich)" ;
     cto:viaf <https://viaf.org/viaf/12490784>,
         <https://viaf.org/viaf/126187501>,
         <https://viaf.org/viaf/136181816>,
         <https://viaf.org/viaf/136932986>,
         <https://viaf.org/viaf/150245159>,
-        <https://viaf.org/viaf/312585420> ;
-    schema:subjectOf <https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-2008-04-26> .
+        <https://viaf.org/viaf/312585420> .
 

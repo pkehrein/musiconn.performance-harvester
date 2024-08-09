@@ -1,15 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sonaten-klavier-nr-1-op-11-fis-moll-schumann-robert> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sonaten-klavier-nr-1-op-11-fis-moll-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/sonaten-klavier-nr-1-op-11-fis-moll-schumann-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sonaten-klavier-nr-1-op-11-fis-moll-schumann-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sonaten, Klavier, Nr. 1, op. 11 (fis-Moll) (Schumann, Robert)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/klaviersonate-fis-moll-arie-fassung-schumann-robert>,
+        <https://performance.musiconn.de/work/sonaten-klavier-nr-1-op-11-fis-moll-2-satz-schumann-robert> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/7-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1882-01-27-19-00>,
+        <https://performance.musiconn.de/event/8-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1873-02-03-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Gezählt als Sonate Nr. 1." ;
     cto:elementOf n4c:E5320 ;
@@ -61,7 +65,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/76501096>,
         <https://viaf.org/viaf/76509756>,
         <https://viaf.org/viaf/80871968> ;
-    cto:title "Sonaten, Klavier, Nr. 1, op. 11 (fis-Moll) (Schumann, Robert)" ;
     cto:viaf <https://viaf.org/viaf/10643494>,
         <https://viaf.org/viaf/119501326>,
         <https://viaf.org/viaf/171489290>,
@@ -75,9 +78,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/7575259>,
         <https://viaf.org/viaf/76501096>,
         <https://viaf.org/viaf/76509756>,
-        <https://viaf.org/viaf/80871968> ;
-    schema:includedComposition <https://performance.musiconn.de/work/klaviersonate-fis-moll-arie-fassung-schumann-robert>,
-        <https://performance.musiconn.de/work/sonaten-klavier-nr-1-op-11-fis-moll-2-satz-schumann-robert> ;
-    schema:subjectOf <https://performance.musiconn.de/event/7-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1882-01-27-19-00>,
-        <https://performance.musiconn.de/event/8-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1873-02-03-19-00> .
+        <https://viaf.org/viaf/80871968> .
 

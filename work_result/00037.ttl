@@ -1,15 +1,41 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/undine-lortzing-albert> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/undine-lortzing-albert> ] .
 
-<https://performance.musiconn.de/work/undine-lortzing-albert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/undine-lortzing-albert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Undine (Lortzing, Albert)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300556853>,
+        <https://performance.musiconn.de/work/undine-arrangiert-lortzing-albert>,
+        <https://performance.musiconn.de/work/undine-ballettmusik-lortzing-albert>,
+        <https://performance.musiconn.de/work/undine-ouvertuere-lortzing-albert>,
+        <https://performance.musiconn.de/work/undine-so-wisse-dass-in-allen-elementen-lortzing-albert>,
+        <https://performance.musiconn.de/work/undine-vater-mutter-schwestern-und-brueder-lortzing-albert>,
+        <https://viaf.org/viaf/203720649> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/undine-semperoper-dresden-1903-11-11-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1904-03-15-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1904-05-31-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1904-10-05-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1904-11-29-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1905-01-23-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1905-03-24-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1905-05-02-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1906-03-15-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1906-04-24-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1906-06-18-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1906-08-25-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1907-01-03-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1907-05-12-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1907-08-23-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1909-01-31-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1909-05-19-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1910-04-09-19-30>,
+        <https://performance.musiconn.de/event/undine-semperoper-dresden-1910-11-08-19-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Romantische Zauberoper" ;
     cto:elementOf n4c:E5320 ;
@@ -56,7 +82,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/6244149198265574940003> ;
     cto:relatedPerson <https://d-nb.info/gnd/118574469>,
         <https://viaf.org/viaf/24787785> ;
-    cto:title "Undine (Lortzing, Albert)" ;
     cto:viaf <https://viaf.org/viaf/133417057>,
         <https://viaf.org/viaf/139963964>,
         <https://viaf.org/viaf/140508251>,
@@ -70,31 +95,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/203720649>,
         <https://viaf.org/viaf/24787785>,
         <https://viaf.org/viaf/265126118>,
-        <https://viaf.org/viaf/6244149198265574940003> ;
-    schema:includedComposition <https://d-nb.info/gnd/300556853>,
-        <https://performance.musiconn.de/work/undine-arrangiert-lortzing-albert>,
-        <https://performance.musiconn.de/work/undine-ballettmusik-lortzing-albert>,
-        <https://performance.musiconn.de/work/undine-ouvertuere-lortzing-albert>,
-        <https://performance.musiconn.de/work/undine-so-wisse-dass-in-allen-elementen-lortzing-albert>,
-        <https://performance.musiconn.de/work/undine-vater-mutter-schwestern-und-brueder-lortzing-albert>,
-        <https://viaf.org/viaf/203720649> ;
-    schema:subjectOf <https://performance.musiconn.de/event/undine-semperoper-dresden-1903-11-11-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1904-03-15-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1904-05-31-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1904-10-05-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1904-11-29-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1905-01-23-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1905-03-24-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1905-05-02-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1906-03-15-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1906-04-24-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1906-06-18-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1906-08-25-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1907-01-03-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1907-05-12-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1907-08-23-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1909-01-31-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1909-05-19-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1910-04-09-19-30>,
-        <https://performance.musiconn.de/event/undine-semperoper-dresden-1910-11-08-19-30> .
+        <https://viaf.org/viaf/6244149198265574940003> .
 

@@ -1,18 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/zwei-kinderlieder-mit-klavier-balzer-helmar> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/zwei-kinderlieder-mit-klavier-balzer-helmar> ] .
 
-<https://performance.musiconn.de/work/zwei-kinderlieder-mit-klavier-balzer-helmar> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/zwei-kinderlieder-mit-klavier-balzer-helmar> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Zwei Kinderlieder mit Klavier (Balzer, Helmar)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1271838427>,
+        <https://performance.musiconn.de/work/im-riesenland-balzer-helmar>,
+        <https://viaf.org/viaf/3429166777265931940000> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Uraufführung 06.10.1976 in Rostock
-Titel: 1. Meine Mutti ist eine Seemannsfrau, 2. Im Riesenland""" ;
+    cto:abstract "Uraufführung 06.10.1976 in RostockTitel: 1. Meine Mutti ist eine Seemannsfrau, 2. Im Riesenland" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1271838427>,
         <https://d-nb.info/gnd/128235128>,
@@ -20,10 +22,6 @@ Titel: 1. Meine Mutti ist eine Seemannsfrau, 2. Im Riesenland""" ;
     cto:isPartOf <https://d-nb.info/gnd/4127870-7> ;
     cto:relatedPerson <https://d-nb.info/gnd/128235128>,
         <https://viaf.org/viaf/47808152> ;
-    cto:title "Zwei Kinderlieder mit Klavier (Balzer, Helmar)" ;
     cto:viaf <https://viaf.org/viaf/3429166777265931940000>,
-        <https://viaf.org/viaf/47808152> ;
-    schema:includedComposition <https://d-nb.info/gnd/1271838427>,
-        <https://performance.musiconn.de/work/im-riesenland-balzer-helmar>,
-        <https://viaf.org/viaf/3429166777265931940000> .
+        <https://viaf.org/viaf/47808152> .
 

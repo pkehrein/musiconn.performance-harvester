@@ -1,15 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gesaenge-aus-wilhelm-meister-lied-der-mignon-nr-1-schubert-franz> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gesaenge-aus-wilhelm-meister-lied-der-mignon-nr-1-schubert-franz> ] .
 
-<https://performance.musiconn.de/work/gesaenge-aus-wilhelm-meister-lied-der-mignon-nr-1-schubert-franz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gesaenge-aus-wilhelm-meister-lied-der-mignon-nr-1-schubert-franz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Gesänge aus \"Wilhelm Meister\". Lied der Mignon, Nr. 1 (Schubert, Franz)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/4-vereinskonzert-rathaus-muenster-westf-friedenssaal-1887-12-10>,
+        <https://performance.musiconn.de/event/zweites-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1897-11-07-17-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116673036>,
@@ -22,10 +24,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/29719275>,
         <https://viaf.org/viaf/54906413>,
         <https://viaf.org/viaf/797385> ;
-    cto:title "Gesänge aus \"Wilhelm Meister\". Lied der Mignon, Nr. 1 (Schubert, Franz)" ;
     cto:viaf <https://viaf.org/viaf/29719275>,
         <https://viaf.org/viaf/54906413>,
-        <https://viaf.org/viaf/797385> ;
-    schema:subjectOf <https://performance.musiconn.de/event/4-vereinskonzert-rathaus-muenster-westf-friedenssaal-1887-12-10>,
-        <https://performance.musiconn.de/event/zweites-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1897-11-07-17-30> .
+        <https://viaf.org/viaf/797385> .
 

@@ -1,15 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/geistliche-gesaenge-op-69-rheinberger-joseph> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/geistliche-gesaenge-op-69-rheinberger-joseph> ] .
 
-<https://performance.musiconn.de/work/geistliche-gesaenge-op-69-rheinberger-joseph> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/geistliche-gesaenge-op-69-rheinberger-joseph> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Geistliche Gesänge, op. 69 (Rheinberger, Joseph)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300129491>,
+        <https://d-nb.info/gnd/300129505>,
+        <https://performance.musiconn.de/work/geistliche-gesaenge-op-69-dein-sind-die-himmel-rheinberger-joseph>,
+        <https://performance.musiconn.de/work/geistliche-gesaenge-op-69-morgenlied-rheinberger-joseph>,
+        <https://viaf.org/viaf/180137789>,
+        <https://viaf.org/viaf/184614242> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "insgesamt 3 Gesänge, Chorbesetzung variiert (Nr. 1 und 3 SSATTB ; Nr. 2 SSATB)" ;
     cto:elementOf n4c:E5320 ;
@@ -18,14 +24,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://d-nb.info/gnd/300129505> ;
     cto:relatedPerson <https://d-nb.info/gnd/118744828>,
         <https://viaf.org/viaf/197428> ;
-    cto:title "Geistliche Gesänge, op. 69 (Rheinberger, Joseph)" ;
     cto:viaf <https://viaf.org/viaf/180137789>,
         <https://viaf.org/viaf/184614242>,
-        <https://viaf.org/viaf/197428> ;
-    schema:includedComposition <https://d-nb.info/gnd/300129491>,
-        <https://d-nb.info/gnd/300129505>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-69-dein-sind-die-himmel-rheinberger-joseph>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-69-morgenlied-rheinberger-joseph>,
-        <https://viaf.org/viaf/180137789>,
-        <https://viaf.org/viaf/184614242> .
+        <https://viaf.org/viaf/197428> .
 

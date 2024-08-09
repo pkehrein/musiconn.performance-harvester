@@ -1,19 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/burleske-fuer-blasorchester-1988-salnikow-georgi> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/burleske-fuer-blasorchester-1988-salnikow-georgi> ] .
 
-<https://performance.musiconn.de/work/burleske-fuer-blasorchester-1988-salnikow-georgi> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/burleske-fuer-blasorchester-1988-salnikow-georgi> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Burleske für Blasorchester (1988) (Salnikow, Georgi)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:relatedOrganization <https://viaf.org/viaf/142771781> ;
     cto:relatedPerson <https://performance.musiconn.de/person/salnikow-georgi> ;
-    cto:title "Burleske für Blasorchester (1988) (Salnikow, Georgi)" ;
     cto:viaf <https://viaf.org/viaf/142771781> .
 

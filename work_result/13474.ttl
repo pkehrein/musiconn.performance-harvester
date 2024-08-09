@@ -1,15 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/trauerchoere-cornelius-peter> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/trauerchoere-cornelius-peter> ] .
 
-<https://performance.musiconn.de/work/trauerchoere-cornelius-peter> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/trauerchoere-cornelius-peter> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Trauerchöre (Cornelius, Peter)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300268661>,
+        <https://performance.musiconn.de/work/trauerchoere-grablied-cornelius-peter>,
+        <https://performance.musiconn.de/work/trauerchoere-zwei-choere-cornelius-peter>,
+        <https://viaf.org/viaf/191501470> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Insgesamt 5 Chöre: 1. Ach wie nichtig 2. Nicht die Träne kann es sagen 3. Mitten wir im Leben sind 4. Grablied - Pilger auf Erden, so raste am Ziele 5. Von dem Dome, schwer und bang" ;
     cto:elementOf n4c:E5320 ;
@@ -17,11 +21,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://d-nb.info/gnd/300268661> ;
     cto:relatedPerson <https://d-nb.info/gnd/118522213>,
         <https://viaf.org/viaf/284144783062335772098> ;
-    cto:title "Trauerchöre (Cornelius, Peter)" ;
     cto:viaf <https://viaf.org/viaf/191501470>,
-        <https://viaf.org/viaf/284144783062335772098> ;
-    schema:includedComposition <https://d-nb.info/gnd/300268661>,
-        <https://performance.musiconn.de/work/trauerchoere-grablied-cornelius-peter>,
-        <https://performance.musiconn.de/work/trauerchoere-zwei-choere-cornelius-peter>,
-        <https://viaf.org/viaf/191501470> .
+        <https://viaf.org/viaf/284144783062335772098> .
 

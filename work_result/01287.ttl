@@ -1,52 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/cosi-fan-tutte-mozart-wolfgang-amadeus> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/cosi-fan-tutte-mozart-wolfgang-amadeus> ] .
 
-<https://performance.musiconn.de/work/cosi-fan-tutte-mozart-wolfgang-amadeus> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Oper in zwei Akten" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1044198230>,
-        <https://d-nb.info/gnd/1072662167>,
-        <https://d-nb.info/gnd/1074381807>,
-        <https://d-nb.info/gnd/1076493289>,
-        <https://d-nb.info/gnd/113189913X>,
-        <https://d-nb.info/gnd/118584596>,
-        <https://d-nb.info/gnd/1281646628>,
-        <https://d-nb.info/gnd/1317673891>,
-        <https://d-nb.info/gnd/300107358>,
-        <https://d-nb.info/gnd/300107366>,
-        <https://d-nb.info/gnd/300107382>,
-        <https://d-nb.info/gnd/300107390>,
-        <https://d-nb.info/gnd/300107404>,
-        <https://d-nb.info/gnd/4043582-9>,
-        <https://d-nb.info/gnd/4139331-4> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9>,
-        <https://d-nb.info/gnd/4139331-4> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/konservatorium-jena> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118584596>,
-        <https://viaf.org/viaf/32197206> ;
-    cto:title "Così fan tutte (Mozart, Wolfgang Amadeus)" ;
-    cto:viaf <https://viaf.org/viaf/174838931>,
-        <https://viaf.org/viaf/176429599>,
-        <https://viaf.org/viaf/176998749>,
-        <https://viaf.org/viaf/177606093>,
-        <https://viaf.org/viaf/179660001>,
-        <https://viaf.org/viaf/180437311>,
-        <https://viaf.org/viaf/181904281>,
-        <https://viaf.org/viaf/183700584>,
-        <https://viaf.org/viaf/315232786>,
-        <https://viaf.org/viaf/316501308>,
-        <https://viaf.org/viaf/32197206>,
-        <https://viaf.org/viaf/4277165271333510690001> ;
-    schema:includedComposition <https://d-nb.info/gnd/1044198230>,
+<https://performance.musiconn.de/work/cosi-fan-tutte-mozart-wolfgang-amadeus> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Così fan tutte (Mozart, Wolfgang Amadeus)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1044198230>,
         <https://d-nb.info/gnd/1072662167>,
         <https://d-nb.info/gnd/1074381807>,
         <https://d-nb.info/gnd/1076493289>,
@@ -88,9 +52,44 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/315232786>,
         <https://viaf.org/viaf/316501308>,
         <https://viaf.org/viaf/4277165271333510690001> ;
-    schema:subjectOf <https://performance.musiconn.de/event/82-vortragsabend-rosensaal-jena-1929-07-10-20-00>,
+    schema1:subjectOf <https://performance.musiconn.de/event/82-vortragsabend-rosensaal-jena-1929-07-10-20-00>,
         <https://performance.musiconn.de/event/cosi-fan-tutte-oder-frauentreue-koenigliches-hoftheater-dresden-1864-10-29-18-30>,
         <https://performance.musiconn.de/event/cosi-fan-tutte-oder-frauentreue-koenigliches-hoftheater-dresden-1864-11-01-18-30>,
         <https://performance.musiconn.de/event/cosi-fan-tutte-oder-frauentreue-koenigliches-hoftheater-dresden-1864-11-21-18-30>,
-        <https://performance.musiconn.de/event/zwinger-serenade-zwinger-dresden-1938-06-11-20-30> .
+        <https://performance.musiconn.de/event/zwinger-serenade-zwinger-dresden-1938-06-11-20-30> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "Oper in zwei Akten" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/1044198230>,
+        <https://d-nb.info/gnd/1072662167>,
+        <https://d-nb.info/gnd/1074381807>,
+        <https://d-nb.info/gnd/1076493289>,
+        <https://d-nb.info/gnd/113189913X>,
+        <https://d-nb.info/gnd/118584596>,
+        <https://d-nb.info/gnd/1281646628>,
+        <https://d-nb.info/gnd/1317673891>,
+        <https://d-nb.info/gnd/300107358>,
+        <https://d-nb.info/gnd/300107366>,
+        <https://d-nb.info/gnd/300107382>,
+        <https://d-nb.info/gnd/300107390>,
+        <https://d-nb.info/gnd/300107404>,
+        <https://d-nb.info/gnd/4043582-9>,
+        <https://d-nb.info/gnd/4139331-4> ;
+    cto:isPartOf <https://d-nb.info/gnd/4043582-9>,
+        <https://d-nb.info/gnd/4139331-4> ;
+    cto:relatedOrganization <https://performance.musiconn.de/corporation/konservatorium-jena> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118584596>,
+        <https://viaf.org/viaf/32197206> ;
+    cto:viaf <https://viaf.org/viaf/174838931>,
+        <https://viaf.org/viaf/176429599>,
+        <https://viaf.org/viaf/176998749>,
+        <https://viaf.org/viaf/177606093>,
+        <https://viaf.org/viaf/179660001>,
+        <https://viaf.org/viaf/180437311>,
+        <https://viaf.org/viaf/181904281>,
+        <https://viaf.org/viaf/183700584>,
+        <https://viaf.org/viaf/315232786>,
+        <https://viaf.org/viaf/316501308>,
+        <https://viaf.org/viaf/32197206>,
+        <https://viaf.org/viaf/4277165271333510690001> .
 

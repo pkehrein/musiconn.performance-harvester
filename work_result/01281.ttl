@@ -1,15 +1,31 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lucia-di-lammermoor-donizetti-gaetano> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lucia-di-lammermoor-donizetti-gaetano> ] .
 
-<https://performance.musiconn.de/work/lucia-di-lammermoor-donizetti-gaetano> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lucia-di-lammermoor-donizetti-gaetano> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Lucia di Lammermoor (Donizetti, Gaetano)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1193091284>,
+        <https://performance.musiconn.de/work/lucia-di-lammermoor-arie-bearbeitung-fuer-posaune-donizetti-gaetano>,
+        <https://performance.musiconn.de/work/lucia-di-lammermoor-arie-donizetti-gaetano>,
+        <https://performance.musiconn.de/work/lucia-di-lammermoor-chi-raffrena-il-mio-furore-donizetti-gaetano>,
+        <https://performance.musiconn.de/work/lucia-di-lammermoor-die-kerzen-leuchten-donizetti-gaetano>,
+        <https://performance.musiconn.de/work/lucia-di-lammermoor-duett-donizetti-gaetano>,
+        <https://performance.musiconn.de/work/lucia-di-lammermoor-kavatine-donizetti-gaetano> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/lucia-von-lammermoor-interimstheater-am-zwingerwall-dresden-1877-06-15-19-00>,
+        <https://performance.musiconn.de/event/lucia-von-lammermoor-koenigliches-hoftheater-dresden-1860-12-15-18-00>,
+        <https://performance.musiconn.de/event/lucia-von-lammermoor-koenigliches-hoftheater-dresden-1862-06-13-18-30>,
+        <https://performance.musiconn.de/event/lucia-von-lammermoor-koenigliches-hoftheater-dresden-1864-04-27-18-30>,
+        <https://performance.musiconn.de/event/lucia-von-lammermoor-koenigliches-hoftheater-dresden-1878-09-23-19-00>,
+        <https://performance.musiconn.de/event/lucia-von-lammermoor-semperoper-dresden-1878-11-21-19-00>,
+        <https://performance.musiconn.de/event/lucia-von-lammermoor-semperoper-dresden-1878-12-21-19-00>,
+        <https://performance.musiconn.de/event/lucia-von-lammermoor-semperoper-dresden-1879-02-22-18-30>,
+        <https://performance.musiconn.de/event/lucia-von-lammermoor-semperoper-dresden-1879-04-01-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118526731>,
@@ -21,23 +37,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/158420977> ;
     cto:relatedPerson <https://d-nb.info/gnd/118526731>,
         <https://viaf.org/viaf/74037336> ;
-    cto:title "Lucia di Lammermoor (Donizetti, Gaetano)" ;
     cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/74037336> ;
-    schema:includedComposition <https://d-nb.info/gnd/1193091284>,
-        <https://performance.musiconn.de/work/lucia-di-lammermoor-arie-bearbeitung-fuer-posaune-donizetti-gaetano>,
-        <https://performance.musiconn.de/work/lucia-di-lammermoor-arie-donizetti-gaetano>,
-        <https://performance.musiconn.de/work/lucia-di-lammermoor-chi-raffrena-il-mio-furore-donizetti-gaetano>,
-        <https://performance.musiconn.de/work/lucia-di-lammermoor-die-kerzen-leuchten-donizetti-gaetano>,
-        <https://performance.musiconn.de/work/lucia-di-lammermoor-duett-donizetti-gaetano>,
-        <https://performance.musiconn.de/work/lucia-di-lammermoor-kavatine-donizetti-gaetano> ;
-    schema:subjectOf <https://performance.musiconn.de/event/lucia-von-lammermoor-interimstheater-am-zwingerwall-dresden-1877-06-15-19-00>,
-        <https://performance.musiconn.de/event/lucia-von-lammermoor-koenigliches-hoftheater-dresden-1860-12-15-18-00>,
-        <https://performance.musiconn.de/event/lucia-von-lammermoor-koenigliches-hoftheater-dresden-1862-06-13-18-30>,
-        <https://performance.musiconn.de/event/lucia-von-lammermoor-koenigliches-hoftheater-dresden-1864-04-27-18-30>,
-        <https://performance.musiconn.de/event/lucia-von-lammermoor-koenigliches-hoftheater-dresden-1878-09-23-19-00>,
-        <https://performance.musiconn.de/event/lucia-von-lammermoor-semperoper-dresden-1878-11-21-19-00>,
-        <https://performance.musiconn.de/event/lucia-von-lammermoor-semperoper-dresden-1878-12-21-19-00>,
-        <https://performance.musiconn.de/event/lucia-von-lammermoor-semperoper-dresden-1879-02-22-18-30>,
-        <https://performance.musiconn.de/event/lucia-von-lammermoor-semperoper-dresden-1879-04-01-19-00> .
+        <https://viaf.org/viaf/74037336> .
 

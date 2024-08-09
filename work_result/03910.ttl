@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-8-haydn-joseph> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-8-haydn-joseph> ] .
 
-<https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-8-haydn-joseph> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-8-haydn-joseph> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sinfonien, Hob 1 93-104. Nr. 8 (Haydn, Joseph)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/fuenftes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1896-12-13-17-30>,
+        <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1886-12-11-19-30>,
+        <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1890-03-01-19-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1078514259>,
@@ -47,7 +50,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/8413148122912495200001> ;
     cto:relatedPerson <https://d-nb.info/gnd/118547356>,
         <https://viaf.org/viaf/95146280> ;
-    cto:title "Sinfonien, Hob 1 93-104. Nr. 8 (Haydn, Joseph)" ;
     cto:viaf <https://viaf.org/viaf/131976266>,
         <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/136181816>,
@@ -57,8 +59,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/263538429>,
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/8413148122912495200001>,
-        <https://viaf.org/viaf/95146280> ;
-    schema:subjectOf <https://performance.musiconn.de/event/fuenftes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1896-12-13-17-30>,
-        <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1886-12-11-19-30>,
-        <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1890-03-01-19-30> .
+        <https://viaf.org/viaf/95146280> .
 

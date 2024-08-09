@@ -1,15 +1,29 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sinfonien-nr-4-op-60-b-dur-beethoven-ludwig-van> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sinfonien-nr-4-op-60-b-dur-beethoven-ludwig-van> ] .
 
-<https://performance.musiconn.de/work/sinfonien-nr-4-op-60-b-dur-beethoven-ludwig-van> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sinfonien-nr-4-op-60-b-dur-beethoven-ludwig-van> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sinfonien, Nr. 4, op. 60 (B-Dur) (Beethoven, Ludwig van)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/1-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1904-10-14-19-00>,
+        <https://performance.musiconn.de/event/4-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1907-01-25-19-00>,
+        <https://performance.musiconn.de/event/5-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1911-02-24-19-30>,
+        <https://performance.musiconn.de/event/6-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-12-17-18-30>,
+        <https://performance.musiconn.de/event/7-museums-concert-grosser-konzertsaal-frankfurt-a-m-1867-01-04-18-30>,
+        <https://performance.musiconn.de/event/9-museums-concert-grosser-konzertsaal-frankfurt-a-m-1865-02-10-18-30>,
+        <https://performance.musiconn.de/event/achtes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1882-01-20-18-30>,
+        <https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1877-11-09>,
+        <https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1892-11-18-18-30>,
+        <https://performance.musiconn.de/event/erstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1873-10-10-18-30>,
+        <https://performance.musiconn.de/event/erstes-museumsconcert-grosser-konzertsaal-frankfurt-a-m-1861-11-22-18-30>,
+        <https://performance.musiconn.de/event/fuenftes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1896-12-11-19-00>,
+        <https://performance.musiconn.de/event/neuntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1891-01-30-18-30>,
+        <https://performance.musiconn.de/event/zweites-museums-concert-grosser-konzertsaal-frankfurt-a-m-1879-10-24> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1021524-4>,
@@ -72,7 +86,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/45144814273718687574> ;
     cto:relatedPerson <https://d-nb.info/gnd/118508288>,
         <https://viaf.org/viaf/32182557> ;
-    cto:title "Sinfonien, Nr. 4, op. 60 (B-Dur) (Beethoven, Ludwig van)" ;
     cto:viaf <https://viaf.org/viaf/1146953186915490338>,
         <https://viaf.org/viaf/127659266>,
         <https://viaf.org/viaf/131976266>,
@@ -90,19 +103,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/32182557>,
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/435144783046765467239>,
-        <https://viaf.org/viaf/45144814273718687574> ;
-    schema:subjectOf <https://performance.musiconn.de/event/1-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1904-10-14-19-00>,
-        <https://performance.musiconn.de/event/4-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1907-01-25-19-00>,
-        <https://performance.musiconn.de/event/5-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1911-02-24-19-30>,
-        <https://performance.musiconn.de/event/6-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-12-17-18-30>,
-        <https://performance.musiconn.de/event/7-museums-concert-grosser-konzertsaal-frankfurt-a-m-1867-01-04-18-30>,
-        <https://performance.musiconn.de/event/9-museums-concert-grosser-konzertsaal-frankfurt-a-m-1865-02-10-18-30>,
-        <https://performance.musiconn.de/event/achtes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1882-01-20-18-30>,
-        <https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1877-11-09>,
-        <https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1892-11-18-18-30>,
-        <https://performance.musiconn.de/event/erstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1873-10-10-18-30>,
-        <https://performance.musiconn.de/event/erstes-museumsconcert-grosser-konzertsaal-frankfurt-a-m-1861-11-22-18-30>,
-        <https://performance.musiconn.de/event/fuenftes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1896-12-11-19-00>,
-        <https://performance.musiconn.de/event/neuntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1891-01-30-18-30>,
-        <https://performance.musiconn.de/event/zweites-museums-concert-grosser-konzertsaal-frankfurt-a-m-1879-10-24> .
+        <https://viaf.org/viaf/45144814273718687574> .
 

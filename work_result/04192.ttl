@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/l-allegro-il-penseroso-ed-il-moderato-arie-haendel-georg-friedrich> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/l-allegro-il-penseroso-ed-il-moderato-arie-haendel-georg-friedrich> ] .
 
-<https://performance.musiconn.de/work/l-allegro-il-penseroso-ed-il-moderato-arie-haendel-georg-friedrich> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/l-allegro-il-penseroso-ed-il-moderato-arie-haendel-georg-friedrich> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "L' allegro, il penseroso ed il moderato. Arie (Händel, Georg Friedrich)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/concert-des-universitaets-saengervereins-zu-st-pauli-semperoper-dresden-1901-11-29-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118544489>,
@@ -20,8 +21,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/221396927> ;
     cto:relatedPerson <https://d-nb.info/gnd/118544489>,
         <https://viaf.org/viaf/5126950> ;
-    cto:title "L' allegro, il penseroso ed il moderato. Arie (Händel, Georg Friedrich)" ;
     cto:viaf <https://viaf.org/viaf/221396927>,
-        <https://viaf.org/viaf/5126950> ;
-    schema:subjectOf <https://performance.musiconn.de/event/concert-des-universitaets-saengervereins-zu-st-pauli-semperoper-dresden-1901-11-29-19-00> .
+        <https://viaf.org/viaf/5126950> .
 

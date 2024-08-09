@@ -1,15 +1,26 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/messen-op-123-d-dur-beethoven-ludwig-van> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/messen-op-123-d-dur-beethoven-ludwig-van> ] .
 
-<https://performance.musiconn.de/work/messen-op-123-d-dur-beethoven-ludwig-van> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/messen-op-123-d-dur-beethoven-ludwig-van> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Messen, op. 123 (D-Dur) (Beethoven, Ludwig van)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1055958371>,
+        <https://d-nb.info/gnd/1076093973>,
+        <https://d-nb.info/gnd/1079034994>,
+        <https://performance.musiconn.de/work/messen-op-123-benedictus-beethoven-ludwig-van>,
+        <https://performance.musiconn.de/work/messen-op-123-d-dur-auswahl-beethoven-ludwig-van>,
+        <https://performance.musiconn.de/work/messen-op-123-d-dur-kyrie-beethoven-ludwig-van>,
+        <https://performance.musiconn.de/work/messen-op-123-sanctus-beethoven-ludwig-van>,
+        <https://viaf.org/viaf/179213000>,
+        <https://viaf.org/viaf/184434982>,
+        <https://viaf.org/viaf/184838180> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/grosse-musikauffuehrung-semperoper-dresden-1879-04-06-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10003121-3>,
@@ -152,7 +163,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/9092155226732584490006> ;
     cto:relatedPerson <https://d-nb.info/gnd/118508288>,
         <https://viaf.org/viaf/32182557> ;
-    cto:title "Messen, op. 123 (D-Dur) (Beethoven, Ludwig van)" ;
     cto:viaf <https://viaf.org/viaf/1146953186915490338>,
         <https://viaf.org/viaf/122707566>,
         <https://viaf.org/viaf/122849633>,
@@ -196,16 +206,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/435144783046765467239>,
         <https://viaf.org/viaf/45144814273718687574>,
         <https://viaf.org/viaf/8413148122912495200001>,
-        <https://viaf.org/viaf/9092155226732584490006> ;
-    schema:includedComposition <https://d-nb.info/gnd/1055958371>,
-        <https://d-nb.info/gnd/1076093973>,
-        <https://d-nb.info/gnd/1079034994>,
-        <https://performance.musiconn.de/work/messen-op-123-benedictus-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/messen-op-123-d-dur-auswahl-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/messen-op-123-d-dur-kyrie-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/messen-op-123-sanctus-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/179213000>,
-        <https://viaf.org/viaf/184434982>,
-        <https://viaf.org/viaf/184838180> ;
-    schema:subjectOf <https://performance.musiconn.de/event/grosse-musikauffuehrung-semperoper-dresden-1879-04-06-19-00> .
+        <https://viaf.org/viaf/9092155226732584490006> .
 

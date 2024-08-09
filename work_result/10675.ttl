@@ -1,18 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lapprenti-sorcier-dukas-paul> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lapprenti-sorcier-dukas-paul> ] .
 
-<https://performance.musiconn.de/work/lapprenti-sorcier-dukas-paul> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lapprenti-sorcier-dukas-paul> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "L'apprenti sorcier (Dukas, Paul)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Uraufführung Paris 1897
-Scherzo d’après une ballade de Goethe""" ;
+    cto:abstract "Uraufführung Paris 1897Scherzo d’après une ballade de Goethe" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10306186-1>,
         <https://d-nb.info/gnd/10321010-6>,
@@ -56,7 +55,6 @@ Scherzo d’après une ballade de Goethe""" ;
         <https://viaf.org/viaf/45144814273718687574> ;
     cto:relatedPerson <https://d-nb.info/gnd/119174049>,
         <https://viaf.org/viaf/42025062> ;
-    cto:title "L'apprenti sorcier (Dukas, Paul)" ;
     cto:viaf <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/136181816>,
         <https://viaf.org/viaf/145619260>,

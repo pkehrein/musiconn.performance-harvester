@@ -1,15 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sonaten-violine-2-basso-continuo-gluck-christoph-willibald> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sonaten-violine-2-basso-continuo-gluck-christoph-willibald> ] .
 
-<https://performance.musiconn.de/work/sonaten-violine-2-basso-continuo-gluck-christoph-willibald> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sonaten-violine-2-basso-continuo-gluck-christoph-willibald> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sonaten, Violine (2), Basso continuo (Gluck, Christoph Willibald)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1197552235>,
+        <https://performance.musiconn.de/work/sonaten-violine-2-basso-contino-w-c-1-nr-1-gluck-christoph-willibald> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118539841>,
@@ -18,8 +20,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4131190-5> ;
     cto:relatedPerson <https://d-nb.info/gnd/118539841>,
         <https://viaf.org/viaf/37101876> ;
-    cto:title "Sonaten, Violine (2), Basso continuo (Gluck, Christoph Willibald)" ;
-    cto:viaf <https://viaf.org/viaf/37101876> ;
-    schema:includedComposition <https://d-nb.info/gnd/1197552235>,
-        <https://performance.musiconn.de/work/sonaten-violine-2-basso-contino-w-c-1-nr-1-gluck-christoph-willibald> .
+    cto:viaf <https://viaf.org/viaf/37101876> .
 

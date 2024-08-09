@@ -1,15 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/quintette-violine-2-viola-violoncello-2-d-956-c-dur-schubert-franz> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/quintette-violine-2-viola-violoncello-2-d-956-c-dur-schubert-franz> ] .
 
-<https://performance.musiconn.de/work/quintette-violine-2-viola-violoncello-2-d-956-c-dur-schubert-franz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/quintette-violine-2-viola-violoncello-2-d-956-c-dur-schubert-franz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Quintette, Violine (2), Viola, Violoncello (2), D 956 (C-Dur) (Schubert, Franz)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/2ter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1871-10-30-19-00>,
+        <https://performance.musiconn.de/event/3-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1881-11-11-19-00>,
+        <https://performance.musiconn.de/event/erster-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1878-10-14-19-00>,
+        <https://performance.musiconn.de/event/vierter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1893-12-08-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10185429-8>,
@@ -66,7 +70,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/2663147312820737970006> ;
     cto:relatedPerson <https://d-nb.info/gnd/118610961>,
         <https://viaf.org/viaf/29719275> ;
-    cto:title "Quintette, Violine (2), Viola, Violoncello (2), D 956 (C-Dur) (Schubert, Franz)" ;
     cto:viaf <https://viaf.org/viaf/121015775>,
         <https://viaf.org/viaf/121317491>,
         <https://viaf.org/viaf/129514022>,
@@ -82,9 +85,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/159059175>,
         <https://viaf.org/viaf/262633363>,
         <https://viaf.org/viaf/2663147312820737970006>,
-        <https://viaf.org/viaf/29719275> ;
-    schema:subjectOf <https://performance.musiconn.de/event/2ter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1871-10-30-19-00>,
-        <https://performance.musiconn.de/event/3-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1881-11-11-19-00>,
-        <https://performance.musiconn.de/event/erster-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1878-10-14-19-00>,
-        <https://performance.musiconn.de/event/vierter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1893-12-08-19-00> .
+        <https://viaf.org/viaf/29719275> .
 

@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lied-der-mignon-schubert-franz> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lied-der-mignon-schubert-franz> ] .
 
-<https://performance.musiconn.de/work/lied-der-mignon-schubert-franz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lied-der-mignon-schubert-franz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Lied der Mignon (Schubert, Franz)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/drittes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1896-11-08-17-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Unklar, welches von Schubert" ;
     cto:elementOf n4c:E5320 ;
@@ -39,13 +40,11 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/37665614>,
         <https://viaf.org/viaf/4442155105822276320000>,
         <https://viaf.org/viaf/57364236> ;
-    cto:title "Lied der Mignon (Schubert, Franz)" ;
     cto:viaf <https://viaf.org/viaf/10600886>,
         <https://viaf.org/viaf/147151246508644130118>,
         <https://viaf.org/viaf/233309256>,
         <https://viaf.org/viaf/29719275>,
         <https://viaf.org/viaf/37665614>,
         <https://viaf.org/viaf/4442155105822276320000>,
-        <https://viaf.org/viaf/57364236> ;
-    schema:subjectOf <https://performance.musiconn.de/event/drittes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1896-11-08-17-30> .
+        <https://viaf.org/viaf/57364236> .
 

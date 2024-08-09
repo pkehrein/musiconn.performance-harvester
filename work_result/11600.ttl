@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-singstimme-klavier-op-38-foerster-alban> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-singstimme-klavier-op-38-foerster-alban> ] .
 
-<https://performance.musiconn.de/work/lieder-singstimme-klavier-op-38-foerster-alban> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-singstimme-klavier-op-38-foerster-alban> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Lieder, Singstimme, Klavier, op. 38 (Förster, Alban)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/lieder-singstimme-klavier-op-38-abendfried-foerster-alban> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Umfasst 4 Lieder: Abendfried, Ohn' Ade, Im Wunderbuch, Wanderlied" ;
     cto:elementOf n4c:E5320 ;
@@ -18,7 +19,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
     cto:relatedPerson <https://d-nb.info/gnd/116636068>,
         <https://viaf.org/viaf/15525241> ;
-    cto:title "Lieder, Singstimme, Klavier, op. 38 (Förster, Alban)" ;
-    cto:viaf <https://viaf.org/viaf/15525241> ;
-    schema:includedComposition <https://performance.musiconn.de/work/lieder-singstimme-klavier-op-38-abendfried-foerster-alban> .
+    cto:viaf <https://viaf.org/viaf/15525241> .
 

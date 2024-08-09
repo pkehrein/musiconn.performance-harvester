@@ -1,15 +1,29 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/ein-deutsches-requiem-brahms-johannes> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/ein-deutsches-requiem-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/ein-deutsches-requiem-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/ein-deutsches-requiem-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Ein deutsches Requiem (Brahms, Johannes)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1235247554>,
+        <https://d-nb.info/gnd/300024991>,
+        <https://d-nb.info/gnd/300025009>,
+        <https://d-nb.info/gnd/300553633>,
+        <https://performance.musiconn.de/work/ein-deutsches-requiem-2-chor-brahms-johannes>,
+        <https://performance.musiconn.de/work/ein-deutsches-requiem-auswahl-brahms-johannes>,
+        <https://performance.musiconn.de/work/ein-deutsches-requiem-ihr-habt-nun-traurigkeit-brahms-johannes>,
+        <https://performance.musiconn.de/work/ein-deutsches-requiem-selig-sind-die-da-leid-tragen-brahms-johannes>,
+        <https://performance.musiconn.de/work/ein-deutsches-requiem-selig-sind-die-toten-brahms-johannes>,
+        <https://performance.musiconn.de/work/ein-deutsches-requiem-wie-lieblich-sind-deine-wohnungen-brahms-johannes>,
+        <https://viaf.org/viaf/177065907>,
+        <https://viaf.org/viaf/179122499>,
+        <https://viaf.org/viaf/180034910> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/zwoelftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1888-03-23-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10046898-6>,
@@ -164,7 +178,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/45144814273718687574> ;
     cto:relatedPerson <https://d-nb.info/gnd/118514253>,
         <https://viaf.org/viaf/7573295> ;
-    cto:title "Ein deutsches Requiem (Brahms, Johannes)" ;
     cto:viaf <https://viaf.org/viaf/122707566>,
         <https://viaf.org/viaf/122849633>,
         <https://viaf.org/viaf/122854367>,
@@ -210,19 +223,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/435144783046765467239>,
         <https://viaf.org/viaf/45144814273718687574>,
-        <https://viaf.org/viaf/7573295> ;
-    schema:includedComposition <https://d-nb.info/gnd/1235247554>,
-        <https://d-nb.info/gnd/300024991>,
-        <https://d-nb.info/gnd/300025009>,
-        <https://d-nb.info/gnd/300553633>,
-        <https://performance.musiconn.de/work/ein-deutsches-requiem-2-chor-brahms-johannes>,
-        <https://performance.musiconn.de/work/ein-deutsches-requiem-auswahl-brahms-johannes>,
-        <https://performance.musiconn.de/work/ein-deutsches-requiem-ihr-habt-nun-traurigkeit-brahms-johannes>,
-        <https://performance.musiconn.de/work/ein-deutsches-requiem-selig-sind-die-da-leid-tragen-brahms-johannes>,
-        <https://performance.musiconn.de/work/ein-deutsches-requiem-selig-sind-die-toten-brahms-johannes>,
-        <https://performance.musiconn.de/work/ein-deutsches-requiem-wie-lieblich-sind-deine-wohnungen-brahms-johannes>,
-        <https://viaf.org/viaf/177065907>,
-        <https://viaf.org/viaf/179122499>,
-        <https://viaf.org/viaf/180034910> ;
-    schema:subjectOf <https://performance.musiconn.de/event/zwoelftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1888-03-23-18-30> .
+        <https://viaf.org/viaf/7573295> .
 

@@ -1,18 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/minnelied-brahms-johannes> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/minnelied-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/minnelied-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/minnelied-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Minnelied (Brahms, Johannes)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Unklar, welches Minnelied gemeint ist.
-Möglicherweise aus op. 44, 71 oder WoO 37""" ;
+    cto:abstract "Unklar, welches Minnelied gemeint ist.Möglicherweise aus op. 44, 71 oder WoO 37" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116719710>,
         <https://d-nb.info/gnd/1170370160>,
@@ -35,7 +34,6 @@ Möglicherweise aus op. 44, 71 oder WoO 37""" ;
         <https://viaf.org/viaf/49311236>,
         <https://viaf.org/viaf/5553154137645115370006>,
         <https://viaf.org/viaf/7573295> ;
-    cto:title "Minnelied (Brahms, Johannes)" ;
     cto:viaf <https://viaf.org/viaf/17413290>,
         <https://viaf.org/viaf/21801746>,
         <https://viaf.org/viaf/29619926>,

@@ -1,15 +1,30 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/chromatische-fantasie-und-fuge-bach-johann-sebastian> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/chromatische-fantasie-und-fuge-bach-johann-sebastian> ] .
 
-<https://performance.musiconn.de/work/chromatische-fantasie-und-fuge-bach-johann-sebastian> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/chromatische-fantasie-und-fuge-bach-johann-sebastian> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Chromatische Fantasie und Fuge (Bach, Johann Sebastian)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300714734>,
+        <https://performance.musiconn.de/work/chromatische-fantasie-und-fuge-fantasia-bach-johann-sebastian> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/6-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1936-01-28-20-00>,
+        <https://performance.musiconn.de/event/7-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1861-01-29>,
+        <https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1885-02-24>,
+        <https://performance.musiconn.de/event/abokonzert-8-zweites-gewandhaus-leipzig-1893-11-30>,
+        <https://performance.musiconn.de/event/cembalomusik-porzellansammlung-dresden-1985-10-12-16-00>,
+        <https://performance.musiconn.de/event/claviervortrag-des-herrn-ignaz-paderewski-zum-besten-der-errichtung-eine-liszt-denkmals-in-weimar-ehemaliger-krystallpalast-leipzig-alberthalle-1895-02-19>,
+        <https://performance.musiconn.de/event/fuenfte-kammermusik-grosser-konzertsaal-frankfurt-a-m-1940-01-12-19-30>,
+        <https://performance.musiconn.de/event/fuenftes-akademisches-konzert-volkshaus-jena-saal-1936-01-21-20-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1867-05-09-18-00>,
+        <https://performance.musiconn.de/event/klavierabend-rosensaal-jena-1929-02-26-20-00>,
+        <https://performance.musiconn.de/event/klavierabend-rosensaal-jena-1931-02-25-20-00>,
+        <https://performance.musiconn.de/event/neunter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1908-02-28-19-00>,
+        <https://performance.musiconn.de/event/neuntes-abonnement-concert-erstes-gewandhaus-leipzig-1881-12-08> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116704268>,
@@ -55,7 +70,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/78134609>,
         <https://viaf.org/viaf/8146481>,
         <https://viaf.org/viaf/8743165326504016290001> ;
-    cto:title "Chromatische Fantasie und Fuge (Bach, Johann Sebastian)" ;
     cto:viaf <https://viaf.org/viaf/12304462>,
         <https://viaf.org/viaf/12494112>,
         <https://viaf.org/viaf/171192594>,
@@ -67,20 +81,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/76501096>,
         <https://viaf.org/viaf/78134609>,
         <https://viaf.org/viaf/8146481>,
-        <https://viaf.org/viaf/8743165326504016290001> ;
-    schema:includedComposition <https://d-nb.info/gnd/300714734>,
-        <https://performance.musiconn.de/work/chromatische-fantasie-und-fuge-fantasia-bach-johann-sebastian> ;
-    schema:subjectOf <https://performance.musiconn.de/event/6-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1936-01-28-20-00>,
-        <https://performance.musiconn.de/event/7-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1861-01-29>,
-        <https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1885-02-24>,
-        <https://performance.musiconn.de/event/abokonzert-8-zweites-gewandhaus-leipzig-1893-11-30>,
-        <https://performance.musiconn.de/event/cembalomusik-porzellansammlung-dresden-1985-10-12-16-00>,
-        <https://performance.musiconn.de/event/claviervortrag-des-herrn-ignaz-paderewski-zum-besten-der-errichtung-eine-liszt-denkmals-in-weimar-ehemaliger-krystallpalast-leipzig-alberthalle-1895-02-19>,
-        <https://performance.musiconn.de/event/fuenfte-kammermusik-grosser-konzertsaal-frankfurt-a-m-1940-01-12-19-30>,
-        <https://performance.musiconn.de/event/fuenftes-akademisches-konzert-volkshaus-jena-saal-1936-01-21-20-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1867-05-09-18-00>,
-        <https://performance.musiconn.de/event/klavierabend-rosensaal-jena-1929-02-26-20-00>,
-        <https://performance.musiconn.de/event/klavierabend-rosensaal-jena-1931-02-25-20-00>,
-        <https://performance.musiconn.de/event/neunter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1908-02-28-19-00>,
-        <https://performance.musiconn.de/event/neuntes-abonnement-concert-erstes-gewandhaus-leipzig-1881-12-08> .
+        <https://viaf.org/viaf/8743165326504016290001> .
 

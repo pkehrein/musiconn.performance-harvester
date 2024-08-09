@@ -1,15 +1,28 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-3-op-60-g-moll-allegro-moderato-moscheles-ignaz> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-3-op-60-g-moll-allegro-moderato-moscheles-ignaz> ] .
 
-<https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-3-op-60-g-moll-allegro-moderato-moscheles-ignaz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-3-op-60-g-moll-allegro-moderato-moscheles-ignaz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Konzerte, Klavier, Orchester, Nr. 3, op. 60 (g-Moll). Allegro moderato (Moscheles, Ignaz)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1865-04-27-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1867-05-02-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1871-05-06-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1872-04-17-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1872-05-07-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1873-05-08-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1873-05-17-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1873-05-27-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-des-conservatoriums-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1856-03-10-18-00>,
+        <https://performance.musiconn.de/event/haupt-pruefung-im-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1862-03-23-18-00>,
+        <https://performance.musiconn.de/event/hauptpruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1853-04-10-10-30>,
+        <https://performance.musiconn.de/event/hauptpruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1869-04-08-18-00>,
+        <https://performance.musiconn.de/event/hauptpruefung-am-koeniglichen-konservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1876-05-24-18-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/117002097>,
@@ -52,7 +65,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/92165930954468530007>,
         <https://viaf.org/viaf/9416165709993449380000>,
         <https://viaf.org/viaf/9829165272018510690002> ;
-    cto:title "Konzerte, Klavier, Orchester, Nr. 3, op. 60 (g-Moll). Allegro moderato (Moscheles, Ignaz)" ;
     cto:viaf <https://viaf.org/viaf/1332165326488216290002>,
         <https://viaf.org/viaf/1807165750881354220003>,
         <https://viaf.org/viaf/2420165814900359860002>,
@@ -64,18 +76,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/7945154198377720230000>,
         <https://viaf.org/viaf/92165930954468530007>,
         <https://viaf.org/viaf/9416165709993449380000>,
-        <https://viaf.org/viaf/9829165272018510690002> ;
-    schema:subjectOf <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1865-04-27-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1867-05-02-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1871-05-06-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1872-04-17-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1872-05-07-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1873-05-08-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1873-05-17-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1873-05-27-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-des-conservatoriums-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1856-03-10-18-00>,
-        <https://performance.musiconn.de/event/haupt-pruefung-im-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1862-03-23-18-00>,
-        <https://performance.musiconn.de/event/hauptpruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1853-04-10-10-30>,
-        <https://performance.musiconn.de/event/hauptpruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1869-04-08-18-00>,
-        <https://performance.musiconn.de/event/hauptpruefung-am-koeniglichen-konservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1876-05-24-18-00> .
+        <https://viaf.org/viaf/9829165272018510690002> .
 

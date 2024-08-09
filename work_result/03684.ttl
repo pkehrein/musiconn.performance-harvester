@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/aline-reine-de-golconde-chaconne-et-rigodon-monsigny-pierre-alexandre> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/aline-reine-de-golconde-chaconne-et-rigodon-monsigny-pierre-alexandre> ] .
 
-<https://performance.musiconn.de/work/aline-reine-de-golconde-chaconne-et-rigodon-monsigny-pierre-alexandre> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/aline-reine-de-golconde-chaconne-et-rigodon-monsigny-pierre-alexandre> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Aline, reine de Golconde. Chaconne et Rigodon (Monsigny, Pierre-Alexandre)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/viertes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1894-12-02-17-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/100552641>,
@@ -28,10 +29,8 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545> ;
     cto:relatedPerson <https://d-nb.info/gnd/100552641>,
         <https://viaf.org/viaf/76459455> ;
-    cto:title "Aline, reine de Golconde. Chaconne et Rigodon (Monsigny, Pierre-Alexandre)" ;
     cto:viaf <https://viaf.org/viaf/131976266>,
         <https://viaf.org/viaf/161076872>,
         <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/76459455> ;
-    schema:subjectOf <https://performance.musiconn.de/event/viertes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1894-12-02-17-30> .
+        <https://viaf.org/viaf/76459455> .
 

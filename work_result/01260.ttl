@@ -1,15 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lucrezia-borgia-donizetti-gaetano> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lucrezia-borgia-donizetti-gaetano> ] .
 
-<https://performance.musiconn.de/work/lucrezia-borgia-donizetti-gaetano> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lucrezia-borgia-donizetti-gaetano> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Lucrezia Borgia (Donizetti, Gaetano)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/lucrezia-borgia-auswahl-donizetti-gaetano> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/lucrezia-borgia-koenigliches-hoftheater-dresden-1849-04-17-18-00>,
+        <https://performance.musiconn.de/event/lucrezia-borgia-koenigliches-hoftheater-dresden-1861-04-24-18-00>,
+        <https://performance.musiconn.de/event/lucrezia-borgia-koenigliches-hoftheater-dresden-1861-08-11-18-30>,
+        <https://performance.musiconn.de/event/lucrezia-borgia-koenigliches-hoftheater-dresden-1861-11-15-18-00>,
+        <https://performance.musiconn.de/event/lucrezia-borgia-koenigliches-hoftheater-dresden-1864-08-02-18-30>,
+        <https://performance.musiconn.de/event/lucrezia-borgia-koenigliches-hoftheater-dresden-1864-12-07-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Opera seria in 1 Prolog und 2 Akten. Libretto von Felice Romani nach dem Drama \"Lucrèce Borgia\" von Victor Hugo" ;
     cto:elementOf n4c:E5320 ;
@@ -21,14 +28,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/158420977> ;
     cto:relatedPerson <https://d-nb.info/gnd/118526731>,
         <https://viaf.org/viaf/74037336> ;
-    cto:title "Lucrezia Borgia (Donizetti, Gaetano)" ;
     cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/74037336> ;
-    schema:includedComposition <https://performance.musiconn.de/work/lucrezia-borgia-auswahl-donizetti-gaetano> ;
-    schema:subjectOf <https://performance.musiconn.de/event/lucrezia-borgia-koenigliches-hoftheater-dresden-1849-04-17-18-00>,
-        <https://performance.musiconn.de/event/lucrezia-borgia-koenigliches-hoftheater-dresden-1861-04-24-18-00>,
-        <https://performance.musiconn.de/event/lucrezia-borgia-koenigliches-hoftheater-dresden-1861-08-11-18-30>,
-        <https://performance.musiconn.de/event/lucrezia-borgia-koenigliches-hoftheater-dresden-1861-11-15-18-00>,
-        <https://performance.musiconn.de/event/lucrezia-borgia-koenigliches-hoftheater-dresden-1864-08-02-18-30>,
-        <https://performance.musiconn.de/event/lucrezia-borgia-koenigliches-hoftheater-dresden-1864-12-07-18-30> .
+        <https://viaf.org/viaf/74037336> .
 

@@ -1,58 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/zigeunerweisen-sarasate-pablo-de> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/zigeunerweisen-sarasate-pablo-de> ] .
 
-<https://performance.musiconn.de/work/zigeunerweisen-sarasate-pablo-de> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/10016957-0>,
-        <https://d-nb.info/gnd/1078514259>,
-        <https://d-nb.info/gnd/1120617715>,
-        <https://d-nb.info/gnd/116805455>,
-        <https://d-nb.info/gnd/2018088-3>,
-        <https://d-nb.info/gnd/2019238-1>,
-        <https://d-nb.info/gnd/365223-3>,
-        <https://d-nb.info/gnd/365305-5>,
-        <https://d-nb.info/gnd/815129-5> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/10016957-0>,
-        <https://d-nb.info/gnd/1078514259>,
-        <https://d-nb.info/gnd/1120617715>,
-        <https://d-nb.info/gnd/2018088-3>,
-        <https://d-nb.info/gnd/2019238-1>,
-        <https://d-nb.info/gnd/365223-3>,
-        <https://d-nb.info/gnd/365305-5>,
-        <https://d-nb.info/gnd/815129-5>,
-        <https://performance.musiconn.de/corporation/euterpe-orchester-leipzig>,
-        <https://performance.musiconn.de/corporation/maenner-gesang-verein-olmuetz>,
-        <https://viaf.org/viaf/131976266>,
-        <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/136181816>,
-        <https://viaf.org/viaf/146334016>,
-        <https://viaf.org/viaf/157753597>,
-        <https://viaf.org/viaf/161076872>,
-        <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    cto:relatedPerson <https://d-nb.info/gnd/116805455>,
-        <https://viaf.org/viaf/17408844> ;
-    cto:title "Zigeunerweisen (Sarasate, Pablo de)" ;
-    cto:viaf <https://viaf.org/viaf/131976266>,
-        <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/136181816>,
-        <https://viaf.org/viaf/146334016>,
-        <https://viaf.org/viaf/157753597>,
-        <https://viaf.org/viaf/161076872>,
-        <https://viaf.org/viaf/17408844>,
-        <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    schema:includedComposition <https://performance.musiconn.de/work/zigeunerweisen-fassung-violine-sarasate-pablo-de> ;
-    schema:subjectOf <https://performance.musiconn.de/event/1-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1879-10-21>,
+<https://performance.musiconn.de/work/zigeunerweisen-sarasate-pablo-de> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Zigeunerweisen (Sarasate, Pablo de)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/zigeunerweisen-fassung-violine-sarasate-pablo-de> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/1-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1879-10-21>,
         <https://performance.musiconn.de/event/13-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1924-10-12-19-00>,
         <https://performance.musiconn.de/event/28-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-01-10-19-00>,
         <https://performance.musiconn.de/event/29-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1928-12-09-19-30>,
@@ -86,5 +45,45 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/sonderkonzerte-zum-jahreswechsel-kulturpalast-dresden-festsaal-2003-12-31-19-00>,
         <https://performance.musiconn.de/event/sonderkonzerte-zum-jahreswechsel-kulturpalast-dresden-festsaal-2004-01-01-15-00>,
         <https://performance.musiconn.de/event/sonderkonzerte-zum-jahreswechsel-kulturpalast-dresden-festsaal-2004-01-01-19-00>,
-        <https://performance.musiconn.de/event/zehntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1888-02-17-18-30> .
+        <https://performance.musiconn.de/event/zehntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1888-02-17-18-30> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/10016957-0>,
+        <https://d-nb.info/gnd/1078514259>,
+        <https://d-nb.info/gnd/1120617715>,
+        <https://d-nb.info/gnd/116805455>,
+        <https://d-nb.info/gnd/2018088-3>,
+        <https://d-nb.info/gnd/2019238-1>,
+        <https://d-nb.info/gnd/365223-3>,
+        <https://d-nb.info/gnd/365305-5>,
+        <https://d-nb.info/gnd/815129-5> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/10016957-0>,
+        <https://d-nb.info/gnd/1078514259>,
+        <https://d-nb.info/gnd/1120617715>,
+        <https://d-nb.info/gnd/2018088-3>,
+        <https://d-nb.info/gnd/2019238-1>,
+        <https://d-nb.info/gnd/365223-3>,
+        <https://d-nb.info/gnd/365305-5>,
+        <https://d-nb.info/gnd/815129-5>,
+        <https://performance.musiconn.de/corporation/euterpe-orchester-leipzig>,
+        <https://performance.musiconn.de/corporation/maenner-gesang-verein-olmuetz>,
+        <https://viaf.org/viaf/131976266>,
+        <https://viaf.org/viaf/133022259>,
+        <https://viaf.org/viaf/136181816>,
+        <https://viaf.org/viaf/146334016>,
+        <https://viaf.org/viaf/157753597>,
+        <https://viaf.org/viaf/161076872>,
+        <https://viaf.org/viaf/33146825124407631545>,
+        <https://viaf.org/viaf/8413148122912495200001> ;
+    cto:relatedPerson <https://d-nb.info/gnd/116805455>,
+        <https://viaf.org/viaf/17408844> ;
+    cto:viaf <https://viaf.org/viaf/131976266>,
+        <https://viaf.org/viaf/133022259>,
+        <https://viaf.org/viaf/136181816>,
+        <https://viaf.org/viaf/146334016>,
+        <https://viaf.org/viaf/157753597>,
+        <https://viaf.org/viaf/161076872>,
+        <https://viaf.org/viaf/17408844>,
+        <https://viaf.org/viaf/33146825124407631545>,
+        <https://viaf.org/viaf/8413148122912495200001> .
 

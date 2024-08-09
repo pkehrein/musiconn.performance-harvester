@@ -1,31 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/ojfn-pripetschik-fassung-sander-werner-warschawski-mark> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/ojfn-pripetschik-fassung-sander-werner-warschawski-mark> ] .
 
-<https://performance.musiconn.de/work/ojfn-pripetschik-fassung-sander-werner-warschawski-mark> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "arrangiert von Werner Sander" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1144373794>,
-        <https://d-nb.info/gnd/4131189-9>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:isPartOf <https://d-nb.info/gnd/4131189-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:relatedPerson <https://d-nb.info/gnd/1144373794>,
-        <https://performance.musiconn.de/person/warschawski-mark-1848-1907>,
-        <https://viaf.org/viaf/32264226> ;
-    cto:title "Ojfn pripetschik / Fassung (Sander, Werner, Warschawski, Mark)" ;
-    cto:viaf <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/32264226> ;
-    schema:subjectOf <https://performance.musiconn.de/event/2-dienstagskonzert-neues-gewandhaus-leipzig-grosser-saal-1988-11-29>,
+<https://performance.musiconn.de/work/ojfn-pripetschik-fassung-sander-werner-warschawski-mark> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Ojfn pripetschik / Fassung (Sander, Werner, Warschawski, Mark)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/2-dienstagskonzert-neues-gewandhaus-leipzig-grosser-saal-1988-11-29>,
         <https://performance.musiconn.de/event/auftaktkonzert-zum-symposium-juedisches-leben-von-gestern-bis-morgen-in-leipzig-sowie-den-partnerstaedten-brno-krakow-und-kyiv-alte-handelsboerse-leipzig-2023-06-26-19-00>,
         <https://performance.musiconn.de/event/das-leben-ist-ein-hering-an-der-wand-musikalisch-literarische-veranstaltung-haus-des-buches-leipzig-2013-03-07-19-30>,
         <https://performance.musiconn.de/event/die-wunder-von-chanukka-musikalisch-literarische-veranstaltung-kallenbach-pro-gohlis-leipzig-2012-12-08-20-00>,
@@ -88,5 +73,19 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/synagogenmusik-jiddische-und-hebraeische-folklore-in-freier-bearbeitung-schloss-lichtenwalde-lichtenwalde-1999-07-04-14-30>,
         <https://performance.musiconn.de/event/synagogenmusik-jiddische-und-hebraeische-folklore-in-freier-bearbeitung-schlosskirche-nienburg-saale-1992-09-26-17-00>,
         <https://performance.musiconn.de/event/synagogenmusik-jiddische-und-hebraeische-folklore-in-freier-bearbeitung-theater-der-stadt-cottbus-kammerbuehne-1986-10-28-20-00>,
-        <https://performance.musiconn.de/event/synagogenmusik-und-jiddische-folklore-messekonzert-altes-rathaus-leipzig-festsaal-1978-03-14-20-00> .
+        <https://performance.musiconn.de/event/synagogenmusik-und-jiddische-folklore-messekonzert-altes-rathaus-leipzig-festsaal-1978-03-14-20-00> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "arrangiert von Werner Sander" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/1144373794>,
+        <https://d-nb.info/gnd/4131189-9>,
+        <https://d-nb.info/gnd/5513287-X> ;
+    cto:isPartOf <https://d-nb.info/gnd/4131189-9> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
+        <https://viaf.org/viaf/154106770> ;
+    cto:relatedPerson <https://d-nb.info/gnd/1144373794>,
+        <https://performance.musiconn.de/person/warschawski-mark-1848-1907>,
+        <https://viaf.org/viaf/32264226> ;
+    cto:viaf <https://viaf.org/viaf/154106770>,
+        <https://viaf.org/viaf/32264226> .
 

@@ -1,15 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-120-e-moll-reinecke-carl> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-120-e-moll-reinecke-carl> ] .
 
-<https://performance.musiconn.de/work/konzerte-klavier-orchester-op-120-e-moll-reinecke-carl> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/konzerte-klavier-orchester-op-120-e-moll-reinecke-carl> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Konzerte, Klavier, Orchester, op. 120 (e-Moll) (Reinecke, Carl)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1315991063>,
+        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-120-allegro-reinecke-carl> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/fuenfzehntes-abonnement-concert-erstes-gewandhaus-leipzig-1880-01-29>,
+        <https://performance.musiconn.de/event/grosse-matinee-erstes-gewandhaus-leipzig-1873-10-12>,
+        <https://performance.musiconn.de/event/siebentes-abonnement-concert-erstes-gewandhaus-leipzig-1872-11-14> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/119388472>,
@@ -23,12 +28,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/136181816> ;
     cto:relatedPerson <https://d-nb.info/gnd/119388472>,
         <https://viaf.org/viaf/49409212> ;
-    cto:title "Konzerte, Klavier, Orchester, op. 120 (e-Moll) (Reinecke, Carl)" ;
     cto:viaf <https://viaf.org/viaf/136181816>,
-        <https://viaf.org/viaf/49409212> ;
-    schema:includedComposition <https://d-nb.info/gnd/1315991063>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-120-allegro-reinecke-carl> ;
-    schema:subjectOf <https://performance.musiconn.de/event/fuenfzehntes-abonnement-concert-erstes-gewandhaus-leipzig-1880-01-29>,
-        <https://performance.musiconn.de/event/grosse-matinee-erstes-gewandhaus-leipzig-1873-10-12>,
-        <https://performance.musiconn.de/event/siebentes-abonnement-concert-erstes-gewandhaus-leipzig-1872-11-14> .
+        <https://viaf.org/viaf/49409212> .
 

@@ -1,18 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/quintette-violine-2-viola-violoncello-klavier-g-409-c-dur-boccherini-luigi> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/quintette-violine-2-viola-violoncello-klavier-g-409-c-dur-boccherini-luigi> ] .
 
-<https://performance.musiconn.de/work/quintette-violine-2-viola-violoncello-klavier-g-409-c-dur-boccherini-luigi> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/quintette-violine-2-viola-violoncello-klavier-g-409-c-dur-boccherini-luigi> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Quintette, Violine (2), Viola, Violoncello, Klavier, G 409 (C-Dur) (Boccherini, Luigi)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """maßgebliche Werkverzeichniszählung G 409
-G 409 ist vom Komponist mehrfach bearbeitet worden: als Quintett Nr. 9 (G 453) für Gitarre, Violine (2), Viola und Violoncello in C-Dur (1799) und als Quintett Nr. 6 (G 384) für Violine (2), Viola (2) und Violoncello in C-Dur""" ;
+    cto:abstract "maßgebliche Werkverzeichniszählung G 409G 409 ist vom Komponist mehrfach bearbeitet worden: als Quintett Nr. 9 (G 453) für Gitarre, Violine (2), Viola und Violoncello in C-Dur (1799) und als Quintett Nr. 6 (G 384) für Violine (2), Viola (2) und Violoncello in C-Dur" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118659170>,
         <https://d-nb.info/gnd/4176737-8> ;
@@ -20,6 +19,5 @@ G 409 ist vom Komponist mehrfach bearbeitet worden: als Quintett Nr. 9 (G 453) f
     cto:relatedOrganization <https://performance.musiconn.de/corporation/academia-musicale-chigiana-quintetto> ;
     cto:relatedPerson <https://d-nb.info/gnd/118659170>,
         <https://viaf.org/viaf/89067361> ;
-    cto:title "Quintette, Violine (2), Viola, Violoncello, Klavier, G 409 (C-Dur) (Boccherini, Luigi)" ;
     cto:viaf <https://viaf.org/viaf/89067361> .
 

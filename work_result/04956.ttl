@@ -1,15 +1,24 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/geistliche-gesaenge-op-57-draeseke-felix> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/geistliche-gesaenge-op-57-draeseke-felix> ] .
 
-<https://performance.musiconn.de/work/geistliche-gesaenge-op-57-draeseke-felix> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/geistliche-gesaenge-op-57-draeseke-felix> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Geistliche Gesänge, op. 57 (Draeseke, Felix)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300318588>,
+        <https://d-nb.info/gnd/300318596>,
+        <https://d-nb.info/gnd/30031860X>,
+        <https://performance.musiconn.de/work/geistliche-gesaenge-op-57-beati-quorum-via-draeseke-felix>,
+        <https://performance.musiconn.de/work/geistliche-gesaenge-op-57-in-die-angustiae-draeseke-felix>,
+        <https://performance.musiconn.de/work/geistliche-gesaenge-op-57-o-bone-jesu-draeseke-felix>,
+        <https://viaf.org/viaf/192579558>,
+        <https://viaf.org/viaf/195812933>,
+        <https://viaf.org/viaf/217010493> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "4 Gesänge: 1. Offertorium à 4 voce \"Confitebor tibi\", 2. Graduale à 6 voce \"Beati quorum via\", 3. Graduale à 5 voce \"O bone Jesu\", 4. Graduale à 4 voce \"In die angustiae\"" ;
     cto:elementOf n4c:E5320 ;
@@ -23,18 +32,8 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://d-nb.info/gnd/1115219634> ;
     cto:relatedPerson <https://d-nb.info/gnd/118907735>,
         <https://viaf.org/viaf/51953861> ;
-    cto:title "Geistliche Gesänge, op. 57 (Draeseke, Felix)" ;
     cto:viaf <https://viaf.org/viaf/192579558>,
         <https://viaf.org/viaf/195812933>,
         <https://viaf.org/viaf/217010493>,
-        <https://viaf.org/viaf/51953861> ;
-    schema:includedComposition <https://d-nb.info/gnd/300318588>,
-        <https://d-nb.info/gnd/300318596>,
-        <https://d-nb.info/gnd/30031860X>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-57-beati-quorum-via-draeseke-felix>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-57-in-die-angustiae-draeseke-felix>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-57-o-bone-jesu-draeseke-felix>,
-        <https://viaf.org/viaf/192579558>,
-        <https://viaf.org/viaf/195812933>,
-        <https://viaf.org/viaf/217010493> .
+        <https://viaf.org/viaf/51953861> .
 

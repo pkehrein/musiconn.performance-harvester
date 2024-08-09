@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/bilder-des-orients-melek-am-quell-loewe-carl> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/bilder-des-orients-melek-am-quell-loewe-carl> ] .
 
-<https://performance.musiconn.de/work/bilder-des-orients-melek-am-quell-loewe-carl> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/bilder-des-orients-melek-am-quell-loewe-carl> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Bilder des Orients. Melek am Quell (Loewe, Carl)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1890-11-07-18-30>,
+        <https://performance.musiconn.de/event/hauptpruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1876-06-01-18-00>,
+        <https://performance.musiconn.de/event/siebentes-abonnement-concert-zweites-gewandhaus-leipzig-1890-11-13> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1138307017>,
@@ -21,11 +24,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/3189150325576110090007>,
         <https://viaf.org/viaf/32183840>,
         <https://viaf.org/viaf/64770450> ;
-    cto:title "Bilder des Orients. Melek am Quell (Loewe, Carl)" ;
     cto:viaf <https://viaf.org/viaf/3189150325576110090007>,
         <https://viaf.org/viaf/32183840>,
-        <https://viaf.org/viaf/64770450> ;
-    schema:subjectOf <https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1890-11-07-18-30>,
-        <https://performance.musiconn.de/event/hauptpruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1876-06-01-18-00>,
-        <https://performance.musiconn.de/event/siebentes-abonnement-concert-zweites-gewandhaus-leipzig-1890-11-13> .
+        <https://viaf.org/viaf/64770450> .
 

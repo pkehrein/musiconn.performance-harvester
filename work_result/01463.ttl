@@ -1,15 +1,27 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/sinfonien-kv-551-mozart-wolfgang-amadeus> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/sinfonien-kv-551-mozart-wolfgang-amadeus> ] .
 
-<https://performance.musiconn.de/work/sinfonien-kv-551-mozart-wolfgang-amadeus> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/sinfonien-kv-551-mozart-wolfgang-amadeus> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Sinfonien, KV 551 (Mozart, Wolfgang Amadeus)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1100393064>,
+        <https://performance.musiconn.de/work/sinfonien-kv-551-c-dur-allegro-vivace-mozart-wolfgang-amadeus>,
+        <https://viaf.org/viaf/143146462763227772815> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/12-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-03-19-18-30>,
+        <https://performance.musiconn.de/event/3-museums-concert-grosser-konzertsaal-frankfurt-a-m-1875-11-19-18-30>,
+        <https://performance.musiconn.de/event/5-museums-concert-grosser-konzertsaal-frankfurt-a-m-1878-12-06>,
+        <https://performance.musiconn.de/event/5-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1906-01-26-19-00>,
+        <https://performance.musiconn.de/event/erstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1862-10-24-18-30>,
+        <https://performance.musiconn.de/event/konzert-kirchgemeindesaal-strehlen-dresden-1945-07-06-18-00>,
+        <https://performance.musiconn.de/event/konzert-kurpark-bad-weisser-hirsch-dresden-1945-07-25-17-30>,
+        <https://performance.musiconn.de/event/zehntes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1895-03-08-19-00>,
+        <https://performance.musiconn.de/event/zweites-museums-concert-grosser-konzertsaal-frankfurt-a-m-1882-10-27-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1009021-6>,
@@ -74,7 +86,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/8413148122912495200001> ;
     cto:relatedPerson <https://d-nb.info/gnd/118584596>,
         <https://viaf.org/viaf/32197206> ;
-    cto:title "Sinfonien, KV 551 (Mozart, Wolfgang Amadeus)" ;
     cto:viaf <https://viaf.org/viaf/1146953186915490338>,
         <https://viaf.org/viaf/127368411>,
         <https://viaf.org/viaf/131976266>,
@@ -94,17 +105,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/38146822017907380456>,
         <https://viaf.org/viaf/45144814273718687574>,
-        <https://viaf.org/viaf/8413148122912495200001> ;
-    schema:includedComposition <https://d-nb.info/gnd/1100393064>,
-        <https://performance.musiconn.de/work/sinfonien-kv-551-c-dur-allegro-vivace-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/143146462763227772815> ;
-    schema:subjectOf <https://performance.musiconn.de/event/12-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-03-19-18-30>,
-        <https://performance.musiconn.de/event/3-museums-concert-grosser-konzertsaal-frankfurt-a-m-1875-11-19-18-30>,
-        <https://performance.musiconn.de/event/5-museums-concert-grosser-konzertsaal-frankfurt-a-m-1878-12-06>,
-        <https://performance.musiconn.de/event/5-sinfonie-konzert-der-koenigl-musikalischen-kapelle-semperoper-dresden-1906-01-26-19-00>,
-        <https://performance.musiconn.de/event/erstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1862-10-24-18-30>,
-        <https://performance.musiconn.de/event/konzert-kirchgemeindesaal-strehlen-dresden-1945-07-06-18-00>,
-        <https://performance.musiconn.de/event/konzert-kurpark-bad-weisser-hirsch-dresden-1945-07-25-17-30>,
-        <https://performance.musiconn.de/event/zehntes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1895-03-08-19-00>,
-        <https://performance.musiconn.de/event/zweites-museums-concert-grosser-konzertsaal-frankfurt-a-m-1882-10-27-18-30> .
+        <https://viaf.org/viaf/8413148122912495200001> .
 

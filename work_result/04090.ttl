@@ -1,30 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/nun-sei-willkommen-herre-christ> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/nun-sei-willkommen-herre-christ> ] .
 
-<https://performance.musiconn.de/work/nun-sei-willkommen-herre-christ> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Adventslied aus dem 11. Jahrhundert" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/128334800>,
-        <https://d-nb.info/gnd/2074419-5>,
-        <https://d-nb.info/gnd/4035669-3> ;
-    cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/2074419-5>,
-        <https://viaf.org/viaf/139053206> ;
-    cto:relatedPerson <https://d-nb.info/gnd/128334800>,
-        <https://viaf.org/viaf/69978605> ;
-    cto:title "Nun sei willkommen, Herre Christ" ;
-    cto:viaf <https://viaf.org/viaf/139053206>,
-        <https://viaf.org/viaf/69978605> ;
-    schema:subjectOf <https://performance.musiconn.de/event/adventsfeier-andreaskirche-gemeindehaus-dresden-1932-12-07-19-30>,
+<https://performance.musiconn.de/work/nun-sei-willkommen-herre-christ> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Nun sei willkommen, Herre Christ" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/adventsfeier-andreaskirche-gemeindehaus-dresden-1932-12-07-19-30>,
         <https://performance.musiconn.de/event/adventsfeier-neues-rathaus-dresden-1932-12-04-17-00>,
         <https://performance.musiconn.de/event/adventsstunde-der-dresdner-hitler-jugend-frauenkirche-dresden-1933-12-03-16-00>,
         <https://performance.musiconn.de/event/der-dresdener-kreuzchor-singt-tannensaele-pirna-1937-12-04-20-15>,
@@ -38,5 +24,18 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://performance.musiconn.de/event/konzert-des-kreuzchors-zu-dresden-stadtkirche-rosswein-1933-12-10-19-45>,
         <https://performance.musiconn.de/event/konzert-in-der-schwarzenberger-kirche-sankt-georg-schwarzenberg-erzgebirge-1937-12-06-18-00>,
         <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-12-05-18-00>,
-        <https://performance.musiconn.de/event/weihnachtskonzert-des-dresdner-kreuzchores-sankt-georg-schwarzenberg-erzgebirge-1937-12-06-20-00> .
+        <https://performance.musiconn.de/event/weihnachtskonzert-des-dresdner-kreuzchores-sankt-georg-schwarzenberg-erzgebirge-1937-12-06-20-00> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "Adventslied aus dem 11. Jahrhundert" ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/128334800>,
+        <https://d-nb.info/gnd/2074419-5>,
+        <https://d-nb.info/gnd/4035669-3> ;
+    cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
+    cto:relatedOrganization <https://d-nb.info/gnd/2074419-5>,
+        <https://viaf.org/viaf/139053206> ;
+    cto:relatedPerson <https://d-nb.info/gnd/128334800>,
+        <https://viaf.org/viaf/69978605> ;
+    cto:viaf <https://viaf.org/viaf/139053206>,
+        <https://viaf.org/viaf/69978605> .
 

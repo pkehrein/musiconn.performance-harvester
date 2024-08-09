@@ -1,43 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gesaenge-hob-25-c-1-9-haydn-joseph> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gesaenge-hob-25-c-1-9-haydn-joseph> ] .
 
-<https://performance.musiconn.de/work/gesaenge-hob-25-c-1-9-haydn-joseph> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118547356>,
-        <https://d-nb.info/gnd/300069030>,
-        <https://d-nb.info/gnd/300069049>,
-        <https://d-nb.info/gnd/300069057>,
-        <https://d-nb.info/gnd/300069065>,
-        <https://d-nb.info/gnd/300069073>,
-        <https://d-nb.info/gnd/300069081>,
-        <https://d-nb.info/gnd/30006909X>,
-        <https://d-nb.info/gnd/300069103>,
-        <https://d-nb.info/gnd/300069111>,
-        <https://d-nb.info/gnd/4020470-4> ;
-    cto:isPartOf <https://d-nb.info/gnd/4020470-4> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118547356>,
-        <https://viaf.org/viaf/95146280> ;
-    cto:title "Gesänge, Hob 25 c 1-9 (Haydn, Joseph)" ;
-    cto:viaf <https://viaf.org/viaf/176141700>,
-        <https://viaf.org/viaf/176762248>,
-        <https://viaf.org/viaf/179532095>,
-        <https://viaf.org/viaf/180319812>,
-        <https://viaf.org/viaf/183981058>,
-        <https://viaf.org/viaf/186458427>,
-        <https://viaf.org/viaf/200778127>,
-        <https://viaf.org/viaf/211710313>,
-        <https://viaf.org/viaf/217004251>,
-        <https://viaf.org/viaf/95146280> ;
-    schema:includedComposition <https://d-nb.info/gnd/300069030>,
+<https://performance.musiconn.de/work/gesaenge-hob-25-c-1-9-haydn-joseph> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Gesänge, Hob 25 c 1-9 (Haydn, Joseph)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300069030>,
         <https://d-nb.info/gnd/300069049>,
         <https://d-nb.info/gnd/300069057>,
         <https://d-nb.info/gnd/300069065>,
@@ -63,5 +36,31 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/186458427>,
         <https://viaf.org/viaf/200778127>,
         <https://viaf.org/viaf/211710313>,
-        <https://viaf.org/viaf/217004251> .
+        <https://viaf.org/viaf/217004251> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/118547356>,
+        <https://d-nb.info/gnd/300069030>,
+        <https://d-nb.info/gnd/300069049>,
+        <https://d-nb.info/gnd/300069057>,
+        <https://d-nb.info/gnd/300069065>,
+        <https://d-nb.info/gnd/300069073>,
+        <https://d-nb.info/gnd/300069081>,
+        <https://d-nb.info/gnd/30006909X>,
+        <https://d-nb.info/gnd/300069103>,
+        <https://d-nb.info/gnd/300069111>,
+        <https://d-nb.info/gnd/4020470-4> ;
+    cto:isPartOf <https://d-nb.info/gnd/4020470-4> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118547356>,
+        <https://viaf.org/viaf/95146280> ;
+    cto:viaf <https://viaf.org/viaf/176141700>,
+        <https://viaf.org/viaf/176762248>,
+        <https://viaf.org/viaf/179532095>,
+        <https://viaf.org/viaf/180319812>,
+        <https://viaf.org/viaf/183981058>,
+        <https://viaf.org/viaf/186458427>,
+        <https://viaf.org/viaf/200778127>,
+        <https://viaf.org/viaf/211710313>,
+        <https://viaf.org/viaf/217004251>,
+        <https://viaf.org/viaf/95146280> .
 

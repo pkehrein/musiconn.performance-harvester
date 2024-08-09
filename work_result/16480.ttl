@@ -1,18 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-anh-4-5-a-dur-brahms-johannes> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-anh-4-5-a-dur-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/trios-violine-violoncello-klavier-anh-4-5-a-dur-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/trios-violine-violoncello-klavier-anh-4-5-a-dur-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Trios, Violine, Violoncello, Klavier, Anh. 4 5 (A-Dur) (Brahms, Johannes)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """1938 ist das Jahr der Erstveröffentlichung
-Nachgelassenes Werk, laut Werkverzeichnis ist das Werk Brahms durch zwei Musikwissenschaftler zugeschrieben, vermutlich 1853 komponiert""" ;
+    cto:abstract "1938 ist das Jahr der ErstveröffentlichungNachgelassenes Werk, laut Werkverzeichnis ist das Werk Brahms durch zwei Musikwissenschaftler zugeschrieben, vermutlich 1853 komponiert" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118514253>,
         <https://d-nb.info/gnd/1208706071>,
@@ -23,6 +22,5 @@ Nachgelassenes Werk, laut Werkverzeichnis ist das Werk Brahms durch zwei Musikwi
         <https://performance.musiconn.de/person/karp-volker>,
         <https://performance.musiconn.de/person/willmann-petra>,
         <https://viaf.org/viaf/7573295> ;
-    cto:title "Trios, Violine, Violoncello, Klavier, Anh. 4 5 (A-Dur) (Brahms, Johannes)" ;
     cto:viaf <https://viaf.org/viaf/7573295> .
 

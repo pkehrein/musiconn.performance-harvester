@@ -1,15 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/dresden-dresden-im-fruehling-1945-mauersberger-rudolf> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/dresden-dresden-im-fruehling-1945-mauersberger-rudolf> ] .
 
-<https://performance.musiconn.de/work/dresden-dresden-im-fruehling-1945-mauersberger-rudolf> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/dresden-dresden-im-fruehling-1945-mauersberger-rudolf> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Dresden. Dresden im Frühling 1945 (Mauersberger, Rudolf)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/118579177>,
@@ -21,7 +21,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/139053206> ;
     cto:relatedPerson <https://d-nb.info/gnd/118579177>,
         <https://viaf.org/viaf/42029344> ;
-    cto:title "Dresden. Dresden im Frühling 1945 (Mauersberger, Rudolf)" ;
     cto:viaf <https://viaf.org/viaf/133022259>,
         <https://viaf.org/viaf/139053206>,
         <https://viaf.org/viaf/42029344> .

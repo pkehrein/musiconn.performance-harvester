@@ -1,15 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/odi-et-amo-geissler-fritz> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/odi-et-amo-geissler-fritz> ] .
 
-<https://performance.musiconn.de/work/odi-et-amo-geissler-fritz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/odi-et-amo-geissler-fritz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Odi et amo (Geißler, Fritz)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1147053219>,
@@ -23,7 +23,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/118151246525144131606>,
         <https://viaf.org/viaf/37183488>,
         <https://viaf.org/viaf/79768560> ;
-    cto:title "Odi et amo (Geißler, Fritz)" ;
     cto:viaf <https://viaf.org/viaf/118151246525144131606>,
         <https://viaf.org/viaf/37183488>,
         <https://viaf.org/viaf/79768560> .

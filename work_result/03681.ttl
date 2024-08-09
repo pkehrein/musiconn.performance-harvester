@@ -1,15 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/nocturnes-klavier-op-37-nr-2-g-dur-chopin-frederic> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/nocturnes-klavier-op-37-nr-2-g-dur-chopin-frederic> ] .
 
-<https://performance.musiconn.de/work/nocturnes-klavier-op-37-nr-2-g-dur-chopin-frederic> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/nocturnes-klavier-op-37-nr-2-g-dur-chopin-frederic> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Nocturnes, Klavier, op. 37. Nr. 2 (G-Dur) (Chopin, Frédéric)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/achtes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1894-02-02-19-00>,
+        <https://performance.musiconn.de/event/erstes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1896-10-16-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116422319>,
@@ -45,7 +47,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/71577325>,
         <https://viaf.org/viaf/76501096>,
         <https://viaf.org/viaf/89610488> ;
-    cto:title "Nocturnes, Klavier, op. 37. Nr. 2 (G-Dur) (Chopin, Frédéric)" ;
     cto:viaf <https://viaf.org/viaf/14811475>,
         <https://viaf.org/viaf/200323>,
         <https://viaf.org/viaf/30296524>,
@@ -54,7 +55,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/71319254>,
         <https://viaf.org/viaf/71577325>,
         <https://viaf.org/viaf/76501096>,
-        <https://viaf.org/viaf/89610488> ;
-    schema:subjectOf <https://performance.musiconn.de/event/achtes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1894-02-02-19-00>,
-        <https://performance.musiconn.de/event/erstes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1896-10-16-19-00> .
+        <https://viaf.org/viaf/89610488> .
 

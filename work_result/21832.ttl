@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lhonesta-negli-amori-scarlatti-alessandro> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lhonesta-negli-amori-scarlatti-alessandro> ] .
 
-<https://performance.musiconn.de/work/lhonesta-negli-amori-scarlatti-alessandro> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lhonesta-negli-amori-scarlatti-alessandro> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "L'honestà negli amori (Scarlatti, Alessandro)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1154970507>,
+        <https://performance.musiconn.de/work/lhonesta-negli-amori-gia-il-sole-dal-gange-scarlatti-alessandro>,
+        <https://viaf.org/viaf/174593088> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1154970507>,
@@ -18,10 +21,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
     cto:relatedPerson <https://d-nb.info/gnd/118605976>,
         <https://viaf.org/viaf/27253076> ;
-    cto:title "L'honestà negli amori (Scarlatti, Alessandro)" ;
     cto:viaf <https://viaf.org/viaf/174593088>,
-        <https://viaf.org/viaf/27253076> ;
-    schema:includedComposition <https://d-nb.info/gnd/1154970507>,
-        <https://performance.musiconn.de/work/lhonesta-negli-amori-gia-il-sole-dal-gange-scarlatti-alessandro>,
-        <https://viaf.org/viaf/174593088> .
+        <https://viaf.org/viaf/27253076> .
 

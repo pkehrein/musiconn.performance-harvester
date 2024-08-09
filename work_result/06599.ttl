@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/salvator-rosa-mia-piccirella-gomes-carlos> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/salvator-rosa-mia-piccirella-gomes-carlos> ] .
 
-<https://performance.musiconn.de/work/salvator-rosa-mia-piccirella-gomes-carlos> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/salvator-rosa-mia-piccirella-gomes-carlos> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Salvator Rosa. Mia piccirella (Gomes, Carlos)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/iii-philharmonisches-populaeres-kuenstler-concert-gewerbehaus-dresden-gewerbehaus-saal-1896-01-21-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116203021>,
@@ -21,9 +22,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/24816997>,
         <https://viaf.org/viaf/72138969>,
         <https://viaf.org/viaf/787470> ;
-    cto:title "Salvator Rosa. Mia piccirella (Gomes, Carlos)" ;
     cto:viaf <https://viaf.org/viaf/24816997>,
         <https://viaf.org/viaf/72138969>,
-        <https://viaf.org/viaf/787470> ;
-    schema:subjectOf <https://performance.musiconn.de/event/iii-philharmonisches-populaeres-kuenstler-concert-gewerbehaus-dresden-gewerbehaus-saal-1896-01-21-19-00> .
+        <https://viaf.org/viaf/787470> .
 

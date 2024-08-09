@@ -1,15 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/konzert-in-ungarischer-weise-joachim-joseph> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/konzert-in-ungarischer-weise-joachim-joseph> ] .
 
-<https://performance.musiconn.de/work/konzert-in-ungarischer-weise-joachim-joseph> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/konzert-in-ungarischer-weise-joachim-joseph> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Konzert in ungarischer Weise (Joachim, Joseph)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1079638156>,
+        <https://performance.musiconn.de/work/konzert-in-ungarischer-weise-1-satz-joachim-joseph>,
+        <https://performance.musiconn.de/work/konzert-in-ungarischer-weise-2-satz-bearbeitung-violine-klavier-joachim-joseph>,
+        <https://performance.musiconn.de/work/konzert-in-ungarischer-weise-romanze-joachim-joseph>,
+        <https://viaf.org/viaf/67144928686154440666> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/4-museums-concert-grosser-konzertsaal-frankfurt-a-m-1878-11-22>,
+        <https://performance.musiconn.de/event/fuenftes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1896-12-11-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1045527-9>,
@@ -42,7 +49,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545> ;
     cto:relatedPerson <https://d-nb.info/gnd/118776223>,
         <https://viaf.org/viaf/59269863> ;
-    cto:title "Konzert in ungarischer Weise (Joachim, Joseph)" ;
     cto:viaf <https://viaf.org/viaf/131976266>,
         <https://viaf.org/viaf/136181816>,
         <https://viaf.org/viaf/156570451>,
@@ -51,12 +57,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/221396927>,
         <https://viaf.org/viaf/33146825124407631545>,
         <https://viaf.org/viaf/59269863>,
-        <https://viaf.org/viaf/67144928686154440666> ;
-    schema:includedComposition <https://d-nb.info/gnd/1079638156>,
-        <https://performance.musiconn.de/work/konzert-in-ungarischer-weise-1-satz-joachim-joseph>,
-        <https://performance.musiconn.de/work/konzert-in-ungarischer-weise-2-satz-bearbeitung-violine-klavier-joachim-joseph>,
-        <https://performance.musiconn.de/work/konzert-in-ungarischer-weise-romanze-joachim-joseph>,
-        <https://viaf.org/viaf/67144928686154440666> ;
-    schema:subjectOf <https://performance.musiconn.de/event/4-museums-concert-grosser-konzertsaal-frankfurt-a-m-1878-11-22>,
-        <https://performance.musiconn.de/event/fuenftes-freitags-concert-grosser-konzertsaal-frankfurt-a-m-1896-12-11-19-00> .
+        <https://viaf.org/viaf/67144928686154440666> .
 

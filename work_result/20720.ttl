@@ -1,15 +1,15 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/horch-was-kommt-von-draussen-rein> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/horch-was-kommt-von-draussen-rein> ] .
 
-<https://performance.musiconn.de/work/horch-was-kommt-von-draussen-rein> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/horch-was-kommt-von-draussen-rein> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Horch, was kommt von draußen rein." ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Volksweise. Satz von L. Kageler." ;
     cto:elementOf n4c:E5320 ;
@@ -33,7 +33,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/130022960> ;
     cto:relatedPerson <https://d-nb.info/gnd/117276065>,
         <https://viaf.org/viaf/30309177> ;
-    cto:title "Horch, was kommt von draußen rein." ;
     cto:viaf <https://viaf.org/viaf/124118160>,
         <https://viaf.org/viaf/127716029>,
         <https://viaf.org/viaf/130022960>,

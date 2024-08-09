@@ -1,15 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/quintette-vl-1-2-va-vc-1-2-op-47-scholz-bernhard> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/quintette-vl-1-2-va-vc-1-2-op-47-scholz-bernhard> ] .
 
-<https://performance.musiconn.de/work/quintette-vl-1-2-va-vc-1-2-op-47-scholz-bernhard> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/quintette-vl-1-2-va-vc-1-2-op-47-scholz-bernhard> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Quintette, Vl 1 2 Va Vc 1 2 op. 47 (Scholz, Bernhard)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/neunter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1884-02-22-19-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/11688326X>,
@@ -28,11 +29,9 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/76509756>,
         <https://viaf.org/viaf/775388>,
         <https://viaf.org/viaf/80871968> ;
-    cto:title "Quintette, Vl 1 2 Va Vc 1 2 op. 47 (Scholz, Bernhard)" ;
     cto:viaf <https://viaf.org/viaf/17985662>,
         <https://viaf.org/viaf/47519845>,
         <https://viaf.org/viaf/76509756>,
         <https://viaf.org/viaf/775388>,
-        <https://viaf.org/viaf/80871968> ;
-    schema:subjectOf <https://performance.musiconn.de/event/neunter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1884-02-22-19-00> .
+        <https://viaf.org/viaf/80871968> .
 

@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/cantates-francoises-livre-1-clerambault-louis-nicolas> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/cantates-francoises-livre-1-clerambault-louis-nicolas> ] .
 
-<https://performance.musiconn.de/work/cantates-francoises-livre-1-clerambault-louis-nicolas> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/cantates-francoises-livre-1-clerambault-louis-nicolas> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Cantates françoises, livre 1 (Clérambault, Louis Nicolas)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/300445083>,
+        <https://performance.musiconn.de/work/cantates-francoises-avec-simphonie-et-sans-simphonie-orphee-clerambault-louis-nicolas>,
+        <https://viaf.org/viaf/186301813> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Laut Oxford music online: \"L'Amour piqué par une abeille, S, bc; Le jaloux, haute-contre, vn, bc; Orphée, S, vn, fl, bc; Poliphême, B, vn, fl, bc; Médée, S, vn, fl, bc; L'Amour et Baccus, S, B, bc\"" ;
     cto:elementOf n4c:E5320 ;
@@ -19,10 +22,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4029509-6> ;
     cto:relatedPerson <https://d-nb.info/gnd/119514729>,
         <https://viaf.org/viaf/44484699> ;
-    cto:title "Cantates françoises, livre 1 (Clérambault, Louis Nicolas)" ;
     cto:viaf <https://viaf.org/viaf/186301813>,
-        <https://viaf.org/viaf/44484699> ;
-    schema:includedComposition <https://d-nb.info/gnd/300445083>,
-        <https://performance.musiconn.de/work/cantates-francoises-avec-simphonie-et-sans-simphonie-orphee-clerambault-louis-nicolas>,
-        <https://viaf.org/viaf/186301813> .
+        <https://viaf.org/viaf/44484699> .
 

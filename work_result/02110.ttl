@@ -1,15 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/myrthen-der-nussbaum-schumann-robert> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/myrthen-der-nussbaum-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/myrthen-der-nussbaum-schumann-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/myrthen-der-nussbaum-schumann-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Myrthen. Der Nussbaum (Schumann, Robert)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/10-museums-concert-grosser-konzertsaal-frankfurt-a-m-1875-02-19-18-30>,
+        <https://performance.musiconn.de/event/7-museums-concert-grosser-konzertsaal-frankfurt-a-m-1877-01-05-18-30>,
+        <https://performance.musiconn.de/event/grosses-concert-semperoper-dresden-1879-03-30-12-00>,
+        <https://performance.musiconn.de/event/zwoelftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1890-03-14-18-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1066976635>,
@@ -154,7 +158,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/775388>,
         <https://viaf.org/viaf/80871968>,
         <https://viaf.org/viaf/8576611> ;
-    cto:title "Myrthen. Der Nussbaum (Schumann, Robert)" ;
     cto:viaf <https://viaf.org/viaf/10033778>,
         <https://viaf.org/viaf/124152743022127732946>,
         <https://viaf.org/viaf/13078041>,
@@ -196,9 +199,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/76631552>,
         <https://viaf.org/viaf/775388>,
         <https://viaf.org/viaf/80871968>,
-        <https://viaf.org/viaf/8576611> ;
-    schema:subjectOf <https://performance.musiconn.de/event/10-museums-concert-grosser-konzertsaal-frankfurt-a-m-1875-02-19-18-30>,
-        <https://performance.musiconn.de/event/7-museums-concert-grosser-konzertsaal-frankfurt-a-m-1877-01-05-18-30>,
-        <https://performance.musiconn.de/event/grosses-concert-semperoper-dresden-1879-03-30-12-00>,
-        <https://performance.musiconn.de/event/zwoelftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1890-03-14-18-30> .
+        <https://viaf.org/viaf/8576611> .
 

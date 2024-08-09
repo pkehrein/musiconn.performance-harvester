@@ -1,18 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/ein-fruehlingstraum-herfurth-g> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/ein-fruehlingstraum-herfurth-g> ] .
 
-<https://performance.musiconn.de/work/ein-fruehlingstraum-herfurth-g> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/ein-fruehlingstraum-herfurth-g> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Ein Frühlingstraum (Herfurth, G.)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:relatedPerson <https://performance.musiconn.de/person/herfurth-g>,
-        <https://performance.musiconn.de/person/neisser-ferdinand> ;
-    cto:title "Ein Frühlingstraum (Herfurth, G.)" .
+        <https://performance.musiconn.de/person/neisser-ferdinand> .
 

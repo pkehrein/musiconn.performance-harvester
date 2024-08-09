@@ -1,21 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/paduana-galliard-und-allmand-brade-william> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/paduana-galliard-und-allmand-brade-william> ] .
 
-<https://performance.musiconn.de/work/paduana-galliard-und-allmand-brade-william> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/paduana-galliard-und-allmand-brade-william> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Paduana, Galliard und Allmand (Brade, William)" ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/12881926X> ;
     cto:relatedOrganization <https://performance.musiconn.de/corporation/dresdner-philharmonie-broken-consort> ;
     cto:relatedPerson <https://d-nb.info/gnd/12881926X>,
         <https://viaf.org/viaf/74120442> ;
-    cto:title "Paduana, Galliard und Allmand (Brade, William)" ;
     cto:viaf <https://viaf.org/viaf/74120442> .
 

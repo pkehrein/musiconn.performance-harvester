@@ -1,15 +1,20 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-ohne-worte-unbekanntes-teilwerk-mendelssohn-bartholdy-felix> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-ohne-worte-unbekanntes-teilwerk-mendelssohn-bartholdy-felix> ] .
 
-<https://performance.musiconn.de/work/lieder-ohne-worte-unbekanntes-teilwerk-mendelssohn-bartholdy-felix> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-ohne-worte-unbekanntes-teilwerk-mendelssohn-bartholdy-felix> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Lieder ohne Worte. [Unbekanntes Teilwerk] (Mendelssohn Bartholdy, Felix)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/10-museums-concert-grosser-konzertsaal-frankfurt-a-m-1879-02-14-18-30>,
+        <https://performance.musiconn.de/event/3-museums-concert-grosser-konzertsaal-frankfurt-a-m-1866-11-09-18-30>,
+        <https://performance.musiconn.de/event/6-museums-concert-grosser-konzertsaal-frankfurt-a-m-1862-01-31-18-30>,
+        <https://performance.musiconn.de/event/achtes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1883-01-19-18-30>,
+        <https://performance.musiconn.de/event/fuenftes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1896-12-13-17-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Unklar, welches Werk" ;
     cto:elementOf n4c:E5320 ;
@@ -51,7 +56,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/54413354>,
         <https://viaf.org/viaf/54910787>,
         <https://viaf.org/viaf/8138422> ;
-    cto:title "Lieder ohne Worte. [Unbekanntes Teilwerk] (Mendelssohn Bartholdy, Felix)" ;
     cto:viaf <https://viaf.org/viaf/116158858089344490005>,
         <https://viaf.org/viaf/134144782954654589411>,
         <https://viaf.org/viaf/1628154198307220230008>,
@@ -62,10 +66,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/46946481>,
         <https://viaf.org/viaf/54413354>,
         <https://viaf.org/viaf/54910787>,
-        <https://viaf.org/viaf/8138422> ;
-    schema:subjectOf <https://performance.musiconn.de/event/10-museums-concert-grosser-konzertsaal-frankfurt-a-m-1879-02-14-18-30>,
-        <https://performance.musiconn.de/event/3-museums-concert-grosser-konzertsaal-frankfurt-a-m-1866-11-09-18-30>,
-        <https://performance.musiconn.de/event/6-museums-concert-grosser-konzertsaal-frankfurt-a-m-1862-01-31-18-30>,
-        <https://performance.musiconn.de/event/achtes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1883-01-19-18-30>,
-        <https://performance.musiconn.de/event/fuenftes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1896-12-13-17-30> .
+        <https://viaf.org/viaf/8138422> .
 

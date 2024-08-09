@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/die-schweizer-familie-weigl-joseph> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/die-schweizer-familie-weigl-joseph> ] .
 
-<https://performance.musiconn.de/work/die-schweizer-familie-weigl-joseph> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/die-schweizer-familie-weigl-joseph> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Die Schweizer Familie (Weigl, Joseph)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/die-schweizer-familie-fassung-weigl-joseph> ;
+    schema1:subjectOf <https://performance.musiconn.de/event/die-schweizer-familie-morettisches-opernhaus-dresden-1828-07-14-18-00>,
+        <https://performance.musiconn.de/event/die-schweizer-familie-morettisches-opernhaus-dresden-1828-09-19-18-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Oper in 3 Akten" ;
     cto:elementOf n4c:E5320 ;
@@ -21,10 +24,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/158420977> ;
     cto:relatedPerson <https://d-nb.info/gnd/100470106>,
         <https://viaf.org/viaf/95163366> ;
-    cto:title "Die Schweizer Familie (Weigl, Joseph)" ;
     cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/95163366> ;
-    schema:includedComposition <https://performance.musiconn.de/work/die-schweizer-familie-fassung-weigl-joseph> ;
-    schema:subjectOf <https://performance.musiconn.de/event/die-schweizer-familie-morettisches-opernhaus-dresden-1828-07-14-18-00>,
-        <https://performance.musiconn.de/event/die-schweizer-familie-morettisches-opernhaus-dresden-1828-09-19-18-00> .
+        <https://viaf.org/viaf/95163366> .
 

@@ -1,18 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hocke-wolfgang> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hocke-wolfgang> ] .
 
-<https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hocke-wolfgang> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hocke-wolfgang> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Quartette, Violine (2), Viola, Violoncello (Hocke, Wolfgang)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/dornroeschen-hocke-wolfgang>,
+        <https://performance.musiconn.de/work/haensel-und-gretel-hocke-wolfgang> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """enthält: 1. Dornröschen, 2. Hänsel und Gretel
-Uraufgeführt 27.06.1976, Oberhof""" ;
+    cto:abstract "enthält: 1. Dornröschen, 2. Hänsel und GretelUraufgeführt 27.06.1976, Oberhof" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/119488744>,
         <https://d-nb.info/gnd/4058023-4>,
@@ -21,8 +22,5 @@ Uraufgeführt 27.06.1976, Oberhof""" ;
         <https://d-nb.info/gnd/4176618-0> ;
     cto:relatedPerson <https://d-nb.info/gnd/119488744>,
         <https://viaf.org/viaf/17647587> ;
-    cto:title "Quartette, Violine (2), Viola, Violoncello (Hocke, Wolfgang)" ;
-    cto:viaf <https://viaf.org/viaf/17647587> ;
-    schema:includedComposition <https://performance.musiconn.de/work/dornroeschen-hocke-wolfgang>,
-        <https://performance.musiconn.de/work/haensel-und-gretel-hocke-wolfgang> .
+    cto:viaf <https://viaf.org/viaf/17647587> .
 

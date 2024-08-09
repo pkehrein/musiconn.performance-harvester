@@ -1,15 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/fugen-violine-viola-bassinstrument-kv-404a-mozart-wolfgang-amadeus> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/fugen-violine-viola-bassinstrument-kv-404a-mozart-wolfgang-amadeus> ] .
 
-<https://performance.musiconn.de/work/fugen-violine-viola-bassinstrument-kv-404a-mozart-wolfgang-amadeus> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/fugen-violine-viola-bassinstrument-kv-404a-mozart-wolfgang-amadeus> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Fugen, Violine, Viola, Bassinstrument, KV 404a (Mozart, Wolfgang Amadeus)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1150808640>,
+        <https://d-nb.info/gnd/300335075>,
+        <https://performance.musiconn.de/work/fugen-violine-viola-bassinstrument-kv-404a-nr-1-mozart-wolfgang-amadeus>,
+        <https://performance.musiconn.de/work/fugen-violine-viola-bassinstrument-kv-404a-nr-3-mozart-wolfgang-amadeus>,
+        <https://performance.musiconn.de/work/fugen-violine-viola-bassinstrument-kv-404a-praeludium-und-fuge-mozart-wolfgang-amadeus>,
+        <https://viaf.org/viaf/195813270>,
+        <https://viaf.org/viaf/3534151656358708400008> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Bearbeitung von insgesamt 6 Fugen (5 nach Johann Sebastian Bach und 1 nach Wilhelm Friedemann Bach) mit 6 Einleitungen, von denen 4 von Mozart sind" ;
     cto:elementOf n4c:E5320 ;
@@ -26,17 +33,9 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/142053100> ;
     cto:relatedPerson <https://d-nb.info/gnd/118584596>,
         <https://viaf.org/viaf/32197206> ;
-    cto:title "Fugen, Violine, Viola, Bassinstrument, KV 404a (Mozart, Wolfgang Amadeus)" ;
     cto:viaf <https://viaf.org/viaf/131854011>,
         <https://viaf.org/viaf/142053100>,
         <https://viaf.org/viaf/195813270>,
         <https://viaf.org/viaf/32197206>,
-        <https://viaf.org/viaf/3534151656358708400008> ;
-    schema:includedComposition <https://d-nb.info/gnd/1150808640>,
-        <https://d-nb.info/gnd/300335075>,
-        <https://performance.musiconn.de/work/fugen-violine-viola-bassinstrument-kv-404a-nr-1-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/fugen-violine-viola-bassinstrument-kv-404a-nr-3-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/fugen-violine-viola-bassinstrument-kv-404a-praeludium-und-fuge-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/195813270>,
         <https://viaf.org/viaf/3534151656358708400008> .
 

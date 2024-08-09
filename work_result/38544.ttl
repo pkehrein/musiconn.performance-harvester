@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/rosenkranz-oder-mysterien-sonaten-biber-heinrich-ignaz-franz> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/rosenkranz-oder-mysterien-sonaten-biber-heinrich-ignaz-franz> ] .
 
-<https://performance.musiconn.de/work/rosenkranz-oder-mysterien-sonaten-biber-heinrich-ignaz-franz> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/rosenkranz-oder-mysterien-sonaten-biber-heinrich-ignaz-franz> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Rosenkranz- oder Mysterien-Sonaten (Biber, Heinrich Ignaz Franz)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1166578909>,
+        <https://performance.musiconn.de/work/rosenkranz-oder-mysterien-sonaten-sonate-nr-10-biber-heinrich-ignaz-franz>,
+        <https://viaf.org/viaf/1261153716397758820006> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "15 Sonaten für Violine und Basso continuo und 1 Passacaglia für Violine" ;
     cto:elementOf n4c:E5320 ;
@@ -19,10 +22,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4131190-5> ;
     cto:relatedPerson <https://d-nb.info/gnd/118510622>,
         <https://viaf.org/viaf/56795390> ;
-    cto:title "Rosenkranz- oder Mysterien-Sonaten (Biber, Heinrich Ignaz Franz)" ;
     cto:viaf <https://viaf.org/viaf/1261153716397758820006>,
-        <https://viaf.org/viaf/56795390> ;
-    schema:includedComposition <https://d-nb.info/gnd/1166578909>,
-        <https://performance.musiconn.de/work/rosenkranz-oder-mysterien-sonaten-sonate-nr-10-biber-heinrich-ignaz-franz>,
-        <https://viaf.org/viaf/1261153716397758820006> .
+        <https://viaf.org/viaf/56795390> .
 

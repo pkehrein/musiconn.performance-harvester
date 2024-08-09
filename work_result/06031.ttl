@@ -1,15 +1,23 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/auf-japan-friml-rudolf> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/auf-japan-friml-rudolf> ] .
 
-<https://performance.musiconn.de/work/auf-japan-friml-rudolf> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/auf-japan-friml-rudolf> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Auf Japan (Friml, Rudolf)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/109ste-vorstellung-semperoper-dresden-1904-05-07-19-30>,
+        <https://performance.musiconn.de/event/13-vorstellung-semperoper-dresden-1906-01-15>,
+        <https://performance.musiconn.de/event/152-vorstellung-semperoper-dresden-1904-06-24-19-30>,
+        <https://performance.musiconn.de/event/159-vorstellung-semperoper-dresden-1904-08-14-19-30>,
+        <https://performance.musiconn.de/event/236-vorstellung-semperoper-dresden-1904-11-11-19-30>,
+        <https://performance.musiconn.de/event/32-vorstellung-semperoper-dresden-1905-01-30-19-00>,
+        <https://performance.musiconn.de/event/38ste-vorstellung-semperoper-dresden-1904-02-11-19-00>,
+        <https://performance.musiconn.de/event/68ste-vorstellung-semperoper-dresden-1904-03-17-19-30> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Auf Japan Tanz-Idyll (1903 Dresden)" ;
     cto:elementOf n4c:E5320 ;
@@ -21,15 +29,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/158420977> ;
     cto:relatedPerson <https://d-nb.info/gnd/134378598>,
         <https://viaf.org/viaf/56796148> ;
-    cto:title "Auf Japan (Friml, Rudolf)" ;
     cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/56796148> ;
-    schema:subjectOf <https://performance.musiconn.de/event/109ste-vorstellung-semperoper-dresden-1904-05-07-19-30>,
-        <https://performance.musiconn.de/event/13-vorstellung-semperoper-dresden-1906-01-15>,
-        <https://performance.musiconn.de/event/152-vorstellung-semperoper-dresden-1904-06-24-19-30>,
-        <https://performance.musiconn.de/event/159-vorstellung-semperoper-dresden-1904-08-14-19-30>,
-        <https://performance.musiconn.de/event/236-vorstellung-semperoper-dresden-1904-11-11-19-30>,
-        <https://performance.musiconn.de/event/32-vorstellung-semperoper-dresden-1905-01-30-19-00>,
-        <https://performance.musiconn.de/event/38ste-vorstellung-semperoper-dresden-1904-02-11-19-00>,
-        <https://performance.musiconn.de/event/68ste-vorstellung-semperoper-dresden-1904-03-17-19-30> .
+        <https://viaf.org/viaf/56796148> .
 

@@ -1,15 +1,21 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gesaenge-op-4-franz-robert> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gesaenge-op-4-franz-robert> ] .
 
-<https://performance.musiconn.de/work/gesaenge-op-4-franz-robert> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gesaenge-op-4-franz-robert> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Gesänge, op. 4 (Franz, Robert)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/1285906403>,
+        <https://performance.musiconn.de/work/gesaenge-op-4-er-ist-gekommen-franz-robert>,
+        <https://performance.musiconn.de/work/gesaenge-op-4-herbstsorge-franz-robert>,
+        <https://performance.musiconn.de/work/gesaenge-op-4-liebliche-maid-franz-robert>,
+        <https://performance.musiconn.de/work/gesaenge-op-4-montgomery-gretchen-franz-robert>,
+        <https://performance.musiconn.de/work/gesaenge-op-4-wanderlied-franz-robert> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "12 Gesänge: Mein Hochlandskind ; Die süße Dirn' von Inverness ; Liebliche Maid ; Ihr Hügel dort am schönen Doon ; Montgomery Gretchen ; Du hast mich verlassen ; Er ist gekommen ; Kurzes Wiedersehen ; Durch säuselnde Bäume ; Herbstsorge ; Wanderlied ; Ach, dass du kamst" ;
     cto:elementOf n4c:E5320 ;
@@ -19,12 +25,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
     cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
     cto:relatedPerson <https://d-nb.info/gnd/118702955>,
         <https://viaf.org/viaf/27110440> ;
-    cto:title "Gesänge, op. 4 (Franz, Robert)" ;
-    cto:viaf <https://viaf.org/viaf/27110440> ;
-    schema:includedComposition <https://d-nb.info/gnd/1285906403>,
-        <https://performance.musiconn.de/work/gesaenge-op-4-er-ist-gekommen-franz-robert>,
-        <https://performance.musiconn.de/work/gesaenge-op-4-herbstsorge-franz-robert>,
-        <https://performance.musiconn.de/work/gesaenge-op-4-liebliche-maid-franz-robert>,
-        <https://performance.musiconn.de/work/gesaenge-op-4-montgomery-gretchen-franz-robert>,
-        <https://performance.musiconn.de/work/gesaenge-op-4-wanderlied-franz-robert> .
+    cto:viaf <https://viaf.org/viaf/27110440> .
 

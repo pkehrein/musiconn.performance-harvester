@@ -1,18 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/requiem-woo-5-9-d-moll-reger-max> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/requiem-woo-5-9-d-moll-reger-max> ] .
 
-<https://performance.musiconn.de/work/requiem-woo-5-9-d-moll-reger-max> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/requiem-woo-5-9-d-moll-reger-max> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Requiem, WoO 5 9 (d-Moll) (Reger, Max)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Fragment eines lateinischen Requiems, nur der 1. Satz wurde druckreif beendet
-vom Erstverleger auch mit op. 145a bezeichnet""" ;
+    cto:abstract "Fragment eines lateinischen Requiems, nur der 1. Satz wurde druckreif beendetvom Erstverleger auch mit op. 145a bezeichnet" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/10135650-X>,
         <https://d-nb.info/gnd/1115219804>,
@@ -37,7 +36,6 @@ vom Erstverleger auch mit op. 145a bezeichnet""" ;
         <https://viaf.org/viaf/150245159> ;
     cto:relatedPerson <https://d-nb.info/gnd/118598988>,
         <https://viaf.org/viaf/34644344> ;
-    cto:title "Requiem, WoO 5 9 (d-Moll) (Reger, Max)" ;
     cto:viaf <https://viaf.org/viaf/122700506>,
         <https://viaf.org/viaf/133046419>,
         <https://viaf.org/viaf/136181816>,

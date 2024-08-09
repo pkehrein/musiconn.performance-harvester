@@ -1,43 +1,16 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lustgarten-neuer-teutscher-gesaeng-balletti-gaillarden-und-intraden-hassler-hans-leo> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lustgarten-neuer-teutscher-gesaeng-balletti-gaillarden-und-intraden-hassler-hans-leo> ] .
 
-<https://performance.musiconn.de/work/lustgarten-neuer-teutscher-gesaeng-balletti-gaillarden-und-intraden-hassler-hans-leo> a cto:DataFeedElement,
-        schema:MusicComposition ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Widmung: Friderichen, Pfaltzgrafen bey Rhein
-4-8stg.""" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118052358X>,
-        <https://d-nb.info/gnd/118917447>,
-        <https://d-nb.info/gnd/300067984>,
-        <https://d-nb.info/gnd/30025380X>,
-        <https://d-nb.info/gnd/30033866X>,
-        <https://d-nb.info/gnd/300461844>,
-        <https://d-nb.info/gnd/4035669-3>,
-        <https://d-nb.info/gnd/4197337-9>,
-        <https://d-nb.info/gnd/4364473-9>,
-        <https://d-nb.info/gnd/4384505-8> ;
-    cto:isPartOf <https://d-nb.info/gnd/4035669-3>,
-        <https://d-nb.info/gnd/4197337-9>,
-        <https://d-nb.info/gnd/4364473-9>,
-        <https://d-nb.info/gnd/4384505-8> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118917447>,
-        <https://viaf.org/viaf/76500260> ;
-    cto:title "Lustgarten neuer teutscher Gesäng, Balletti, Gaillarden und Intraden (Haßler, Hans Leo)" ;
-    cto:viaf <https://viaf.org/viaf/176272026>,
-        <https://viaf.org/viaf/179924241>,
-        <https://viaf.org/viaf/196883374>,
-        <https://viaf.org/viaf/208692912>,
-        <https://viaf.org/viaf/5247155286649887180004>,
-        <https://viaf.org/viaf/76500260> ;
-    schema:includedComposition <https://d-nb.info/gnd/118052358X>,
+<https://performance.musiconn.de/work/lustgarten-neuer-teutscher-gesaeng-balletti-gaillarden-und-intraden-hassler-hans-leo> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Lustgarten neuer teutscher Gesäng, Balletti, Gaillarden und Intraden (Haßler, Hans Leo)" ;
+    schema1:includedComposition <https://d-nb.info/gnd/118052358X>,
         <https://d-nb.info/gnd/300067984>,
         <https://d-nb.info/gnd/30025380X>,
         <https://d-nb.info/gnd/30033866X>,
@@ -56,5 +29,30 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/179924241>,
         <https://viaf.org/viaf/196883374>,
         <https://viaf.org/viaf/208692912>,
-        <https://viaf.org/viaf/5247155286649887180004> .
+        <https://viaf.org/viaf/5247155286649887180004> ;
+    nfdicore:publisher n4c:E1841 ;
+    cto:abstract "Widmung: Friderichen, Pfaltzgrafen bey Rhein4-8stg." ;
+    cto:elementOf n4c:E5320 ;
+    cto:gnd <https://d-nb.info/gnd/118052358X>,
+        <https://d-nb.info/gnd/118917447>,
+        <https://d-nb.info/gnd/300067984>,
+        <https://d-nb.info/gnd/30025380X>,
+        <https://d-nb.info/gnd/30033866X>,
+        <https://d-nb.info/gnd/300461844>,
+        <https://d-nb.info/gnd/4035669-3>,
+        <https://d-nb.info/gnd/4197337-9>,
+        <https://d-nb.info/gnd/4364473-9>,
+        <https://d-nb.info/gnd/4384505-8> ;
+    cto:isPartOf <https://d-nb.info/gnd/4035669-3>,
+        <https://d-nb.info/gnd/4197337-9>,
+        <https://d-nb.info/gnd/4364473-9>,
+        <https://d-nb.info/gnd/4384505-8> ;
+    cto:relatedPerson <https://d-nb.info/gnd/118917447>,
+        <https://viaf.org/viaf/76500260> ;
+    cto:viaf <https://viaf.org/viaf/176272026>,
+        <https://viaf.org/viaf/179924241>,
+        <https://viaf.org/viaf/196883374>,
+        <https://viaf.org/viaf/208692912>,
+        <https://viaf.org/viaf/5247155286649887180004>,
+        <https://viaf.org/viaf/76500260> .
 

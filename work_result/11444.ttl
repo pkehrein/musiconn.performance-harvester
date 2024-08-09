@@ -1,19 +1,17 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/die-wallfahrt-nach-kevlaar-op-8-duetschke-hans> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/die-wallfahrt-nach-kevlaar-op-8-duetschke-hans> ] .
 
-<https://performance.musiconn.de/work/die-wallfahrt-nach-kevlaar-op-8-duetschke-hans> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/die-wallfahrt-nach-kevlaar-op-8-duetschke-hans> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Die Wallfahrt nach Kevlaar, op. 8 (Dütschke, Hans)" ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """I. Am Fenster stand die Mutter
-II. Die Mutter Gottes zu Kevlaar
-III. Der kranke Sohn und die Mutter""" ;
+    cto:abstract "I. Am Fenster stand die MutterII. Die Mutter Gottes zu KevlaarIII. Der kranke Sohn und die Mutter" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/116240989>,
         <https://d-nb.info/gnd/116930454>,
@@ -23,7 +21,6 @@ III. Der kranke Sohn und die Mutter""" ;
         <https://d-nb.info/gnd/116930454>,
         <https://viaf.org/viaf/64770450>,
         <https://viaf.org/viaf/77062157> ;
-    cto:title "Die Wallfahrt nach Kevlaar, op. 8 (Dütschke, Hans)" ;
     cto:viaf <https://viaf.org/viaf/64770450>,
         <https://viaf.org/viaf/77062157> .
 

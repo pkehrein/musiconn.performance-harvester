@@ -1,15 +1,18 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lobe-den-herrn-meine-seele-bwv-69-bach-johann-sebastian> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lobe-den-herrn-meine-seele-bwv-69-bach-johann-sebastian> ] .
 
-<https://performance.musiconn.de/work/lobe-den-herrn-meine-seele-bwv-69-bach-johann-sebastian> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lobe-den-herrn-meine-seele-bwv-69-bach-johann-sebastian> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Lobe den Herrn, meine Seele, BWV 69 (Bach, Johann Sebastian)" ;
+    schema1:includedComposition <https://performance.musiconn.de/work/kantaten-bwv-69a-bwv-69-bach-johann-sebastian>,
+        <https://performance.musiconn.de/work/lobe-den-herrn-meine-seele-bwv-69-auswahl-bach-johann-sebastian>,
+        <https://performance.musiconn.de/work/lobe-den-herrn-meine-seele-bwv-69-lobe-den-herrn-meine-seele-bach-johann-sebastian> ;
     nfdicore:publisher n4c:E1841 ;
     cto:abstract "Kantate am zwölften Sonntag nach Trinitatis (Dominica 12 post Trinitatis) und zur Ratswahl. Der Text ist zusammengestellt aus Psalm 103, 2 für den Eingangschoral, aus Strophe 3 von Luthers Nachdichtung des 67. Psalms \"Es woll uns Gott gnädig sein\" für den Schlusschoral und aus freien Dichtungen. Verfasser unbekannt" ;
     cto:elementOf n4c:E5320 ;
@@ -24,11 +27,7 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/150245159> ;
     cto:relatedPerson <https://d-nb.info/gnd/11850553X>,
         <https://viaf.org/viaf/12304462> ;
-    cto:title "Lobe den Herrn, meine Seele, BWV 69 (Bach, Johann Sebastian)" ;
     cto:viaf <https://viaf.org/viaf/12304462>,
         <https://viaf.org/viaf/136181816>,
-        <https://viaf.org/viaf/150245159> ;
-    schema:includedComposition <https://performance.musiconn.de/work/kantaten-bwv-69a-bwv-69-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/lobe-den-herrn-meine-seele-bwv-69-auswahl-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/lobe-den-herrn-meine-seele-bwv-69-lobe-den-herrn-meine-seele-bach-johann-sebastian> .
+        <https://viaf.org/viaf/150245159> .
 

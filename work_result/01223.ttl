@@ -1,18 +1,19 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/kein-haelmlein-waechst-auf-erden-anonym> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/kein-haelmlein-waechst-auf-erden-anonym> ] .
 
-<https://performance.musiconn.de/work/kein-haelmlein-waechst-auf-erden-anonym> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/kein-haelmlein-waechst-auf-erden-anonym> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Kein Hälmlein wächst auf Erden ([anonym])" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/konzert-des-kreuzchors-dresen-krone-bautzen-1935-10-21-20-15>,
+        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1918-09-07-14-00> ;
     nfdicore:publisher n4c:E1841 ;
-    cto:abstract """Dichtung von Albert Emil Brachvogel aus dem Roman "Friedemann Bach" (2. Hälfte 19. Jahrhundert)
-W. F. Bach fälschlich zugeschrieben""" ;
+    cto:abstract "Dichtung von Albert Emil Brachvogel aus dem Roman \"Friedemann Bach\" (2. Hälfte 19. Jahrhundert)W. F. Bach fälschlich zugeschrieben" ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1212749-8>,
         <https://d-nb.info/gnd/2074419-5>,
@@ -23,9 +24,6 @@ W. F. Bach fälschlich zugeschrieben""" ;
         <https://viaf.org/viaf/139053206>,
         <https://viaf.org/viaf/150245159> ;
     cto:relatedPerson <https://performance.musiconn.de/person/anonym> ;
-    cto:title "Kein Hälmlein wächst auf Erden ([anonym])" ;
     cto:viaf <https://viaf.org/viaf/139053206>,
-        <https://viaf.org/viaf/150245159> ;
-    schema:subjectOf <https://performance.musiconn.de/event/konzert-des-kreuzchors-dresen-krone-bautzen-1935-10-21-20-15>,
-        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1918-09-07-14-00> .
+        <https://viaf.org/viaf/150245159> .
 

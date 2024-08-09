@@ -1,15 +1,33 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/lieder-brahms-johannes> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/lieder-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/lieder-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/lieder-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Lieder (Brahms, Johannes)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1897-10-19>,
+        <https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1899-10-09>,
+        <https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1900-10-08>,
+        <https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1906-10-16>,
+        <https://performance.musiconn.de/event/11-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1911-03-13>,
+        <https://performance.musiconn.de/event/3-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1909-11-12>,
+        <https://performance.musiconn.de/event/4-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1907-11-22>,
+        <https://performance.musiconn.de/event/5-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1900-12-03>,
+        <https://performance.musiconn.de/event/5-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1908-11-28>,
+        <https://performance.musiconn.de/event/6-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1911-01-02>,
+        <https://performance.musiconn.de/event/8-philharmonisches-konzert-schauspielhaus-leipzig-1904-02-01>,
+        <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1877-10-12>,
+        <https://performance.musiconn.de/event/iii-akad-kammermusik-volkshaus-jena-1943-03-10-19-30>,
+        <https://performance.musiconn.de/event/koncert-12-marta-sankt-petersburger-philharmonie-kleiner-saal-1997-03-12>,
+        <https://performance.musiconn.de/event/liederabend-universitaet-jena-aula-1956-02-17-19-30>,
+        <https://performance.musiconn.de/event/sonderkonzert-alte-buchhaendlerboerse-leipzig-1876-11-07>,
+        <https://performance.musiconn.de/event/sonderkonzert-konzert-einheimischer-kuenstler-fuer-den-hausvaeterverband-ehemaliger-krystallpalast-leipzig-alberthalle-1904-01-12>,
+        <https://performance.musiconn.de/event/vortragsabend-volkshaus-jena-kleiner-saal-1904-02-07-18-00> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1035530589>,
@@ -65,7 +83,6 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/7573295>,
         <https://viaf.org/viaf/79632473>,
         <https://viaf.org/viaf/88078579> ;
-    cto:title "Lieder (Brahms, Johannes)" ;
     cto:viaf <https://viaf.org/viaf/14960796>,
         <https://viaf.org/viaf/17407415>,
         <https://viaf.org/viaf/200249>,
@@ -81,23 +98,5 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/71578278>,
         <https://viaf.org/viaf/7573295>,
         <https://viaf.org/viaf/79632473>,
-        <https://viaf.org/viaf/88078579> ;
-    schema:subjectOf <https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1897-10-19>,
-        <https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1899-10-09>,
-        <https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1900-10-08>,
-        <https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1906-10-16>,
-        <https://performance.musiconn.de/event/11-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1911-03-13>,
-        <https://performance.musiconn.de/event/3-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1909-11-12>,
-        <https://performance.musiconn.de/event/4-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1907-11-22>,
-        <https://performance.musiconn.de/event/5-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1900-12-03>,
-        <https://performance.musiconn.de/event/5-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1908-11-28>,
-        <https://performance.musiconn.de/event/6-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1911-01-02>,
-        <https://performance.musiconn.de/event/8-philharmonisches-konzert-schauspielhaus-leipzig-1904-02-01>,
-        <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1877-10-12>,
-        <https://performance.musiconn.de/event/iii-akad-kammermusik-volkshaus-jena-1943-03-10-19-30>,
-        <https://performance.musiconn.de/event/koncert-12-marta-sankt-petersburger-philharmonie-kleiner-saal-1997-03-12>,
-        <https://performance.musiconn.de/event/liederabend-universitaet-jena-aula-1956-02-17-19-30>,
-        <https://performance.musiconn.de/event/sonderkonzert-alte-buchhaendlerboerse-leipzig-1876-11-07>,
-        <https://performance.musiconn.de/event/sonderkonzert-konzert-einheimischer-kuenstler-fuer-den-hausvaeterverband-ehemaliger-krystallpalast-leipzig-alberthalle-1904-01-12>,
-        <https://performance.musiconn.de/event/vortragsabend-volkshaus-jena-kleiner-saal-1904-02-07-18-00> .
+        <https://viaf.org/viaf/88078579> .
 

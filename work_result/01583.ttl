@@ -1,15 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
-@prefix schema: <https://schema.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
 
-n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
-            schema:item <https://performance.musiconn.de/work/gesaenge-frauen-chor-horn-2-harfe-op-17-der-gaertner-brahms-johannes> ] ;
-    schema:dateModified "2024-06-10"^^xsd:date .
+n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:item <https://performance.musiconn.de/work/gesaenge-frauen-chor-horn-2-harfe-op-17-der-gaertner-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/gesaenge-frauen-chor-horn-2-harfe-op-17-der-gaertner-brahms-johannes> a cto:DataFeedElement,
-        schema:MusicComposition ;
+<https://performance.musiconn.de/work/gesaenge-frauen-chor-horn-2-harfe-op-17-der-gaertner-brahms-johannes> a schema1:MusicComposition,
+        cto:DataFeedElement ;
+    rdfs:label "Gesänge, Frauen-Chor, Horn (2), Harfe, op. 17. Der Gärtner (Brahms, Johannes)" ;
+    schema1:subjectOf <https://performance.musiconn.de/event/4-museums-concert-grosser-konzertsaal-frankfurt-a-m-1863-11-20-18-30>,
+        <https://performance.musiconn.de/event/6-kammerkonzert-schloss-albrechtsberg-dresden-2002-06-23-19-00>,
+        <https://performance.musiconn.de/event/abokonzert-20-zweites-gewandhaus-leipzig-1903-03-05>,
+        <https://performance.musiconn.de/event/achtes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1900-02-18-17-30>,
+        <https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1887-11-04-18-30>,
+        <https://performance.musiconn.de/event/elftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1892-03-18-18-30>,
+        <https://performance.musiconn.de/event/konzert-koeniglich-staedtischer-redouten-saal-olmuetz-1906-03-04> ;
     nfdicore:publisher n4c:E1841 ;
     cto:elementOf n4c:E5320 ;
     cto:gnd <https://d-nb.info/gnd/1078514259>,
@@ -34,18 +41,10 @@ n4c:E5320 schema:dataFeedElement [ a schema:DataFeedItem ;
         <https://viaf.org/viaf/33146825124407631545> ;
     cto:relatedPerson <https://d-nb.info/gnd/118514253>,
         <https://viaf.org/viaf/7573295> ;
-    cto:title "Gesänge, Frauen-Chor, Horn (2), Harfe, op. 17. Der Gärtner (Brahms, Johannes)" ;
     cto:viaf <https://viaf.org/viaf/125161774>,
         <https://viaf.org/viaf/135652398>,
         <https://viaf.org/viaf/136181816>,
         <https://viaf.org/viaf/174024482>,
         <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/7573295> ;
-    schema:subjectOf <https://performance.musiconn.de/event/4-museums-concert-grosser-konzertsaal-frankfurt-a-m-1863-11-20-18-30>,
-        <https://performance.musiconn.de/event/6-kammerkonzert-schloss-albrechtsberg-dresden-2002-06-23-19-00>,
-        <https://performance.musiconn.de/event/abokonzert-20-zweites-gewandhaus-leipzig-1903-03-05>,
-        <https://performance.musiconn.de/event/achtes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1900-02-18-17-30>,
-        <https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1887-11-04-18-30>,
-        <https://performance.musiconn.de/event/elftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1892-03-18-18-30>,
-        <https://performance.musiconn.de/event/konzert-koeniglich-staedtischer-redouten-saal-olmuetz-1906-03-04> .
+        <https://viaf.org/viaf/7573295> .
 
