@@ -1,54 +1,74 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1178549526> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001483X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300014902> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300059655> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171463> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300260024> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-vereinskonzert-rathaus-muenster-westf-friedenssaal-1898-11-05> ] .
 
-<https://performance.musiconn.de/event/3-vereinskonzert-rathaus-muenster-westf-friedenssaal-1898-11-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-vereinskonzert-rathaus-muenster-westf-friedenssaal-1898-11-05> a cto:CTO_0001005 ;
     rdfs:label "3. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 5.11.1898" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1898-99> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1898-11-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1898-11-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1178549526>,
-        <https://d-nb.info/gnd/30001483X>,
-        <https://d-nb.info/gnd/300014902>,
-        <https://d-nb.info/gnd/300059655>,
-        <https://d-nb.info/gnd/300171463>,
-        <https://d-nb.info/gnd/300260024>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1898-99> ;
-    cto:relatedItem <https://d-nb.info/gnd/1178549526>,
-        <https://d-nb.info/gnd/30001483X>,
-        <https://d-nb.info/gnd/300014902>,
-        <https://d-nb.info/gnd/300059655>,
-        <https://d-nb.info/gnd/300171463>,
-        <https://d-nb.info/gnd/300260024>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205759875> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300260024> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177655300> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001483X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171463> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186107364> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300014902> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300059655> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315209867> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209867122> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1178549526> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4253155105821476320009> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1898-1899>,
-        <https://performance.musiconn.de/work/adelaide-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/an-die-hoffnung-op-94-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/euryanthe-arie-des-adolar-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/euryanthe-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/gesaenge-op-83-kleine-blumen-kleine-blaetter-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/musik-zum-fest-nachspiel-die-ruinen-von-athen-schmueckt-die-altare-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-48-es-dur-glazunov-aleksandr-konstantinovic>,
-        <https://performance.musiconn.de/work/variationen-ueber-ein-ukrainisches-volkslied-op-7-knorr-iwan>,
-        <https://viaf.org/viaf/177655300>,
-        <https://viaf.org/viaf/186107364>,
-        <https://viaf.org/viaf/205759875>,
-        <https://viaf.org/viaf/209867122>,
-        <https://viaf.org/viaf/315209867>,
-        <https://viaf.org/viaf/4253155105821476320009> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/177655300>,
-        <https://viaf.org/viaf/186107364>,
-        <https://viaf.org/viaf/205759875>,
-        <https://viaf.org/viaf/209867122>,
-        <https://viaf.org/viaf/315209867>,
-        <https://viaf.org/viaf/4253155105821476320009> .
+        <https://performance.musiconn.de/work/variationen-ueber-ein-ukrainisches-volkslied-op-7-knorr-iwan> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177655300> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186107364> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205759875> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209867122> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315209867> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4253155105821476320009> a nfdicore:NFDI_0001010 .
 

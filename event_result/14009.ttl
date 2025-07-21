@@ -1,46 +1,63 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1189756226> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009682> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300088981> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170475> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300864000> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/abokonzert-7-zweites-gewandhaus-leipzig-1900-11-29> ] .
 
-<https://performance.musiconn.de/event/abokonzert-7-zweites-gewandhaus-leipzig-1900-11-29> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/abokonzert-7-zweites-gewandhaus-leipzig-1900-11-29> a cto:CTO_0001005 ;
     rdfs:label "Abokonzert 7, Zweites Gewandhaus (Leipzig), 29.11.1900" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1900-11-29" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1900-11-29" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1189756226>,
-        <https://d-nb.info/gnd/300009682>,
-        <https://d-nb.info/gnd/300088981>,
-        <https://d-nb.info/gnd/300170475>,
-        <https://d-nb.info/gnd/300864000>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/1189756226>,
-        <https://d-nb.info/gnd/300009682>,
-        <https://d-nb.info/gnd/300088981>,
-        <https://d-nb.info/gnd/300170475>,
-        <https://d-nb.info/gnd/300864000>,
-        <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
-        <https://performance.musiconn.de/work/die-rebe-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/konzerte-violine-streichorchester-bwv-1042-e-dur-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sinfonien-op-70-herzogenberg-heinrich-von>,
-        <https://performance.musiconn.de/work/symphonie-espagnole-lalo-edouard>,
-        <https://performance.musiconn.de/work/tannhaeuser-und-der-saengerkrieg-auf-wartburg-ouvertuere-wagner-richard>,
-        <https://viaf.org/viaf/179215200>,
-        <https://viaf.org/viaf/197648368>,
-        <https://viaf.org/viaf/209884072>,
-        <https://viaf.org/viaf/2916150567609906370005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/179215200>,
-        <https://viaf.org/viaf/197648368>,
-        <https://viaf.org/viaf/209884072>,
-        <https://viaf.org/viaf/264523828>,
-        <https://viaf.org/viaf/2916150567609906370005> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300088981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179215200> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1189756226> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197648368> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009682> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209884072> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170475> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300864000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2916150567609906370005> ],
+        <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179215200> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197648368> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209884072> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2916150567609906370005> a nfdicore:NFDI_0001010 .
 

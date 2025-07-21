@@ -1,54 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1147680159> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300023464> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300092768> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300132549> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300159684> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300422369> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/oper-konzert-1946-07-30> ] .
 
-<https://performance.musiconn.de/event/oper-konzert-1946-07-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/oper-konzert-1946-07-30> a cto:CTO_0001005 ;
     rdfs:label "Oper-Konzert, 30.7.1946" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1946-1947> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1946-07-30" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1946-07-30" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1147680159>,
-        <https://d-nb.info/gnd/300023464>,
-        <https://d-nb.info/gnd/300092768>,
-        <https://d-nb.info/gnd/300132549>,
-        <https://d-nb.info/gnd/300159684>,
-        <https://d-nb.info/gnd/300422369> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1946-1947> ;
-    cto:relatedItem <https://d-nb.info/gnd/1147680159>,
-        <https://d-nb.info/gnd/300023464>,
-        <https://d-nb.info/gnd/300092768>,
-        <https://d-nb.info/gnd/300132549>,
-        <https://d-nb.info/gnd/300159684>,
-        <https://d-nb.info/gnd/300422369>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kurpark-bad-weisser-hirsch-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6621148523912720970003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1147680159> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300023464> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215925351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175223586> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300422369> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/19145304723878610989> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300159684> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300092768> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174266921> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300132549> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/annees-de-pelerinage-venezia-e-napoli-r-10c-liszt-franz>,
-        <https://performance.musiconn.de/work/boccaccio-ouvertuere-suppe-franz-von>,
-        <https://performance.musiconn.de/work/carmen-suite-no-1-bizet-georges>,
         <https://performance.musiconn.de/work/don-carlos-arie-des-philipp-verdi-giuseppe>,
         <https://performance.musiconn.de/work/faust-rondo-vom-goldenen-kalb-gounod-charles>,
-        <https://performance.musiconn.de/work/guillaume-tell-oper-1829-ouvertuere-rossini-gioachino>,
-        <https://performance.musiconn.de/work/knjaz-igor-poloveckaja-pljaska-s-chorom-borodin-aleksandr-porfirevic>,
-        <https://performance.musiconn.de/work/konzertouvertueren-op-12-e-dur-szymanowski-karol>,
         <https://performance.musiconn.de/work/le-nozze-di-figaro-arie-des-figaro-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/les-contes-dhoffmann-barcarole-offenbach-jacques>,
-        <https://performance.musiconn.de/work/les-contes-dhoffmann-intermezzo-offenbach-jacques>,
-        <https://viaf.org/viaf/174266921>,
-        <https://viaf.org/viaf/175223586>,
-        <https://viaf.org/viaf/19145304723878610989>,
-        <https://viaf.org/viaf/215925351>,
-        <https://viaf.org/viaf/6621148523912720970003> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kurpark-bad-weisser-hirsch-dresden> ;
-    cto:viaf <https://viaf.org/viaf/174266921>,
-        <https://viaf.org/viaf/175223586>,
-        <https://viaf.org/viaf/19145304723878610989>,
-        <https://viaf.org/viaf/215925351>,
-        <https://viaf.org/viaf/6621148523912720970003> .
+        <https://performance.musiconn.de/work/les-contes-dhoffmann-intermezzo-offenbach-jacques> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174266921> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175223586> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/19145304723878610989> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215925351> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6621148523912720970003> a nfdicore:NFDI_0001010 .
 

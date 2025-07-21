@@ -1,42 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1222200015> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102240> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171676> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300864485> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-volks-concert-hamburger-volksoper-hamburg-1901-11-28-20-00> ] .
 
-<https://performance.musiconn.de/event/2-volks-concert-hamburger-volksoper-hamburg-1901-11-28-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-volks-concert-hamburger-volksoper-hamburg-1901-11-28-20-00> a cto:CTO_0001005 ;
     rdfs:label "2. Volks-Concert, Hamburger Volksoper (Hamburg), 28.11.1901, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1901-1902-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1901-11-28T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1901-11-28T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1222200015>,
-        <https://d-nb.info/gnd/300102240>,
-        <https://d-nb.info/gnd/300171676>,
-        <https://d-nb.info/gnd/300864485> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1901-1902-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300102240>,
-        <https://d-nb.info/gnd/300171676>,
-        <https://d-nb.info/gnd/300864485>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/117159032786501182559> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1222200015> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300864485> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181959643> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171676> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181290065> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102240> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188265895> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
-        <https://performance.musiconn.de/work/konzert-ouvertuere-mwv-p-5-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/konzertstuecke-klavier-orchester-j-282-f-moll-weber-carl-maria-von>,
         <https://performance.musiconn.de/work/nocturnes-klavier-singer-richard>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-42-c-dur-fassung-1880-rubinstejn-anton-g>,
         <https://performance.musiconn.de/work/tarantellen-klavier-leschetizky-theodor>,
-        <https://performance.musiconn.de/work/wallenstein-wallensteins-lager-indy-vincent-d>,
-        <https://viaf.org/viaf/181290065>,
-        <https://viaf.org/viaf/181959643>,
-        <https://viaf.org/viaf/188265895> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1222200015>,
-        <https://viaf.org/viaf/117159032786501182559> ;
-    cto:viaf <https://viaf.org/viaf/117159032786501182559>,
-        <https://viaf.org/viaf/181290065>,
-        <https://viaf.org/viaf/181959643>,
-        <https://viaf.org/viaf/188265895> .
+        <https://performance.musiconn.de/work/wallenstein-wallensteins-lager-indy-vincent-d> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/117159032786501182559> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181290065> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181959643> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188265895> a nfdicore:NFDI_0001010 .
 

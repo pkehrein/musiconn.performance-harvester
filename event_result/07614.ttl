@@ -1,68 +1,95 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1152346032> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1179199804> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1179276086> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1185513914> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300162731> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170092> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171439> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171528> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300217935> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1889-12-25-16-00> ] .
 
-<https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1889-12-25-16-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1889-12-25-16-00> a cto:CTO_0001005 ;
     rdfs:label "Concert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 25.12.1889, 16:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1889-1890> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1889-12-25T16:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1889-12-25T16:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1152346032>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/1179199804>,
-        <https://d-nb.info/gnd/1179276086>,
-        <https://d-nb.info/gnd/1185513914>,
-        <https://d-nb.info/gnd/300162731>,
-        <https://d-nb.info/gnd/300170092>,
-        <https://d-nb.info/gnd/300171439>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/300217935> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1889-1890> ;
-    cto:relatedItem <https://d-nb.info/gnd/1152346032>,
-        <https://d-nb.info/gnd/1179199804>,
-        <https://d-nb.info/gnd/1179276086>,
-        <https://d-nb.info/gnd/1185513914>,
-        <https://d-nb.info/gnd/300162731>,
-        <https://d-nb.info/gnd/300170092>,
-        <https://d-nb.info/gnd/300171439>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/300217935>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300162731> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5667155191944082440000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170092> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171439> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202940254> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1152346032> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1179276086> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183465436> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1179199804> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1185513914> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6348151898631024190005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300217935> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211712631> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177811557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/187505417> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2186155191925282440002> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1889-1890>,
-        <https://performance.musiconn.de/work/air-varie-vieuxtemps-henri>,
         <https://performance.musiconn.de/work/carmen-fantasie-bizet-georges>,
-        <https://performance.musiconn.de/work/concertinos-klarinette-orchester-j-109-es-dur-weber-carl-maria-von>,
         <https://performance.musiconn.de/work/das-nachtlager-in-granada-rezitativ-und-arie-kreutzer-conradin>,
-        <https://performance.musiconn.de/work/der-freischuetz-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-morgenlich-leuchtend-im-rosigen-schein-wagner-richard>,
-        <https://performance.musiconn.de/work/froehliche-weihnachten-koedel-ernst>,
-        <https://performance.musiconn.de/work/loin-du-bal-fassung-fuer-klavier-gillet-ernest>,
-        <https://performance.musiconn.de/work/raymond-ouvertuere-thomas-ambroise>,
-        <https://performance.musiconn.de/work/schlittenfahrt-polka-zikoff-friedrich>,
-        <https://performance.musiconn.de/work/traum-walzer-milloecker-carl>,
-        <https://performance.musiconn.de/work/valse-caprice-rubinstejn-anton-g>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/183465436>,
-        <https://viaf.org/viaf/187505417>,
-        <https://viaf.org/viaf/202940254>,
-        <https://viaf.org/viaf/211712631>,
-        <https://viaf.org/viaf/2186155191925282440002>,
-        <https://viaf.org/viaf/5667155191944082440000>,
-        <https://viaf.org/viaf/6348151898631024190005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/183465436>,
-        <https://viaf.org/viaf/187505417>,
-        <https://viaf.org/viaf/202940254>,
-        <https://viaf.org/viaf/211712631>,
-        <https://viaf.org/viaf/2186155191925282440002>,
-        <https://viaf.org/viaf/5667155191944082440000>,
-        <https://viaf.org/viaf/6348151898631024190005> .
+        <https://performance.musiconn.de/work/loin-du-bal-fassung-fuer-klavier-gillet-ernest> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177811557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183465436> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/187505417> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202940254> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211712631> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2186155191925282440002> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5667155191944082440000> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6348151898631024190005> a nfdicore:NFDI_0001010 .
 

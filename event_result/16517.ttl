@@ -1,33 +1,43 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1170607616> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010001> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1954-10-22> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1954-10-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1954-10-22> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 22.10.1954" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1954-10-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1954-10-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170607616>,
-        <https://d-nb.info/gnd/300010001>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1170607616>,
-        <https://d-nb.info/gnd/300010001>,
-        <https://performance.musiconn.de/source/motettenbuch-1954>,
-        <https://performance.musiconn.de/work/cymbalum-sionium-o-domine-jesu-christe-schein-johann-hermann>,
-        <https://performance.musiconn.de/work/fuerchte-dich-nicht-ich-bin-bei-dir-bach-johann-sebastian>,
-        <https://viaf.org/viaf/179407683>,
-        <https://viaf.org/viaf/185210418> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/179407683>,
-        <https://viaf.org/viaf/185210418> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185210418> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170607616> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179407683> ],
+        <https://performance.musiconn.de/source/motettenbuch-1954> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179407683> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185210418> a nfdicore:NFDI_0001010 .
 

@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300069464> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300080476> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300836449> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-sonntags-konzert-alte-oper-frankfurt-a-main-grosser-saal-1990-02-11-11-00> ] .
 
-<https://performance.musiconn.de/event/6-sonntags-konzert-alte-oper-frankfurt-a-main-grosser-saal-1990-02-11-11-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-sonntags-konzert-alte-oper-frankfurt-a-main-grosser-saal-1990-02-11-11-00> a cto:CTO_0001005 ;
     rdfs:label "6. Sonntags-Konzert, Alte Oper (Frankfurt a. Main). Großer Saal, 11.2.1990, 11:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1989-1990> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1990-02-11T11:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1990-02-11T11:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300069464>,
-        <https://d-nb.info/gnd/300080476>,
-        <https://d-nb.info/gnd/300836449> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1989-1990> ;
-    cto:relatedItem <https://d-nb.info/gnd/300069464>,
-        <https://d-nb.info/gnd/300080476>,
-        <https://d-nb.info/gnd/300836449>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-hob-7-a-1-c-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/maersche-um-den-sieg-zu-verfehlen-kagel-mauricio>,
-        <https://performance.musiconn.de/work/sinfonien-wab-103-fassung-1889-bruckner-anton>,
-        <https://viaf.org/viaf/202937685>,
-        <https://viaf.org/viaf/212899215>,
-        <https://viaf.org/viaf/278415865> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/202937685>,
-        <https://viaf.org/viaf/212899215>,
-        <https://viaf.org/viaf/278415865> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300080476> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/278415865> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300836449> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212899215> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300069464> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202937685> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/202937685> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212899215> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/278415865> a nfdicore:NFDI_0001010 .
 

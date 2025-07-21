@@ -1,49 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1054565813> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1169871992> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300143591> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300143605> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300143621> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300143958> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gastspiel-des-heinrich-schuetz-chors-london-semperoper-dresden-1985-10-13-11-00> ] .
 
-<https://performance.musiconn.de/event/gastspiel-des-heinrich-schuetz-chors-london-semperoper-dresden-1985-10-13-11-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gastspiel-des-heinrich-schuetz-chors-london-semperoper-dresden-1985-10-13-11-00> a cto:CTO_0001005 ;
     rdfs:label "[Gastspiel] des Heinrich-Schütz-Chor[s] London, Semperoper (Dresden), 13.10.1985, 11:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/xxix-berliner-festtage-des-theaters-und-der-musik> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1985-10-13T11:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1985-10-13T11:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1054565813>,
-        <https://d-nb.info/gnd/1169871992>,
-        <https://d-nb.info/gnd/300143591>,
-        <https://d-nb.info/gnd/300143605>,
-        <https://d-nb.info/gnd/300143621>,
-        <https://d-nb.info/gnd/300143958> ;
-    cto:itemOf <https://performance.musiconn.de/series/xxix-berliner-festtage-des-theaters-und-der-musik> ;
-    cto:relatedItem <https://d-nb.info/gnd/1169871992>,
-        <https://d-nb.info/gnd/300143591>,
-        <https://d-nb.info/gnd/300143605>,
-        <https://d-nb.info/gnd/300143621>,
-        <https://d-nb.info/gnd/300143958>,
-        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-21-heinrich-schuetz-ehrung-1954-2002>,
-        <https://performance.musiconn.de/work/deutsches-magnificat-swv-494a-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/die-sieben-worte-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/musikalische-exequien-canticum-b-simeonis-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/musikalische-exequien-herr-wenn-ich-nur-dich-habe-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/musikalische-exequien-konzert-in-form-einer-deutschen-begraebnis-missa-also-hat-gott-die-welt-geliebt-schuetz-heinrich>,
-        <https://viaf.org/viaf/181090921>,
-        <https://viaf.org/viaf/195808534>,
-        <https://viaf.org/viaf/202939618>,
-        <https://viaf.org/viaf/208685032>,
-        <https://viaf.org/viaf/6472154076043911860004> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1054565813>,
-        <https://viaf.org/viaf/309654002> ;
-    cto:viaf <https://viaf.org/viaf/181090921>,
-        <https://viaf.org/viaf/195808534>,
-        <https://viaf.org/viaf/202939618>,
-        <https://viaf.org/viaf/208685032>,
-        <https://viaf.org/viaf/309654002>,
-        <https://viaf.org/viaf/6472154076043911860004> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1054565813> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309654002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1169871992> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300143605> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300143958> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202939618> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195808534> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208685032> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181090921> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6472154076043911860004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300143591> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300143621> ],
+        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-21-heinrich-schuetz-ehrung-1954-2002> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181090921> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195808534> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202939618> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208685032> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309654002> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6472154076043911860004> a nfdicore:NFDI_0001010 .
 

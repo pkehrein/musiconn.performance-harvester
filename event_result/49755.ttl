@@ -1,55 +1,73 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300024770> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029349> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300042736> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300091362> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155336> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300556578> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/60-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1929-04-14-19-30> ] .
 
-<https://performance.musiconn.de/event/60-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1929-04-14-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/60-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1929-04-14-19-30> a cto:CTO_0001005 ;
     rdfs:label "60. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 14.4.1929, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1928-1929-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1929-04-14T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1929-04-14T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300024770>,
-        <https://d-nb.info/gnd/300029349>,
-        <https://d-nb.info/gnd/300042736>,
-        <https://d-nb.info/gnd/300091362>,
-        <https://d-nb.info/gnd/300155336>,
-        <https://d-nb.info/gnd/300556578> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1928-1929-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300024770>,
-        <https://d-nb.info/gnd/300029349>,
-        <https://d-nb.info/gnd/300042736>,
-        <https://d-nb.info/gnd/300091362>,
-        <https://d-nb.info/gnd/300155336>,
-        <https://d-nb.info/gnd/300556578>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155336> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300556578> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217016861> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300024770> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184207425> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300042736> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175407519> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300091362> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193652749> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029349> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186587519> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175770555> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
-        <https://performance.musiconn.de/work/akademische-festouvertuere-brahms-johannes>,
-        <https://performance.musiconn.de/work/coppelia-suite-delibes-leo>,
         <https://performance.musiconn.de/work/hejre-katy-hubay-jeno>,
-        <https://performance.musiconn.de/work/korsholma-jaernefelt-armas>,
-        <https://performance.musiconn.de/work/mattinata-leoncavallo-ruggiero>,
         <https://performance.musiconn.de/work/melodien-aus-der-oper-der-troubadour-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/morgenblaetter-strauss-johann>,
         <https://performance.musiconn.de/work/norske-danser-zwei-taenze-orchesterfassung-grieg-edvard>,
-        <https://performance.musiconn.de/work/romanzen-violine-orchester-op-42-a-moll-bruch-max>,
-        <https://performance.musiconn.de/work/serenata-moszkowski-moritz>,
-        <https://viaf.org/viaf/175407519>,
-        <https://viaf.org/viaf/175770555>,
-        <https://viaf.org/viaf/184207425>,
-        <https://viaf.org/viaf/186587519>,
-        <https://viaf.org/viaf/193652749>,
-        <https://viaf.org/viaf/217016861> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/175407519>,
-        <https://viaf.org/viaf/175770555>,
-        <https://viaf.org/viaf/184207425>,
-        <https://viaf.org/viaf/186587519>,
-        <https://viaf.org/viaf/193652749>,
-        <https://viaf.org/viaf/217016861> .
+        <https://performance.musiconn.de/work/serenata-moszkowski-moritz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175407519> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175770555> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184207425> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186587519> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193652749> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217016861> a nfdicore:NFDI_0001010 .
 

@@ -4,26 +4,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5074761-7> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-landhauskonzert-stadtmuseum-dresden-1974-09-21-19-00> ] .
 
-<https://performance.musiconn.de/event/1-landhauskonzert-stadtmuseum-dresden-1974-09-21-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-landhauskonzert-stadtmuseum-dresden-1974-09-21-19-00> a cto:CTO_0001005 ;
     rdfs:label "1. Landhauskonzert, Stadtmuseum Dresden, 21.9.1974, 19:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1974-09-21T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1974-09-21T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5074761-7> ;
-    cto:relatedItem <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5074761-7> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/126221316> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/concerto-amoroso-huebner-wilhelm>,
         <https://performance.musiconn.de/work/concertos-blasinstrument-7-buchwald-roland>,
         <https://performance.musiconn.de/work/stuecke-streichquartett-weiss-manfred>,
         <https://performance.musiconn.de/work/suoni-notturni-kraetzschmar-wilfried>,
         <https://performance.musiconn.de/work/trios-violine-viola-violoncello-hahn-volker>,
         <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-reinhold-otto> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5074761-7>,
-        <https://viaf.org/viaf/126221316> ;
-    cto:viaf <https://viaf.org/viaf/126221316> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/126221316> a nfdicore:NFDI_0001010 .
 

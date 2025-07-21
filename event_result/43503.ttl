@@ -4,20 +4,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5094573-7> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzert-der-kammermusikreihe-luxor-palast-chemnitz-1988-10-31-19-30> ] .
 
-<https://performance.musiconn.de/event/sonderkonzert-der-kammermusikreihe-luxor-palast-chemnitz-1988-10-31-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzert-der-kammermusikreihe-luxor-palast-chemnitz-1988-10-31-19-30> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert der Kammermusikreihe, Luxor-Palast (Chemnitz), 31.10.1988, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-10-31T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-10-31T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5094573-7>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132083842> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5094573-7> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/luxor-palast-chemnitz> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/helmut-klotz-und-der-synagogalchor-klingendes-vermaechtnis-lebendiges-gedenken>,
         <https://performance.musiconn.de/source/liedgesang-aus-tradition-sonderkonzert-der-kammermusikreihe-im-luxor-palast>,
         <https://performance.musiconn.de/source/programm-konzert-31-oktober-1988>,
@@ -39,11 +48,9 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/sfiras-hoomer-alman-samuel>,
         <https://performance.musiconn.de/work/wie-trinkt-der-kejsser-tee-fassung-sander-werner>,
         <https://performance.musiconn.de/work/wschomru-nowakowsky-david> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/luxor-palast-chemnitz> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5094573-7>,
-        <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/132083842>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/132083842>,
-        <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132083842> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4300889-6> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-nikolaikirche-leipzig-1888-06-02> ] .
 
-<https://performance.musiconn.de/event/motette-nikolaikirche-leipzig-1888-06-02> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-nikolaikirche-leipzig-1888-06-02> a cto:CTO_0001005 ;
     rdfs:label "Motette, Nikolaikirche (Leipzig), 2.6.1888" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1888-06-02" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1888-06-02" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4300889-6> ;
-    cto:relatedItem <https://performance.musiconn.de/source/motettenbuch-1884-1888>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4300889-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173652475> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/motettenbuch-1884-1888>,
         <https://performance.musiconn.de/work/messen-op-44-gloria-richter-ernst-friedrich-eduard>,
         <https://performance.musiconn.de/work/messen-op-44-kyrie-richter-ernst-friedrich-eduard>,
         <https://performance.musiconn.de/work/motetten-op-18-kommet-her-zehrfeld-oscar> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4300889-6>,
-        <https://viaf.org/viaf/173652475> ;
-    cto:viaf <https://viaf.org/viaf/173652475> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/173652475> a nfdicore:NFDI_0001010 .
 

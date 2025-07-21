@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300016808> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108168> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111231> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141858> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncert-27-nojabrja-sankt-petersburger-philharmonie-kleiner-saal-1999-11-27> ] .
 
-<https://performance.musiconn.de/event/koncert-27-nojabrja-sankt-petersburger-philharmonie-kleiner-saal-1999-11-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncert-27-nojabrja-sankt-petersburger-philharmonie-kleiner-saal-1999-11-27> a cto:CTO_0001005 ;
     rdfs:label "Koncert 27. nojabrja, Sankt-Petersburger Philharmonie / Kleiner Saal, 27.11.1999" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1999-2000> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1999-11-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1999-11-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300016808>,
-        <https://d-nb.info/gnd/300108168>,
-        <https://d-nb.info/gnd/300111231>,
-        <https://d-nb.info/gnd/300141858> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1999-2000> ;
-    cto:relatedItem <https://d-nb.info/gnd/300016808>,
-        <https://d-nb.info/gnd/300108168>,
-        <https://d-nb.info/gnd/300111231>,
-        <https://d-nb.info/gnd/300141858>,
-        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1999-27-november-kleiner-saal>,
-        <https://performance.musiconn.de/work/fantasien-klavier-kv-397-d-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sonaten-klavier-d-784-a-moll-schubert-franz>,
-        <https://performance.musiconn.de/work/sonaten-klavier-kv-279-c-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sonaten-klavier-op-57-f-moll-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/180339527>,
-        <https://viaf.org/viaf/193655884>,
-        <https://viaf.org/viaf/197650959>,
-        <https://viaf.org/viaf/198524426> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/180339527>,
-        <https://viaf.org/viaf/193655884>,
-        <https://viaf.org/viaf/197650959>,
-        <https://viaf.org/viaf/198524426> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108168> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180339527> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198524426> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197650959> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193655884> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016808> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141858> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111231> ],
+        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1999-27-november-kleiner-saal> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180339527> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193655884> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197650959> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198524426> a nfdicore:NFDI_0001010 .
 

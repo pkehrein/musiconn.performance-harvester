@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300016425> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300113056> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4493513-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-sonntags-konzert-staedtische-buehnen-frankfurt-am-main-grosses-haus-1962-09-30-10-30> ] .
 
-<https://performance.musiconn.de/event/1-sonntags-konzert-staedtische-buehnen-frankfurt-am-main-grosses-haus-1962-09-30-10-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-sonntags-konzert-staedtische-buehnen-frankfurt-am-main-grosses-haus-1962-09-30-10-30> a cto:CTO_0001005 ;
     rdfs:label "1. Sonntags-Konzert, Städtische Bühnen (Frankfurt am Main) / Großes Haus, 30.9.1962, 10:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1962-1963> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1962-09-30T10:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1962-09-30T10:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300016425>,
-        <https://d-nb.info/gnd/300113056>,
-        <https://d-nb.info/gnd/4493513-4> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1962-1963> ;
-    cto:relatedItem <https://d-nb.info/gnd/300016425>,
-        <https://d-nb.info/gnd/300113056>,
-        <https://d-nb.info/gnd/4493513-4>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/eine-nacht-auf-dem-kahlen-berge-musorgskij-modest-petrovic>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-2-op-21-f-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/sinfonien-nr-8-op-93-f-dur-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/1406151474935700490005>,
-        <https://viaf.org/viaf/184285928>,
-        <https://viaf.org/viaf/198521904> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-grosses-haus> ;
-    cto:viaf <https://viaf.org/viaf/1406151474935700490005>,
-        <https://viaf.org/viaf/184285928>,
-        <https://viaf.org/viaf/198521904> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-grosses-haus> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184285928> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1406151474935700490005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016425> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300113056> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198521904> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4493513-4> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1406151474935700490005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184285928> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198521904> a nfdicore:NFDI_0001010 .
 

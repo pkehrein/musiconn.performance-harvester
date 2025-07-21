@@ -1,43 +1,56 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1225712920> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1225969123> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1226243177> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/135406692> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/veranstaltung-anlaesslich-des-tages-der-musik-klub-der-kuenstler-und-architekten-eduard-claudius-potsdam-1986-09-27> ] .
 
-<https://performance.musiconn.de/event/veranstaltung-anlaesslich-des-tages-der-musik-klub-der-kuenstler-und-architekten-eduard-claudius-potsdam-1986-09-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/veranstaltung-anlaesslich-des-tages-der-musik-klub-der-kuenstler-und-architekten-eduard-claudius-potsdam-1986-09-27> a cto:CTO_0001005 ;
     rdfs:label "[Veranstaltung anlässlich des] Tages der Musik, Klub der Künstler und Architekten \"Eduard Claudius\" (Potsdam), 27.9.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-09-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-09-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1225712920>,
-        <https://d-nb.info/gnd/1225969123>,
-        <https://d-nb.info/gnd/1226243177>,
-        <https://d-nb.info/gnd/135406692> ;
-    cto:relatedItem <https://d-nb.info/gnd/1225712920>,
-        <https://d-nb.info/gnd/1225969123>,
-        <https://d-nb.info/gnd/1226243177>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/135406692> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/klub-der-kuenstler-und-architekten-eduard-claudius-potsdam> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225712920> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3042161211699940070000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1226243177> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6215161274888247650005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225969123> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8837161211858240070009> ],
         <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
-        <https://performance.musiconn.de/work/balladeskes-fragment-thiel-wolfgang>,
         <https://performance.musiconn.de/work/freiheit-und-notwendigkeit-schoor-wolfgang>,
         <https://performance.musiconn.de/work/fruehling-noll-diether>,
-        <https://performance.musiconn.de/work/indisch-rosenfeld-gerhard>,
-        <https://performance.musiconn.de/work/kennt-ihr-sie-nicht-die-boese-bunte-schlange-sasse-karl-ernst>,
         <https://performance.musiconn.de/work/nichts-wisst-ihr-schoor-wolfgang>,
-        <https://performance.musiconn.de/work/wie-verschieden-ists-hinieden-schoor-wolfgang>,
-        <https://viaf.org/viaf/3042161211699940070000>,
-        <https://viaf.org/viaf/6215161274888247650005>,
-        <https://viaf.org/viaf/8837161211858240070009> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/klub-der-kuenstler-und-architekten-eduard-claudius-potsdam> ;
-    cto:relatedPerson <https://d-nb.info/gnd/135406692>,
-        <https://viaf.org/viaf/316009733> ;
-    cto:viaf <https://viaf.org/viaf/3042161211699940070000>,
-        <https://viaf.org/viaf/316009733>,
-        <https://viaf.org/viaf/6215161274888247650005>,
-        <https://viaf.org/viaf/8837161211858240070009> .
+        <https://performance.musiconn.de/work/wie-verschieden-ists-hinieden-schoor-wolfgang> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316009733> ] .
+
+<https://viaf.org/viaf/3042161211699940070000> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316009733> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6215161274888247650005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8837161211858240070009> a nfdicore:NFDI_0001010 .
 

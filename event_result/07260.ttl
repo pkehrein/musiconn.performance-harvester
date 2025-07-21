@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1054565813> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300064357> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300157282> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300395442> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300395450> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/grosses-concert-semperoper-dresden-1905-03-08-19-00> ] .
 
-<https://performance.musiconn.de/event/grosses-concert-semperoper-dresden-1905-03-08-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/grosses-concert-semperoper-dresden-1905-03-08-19-00> a cto:CTO_0001005 ;
     rdfs:label "Grosses Concert, Semperoper (Dresden), 8.3.1905, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/koenigliches-hoftheater-spielzeit-1904-1905> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1905-03-08T20:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1905-03-08T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1054565813>,
-        <https://d-nb.info/gnd/300064357>,
-        <https://d-nb.info/gnd/300157282>,
-        <https://d-nb.info/gnd/300395442>,
-        <https://d-nb.info/gnd/300395450> ;
-    cto:itemOf <https://performance.musiconn.de/series/koenigliches-hoftheater-spielzeit-1904-1905> ;
-    cto:relatedItem <https://d-nb.info/gnd/300064357>,
-        <https://d-nb.info/gnd/300157282>,
-        <https://d-nb.info/gnd/300395442>,
-        <https://d-nb.info/gnd/300395450>,
-        <https://performance.musiconn.de/source/koenigliches-hoftheater-theaterzettel-dresden-1904-1905>,
-        <https://performance.musiconn.de/work/concerti-grossi-orchester-hwv-312-317-nr-5-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/gesaenge-op-33-hymnus-strauss-richard>,
-        <https://performance.musiconn.de/work/gesaenge-op-33-pilgers-morgenlied-strauss-richard>,
-        <https://performance.musiconn.de/work/symphonia-domestica-strauss-richard>,
-        <https://viaf.org/viaf/174504830>,
-        <https://viaf.org/viaf/194740133>,
-        <https://viaf.org/viaf/195814966>,
-        <https://viaf.org/viaf/199702665> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1054565813>,
-        <https://viaf.org/viaf/309654002> ;
-    cto:viaf <https://viaf.org/viaf/174504830>,
-        <https://viaf.org/viaf/194740133>,
-        <https://viaf.org/viaf/195814966>,
-        <https://viaf.org/viaf/199702665>,
-        <https://viaf.org/viaf/309654002> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1054565813> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309654002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194740133> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300395442> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195814966> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300395450> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300064357> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157282> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174504830> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199702665> ],
+        <https://performance.musiconn.de/source/koenigliches-hoftheater-theaterzettel-dresden-1904-1905> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174504830> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194740133> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195814966> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199702665> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309654002> a nfdicore:NFDI_0001010 .
 

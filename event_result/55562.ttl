@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1084609428> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/fernand-cortez-gebaeude-der-koeniglichen-oper-berlin-berlin-1822-01-18> ] .
 
-<https://performance.musiconn.de/event/fernand-cortez-gebaeude-der-koeniglichen-oper-berlin-berlin-1822-01-18> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/fernand-cortez-gebaeude-der-koeniglichen-oper-berlin-berlin-1822-01-18> a cto:CTO_0001005 ;
     rdfs:label "Fernand Cortez, Gebäude der Königlichen Oper Berlin (Berlin), 18.1.1822" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1822-01-18" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1822-01-18" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1084609428> ;
-    cto:relatedItem <https://performance.musiconn.de/source/katalogisat-fernand-cortez-oder-die-eroberung-von-mexiko-fernand-cortez-oder-die-eroberung-mexikos-oper-in-3-abtheilungen-von-de-jouy-aus-dem-franzoesischen-uebersetzt-vom-kriegsrath-may-musik-von-spontini-18-januar-1822>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1084609428> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/533149662172407020006> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/katalogisat-fernand-cortez-oder-die-eroberung-von-mexiko-fernand-cortez-oder-die-eroberung-mexikos-oper-in-3-abtheilungen-von-de-jouy-aus-dem-franzoesischen-uebersetzt-vom-kriegsrath-may-musik-von-spontini-18-januar-1822>,
         <https://performance.musiconn.de/work/ferdinand-cortez-oder-die-eroberung-von-mexiko-fassung-spontini-gaspare> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1084609428>,
-        <https://viaf.org/viaf/533149662172407020006> ;
-    cto:viaf <https://viaf.org/viaf/533149662172407020006> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/533149662172407020006> a nfdicore:NFDI_0001010 .
 

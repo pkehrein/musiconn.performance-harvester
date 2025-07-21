@@ -1,58 +1,78 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/107367018X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133731> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141777> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300173849> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300173873> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300302584> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1882-01-31> ] .
 
-<https://performance.musiconn.de/event/7-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1882-01-31> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1882-01-31> a cto:CTO_0001005 ;
     rdfs:label "7. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 31.1.1882" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1881-1882> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1882-01-31" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1882-01-31" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/107367018X>,
-        <https://d-nb.info/gnd/300133731>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300173849>,
-        <https://d-nb.info/gnd/300173873>,
-        <https://d-nb.info/gnd/300302584>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1881-1882> ;
-    cto:relatedItem <https://d-nb.info/gnd/107367018X>,
-        <https://d-nb.info/gnd/300133731>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300173849>,
-        <https://d-nb.info/gnd/300173873>,
-        <https://d-nb.info/gnd/300302584>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133731> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209868213> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300173849> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141777> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300173873> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425978> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300302584> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183465659> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180628856> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207915232> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/107367018X> ],
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
         <https://performance.musiconn.de/work/air-basque-sarasate-pablo-de>,
-        <https://performance.musiconn.de/work/die-allmacht-d-852-schubert-franz>,
-        <https://performance.musiconn.de/work/introduction-et-rondo-capriccioso-saint-saens-camille>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-2-op-22-d-moll-wieniawski-henri>,
         <https://performance.musiconn.de/work/mit-deinen-blauen-augen-lassen-eduard>,
-        <https://performance.musiconn.de/work/paulus-jerusalem-jerusalem-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/romanzen-violine-orchester-op-50-f-dur-fassung-violine-klavier-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/scherzo-tarantelle-wieniawski-henri>,
-        <https://performance.musiconn.de/work/sinfonien-d-759-h-moll-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-es-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/180628856>,
-        <https://viaf.org/viaf/183465659>,
-        <https://viaf.org/viaf/207915232>,
-        <https://viaf.org/viaf/209868213> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/180628856>,
-        <https://viaf.org/viaf/183465659>,
-        <https://viaf.org/viaf/207915232>,
-        <https://viaf.org/viaf/209868213>,
-        <https://viaf.org/viaf/242717024> .
+        <https://performance.musiconn.de/work/sinfonien-es-dur-mozart-wolfgang-amadeus> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179425978> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180628856> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183465659> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207915232> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209868213> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
 

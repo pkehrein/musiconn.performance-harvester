@@ -1,42 +1,56 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1028579373> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118917278X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144881> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145845> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/volks-kirchenkonzert-kreuzkirche-dresden-1915-10-15-20-00> ] .
 
-<https://performance.musiconn.de/event/volks-kirchenkonzert-kreuzkirche-dresden-1915-10-15-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/volks-kirchenkonzert-kreuzkirche-dresden-1915-10-15-20-00> a cto:CTO_0001005 ;
     rdfs:label "Volks-Kirchenkonzert, Kreuzkirche (Dresden), 15.10.1915, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1915-16> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1915-10-15T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1915-10-15T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1028579373>,
-        <https://d-nb.info/gnd/118917278X>,
-        <https://d-nb.info/gnd/300144881>,
-        <https://d-nb.info/gnd/300145845>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1915-16> ;
-    cto:relatedItem <https://d-nb.info/gnd/1028579373>,
-        <https://d-nb.info/gnd/118917278X>,
-        <https://d-nb.info/gnd/300144881>,
-        <https://d-nb.info/gnd/300145845>,
-        <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/fugen-ueber-den-namen-bach-fuge-nr-6-schumann-robert>,
-        <https://performance.musiconn.de/work/heldenfeier-bruch-max>,
-        <https://performance.musiconn.de/work/hymnus-bruch-max>,
-        <https://performance.musiconn.de/work/missa-sacra-schumann-robert>,
-        <https://viaf.org/viaf/186375110>,
-        <https://viaf.org/viaf/201854421>,
-        <https://viaf.org/viaf/282063355> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/186375110>,
-        <https://viaf.org/viaf/201854421>,
-        <https://viaf.org/viaf/248189528>,
-        <https://viaf.org/viaf/282063355> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186375110> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144881> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1028579373> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/282063355> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145845> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118917278X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201854421> ],
+        <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/186375110> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201854421> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/282063355> a nfdicore:NFDI_0001010 .
 

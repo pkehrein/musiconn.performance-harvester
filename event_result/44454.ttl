@@ -4,21 +4,33 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/2018088-3> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4329977-5> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/wohltaetigkeitskonzert-zugunsten-eines-israelischen-pflegeheims-fuer-deutsche-ueberlebende-des-holocaust-berliner-philharmonie-berlin-kammermusiksaal-1992-11-01-11-00> ] .
 
-<https://performance.musiconn.de/event/wohltaetigkeitskonzert-zugunsten-eines-israelischen-pflegeheims-fuer-deutsche-ueberlebende-des-holocaust-berliner-philharmonie-berlin-kammermusiksaal-1992-11-01-11-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/wohltaetigkeitskonzert-zugunsten-eines-israelischen-pflegeheims-fuer-deutsche-ueberlebende-des-holocaust-berliner-philharmonie-berlin-kammermusiksaal-1992-11-01-11-00> a cto:CTO_0001005 ;
     rdfs:label "Wohltätigkeitskonzert zugunsten eines israelischen Pflegeheims für deutsche Überlebende des Holocaust, Berliner Philharmonie (Berlin) / Kammermusiksaal, 1.11.1992, 11:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1992-11-01T11:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1992-11-01T11:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/2018088-3>,
-        <https://d-nb.info/gnd/4329977-5>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/136181816> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/2018088-3> ],
+        <https://performance.musiconn.de/corporation/deutsch-israelische-gesellschaft-ag-berlin> ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4329977-5> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/programm-konzert-1-november-1992>,
         <https://performance.musiconn.de/work/adon-olom-wuerfel-wenzel-wilhelm>,
         <https://performance.musiconn.de/work/as-der-rebbe-elimelech-fassung-gross-friedbert>,
@@ -37,12 +49,9 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/sisu-wsimchu-fassung-weintraub-hirsch>,
         <https://performance.musiconn.de/work/unsaneh-tokef-nowakowsky-david>,
         <https://performance.musiconn.de/work/wos-wet-sein-as-moschiach-wet-kimmen-fassung-sander-werner> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4329977-5> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/2018088-3>,
-        <https://d-nb.info/gnd/5513287-X>,
-        <https://performance.musiconn.de/corporation/deutsch-israelische-gesellschaft-ag-berlin>,
-        <https://viaf.org/viaf/136181816>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/136181816>,
-        <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/136181816> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

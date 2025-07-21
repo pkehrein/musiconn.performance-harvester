@@ -1,33 +1,41 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1132352126> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1169357490> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1192923065> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/elternversammlung-kreuzschule-georgplatz-dresden-1934-03-06-20-00> ] .
 
-<https://performance.musiconn.de/event/elternversammlung-kreuzschule-georgplatz-dresden-1934-03-06-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/elternversammlung-kreuzschule-georgplatz-dresden-1934-03-06-20-00> a cto:CTO_0001005 ;
     rdfs:label "Elternversammlung, Kreuzschule (Georgplatz, Dresden), 6.3.1934, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1933-34> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1934-03-06T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1934-03-06T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1132352126>,
-        <https://d-nb.info/gnd/1169357490>,
-        <https://d-nb.info/gnd/1192923065> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1933-34> ;
-    cto:relatedItem <https://d-nb.info/gnd/1132352126>,
-        <https://d-nb.info/gnd/1169357490>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1192923065> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1132352126> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1869149619364704010008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1169357490> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2705154015348709310003> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/des-deutschen-vaterland-fassung-reichardt-gustav>,
-        <https://performance.musiconn.de/work/gesaenge-gemischter-chor-op-71-musicaklang-bruch-max>,
-        <https://performance.musiconn.de/work/sange-gemischter-chor-op-13-ritter-fruehling-gade-niels-wilhelm>,
-        <https://viaf.org/viaf/1869149619364704010008>,
-        <https://viaf.org/viaf/2705154015348709310003> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1192923065> ;
-    cto:viaf <https://viaf.org/viaf/1869149619364704010008>,
-        <https://viaf.org/viaf/2705154015348709310003> .
+        <https://performance.musiconn.de/work/des-deutschen-vaterland-fassung-reichardt-gustav> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1869149619364704010008> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2705154015348709310003> a nfdicore:NFDI_0001010 .
 

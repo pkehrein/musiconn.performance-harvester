@@ -1,49 +1,65 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300066171> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300303629> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300316143> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30051073X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4018118-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/dreizehnter-kammermusik-abend-frankfurt-am-main-1928-03-16> ] .
 
-<https://performance.musiconn.de/event/dreizehnter-kammermusik-abend-frankfurt-am-main-1928-03-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/dreizehnter-kammermusik-abend-frankfurt-am-main-1928-03-16> a cto:CTO_0001005 ;
     rdfs:label "Dreizehnter Kammermusik-Abend, Frankfurt am Main, 16.3.1928" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1927-1928> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1928-03-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1928-03-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300066171>,
-        <https://d-nb.info/gnd/300303629>,
-        <https://d-nb.info/gnd/300316143>,
-        <https://d-nb.info/gnd/30051073X>,
-        <https://d-nb.info/gnd/4018118-2> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1927-1928> ;
-    cto:relatedItem <https://d-nb.info/gnd/300066171>,
-        <https://d-nb.info/gnd/300303629>,
-        <https://d-nb.info/gnd/300316143>,
-        <https://d-nb.info/gnd/30051073X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4018118-2> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/151720959> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186705363> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300066171> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174588254> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30051073X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300316143> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300303629> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211715857> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190430723> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/fantasien-orgel-bwv-1121-c-moll-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/la-poule-le-rappel-des-oiseaux-rameau-jean-philippe>,
-        <https://performance.musiconn.de/work/musicalische-vorstellung-einiger-biblischer-historien-der-streit-zwischen-david-und-goliath-kuhnau-johann>,
         <https://performance.musiconn.de/work/partia-viola-damore-2-biber-heinrich-ignaz-franz>,
         <https://performance.musiconn.de/work/praeludium-und-fuge-orgel-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/sonaten-va-damore-cembalo-a-dur-ariosti-attilio>,
-        <https://performance.musiconn.de/work/sonaten-va-damore-va-da-gamba-stamitz-carl>,
-        <https://performance.musiconn.de/work/sonaten-viola-da-gamba-cembalo-c-dur-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/suites-de-pieces-hwv-426-433-suite-hwv-430-air-con-variazioni-haendel-georg-friedrich>,
-        <https://viaf.org/viaf/174588254>,
-        <https://viaf.org/viaf/186705363>,
-        <https://viaf.org/viaf/190430723>,
-        <https://viaf.org/viaf/211715857> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4018118-2>,
-        <https://viaf.org/viaf/151720959> ;
-    cto:viaf <https://viaf.org/viaf/151720959>,
-        <https://viaf.org/viaf/174588254>,
-        <https://viaf.org/viaf/186705363>,
-        <https://viaf.org/viaf/190430723>,
-        <https://viaf.org/viaf/211715857> .
+        <https://performance.musiconn.de/work/sonaten-va-damore-va-da-gamba-stamitz-carl> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/151720959> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174588254> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186705363> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190430723> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211715857> a nfdicore:NFDI_0001010 .
 

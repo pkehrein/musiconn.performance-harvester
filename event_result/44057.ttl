@@ -4,20 +4,28 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4410249-5> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/das-leben-ist-ein-hering-an-der-wand-musikalisch-literarische-veranstaltung-haus-des-buches-leipzig-2013-03-07-19-30> ] .
 
-<https://performance.musiconn.de/event/das-leben-ist-ein-hering-an-der-wand-musikalisch-literarische-veranstaltung-haus-des-buches-leipzig-2013-03-07-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/das-leben-ist-ein-hering-an-der-wand-musikalisch-literarische-veranstaltung-haus-des-buches-leipzig-2013-03-07-19-30> a cto:CTO_0001005 ;
     rdfs:label "Das Leben ist ein Hering an der Wand - Musikalisch-literarische Veranstaltung, Haus des Buches (Leipzig), 7.3.2013, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2013-03-07T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2013-03-07T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4410249-5>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4410249-5> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/246942583> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/flyer-musikalisch-literarische-veranstaltung-7-maerz-2013>,
         <https://performance.musiconn.de/source/plakat-musikalisch-literarische-veranstaltung-7-maerz-2013>,
         <https://performance.musiconn.de/source/programm-musikalisch-literarische-veranstaltung-7-maerz-2013>,
@@ -32,10 +40,9 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/oi-mamme-schlug-mich-nit-fassung-gross-friedbert>,
         <https://performance.musiconn.de/work/ojfn-pripetschik-fassung-sander-werner-warschawski-mark>,
         <https://performance.musiconn.de/work/somachti-psalm-122-halevy-fromental> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4410249-5>,
-        <https://viaf.org/viaf/246942583> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/246942583> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/246942583> a nfdicore:NFDI_0001010 .
 

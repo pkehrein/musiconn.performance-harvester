@@ -1,35 +1,49 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300037813> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30010717X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111339> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144431> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/14-schuelerkonzert-allgemeine-berufsschule-am-steinsgraben-zeitz-aula-1957-10-27-10-00> ] .
 
-<https://performance.musiconn.de/event/14-schuelerkonzert-allgemeine-berufsschule-am-steinsgraben-zeitz-aula-1957-10-27-10-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/14-schuelerkonzert-allgemeine-berufsschule-am-steinsgraben-zeitz-aula-1957-10-27-10-00> a cto:CTO_0001005 ;
     rdfs:label "14. Schülerkonzert, Allgemeine Berufsschule am Steinsgraben (Zeitz) / Aula, 27.10.1957, 10:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/schuelerkonzerte-der-volksmusikschule-zeitz> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1957-10-27T10:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1957-10-27T10:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300037813>,
-        <https://d-nb.info/gnd/30010717X>,
-        <https://d-nb.info/gnd/300111339>,
-        <https://d-nb.info/gnd/300144431> ;
-    cto:itemOf <https://performance.musiconn.de/series/schuelerkonzerte-der-volksmusikschule-zeitz> ;
-    cto:relatedItem <https://d-nb.info/gnd/300037813>,
-        <https://d-nb.info/gnd/30010717X>,
-        <https://d-nb.info/gnd/300111339>,
-        <https://d-nb.info/gnd/300144431>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/allgemeine-berufsschule-am-steinsgraben-zeitz-aula> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181838083> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037813> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144431> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209861374> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196879697> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185317251> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111339> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30010717X> ],
         <https://performance.musiconn.de/source/plakate-programmhefte-und-rezensionen-aus-dem-nachlass-hermann-keller-2-programmhefte-1955-1984>,
-        <https://performance.musiconn.de/work/album-fuer-die-jugend-nr-2-soldatenmarsch-schumann-robert>,
         <https://performance.musiconn.de/work/allegro-giocoso-grecaninov-aleksandr-tichonovic>,
         <https://performance.musiconn.de/work/ballett-kress-georg-adam>,
         <https://performance.musiconn.de/work/bouree-fischer-johann-caspar-ferdinand>,
-        <https://performance.musiconn.de/work/das-bandel-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/duett-fuer-zwei-violinen-g-dur-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/duo-fuer-zwei-mandolinen-mazas-jacques-fereol>,
         <https://performance.musiconn.de/work/eccosaise-haessler-johann-wilhelm>,
@@ -37,21 +51,19 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/menuett-grecaninov-aleksandr-tichonovic>,
         <https://performance.musiconn.de/work/neue-deutsche-volkslieder-chor-orch-hymne-auf-die-udssr-eisler-hanns>,
         <https://performance.musiconn.de/work/prelude-h-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/scherzi-klavier-op-31-b-moll-chopin-frederic>,
         <https://performance.musiconn.de/work/sonate-d-moll-fuer-klavier-scarlatti-alessandro>,
         <https://performance.musiconn.de/work/sonate-fuer-klavier-c-moll-1-satz-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/sonate-h-moll-fuer-klavier-scarlatti-alessandro>,
-        <https://performance.musiconn.de/work/sonaten-klavier-kv-332-f-dur-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/tempo-di-menuetto-haessler-johann-wilhelm>,
         <https://performance.musiconn.de/work/walzer-klavier-as-dur-chopin-frederic>,
-        <https://performance.musiconn.de/work/zwei-stuecke-fuer-sopranblockfloete-und-klavier-schwarz-m>,
-        <https://viaf.org/viaf/181838083>,
-        <https://viaf.org/viaf/185317251>,
-        <https://viaf.org/viaf/196879697>,
-        <https://viaf.org/viaf/209861374> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/allgemeine-berufsschule-am-steinsgraben-zeitz-aula> ;
-    cto:viaf <https://viaf.org/viaf/181838083>,
-        <https://viaf.org/viaf/185317251>,
-        <https://viaf.org/viaf/196879697>,
-        <https://viaf.org/viaf/209861374> .
+        <https://performance.musiconn.de/work/zwei-stuecke-fuer-sopranblockfloete-und-klavier-schwarz-m> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181838083> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185317251> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196879697> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209861374> a nfdicore:NFDI_0001010 .
 

@@ -1,45 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1031635890> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009461> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010664> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001077X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/isaj-braudo-i-ego-ucenikov-cikl-organnych-koncertov-konzert-14-sankt-petersburger-philharmonie-1967-00-00> ] .
 
-<https://performance.musiconn.de/event/isaj-braudo-i-ego-ucenikov-cikl-organnych-koncertov-konzert-14-sankt-petersburger-philharmonie-1967-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/isaj-braudo-i-ego-ucenikov-cikl-organnych-koncertov-konzert-14-sankt-petersburger-philharmonie-1967-00-00> a cto:CTO_0001005 ;
     rdfs:label "Isaj Braudo i ego učenikov - Cikl organnych koncertov (Konzert 1.4), Sankt-Petersburger Philharmonie, 1967" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/isaj-braudo-i-ego-ucenikov-cikl-organnych-koncertov> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1967-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1967-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1031635890>,
-        <https://d-nb.info/gnd/300009461>,
-        <https://d-nb.info/gnd/300010664>,
-        <https://d-nb.info/gnd/30001077X>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/isaj-braudo-i-ego-ucenikov-cikl-organnych-koncertov> ;
-    cto:relatedItem <https://d-nb.info/gnd/1031635890>,
-        <https://d-nb.info/gnd/300009461>,
-        <https://d-nb.info/gnd/300010664>,
-        <https://d-nb.info/gnd/30001077X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010664> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009461> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001077X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177032925> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1031635890> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204579968> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175666981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200776641> ],
         <https://performance.musiconn.de/source/leningrader-philharmonie-festival-1967-isaj-braudo>,
-        <https://performance.musiconn.de/work/choralfantasie-orgel-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/fantasie-und-fuge-orgel-bwv-542-g-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/jauchzet-gott-in-allen-landen-jauchzet-gott-in-allen-landen-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/konzerte-cembalo-2-streichorchester-bwv-1061-c-dur-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/praeludium-und-fuge-orgel-bwv-552-es-dur-bach-johann-sebastian>,
-        <https://viaf.org/viaf/175666981>,
-        <https://viaf.org/viaf/177032925>,
-        <https://viaf.org/viaf/200776641>,
-        <https://viaf.org/viaf/204579968> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/175666981>,
-        <https://viaf.org/viaf/177032925>,
-        <https://viaf.org/viaf/200776641>,
-        <https://viaf.org/viaf/204579968> .
+        <https://performance.musiconn.de/work/choralfantasie-orgel-bach-johann-sebastian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175666981> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177032925> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200776641> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204579968> a nfdicore:NFDI_0001010 .
 

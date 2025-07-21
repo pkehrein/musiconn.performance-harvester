@@ -4,26 +4,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1060085488> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/jahreskonzert-des-pionier-und-jugendchores-des-bergsteigerchores-kurt-schlosser-dresden-kulturpalast-dresden-1986-11-30> ] .
 
-<https://performance.musiconn.de/event/jahreskonzert-des-pionier-und-jugendchores-des-bergsteigerchores-kurt-schlosser-dresden-kulturpalast-dresden-1986-11-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/jahreskonzert-des-pionier-und-jugendchores-des-bergsteigerchores-kurt-schlosser-dresden-kulturpalast-dresden-1986-11-30> a cto:CTO_0001005 ;
     rdfs:label "Jahreskonzert des Pionier- und Jugendchores des Bergsteigerchores \"Kurt Schlosser\" Dresden, Kulturpalast (Dresden), 30.11.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-11-30" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-11-30" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1060085488> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311438221> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1060085488> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
         <https://performance.musiconn.de/work/das-morgenlied-kaufmann-henry>,
         <https://performance.musiconn.de/work/der-steile-pfad-kaufmann-henry>,
         <https://performance.musiconn.de/work/die-wanderkarte-kaufmann-henry>,
         <https://performance.musiconn.de/work/in-der-herberge-kaufmann-henry>,
         <https://performance.musiconn.de/work/rast-kaufmann-henry>,
         <https://performance.musiconn.de/work/tageszeit-der-langen-schatten-kaufmann-henry> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1060085488>,
-        <https://viaf.org/viaf/311438221> ;
-    cto:viaf <https://viaf.org/viaf/311438221> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/311438221> a nfdicore:NFDI_0001010 .
 

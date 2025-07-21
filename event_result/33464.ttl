@@ -1,37 +1,48 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1114080292> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1190754452> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300028768> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300267274> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/16-dresdner-abend-museumsbau-des-deutschen-hygiene-museum-dresden-2018-02-07-20-00> ] .
 
-<https://performance.musiconn.de/event/16-dresdner-abend-museumsbau-des-deutschen-hygiene-museum-dresden-2018-02-07-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/16-dresdner-abend-museumsbau-des-deutschen-hygiene-museum-dresden-2018-02-07-20-00> a cto:CTO_0001005 ;
     rdfs:label "16. Dresdner Abend, Museumsbau des Deutschen Hygiene-Museum (Dresden), 7.2.2018, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2017-2018> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2018-02-07T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2018-02-07T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1114080292>,
-        <https://d-nb.info/gnd/1190754452>,
-        <https://d-nb.info/gnd/300028768>,
-        <https://d-nb.info/gnd/300267274> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2017-2018> ;
-    cto:relatedItem <https://d-nb.info/gnd/1114080292>,
-        <https://d-nb.info/gnd/300028768>,
-        <https://d-nb.info/gnd/300267274>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/lachrymae-viola-streichorchester-britten-benjamin>,
-        <https://performance.musiconn.de/work/suiten-streichorchester-h-93-bridge-frank>,
-        <https://performance.musiconn.de/work/variations-on-a-theme-of-frank-bridge-britten-benjamin>,
-        <https://viaf.org/viaf/1416147484319949360009>,
-        <https://viaf.org/viaf/184319741>,
-        <https://viaf.org/viaf/188268378> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1190754452> ;
-    cto:viaf <https://viaf.org/viaf/1416147484319949360009>,
-        <https://viaf.org/viaf/184319741>,
-        <https://viaf.org/viaf/188268378> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1190754452> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300028768> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300267274> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1416147484319949360009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188268378> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184319741> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1114080292> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1416147484319949360009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184319741> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188268378> a nfdicore:NFDI_0001010 .
 

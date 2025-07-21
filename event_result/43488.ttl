@@ -4,20 +4,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1087289-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/jubilaeumskonzert-25-jahre-leipziger-synagogalchor-neues-gewandhaus-leipzig-grosser-saal-1987-10-29> ] .
 
-<https://performance.musiconn.de/event/jubilaeumskonzert-25-jahre-leipziger-synagogalchor-neues-gewandhaus-leipzig-grosser-saal-1987-10-29> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/jubilaeumskonzert-25-jahre-leipziger-synagogalchor-neues-gewandhaus-leipzig-grosser-saal-1987-10-29> a cto:CTO_0001005 ;
     rdfs:label "Jubiläumskonzert 25 Jahre Leipziger Synagogalchor, Neues Gewandhaus (Leipzig) / Großer Saal, 29.10.1987" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-10-29" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-10-29" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1087289-9>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1087289-9> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/145899432> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/neues-gewandhaus-leipzig-grosser-saal> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/ein-anruehrender-abend-leipziger-synagogalchor-gab-konzert-zum-25jaehrigen-bestehen-jiddische-und-hebraeische-folklore-von-grossem-reiz>,
         <https://performance.musiconn.de/source/festkonzert-im-gewandhaus-cdu-vorsitzender-gratulierte-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/gefeiertes-jubilaeumskonzert>,
@@ -43,11 +52,9 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/pischu-li-psalm-118-19-24-fassung-sander-werner>,
         <https://performance.musiconn.de/work/sabbatwuensche-fassung-sander-werner>,
         <https://performance.musiconn.de/work/umipne-chatoenu-brun-bezalel> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/neues-gewandhaus-leipzig-grosser-saal> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/1087289-9>,
-        <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/145899432>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/145899432>,
-        <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/145899432> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

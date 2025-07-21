@@ -1,52 +1,66 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1191941728> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140908> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30014119X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300142404> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300488769> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300523912> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-grand-hotel-breclav-1929-12-07> ] .
 
-<https://performance.musiconn.de/event/konzert-grand-hotel-breclav-1929-12-07> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-grand-hotel-breclav-1929-12-07> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Grand Hotel (Břeclav), 7.12.1929" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1929-12-07" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1929-12-07" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1191941728>,
-        <https://d-nb.info/gnd/300140908>,
-        <https://d-nb.info/gnd/30014119X>,
-        <https://d-nb.info/gnd/300142404>,
-        <https://d-nb.info/gnd/300488769>,
-        <https://d-nb.info/gnd/300523912> ;
-    cto:relatedItem <https://d-nb.info/gnd/1191941728>,
-        <https://d-nb.info/gnd/300140908>,
-        <https://d-nb.info/gnd/30014119X>,
-        <https://d-nb.info/gnd/300142404>,
-        <https://d-nb.info/gnd/300488769>,
-        <https://d-nb.info/gnd/300523912>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grand-hotel-breclav> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140908> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1191941728> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300488769> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30014119X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175727712> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300523912> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177614599> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300142404> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182292222> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181253360> ],
         <https://performance.musiconn.de/source/programmzettel-gesang-und-musikverein-lundenburg-breclav-breclav-07121929>,
         <https://performance.musiconn.de/work/auf-der-wacht-op-78-fuehrich-carl>,
         <https://performance.musiconn.de/work/daheim-reiter-josef>,
-        <https://performance.musiconn.de/work/des-tages-weihe-schubert-franz>,
         <https://performance.musiconn.de/work/die-abloesung-hutter-herman>,
-        <https://performance.musiconn.de/work/die-nacht-d-983c-schubert-franz>,
-        <https://performance.musiconn.de/work/im-winter-kremser-eduard>,
-        <https://performance.musiconn.de/work/liebe-d-983a-schubert-franz-1>,
         <https://performance.musiconn.de/work/meine-muttersprache-schoen-eduard>,
-        <https://performance.musiconn.de/work/ritornelle-nach-friedrich-rueckert-in-kanonischen-weisen-die-rose-stand-im-thau-schumann-robert>,
         <https://performance.musiconn.de/work/werke-fuer-gesang-mit-klavierbegleitung-anonym>,
-        <https://performance.musiconn.de/work/widerspruch-schubert-franz>,
-        <https://performance.musiconn.de/work/wohin-mit-der-freud-herbeck-johann-von>,
-        <https://viaf.org/viaf/175727712>,
-        <https://viaf.org/viaf/177614599>,
-        <https://viaf.org/viaf/181253360>,
-        <https://viaf.org/viaf/182292222> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grand-hotel-breclav> ;
-    cto:viaf <https://viaf.org/viaf/175727712>,
-        <https://viaf.org/viaf/177614599>,
-        <https://viaf.org/viaf/181253360>,
-        <https://viaf.org/viaf/182292222> .
+        <https://performance.musiconn.de/work/wohin-mit-der-freud-herbeck-johann-von> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175727712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177614599> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181253360> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182292222> a nfdicore:NFDI_0001010 .
 

@@ -1,60 +1,81 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1066726531> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1080093311> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/117037171X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300062257> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300093543> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300220006> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300333307> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/schluss-konzert-vereinshaus-zinzendorfstrasse-17-dresden-1924-04-16-19-30> ] .
 
-<https://performance.musiconn.de/event/schluss-konzert-vereinshaus-zinzendorfstrasse-17-dresden-1924-04-16-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/schluss-konzert-vereinshaus-zinzendorfstrasse-17-dresden-1924-04-16-19-30> a cto:CTO_0001005 ;
     rdfs:label "Schluss-Konzert, Vereinshaus Zinzendorfstraße 17 (Dresden), 16.4.1924, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1923-1924> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1924-04-16T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1924-04-16T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1066726531>,
-        <https://d-nb.info/gnd/1080093311>,
-        <https://d-nb.info/gnd/117037171X>,
-        <https://d-nb.info/gnd/300062257>,
-        <https://d-nb.info/gnd/300093543>,
-        <https://d-nb.info/gnd/300220006>,
-        <https://d-nb.info/gnd/300333307> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1923-1924> ;
-    cto:relatedItem <https://d-nb.info/gnd/1066726531>,
-        <https://d-nb.info/gnd/1080093311>,
-        <https://d-nb.info/gnd/117037171X>,
-        <https://d-nb.info/gnd/300062257>,
-        <https://d-nb.info/gnd/300093543>,
-        <https://d-nb.info/gnd/300220006>,
-        <https://d-nb.info/gnd/300333307>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/vereinshaus-zinzendorfstrasse-17-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183472823> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183702492> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062257> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300220006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300333307> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093543> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180232392> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/117037171X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/313480202> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214737813> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1066726531> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180619259> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1080093311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/41145003678361340361> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/balladen-klavier-orchester-nr-2-op-4-e-dur-kehrer-willy>,
-        <https://performance.musiconn.de/work/der-freischuetz-kommt-ein-schlanker-bursch-gegangen-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/fantasie-ueber-ungarische-volksmelodien-liszt-franz>,
-        <https://performance.musiconn.de/work/introduktion-und-allegro-appassionato-schumann-robert>,
-        <https://performance.musiconn.de/work/konzerte-kl-orch-op-16-2-satz-grieg-edvard>,
-        <https://performance.musiconn.de/work/konzerte-kl-orch-op-16-3-satz-grieg-edvard>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-16-1-satz-grieg-edvard>,
         <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-64-e-moll-1-satz-scholtz-herrmann>,
-        <https://performance.musiconn.de/work/la-traviata-e-strano-e-strano-rezitativ-und-arie-verdi-giuseppe>,
         <https://performance.musiconn.de/work/rinaldo-rezitativ-und-arie-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/sinfonische-fantasie-kehrer-willy>,
-        <https://viaf.org/viaf/180232392>,
-        <https://viaf.org/viaf/180619259>,
-        <https://viaf.org/viaf/183472823>,
-        <https://viaf.org/viaf/183702492>,
-        <https://viaf.org/viaf/214737813>,
-        <https://viaf.org/viaf/313480202>,
-        <https://viaf.org/viaf/41145003678361340361> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/vereinshaus-zinzendorfstrasse-17-dresden> ;
-    cto:viaf <https://viaf.org/viaf/180232392>,
-        <https://viaf.org/viaf/180619259>,
-        <https://viaf.org/viaf/183472823>,
-        <https://viaf.org/viaf/183702492>,
-        <https://viaf.org/viaf/214737813>,
-        <https://viaf.org/viaf/313480202>,
-        <https://viaf.org/viaf/41145003678361340361> .
+        <https://performance.musiconn.de/work/sinfonische-fantasie-kehrer-willy> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180232392> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180619259> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183472823> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183702492> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214737813> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/313480202> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/41145003678361340361> a nfdicore:NFDI_0001010 .
 

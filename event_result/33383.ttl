@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1060085488> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300019416> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300120559> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300303327> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-philharmonisches-konzert-kulturpalast-dresden-2017-09-09-19-30> ] .
 
-<https://performance.musiconn.de/event/3-philharmonisches-konzert-kulturpalast-dresden-2017-09-09-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-philharmonisches-konzert-kulturpalast-dresden-2017-09-09-19-30> a cto:CTO_0001005 ;
     rdfs:label "3. Philharmonisches Konzert, Kulturpalast (Dresden), 9.9.2017, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2017-2018> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2017-09-09T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2017-09-09T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1060085488>,
-        <https://d-nb.info/gnd/300019416>,
-        <https://d-nb.info/gnd/300120559>,
-        <https://d-nb.info/gnd/300303327> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2017-2018> ;
-    cto:relatedItem <https://d-nb.info/gnd/300019416>,
-        <https://d-nb.info/gnd/300120559>,
-        <https://d-nb.info/gnd/300303327>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-pauke-orgel-streichorchester-g-moll-poulenc-francis>,
-        <https://performance.musiconn.de/work/metaboles-dutilleux-henri>,
-        <https://performance.musiconn.de/work/symphonie-fantastique-berlioz-hector>,
-        <https://viaf.org/viaf/201853951>,
-        <https://viaf.org/viaf/22145304740878610345>,
-        <https://viaf.org/viaf/300492703> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1060085488>,
-        <https://viaf.org/viaf/311438221> ;
-    cto:viaf <https://viaf.org/viaf/201853951>,
-        <https://viaf.org/viaf/22145304740878610345>,
-        <https://viaf.org/viaf/300492703>,
-        <https://viaf.org/viaf/311438221> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1060085488> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311438221> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201853951> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300120559> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300303327> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/300492703> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300019416> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/22145304740878610345> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/201853951> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/22145304740878610345> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/300492703> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311438221> a nfdicore:NFDI_0001010 .
 

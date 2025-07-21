@@ -1,35 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300145071> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145411> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146485> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-zykluskonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1966-11-19-19-30> ] .
 
-<https://performance.musiconn.de/event/3-zykluskonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1966-11-19-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-zykluskonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1966-11-19-19-30> a cto:CTO_0001005 ;
     rdfs:label "3. Zykluskonzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 19.11.1966, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1966-11-19T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1966-11-19T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300145071>,
-        <https://d-nb.info/gnd/300145411>,
-        <https://d-nb.info/gnd/300146485> ;
-    cto:relatedItem <https://d-nb.info/gnd/300145071>,
-        <https://d-nb.info/gnd/300145411>,
-        <https://d-nb.info/gnd/300146485>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/genoveva-ouvertuere-schumann-robert>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-129-a-moll-schumann-robert>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-op-97-es-dur-schumann-robert>,
-        <https://viaf.org/viaf/179822789>,
-        <https://viaf.org/viaf/185197829>,
-        <https://viaf.org/viaf/219163769> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/179822789>,
-        <https://viaf.org/viaf/185197829>,
-        <https://viaf.org/viaf/219163769> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185197829> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145411> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145071> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179822789> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146485> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219163769> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179822789> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185197829> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219163769> a nfdicore:NFDI_0001010 .
 

@@ -1,48 +1,65 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1166720810> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300562624> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300568894> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300582668> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300599102> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4819680-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-loh-konzert-schlosspark-sondershausen-achteckhaus-1969-05-25-20-00> ] .
 
-<https://performance.musiconn.de/event/1-loh-konzert-schlosspark-sondershausen-achteckhaus-1969-05-25-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-loh-konzert-schlosspark-sondershausen-achteckhaus-1969-05-25-20-00> a cto:CTO_0001005 ;
     rdfs:label "1. Loh-Konzert, Schlosspark (Sondershausen) / Achteckhaus, 25.5.1969, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/loh-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1969-05-25T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1969-05-25T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1166720810>,
-        <https://d-nb.info/gnd/300562624>,
-        <https://d-nb.info/gnd/300568894>,
-        <https://d-nb.info/gnd/300582668>,
-        <https://d-nb.info/gnd/300599102>,
-        <https://d-nb.info/gnd/4819680-0> ;
-    cto:itemOf <https://performance.musiconn.de/series/loh-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1166720810>,
-        <https://d-nb.info/gnd/300562624>,
-        <https://d-nb.info/gnd/300568894>,
-        <https://d-nb.info/gnd/300582668>,
-        <https://d-nb.info/gnd/300599102>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4819680-0> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300562624> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300599102> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300568894> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183326377> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300582668> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1166720810> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2035153716401158820007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199716820> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209875979> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201866443> ],
         <https://performance.musiconn.de/source/plakate-programmhefte-und-rezensionen-aus-dem-nachlass-hermann-keller-2-programmhefte-1955-1984>,
-        <https://performance.musiconn.de/work/werke-berlioz-hector>,
-        <https://performance.musiconn.de/work/werke-dvorak-antonin>,
-        <https://performance.musiconn.de/work/werke-grieg-edvard>,
-        <https://performance.musiconn.de/work/werke-jaernefelt-armas>,
-        <https://performance.musiconn.de/work/werke-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/werke-svendsen-johan-severin>,
-        <https://viaf.org/viaf/183326377>,
-        <https://viaf.org/viaf/199716820>,
-        <https://viaf.org/viaf/201866443>,
-        <https://viaf.org/viaf/2035153716401158820007>,
-        <https://viaf.org/viaf/209875979> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4819680-0> ;
-    cto:viaf <https://viaf.org/viaf/183326377>,
-        <https://viaf.org/viaf/199716820>,
-        <https://viaf.org/viaf/201866443>,
-        <https://viaf.org/viaf/2035153716401158820007>,
-        <https://viaf.org/viaf/209875979> .
+        <https://performance.musiconn.de/work/werke-jaernefelt-armas> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/183326377> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199716820> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201866443> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2035153716401158820007> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209875979> a nfdicore:NFDI_0001010 .
 

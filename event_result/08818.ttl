@@ -1,58 +1,83 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010001> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001001X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101384> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101414> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300186029> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300506643> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4716058-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-guildhall-london-1994-10-28> ] .
 
-<https://performance.musiconn.de/event/konzert-guildhall-london-1994-10-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-guildhall-london-1994-10-28> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Guildhall (London), 28.10.1994" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1994-10-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1994-10-28" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300010001>,
-        <https://d-nb.info/gnd/30001001X>,
-        <https://d-nb.info/gnd/300101384>,
-        <https://d-nb.info/gnd/300101414>,
-        <https://d-nb.info/gnd/300186029>,
-        <https://d-nb.info/gnd/300506643>,
-        <https://d-nb.info/gnd/4716058-5> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300010001>,
-        <https://d-nb.info/gnd/30001001X>,
-        <https://d-nb.info/gnd/300101384>,
-        <https://d-nb.info/gnd/300101414>,
-        <https://d-nb.info/gnd/300186029>,
-        <https://d-nb.info/gnd/300506643>,
-        <https://performance.musiconn.de/source/motettenbuch-1994-95>,
-        <https://performance.musiconn.de/work/denn-er-hat-seinen-engeln-befohlen-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/die-deutsche-liturgie-ehre-sei-gott-in-der-hoehe-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/die-deutsche-liturgie-kyrie-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/fuerchte-dich-nicht-ich-bin-bei-dir-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/komm-jesu-komm-mein-leib-ist-muede-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/nunc-dimittis-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-bach-johann-sebastian>,
-        <https://viaf.org/viaf/177165346>,
-        <https://viaf.org/viaf/179407683>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/182469156>,
-        <https://viaf.org/viaf/189340391>,
-        <https://viaf.org/viaf/196881566>,
-        <https://viaf.org/viaf/215924055> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4716058-5>,
-        <https://viaf.org/viaf/63145424486086830701> ;
-    cto:viaf <https://viaf.org/viaf/177165346>,
-        <https://viaf.org/viaf/179407683>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/182469156>,
-        <https://viaf.org/viaf/189340391>,
-        <https://viaf.org/viaf/196881566>,
-        <https://viaf.org/viaf/215924055>,
-        <https://viaf.org/viaf/63145424486086830701> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4716058-5> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/63145424486086830701> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300186029> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001001X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300506643> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189340391> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177165346> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182469156> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101414> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215924055> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101384> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179407683> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181241390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196881566> ],
+        <https://performance.musiconn.de/source/motettenbuch-1994-95> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177165346> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179407683> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181241390> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182469156> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189340391> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196881566> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215924055> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/63145424486086830701> a nfdicore:NFDI_0001010 .
 

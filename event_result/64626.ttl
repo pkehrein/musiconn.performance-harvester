@@ -4,24 +4,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/film-3-89-3-alte-oper-frankfurt-a-main-grosser-saal-1989-04-02> ] .
 
-<https://performance.musiconn.de/event/film-3-89-3-alte-oper-frankfurt-a-main-grosser-saal-1989-04-02> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/film-3-89-3-alte-oper-frankfurt-a-main-grosser-saal-1989-04-02> a cto:CTO_0001005 ;
     rdfs:label "Film 3/89/3, Alte Oper (Frankfurt a. Main). Großer Saal, 2.4.1989" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1989-04-02" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1989-04-02" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/3008405-2> ;
-    cto:relatedItem <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
         <https://performance.musiconn.de/work/easy-street-mason-benedict>,
         <https://performance.musiconn.de/work/the-adventurer-mason-benedict>,
         <https://performance.musiconn.de/work/the-immigrant-mason-benedict> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
 

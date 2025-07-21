@@ -1,37 +1,48 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1190754452> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300078706> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146477> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4730580-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/philharmonie-im-museum-1-museumsbau-des-deutschen-hygiene-museum-dresden-2017-11-26-11-00> ] .
 
-<https://performance.musiconn.de/event/philharmonie-im-museum-1-museumsbau-des-deutschen-hygiene-museum-dresden-2017-11-26-11-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/philharmonie-im-museum-1-museumsbau-des-deutschen-hygiene-museum-dresden-2017-11-26-11-00> a cto:CTO_0001005 ;
     rdfs:label "Philharmonie im Museum 1, Museumsbau des Deutschen Hygiene-Museum (Dresden), 26.11.2017, 11:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2017-2018> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2017-11-26T11:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2017-11-26T11:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1190754452>,
-        <https://d-nb.info/gnd/300078706>,
-        <https://d-nb.info/gnd/300146477>,
-        <https://d-nb.info/gnd/4730580-0> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2017-2018> ;
-    cto:relatedItem <https://d-nb.info/gnd/300078706>,
-        <https://d-nb.info/gnd/300146477>,
-        <https://d-nb.info/gnd/4730580-0>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/lieder-aus-letzter-zeit-rueckert-lieder-mahler-gustav>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-61-c-dur-schumann-robert>,
-        <https://performance.musiconn.de/work/the-unanswered-question-ives-charles>,
-        <https://viaf.org/viaf/176655157>,
-        <https://viaf.org/viaf/182259622>,
-        <https://viaf.org/viaf/189341326> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1190754452> ;
-    cto:viaf <https://viaf.org/viaf/176655157>,
-        <https://viaf.org/viaf/182259622>,
-        <https://viaf.org/viaf/189341326> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1190754452> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182259622> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146477> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189341326> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300078706> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176655157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4730580-0> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176655157> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182259622> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189341326> a nfdicore:NFDI_0001010 .
 

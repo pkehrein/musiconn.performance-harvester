@@ -1,50 +1,67 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1047378906> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1256929166> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1256929913> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1256938483> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1256939188> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300805241> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/301023468> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/geistliche-konzerte-italienischer-komponisten-des-17-jahrhunderts-in-dresden-annenkirche-dresden-1995-09-20-15-30> ] .
 
-<https://performance.musiconn.de/event/geistliche-konzerte-italienischer-komponisten-des-17-jahrhunderts-in-dresden-annenkirche-dresden-1995-09-20-15-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/geistliche-konzerte-italienischer-komponisten-des-17-jahrhunderts-in-dresden-annenkirche-dresden-1995-09-20-15-30> a cto:CTO_0001005 ;
     rdfs:label "Geistliche Konzerte italienischer Komponisten des 17. Jahrhunderts in Dresden, Annenkirche (Dresden), 20.9.1995, 15:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/34-internationales-heinrich-schuetz-fest> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1995-09-20T15:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1995-09-20T15:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1047378906>,
-        <https://d-nb.info/gnd/1256929166>,
-        <https://d-nb.info/gnd/1256929913>,
-        <https://d-nb.info/gnd/125693528X>,
-        <https://d-nb.info/gnd/1256938483>,
-        <https://d-nb.info/gnd/1256939188>,
-        <https://d-nb.info/gnd/300805241>,
-        <https://d-nb.info/gnd/301023468> ;
-    cto:itemOf <https://performance.musiconn.de/series/34-internationales-heinrich-schuetz-fest> ;
-    cto:relatedItem <https://d-nb.info/gnd/1256929166>,
-        <https://d-nb.info/gnd/1256929913>,
-        <https://d-nb.info/gnd/125693528X>,
-        <https://d-nb.info/gnd/1256938483>,
-        <https://d-nb.info/gnd/1256939188>,
-        <https://d-nb.info/gnd/300805241>,
-        <https://d-nb.info/gnd/301023468>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1047378906> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306291680> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1256929913> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300805241> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1256939188> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1256938483> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301023468> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/125693528X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217023584> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/236534307> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/125693528X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1256929166> ],
         <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-21-heinrich-schuetz-ehrung-1954-2002>,
-        <https://performance.musiconn.de/work/aurora-lucis-emicat-albrici-vincenzo>,
-        <https://performance.musiconn.de/work/confitebor-tibi-domine-pallavicino-carlo>,
-        <https://performance.musiconn.de/work/dixit-dominus-singstimmen-5-musikinstrument-2-basso-contiuno-albrici-vincenzo>,
-        <https://performance.musiconn.de/work/fasciculus-myrrhae-peranda-marco-giuseppe>,
-        <https://performance.musiconn.de/work/o-jesu-mi-dulcissime-peranda-marco-giuseppe>,
-        <https://performance.musiconn.de/work/sonaten-musikinstrumente-18-basso-continuo-bertali-antonio>,
-        <https://performance.musiconn.de/work/sonaten-op-7-ziani-pietro-andrea>,
-        <https://performance.musiconn.de/work/veni-sancte-spiritus-peranda-marco-giuseppe>,
-        <https://viaf.org/viaf/217023584>,
-        <https://viaf.org/viaf/236534307> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1047378906>,
-        <https://viaf.org/viaf/306291680> ;
-    cto:viaf <https://viaf.org/viaf/217023584>,
-        <https://viaf.org/viaf/236534307>,
-        <https://viaf.org/viaf/306291680> .
+        <https://performance.musiconn.de/work/sonaten-musikinstrumente-18-basso-continuo-bertali-antonio> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/217023584> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/236534307> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/306291680> a nfdicore:NFDI_0001010 .
+
+<https://d-nb.info/gnd/125693528X> a nfdicore:NFDI_0001009 .
 

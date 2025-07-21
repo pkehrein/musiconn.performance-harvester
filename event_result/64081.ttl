@@ -1,54 +1,74 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1166465608> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1208852574> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300025254> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029209> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300036566> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300983271> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-vereinskonzert-rathaus-muenster-westf-friedenssaal-1878-10-26> ] .
 
-<https://performance.musiconn.de/event/2-vereinskonzert-rathaus-muenster-westf-friedenssaal-1878-10-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-vereinskonzert-rathaus-muenster-westf-friedenssaal-1878-10-26> a cto:CTO_0001005 ;
     rdfs:label "2. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 26.10.1878" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1878-79> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1878-10-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1878-10-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1166465608>,
-        <https://d-nb.info/gnd/1208852574>,
-        <https://d-nb.info/gnd/300025254>,
-        <https://d-nb.info/gnd/300029209>,
-        <https://d-nb.info/gnd/300036566>,
-        <https://d-nb.info/gnd/300983271>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1878-79> ;
-    cto:relatedItem <https://d-nb.info/gnd/1166465608>,
-        <https://d-nb.info/gnd/1208852574>,
-        <https://d-nb.info/gnd/300025254>,
-        <https://d-nb.info/gnd/300029209>,
-        <https://d-nb.info/gnd/300036566>,
-        <https://d-nb.info/gnd/300983271>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178699268> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181470306> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300036566> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025254> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1166465608> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/757158792836239040005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300983271> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1208852574> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029209> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180442773> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180233295> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219160905> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1878-1879>,
-        <https://performance.musiconn.de/work/anacreon-ouvertuere-cherubini-luigi>,
-        <https://performance.musiconn.de/work/gesaenge-op-3-liebestreu-brahms-johannes>,
-        <https://performance.musiconn.de/work/gesaenge-op-86-der-mond-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/judas-maccabaeus-rezitativ-und-arie-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-1-op-26-g-moll-bruch-max>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-51-ich-wandre-nicht-schumann-robert>,
-        <https://performance.musiconn.de/work/romanzen-violine-orchester-op-3-f-dur-barth-richard>,
-        <https://performance.musiconn.de/work/sinfonien-d-dur-haydn-joseph>,
-        <https://viaf.org/viaf/178699268>,
-        <https://viaf.org/viaf/180233295>,
-        <https://viaf.org/viaf/180442773>,
-        <https://viaf.org/viaf/181470306>,
-        <https://viaf.org/viaf/219160905>,
-        <https://viaf.org/viaf/757158792836239040005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/178699268>,
-        <https://viaf.org/viaf/180233295>,
-        <https://viaf.org/viaf/180442773>,
-        <https://viaf.org/viaf/181470306>,
-        <https://viaf.org/viaf/219160905>,
-        <https://viaf.org/viaf/757158792836239040005> .
+        <https://performance.musiconn.de/work/sinfonien-d-dur-haydn-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178699268> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180233295> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180442773> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181470306> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219160905> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/757158792836239040005> a nfdicore:NFDI_0001010 .
 

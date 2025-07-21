@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009402> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108877> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30084798X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/10-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1970-04-09-20-00> ] .
 
-<https://performance.musiconn.de/event/10-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1970-04-09-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/10-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1970-04-09-20-00> a cto:CTO_0001005 ;
     rdfs:label "10. Außerordentliches Konzert, Kulturpalast (Dresden) / Festsaal, 9.4.1970, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1970-04-09T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1970-04-09T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009402>,
-        <https://d-nb.info/gnd/300108877>,
-        <https://d-nb.info/gnd/30084798X> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009402>,
-        <https://d-nb.info/gnd/300108877>,
-        <https://d-nb.info/gnd/30084798X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108877> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208681720> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213967918> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30084798X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009402> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182258323> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-cembalo-orchester-bwv-1052-1058-nr-5-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-kv-413-f-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-11-haydn-joseph>,
-        <https://performance.musiconn.de/work/tokkaten-orchester-op-31-tamberg-eino>,
-        <https://viaf.org/viaf/182258323>,
-        <https://viaf.org/viaf/208681720>,
-        <https://viaf.org/viaf/213967918> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/182258323>,
-        <https://viaf.org/viaf/208681720>,
-        <https://viaf.org/viaf/213967918> .
+        <https://performance.musiconn.de/work/tokkaten-orchester-op-31-tamberg-eino> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182258323> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208681720> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213967918> a nfdicore:NFDI_0001010 .
 

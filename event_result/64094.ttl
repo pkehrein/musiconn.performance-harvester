@@ -1,58 +1,81 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1178627780> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1267634588> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300048157> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300094981> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102666> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140061> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4493513-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-vereinskonzert-rathaus-muenster-westf-friedenssaal-1879-11-08> ] .
 
-<https://performance.musiconn.de/event/3-vereinskonzert-rathaus-muenster-westf-friedenssaal-1879-11-08> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-vereinskonzert-rathaus-muenster-westf-friedenssaal-1879-11-08> a cto:CTO_0001005 ;
     rdfs:label "3. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 8.11.1879" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1879-80> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1879-11-08" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1879-11-08" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1178627780>,
-        <https://d-nb.info/gnd/1267634588>,
-        <https://d-nb.info/gnd/300048157>,
-        <https://d-nb.info/gnd/300094981>,
-        <https://d-nb.info/gnd/300102666>,
-        <https://d-nb.info/gnd/300140061>,
-        <https://d-nb.info/gnd/4453573-9>,
-        <https://d-nb.info/gnd/4493513-4> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1879-80> ;
-    cto:relatedItem <https://d-nb.info/gnd/1178627780>,
-        <https://d-nb.info/gnd/1267634588>,
-        <https://d-nb.info/gnd/300048157>,
-        <https://d-nb.info/gnd/300094981>,
-        <https://d-nb.info/gnd/300102666>,
-        <https://d-nb.info/gnd/300140061>,
-        <https://d-nb.info/gnd/4493513-4>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300048157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140061> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1406151474935700490005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1178627780> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195806340> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102666> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175005823> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2228155105768276320006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191496981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/226166293186900710009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183715682> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1267634588> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300094981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4493513-4> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1879-1880>,
-        <https://performance.musiconn.de/work/an-die-leier-schubert-franz>,
-        <https://performance.musiconn.de/work/das-voeglein-in-der-wiege-taubert-wilhelm>,
-        <https://performance.musiconn.de/work/gesaenge-aus-dem-spanischen-liederbuch-op-21-am-ufer-des-flusses-manzanares-jensen-adolf>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-2-op-21-f-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/odysseus-penelopes-trauer-bruch-max>,
-        <https://performance.musiconn.de/work/sinfonien-mwv-n-16-a-dur-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/slovanske-rhapsodie-cis-1-dvorak-antonin>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-nr-12-liszt-franz>,
-        <https://viaf.org/viaf/1406151474935700490005>,
-        <https://viaf.org/viaf/175005823>,
-        <https://viaf.org/viaf/183715682>,
-        <https://viaf.org/viaf/191496981>,
-        <https://viaf.org/viaf/195806340>,
-        <https://viaf.org/viaf/2228155105768276320006>,
-        <https://viaf.org/viaf/226166293186900710009> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/1406151474935700490005>,
-        <https://viaf.org/viaf/175005823>,
-        <https://viaf.org/viaf/183715682>,
-        <https://viaf.org/viaf/191496981>,
-        <https://viaf.org/viaf/195806340>,
-        <https://viaf.org/viaf/2228155105768276320006>,
-        <https://viaf.org/viaf/226166293186900710009> .
+        <https://performance.musiconn.de/work/das-voeglein-in-der-wiege-taubert-wilhelm> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1406151474935700490005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175005823> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183715682> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191496981> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195806340> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2228155105768276320006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/226166293186900710009> a nfdicore:NFDI_0001010 .
 

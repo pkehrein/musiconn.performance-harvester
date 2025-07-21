@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4249379-1> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/le-prince-de-cathay-chatenay-malabry-1704-08-03> ] .
 
-<https://performance.musiconn.de/event/le-prince-de-cathay-chatenay-malabry-1704-08-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/le-prince-de-cathay-chatenay-malabry-1704-08-03> a cto:CTO_0001005 ;
     rdfs:label "Le Prince de Cathay, Châtenay-Malabry, 3.8.1704" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1704-08-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1704-08-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4249379-1> ;
-    cto:relatedItem <https://performance.musiconn.de/source/hourcade-2002-328-1>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4249379-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/245079275> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/hourcade-2002-328-1>,
         <https://performance.musiconn.de/source/onlinequelle-324>,
         <https://performance.musiconn.de/source/textquelle-digitalisat-136>,
         <https://performance.musiconn.de/work/le-prince-de-cathay-matho-jean-baptiste> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4249379-1>,
-        <https://viaf.org/viaf/245079275> ;
-    cto:viaf <https://viaf.org/viaf/245079275> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/245079275> a nfdicore:NFDI_0001010 .
 

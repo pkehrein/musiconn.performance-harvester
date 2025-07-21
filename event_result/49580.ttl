@@ -4,19 +4,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vecer-posvjascennyj-xv-letiju-seminara-samodejatelnych-kompozitorov-dom-kompozitorov-sankt-petersburg-1966-03-18> ] .
 
-<https://performance.musiconn.de/event/vecer-posvjascennyj-xv-letiju-seminara-samodejatelnych-kompozitorov-dom-kompozitorov-sankt-petersburg-1966-03-18> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vecer-posvjascennyj-xv-letiju-seminara-samodejatelnych-kompozitorov-dom-kompozitorov-sankt-petersburg-1966-03-18> a cto:CTO_0001005 ;
     rdfs:label "Večer, posvjaščennyj XV-letiju seminara samodejatel'nych kompozitorov, Dom kompozitorov (Sankt Petersburg), 18.3.1966" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1966-03-18" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1966-03-18" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1200899989> ;
-    cto:relatedItem <https://performance.musiconn.de/source/leningrader-komponistenhaus-1966-18-maerz>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/leningrader-komponistenhaus-1966-18-maerz>,
         <https://performance.musiconn.de/work/karavan-braznikova-a>,
         <https://performance.musiconn.de/work/konzerte-gusli-orchester-auswahl-kravcenko-boris>,
         <https://performance.musiconn.de/work/korolevstvo-krivych-zerkal-kulakov-viktor-michajlovic>,
@@ -42,7 +45,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/ubit-podo-rzevom-scekotov-jurij-alekseevic>,
         <https://performance.musiconn.de/work/vokalnyj-cikl-na-stichi-z-prevera-archimandritov-boris-ivanovic>,
         <https://performance.musiconn.de/work/vorobej-puzanova-s> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1200899989>,
-        <https://viaf.org/viaf/385157583849933970005> ;
-    cto:viaf <https://viaf.org/viaf/385157583849933970005> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
 

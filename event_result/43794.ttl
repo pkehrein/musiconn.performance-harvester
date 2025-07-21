@@ -1,26 +1,43 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/10182090-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1268683329> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029160> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/festkonzert-50-jahre-israel-neues-gewandhaus-leipzig-kleiner-saal-1998-05-14-20-00> ] .
 
-<https://performance.musiconn.de/event/festkonzert-50-jahre-israel-neues-gewandhaus-leipzig-kleiner-saal-1998-05-14-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/festkonzert-50-jahre-israel-neues-gewandhaus-leipzig-kleiner-saal-1998-05-14-20-00> a cto:CTO_0001005 ;
     rdfs:label "Festkonzert 50 Jahre Israel, Neues Gewandhaus (Leipzig) / Kleiner Saal, 14.5.1998, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1998-05-14T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1998-05-14T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/10182090-2>,
-        <https://d-nb.info/gnd/1268683329>,
-        <https://d-nb.info/gnd/300029160>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://d-nb.info/gnd/1268683329>,
-        <https://d-nb.info/gnd/300029160>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/10182090-2> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/142922042> ],
+        <https://performance.musiconn.de/corporation/deutsch-israelische-gesellschaft-leipzig> ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/neues-gewandhaus-leipzig-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179502661> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1268683329> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029160> ],
         <https://performance.musiconn.de/source/anja-malek-lieder-voll-tiefer-wehmut-juedische-folklore-und-synagogalmusik-im-gewandhaus>,
         <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/hillman-eva-maria-synagogalchor-und-kammerorchester-hatikva-im-gewandhaus-festkonzert-50-jahre-israel>,
@@ -32,20 +49,15 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/hawa-nagila-fassung-gross-friedbert-idelsohn-abraham-z>,
         <https://performance.musiconn.de/work/jimloch-spivak-nissan>,
         <https://performance.musiconn.de/work/jommi-spiel-mir-a-liedele-fassung-sander-werner>,
-        <https://performance.musiconn.de/work/kammersinfonie-streichorchester-op-110a-schostakowitsch-dmitri-d>,
-        <https://performance.musiconn.de/work/kol-nidrei-bruch-max>,
         <https://performance.musiconn.de/work/mah-tauwu-lampel-samuel>,
         <https://performance.musiconn.de/work/sabbatwuensche-fassung-sander-werner>,
         <https://performance.musiconn.de/work/tikanto-schabbos-weintraub-hirsch>,
-        <https://performance.musiconn.de/work/yerushalayim-shel-sahav-fassung-gross-friedbert-shemer-naomi>,
-        <https://viaf.org/viaf/179502661> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/neues-gewandhaus-leipzig-kleiner-saal> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/10182090-2>,
-        <https://d-nb.info/gnd/5513287-X>,
-        <https://performance.musiconn.de/corporation/deutsch-israelische-gesellschaft-leipzig>,
-        <https://viaf.org/viaf/142922042>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/142922042>,
-        <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/179502661> .
+        <https://performance.musiconn.de/work/yerushalayim-shel-sahav-fassung-gross-friedbert-shemer-naomi> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/142922042> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179502661> a nfdicore:NFDI_0001010 .
 

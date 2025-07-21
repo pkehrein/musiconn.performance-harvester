@@ -1,38 +1,48 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1279920971> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300070225> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300202199> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300302290> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/concert-kamerorkest-carl-philipp-emanuel-bach-beurs-van-berlage-1989-05-22-20-15> ] .
 
-<https://performance.musiconn.de/event/concert-kamerorkest-carl-philipp-emanuel-bach-beurs-van-berlage-1989-05-22-20-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/concert-kamerorkest-carl-philipp-emanuel-bach-beurs-van-berlage-1989-05-22-20-15> a cto:CTO_0001005 ;
     rdfs:label "Concert Kamerorkest Carl Philipp Emanuel Bach, Beurs van Berlage, 22.5.1989, 20:15" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1989-05-22T20:15:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1989-05-22T20:15:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1279920971>,
-        <https://d-nb.info/gnd/300070225>,
-        <https://d-nb.info/gnd/300202199>,
-        <https://d-nb.info/gnd/300302290> ;
-    cto:relatedItem <https://d-nb.info/gnd/1279920971>,
-        <https://d-nb.info/gnd/300070225>,
-        <https://d-nb.info/gnd/300202199>,
-        <https://d-nb.info/gnd/300302290>,
-        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-5-programmhefte-kammerorchester-carl-philipp-emanuel-bach-1980-1989>,
-        <https://performance.musiconn.de/work/konzerte-querfloete-orchester-wq-168-a-dur-bach-carl-philipp-emanuel>,
-        <https://performance.musiconn.de/work/orphee-et-eurydice-w41-danse-des-furies-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-45-fis-moll-haydn-joseph>,
-        <https://performance.musiconn.de/work/sinfonien-wq-180-g-dur-bach-carl-philipp-emanuel>,
-        <https://viaf.org/viaf/185083766>,
-        <https://viaf.org/viaf/188269325>,
-        <https://viaf.org/viaf/197653006> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/beurs-van-berlage> ;
-    cto:viaf <https://viaf.org/viaf/185083766>,
-        <https://viaf.org/viaf/188269325>,
-        <https://viaf.org/viaf/197653006> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/beurs-van-berlage> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185083766> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300302290> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197653006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1279920971> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300070225> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300202199> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188269325> ],
+        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-5-programmhefte-kammerorchester-carl-philipp-emanuel-bach-1980-1989> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185083766> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188269325> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197653006> a nfdicore:NFDI_0001010 .
 

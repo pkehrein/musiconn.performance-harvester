@@ -1,47 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/124488538X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015496> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300019157> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300094841> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146477> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1903-01-12> ] .
 
-<https://performance.musiconn.de/event/6-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1903-01-12> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1903-01-12> a cto:CTO_0001005 ;
     rdfs:label "6. Konzert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 12.1.1903" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/neue-abonnementkonzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1903-01-12" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1903-01-12" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/124488538X>,
-        <https://d-nb.info/gnd/300015496>,
-        <https://d-nb.info/gnd/300019157>,
-        <https://d-nb.info/gnd/300094841>,
-        <https://d-nb.info/gnd/300146477> ;
-    cto:itemOf <https://performance.musiconn.de/series/neue-abonnementkonzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/124488538X>,
-        <https://d-nb.info/gnd/300015496>,
-        <https://d-nb.info/gnd/300019157>,
-        <https://d-nb.info/gnd/300094841>,
-        <https://d-nb.info/gnd/300146477>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300019157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184704445> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1750150567604406370009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189341326> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/124488538X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185089854> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015496> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176821491> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300094841> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146477> ],
         <https://performance.musiconn.de/source/musikzeitschriften-in-leipzig>,
-        <https://performance.musiconn.de/work/der-improvisator-ballettmusik-gavotte-albert-eugen-d>,
-        <https://performance.musiconn.de/work/der-improvisator-ouverture-albert-eugen-d>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-4-op-58-g-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/le-carnaval-romain-berlioz-hector>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-61-c-dur-schumann-robert>,
-        <https://performance.musiconn.de/work/totentanz-liszt-franz>,
-        <https://viaf.org/viaf/1750150567604406370009>,
-        <https://viaf.org/viaf/176821491>,
-        <https://viaf.org/viaf/184704445>,
-        <https://viaf.org/viaf/185089854>,
-        <https://viaf.org/viaf/189341326> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/1750150567604406370009>,
-        <https://viaf.org/viaf/176821491>,
-        <https://viaf.org/viaf/184704445>,
-        <https://viaf.org/viaf/185089854>,
-        <https://viaf.org/viaf/189341326> .
+        <https://performance.musiconn.de/work/der-improvisator-ballettmusik-gavotte-albert-eugen-d> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1750150567604406370009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176821491> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184704445> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185089854> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189341326> a nfdicore:NFDI_0001010 .
 

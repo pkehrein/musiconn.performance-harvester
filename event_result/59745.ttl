@@ -4,24 +4,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1208673629> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/musik-zum-erntedankfest-kirchgemeindezentrum-prohlis-dresden-1986-09-28> ] .
 
-<https://performance.musiconn.de/event/musik-zum-erntedankfest-kirchgemeindezentrum-prohlis-dresden-1986-09-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/musik-zum-erntedankfest-kirchgemeindezentrum-prohlis-dresden-1986-09-28> a cto:CTO_0001005 ;
     rdfs:label "Musik zum Erntedankfest, Kirchgemeindezentrum Prohlis (Dresden), 28.9.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-09-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-09-28" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1208673629> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1208673629> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kirchgemeindezentrum-prohlis-dresden> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
         <https://performance.musiconn.de/work/amabile-fuer-floete-und-gitarre-op-21c-schwarze-guenter>,
         <https://performance.musiconn.de/work/gedanken-freitag-schwarze-guenter>,
         <https://performance.musiconn.de/work/lippen-so-rot-thierbach-schwarze-guenter> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kirchgemeindezentrum-prohlis-dresden> ;
-    cto:relatedPerson <https://d-nb.info/gnd/1208673629>,
-        <https://viaf.org/viaf/3066158792843739040002> ;
-    cto:viaf <https://viaf.org/viaf/3066158792843739040002> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3066158792843739040002> ] .
+
+<https://viaf.org/viaf/3066158792843739040002> a nfdicore:NFDI_0001010 .
 

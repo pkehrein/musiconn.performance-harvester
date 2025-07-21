@@ -1,23 +1,27 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300072457> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kammerkonzert-ii-rathaus-kassel-buergersaal-1987-02-21> ] .
 
-<https://performance.musiconn.de/event/kammerkonzert-ii-rathaus-kassel-buergersaal-1987-02-21> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kammerkonzert-ii-rathaus-kassel-buergersaal-1987-02-21> a cto:CTO_0001005 ;
     rdfs:label "Kammerkonzert II, Rathaus (Kassel) / Bürgersaal, 21.2.1987" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vom-schweigen-befreit-internationales-komponistinnenfestival-kassel-20-22-februar-1987> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-02-21" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-02-21" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300072457> ;
-    cto:itemOf <https://performance.musiconn.de/series/vom-schweigen-befreit-internationales-komponistinnenfestival-kassel-20-22-februar-1987> ;
-    cto:relatedItem <https://d-nb.info/gnd/300072457>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/rathaus-kassel-buergersaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204581658> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300072457> ],
         <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-vom-schweigen-befreit-internationales-komponistinnenfestival-kassel-1987-programm-5-konzert-kammerkonzert-ii>,
         <https://performance.musiconn.de/work/duonia-violoncello-yamashita-toyoko>,
         <https://performance.musiconn.de/work/frueher-oder-spaeter-klarinette-klavier-heller-barbara>,
@@ -25,9 +29,8 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/gehen-sucht-morgen-altstimme-violoncello-klavier-zimmermann-margrit>,
         <https://performance.musiconn.de/work/nouns-to-nouns-ii-w-22a-hoelszky-adriana>,
         <https://performance.musiconn.de/work/pausenfabrik-sextett-1984-1985-janarcekova-viera>,
-        <https://performance.musiconn.de/work/relatos-violoncello-altfloete-vazquez-lilia>,
-        <https://performance.musiconn.de/work/variationen-fuer-irith-heller-barbara>,
-        <https://viaf.org/viaf/204581658> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/rathaus-kassel-buergersaal> ;
-    cto:viaf <https://viaf.org/viaf/204581658> .
+        <https://performance.musiconn.de/work/relatos-violoncello-altfloete-vazquez-lilia> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/204581658> a nfdicore:NFDI_0001010 .
 

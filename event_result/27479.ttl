@@ -1,58 +1,81 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/119112455X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30006022X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300062486> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111150> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300112092> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140924> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156758> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300174802> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-philharmonisches-konzert-schauspielhaus-leipzig-1903-10-19> ] .
 
-<https://performance.musiconn.de/event/2-philharmonisches-konzert-schauspielhaus-leipzig-1903-10-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-philharmonisches-konzert-schauspielhaus-leipzig-1903-10-19> a cto:CTO_0001005 ;
     rdfs:label "2. Philharmonisches Konzert, Schauspielhaus (Leipzig), 19.10.1903" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1903-1904> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1903-10-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1903-10-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/119112455X>,
-        <https://d-nb.info/gnd/30006022X>,
-        <https://d-nb.info/gnd/300062486>,
-        <https://d-nb.info/gnd/300111150>,
-        <https://d-nb.info/gnd/300112092>,
-        <https://d-nb.info/gnd/300140924>,
-        <https://d-nb.info/gnd/300156758>,
-        <https://d-nb.info/gnd/300174802> ;
-    cto:itemOf <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1903-1904> ;
-    cto:relatedItem <https://d-nb.info/gnd/30006022X>,
-        <https://d-nb.info/gnd/300062486>,
-        <https://d-nb.info/gnd/300111150>,
-        <https://d-nb.info/gnd/300112092>,
-        <https://d-nb.info/gnd/300140924>,
-        <https://d-nb.info/gnd/300156758>,
-        <https://d-nb.info/gnd/300174802>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/119112455X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300174802> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111150> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300112092> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062486> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182296322> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174381785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156758> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30006022X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140924> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176196779> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176401772> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176604020> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193655042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/744144783054778562913> ],
         <https://performance.musiconn.de/source/musikalisches-wochenblatt-mw>,
-        <https://performance.musiconn.de/work/die-zauberfloete-dies-bildnis-ist-bezaubernd-schoen-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/iphigenie-en-aulide-ouvertuere-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/lieder-schubert-franz>,
-        <https://performance.musiconn.de/work/lieder-schuett-eduard>,
-        <https://performance.musiconn.de/work/lieder-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-wolf-hugo>,
-        <https://performance.musiconn.de/work/peer-gynt-suite-nr-1-op-46-grieg-edvard>,
-        <https://performance.musiconn.de/work/sinfonien-kv-550-g-moll-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/174381785>,
-        <https://viaf.org/viaf/176196779>,
-        <https://viaf.org/viaf/176401772>,
-        <https://viaf.org/viaf/176604020>,
-        <https://viaf.org/viaf/182296322>,
-        <https://viaf.org/viaf/193655042>,
-        <https://viaf.org/viaf/744144783054778562913> ;
-    cto:relatedLocation <https://d-nb.info/gnd/119112455X> ;
-    cto:viaf <https://viaf.org/viaf/174381785>,
-        <https://viaf.org/viaf/176196779>,
-        <https://viaf.org/viaf/176401772>,
-        <https://viaf.org/viaf/176604020>,
-        <https://viaf.org/viaf/182296322>,
-        <https://viaf.org/viaf/193655042>,
-        <https://viaf.org/viaf/744144783054778562913> .
+        <https://performance.musiconn.de/work/lieder-schuett-eduard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174381785> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176196779> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176401772> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176604020> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182296322> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193655042> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/744144783054778562913> a nfdicore:NFDI_0001010 .
 

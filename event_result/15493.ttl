@@ -1,66 +1,85 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1073723593> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/114194345X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009976> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300067984> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144903> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300304544> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-kreiskulturhaus-greiz-1969-11-19> ] .
 
-<https://performance.musiconn.de/event/konzert-kreiskulturhaus-greiz-1969-11-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-kreiskulturhaus-greiz-1969-11-19> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Kreiskulturhaus (Greiz), 19.11.1969" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1969-11-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1969-11-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1073723593>,
-        <https://d-nb.info/gnd/114194345X>,
-        <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300067984>,
-        <https://d-nb.info/gnd/300144903>,
-        <https://d-nb.info/gnd/300304544> ;
-    cto:relatedItem <https://d-nb.info/gnd/1073723593>,
-        <https://d-nb.info/gnd/114194345X>,
-        <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300067984>,
-        <https://d-nb.info/gnd/300144903>,
-        <https://d-nb.info/gnd/300304544>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kreiskulturhaus-greiz> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1073723593> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179924241> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179427272> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174110202> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316535607> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144903> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009976> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181348868> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/114194345X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300067984> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190425416> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300304544> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174651654> ],
         <https://performance.musiconn.de/source/motettenbuch-1969>,
         <https://performance.musiconn.de/work/der-fensterputzer-stolte-siegfried>,
-        <https://performance.musiconn.de/work/der-geist-hilft-unser-schwachheit-auf-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/deutsche-volkslieder-woo-33-verstohlen-geht-der-mond-auf-brahms-johannes>,
         <https://performance.musiconn.de/work/die-leineweber-weismann-wilhelm>,
         <https://performance.musiconn.de/work/ein-jaeger-aus-kurpfalz-mauersberger-erhard>,
-        <https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-29-zigeunerleben-schumann-robert>,
         <https://performance.musiconn.de/work/herbstlied-weismann-wilhelm>,
-        <https://performance.musiconn.de/work/insprugk-ich-muss-dich-lassen-isaac-heinrich>,
         <https://performance.musiconn.de/work/johann-sebastian-bach-braeutigam-volker>,
-        <https://performance.musiconn.de/work/libro-de-villanelle-moresche-et-altre-canzoni-o-la-o-che-bon-eccho-lasso-orlando-di>,
-        <https://performance.musiconn.de/work/lustgarten-neuer-teutscher-gesaeng-balletti-galliarden-und-intraden-tantzen-und-springen-hassler-hans-leo>,
         <https://performance.musiconn.de/work/lustgarten-neuer-teutscher-gesaeng-frisch-auf-lasst-uns-ein-guts-glas-wein-hassler-hans-leo>,
-        <https://performance.musiconn.de/work/madrigale-1948-jahreszeiten-weismann-wilhelm>,
         <https://performance.musiconn.de/work/mailied-weismann-wilhelm>,
         <https://performance.musiconn.de/work/mit-dem-pfeil-und-bogen-anonym>,
         <https://performance.musiconn.de/work/o-lied-weismann-wilhelm>,
         <https://performance.musiconn.de/work/ohren-vergnuegendes-und-gemueth-ergoetzendes-tafel-confect-ist-etwas-so-maechtig-rathgeber-valentin>,
         <https://performance.musiconn.de/work/von-maulwurf-und-schmetterling-und-anderen-tieren-im-garten-irrgang-horst>,
         <https://performance.musiconn.de/work/wer-liebt-aus-treuem-herzen-hassler-hans-leo>,
-        <https://performance.musiconn.de/work/wie-lieblich-schallt-durch-busch-und-wald-mauersberger-erhard>,
-        <https://viaf.org/viaf/174110202>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/179427272>,
-        <https://viaf.org/viaf/179924241>,
-        <https://viaf.org/viaf/181348868>,
-        <https://viaf.org/viaf/190425416>,
-        <https://viaf.org/viaf/316535607> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kreiskulturhaus-greiz> ;
-    cto:viaf <https://viaf.org/viaf/174110202>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/179427272>,
-        <https://viaf.org/viaf/179924241>,
-        <https://viaf.org/viaf/181348868>,
-        <https://viaf.org/viaf/190425416>,
-        <https://viaf.org/viaf/316535607> .
+        <https://performance.musiconn.de/work/wie-lieblich-schallt-durch-busch-und-wald-mauersberger-erhard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174110202> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174651654> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179427272> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179924241> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181348868> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190425416> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316535607> a nfdicore:NFDI_0001010 .
 

@@ -1,52 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1078006318> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300034172> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300062559> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300077769> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156944> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/deutsche-maerchen-und-volkslieder-1926-12-19-19-30> ] .
 
-<https://performance.musiconn.de/event/deutsche-maerchen-und-volkslieder-1926-12-19-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/deutsche-maerchen-und-volkslieder-1926-12-19-19-30> a cto:CTO_0001005 ;
     rdfs:label "Deutsche Märchen und Volkslieder, 19.12.1926, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1926-1927> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1926-12-19T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1926-12-19T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1078006318>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300034172>,
-        <https://d-nb.info/gnd/300062559>,
-        <https://d-nb.info/gnd/300077769>,
-        <https://d-nb.info/gnd/300156944> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1926-1927> ;
-    cto:relatedItem <https://d-nb.info/gnd/1078006318>,
-        <https://d-nb.info/gnd/300034172>,
-        <https://d-nb.info/gnd/300062559>,
-        <https://d-nb.info/gnd/300077769>,
-        <https://d-nb.info/gnd/300156944>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177408894> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/82144782941942425458> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300034172> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062559> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213419989> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/236980133> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176605857> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1078006318> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156944> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300077769> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/das-herz-am-rhein-hill-p>,
-        <https://performance.musiconn.de/work/fest-ouvertuere-lassen-eduard>,
-        <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-vorspiel-humperdinck-engelbert>,
-        <https://performance.musiconn.de/work/lieder-op-41-wiegenlied-strauss-richard>,
-        <https://performance.musiconn.de/work/peer-gynt-suite-nr-2-op-55-solveigs-sang-grieg-edvard>,
         <https://performance.musiconn.de/work/schwaebische-rhapsodie-kaempfert-max>,
         <https://performance.musiconn.de/work/skommt-ein-vogel-geflogen-ochs-siegfried>,
-        <https://performance.musiconn.de/work/variacii-na-temu-rokoko-tschaikowski-peter-i>,
         <https://performance.musiconn.de/work/zug-der-gnomen-blon-franz-von>,
-        <https://performance.musiconn.de/work/zug-der-sieben-zwerge-aus-schneewittchen-diewitz-a>,
-        <https://viaf.org/viaf/176605857>,
-        <https://viaf.org/viaf/177408894>,
-        <https://viaf.org/viaf/213419989>,
-        <https://viaf.org/viaf/236980133>,
-        <https://viaf.org/viaf/82144782941942425458> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/176605857>,
-        <https://viaf.org/viaf/177408894>,
-        <https://viaf.org/viaf/213419989>,
-        <https://viaf.org/viaf/236980133>,
-        <https://viaf.org/viaf/82144782941942425458> .
+        <https://performance.musiconn.de/work/zug-der-sieben-zwerge-aus-schneewittchen-diewitz-a> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176605857> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177408894> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213419989> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/236980133> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/82144782941942425458> a nfdicore:NFDI_0001010 .
 

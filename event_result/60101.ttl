@@ -1,44 +1,58 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1035518627> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1272265579> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1272269132> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1272270629> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300067755> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300106874> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/leise-nachzubilden-diesen-klang-novalis-auf-schloss-goseck-schloss-goseck-goseck-2002-09-28-22-00> ] .
 
-<https://performance.musiconn.de/event/leise-nachzubilden-diesen-klang-novalis-auf-schloss-goseck-schloss-goseck-goseck-2002-09-28-22-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/leise-nachzubilden-diesen-klang-novalis-auf-schloss-goseck-schloss-goseck-goseck-2002-09-28-22-00> a cto:CTO_0001005 ;
     rdfs:label "Leise nachzubilden diesen Klang - Novalis auf Schloss Goseck, Schloss Goseck (Goseck), 28.9.2002, 22:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/5-mitteldeutsche-heinrich-schuetz-tage-2002-nationalstile-im-17-jahrhundert> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2002-09-28T22:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2002-09-28T22:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1035518627>,
-        <https://d-nb.info/gnd/1272265579>,
-        <https://d-nb.info/gnd/1272269132>,
-        <https://d-nb.info/gnd/1272270629>,
-        <https://d-nb.info/gnd/300067755>,
-        <https://d-nb.info/gnd/300106874> ;
-    cto:itemOf <https://performance.musiconn.de/series/5-mitteldeutsche-heinrich-schuetz-tage-2002-nationalstile-im-17-jahrhundert> ;
-    cto:relatedItem <https://d-nb.info/gnd/1272269132>,
-        <https://d-nb.info/gnd/1272270629>,
-        <https://d-nb.info/gnd/300067755>,
-        <https://d-nb.info/gnd/300106874>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1272265579> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1035518627> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/300452646> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300106874> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1272269132> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200779051> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300067755> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1272270629> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/292946792> ],
         <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-21-heinrich-schuetz-ehrung-1954-2002>,
-        <https://performance.musiconn.de/work/adagios-glasharmonika-kv-356-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/grazioso-glasharmonika-b-dur-reichardt-johann-friedrich>,
-        <https://performance.musiconn.de/work/l-armonica-hasse-johann-adolf>,
-        <https://performance.musiconn.de/work/largo-g-moll-schulz-johann-abraham-peter>,
         <https://performance.musiconn.de/work/musik-zum-drama-quotleonore-prohaskaquot-melodram-arrangiert-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sonate-g-moll-naumann-johann-gottlieb>,
-        <https://viaf.org/viaf/200779051>,
-        <https://viaf.org/viaf/292946792> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1035518627>,
-        <https://viaf.org/viaf/300452646> ;
-    cto:relatedPerson <https://d-nb.info/gnd/1272265579> ;
-    cto:viaf <https://viaf.org/viaf/200779051>,
-        <https://viaf.org/viaf/292946792>,
-        <https://viaf.org/viaf/300452646> .
+        <https://performance.musiconn.de/work/sonate-g-moll-naumann-johann-gottlieb> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/200779051> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/292946792> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/300452646> a nfdicore:NFDI_0001010 .
 

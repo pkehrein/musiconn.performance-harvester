@@ -1,64 +1,92 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300006535> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300007558> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009801> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009976> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010672> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300181574> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300208871> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4297030-1> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7674838-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/65-abendmusik-in-der-stadtkirche-stadtkirche-jena-1931-10-25-20-00> ] .
 
-<https://performance.musiconn.de/event/65-abendmusik-in-der-stadtkirche-stadtkirche-jena-1931-10-25-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/65-abendmusik-in-der-stadtkirche-stadtkirche-jena-1931-10-25-20-00> a cto:CTO_0001005 ;
     rdfs:label "65. Abendmusik in der Stadtkirche, Stadtkirche (Jena), 25.10.1931, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1931-10-25T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1931-10-25T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300006535>,
-        <https://d-nb.info/gnd/300007558>,
-        <https://d-nb.info/gnd/300009801>,
-        <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300010672>,
-        <https://d-nb.info/gnd/300181574>,
-        <https://d-nb.info/gnd/300208871>,
-        <https://d-nb.info/gnd/4297030-1>,
-        <https://d-nb.info/gnd/7674838-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/300006535>,
-        <https://d-nb.info/gnd/300007558>,
-        <https://d-nb.info/gnd/300009801>,
-        <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300010672>,
-        <https://d-nb.info/gnd/300181574>,
-        <https://d-nb.info/gnd/300208871>,
-        <https://d-nb.info/gnd/7674838-8>,
-        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/also-hat-gott-die-welt-geliebt-mein-glaeubiges-herze-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/der-geist-hilft-unser-schwachheit-auf-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/fantasie-und-fuge-orgel-bwv-542-g-moll-fantasie-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/fugen-orgel-bwv-578-g-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/matthaeuspassion-aus-liebe-will-mein-heiland-sterben-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/motetten-op-29-es-ist-das-heil-uns-kommen-her-brahms-johannes>,
-        <https://performance.musiconn.de/work/schlichte-weisen-mariae-wiegenlied-reger-max>,
-        <https://performance.musiconn.de/work/tannhaeuser-und-der-saengerkrieg-auf-wartburg-allmaechtge-jungfrau-wagner-richard>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/177498661>,
-        <https://viaf.org/viaf/179426268>,
-        <https://viaf.org/viaf/180035103>,
-        <https://viaf.org/viaf/182293319>,
-        <https://viaf.org/viaf/183562212>,
-        <https://viaf.org/viaf/194730499>,
-        <https://viaf.org/viaf/210981772> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4297030-1>,
-        <https://viaf.org/viaf/233824553> ;
-    cto:viaf <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/177498661>,
-        <https://viaf.org/viaf/179426268>,
-        <https://viaf.org/viaf/180035103>,
-        <https://viaf.org/viaf/182293319>,
-        <https://viaf.org/viaf/183562212>,
-        <https://viaf.org/viaf/194730499>,
-        <https://viaf.org/viaf/210981772>,
-        <https://viaf.org/viaf/233824553> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4297030-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/233824553> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210981772> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300208871> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174651654> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300006535> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180035103> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194730499> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300181574> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177498661> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7674838-8> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183562212> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179426268> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300007558> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009801> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009976> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182293319> ],
+        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174651654> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177498661> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179426268> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180035103> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182293319> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183562212> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194730499> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210981772> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/233824553> a nfdicore:NFDI_0001010 .
 

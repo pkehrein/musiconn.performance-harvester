@@ -1,50 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026862> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300166206> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300272987> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300398190> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300473974> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4018118-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/erstes-sonntags-konzert-frankfurt-am-main-1934-11-23-20-00> ] .
 
-<https://performance.musiconn.de/event/erstes-sonntags-konzert-frankfurt-am-main-1934-11-23-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/erstes-sonntags-konzert-frankfurt-am-main-1934-11-23-20-00> a cto:CTO_0001005 ;
     rdfs:label "Erstes Sonntags-Konzert, Frankfurt am Main, 23.11.1934, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1934-1935> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1934-11-23T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1934-11-23T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026862>,
-        <https://d-nb.info/gnd/300166206>,
-        <https://d-nb.info/gnd/300272987>,
-        <https://d-nb.info/gnd/300398190>,
-        <https://d-nb.info/gnd/300473974>,
-        <https://d-nb.info/gnd/4018118-2> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1934-1935> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026862>,
-        <https://d-nb.info/gnd/300166206>,
-        <https://d-nb.info/gnd/300272987>,
-        <https://d-nb.info/gnd/300398190>,
-        <https://d-nb.info/gnd/300473974>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/151720959> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4018118-2> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217003153> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026862> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180880375> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300272987> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185087314> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300166206> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300473974> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300398190> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175038679> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/240062864> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/gedichte-aus-letzte-blaetter-von-hermann-von-gilm-allerseelen-fassung-singstimme-orchester-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-op-15-heimkehr-strauss-richard>,
-        <https://performance.musiconn.de/work/ouvertuere-zum-beherrscher-der-geister-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/per-pieta-non-ricercate-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/requiem-h-3-ingemisco-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-68-c-moll-brahms-johannes>,
-        <https://viaf.org/viaf/175038679>,
-        <https://viaf.org/viaf/180880375>,
-        <https://viaf.org/viaf/185087314>,
-        <https://viaf.org/viaf/217003153>,
-        <https://viaf.org/viaf/240062864> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4018118-2>,
-        <https://viaf.org/viaf/151720959> ;
-    cto:viaf <https://viaf.org/viaf/151720959>,
-        <https://viaf.org/viaf/175038679>,
-        <https://viaf.org/viaf/180880375>,
-        <https://viaf.org/viaf/185087314>,
-        <https://viaf.org/viaf/217003153>,
-        <https://viaf.org/viaf/240062864> .
+        <https://performance.musiconn.de/work/gedichte-aus-letzte-blaetter-von-hermann-von-gilm-allerseelen-fassung-singstimme-orchester-strauss-richard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/151720959> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175038679> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180880375> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185087314> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217003153> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/240062864> a nfdicore:NFDI_0001010 .
 

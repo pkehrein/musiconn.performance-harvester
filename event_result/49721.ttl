@@ -1,49 +1,64 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300155107> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155166> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300582382> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4264112-3> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4399716-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/21-volks-symphonie-konzert-1924-02-20> ] .
 
-<https://performance.musiconn.de/event/21-volks-symphonie-konzert-1924-02-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/21-volks-symphonie-konzert-1924-02-20> a cto:CTO_0001005 ;
     rdfs:label "21. Volks-Symphonie-Konzert, 20.2.1924" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1923-1924-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1924-02-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1924-02-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300155107>,
-        <https://d-nb.info/gnd/300155166>,
-        <https://d-nb.info/gnd/300582382>,
-        <https://d-nb.info/gnd/4264112-3>,
-        <https://d-nb.info/gnd/4399716-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1923-1924-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300155107>,
-        <https://d-nb.info/gnd/300155166>,
-        <https://d-nb.info/gnd/300582382>,
-        <https://d-nb.info/gnd/4264112-3>,
-        <https://d-nb.info/gnd/4399716-8>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/gosudarstvennyj-akademiceskij-malyj-teatr-opery-i-baleta-leningrad> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181002798> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176609137> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4399716-8> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300582382> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4264112-3> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175221377> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264370818> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155107> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155166> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180955382> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-symphonie-konzerte-1908-1933>,
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
-        <https://performance.musiconn.de/work/an-der-schoenen-blauen-donau-strauss-johann>,
-        <https://performance.musiconn.de/work/die-fledermaus-ouvertuere-strauss-johann>,
         <https://performance.musiconn.de/work/fasching-weiner-leo>,
-        <https://performance.musiconn.de/work/fruehlingsstimmen-strauss-johann>,
-        <https://performance.musiconn.de/work/karneval-i-paris-svendsen-johan-severin>,
-        <https://performance.musiconn.de/work/scherzi-orchester-goldmark-karl>,
-        <https://performance.musiconn.de/work/till-eulenspiegels-lustige-streiche-strauss-richard>,
-        <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/176609137>,
-        <https://viaf.org/viaf/180955382>,
-        <https://viaf.org/viaf/181002798>,
-        <https://viaf.org/viaf/264370818> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/gosudarstvennyj-akademiceskij-malyj-teatr-opery-i-baleta-leningrad> ;
-    cto:viaf <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/176609137>,
-        <https://viaf.org/viaf/180955382>,
-        <https://viaf.org/viaf/181002798>,
-        <https://viaf.org/viaf/264370818> .
+        <https://performance.musiconn.de/work/scherzi-orchester-goldmark-karl> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175221377> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176609137> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180955382> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181002798> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264370818> a nfdicore:NFDI_0001010 .
 

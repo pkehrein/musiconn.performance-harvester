@@ -4,19 +4,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vecer-kamernych-proizvedenij-dom-kompozitorov-sankt-petersburg-1962-05-11> ] .
 
-<https://performance.musiconn.de/event/vecer-kamernych-proizvedenij-dom-kompozitorov-sankt-petersburg-1962-05-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vecer-kamernych-proizvedenij-dom-kompozitorov-sankt-petersburg-1962-05-11> a cto:CTO_0001005 ;
     rdfs:label "Večer kamernych proizvedenij, Dom kompozitorov (Sankt Petersburg), 11.5.1962" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1962-05-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1962-05-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1200899989> ;
-    cto:relatedItem <https://performance.musiconn.de/source/leningrader-komponistenhaus-1962-11-mai>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/leningrader-komponistenhaus-1962-11-mai>,
         <https://performance.musiconn.de/work/balladen-violine-salmanov-vadim-n>,
         <https://performance.musiconn.de/work/parabola-basner-veniamin-e>,
         <https://performance.musiconn.de/work/poema-dlja-violonceli-gan-nikolaj-karlovic>,
@@ -24,7 +27,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/romansy-na-stichi-z-prevera-cernov-aleksandr-a>,
         <https://performance.musiconn.de/work/sest-pes-na-kitajskie-narodnye-temy-arapov-boris-a>,
         <https://performance.musiconn.de/work/suiten-klavier-2-cytovic-vladimir-i> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1200899989>,
-        <https://viaf.org/viaf/385157583849933970005> ;
-    cto:viaf <https://viaf.org/viaf/385157583849933970005> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
 

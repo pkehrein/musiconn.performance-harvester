@@ -4,20 +4,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4576980-1> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-gohliser-schloesschen-leipzig-1936-08-27> ] .
 
-<https://performance.musiconn.de/event/konzert-gohliser-schloesschen-leipzig-1936-08-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-gohliser-schloesschen-leipzig-1936-08-27> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Gohliser Schlösschen (Leipzig), 27.8.1936" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1936-08-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1936-08-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4576980-1> ;
-    cto:relatedItem <https://performance.musiconn.de/source/motettenbuch-1936> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4576980-1>,
-        <https://viaf.org/viaf/247384797> ;
-    cto:viaf <https://viaf.org/viaf/247384797> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/247384797> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4576980-1> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/motettenbuch-1936> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/247384797> a nfdicore:NFDI_0001010 .
 

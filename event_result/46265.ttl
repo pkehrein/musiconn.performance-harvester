@@ -1,37 +1,46 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015593> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108966> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4530311-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-populaeres-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1910-01-28-20-30> ] .
 
-<https://performance.musiconn.de/event/6-populaeres-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1910-01-28-20-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-populaeres-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1910-01-28-20-30> a cto:CTO_0001005 ;
     rdfs:label "6. Populäres Symphonie-Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 28.1.1910, 20:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1909-1910-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1910-01-28T20:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1910-01-28T20:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300108966>,
-        <https://d-nb.info/gnd/4530311-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1909-1910-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300108966>,
-        <https://d-nb.info/gnd/4530311-3>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214739085> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108966> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181828440> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015593> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4530311-3> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181865933> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-symphonie-konzerte-1908-1933>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-kv-466-d-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-d-dur-2-und-3-satz-haydn-joseph>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-3-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-82-87-nr-83-g-moll-haydn-joseph>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/181865933>,
-        <https://viaf.org/viaf/214739085> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/181865933>,
-        <https://viaf.org/viaf/214739085> .
+        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-d-dur-2-und-3-satz-haydn-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181828440> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181865933> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214739085> a nfdicore:NFDI_0001010 .
 

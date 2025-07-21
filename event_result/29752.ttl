@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300109083> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146493> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300252714> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/oesterreich-liechtenstein-schweiz-italien-1986-teatro-verdi-pordenone-1986-11-18-18-00> ] .
 
-<https://performance.musiconn.de/event/oesterreich-liechtenstein-schweiz-italien-1986-teatro-verdi-pordenone-1986-11-18-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/oesterreich-liechtenstein-schweiz-italien-1986-teatro-verdi-pordenone-1986-11-18-18-00> a cto:CTO_0001005 ;
     rdfs:label "Österreich / Liechtenstein / Schweiz / Italien 1986, Teatro Verdi (Pordenone), 18.11.1986, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1986-1987> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-11-18T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-11-18T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300109083>,
-        <https://d-nb.info/gnd/300146493>,
-        <https://d-nb.info/gnd/300252714> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1986-1987> ;
-    cto:relatedItem <https://d-nb.info/gnd/300109083>,
-        <https://d-nb.info/gnd/300146493>,
-        <https://d-nb.info/gnd/300252714>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-klarinette-orchester-kv-622-a-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-h-moll-borodin-aleksandr-porfirevic>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-120-d-moll-schumann-robert>,
-        <https://viaf.org/viaf/191498119>,
-        <https://viaf.org/viaf/202938719>,
-        <https://viaf.org/viaf/211714744> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/teatro-verdi-pordenone> ;
-    cto:viaf <https://viaf.org/viaf/191498119>,
-        <https://viaf.org/viaf/202938719>,
-        <https://viaf.org/viaf/211714744> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/teatro-verdi-pordenone> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191498119> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146493> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211714744> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300252714> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202938719> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109083> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/191498119> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202938719> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211714744> a nfdicore:NFDI_0001010 .
 

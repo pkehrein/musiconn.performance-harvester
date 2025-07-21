@@ -1,47 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300011504> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029209> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156332> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300169728> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300562241> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1901-11-22-19-30> ] .
 
-<https://performance.musiconn.de/event/3-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1901-11-22-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1901-11-22-19-30> a cto:CTO_0001005 ;
     rdfs:label "3. Philharmonisches Konzert, Convent-Garten (Hamburg) / Großer Saal, 22.11.1901, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1901-1902-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1901-11-22T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1901-11-22T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300011504>,
-        <https://d-nb.info/gnd/300029209>,
-        <https://d-nb.info/gnd/300156332>,
-        <https://d-nb.info/gnd/300169728>,
-        <https://d-nb.info/gnd/300562241> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1901-1902-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300011504>,
-        <https://d-nb.info/gnd/300029209>,
-        <https://d-nb.info/gnd/300156332>,
-        <https://d-nb.info/gnd/300169728>,
-        <https://d-nb.info/gnd/300562241>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/convent-garten-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300562241> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219160905> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011504> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194744589> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184487026> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177407019> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029209> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300169728> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177396404> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156332> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1890-1924>,
-        <https://performance.musiconn.de/work/aus-italien-strauss-richard>,
-        <https://performance.musiconn.de/work/eine-faust-ouvertuere-wagner-richard>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-1-op-26-g-moll-bruch-max>,
-        <https://performance.musiconn.de/work/ouvertueren-bwv-1068-d-dur-air-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/romanzen-violine-klavier-c-dur-joachim-joseph>,
-        <https://performance.musiconn.de/work/ungarische-taenze-auswahl-fassung-violine-brahms-johannes>,
-        <https://viaf.org/viaf/177396404>,
-        <https://viaf.org/viaf/177407019>,
-        <https://viaf.org/viaf/184487026>,
-        <https://viaf.org/viaf/194744589>,
-        <https://viaf.org/viaf/219160905> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/convent-garten-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/177396404>,
-        <https://viaf.org/viaf/177407019>,
-        <https://viaf.org/viaf/184487026>,
-        <https://viaf.org/viaf/194744589>,
-        <https://viaf.org/viaf/219160905> .
+        <https://performance.musiconn.de/work/ungarische-taenze-auswahl-fassung-violine-brahms-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177396404> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177407019> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184487026> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194744589> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219160905> a nfdicore:NFDI_0001010 .
 

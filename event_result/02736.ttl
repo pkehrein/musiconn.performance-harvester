@@ -1,43 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1060517841> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1068781734> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101554> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30031003X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-museums-concert-grosser-konzertsaal-frankfurt-a-m-1866-11-23-18-30> ] .
 
-<https://performance.musiconn.de/event/4-museums-concert-grosser-konzertsaal-frankfurt-a-m-1866-11-23-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-museums-concert-grosser-konzertsaal-frankfurt-a-m-1866-11-23-18-30> a cto:CTO_0001005 ;
     rdfs:label "4. Museums-Concert, Großer Konzertsaal (Frankfurt a. M.), 23.11.1866, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1866-1867> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1866-11-23T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1866-11-23T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1060517841>,
-        <https://d-nb.info/gnd/1068781734>,
-        <https://d-nb.info/gnd/300101554>,
-        <https://d-nb.info/gnd/30031003X> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1866-1867> ;
-    cto:relatedItem <https://d-nb.info/gnd/1060517841>,
-        <https://d-nb.info/gnd/1068781734>,
-        <https://d-nb.info/gnd/300101554>,
-        <https://d-nb.info/gnd/30031003X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30031003X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1068781734> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1060517841> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177840977> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101554> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176824130> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/308229490> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183086450> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/abendlied-mwv-k-86-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/andante-und-scherzo-capriccioso-violine-orchester-op-16-david-ferdinand>,
         <https://performance.musiconn.de/work/der-freischuetz-arie-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/l-hotellerie-portugaise-ouvertuere-cherubini-luigi>,
-        <https://performance.musiconn.de/work/lieder-op-67-in-der-fremde-taubert-wilhelm>,
-        <https://performance.musiconn.de/work/sinfonien-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/176824130>,
-        <https://viaf.org/viaf/177840977>,
-        <https://viaf.org/viaf/183086450>,
-        <https://viaf.org/viaf/308229490> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/176824130>,
-        <https://viaf.org/viaf/177840977>,
-        <https://viaf.org/viaf/183086450>,
-        <https://viaf.org/viaf/308229490> .
+        <https://performance.musiconn.de/work/sinfonien-beethoven-ludwig-van> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176824130> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177840977> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183086450> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/308229490> a nfdicore:NFDI_0001010 .
 

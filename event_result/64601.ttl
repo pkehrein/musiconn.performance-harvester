@@ -1,34 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300245491> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300370504> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/em-wien-11-88-konzerthaus-wien-mozartsaal-1988-11-06-19-30> ] .
 
-<https://performance.musiconn.de/event/em-wien-11-88-konzerthaus-wien-mozartsaal-1988-11-06-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/em-wien-11-88-konzerthaus-wien-mozartsaal-1988-11-06-19-30> a cto:CTO_0001005 ;
     rdfs:label "EM Wien 11/88, Konzerthaus (Wien) / Mozartsaal, 6.11.1988, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-11-06T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-11-06T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300245491>,
-        <https://d-nb.info/gnd/300370504>,
-        <https://d-nb.info/gnd/3008405-2> ;
-    cto:relatedItem <https://d-nb.info/gnd/300245491>,
-        <https://d-nb.info/gnd/300370504>,
-        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/poslanija-pokojnoj-r-v-trusovoj-kurtag-gyoergy>,
-        <https://performance.musiconn.de/work/quasi-una-fantasia-kurtag-gyoergy>,
-        <https://viaf.org/viaf/175225727>,
-        <https://viaf.org/viaf/185092100> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/konzerthaus-wien-mozartsaal> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/175225727>,
-        <https://viaf.org/viaf/185092100> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/konzerthaus-wien-mozartsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300370504> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185092100> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175225727> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300245491> ],
+        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175225727> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185092100> a nfdicore:NFDI_0001010 .
 

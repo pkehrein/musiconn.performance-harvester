@@ -4,24 +4,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4075873-4> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/mascarade-dansee-par-le-roi-le-2-janvier-1656-louvre-paris-1656-01-02> ] .
 
-<https://performance.musiconn.de/event/mascarade-dansee-par-le-roi-le-2-janvier-1656-louvre-paris-1656-01-02> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/mascarade-dansee-par-le-roi-le-2-janvier-1656-louvre-paris-1656-01-02> a cto:CTO_0001005 ;
     rdfs:label "Mascarade dansée par le roi le 2 janvier 1656, Louvre (Paris), 2.1.1656" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1656-01-02" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1656-01-02" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4075873-4> ;
-    cto:relatedItem <https://performance.musiconn.de/source/beauchamps-1735-bd-3-64>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4075873-4> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/150130308> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/beauchamps-1735-bd-3-64>,
         <https://performance.musiconn.de/source/gazette-1656-01-08>,
         <https://performance.musiconn.de/source/hourcade-2002-266>,
         <https://performance.musiconn.de/source/onlinequelle-23>,
         <https://performance.musiconn.de/work/mascarade-dansee-par-le-roi-le-2-janvier-1656> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4075873-4>,
-        <https://viaf.org/viaf/150130308> ;
-    cto:viaf <https://viaf.org/viaf/150130308> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/150130308> a nfdicore:NFDI_0001010 .
 

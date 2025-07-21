@@ -1,32 +1,40 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029969> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109032> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-sonderkonzert-gewerbehaus-dresden-gewerbehaus-saal-1944-02-17> ] .
 
-<https://performance.musiconn.de/event/4-sonderkonzert-gewerbehaus-dresden-gewerbehaus-saal-1944-02-17> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-sonderkonzert-gewerbehaus-dresden-gewerbehaus-saal-1944-02-17> a cto:CTO_0001005 ;
     rdfs:label "4. Sonderkonzert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 17.2.1944" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1943-1944> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1944-02-17" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1944-02-17" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300029969>,
-        <https://d-nb.info/gnd/300109032> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1943-1944> ;
-    cto:relatedItem <https://d-nb.info/gnd/300029969>,
-        <https://d-nb.info/gnd/300109032>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-kv-537-d-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-wab-103-d-moll-bruckner-anton>,
-        <https://viaf.org/viaf/185495735>,
-        <https://viaf.org/viaf/210936154> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/185495735>,
-        <https://viaf.org/viaf/210936154> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185495735> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029969> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210936154> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109032> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185495735> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210936154> a nfdicore:NFDI_0001010 .
 

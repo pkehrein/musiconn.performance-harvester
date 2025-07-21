@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300559615> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300561008> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300570341> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300572360> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/mediziner-musizieren-klinik-fuer-kinder-und-jugendmedizin-jena-saal-1952-12-11-20-00> ] .
 
-<https://performance.musiconn.de/event/mediziner-musizieren-klinik-fuer-kinder-und-jugendmedizin-jena-saal-1952-12-11-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/mediziner-musizieren-klinik-fuer-kinder-und-jugendmedizin-jena-saal-1952-12-11-20-00> a cto:CTO_0001005 ;
     rdfs:label "Mediziner musizieren, Klinik für Kinder- und Jugendmedizin Jena. Saal, 11.12.1952, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1952-12-11T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1952-12-11T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300559615>,
-        <https://d-nb.info/gnd/300561008>,
-        <https://d-nb.info/gnd/300570341>,
-        <https://d-nb.info/gnd/300572360> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/300559615>,
-        <https://d-nb.info/gnd/300561008>,
-        <https://d-nb.info/gnd/300570341>,
-        <https://d-nb.info/gnd/300572360>,
-        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/werke-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/werke-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/werke-reger-max>,
-        <https://performance.musiconn.de/work/werke-telemann-georg-philipp>,
-        <https://viaf.org/viaf/182123856>,
-        <https://viaf.org/viaf/186560055>,
-        <https://viaf.org/viaf/191509528>,
-        <https://viaf.org/viaf/196891460> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/klinik-fuer-kinder-und-jugendmedizin-jena-saal> ;
-    cto:viaf <https://viaf.org/viaf/182123856>,
-        <https://viaf.org/viaf/186560055>,
-        <https://viaf.org/viaf/191509528>,
-        <https://viaf.org/viaf/196891460> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/klinik-fuer-kinder-und-jugendmedizin-jena-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191509528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300570341> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186560055> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300572360> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300559615> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196891460> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300561008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182123856> ],
+        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182123856> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186560055> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191509528> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196891460> a nfdicore:NFDI_0001010 .
 

@@ -1,39 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300020732> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300122241> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7574584-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gala-koncert-zvezdnye-golosa-rossii-sankt-petersburger-philharmonie-2002-09-15> ] .
 
-<https://performance.musiconn.de/event/gala-koncert-zvezdnye-golosa-rossii-sankt-petersburger-philharmonie-2002-09-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gala-koncert-zvezdnye-golosa-rossii-sankt-petersburger-philharmonie-2002-09-15> a cto:CTO_0001005 ;
     rdfs:label "Gala-koncert: Zvezdnye golosa Rossii, Sankt-Petersburger Philharmonie, 15.9.2002" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-2002-2003> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2002-09-15" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2002-09-15" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300020732>,
-        <https://d-nb.info/gnd/300122241>,
-        <https://d-nb.info/gnd/5204449-X>,
-        <https://d-nb.info/gnd/7574584-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-2002-2003> ;
-    cto:relatedItem <https://d-nb.info/gnd/300020732>,
-        <https://d-nb.info/gnd/300122241>,
-        <https://d-nb.info/gnd/7574584-7>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7574584-7> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300020732> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174693825> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300122241> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174616234> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178604126> ],
         <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-2002-15-september>,
         <https://performance.musiconn.de/work/adriana-lecouvreur-arie-cilea-francesco>,
         <https://performance.musiconn.de/work/batjuskovskij-vals-orchesterfassung-gavrilin-valerij-a>,
-        <https://performance.musiconn.de/work/carmen-lamour-est-un-oiseau-rebelle-bizet-georges>,
         <https://performance.musiconn.de/work/carskaja-nevesta-arie-rimskij-korsakov-nikolaj>,
         <https://performance.musiconn.de/work/ernani-arie-verdi-giuseppe>,
         <https://performance.musiconn.de/work/evgenij-onegin-arie-tschaikowski-peter-i>,
         <https://performance.musiconn.de/work/faust-arie-gounod-charles>,
         <https://performance.musiconn.de/work/gde-b-ni-byl-ja-dubravin-jakov-i>,
         <https://performance.musiconn.de/work/il-barbiere-di-siviglia-kavatine-rossini-gioachino-1>,
-        <https://performance.musiconn.de/work/il-trittico-gianni-schicchi-o-mio-babbino-caro-puccini-giacomo>,
         <https://performance.musiconn.de/work/il-trovatore-duett-verdi-giuseppe>,
         <https://performance.musiconn.de/work/knjaz-igor-arie-borodin-aleksandr-porfirevic>,
         <https://performance.musiconn.de/work/la-forza-del-destino-arie-verdi-giuseppe>,
@@ -42,7 +56,6 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/lucia-di-lammermoor-arie-donizetti-gaetano>,
         <https://performance.musiconn.de/work/lucia-di-lammermoor-duett-donizetti-gaetano>,
         <https://performance.musiconn.de/work/mefistofele-oper-1875-arie-boito-arrigo>,
-        <https://performance.musiconn.de/work/o-sole-mio-di-capua-eduardo>,
         <https://performance.musiconn.de/work/otello-arie-rossini-gioachino>,
         <https://performance.musiconn.de/work/pagliacci-arie-leoncavallo-ruggiero>,
         <https://performance.musiconn.de/work/pagliacci-prolog-leoncavallo-ruggiero>,
@@ -50,14 +63,14 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/rusalka-arie-dargomyzskij-aleksandr-s>,
         <https://performance.musiconn.de/work/ruslan-i-ljudmila-arie-glinka-michail-ivanovic>,
         <https://performance.musiconn.de/work/samson-et-dalila-arie-der-dalila-saint-saens-camille>,
-        <https://performance.musiconn.de/work/semiramide-arie-rossini-gioachino>,
-        <https://viaf.org/viaf/174616234>,
-        <https://viaf.org/viaf/174693825>,
-        <https://viaf.org/viaf/178604126> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/174616234>,
-        <https://viaf.org/viaf/174693825>,
-        <https://viaf.org/viaf/178604126> .
+        <https://performance.musiconn.de/work/semiramide-arie-rossini-gioachino> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174616234> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174693825> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178604126> a nfdicore:NFDI_0001010 .
 

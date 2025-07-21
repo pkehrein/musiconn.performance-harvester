@@ -1,59 +1,76 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300005679> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300006063> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300022468> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300121032> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30047931X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300785860> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4508319-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-des-kreuzchors-zu-dresden-stadtkirche-rosswein-1933-12-10-19-45> ] .
 
-<https://performance.musiconn.de/event/konzert-des-kreuzchors-zu-dresden-stadtkirche-rosswein-1933-12-10-19-45> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-des-kreuzchors-zu-dresden-stadtkirche-rosswein-1933-12-10-19-45> a cto:CTO_0001005 ;
     rdfs:label "Konzert des Kreuzchors zu Dresden, Stadtkirche (Roßwein), 10.12.1933, 19:45" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1933-34> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1933-12-10T19:45:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1933-12-10T19:45:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300005679>,
-        <https://d-nb.info/gnd/300006063>,
-        <https://d-nb.info/gnd/300022468>,
-        <https://d-nb.info/gnd/300121032>,
-        <https://d-nb.info/gnd/30047931X>,
-        <https://d-nb.info/gnd/300785860>,
-        <https://d-nb.info/gnd/4508319-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1933-34> ;
-    cto:relatedItem <https://d-nb.info/gnd/300005679>,
-        <https://d-nb.info/gnd/300006063>,
-        <https://d-nb.info/gnd/300022468>,
-        <https://d-nb.info/gnd/300121032>,
-        <https://d-nb.info/gnd/30047931X>,
-        <https://d-nb.info/gnd/300785860>,
-        <https://d-nb.info/gnd/4508319-8>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/stadtkirche-rosswein> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300022468> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180233160> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300006063> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192572409> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4508319-8> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196910116> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300785860> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175381795> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176395680> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30047931X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300121032> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300005679> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
         <https://performance.musiconn.de/work/altboehmische-weihnachtslieder-riedel-carl>,
-        <https://performance.musiconn.de/work/choraele-von-verschiedener-art-kommst-du-nun-jesu-vom-himmel-herunter-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/christkindleins-wiegenlied-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/der-bergfuerst-ist-erschienen-anonym>,
-        <https://performance.musiconn.de/work/der-tag-der-ist-so-freudenreich-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/eine-feste-burg-ist-unser-gott-eccard-johannes>,
-        <https://performance.musiconn.de/work/in-dulci-jubilo-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/in-dulci-jubilo-thiel-carl>,
-        <https://performance.musiconn.de/work/joseph-lieber-joseph-mein>,
-        <https://performance.musiconn.de/work/musae-sioniae-theil-1-nu-frewt-euch-lieben-christen-gmein-praetorius-michael>,
         <https://performance.musiconn.de/work/nun-freut-euch-lieben-christen-gemein-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/nun-sei-willkommen-herre-christ>,
-        <https://performance.musiconn.de/work/praeludium-und-fuge-orgel-c-dur-boehm-georg>,
-        <https://performance.musiconn.de/work/wie-schoen-singt-uns-der-engel-schar-freundt-cornelius>,
-        <https://viaf.org/viaf/175381795>,
-        <https://viaf.org/viaf/176395680>,
-        <https://viaf.org/viaf/180233160>,
-        <https://viaf.org/viaf/192572409>,
-        <https://viaf.org/viaf/196910116> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/stadtkirche-rosswein> ;
-    cto:viaf <https://viaf.org/viaf/175381795>,
-        <https://viaf.org/viaf/176395680>,
-        <https://viaf.org/viaf/180233160>,
-        <https://viaf.org/viaf/192572409>,
-        <https://viaf.org/viaf/196910116> .
+        <https://performance.musiconn.de/work/nun-sei-willkommen-herre-christ> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175381795> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176395680> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180233160> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192572409> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196910116> a nfdicore:NFDI_0001010 .
 

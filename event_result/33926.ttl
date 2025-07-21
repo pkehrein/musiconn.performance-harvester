@@ -4,19 +4,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4075873-4> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/le-ballet-de-la-raillerie-louvre-paris-1659-02-19> ] .
 
-<https://performance.musiconn.de/event/le-ballet-de-la-raillerie-louvre-paris-1659-02-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/le-ballet-de-la-raillerie-louvre-paris-1659-02-19> a cto:CTO_0001005 ;
     rdfs:label "Le Ballet de la Raillerie, Louvre (Paris), 19.2.1659" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1659-02-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1659-02-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4075873-4> ;
-    cto:relatedItem <https://performance.musiconn.de/source/beauchamps-1735-bd-3-66-67>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4075873-4> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/150130308> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/beauchamps-1735-bd-3-66-67>,
         <https://performance.musiconn.de/source/gazette-1659-02-22>,
         <https://performance.musiconn.de/source/hourcade-2002-270>,
         <https://performance.musiconn.de/source/loret-1659-02-15-1659-02-22-1659-03-01>,
@@ -25,7 +28,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/source/onlinequelle-41>,
         <https://performance.musiconn.de/source/textquelle-digitalisat-19>,
         <https://performance.musiconn.de/work/le-ballet-de-la-raillerie-lully-jean-baptiste> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4075873-4>,
-        <https://viaf.org/viaf/150130308> ;
-    cto:viaf <https://viaf.org/viaf/150130308> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/150130308> a nfdicore:NFDI_0001010 .
 

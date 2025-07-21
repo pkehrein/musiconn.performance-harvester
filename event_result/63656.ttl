@@ -1,36 +1,48 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/2009759-1> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300139179> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7840942-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ensemble-modern-4-81-marienberg-europa-haus-bad-marienberg-westerwald-1981-04-13> ] .
 
-<https://performance.musiconn.de/event/ensemble-modern-4-81-marienberg-europa-haus-bad-marienberg-westerwald-1981-04-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ensemble-modern-4-81-marienberg-europa-haus-bad-marienberg-westerwald-1981-04-13> a cto:CTO_0001005 ;
     rdfs:label "Ensemble Modern 4/81 Marienberg, Europa-Haus (Bad Marienberg (Westerwald)), 13.4.1981" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1981-04-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1981-04-13" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/2009759-1>,
-        <https://d-nb.info/gnd/300139179>,
-        <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/7840942-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/300139179>,
-        <https://d-nb.info/gnd/7840942-1>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/2009759-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7840942-1> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/300447140> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205762209> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300139179> ],
         <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/aus-den-sieben-tagen-auswahl-stockhausen-karlheinz>,
-        <https://performance.musiconn.de/work/kammersinfonie-nr-1-schoenberg-arnold>,
-        <https://performance.musiconn.de/work/tempi-concertati-berio-luciano>,
-        <https://viaf.org/viaf/205762209>,
-        <https://viaf.org/viaf/300447140> ;
-    cto:relatedLocation <https://d-nb.info/gnd/2009759-1> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/205762209>,
-        <https://viaf.org/viaf/300447140> .
+        <https://performance.musiconn.de/work/aus-den-sieben-tagen-auswahl-stockhausen-karlheinz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205762209> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/300447140> a nfdicore:NFDI_0001010 .
 

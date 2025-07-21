@@ -1,31 +1,38 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30059643X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1963-09-06> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1963-09-06> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1963-09-06> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 6.9.1963" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1963-09-06" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1963-09-06" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30059643X>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/30059643X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195819815> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30059643X> ],
         <https://performance.musiconn.de/source/motettenbuch-1963>,
-        <https://performance.musiconn.de/work/choraele-aus-der-sammlung-joh-seb-bachs-vierstimmige-choralgesaenge-jesu-meine-freude-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/spruchmotetten-aus-dem-psalter-herr-deine-guete-reicht-so-weit-der-himmel-ist-driessler-johannes>,
         <https://performance.musiconn.de/work/spruchmotetten-aus-dem-psalter-seid-getrost-und-unverzagt-driessler-johannes>,
-        <https://performance.musiconn.de/work/spruchmotetten-aus-dem-psalter-wohl-dem-dem-die-uebertretungen-vergeben-sind-driessler-johannes>,
-        <https://viaf.org/viaf/195819815> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/195819815> .
+        <https://performance.musiconn.de/work/spruchmotetten-aus-dem-psalter-wohl-dem-dem-die-uebertretungen-vergeben-sind-driessler-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195819815> a nfdicore:NFDI_0001010 .
 

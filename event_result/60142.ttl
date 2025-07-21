@@ -1,63 +1,87 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1049813529> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1177742772> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1189683032> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1247048683> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011148> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300193963> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300351658> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300364970> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4035206-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/musikalische-auffuehrung-zum-geburtstagsfeste-des-herrn-cantor-und-musikdirector-dr-moritz-hauptmann-leipzig-1862-10-13-18-30> ] .
 
-<https://performance.musiconn.de/event/musikalische-auffuehrung-zum-geburtstagsfeste-des-herrn-cantor-und-musikdirector-dr-moritz-hauptmann-leipzig-1862-10-13-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/musikalische-auffuehrung-zum-geburtstagsfeste-des-herrn-cantor-und-musikdirector-dr-moritz-hauptmann-leipzig-1862-10-13-18-30> a cto:CTO_0001005 ;
     rdfs:label "Musikalische Aufführung zum Geburtstagsfeste des Herrn Cantor und Musikdirector Dr. Moritz Hauptmann, Leipzig, 13.10.1862, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzert> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1862-10-13T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1862-10-13T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1049813529>,
-        <https://d-nb.info/gnd/1177742772>,
-        <https://d-nb.info/gnd/1189683032>,
-        <https://d-nb.info/gnd/1247048683>,
-        <https://d-nb.info/gnd/300011148>,
-        <https://d-nb.info/gnd/300193963>,
-        <https://d-nb.info/gnd/300351658>,
-        <https://d-nb.info/gnd/300364970>,
-        <https://d-nb.info/gnd/4035206-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzert> ;
-    cto:relatedItem <https://d-nb.info/gnd/1049813529>,
-        <https://d-nb.info/gnd/1177742772>,
-        <https://d-nb.info/gnd/1189683032>,
-        <https://d-nb.info/gnd/1247048683>,
-        <https://d-nb.info/gnd/300011148>,
-        <https://d-nb.info/gnd/300193963>,
-        <https://d-nb.info/gnd/300351658>,
-        <https://d-nb.info/gnd/300364970>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154310911> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4035206-7> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197652848> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300351658> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219169426> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011148> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/9491163939434801160007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1177742772> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1049813529> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215930491> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1189683032> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/307323221> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300193963> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210935680> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1247048683> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300364970> ],
         <https://performance.musiconn.de/source/dwights-journal-of-music-a-paper-of-art-and-literature>,
         <https://performance.musiconn.de/source/konservatorium-der-musik-hochschule-fuer-musik-konzertprogramme-1843-1948>,
         <https://performance.musiconn.de/source/signale-fuer-die-musikalische-welt>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-33-gott-mein-heil-hauptmann-moritz>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-33-trauungslied-hauptmann-moritz>,
-        <https://performance.musiconn.de/work/lieder-maennerchor-op-49-du-herr-der-alles-wohl-gemacht-hauptmann-moritz>,
-        <https://performance.musiconn.de/work/lieder-op-49-wunderbar-ist-mir-geschehn-hauptmann-moritz>,
-        <https://performance.musiconn.de/work/lieder-singst-klar-kl-op-103-sei-still-mein-herz-spohr-louis>,
-        <https://performance.musiconn.de/work/lieder-singst-klar-kl-op-103-zwiegesang-spohr-louis>,
-        <https://performance.musiconn.de/work/praeludien-und-fugen-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/sonaten-und-partiten-violine-bwv-1001-1006-partita-nr-2-chaconne-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-op-5-nr-1-hauptmann-moritz>,
-        <https://viaf.org/viaf/197652848>,
-        <https://viaf.org/viaf/210935680>,
-        <https://viaf.org/viaf/215930491>,
-        <https://viaf.org/viaf/219169426>,
-        <https://viaf.org/viaf/307323221>,
-        <https://viaf.org/viaf/9491163939434801160007> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4035206-7>,
-        <https://viaf.org/viaf/154310911> ;
-    cto:viaf <https://viaf.org/viaf/154310911>,
-        <https://viaf.org/viaf/197652848>,
-        <https://viaf.org/viaf/210935680>,
-        <https://viaf.org/viaf/215930491>,
-        <https://viaf.org/viaf/219169426>,
-        <https://viaf.org/viaf/307323221>,
-        <https://viaf.org/viaf/9491163939434801160007> .
+        <https://performance.musiconn.de/work/praeludien-und-fugen-mendelssohn-bartholdy-felix> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154310911> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197652848> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210935680> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215930491> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219169426> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/307323221> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/9491163939434801160007> a nfdicore:NFDI_0001010 .
 

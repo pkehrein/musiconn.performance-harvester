@@ -1,56 +1,74 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1124857524> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027257> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300035756> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300083858> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300094930> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300224591> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1999-01-16-19-30> ] .
 
-<https://performance.musiconn.de/event/5-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1999-01-16-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1999-01-16-19-30> a cto:CTO_0001005 ;
     rdfs:label "5. Außerordentliches Konzert, Kulturpalast (Dresden) / Festsaal, 16.1.1999, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1998-1999> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1999-01-16T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1999-01-16T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1124857524>,
-        <https://d-nb.info/gnd/300027257>,
-        <https://d-nb.info/gnd/300035756>,
-        <https://d-nb.info/gnd/300083858>,
-        <https://d-nb.info/gnd/300094930>,
-        <https://d-nb.info/gnd/300224591> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1998-1999> ;
-    cto:relatedItem <https://d-nb.info/gnd/1124857524>,
-        <https://d-nb.info/gnd/300027257>,
-        <https://d-nb.info/gnd/300035756>,
-        <https://d-nb.info/gnd/300083858>,
-        <https://d-nb.info/gnd/300094930>,
-        <https://d-nb.info/gnd/300224591>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300094930> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300224591> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186687666> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180340600> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027257> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213967533> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1124857524> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180007658> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181446529> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300083858> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179829504> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300035756> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/avant-de-mourir-boulanger-georges>,
-        <https://performance.musiconn.de/work/gajane-tanec-s-sabljami-chacaturjan-aram>,
-        <https://performance.musiconn.de/work/galantai-tancok-kodaly-zoltan>,
-        <https://performance.musiconn.de/work/hary-janos-suite-kodaly-zoltan>,
         <https://performance.musiconn.de/work/hejre-kata-csampai-ivo>,
         <https://performance.musiconn.de/work/kallei-kettoes-kodaly-zoltan>,
         <https://performance.musiconn.de/work/lalouette-dinicu-grigoras>,
         <https://performance.musiconn.de/work/memory-of-bihari-csampai-ivo>,
-        <https://performance.musiconn.de/work/russische-volksweise-deux-guitares>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-nr-2-liszt-franz>,
-        <https://performance.musiconn.de/work/ungarische-taenze-nr-5-brahms-johannes>,
-        <https://viaf.org/viaf/179829504>,
-        <https://viaf.org/viaf/180007658>,
-        <https://viaf.org/viaf/180340600>,
-        <https://viaf.org/viaf/181446529>,
-        <https://viaf.org/viaf/186687666>,
-        <https://viaf.org/viaf/213967533> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/179829504>,
-        <https://viaf.org/viaf/180007658>,
-        <https://viaf.org/viaf/180340600>,
-        <https://viaf.org/viaf/181446529>,
-        <https://viaf.org/viaf/186687666>,
-        <https://viaf.org/viaf/213967533> .
+        <https://performance.musiconn.de/work/russische-volksweise-deux-guitares> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179829504> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180007658> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180340600> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181446529> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186687666> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213967533> a nfdicore:NFDI_0001010 .
 

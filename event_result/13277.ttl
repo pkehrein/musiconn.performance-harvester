@@ -1,59 +1,84 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1080647465> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027125> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102666> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300129297> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170114> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300303610> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300537646> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/abokonzert-2-zweites-gewandhaus-leipzig-1895-10-17> ] .
 
-<https://performance.musiconn.de/event/abokonzert-2-zweites-gewandhaus-leipzig-1895-10-17> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/abokonzert-2-zweites-gewandhaus-leipzig-1895-10-17> a cto:CTO_0001005 ;
     rdfs:label "Abokonzert 2, Zweites Gewandhaus (Leipzig), 17.10.1895" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1895-10-17" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1895-10-17" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1080647465>,
-        <https://d-nb.info/gnd/300027125>,
-        <https://d-nb.info/gnd/300102666>,
-        <https://d-nb.info/gnd/300129297>,
-        <https://d-nb.info/gnd/300170114>,
-        <https://d-nb.info/gnd/300303610>,
-        <https://d-nb.info/gnd/300537646>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/1080647465>,
-        <https://d-nb.info/gnd/300027125>,
-        <https://d-nb.info/gnd/300102666>,
-        <https://d-nb.info/gnd/300129297>,
-        <https://d-nb.info/gnd/300170114>,
-        <https://d-nb.info/gnd/300303610>,
-        <https://d-nb.info/gnd/300537646>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175005823> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177010812> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213979788> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102666> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178619765> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027125> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300129297> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300303610> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218087567> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/35145193291570460276> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1080647465> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177824714> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300537646> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170114> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
-        <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-vorspiel-wagner-richard>,
-        <https://performance.musiconn.de/work/donna-diana-ouvertuere-reznicek-emil-nikolaus-von>,
-        <https://performance.musiconn.de/work/etueden-kl-op-107-en-route-godard-benjamin>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-4-op-70-d-moll-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/morgenstaendchen-arrangiert-schubert-franz>,
-        <https://performance.musiconn.de/work/nocturnes-klavier-k-4b-8-c-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/sinfonien-mwv-n-16-a-dur-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/tragische-ouverture-brahms-johannes>,
-        <https://viaf.org/viaf/175005823>,
-        <https://viaf.org/viaf/177010812>,
-        <https://viaf.org/viaf/177824714>,
-        <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/213979788>,
-        <https://viaf.org/viaf/218087567>,
-        <https://viaf.org/viaf/35145193291570460276> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/175005823>,
-        <https://viaf.org/viaf/177010812>,
-        <https://viaf.org/viaf/177824714>,
-        <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/213979788>,
-        <https://viaf.org/viaf/218087567>,
-        <https://viaf.org/viaf/264523828>,
-        <https://viaf.org/viaf/35145193291570460276> .
+        <https://performance.musiconn.de/work/morgenstaendchen-arrangiert-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175005823> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177010812> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177824714> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178619765> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213979788> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218087567> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/35145193291570460276> a nfdicore:NFDI_0001010 .
 

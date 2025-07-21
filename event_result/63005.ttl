@@ -1,30 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1160910626> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/119314061> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/le-donne-vendicate-teatro-valle-rom-1763-00-00> ] .
 
-<https://performance.musiconn.de/event/le-donne-vendicate-teatro-valle-rom-1763-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/le-donne-vendicate-teatro-valle-rom-1763-00-00> a cto:CTO_0001005 ;
     rdfs:label "Le donne vendicate, Teatro Valle (Rom), 1763" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1763-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1763-00-00" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/119314061> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/teatro-valle-rom> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1160910626> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178842794> ],
+        <https://performance.musiconn.de/source/le-donne-vendicate-intermezzi-per-musica-a-quattro-voci-da-rappresentarsi-nel-teatro-alla-valle-nel-carnevale-dellanno-1763-dedicati-a-sua-eccellenza-la-sig-principessa-d-cecilia-mahony-giustiniani-principessa-di-bassano-duchessa-di-corbara-ecc> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1160910626>,
-        <https://d-nb.info/gnd/119314061> ;
-    cto:relatedItem <https://d-nb.info/gnd/1160910626>,
-        <https://performance.musiconn.de/source/le-donne-vendicate-intermezzi-per-musica-a-quattro-voci-da-rappresentarsi-nel-teatro-alla-valle-nel-carnevale-dellanno-1763-dedicati-a-sua-eccellenza-la-sig-principessa-d-cecilia-mahony-giustiniani-principessa-di-bassano-duchessa-di-corbara-ecc>,
-        <https://performance.musiconn.de/work/le-donne-vendicate-piccinni-niccolo>,
-        <https://viaf.org/viaf/178842794> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/teatro-valle-rom> ;
-    cto:relatedPerson <https://d-nb.info/gnd/119314061>,
-        <https://performance.musiconn.de/person/palombini-agostino>,
-        <https://viaf.org/viaf/17319986> ;
-    cto:viaf <https://viaf.org/viaf/17319986>,
-        <https://viaf.org/viaf/178842794> .
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/17319986> ],
+        <https://performance.musiconn.de/person/palombini-agostino> .
+
+<https://viaf.org/viaf/17319986> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178842794> a nfdicore:NFDI_0001010 .
 

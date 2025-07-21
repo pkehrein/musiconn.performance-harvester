@@ -1,50 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1054565813> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300018649> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300139136> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300177011> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300257546> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300467516> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/liederabend-semperoper-dresden-1988-10-02-22-00> ] .
 
-<https://performance.musiconn.de/event/liederabend-semperoper-dresden-1988-10-02-22-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/liederabend-semperoper-dresden-1988-10-02-22-00> a cto:CTO_0001005 ;
     rdfs:label "Liederabend, Semperoper (Dresden), 2.10.1988, 22:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/2-dresdner-tage-der-zeitgenoessischen-musik-1988> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-10-02T22:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-10-02T22:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1054565813>,
-        <https://d-nb.info/gnd/300018649>,
-        <https://d-nb.info/gnd/300139136>,
-        <https://d-nb.info/gnd/300177011>,
-        <https://d-nb.info/gnd/300257546>,
-        <https://d-nb.info/gnd/300467516> ;
-    cto:itemOf <https://performance.musiconn.de/series/2-dresdner-tage-der-zeitgenoessischen-musik-1988> ;
-    cto:relatedItem <https://d-nb.info/gnd/300018649>,
-        <https://d-nb.info/gnd/300139136>,
-        <https://d-nb.info/gnd/300177011>,
-        <https://d-nb.info/gnd/300257546>,
-        <https://d-nb.info/gnd/300467516>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309654002> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1054565813> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184318127> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174793064> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185286593> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181853501> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300467516> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300018649> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300177011> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176261511> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300139136> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300257546> ],
         <https://performance.musiconn.de/source/dresdner-zentrum-fuer-zeitgenoessische-musik-programmhefte-1987-1988>,
-        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-45-dresdner-tage-fuer-zeitgenoessische-musik-1988-1989-1991>,
-        <https://performance.musiconn.de/work/gedichte-aus-das-buch-der-haengenden-gaerten-von-stefan-george-schoenberg-arnold>,
-        <https://performance.musiconn.de/work/gesaenge-nach-maurice-maeterlinck-zemlinsky-alexander-von>,
-        <https://performance.musiconn.de/work/lieder-aus-der-siebente-ring-von-stefan-george-webern-anton>,
-        <https://performance.musiconn.de/work/lieder-nach-gedichten-von-stefan-george-webern-anton>,
-        <https://performance.musiconn.de/work/lieder-op-2-berg-alban>,
-        <https://viaf.org/viaf/174793064>,
-        <https://viaf.org/viaf/176261511>,
-        <https://viaf.org/viaf/181853501>,
-        <https://viaf.org/viaf/184318127>,
-        <https://viaf.org/viaf/185286593> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1054565813>,
-        <https://viaf.org/viaf/309654002> ;
-    cto:viaf <https://viaf.org/viaf/174793064>,
-        <https://viaf.org/viaf/176261511>,
-        <https://viaf.org/viaf/181853501>,
-        <https://viaf.org/viaf/184318127>,
-        <https://viaf.org/viaf/185286593>,
-        <https://viaf.org/viaf/309654002> .
+        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-45-dresdner-tage-fuer-zeitgenoessische-musik-1988-1989-1991> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174793064> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176261511> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181853501> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184318127> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185286593> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309654002> a nfdicore:NFDI_0001010 .
 

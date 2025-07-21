@@ -1,42 +1,59 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300345577> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300480210> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4358972-8> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7703758-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zagrosek-7-88-3-hindemith-schloss-ploen-1988-07-17-1> ] .
 
-<https://performance.musiconn.de/event/zagrosek-7-88-3-hindemith-schloss-ploen-1988-07-17-1> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zagrosek-7-88-3-hindemith-schloss-ploen-1988-07-17-1> a cto:CTO_0001005 ;
     rdfs:label "Zagrosek 7/88/3 Hindemith, Schloss Plön, 17.7.1988" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-07-17" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-07-17" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300345577>,
-        <https://d-nb.info/gnd/300480210>,
-        <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/4358972-8>,
-        <https://d-nb.info/gnd/7703758-3> ;
-    cto:relatedItem <https://d-nb.info/gnd/300345577>,
-        <https://d-nb.info/gnd/300480210>,
-        <https://d-nb.info/gnd/7703758-3>,
-        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/kammermusik-op-361-hindemith-paul>,
-        <https://performance.musiconn.de/work/kammermusik-op-362-hindemith-paul>,
-        <https://performance.musiconn.de/work/mouvement-vor-der-erstarrung-lachenmann-helmut-1>,
-        <https://viaf.org/viaf/183897684>,
-        <https://viaf.org/viaf/184119922>,
-        <https://viaf.org/viaf/213978003> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4358972-8>,
-        <https://viaf.org/viaf/156107220> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/156107220>,
-        <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/183897684>,
-        <https://viaf.org/viaf/184119922>,
-        <https://viaf.org/viaf/213978003> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/156107220> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4358972-8> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184119922> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183897684> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300345577> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7703758-3> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300480210> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213978003> ],
+        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/156107220> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183897684> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184119922> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213978003> a nfdicore:NFDI_0001010 .
 

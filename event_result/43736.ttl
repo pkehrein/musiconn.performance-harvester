@@ -4,20 +4,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4224871-1> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/benefizkonzert-zu-gunsten-der-frauenkirche-in-dresden-sankt-stephan-mainz-1995-10-02-16-30> ] .
 
-<https://performance.musiconn.de/event/benefizkonzert-zu-gunsten-der-frauenkirche-in-dresden-sankt-stephan-mainz-1995-10-02-16-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/benefizkonzert-zu-gunsten-der-frauenkirche-in-dresden-sankt-stephan-mainz-1995-10-02-16-30> a cto:CTO_0001005 ;
     rdfs:label "Benefizkonzert zu Gunsten der Frauenkirche in Dresden, Sankt Stephan (Mainz), 2.10.1995, 16:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1995-10-02T16:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1995-10-02T16:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4224871-1>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        <https://performance.musiconn.de/corporation/kiedricher-chorbuben> ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/138750934> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4224871-1> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/konzert-brachte-geld-fuer-frauenkirche>,
         <https://performance.musiconn.de/source/programm-konzert-2-oktober-1995>,
         <https://performance.musiconn.de/source/vielfaeltiges-gedenken-im-geiste-chagalls-dresdner-bank-feierte-ihr-75jaehriges-jubilaeum-mit-benefizkonzert-in-st-stephan>,
@@ -35,11 +44,9 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/omar-rabbi-elosor-rosenblatt-josef>,
         <https://performance.musiconn.de/work/sisu-wsimchu-fassung-weintraub-hirsch>,
         <https://performance.musiconn.de/work/wschomru-nowakowsky-david> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4224871-1>,
-        <https://viaf.org/viaf/138750934> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://performance.musiconn.de/corporation/kiedricher-chorbuben>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/138750934>,
-        <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/138750934> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

@@ -1,43 +1,59 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/123132984X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111118> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141750> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156367> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300872917> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-sinfoniekonzert-grossherzogliches-hoftheater-schwerin-schwerin-1977-10-04-20-00> ] .
 
-<https://performance.musiconn.de/event/2-sinfoniekonzert-grossherzogliches-hoftheater-schwerin-schwerin-1977-10-04-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-sinfoniekonzert-grossherzogliches-hoftheater-schwerin-schwerin-1977-10-04-20-00> a cto:CTO_0001005 ;
     rdfs:label "2. Sinfoniekonzert, Großherzogliches Hoftheater Schwerin (Schwerin), 4.10.1977, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1977-10-04T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1977-10-04T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/123132984X>,
-        <https://d-nb.info/gnd/300111118>,
-        <https://d-nb.info/gnd/300141750>,
-        <https://d-nb.info/gnd/300156367>,
-        <https://d-nb.info/gnd/300872917> ;
-    cto:relatedItem <https://d-nb.info/gnd/300111118>,
-        <https://d-nb.info/gnd/300141750>,
-        <https://d-nb.info/gnd/300156367>,
-        <https://d-nb.info/gnd/300872917>,
-        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-13-programmhefte-1975-1977>,
-        <https://performance.musiconn.de/work/burlesken-klavier-orchester-av-85-d-moll-strauss-richard>,
-        <https://performance.musiconn.de/work/konzert-fuer-klavier-blaeser-und-schlagzeug-hartmann-karl-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-d-485-b-dur-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-kv-425-c-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/183071265>,
-        <https://viaf.org/viaf/196880892>,
-        <https://viaf.org/viaf/198525332>,
-        <https://viaf.org/viaf/207933479> ;
-    cto:relatedLocation <https://d-nb.info/gnd/123132984X>,
-        <https://viaf.org/viaf/234996716> ;
-    cto:viaf <https://viaf.org/viaf/183071265>,
-        <https://viaf.org/viaf/196880892>,
-        <https://viaf.org/viaf/198525332>,
-        <https://viaf.org/viaf/207933479>,
-        <https://viaf.org/viaf/234996716> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/123132984X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/234996716> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183071265> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198525332> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207933479> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141750> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196880892> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156367> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300872917> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111118> ],
+        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-13-programmhefte-1975-1977> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/183071265> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196880892> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198525332> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207933479> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/234996716> a nfdicore:NFDI_0001010 .
 

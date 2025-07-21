@@ -1,37 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/2052833-4> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300096488> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4005056-7> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4275165-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/undine-bayreuth-2010-06-26> ] .
 
-<https://performance.musiconn.de/event/undine-bayreuth-2010-06-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/undine-bayreuth-2010-06-26> a cto:CTO_0001005 ;
     rdfs:label "Undine, Bayreuth, 26.6.2010" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/theater-hof-spielzeit-2009-10> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2010-06-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2010-06-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/2052833-4>,
-        <https://d-nb.info/gnd/300096488>,
-        <https://d-nb.info/gnd/4005056-7>,
-        <https://d-nb.info/gnd/4275165-2> ;
-    cto:itemOf <https://performance.musiconn.de/series/theater-hof-spielzeit-2009-10> ;
-    cto:relatedItem <https://d-nb.info/gnd/300096488>,
-        <https://performance.musiconn.de/source/besetzungszettel-theater-hof-lortzing-undine-gastspiel>,
-        <https://performance.musiconn.de/work/undine-lortzing-albert>,
-        <https://viaf.org/viaf/268661343> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4005056-7>,
-        <https://viaf.org/viaf/132490826> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/2052833-4>,
-        <https://d-nb.info/gnd/4275165-2>,
-        <https://viaf.org/viaf/143342202>,
-        <https://viaf.org/viaf/155125730> ;
-    cto:viaf <https://viaf.org/viaf/132490826>,
-        <https://viaf.org/viaf/143342202>,
-        <https://viaf.org/viaf/155125730>,
-        <https://viaf.org/viaf/268661343> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4275165-2> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/143342202> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/155125730> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/2052833-4> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4005056-7> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132490826> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/268661343> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300096488> ],
+        <https://performance.musiconn.de/source/besetzungszettel-theater-hof-lortzing-undine-gastspiel> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132490826> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/143342202> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/155125730> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/268661343> a nfdicore:NFDI_0001010 .
 

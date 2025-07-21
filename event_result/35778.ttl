@@ -1,51 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/103546974X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1103040480> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108133> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111037> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300400276> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4264112-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-ausserordentliches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1968-10-25-19-30> ] .
 
-<https://performance.musiconn.de/event/5-ausserordentliches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1968-10-25-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-ausserordentliches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1968-10-25-19-30> a cto:CTO_0001005 ;
     rdfs:label "5. Außerordentliches Konzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 25.10.1968, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1968-10-25T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1968-10-25T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/103546974X>,
-        <https://d-nb.info/gnd/1103040480>,
-        <https://d-nb.info/gnd/300108133>,
-        <https://d-nb.info/gnd/300111037>,
-        <https://d-nb.info/gnd/300400276>,
-        <https://d-nb.info/gnd/4264112-3> ;
-    cto:relatedItem <https://d-nb.info/gnd/103546974X>,
-        <https://d-nb.info/gnd/1103040480>,
-        <https://d-nb.info/gnd/300108133>,
-        <https://d-nb.info/gnd/300111037>,
-        <https://d-nb.info/gnd/300400276>,
-        <https://d-nb.info/gnd/4264112-3>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108133> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176839623> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175221377> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1103040480> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/245383548> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300400276> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4264112-3> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180063206> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111037> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219934692> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184502218> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/103546974X> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/als-mir-dein-lied-erklang-strauss-richard>,
-        <https://performance.musiconn.de/work/chanson-et-romance-egk-werner>,
-        <https://performance.musiconn.de/work/exsultate-jubilate-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/lieder-nach-gedichten-von-clemens-brentano-amor-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-nach-gedichten-von-clemens-brentano-ich-wollt-ein-straeusslein-binden-strauss-richard>,
-        <https://performance.musiconn.de/work/sinfonien-kv-201-a-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/till-eulenspiegels-lustige-streiche-strauss-richard>,
-        <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/176839623>,
-        <https://viaf.org/viaf/180063206>,
-        <https://viaf.org/viaf/184502218>,
-        <https://viaf.org/viaf/219934692>,
-        <https://viaf.org/viaf/245383548> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/176839623>,
-        <https://viaf.org/viaf/180063206>,
-        <https://viaf.org/viaf/184502218>,
-        <https://viaf.org/viaf/219934692>,
-        <https://viaf.org/viaf/245383548> .
+        <https://performance.musiconn.de/work/als-mir-dein-lied-erklang-strauss-richard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175221377> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176839623> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180063206> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184502218> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219934692> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/245383548> a nfdicore:NFDI_0001010 .
 

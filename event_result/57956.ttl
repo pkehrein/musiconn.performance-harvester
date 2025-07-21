@@ -4,22 +4,25 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1084609428> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-gebaeude-der-koeniglichen-oper-berlin-berlin-1828-09-19> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-gebaeude-der-koeniglichen-oper-berlin-berlin-1828-09-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-gebaeude-der-koeniglichen-oper-berlin-berlin-1828-09-19> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Gebäude der Königlichen Oper Berlin (Berlin), 19.9.1828" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1828-09-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1828-09-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1084609428> ;
-    cto:relatedItem <https://performance.musiconn.de/source/allgemeine-preussische-staatszeitung-1991828-251>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1084609428> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/533149662172407020006> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/allgemeine-preussische-staatszeitung-1991828-251>,
         <https://performance.musiconn.de/work/der-kapellmeister-aus-venedig-oder-der-schein-truegt-fassung-mozart-wolfgang-amadeus-fioravanti-valentino-dittersdorf-karl-ditters-von-suessmayr-franz-xaver-winter-peter-von-monsigny-pierre-alexandre-mueller-wenzel-weigl-joseph-dalayrac-nicolas-wranitzky-paul-haibel-johann-jakob-paer-ferdinando-martin-y-soler-vicente-della-maria-pierre-antoine-dominique-kauer-ferdinand-verschiedene>,
         <https://performance.musiconn.de/work/le-colporteur-ou-lenfant-du-bucheron-fassung-1828-onslow-georges> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1084609428>,
-        <https://viaf.org/viaf/533149662172407020006> ;
-    cto:viaf <https://viaf.org/viaf/533149662172407020006> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/533149662172407020006> a nfdicore:NFDI_0001010 .
 

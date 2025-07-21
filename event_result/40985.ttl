@@ -1,48 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300023464> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300059957> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300166249> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300166486> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1958-12-10-19-30> ] .
 
-<https://performance.musiconn.de/event/sonderkonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1958-12-10-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1958-12-10-19-30> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 10.12.1958, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1958-1959> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1958-12-10T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1958-12-10T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300023464>,
-        <https://d-nb.info/gnd/300059957>,
-        <https://d-nb.info/gnd/300166249>,
-        <https://d-nb.info/gnd/300166486> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1958-1959> ;
-    cto:relatedItem <https://d-nb.info/gnd/300023464>,
-        <https://d-nb.info/gnd/300059957>,
-        <https://d-nb.info/gnd/300166249>,
-        <https://d-nb.info/gnd/300166486>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208685508> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174266921> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300166486> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185140889> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183070691> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300166249> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300023464> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300059957> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/evgenij-onegin-nicht-traeumen-lieb-ich-tschaikowski-peter-i>,
         <https://performance.musiconn.de/work/evgenij-onegin-o-bang-ist-mir-ums-herz-tschaikowski-peter-i>,
         <https://performance.musiconn.de/work/evgenij-onegin-vorspiel-tschaikowski-peter-i>,
         <https://performance.musiconn.de/work/fuerst-igor-nicht-rast-noch-ruhe-borodin-aleksandr-porfirevic>,
-        <https://performance.musiconn.de/work/knjaz-igor-poloveckaja-pljaska-s-chorom-borodin-aleksandr-porfirevic>,
         <https://performance.musiconn.de/work/la-traviata-er-ist-es-dessen-wonnig-bild-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/la-traviata-preludio-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/rigoletto-caro-nome-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/ruslan-i-ljudmila-uvertjura-glinka-michail-ivanovic>,
         <https://performance.musiconn.de/work/samson-et-dalila-arie-der-dalila-saint-saens-camille>,
-        <https://performance.musiconn.de/work/zizn-za-carja-nein-nicht-das-sind-meine-traenen-glinka-michail-ivanovic>,
-        <https://viaf.org/viaf/174266921>,
-        <https://viaf.org/viaf/183070691>,
-        <https://viaf.org/viaf/185140889>,
-        <https://viaf.org/viaf/208685508> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/174266921>,
-        <https://viaf.org/viaf/183070691>,
-        <https://viaf.org/viaf/185140889>,
-        <https://viaf.org/viaf/208685508> .
+        <https://performance.musiconn.de/work/zizn-za-carja-nein-nicht-das-sind-meine-traenen-glinka-michail-ivanovic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174266921> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183070691> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185140889> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208685508> a nfdicore:NFDI_0001010 .
 

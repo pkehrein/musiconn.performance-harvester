@@ -1,49 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300108508> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108966> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110731> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111118> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111150> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4018859-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/mozartfeier-fulda-1956-03-20> ] .
 
-<https://performance.musiconn.de/event/mozartfeier-fulda-1956-03-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/mozartfeier-fulda-1956-03-20> a cto:CTO_0001005 ;
     rdfs:label "Mozartfeier, Fulda, 20.3.1956" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1955-1956> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1956-03-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1956-03-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300108508>,
-        <https://d-nb.info/gnd/300108966>,
-        <https://d-nb.info/gnd/300110731>,
-        <https://d-nb.info/gnd/300111118>,
-        <https://d-nb.info/gnd/300111150>,
-        <https://d-nb.info/gnd/4018859-0> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1955-1956> ;
-    cto:relatedItem <https://d-nb.info/gnd/300108508>,
-        <https://d-nb.info/gnd/300108966>,
-        <https://d-nb.info/gnd/300110731>,
-        <https://d-nb.info/gnd/300111118>,
-        <https://d-nb.info/gnd/300111150>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/eine-kleine-nachtmusik-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-kv-466-d-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/serenaden-orchester-kv-239-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-kv-425-c-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-kv-550-g-moll-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/177348732>,
-        <https://viaf.org/viaf/183071265>,
-        <https://viaf.org/viaf/193655042>,
-        <https://viaf.org/viaf/214739085>,
-        <https://viaf.org/viaf/302327909> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4018859-0>,
-        <https://viaf.org/viaf/409144783167843628508> ;
-    cto:viaf <https://viaf.org/viaf/177348732>,
-        <https://viaf.org/viaf/183071265>,
-        <https://viaf.org/viaf/193655042>,
-        <https://viaf.org/viaf/214739085>,
-        <https://viaf.org/viaf/302327909>,
-        <https://viaf.org/viaf/409144783167843628508> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4018859-0> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/409144783167843628508> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193655042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183071265> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/302327909> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214739085> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111150> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108966> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110731> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111118> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177348732> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108508> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177348732> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183071265> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193655042> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214739085> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/302327909> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/409144783167843628508> a nfdicore:NFDI_0001010 .
 

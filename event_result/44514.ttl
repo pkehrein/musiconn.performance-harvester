@@ -1,37 +1,48 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015453> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033842> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300049706> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zkr-ak-simfoniceskij-orkestr-filarmonii-21-nov-1987-sankt-petersburger-philharmonie-1987-11-21> ] .
 
-<https://performance.musiconn.de/event/zkr-ak-simfoniceskij-orkestr-filarmonii-21-nov-1987-sankt-petersburger-philharmonie-1987-11-21> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zkr-ak-simfoniceskij-orkestr-filarmonii-21-nov-1987-sankt-petersburger-philharmonie-1987-11-21> a cto:CTO_0001005 ;
     rdfs:label "ZKR ak. simfoničeskij orkestr filarmonii (21. Nov. 1987), Sankt-Petersburger Philharmonie, 21.11.1987" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1987-88> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-11-21" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-11-21" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015453>,
-        <https://d-nb.info/gnd/300033842>,
-        <https://d-nb.info/gnd/300049706>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1987-88> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015453>,
-        <https://d-nb.info/gnd/300033842>,
-        <https://d-nb.info/gnd/300049706>,
-        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1987-21-november>,
-        <https://performance.musiconn.de/work/cockaigne-elgar-edward>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-15-c-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-cs-27-h-moll-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/175810435>,
-        <https://viaf.org/viaf/205758894> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/175810435>,
-        <https://viaf.org/viaf/205758894> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015453> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205758894> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033842> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300049706> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175810435> ],
+        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1987-21-november> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175810435> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205758894> a nfdicore:NFDI_0001010 .
 

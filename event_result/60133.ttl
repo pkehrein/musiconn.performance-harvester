@@ -1,56 +1,74 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1033386502> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1192399773> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1259486354> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/126551397X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1266116222> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1266251774> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30010183X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300151829> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/haupt-pruefung-im-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1862-03-23-18-00> ] .
 
-<https://performance.musiconn.de/event/haupt-pruefung-im-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1862-03-23-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/haupt-pruefung-im-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1862-03-23-18-00> a cto:CTO_0001005 ;
     rdfs:label "Haupt-Prüfung im Conservatorium der Musik zu Leipzig, Erstes Gewandhaus (Leipzig), 23.3.1862, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/pruefung> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1862-03-23T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1862-03-23T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1033386502>,
-        <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/1192399773>,
-        <https://d-nb.info/gnd/1259486354>,
-        <https://d-nb.info/gnd/126551397X>,
-        <https://d-nb.info/gnd/1266116222>,
-        <https://d-nb.info/gnd/1266251774>,
-        <https://d-nb.info/gnd/30010183X>,
-        <https://d-nb.info/gnd/300151829> ;
-    cto:itemOf <https://performance.musiconn.de/series/pruefung> ;
-    cto:relatedItem <https://d-nb.info/gnd/1033386502>,
-        <https://d-nb.info/gnd/1192399773>,
-        <https://d-nb.info/gnd/1259486354>,
-        <https://d-nb.info/gnd/126551397X>,
-        <https://d-nb.info/gnd/1266116222>,
-        <https://d-nb.info/gnd/1266251774>,
-        <https://d-nb.info/gnd/30010183X>,
-        <https://d-nb.info/gnd/300151829>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1266251774> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300151829> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1259486354> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/297021588> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199703722> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1033386502> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30010183X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1266116222> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/126551397X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1192399773> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205762601> ],
         <https://performance.musiconn.de/source/konservatorium-der-musik-hochschule-fuer-musik-konzertprogramme-1843-1948>,
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-gegr-1834-von-robert-schumann>,
-        <https://performance.musiconn.de/source/signale-fuer-die-musikalische-welt>,
-        <https://performance.musiconn.de/work/konzert-in-form-einer-gesangszene-spohr-louis>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-mwv-o-11-d-moll-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-3-op-55-cis-moll-allegro-maestoso-ries-ferdinand>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-3-op-60-g-moll-allegro-moderato-moscheles-ignaz>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-69-fis-moll-hiller-ferdinand-von>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-mwv-o-14-e-moll-allegretto-non-troppo-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-mwv-o-14-e-moll-allegro-molto-vivace-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-35-d-moll-allegro-serioso-david-ferdinand>,
-        <https://viaf.org/viaf/199703722>,
-        <https://viaf.org/viaf/205762601>,
-        <https://viaf.org/viaf/297021588> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/199703722>,
-        <https://viaf.org/viaf/205762601>,
-        <https://viaf.org/viaf/297021588>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/source/signale-fuer-die-musikalische-welt> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/199703722> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205762601> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/297021588> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

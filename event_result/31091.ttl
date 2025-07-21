@@ -1,41 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300034067> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300107552> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110286> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/philharmonic-flair-schloss-albrechtsberg-dresden-1998-08-28-19-00> ] .
 
-<https://performance.musiconn.de/event/philharmonic-flair-schloss-albrechtsberg-dresden-1998-08-28-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/philharmonic-flair-schloss-albrechtsberg-dresden-1998-08-28-19-00> a cto:CTO_0001005 ;
     rdfs:label "Philharmonic Flair, Schloss Albrechtsberg (Dresden), 28.8.1998, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1998-1999> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1998-08-28T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1998-08-28T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300034067>,
-        <https://d-nb.info/gnd/300107552>,
-        <https://d-nb.info/gnd/300110286>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1998-1999> ;
-    cto:relatedItem <https://d-nb.info/gnd/300034067>,
-        <https://d-nb.info/gnd/300107552>,
-        <https://d-nb.info/gnd/300110286>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300107552> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185944593> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110286> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188264428> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184685673> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300034067> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/childrens-hour-suite-grandjany-marcel>,
-        <https://performance.musiconn.de/work/divertimenti-violine-2-viola-bassinstrument-kv-136-d-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/flowers-in-the-garden-of-matsuyama-promnitz-rainer>,
-        <https://performance.musiconn.de/work/quintette-klarinette-violine-2-viola-violoncello-kv-581-a-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/stuecke-klavier-cs-175-180-sentimentalnyj-vals-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/184685673>,
-        <https://viaf.org/viaf/185944593>,
-        <https://viaf.org/viaf/188264428> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/184685673>,
-        <https://viaf.org/viaf/185944593>,
-        <https://viaf.org/viaf/188264428>,
-        <https://viaf.org/viaf/237386709> .
+        <https://performance.musiconn.de/work/flowers-in-the-garden-of-matsuyama-promnitz-rainer> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/184685673> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185944593> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188264428> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
 

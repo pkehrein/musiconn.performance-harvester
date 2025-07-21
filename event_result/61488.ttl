@@ -1,67 +1,95 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1051889901> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1071580698> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026226> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300093977> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300094981> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300095163> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145780> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300934351> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ii-concert-erstes-gewandhaus-leipzig-1888-11-21> ] .
 
-<https://performance.musiconn.de/event/ii-concert-erstes-gewandhaus-leipzig-1888-11-21> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ii-concert-erstes-gewandhaus-leipzig-1888-11-21> a cto:CTO_0001005 ;
     rdfs:label "II. Concert, Erstes Gewandhaus (Leipzig), 21.11.1888" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1888-11-21" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1888-11-21" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1051889901>,
-        <https://d-nb.info/gnd/1071580698>,
-        <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/300026226>,
-        <https://d-nb.info/gnd/300093977>,
-        <https://d-nb.info/gnd/300094981>,
-        <https://d-nb.info/gnd/300095163>,
-        <https://d-nb.info/gnd/300145780>,
-        <https://d-nb.info/gnd/300934351> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
-    cto:relatedItem <https://d-nb.info/gnd/1051889901>,
-        <https://d-nb.info/gnd/1071580698>,
-        <https://d-nb.info/gnd/300026226>,
-        <https://d-nb.info/gnd/300093977>,
-        <https://d-nb.info/gnd/300094981>,
-        <https://d-nb.info/gnd/300095163>,
-        <https://d-nb.info/gnd/300145780>,
-        <https://d-nb.info/gnd/300934351>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145780> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1071580698> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183909517> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184284728> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300094981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1051889901> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093977> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191496981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174585019> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315965587> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300095163> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179851477> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300934351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178013813> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178033129> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026226> ],
         <https://performance.musiconn.de/source/liszt-verein-zum-zehnjaehrigen-jubilaeum-bericht-ueber-die-10jaehrige-thaetigkeit-des-vereins-1885-1895-leipzig-1895>,
-        <https://performance.musiconn.de/work/du-bist-wie-eine-blume-liszt-franz>,
         <https://performance.musiconn.de/work/grandes-etudes-de-paganini-zwei-etueden-liszt-franz>,
-        <https://performance.musiconn.de/work/legendes-liszt-franz>,
-        <https://performance.musiconn.de/work/lieder-op-85-allerseelen-lassen-eduard>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-63-junge-lieder-1-brahms-johannes>,
-        <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-die-stille-schumann-robert>,
-        <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-mondnacht-schumann-robert>,
         <https://performance.musiconn.de/work/sonetto-di-petrarca-liszt-franz>,
-        <https://performance.musiconn.de/work/trost-lassen-eduard>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-nr-12-liszt-franz>,
-        <https://performance.musiconn.de/work/variationen-ueber-weinen-klagen-sorgen-zagen-liszt-franz>,
-        <https://viaf.org/viaf/174585019>,
-        <https://viaf.org/viaf/178013813>,
-        <https://viaf.org/viaf/178033129>,
-        <https://viaf.org/viaf/179851477>,
-        <https://viaf.org/viaf/183909517>,
-        <https://viaf.org/viaf/184284728>,
-        <https://viaf.org/viaf/191496981>,
-        <https://viaf.org/viaf/315965587> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/174585019>,
-        <https://viaf.org/viaf/178013813>,
-        <https://viaf.org/viaf/178033129>,
-        <https://viaf.org/viaf/179851477>,
-        <https://viaf.org/viaf/183909517>,
-        <https://viaf.org/viaf/184284728>,
-        <https://viaf.org/viaf/191496981>,
-        <https://viaf.org/viaf/315965587>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/work/trost-lassen-eduard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174585019> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178013813> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178033129> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179851477> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183909517> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184284728> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191496981> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315965587> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

@@ -4,24 +4,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/concert-erstes-gewandhaus-leipzig-1868-03-19> ] .
 
-<https://performance.musiconn.de/event/concert-erstes-gewandhaus-leipzig-1868-03-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/concert-erstes-gewandhaus-leipzig-1868-03-19> a cto:CTO_0001005 ;
     rdfs:label "Concert, Erstes Gewandhaus (Leipzig), 19.3.1868" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1868-03-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1868-03-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170723691> ;
-    cto:relatedItem <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/work/konzerte-vl-orch-bezekirskij-vasilij-v>,
         <https://performance.musiconn.de/work/ouvertuere-zu-otto-von-der-schuetz-op-12-rudorff-ernst>,
         <https://performance.musiconn.de/work/suiten-orch-op-75-esser-heinrich> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/8198154198335520230002> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

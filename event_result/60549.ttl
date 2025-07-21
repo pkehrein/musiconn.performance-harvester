@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300048114> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109083> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300148321> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-montags-konzert-alte-oper-frankfurt-a-main-grosser-saal-2005-04-18-20-00> ] .
 
-<https://performance.musiconn.de/event/8-montags-konzert-alte-oper-frankfurt-a-main-grosser-saal-2005-04-18-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-montags-konzert-alte-oper-frankfurt-a-main-grosser-saal-2005-04-18-20-00> a cto:CTO_0001005 ;
     rdfs:label "8. Montags-Konzert, Alte Oper (Frankfurt a. Main). Großer Saal, 18.4.2005, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2004-2005> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2005-04-18T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2005-04-18T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300048114>,
-        <https://d-nb.info/gnd/300109083>,
-        <https://d-nb.info/gnd/300148321> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2004-2005> ;
-    cto:relatedItem <https://d-nb.info/gnd/300048114>,
-        <https://d-nb.info/gnd/300109083>,
-        <https://d-nb.info/gnd/300148321>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/konzerte-klarinette-orchester-kv-622-a-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/lemminkaeinen-suite-tuonelan-joutsen-sibelius-jean>,
-        <https://performance.musiconn.de/work/sinfonien-b-163-g-dur-dvorak-antonin>,
-        <https://viaf.org/viaf/196878160>,
-        <https://viaf.org/viaf/202938719>,
-        <https://viaf.org/viaf/231992113> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/196878160>,
-        <https://viaf.org/viaf/202938719>,
-        <https://viaf.org/viaf/231992113> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/231992113> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202938719> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196878160> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109083> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300148321> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300048114> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/196878160> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202938719> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/231992113> a nfdicore:NFDI_0001010 .
 

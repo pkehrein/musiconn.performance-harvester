@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300005369> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300008724> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009100> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300591527> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4754677-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/morgenkonzert-volkshaus-jena-1935-05-05-11-00> ] .
 
-<https://performance.musiconn.de/event/morgenkonzert-volkshaus-jena-1935-05-05-11-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/morgenkonzert-volkshaus-jena-1935-05-05-11-00> a cto:CTO_0001005 ;
     rdfs:label "Morgenkonzert, Volkshaus (Jena), 5.5.1935, 11:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vi-jenaer-musikfest-1935> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1935-05-05T11:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1935-05-05T11:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300005369>,
-        <https://d-nb.info/gnd/300008724>,
-        <https://d-nb.info/gnd/300009100>,
-        <https://d-nb.info/gnd/300591527>,
-        <https://d-nb.info/gnd/4754677-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/vi-jenaer-musikfest-1935> ;
-    cto:relatedItem <https://d-nb.info/gnd/300005369>,
-        <https://d-nb.info/gnd/300008724>,
-        <https://d-nb.info/gnd/300009100>,
-        <https://d-nb.info/gnd/300591527>,
-        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/die-brandenburgischen-konzerte-nr-1-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/gott-soll-allein-mein-herze-haben-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/konzerte-cembalo-streichorchester-h-484-d-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/weichet-nur-betruebte-schatten-bach-johann-sebastian>,
-        <https://viaf.org/viaf/177018370>,
-        <https://viaf.org/viaf/193652118>,
-        <https://viaf.org/viaf/204595526>,
-        <https://viaf.org/viaf/22146635448141981029> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4754677-3>,
-        <https://viaf.org/viaf/238142706> ;
-    cto:viaf <https://viaf.org/viaf/177018370>,
-        <https://viaf.org/viaf/193652118>,
-        <https://viaf.org/viaf/204595526>,
-        <https://viaf.org/viaf/22146635448141981029>,
-        <https://viaf.org/viaf/238142706> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/238142706> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4754677-3> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/22146635448141981029> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300008724> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300591527> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009100> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204595526> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177018370> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300005369> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193652118> ],
+        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177018370> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193652118> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204595526> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/22146635448141981029> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/238142706> a nfdicore:NFDI_0001010 .
 

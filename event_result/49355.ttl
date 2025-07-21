@@ -1,46 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1222200015> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300020627> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026897> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300048149> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300116853> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-volks-concert-hamburger-volksoper-hamburg-1901-03-05-20-00> ] .
 
-<https://performance.musiconn.de/event/4-volks-concert-hamburger-volksoper-hamburg-1901-03-05-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-volks-concert-hamburger-volksoper-hamburg-1901-03-05-20-00> a cto:CTO_0001005 ;
     rdfs:label "4. Volks-Concert, Hamburger Volksoper (Hamburg), 5.3.1901, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1900-1901-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1901-03-05T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1901-03-05T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1222200015>,
-        <https://d-nb.info/gnd/300020627>,
-        <https://d-nb.info/gnd/300026897>,
-        <https://d-nb.info/gnd/300048149>,
-        <https://d-nb.info/gnd/300116853> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1900-1901-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300020627>,
-        <https://d-nb.info/gnd/300026897>,
-        <https://d-nb.info/gnd/300048149>,
-        <https://d-nb.info/gnd/300116853>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/117159032786501182559> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1222200015> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300116853> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174588220> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194731012> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204580378> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026897> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300048149> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300020627> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194733340> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
         <https://performance.musiconn.de/work/adagios-violine-orchester-ries-franz>,
-        <https://performance.musiconn.de/work/boleros-violine-orchester-hagot-m>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-ms-21-d-dur-paganini-niccolo>,
-        <https://performance.musiconn.de/work/l-arlesienne-suite-1-bizet-georges>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-98-e-moll-brahms-johannes>,
-        <https://performance.musiconn.de/work/slovanske-rhapsodie-dvorak-antonin>,
-        <https://viaf.org/viaf/174588220>,
-        <https://viaf.org/viaf/194731012>,
-        <https://viaf.org/viaf/194733340>,
-        <https://viaf.org/viaf/204580378> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1222200015>,
-        <https://viaf.org/viaf/117159032786501182559> ;
-    cto:viaf <https://viaf.org/viaf/117159032786501182559>,
-        <https://viaf.org/viaf/174588220>,
-        <https://viaf.org/viaf/194731012>,
-        <https://viaf.org/viaf/194733340>,
-        <https://viaf.org/viaf/204580378> .
+        <https://performance.musiconn.de/work/boleros-violine-orchester-hagot-m> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/117159032786501182559> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174588220> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194731012> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194733340> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204580378> a nfdicore:NFDI_0001010 .
 

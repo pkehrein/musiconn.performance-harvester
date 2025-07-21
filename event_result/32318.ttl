@@ -1,49 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300011547> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011555> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011563> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300289723> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300720424> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kammerkonzert-schloss-albrechtsberg-dresden-2009-03-28-19-00> ] .
 
-<https://performance.musiconn.de/event/kammerkonzert-schloss-albrechtsberg-dresden-2009-03-28-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kammerkonzert-schloss-albrechtsberg-dresden-2009-03-28-19-00> a cto:CTO_0001005 ;
     rdfs:label "Kammerkonzert, Schloss Albrechtsberg (Dresden), 28.3.2009, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2008-2009> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2009-03-28T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2009-03-28T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300011547>,
-        <https://d-nb.info/gnd/300011555>,
-        <https://d-nb.info/gnd/300011563>,
-        <https://d-nb.info/gnd/300289723>,
-        <https://d-nb.info/gnd/300720424>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2008-2009> ;
-    cto:relatedItem <https://d-nb.info/gnd/300011547>,
-        <https://d-nb.info/gnd/300011555>,
-        <https://d-nb.info/gnd/300011563>,
-        <https://d-nb.info/gnd/300289723>,
-        <https://d-nb.info/gnd/300720424>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/sonata-fantazija-chacaturjan-aram>,
-        <https://performance.musiconn.de/work/sonaten-violoncello-crumb-george>,
-        <https://performance.musiconn.de/work/suiten-violoncello-bwv-1007-1012-nr-1-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/suiten-violoncello-bwv-1007-1012-nr-2-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/suiten-violoncello-bwv-1007-1012-nr-3-bach-johann-sebastian>,
-        <https://viaf.org/viaf/209860738>,
-        <https://viaf.org/viaf/211727341>,
-        <https://viaf.org/viaf/215928706>,
-        <https://viaf.org/viaf/217002846>,
-        <https://viaf.org/viaf/218079940> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/209860738>,
-        <https://viaf.org/viaf/211727341>,
-        <https://viaf.org/viaf/215928706>,
-        <https://viaf.org/viaf/217002846>,
-        <https://viaf.org/viaf/218079940>,
-        <https://viaf.org/viaf/237386709> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217002846> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300720424> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218079940> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300289723> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011555> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011563> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209860738> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215928706> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211727341> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011547> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/209860738> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211727341> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215928706> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217002846> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218079940> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
 

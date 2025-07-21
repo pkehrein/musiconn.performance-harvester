@@ -1,29 +1,36 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1235344827> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4044660-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-paris-1988-04-27> ] .
 
-<https://performance.musiconn.de/event/konzert-paris-1988-04-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-paris-1988-04-27> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Paris, 27.4.1988" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-04-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-04-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1235344827>,
-        <https://d-nb.info/gnd/4044660-8> ;
-    cto:relatedItem <https://d-nb.info/gnd/1235344827>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/265224327> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4044660-8> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1235344827> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8306162422758732460008> ],
         <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1988-dresden-saechsische-landesbibliothek-dresden-1989>,
-        <https://performance.musiconn.de/work/morgenlied-kobjela-detlef>,
-        <https://performance.musiconn.de/work/vergessen-brauer-dieter>,
-        <https://viaf.org/viaf/8306162422758732460008> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4044660-8>,
-        <https://viaf.org/viaf/265224327> ;
-    cto:viaf <https://viaf.org/viaf/265224327>,
-        <https://viaf.org/viaf/8306162422758732460008> .
+        <https://performance.musiconn.de/work/vergessen-brauer-dieter> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/265224327> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8306162422758732460008> a nfdicore:NFDI_0001010 .
 

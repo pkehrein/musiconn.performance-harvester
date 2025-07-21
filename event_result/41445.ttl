@@ -1,27 +1,32 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145489> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-winterkonzert-a-capella-1925-11-05> ] .
 
-<https://performance.musiconn.de/event/1-winterkonzert-a-capella-1925-11-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-winterkonzert-a-capella-1925-11-05> a cto:CTO_0001005 ;
     rdfs:label "1. Winterkonzert (a capella), 5.11.1925" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1925-1926> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1925-11-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1925-11-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300145489> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1925-1926> ;
-    cto:relatedItem <https://d-nb.info/gnd/300145489>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/lieder-schumann-robert>,
-        <https://viaf.org/viaf/264838981> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/264838981> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145489> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264838981> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/264838981> a nfdicore:NFDI_0001010 .
 

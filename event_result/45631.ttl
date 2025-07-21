@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015186> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300093934> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170114> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300725523> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1915-11-08-20-00> ] .
 
-<https://performance.musiconn.de/event/2-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1915-11-08-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1915-11-08-20-00> a cto:CTO_0001005 ;
     rdfs:label "2. Philharmonisches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 8.11.1915, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1915-1916-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1915-11-08T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1915-11-08T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015186>,
-        <https://d-nb.info/gnd/300093934>,
-        <https://d-nb.info/gnd/300170114>,
-        <https://d-nb.info/gnd/300725523> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1915-1916-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015186>,
-        <https://d-nb.info/gnd/300093934>,
-        <https://d-nb.info/gnd/300170114>,
-        <https://d-nb.info/gnd/300725523>,
-        <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1890-1924>,
-        <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-vorspiel-wagner-richard>,
-        <https://performance.musiconn.de/work/fantasien-chor-klavier-orchester-op-80-c-moll-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-r-456-a-dur-liszt-franz>,
-        <https://performance.musiconn.de/work/sinfonien-op-6-atterberg-kurt-magnus>,
-        <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/181042167>,
-        <https://viaf.org/viaf/198523973>,
-        <https://viaf.org/viaf/207929628> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/181042167>,
-        <https://viaf.org/viaf/198523973>,
-        <https://viaf.org/viaf/207929628> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300725523> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181042167> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015186> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178619765> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207929628> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170114> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093934> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198523973> ],
+        <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1890-1924> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178619765> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181042167> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198523973> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207929628> a nfdicore:NFDI_0001010 .
 

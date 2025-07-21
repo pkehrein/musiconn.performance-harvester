@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4012995-0> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-dresden-1985-02-17> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-dresden-1985-02-17> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-dresden-1985-02-17> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Dresden, 17.2.1985" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1985-02-17" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1985-02-17" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4012995-0> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1985-und-nachtrag-1976-1984-dresden-saechsische-landesbibliothek-dresden-1986>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4012995-0> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/146756224> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1985-und-nachtrag-1976-1984-dresden-saechsische-landesbibliothek-dresden-1986>,
         <https://performance.musiconn.de/work/das-wort-christi-wohne-mit-seinem-ganzen-reichtum-bei-euch-jahrelosung-1985-liebscher-fritz> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4012995-0>,
-        <https://viaf.org/viaf/146756224> ;
-    cto:viaf <https://viaf.org/viaf/146756224> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/146756224> a nfdicore:NFDI_0001010 .
 

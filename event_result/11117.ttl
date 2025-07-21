@@ -1,67 +1,92 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1116036975> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300025874> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109911> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144733> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300154887> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300173865> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300213689> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300279507> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-deutsches-haus-bruenn-1900-05-05-1> ] .
 
-<https://performance.musiconn.de/event/konzert-deutsches-haus-bruenn-1900-05-05-1> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-deutsches-haus-bruenn-1900-05-05-1> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Deutsches Haus (Brünn), 5.5.1900" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1900-05-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1900-05-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1116036975>,
-        <https://d-nb.info/gnd/300025874>,
-        <https://d-nb.info/gnd/300109911>,
-        <https://d-nb.info/gnd/300144733>,
-        <https://d-nb.info/gnd/300154887>,
-        <https://d-nb.info/gnd/300173865>,
-        <https://d-nb.info/gnd/300213689>,
-        <https://d-nb.info/gnd/300279507> ;
-    cto:relatedItem <https://d-nb.info/gnd/300025874>,
-        <https://d-nb.info/gnd/300109911>,
-        <https://d-nb.info/gnd/300144733>,
-        <https://d-nb.info/gnd/300154887>,
-        <https://d-nb.info/gnd/300173865>,
-        <https://d-nb.info/gnd/300213689>,
-        <https://d-nb.info/gnd/300279507>,
-        <https://performance.musiconn.de/work/bei-uns-zhaus-strauss-johann>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1116036975> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/408151172689639210002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179823018> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185469755> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182234604> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300279507> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175375450> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300213689> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109911> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183930508> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144733> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183911740> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300154887> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025874> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186332266> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300173865> ],
         <https://performance.musiconn.de/work/ein-blankes-wort-op-23-kirchl-adolf>,
-        <https://performance.musiconn.de/work/etueden-kl-r-6-waldesrauschen-liszt-franz>,
-        <https://performance.musiconn.de/work/fantasiestuecke-klavier-op-12-des-abends-schumann-robert>,
         <https://performance.musiconn.de/work/gavotte-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/grossmuetterchen-will-tanzen-wetaschek-karl>,
-        <https://performance.musiconn.de/work/le-nozze-di-figaro-ouvertuere-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/legende-wieniawski-henri>,
         <https://performance.musiconn.de/work/leichtsinnige-wanderung-op-22-wagner-hans>,
-        <https://performance.musiconn.de/work/lieder-op-49-wiegenlied-brahms-johannes>,
-        <https://performance.musiconn.de/work/lohengrin-gesegnet-soll-sie-schreiten-wagner-richard>,
         <https://performance.musiconn.de/work/maennerchoere-op-51-geloebnis-kirchl-adolf>,
         <https://performance.musiconn.de/work/morgengesang-im-kriege-op-13-zoellner-heinrich>,
         <https://performance.musiconn.de/work/roth-und-weisse-apfelbluete-debois-ferdinand>,
         <https://performance.musiconn.de/work/souvenir-de-moscou-fassung-violine-klavier-wieniawski-henri>,
         <https://performance.musiconn.de/work/staendchen-auf-der-laute-wetaschek-karl>,
-        <https://performance.musiconn.de/work/wachet-auf-es-taget-kirchl-adolf>,
-        <https://viaf.org/viaf/175375450>,
-        <https://viaf.org/viaf/179823018>,
-        <https://viaf.org/viaf/182234604>,
-        <https://viaf.org/viaf/183911740>,
-        <https://viaf.org/viaf/183930508>,
-        <https://viaf.org/viaf/185469755>,
-        <https://viaf.org/viaf/186332266> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1116036975>,
-        <https://viaf.org/viaf/408151172689639210002> ;
-    cto:viaf <https://viaf.org/viaf/175375450>,
-        <https://viaf.org/viaf/179823018>,
-        <https://viaf.org/viaf/182234604>,
-        <https://viaf.org/viaf/183911740>,
-        <https://viaf.org/viaf/183930508>,
-        <https://viaf.org/viaf/185469755>,
-        <https://viaf.org/viaf/186332266>,
-        <https://viaf.org/viaf/408151172689639210002> .
+        <https://performance.musiconn.de/work/wachet-auf-es-taget-kirchl-adolf> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175375450> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179823018> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182234604> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183911740> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183930508> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185469755> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186332266> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/408151172689639210002> a nfdicore:NFDI_0001010 .
 

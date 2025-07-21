@@ -1,63 +1,86 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1160698864> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140290> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30015528X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170300> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300191197> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300304137> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300868588> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1889-12-15-16-00> ] .
 
-<https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1889-12-15-16-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1889-12-15-16-00> a cto:CTO_0001005 ;
     rdfs:label "Concert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 15.12.1889, 16:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1889-1890> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1889-12-15T16:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1889-12-15T16:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1160698864>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300140290>,
-        <https://d-nb.info/gnd/30015528X>,
-        <https://d-nb.info/gnd/300170300>,
-        <https://d-nb.info/gnd/300191197>,
-        <https://d-nb.info/gnd/300304137>,
-        <https://d-nb.info/gnd/300868588> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1889-1890> ;
-    cto:relatedItem <https://d-nb.info/gnd/1160698864>,
-        <https://d-nb.info/gnd/300140290>,
-        <https://d-nb.info/gnd/30015528X>,
-        <https://d-nb.info/gnd/300170300>,
-        <https://d-nb.info/gnd/300191197>,
-        <https://d-nb.info/gnd/300304137>,
-        <https://d-nb.info/gnd/300868588>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202958990> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183833597> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300868588> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186708409> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140290> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300304137> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182073287> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177919537> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170300> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1160698864> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177469866> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300191197> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176808856> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30015528X> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1889-1890>,
         <https://performance.musiconn.de/work/beriots-air-varie-fuer-kornett-hartmann>,
         <https://performance.musiconn.de/work/carmen-chor-bizet-georges>,
         <https://performance.musiconn.de/work/carmen-introduktion-bizet-georges>,
-        <https://performance.musiconn.de/work/die-felsenmuehle-zu-etalieres-ouvertuere-reissiger-carl-gottlieb>,
-        <https://performance.musiconn.de/work/elisabetta-regina-dinghilterra-ouvertuere-rossini-gioachino>,
-        <https://performance.musiconn.de/work/ellens-gesang-d-839-schubert-franz>,
-        <https://performance.musiconn.de/work/il-trovatore-miserere-verdi-giuseppe>,
         <https://performance.musiconn.de/work/knecht-ruprecht-kiessling-fr>,
-        <https://performance.musiconn.de/work/kuenstler-leben-strauss-johann>,
-        <https://performance.musiconn.de/work/rienzi-der-letzte-der-tribunen-ouvertuere-wagner-richard>,
         <https://performance.musiconn.de/work/schwedisches-volkslied-soederman-august>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-rhapsodie-nr-2-r-4414-liszt-franz>,
-        <https://performance.musiconn.de/work/weihnachtsnaehe-stahl-ernst>,
-        <https://viaf.org/viaf/176808856>,
-        <https://viaf.org/viaf/177469866>,
-        <https://viaf.org/viaf/177919537>,
-        <https://viaf.org/viaf/182073287>,
-        <https://viaf.org/viaf/183833597>,
-        <https://viaf.org/viaf/186708409>,
-        <https://viaf.org/viaf/202958990> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/176808856>,
-        <https://viaf.org/viaf/177469866>,
-        <https://viaf.org/viaf/177919537>,
-        <https://viaf.org/viaf/182073287>,
-        <https://viaf.org/viaf/183833597>,
-        <https://viaf.org/viaf/186708409>,
-        <https://viaf.org/viaf/202958990> .
+        <https://performance.musiconn.de/work/weihnachtsnaehe-stahl-ernst> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176808856> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177469866> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177919537> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182073287> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183833597> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186708409> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202958990> a nfdicore:NFDI_0001010 .
 

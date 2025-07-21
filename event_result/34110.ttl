@@ -4,25 +4,28 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4277998-4> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/apollon-et-daphne-schloss-fontainebleau-fontainebleau-1698-10-22> ] .
 
-<https://performance.musiconn.de/event/apollon-et-daphne-schloss-fontainebleau-fontainebleau-1698-10-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/apollon-et-daphne-schloss-fontainebleau-fontainebleau-1698-10-22> a cto:CTO_0001005 ;
     rdfs:label "Apollon et Daphné, Schloss Fontainebleau (Fontainebleau), 22.10.1698" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1698-10-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1698-10-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4277998-4> ;
-    cto:relatedItem <https://performance.musiconn.de/source/beauchamps-1735-bd-3-87>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237368299> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4277998-4> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/beauchamps-1735-bd-3-87>,
         <https://performance.musiconn.de/source/musikalie-17>,
         <https://performance.musiconn.de/source/onlinequelle-262>,
         <https://performance.musiconn.de/source/onlinequelle-263>,
         <https://performance.musiconn.de/source/textquelle-digitalisat-112>,
         <https://performance.musiconn.de/work/apollon-et-daphne-lully-jean-baptiste> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4277998-4>,
-        <https://viaf.org/viaf/237368299> ;
-    cto:viaf <https://viaf.org/viaf/237368299> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/237368299> a nfdicore:NFDI_0001010 .
 

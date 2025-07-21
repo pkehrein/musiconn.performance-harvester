@@ -1,37 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1142149242> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300042086> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102666> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300239971> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/11-museums-konzert-staedtische-buehnen-frankfurt-am-main-grosses-haus-1958-04-21-19-30> ] .
 
-<https://performance.musiconn.de/event/11-museums-konzert-staedtische-buehnen-frankfurt-am-main-grosses-haus-1958-04-21-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/11-museums-konzert-staedtische-buehnen-frankfurt-am-main-grosses-haus-1958-04-21-19-30> a cto:CTO_0001005 ;
     rdfs:label "11. Museums-Konzert, Städtische Bühnen (Frankfurt am Main) / Großes Haus, 21.4.1958, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1957-1958> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1958-04-21T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1958-04-21T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1142149242>,
-        <https://d-nb.info/gnd/300042086>,
-        <https://d-nb.info/gnd/300102666>,
-        <https://d-nb.info/gnd/300239971> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1957-1958> ;
-    cto:relatedItem <https://d-nb.info/gnd/1142149242>,
-        <https://d-nb.info/gnd/300042086>,
-        <https://d-nb.info/gnd/300102666>,
-        <https://d-nb.info/gnd/300239971>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/images-l-122-iberia-debussy-claude>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-24-rozsa-miklos>,
-        <https://performance.musiconn.de/work/ma-mere-loye-orchesterfassung-ravel-maurice>,
-        <https://performance.musiconn.de/work/sinfonien-mwv-n-16-a-dur-mendelssohn-bartholdy-felix>,
-        <https://viaf.org/viaf/175005823>,
-        <https://viaf.org/viaf/185490443> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-grosses-haus> ;
-    cto:viaf <https://viaf.org/viaf/175005823>,
-        <https://viaf.org/viaf/185490443> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-grosses-haus> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175005823> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300239971> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1142149242> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185490443> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102666> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300042086> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175005823> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185490443> a nfdicore:NFDI_0001010 .
 

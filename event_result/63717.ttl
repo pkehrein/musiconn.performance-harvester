@@ -1,46 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1263679447> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1317557549> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300070799> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300103069> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300689780> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7585890-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zum-gedaechtnis-felix-mendelssohn-bartholdys-gest-am-4-november-1847-conservatorium-der-musik-1875-11-05-18-00> ] .
 
-<https://performance.musiconn.de/event/zum-gedaechtnis-felix-mendelssohn-bartholdys-gest-am-4-november-1847-conservatorium-der-musik-1875-11-05-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zum-gedaechtnis-felix-mendelssohn-bartholdys-gest-am-4-november-1847-conservatorium-der-musik-1875-11-05-18-00> a cto:CTO_0001005 ;
     rdfs:label "Zum Gedächtnis Felix Mendelssohn-Bartholdy's (gest. am 4. November 1847), Conservatorium der Musik, 5.11.1875, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzert> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1875-11-05T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1875-11-05T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1263679447>,
-        <https://d-nb.info/gnd/1317557549>,
-        <https://d-nb.info/gnd/300070799>,
-        <https://d-nb.info/gnd/300103069>,
-        <https://d-nb.info/gnd/300689780>,
-        <https://d-nb.info/gnd/7585890-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzert> ;
-    cto:relatedItem <https://d-nb.info/gnd/1317557549>,
-        <https://d-nb.info/gnd/300070799>,
-        <https://d-nb.info/gnd/300103069>,
-        <https://d-nb.info/gnd/300689780>,
-        <https://d-nb.info/gnd/7585890-3>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1263679447> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211711085> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201852607> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1317557549> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175455812> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7585890-3> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300689780> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188279888> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300070799> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300103069> ],
         <https://performance.musiconn.de/source/konservatorium-der-musik-hochschule-fuer-musik-konzertprogramme-1843-1948>,
-        <https://performance.musiconn.de/work/adagio-violine-spohr-louis>,
-        <https://performance.musiconn.de/work/elias-es-ist-genug-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-mwv-r-30-d-dur-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/requiem-orgel-chor-streichorchester-kalacevskyj-mychajlo-mykolajovyc>,
-        <https://performance.musiconn.de/work/stuecke-klavier-hob-17-6-f-moll-haydn-joseph>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-mwv-q-33-c-moll-mendelssohn-bartholdy-felix>,
-        <https://viaf.org/viaf/175455812>,
-        <https://viaf.org/viaf/188279888>,
-        <https://viaf.org/viaf/201852607>,
-        <https://viaf.org/viaf/211711085> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1263679447> ;
-    cto:viaf <https://viaf.org/viaf/175455812>,
-        <https://viaf.org/viaf/188279888>,
-        <https://viaf.org/viaf/201852607>,
-        <https://viaf.org/viaf/211711085> .
+        <https://performance.musiconn.de/work/adagio-violine-spohr-louis> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175455812> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188279888> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201852607> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211711085> a nfdicore:NFDI_0001010 .
 

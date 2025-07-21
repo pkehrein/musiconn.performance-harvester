@@ -1,44 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1085779696> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1161486062> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144253> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300358547> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4061849-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/symphoniekonzert-unna-1987-10-30> ] .
 
-<https://performance.musiconn.de/event/symphoniekonzert-unna-1987-10-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/symphoniekonzert-unna-1987-10-30> a cto:CTO_0001005 ;
     rdfs:label "Symphoniekonzert, Unna, 30.10.1987" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/internationales-komponistinnen-festival-unna> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-10-30" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-10-30" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1085779696>,
-        <https://d-nb.info/gnd/1161486062>,
-        <https://d-nb.info/gnd/300144253>,
-        <https://d-nb.info/gnd/300358547>,
-        <https://d-nb.info/gnd/4061849-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/internationales-komponistinnen-festival-unna> ;
-    cto:relatedItem <https://d-nb.info/gnd/1161486062>,
-        <https://d-nb.info/gnd/300144253>,
-        <https://d-nb.info/gnd/300358547>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1085779696> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/268145857888323021037> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4061849-3> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/312808229> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1161486062> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144253> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5812152988211912790001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205767763> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300358547> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213968750> ],
         <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-internationales-komponistinnen-festival-unna-1987>,
-        <https://performance.musiconn.de/work/andromede-holmes-augusta>,
-        <https://performance.musiconn.de/work/hero-und-leander-fassung-fuer-sopran-und-orchester-hensel-fanny>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-7-a-moll-schumann-clara>,
-        <https://performance.musiconn.de/work/ouvertuere-orchester-c-dur-hensel-fanny>,
-        <https://viaf.org/viaf/205767763>,
-        <https://viaf.org/viaf/213968750>,
-        <https://viaf.org/viaf/5812152988211912790001> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4061849-3>,
-        <https://viaf.org/viaf/312808229> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/1085779696>,
-        <https://viaf.org/viaf/268145857888323021037> ;
-    cto:viaf <https://viaf.org/viaf/205767763>,
-        <https://viaf.org/viaf/213968750>,
-        <https://viaf.org/viaf/268145857888323021037>,
-        <https://viaf.org/viaf/312808229>,
-        <https://viaf.org/viaf/5812152988211912790001> .
+        <https://performance.musiconn.de/work/andromede-holmes-augusta> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/205767763> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213968750> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/268145857888323021037> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/312808229> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5812152988211912790001> a nfdicore:NFDI_0001010 .
 

@@ -1,55 +1,75 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1075231000> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1172556024> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1191133729> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033222> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30013276X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300206127> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300723415> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzert-stadthalle-chemnitz-1982-11-21-20-00> ] .
 
-<https://performance.musiconn.de/event/sonderkonzert-stadthalle-chemnitz-1982-11-21-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzert-stadthalle-chemnitz-1982-11-21-20-00> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert, Stadthalle (Chemnitz), 21.11.1982, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1982-1983> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1982-11-21T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1982-11-21T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1075231000>,
-        <https://d-nb.info/gnd/1172556024>,
-        <https://d-nb.info/gnd/1191133729>,
-        <https://d-nb.info/gnd/300033222>,
-        <https://d-nb.info/gnd/30013276X>,
-        <https://d-nb.info/gnd/300206127>,
-        <https://d-nb.info/gnd/300723415> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1982-1983> ;
-    cto:relatedItem <https://d-nb.info/gnd/1075231000>,
-        <https://d-nb.info/gnd/1172556024>,
-        <https://d-nb.info/gnd/300033222>,
-        <https://d-nb.info/gnd/30013276X>,
-        <https://d-nb.info/gnd/300206127>,
-        <https://d-nb.info/gnd/300723415>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1191133729> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300723415> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181880133> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203706490> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2455154387305230970006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033222> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1075231000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300206127> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207915952> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30013276X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/317060827> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1172556024> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182663915> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/des-knaben-wunderhorn-rheinlegendchen-mahler-gustav>,
-        <https://performance.musiconn.de/work/die-zauberfloete-pa-pa-papagena-bist-du-mir-nun-ganz-ergeben-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/evgenij-onegin-kogda-scastlivo-moi-dni-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/gavotten-violoncello-klavier-op-23-d-dur-popper-david>,
         <https://performance.musiconn.de/work/konzerte-horn-orchester-op-11-3-satz-es-dur-strauss-richard>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-54-a-moll-allegro-affettuoso-schumann-robert>,
         <https://performance.musiconn.de/work/konzerte-violine-orchester-op-77-d-dur-allegro-brahms-johannes>,
-        <https://performance.musiconn.de/work/la-scala-di-seta-sinfonia-rossini-gioachino>,
-        <https://performance.musiconn.de/work/orgelkonzert-b-dur-op-4-nr-2-1-und-2-satz-haendel-georg-friedrich>,
-        <https://viaf.org/viaf/181880133>,
-        <https://viaf.org/viaf/182663915>,
-        <https://viaf.org/viaf/203706490>,
-        <https://viaf.org/viaf/207915952>,
-        <https://viaf.org/viaf/2455154387305230970006>,
-        <https://viaf.org/viaf/317060827> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1191133729> ;
-    cto:viaf <https://viaf.org/viaf/181880133>,
-        <https://viaf.org/viaf/182663915>,
-        <https://viaf.org/viaf/203706490>,
-        <https://viaf.org/viaf/207915952>,
-        <https://viaf.org/viaf/2455154387305230970006>,
-        <https://viaf.org/viaf/317060827> .
+        <https://performance.musiconn.de/work/orgelkonzert-b-dur-op-4-nr-2-1-und-2-satz-haendel-georg-friedrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181880133> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182663915> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203706490> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207915952> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2455154387305230970006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/317060827> a nfdicore:NFDI_0001010 .
 

@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300099282> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300125798> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300732864> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-kammerkonzert-schloss-albrechtsberg-dresden-2007-06-17-19-00> ] .
 
-<https://performance.musiconn.de/event/6-kammerkonzert-schloss-albrechtsberg-dresden-2007-06-17-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-kammerkonzert-schloss-albrechtsberg-dresden-2007-06-17-19-00> a cto:CTO_0001005 ;
     rdfs:label "6. Kammerkonzert, Schloss Albrechtsberg (Dresden), 17.6.2007, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2006-2007> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2007-06-17T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2007-06-17T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300099282>,
-        <https://d-nb.info/gnd/300125798>,
-        <https://d-nb.info/gnd/300732864>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2006-2007> ;
-    cto:relatedItem <https://d-nb.info/gnd/300099282>,
-        <https://d-nb.info/gnd/300125798>,
-        <https://d-nb.info/gnd/300732864>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/trio-sur-des-melodies-populaires-irlandaises-martin-frank>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-a-moll-ravel-maurice>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-nr-1-op-7-c-moll-lalo-edouard>,
-        <https://viaf.org/viaf/184887032>,
-        <https://viaf.org/viaf/209863533>,
-        <https://viaf.org/viaf/209880578> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/184887032>,
-        <https://viaf.org/viaf/209863533>,
-        <https://viaf.org/viaf/209880578>,
-        <https://viaf.org/viaf/237386709> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184887032> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300099282> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209863533> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300125798> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300732864> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209880578> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/184887032> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209863533> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209880578> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
 

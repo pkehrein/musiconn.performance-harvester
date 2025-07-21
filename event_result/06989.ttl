@@ -1,55 +1,74 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1151669067> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1174818689> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175533483> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118674071X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1186741724> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029535> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300143346> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/svensk-tyska-foereningen-stockholm-grand-hotel-stockholm-1937-10-21-20-00> ] .
 
-<https://performance.musiconn.de/event/svensk-tyska-foereningen-stockholm-grand-hotel-stockholm-1937-10-21-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/svensk-tyska-foereningen-stockholm-grand-hotel-stockholm-1937-10-21-20-00> a cto:CTO_0001005 ;
     rdfs:label "Svensk-Tyska Föreningen. Stockholm, Grand Hôtel (Stockholm), 21.10.1937, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1937-38> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1937-10-21T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1937-10-21T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1151669067>,
-        <https://d-nb.info/gnd/1174818689>,
-        <https://d-nb.info/gnd/1175533483>,
-        <https://d-nb.info/gnd/118674071X>,
-        <https://d-nb.info/gnd/1186741724>,
-        <https://d-nb.info/gnd/300029535>,
-        <https://d-nb.info/gnd/300143346> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1937-38> ;
-    cto:relatedItem <https://d-nb.info/gnd/1151669067>,
-        <https://d-nb.info/gnd/1174818689>,
-        <https://d-nb.info/gnd/1175533483>,
-        <https://d-nb.info/gnd/1186741724>,
-        <https://d-nb.info/gnd/300029535>,
-        <https://d-nb.info/gnd/300143346>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118674071X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1062154801933756310006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194731077> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029535> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1151669067> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6266154741655453110004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300143346> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1186741724> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181949502> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3021151778260718130006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1174818689> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174110202> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175533483> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/annelein-du-singst-fein-lasso-orlando-di>,
-        <https://performance.musiconn.de/work/ave-maria-wab-6-f-dur-bruckner-anton>,
-        <https://performance.musiconn.de/work/gesaenge-frauen-chor-op-42-immer-wenn-der-maerzwind-weht-mendelssohn-arnold-ludwig>,
-        <https://performance.musiconn.de/work/italienische-madrigale-vasto-mar-nel-cui-seno-schuetz-heinrich>,
         <https://performance.musiconn.de/work/kapitaen-und-leutenant-woyrsch-felix>,
-        <https://performance.musiconn.de/work/leichtlebigkeit-herzog-franz>,
-        <https://performance.musiconn.de/work/libro-de-villanelle-moresche-et-altre-canzoni-o-la-o-che-bon-eccho-lasso-orlando-di>,
-        <https://performance.musiconn.de/work/parsifal-der-glaube-lebt-wagner-richard>,
-        <https://performance.musiconn.de/work/rienzi-der-letzte-der-tribunen-erwacht-wagner-richard>,
-        <https://viaf.org/viaf/1062154801933756310006>,
-        <https://viaf.org/viaf/174110202>,
-        <https://viaf.org/viaf/181949502>,
-        <https://viaf.org/viaf/194731077>,
-        <https://viaf.org/viaf/3021151778260718130006>,
-        <https://viaf.org/viaf/6266154741655453110004> ;
-    cto:relatedLocation <https://d-nb.info/gnd/118674071X> ;
-    cto:viaf <https://viaf.org/viaf/1062154801933756310006>,
-        <https://viaf.org/viaf/174110202>,
-        <https://viaf.org/viaf/181949502>,
-        <https://viaf.org/viaf/194731077>,
-        <https://viaf.org/viaf/3021151778260718130006>,
-        <https://viaf.org/viaf/6266154741655453110004> .
+        <https://performance.musiconn.de/work/leichtlebigkeit-herzog-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1062154801933756310006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174110202> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181949502> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194731077> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3021151778260718130006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6266154741655453110004> a nfdicore:NFDI_0001010 .
 

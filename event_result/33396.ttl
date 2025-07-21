@@ -1,51 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1153376423> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300036787> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300036795> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300120737> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144350> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-kammerkonzert-schloss-albrechtsberg-dresden-2017-10-15-19-00> ] .
 
-<https://performance.musiconn.de/event/1-kammerkonzert-schloss-albrechtsberg-dresden-2017-10-15-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-kammerkonzert-schloss-albrechtsberg-dresden-2017-10-15-19-00> a cto:CTO_0001005 ;
     rdfs:label "1. Kammerkonzert, Schloss Albrechtsberg (Dresden), 15.10.2017, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2017-2018> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2017-10-15T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2017-10-15T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1153376423>,
-        <https://d-nb.info/gnd/300036787>,
-        <https://d-nb.info/gnd/300036795>,
-        <https://d-nb.info/gnd/300120737>,
-        <https://d-nb.info/gnd/300144350>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2017-2018> ;
-    cto:relatedItem <https://d-nb.info/gnd/1153376423>,
-        <https://d-nb.info/gnd/300036787>,
-        <https://d-nb.info/gnd/300036795>,
-        <https://d-nb.info/gnd/300120737>,
-        <https://d-nb.info/gnd/300144350>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2353152025921803600008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300036795> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213966094> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194733386> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300120737> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144350> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189341240> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300036787> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207912206> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1153376423> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/balladen-klavier-nr-3-op-47-as-dur-chopin-frederic>,
-        <https://performance.musiconn.de/work/balladen-klavier-op-52-f-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/fantasien-oboe-op-90-arnold-malcolm>,
         <https://performance.musiconn.de/work/fantasiestuecke-op-73-fassung-fuer-oboe-damore-und-klavier-schumann-robert>,
-        <https://performance.musiconn.de/work/romanzen-violine-klavier-op-22-schumann-clara>,
-        <https://performance.musiconn.de/work/sonaten-oboe-klavier-fp-185-poulenc-francis>,
-        <https://performance.musiconn.de/work/sonatinen-oboe-klavier-ravel-maurice>,
-        <https://viaf.org/viaf/189341240>,
-        <https://viaf.org/viaf/194733386>,
-        <https://viaf.org/viaf/207912206>,
-        <https://viaf.org/viaf/213966094>,
-        <https://viaf.org/viaf/2353152025921803600008> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/189341240>,
-        <https://viaf.org/viaf/194733386>,
-        <https://viaf.org/viaf/207912206>,
-        <https://viaf.org/viaf/213966094>,
-        <https://viaf.org/viaf/2353152025921803600008>,
-        <https://viaf.org/viaf/237386709> .
+        <https://performance.musiconn.de/work/sonatinen-oboe-klavier-ravel-maurice> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/189341240> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194733386> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207912206> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213966094> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2353152025921803600008> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
 

@@ -1,49 +1,65 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1178462900> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141785> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300747020> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300780680> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1849-03-03> ] .
 
-<https://performance.musiconn.de/event/7-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1849-03-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1849-03-03> a cto:CTO_0001005 ;
     rdfs:label "7. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 3.3.1849" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1848-1849> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1849-03-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1849-03-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1178462900>,
-        <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300747020>,
-        <https://d-nb.info/gnd/300780680>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1848-1849> ;
-    cto:relatedItem <https://d-nb.info/gnd/1178462900>,
-        <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300747020>,
-        <https://d-nb.info/gnd/300780680>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2039155105811576320000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196896362> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176243500> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174994351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1178462900> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300747020> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300780680> ],
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
         <https://performance.musiconn.de/source/whistling-carl-wilhelm-der-musikverein-euterpe-zu-leipzig-1824-1874-leipzig-1874>,
-        <https://performance.musiconn.de/work/die-najaden-bennett-william-sterndale>,
-        <https://performance.musiconn.de/work/fantazja-na-motywach-z-opery-krakowiacy-i-gorale-j-stefaniego-lipinski-karol-josef>,
         <https://performance.musiconn.de/work/konzert-ouvertuere-netzer-joseph>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-32-lipinski-karol-josef>,
-        <https://performance.musiconn.de/work/lucia-di-lammermoor-arie-donizetti-gaetano>,
-        <https://performance.musiconn.de/work/sinfonien-d-944-c-dur-schubert-franz>,
-        <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/176243500>,
-        <https://viaf.org/viaf/196896362>,
-        <https://viaf.org/viaf/2039155105811576320000> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/176243500>,
-        <https://viaf.org/viaf/196896362>,
-        <https://viaf.org/viaf/2039155105811576320000>,
-        <https://viaf.org/viaf/242717024> .
+        <https://performance.musiconn.de/work/lucia-di-lammermoor-arie-donizetti-gaetano> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174994351> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176243500> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196896362> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2039155105811576320000> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
 

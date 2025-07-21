@@ -1,31 +1,34 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300869339> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/pomone-jeu-de-paume-de-la-bouteille-academie-royale-de-musique-paris-1671-03-03> ] .
 
-<https://performance.musiconn.de/event/pomone-jeu-de-paume-de-la-bouteille-academie-royale-de-musique-paris-1671-03-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/pomone-jeu-de-paume-de-la-bouteille-academie-royale-de-musique-paris-1671-03-03> a cto:CTO_0001005 ;
     rdfs:label "Pomone, Jeu de paume de la Bouteille, Académie Royale de Musique (Paris), 3.3.1671" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1671-03-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1671-03-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300869339> ;
-    cto:relatedItem <https://d-nb.info/gnd/300869339>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/jeu-de-paume-de-la-bouteille-academie-royale-de-musique-paris> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182305287> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300869339> ],
         <https://performance.musiconn.de/source/beauchamps-1735-bd-3-93>,
         <https://performance.musiconn.de/source/hourcade-2002-285>,
         <https://performance.musiconn.de/source/musikalie-3>,
         <https://performance.musiconn.de/source/musikalie-digitalisat-26>,
         <https://performance.musiconn.de/source/onlinequelle-110>,
         <https://performance.musiconn.de/source/onlinequelle-111>,
-        <https://performance.musiconn.de/source/robinet-1671-04-11-1671-04-18-1671-06-20>,
-        <https://performance.musiconn.de/work/pomone-cambert-robert>,
-        <https://viaf.org/viaf/182305287> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/jeu-de-paume-de-la-bouteille-academie-royale-de-musique-paris> ;
-    cto:viaf <https://viaf.org/viaf/182305287> .
+        <https://performance.musiconn.de/source/robinet-1671-04-11-1671-04-18-1671-06-20> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182305287> a nfdicore:NFDI_0001010 .
 

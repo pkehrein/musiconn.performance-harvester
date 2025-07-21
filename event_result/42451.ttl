@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1065410026> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300400381> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4264112-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/viertes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1941-11-14-18-30> ] .
 
-<https://performance.musiconn.de/event/viertes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1941-11-14-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/viertes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1941-11-14-18-30> a cto:CTO_0001005 ;
     rdfs:label "Viertes Freitags-Konzert, Großer Konzertsaal (Frankfurt a. M.), 14.11.1941, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1941-1942> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1941-11-14T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1941-11-14T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1065410026>,
-        <https://d-nb.info/gnd/300400381>,
-        <https://d-nb.info/gnd/4264112-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1941-1942> ;
-    cto:relatedItem <https://d-nb.info/gnd/1065410026>,
-        <https://d-nb.info/gnd/300400381>,
-        <https://d-nb.info/gnd/4264112-3>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-26-hoeller-karl>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-c-dur-schmidt-franz>,
-        <https://performance.musiconn.de/work/till-eulenspiegels-lustige-streiche-strauss-richard>,
-        <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/196886945>,
-        <https://viaf.org/viaf/313438090> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/196886945>,
-        <https://viaf.org/viaf/313438090> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300400381> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/313438090> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175221377> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196886945> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4264112-3> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1065410026> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175221377> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196886945> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/313438090> a nfdicore:NFDI_0001010 .
 

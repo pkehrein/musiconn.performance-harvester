@@ -1,45 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1147680159> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033311> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141750> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300149611> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171528> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzert-gimritzer-park-halle-1966-06-26-16-30> ] .
 
-<https://performance.musiconn.de/event/sonderkonzert-gimritzer-park-halle-1966-06-26-16-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzert-gimritzer-park-halle-1966-06-26-16-30> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert, Gimritzer Park (Halle), 26.6.1966, 16:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1966-06-26T16:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1966-06-26T16:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1147680159>,
-        <https://d-nb.info/gnd/300033311>,
-        <https://d-nb.info/gnd/300141750>,
-        <https://d-nb.info/gnd/300149611>,
-        <https://d-nb.info/gnd/300171528> ;
-    cto:relatedItem <https://d-nb.info/gnd/1147680159>,
-        <https://d-nb.info/gnd/300033311>,
-        <https://d-nb.info/gnd/300141750>,
-        <https://d-nb.info/gnd/300149611>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/carmen-suite-no-1-bizet-georges>,
-        <https://performance.musiconn.de/work/der-freischuetz-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/italjanskoe-kapriccio-na-temy-narodnych-pesen-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/ma-vlast-vltava-smetana-bedrich>,
-        <https://performance.musiconn.de/work/sinfonien-d-485-b-dur-schubert-franz>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/198525332>,
-        <https://viaf.org/viaf/213996466>,
-        <https://viaf.org/viaf/305991582>,
-        <https://viaf.org/viaf/6621148523912720970003> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/gimritzer-park-halle> ;
-    cto:viaf <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/198525332>,
-        <https://viaf.org/viaf/213996466>,
-        <https://viaf.org/viaf/305991582>,
-        <https://viaf.org/viaf/6621148523912720970003> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/gimritzer-park-halle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213996466> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198525332> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1147680159> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305991582> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6621148523912720970003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141750> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177811557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300149611> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177811557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198525332> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213996466> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305991582> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6621148523912720970003> a nfdicore:NFDI_0001010 .
 

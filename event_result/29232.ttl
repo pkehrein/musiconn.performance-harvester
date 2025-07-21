@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300102682> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108966> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171781> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1983-02-09-20-00> ] .
 
-<https://performance.musiconn.de/event/7-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1983-02-09-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1983-02-09-20-00> a cto:CTO_0001005 ;
     rdfs:label "7. Außerordentliches Konzert, Kulturpalast (Dresden) / Festsaal, 9.2.1983, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1982-1983> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1983-02-09T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1983-02-09T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300102682>,
-        <https://d-nb.info/gnd/300108966>,
-        <https://d-nb.info/gnd/300171781> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1982-1983> ;
-    cto:relatedItem <https://d-nb.info/gnd/300102682>,
-        <https://d-nb.info/gnd/300108966>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-kv-466-d-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/musik-zu-ein-sommernachtstraum-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/oberon-ouvertuere-weber-carl-maria-von>,
-        <https://viaf.org/viaf/178143280>,
-        <https://viaf.org/viaf/214739085>,
-        <https://viaf.org/viaf/309560042> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/178143280>,
-        <https://viaf.org/viaf/214739085>,
-        <https://viaf.org/viaf/309560042> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108966> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214739085> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309560042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102682> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178143280> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178143280> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214739085> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309560042> a nfdicore:NFDI_0001010 .
 

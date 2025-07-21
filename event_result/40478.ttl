@@ -1,37 +1,47 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300111118> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300253613> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4279519-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-serenade-schloss-pillnitz-dresden-1955-07-03-18-00> ] .
 
-<https://performance.musiconn.de/event/2-serenade-schloss-pillnitz-dresden-1955-07-03-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-serenade-schloss-pillnitz-dresden-1955-07-03-18-00> a cto:CTO_0001005 ;
     rdfs:label "2. Serenade, Schloss Pillnitz (Dresden), 3.7.1955, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1954-1955> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1955-07-03T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1955-07-03T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300111118>,
-        <https://d-nb.info/gnd/300253613>,
-        <https://d-nb.info/gnd/4279519-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1954-1955> ;
-    cto:relatedItem <https://d-nb.info/gnd/300111118>,
-        <https://d-nb.info/gnd/300253613>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173353325> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4279519-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111118> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4217155466472402160006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183071265> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300253613> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/aus-elegie-liebesfruehling-stille-sicherheit-warnung-und-wunsch-zweifelnder-wunsch-der-einsame-schoeck-othmar>,
         <https://performance.musiconn.de/work/lieder-morgen-traum-durch-die-daemmerung-heimliche-aufforderung-strauss-richard>,
-        <https://performance.musiconn.de/work/ouvertueren-d-590-schubert-franz>,
-        <https://performance.musiconn.de/work/serenade-fuer-streicher-wolf-ferrari-ermanno>,
-        <https://performance.musiconn.de/work/sinfonien-kv-425-c-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/183071265>,
-        <https://viaf.org/viaf/4217155466472402160006> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4279519-9>,
-        <https://viaf.org/viaf/173353325> ;
-    cto:viaf <https://viaf.org/viaf/173353325>,
-        <https://viaf.org/viaf/183071265>,
-        <https://viaf.org/viaf/4217155466472402160006> .
+        <https://performance.musiconn.de/work/serenade-fuer-streicher-wolf-ferrari-ermanno> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/173353325> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183071265> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4217155466472402160006> a nfdicore:NFDI_0001010 .
 

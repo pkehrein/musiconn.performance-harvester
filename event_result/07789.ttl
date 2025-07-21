@@ -4,19 +4,20 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1185527273> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gottesdienst-nikolaikirchhof-leipzig-2005-09-18> ] .
 
-<https://performance.musiconn.de/event/gottesdienst-nikolaikirchhof-leipzig-2005-09-18> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gottesdienst-nikolaikirchhof-leipzig-2005-09-18> a cto:CTO_0001005 ;
     rdfs:label "Gottesdienst, Nikolaikirchhof (Leipzig), 18.9.2005" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2005-09-18" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2005-09-18" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1185527273> ;
-    cto:relatedItem <https://performance.musiconn.de/source/motettenbuch-2005-06-1>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1185527273> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/motettenbuch-2005-06-1>,
         <https://performance.musiconn.de/work/nebraer-himmelspsalm-biller-georg-christoph> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1185527273> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
 

@@ -1,40 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300013361> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300125550> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133758> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vecer-simfoniceskoj-muzyki-sankt-petersburger-philharmonie-2002-01-24> ] .
 
-<https://performance.musiconn.de/event/vecer-simfoniceskoj-muzyki-sankt-petersburger-philharmonie-2002-01-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vecer-simfoniceskoj-muzyki-sankt-petersburger-philharmonie-2002-01-24> a cto:CTO_0001005 ;
     rdfs:label "Večer simfoničeskoj muzyki, Sankt-Petersburger Philharmonie, 24.1.2002" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-2001-2002> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2002-01-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2002-01-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300013361>,
-        <https://d-nb.info/gnd/300125550>,
-        <https://d-nb.info/gnd/300133758>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-2001-2002> ;
-    cto:relatedItem <https://d-nb.info/gnd/300013361>,
-        <https://d-nb.info/gnd/300125550>,
-        <https://d-nb.info/gnd/300133758>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300013361> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213968470> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133758> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/265749475> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178217803> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300125550> ],
         <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-2002-24-januar>,
-        <https://performance.musiconn.de/work/a-csodalatos-mandarin-suite-bartok-bela>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-r-190-g-moll-saint-saens-camille>,
-        <https://performance.musiconn.de/work/pavane-pour-une-infante-defunte-orchesterfassung-ravel-maurice>,
-        <https://performance.musiconn.de/work/valse-caprice-klavier-orchester-op-76-as-dur-saint-saens-camille>,
-        <https://viaf.org/viaf/178217803>,
-        <https://viaf.org/viaf/213968470>,
-        <https://viaf.org/viaf/265749475> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/178217803>,
-        <https://viaf.org/viaf/213968470>,
-        <https://viaf.org/viaf/265749475> .
+        <https://performance.musiconn.de/work/valse-caprice-klavier-orchester-op-76-as-dur-saint-saens-camille> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178217803> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213968470> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/265749475> a nfdicore:NFDI_0001010 .
 

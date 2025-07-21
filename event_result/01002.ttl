@@ -1,29 +1,36 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1054565813> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170408> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/tannhaeuser-und-der-saengerkrieg-auf-wartburg-semperoper-dresden-1908-02-29-19-00> ] .
 
-<https://performance.musiconn.de/event/tannhaeuser-und-der-saengerkrieg-auf-wartburg-semperoper-dresden-1908-02-29-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/tannhaeuser-und-der-saengerkrieg-auf-wartburg-semperoper-dresden-1908-02-29-19-00> a cto:CTO_0001005 ;
     rdfs:label "Tannhäuser und der Sängerkrieg auf Wartburg, Semperoper (Dresden), 29.2.1908, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/koenigliches-opernhaus-saison-1907-1908> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1908-02-29T22:15:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1908-02-29T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1054565813>,
-        <https://d-nb.info/gnd/300170408> ;
-    cto:itemOf <https://performance.musiconn.de/series/koenigliches-opernhaus-saison-1907-1908> ;
-    cto:relatedItem <https://d-nb.info/gnd/300170408>,
-        <https://performance.musiconn.de/source/koenigliches-hoftheater-theaterzettel-dresden>,
-        <https://performance.musiconn.de/work/tannhaeuser-und-der-saengerkrieg-auf-wartburg-wagner-richard>,
-        <https://viaf.org/viaf/316757494> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1054565813>,
-        <https://viaf.org/viaf/309654002> ;
-    cto:viaf <https://viaf.org/viaf/309654002>,
-        <https://viaf.org/viaf/316757494> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309654002> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1054565813> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170408> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316757494> ],
+        <https://performance.musiconn.de/source/koenigliches-hoftheater-theaterzettel-dresden> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/309654002> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316757494> a nfdicore:NFDI_0001010 .
 

@@ -1,41 +1,51 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1060449676> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/117863504X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300531346> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300703597> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-akadem-kammermusik-rosensaal-jena-1934-11-12-20-00> ] .
 
-<https://performance.musiconn.de/event/1-akadem-kammermusik-rosensaal-jena-1934-11-12-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-akadem-kammermusik-rosensaal-jena-1934-11-12-20-00> a cto:CTO_0001005 ;
     rdfs:label "1. Akadem. Kammermusik, Rosensaal (Jena), 12.11.1934, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/akademische-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1934-11-12T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1934-11-12T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1060449676>,
-        <https://d-nb.info/gnd/117863504X>,
-        <https://d-nb.info/gnd/300531346>,
-        <https://d-nb.info/gnd/300703597> ;
-    cto:itemOf <https://performance.musiconn.de/series/akademische-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1060449676>,
-        <https://d-nb.info/gnd/117863504X>,
-        <https://d-nb.info/gnd/300531346>,
-        <https://d-nb.info/gnd/300703597>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/rosensaal-jena> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300703597> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219173934> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/117863504X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311447155> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300531346> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3438155105817976320001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1060449676> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/musikalisches-opfer-sonata-largo-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sicilienne-et-burlesque-casella-alfredo>,
         <https://performance.musiconn.de/work/sonaten-klavier-violine-violoncello-sammartini-giovanni-battista>,
-        <https://performance.musiconn.de/work/trios-klavier-violine-violoncello-op-28-nr-2-casella-alfredo>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-hob-15-41-haydn-joseph>,
-        <https://performance.musiconn.de/work/trios-vl-vc-kl-1925-pizzetti-ildebrando>,
-        <https://viaf.org/viaf/219173934>,
-        <https://viaf.org/viaf/311447155>,
-        <https://viaf.org/viaf/3438155105817976320001> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/rosensaal-jena> ;
-    cto:viaf <https://viaf.org/viaf/219173934>,
-        <https://viaf.org/viaf/311447155>,
-        <https://viaf.org/viaf/3438155105817976320001> .
+        <https://performance.musiconn.de/work/trios-klavier-violine-violoncello-op-28-nr-2-casella-alfredo> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/219173934> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311447155> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3438155105817976320001> a nfdicore:NFDI_0001010 .
 

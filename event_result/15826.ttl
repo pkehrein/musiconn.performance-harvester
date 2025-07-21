@@ -1,49 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1147908729> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015127> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133731> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300173849> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300179251> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/siebentes-abonnement-concert-erstes-gewandhaus-leipzig-1885-01-22> ] .
 
-<https://performance.musiconn.de/event/siebentes-abonnement-concert-erstes-gewandhaus-leipzig-1885-01-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/siebentes-abonnement-concert-erstes-gewandhaus-leipzig-1885-01-22> a cto:CTO_0001005 ;
     rdfs:label "Siebentes Abonnement-Concert, Erstes Gewandhaus (Leipzig), 22.1.1885" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1885-01-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1885-01-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1147908729>,
-        <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/300015127>,
-        <https://d-nb.info/gnd/300133731>,
-        <https://d-nb.info/gnd/300173849>,
-        <https://d-nb.info/gnd/300179251> ;
-    cto:relatedItem <https://d-nb.info/gnd/1147908729>,
-        <https://d-nb.info/gnd/300015127>,
-        <https://d-nb.info/gnd/300133731>,
-        <https://d-nb.info/gnd/300173849>,
-        <https://d-nb.info/gnd/300179251>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300173849> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1147908729> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183465659> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300179251> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186723831> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207915232> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133731> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1712151304647149460009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219936234> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015127> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
-        <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
-        <https://performance.musiconn.de/work/der-widerspenstigen-zaehmung-die-kraft-versagt-goetz-hermann>,
-        <https://performance.musiconn.de/work/introduction-et-rondo-capriccioso-saint-saens-camille>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-2-op-22-d-moll-wieniawski-henri>,
-        <https://performance.musiconn.de/work/musik-zum-trauerspiel-egmont-von-johann-wolfgang-von-goethe-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/ouvertuere-zu-schillers-trauerspiel-maria-stuart-vierling-georg>,
-        <https://viaf.org/viaf/1712151304647149460009>,
-        <https://viaf.org/viaf/183465659>,
-        <https://viaf.org/viaf/186723831>,
-        <https://viaf.org/viaf/207915232>,
-        <https://viaf.org/viaf/219936234> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/1712151304647149460009>,
-        <https://viaf.org/viaf/183465659>,
-        <https://viaf.org/viaf/186723831>,
-        <https://viaf.org/viaf/207915232>,
-        <https://viaf.org/viaf/219936234>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1712151304647149460009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183465659> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186723831> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207915232> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219936234> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

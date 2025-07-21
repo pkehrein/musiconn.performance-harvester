@@ -1,25 +1,27 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1211992489> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/cetvertaja-leningradskaja-muzykalnaja-vesna-25-april-1968-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1968-04-25> ] .
 
-<https://performance.musiconn.de/event/cetvertaja-leningradskaja-muzykalnaja-vesna-25-april-1968-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1968-04-25> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/cetvertaja-leningradskaja-muzykalnaja-vesna-25-april-1968-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1968-04-25> a cto:CTO_0001005 ;
     rdfs:label "Četvertaja Leningradskaja muzykal'naja vesna (25. April 1968), Gosudarstvennaja akademičeskaja kapella (Sankt Petersburg) / Koncertnyj zal, 25.4.1968" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1967-68> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1968-04-25" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1968-04-25" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1211992489> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1967-68> ;
-    cto:relatedItem <https://performance.musiconn.de/source/4-leningrader-fruehling-1968-25-april-werkbeschreibung>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1211992489> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/4-leningrader-fruehling-1968-25-april-werkbeschreibung>,
         <https://performance.musiconn.de/source/4-leningrader-fruehling-1968-uebersicht>,
         <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1968-25-april>,
         <https://performance.musiconn.de/work/dozd-arapov-boris-a> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1211992489> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
 

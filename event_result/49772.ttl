@@ -1,49 +1,64 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015593> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300019157> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300048130> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300093632> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155190> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1929-09-27-20-00> ] .
 
-<https://performance.musiconn.de/event/8-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1929-09-27-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1929-09-27-20-00> a cto:CTO_0001005 ;
     rdfs:label "8. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 27.9.1929, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1929-1930-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1929-09-27T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1929-09-27T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300019157>,
-        <https://d-nb.info/gnd/300048130>,
-        <https://d-nb.info/gnd/300093632>,
-        <https://d-nb.info/gnd/300155190> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1929-1930-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300019157>,
-        <https://d-nb.info/gnd/300048130>,
-        <https://d-nb.info/gnd/300093632>,
-        <https://d-nb.info/gnd/300155190>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015593> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093632> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155190> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195807463> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185089854> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300019157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181828440> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300048130> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175771212> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181418428> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
-        <https://performance.musiconn.de/work/franz-schuberts-grosse-fantasie-liszt-franz>,
-        <https://performance.musiconn.de/work/geschichten-aus-dem-wienerwald-strauss-johann>,
-        <https://performance.musiconn.de/work/le-carnaval-romain-berlioz-hector>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-3-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/norwegische-rhapsodien-nr-1-halvorsen-johan>,
         <https://performance.musiconn.de/work/polkina-reesen-emil>,
-        <https://performance.musiconn.de/work/suiten-orchester-cs-30-g-dur-tema-con-variazioni-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/symfonicke-variace-dvorak-antonin>,
-        <https://viaf.org/viaf/175771212>,
-        <https://viaf.org/viaf/181418428>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/185089854>,
-        <https://viaf.org/viaf/195807463> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/175771212>,
-        <https://viaf.org/viaf/181418428>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/185089854>,
-        <https://viaf.org/viaf/195807463> .
+        <https://performance.musiconn.de/work/suiten-orchester-cs-30-g-dur-tema-con-variazioni-tschaikowski-peter-i> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175771212> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181418428> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181828440> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185089854> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195807463> a nfdicore:NFDI_0001010 .
 

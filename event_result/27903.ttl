@@ -1,60 +1,82 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1021985627> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1058841793> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1079184325> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1192457781> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300107943> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300132786> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300181825> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300488459> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ii-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1907-11-26-19-00> ] .
 
-<https://performance.musiconn.de/event/ii-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1907-11-26-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ii-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1907-11-26-19-00> a cto:CTO_0001005 ;
     rdfs:label "II. Philharmonisches Konzert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 26.11.1907, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1907-1908> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1907-11-26T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1907-11-26T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1021985627>,
-        <https://d-nb.info/gnd/1058841793>,
-        <https://d-nb.info/gnd/1079184325>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/1192457781>,
-        <https://d-nb.info/gnd/300107943>,
-        <https://d-nb.info/gnd/300132786>,
-        <https://d-nb.info/gnd/300181825>,
-        <https://d-nb.info/gnd/300488459> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1907-1908> ;
-    cto:relatedItem <https://d-nb.info/gnd/1021985627>,
-        <https://d-nb.info/gnd/1058841793>,
-        <https://d-nb.info/gnd/1079184325>,
-        <https://d-nb.info/gnd/1192457781>,
-        <https://d-nb.info/gnd/300107943>,
-        <https://d-nb.info/gnd/300132786>,
-        <https://d-nb.info/gnd/300181825>,
-        <https://d-nb.info/gnd/300488459>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1021985627> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300107943> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184346173> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300488459> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180389006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1192457781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300132786> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1058841793> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180026894> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1079184325> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176010971> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/70144898724450291477> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300181825> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181037473> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1907-1908>,
         <https://performance.musiconn.de/work/arien-violine-tenaglia-antonio>,
-        <https://performance.musiconn.de/work/chere-nuit-bachelet-alfred>,
-        <https://performance.musiconn.de/work/don-giovanni-ouvertuere-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-1-op-10-e-dur-allegretto-vieuxtemps-henri>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-1-op-21-a-moll-hubay-jeno>,
-        <https://performance.musiconn.de/work/la-cloche-saint-saens-camille>,
-        <https://performance.musiconn.de/work/les-nuits-dete-absence-berlioz-hector>,
-        <https://performance.musiconn.de/work/polonaisen-violine-orchester-nr-1-op-4-d-dur-wieniawski-henri>,
-        <https://performance.musiconn.de/work/pourquoi-rester-seulette-saint-saens-camille>,
-        <https://performance.musiconn.de/work/semiramide-bel-raggio-lusinghier-rossini-gioachino>,
-        <https://viaf.org/viaf/176010971>,
-        <https://viaf.org/viaf/180026894>,
-        <https://viaf.org/viaf/180389006>,
-        <https://viaf.org/viaf/181037473>,
-        <https://viaf.org/viaf/184346173>,
-        <https://viaf.org/viaf/70144898724450291477> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/176010971>,
-        <https://viaf.org/viaf/180026894>,
-        <https://viaf.org/viaf/180389006>,
-        <https://viaf.org/viaf/181037473>,
-        <https://viaf.org/viaf/184346173>,
-        <https://viaf.org/viaf/70144898724450291477> .
+        <https://performance.musiconn.de/work/chere-nuit-bachelet-alfred> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176010971> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180026894> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180389006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181037473> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184346173> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/70144898724450291477> a nfdicore:NFDI_0001010 .
 

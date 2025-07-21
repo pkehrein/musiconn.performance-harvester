@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300174713> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300174721> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30017473X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300424418> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1941-06-28> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1941-06-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1941-06-28> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 28.6.1941" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1941-06-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1941-06-28" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300174713>,
-        <https://d-nb.info/gnd/300174721>,
-        <https://d-nb.info/gnd/30017473X>,
-        <https://d-nb.info/gnd/300424418>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/300174713>,
-        <https://d-nb.info/gnd/300174721>,
-        <https://d-nb.info/gnd/30017473X>,
-        <https://d-nb.info/gnd/300424418>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218090754> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219164545> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30017473X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300174721> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219936117> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300174713> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217006922> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300424418> ],
         <https://performance.musiconn.de/source/motettenbuch-1941>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-31-der-tag-nimmt-ab-schreck-gustav>,
-        <https://performance.musiconn.de/work/geistliche-lieder-nach-gedichten-von-eichendorff-aufblick-wolf-hugo>,
-        <https://performance.musiconn.de/work/geistliche-lieder-nach-gedichten-von-eichendorff-einkehr-wolf-hugo>,
-        <https://performance.musiconn.de/work/geistliche-lieder-nach-gedichten-von-eichendorff-ergebung-wolf-hugo>,
-        <https://performance.musiconn.de/work/motetten-op-74-warum-ist-das-licht-gegeben-dem-muehseligen-auswahl-brahms-johannes>,
-        <https://viaf.org/viaf/217006922>,
-        <https://viaf.org/viaf/218090754>,
-        <https://viaf.org/viaf/219164545>,
-        <https://viaf.org/viaf/219936117> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/217006922>,
-        <https://viaf.org/viaf/218090754>,
-        <https://viaf.org/viaf/219164545>,
-        <https://viaf.org/viaf/219936117> .
+        <https://performance.musiconn.de/work/motetten-op-74-warum-ist-das-licht-gegeben-dem-muehseligen-auswahl-brahms-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217006922> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218090754> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219164545> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219936117> a nfdicore:NFDI_0001010 .
 

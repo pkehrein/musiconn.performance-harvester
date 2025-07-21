@@ -4,28 +4,33 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4625181-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/trauerfeier-fuer-evelin-irmscher-1947-2006-alte-handelsboerse-leipzig-2006-04-04-19-30> ] .
 
-<https://performance.musiconn.de/event/trauerfeier-fuer-evelin-irmscher-1947-2006-alte-handelsboerse-leipzig-2006-04-04-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/trauerfeier-fuer-evelin-irmscher-1947-2006-alte-handelsboerse-leipzig-2006-04-04-19-30> a cto:CTO_0001005 ;
     rdfs:label "Trauerfeier für Evelin Irmscher (1947-2006), Alte Handelsbörse (Leipzig), 4.4.2006, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2006-04-04T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2006-04-04T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4625181-9>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4625181-9> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/work/ani-hadal-fassung-saminsky-lasar>,
         <https://performance.musiconn.de/work/enosch-psalm-103-7-9-lewandowski-louis>,
         <https://performance.musiconn.de/work/omnom-ken-schorr-baruch>,
         <https://performance.musiconn.de/work/schabbes-schabbes-fassung-knorrn-horst-dieter>,
         <https://performance.musiconn.de/work/schiwisi-adonoi-psalm-16-8-9-lewandowski-louis>,
         <https://performance.musiconn.de/work/yerushalayim-shel-sahav-fassung-gross-friedbert-shemer-naomi> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4625181-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

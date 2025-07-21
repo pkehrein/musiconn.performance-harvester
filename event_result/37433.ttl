@@ -1,33 +1,39 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015526> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300220200> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-akadem-konzert-volkshaus-jena-saal-1948-11-07-11-00> ] .
 
-<https://performance.musiconn.de/event/2-akadem-konzert-volkshaus-jena-saal-1948-11-07-11-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-akadem-konzert-volkshaus-jena-saal-1948-11-07-11-00> a cto:CTO_0001005 ;
     rdfs:label "2. Akadem. Konzert, Volkshaus (Jena) / Saal, 7.11.1948, 11:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/akademische-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1948-11-07T11:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1948-11-07T11:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015526>,
-        <https://d-nb.info/gnd/300220200> ;
-    cto:itemOf <https://performance.musiconn.de/series/akademische-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015526>,
-        <https://d-nb.info/gnd/300220200>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/volkshaus-jena-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425016> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201856447> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300220200> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015526> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
         <https://performance.musiconn.de/work/boehmische-musik-orchester-op-55-mueller-sigfrid-walther>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-61-d-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-35-b-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/suiten-orchester-cs-30-g-dur-tema-con-variazioni-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/179425016>,
-        <https://viaf.org/viaf/201856447> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/volkshaus-jena-saal> ;
-    cto:viaf <https://viaf.org/viaf/179425016>,
-        <https://viaf.org/viaf/201856447> .
+        <https://performance.musiconn.de/work/suiten-orchester-cs-30-g-dur-tema-con-variazioni-tschaikowski-peter-i> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179425016> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201856447> a nfdicore:NFDI_0001010 .
 

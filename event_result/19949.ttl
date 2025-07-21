@@ -1,59 +1,84 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1181732395> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009984> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300126735> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300126751> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30012676X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300126778> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300782276> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7622879-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-christuskirche-koeln-1936-11-05> ] .
 
-<https://performance.musiconn.de/event/konzert-christuskirche-koeln-1936-11-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-christuskirche-koeln-1936-11-05> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Christuskirche (Köln), 5.11.1936" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1936-11-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1936-11-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1181732395>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300126735>,
-        <https://d-nb.info/gnd/300126751>,
-        <https://d-nb.info/gnd/30012676X>,
-        <https://d-nb.info/gnd/300126778>,
-        <https://d-nb.info/gnd/300782276>,
-        <https://d-nb.info/gnd/7622879-4> ;
-    cto:relatedItem <https://d-nb.info/gnd/1181732395>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300126735>,
-        <https://d-nb.info/gnd/300126751>,
-        <https://d-nb.info/gnd/30012676X>,
-        <https://d-nb.info/gnd/300126778>,
-        <https://d-nb.info/gnd/300782276>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7622879-4> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/243903557> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009984> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177379672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182292233> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192574818> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1181732395> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181283723> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179117260> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176492771> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300126778> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300126735> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300782276> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/877155411320708940001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300126751> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30012676X> ],
         <https://performance.musiconn.de/source/motettenbuch-1936>,
-        <https://performance.musiconn.de/work/centuria-pars-1-christus-humiliavit-semet-dulichius-philipp>,
-        <https://performance.musiconn.de/work/cymbalum-sionium-laetatus-sum-in-his-quae-dicta-sunt-mihi-schein-johann-hermann>,
-        <https://performance.musiconn.de/work/fontana-disrael-zion-spricht-der-herr-hat-mich-verlassen-schein-johann-hermann>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-138-das-agnus-dei-reger-max>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-138-der-mensch-lebt-und-bestehet-nur-eine-kleine-zeit-reger-max>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-138-morgengesang-reger-max>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-138-nachtlied-reger-max>,
-        <https://performance.musiconn.de/work/jesu-meine-freude-bach-johann-sebastian>,
-        <https://viaf.org/viaf/176492771>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/179117260>,
-        <https://viaf.org/viaf/181283723>,
-        <https://viaf.org/viaf/182292233>,
-        <https://viaf.org/viaf/192574818>,
-        <https://viaf.org/viaf/877155411320708940001> ;
-    cto:relatedLocation <https://d-nb.info/gnd/7622879-4>,
-        <https://viaf.org/viaf/243903557> ;
-    cto:viaf <https://viaf.org/viaf/176492771>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/179117260>,
-        <https://viaf.org/viaf/181283723>,
-        <https://viaf.org/viaf/182292233>,
-        <https://viaf.org/viaf/192574818>,
-        <https://viaf.org/viaf/243903557>,
-        <https://viaf.org/viaf/877155411320708940001> .
+        <https://performance.musiconn.de/work/centuria-pars-1-christus-humiliavit-semet-dulichius-philipp> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176492771> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177379672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179117260> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181283723> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182292233> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192574818> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/243903557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/877155411320708940001> a nfdicore:NFDI_0001010 .
 

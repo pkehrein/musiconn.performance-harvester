@@ -1,40 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1133116752> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300333633> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300345577> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/hindemith-11-90-1-hochschule-fuer-musik-und-darstellende-kunst-frankfurt-am-main-1990-11-04> ] .
 
-<https://performance.musiconn.de/event/hindemith-11-90-1-hochschule-fuer-musik-und-darstellende-kunst-frankfurt-am-main-1990-11-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/hindemith-11-90-1-hochschule-fuer-musik-und-darstellende-kunst-frankfurt-am-main-1990-11-04> a cto:CTO_0001005 ;
     rdfs:label "Hindemith 11/90/1, Hochschule für Musik und Darstellende Kunst (Frankfurt am Main), 4.11.1990" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1990-11-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1990-11-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1133116752>,
-        <https://d-nb.info/gnd/300333633>,
-        <https://d-nb.info/gnd/300345577>,
-        <https://d-nb.info/gnd/3008405-2> ;
-    cto:relatedItem <https://d-nb.info/gnd/1133116752>,
-        <https://d-nb.info/gnd/300333633>,
-        <https://d-nb.info/gnd/300345577>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hochschule-fuer-musik-und-darstellende-kunst-frankfurt-am-main> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7401149662194307020001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197656493> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1133116752> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183897684> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300333633> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300345577> ],
         <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/catalogue-passe-spree-hermann>,
-        <https://performance.musiconn.de/work/kammermusik-op-361-hindemith-paul>,
-        <https://performance.musiconn.de/work/klangmoraste-hajdu-georg>,
-        <https://performance.musiconn.de/work/prae-blue-eichmann-dietrich>,
-        <https://viaf.org/viaf/183897684>,
-        <https://viaf.org/viaf/197656493>,
-        <https://viaf.org/viaf/7401149662194307020001> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hochschule-fuer-musik-und-darstellende-kunst-frankfurt-am-main> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/183897684>,
-        <https://viaf.org/viaf/197656493>,
-        <https://viaf.org/viaf/7401149662194307020001> .
+        <https://performance.musiconn.de/work/prae-blue-eichmann-dietrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183897684> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197656493> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7401149662194307020001> a nfdicore:NFDI_0001010 .
 

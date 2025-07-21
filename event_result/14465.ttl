@@ -1,55 +1,75 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1051857082> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300025874> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102224> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145896> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146485> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300345488> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/abokonzert-4-zweites-gewandhaus-leipzig-1902-10-30> ] .
 
-<https://performance.musiconn.de/event/abokonzert-4-zweites-gewandhaus-leipzig-1902-10-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/abokonzert-4-zweites-gewandhaus-leipzig-1902-10-30> a cto:CTO_0001005 ;
     rdfs:label "Abokonzert 4, Zweites Gewandhaus (Leipzig), 30.10.1902" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1902-10-30" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1902-10-30" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1051857082>,
-        <https://d-nb.info/gnd/300025874>,
-        <https://d-nb.info/gnd/300102224>,
-        <https://d-nb.info/gnd/300145896>,
-        <https://d-nb.info/gnd/300146485>,
-        <https://d-nb.info/gnd/300345488>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/1051857082>,
-        <https://d-nb.info/gnd/300025874>,
-        <https://d-nb.info/gnd/300102224>,
-        <https://d-nb.info/gnd/300145896>,
-        <https://d-nb.info/gnd/300146485>,
-        <https://d-nb.info/gnd/300345488>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1051857082> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179822789> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185469755> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146485> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145896> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/292927791> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102224> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025874> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185027297> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300345488> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186719550> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
         <https://performance.musiconn.de/work/an-den-mond-schubert-franz>,
         <https://performance.musiconn.de/work/er-ists-wolf-hugo>,
         <https://performance.musiconn.de/work/feuersnot-liebesszene-strauss-richard>,
-        <https://performance.musiconn.de/work/konzert-ouvertuere-zum-maerchen-von-der-schoenen-melusine-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/liebe-freudvoll-und-leidvoll-schubert-franz>,
-        <https://performance.musiconn.de/work/lieder-fuer-sopran-gesang-weylas-heimweh-wolf-hugo>,
-        <https://performance.musiconn.de/work/lieder-op-49-wiegenlied-brahms-johannes>,
-        <https://performance.musiconn.de/work/myrthen-der-nussbaum-schumann-robert>,
-        <https://performance.musiconn.de/work/romanzen-und-balladen-op-64-die-soldatenbraut-schumann-robert>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-op-97-es-dur-schumann-robert>,
-        <https://viaf.org/viaf/179822789>,
-        <https://viaf.org/viaf/185027297>,
-        <https://viaf.org/viaf/185469755>,
-        <https://viaf.org/viaf/186719550>,
-        <https://viaf.org/viaf/292927791> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/179822789>,
-        <https://viaf.org/viaf/185027297>,
-        <https://viaf.org/viaf/185469755>,
-        <https://viaf.org/viaf/186719550>,
-        <https://viaf.org/viaf/264523828>,
-        <https://viaf.org/viaf/292927791> .
+        <https://performance.musiconn.de/work/lieder-fuer-sopran-gesang-weylas-heimweh-wolf-hugo> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179822789> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185027297> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185469755> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186719550> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/292927791> a nfdicore:NFDI_0001010 .
 

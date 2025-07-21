@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4021912-4> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/internationale-frauenmusiktage-236-4-71988-4000-jahre-frauen-in-der-musik-cindy-peress-usa-graz-1988-06-30> ] .
 
-<https://performance.musiconn.de/event/internationale-frauenmusiktage-236-4-71988-4000-jahre-frauen-in-der-musik-cindy-peress-usa-graz-1988-06-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/internationale-frauenmusiktage-236-4-71988-4000-jahre-frauen-in-der-musik-cindy-peress-usa-graz-1988-06-30> a cto:CTO_0001005 ;
     rdfs:label "Internationale Frauenmusiktage 23.6.-4. 7.1988 - 4000 Jahre Frauen in der Musik - Cindy Peress (USA), Graz, 30.6.1988" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-06-30" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-06-30" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4021912-4> ;
-    cto:relatedItem <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-internationale-frauenmusiktage-236-4-71988-graz-4000-jahre-frauen-in-der-musik-cindy-peress>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4021912-4> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/160255975> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-internationale-frauenmusiktage-236-4-71988-graz-4000-jahre-frauen-in-der-musik-cindy-peress>,
         <https://performance.musiconn.de/work/jazz-blues-rock-new-wave-peress-cindy> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4021912-4>,
-        <https://viaf.org/viaf/160255975> ;
-    cto:viaf <https://viaf.org/viaf/160255975> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/160255975> a nfdicore:NFDI_0001010 .
 

@@ -1,26 +1,29 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1070359599> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/der-alte-feldherr-morettisches-opernhaus-dresden-1836-11-23-18-00> ] .
 
-<https://performance.musiconn.de/event/der-alte-feldherr-morettisches-opernhaus-dresden-1836-11-23-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/der-alte-feldherr-morettisches-opernhaus-dresden-1836-11-23-18-00> a cto:CTO_0001005 ;
     rdfs:label "Der alte Feldherr, Morettisches Opernhaus (Dresden), 23.11.1836, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/koeniglich-saechsisches-hoftheater-spielzeit-1836> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1836-11-23T20:45:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1836-11-23T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1070359599> ;
-    cto:itemOf <https://performance.musiconn.de/series/koeniglich-saechsisches-hoftheater-spielzeit-1836> ;
-    cto:relatedItem <https://d-nb.info/gnd/1070359599>,
-        <https://performance.musiconn.de/source/koenigliches-hoftheater-theaterzettel-dresden>,
-        <https://performance.musiconn.de/work/der-alte-feldherr-holtei-karl-von>,
-        <https://viaf.org/viaf/184226864> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/morettisches-opernhaus-dresden> ;
-    cto:viaf <https://viaf.org/viaf/184226864> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/morettisches-opernhaus-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1070359599> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184226864> ],
+        <https://performance.musiconn.de/source/koenigliches-hoftheater-theaterzettel-dresden> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/184226864> a nfdicore:NFDI_0001010 .
 

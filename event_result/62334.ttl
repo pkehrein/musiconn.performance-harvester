@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4037100-1> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/le-fortune-di-rodope-e-damira-mailand-1660-00-00> ] .
 
-<https://performance.musiconn.de/event/le-fortune-di-rodope-e-damira-mailand-1660-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/le-fortune-di-rodope-e-damira-mailand-1660-00-00> a cto:CTO_0001005 ;
     rdfs:label "Le Fortune di Rodope e Damira, Mailand, 1660" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1660-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1660-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4037100-1> ;
-    cto:relatedItem <https://performance.musiconn.de/source/sartori-claudio-i-libretti-italiani-a-stampa-dalle-origini-al-1800-6-bde-cuneo-bertola-locatelli-19901993>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4037100-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/157818740> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/sartori-claudio-i-libretti-italiani-a-stampa-dalle-origini-al-1800-6-bde-cuneo-bertola-locatelli-19901993>,
         <https://performance.musiconn.de/work/le-fortune-di-rodope-e-damira-ziani-pietro-andrea> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4037100-1>,
-        <https://viaf.org/viaf/157818740> ;
-    cto:viaf <https://viaf.org/viaf/157818740> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/157818740> a nfdicore:NFDI_0001010 .
 

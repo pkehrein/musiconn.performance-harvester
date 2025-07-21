@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1082526088> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146477> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171528> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/fuenfzehntes-abonnement-concert-erstes-gewandhaus-leipzig-1863-01-29> ] .
 
-<https://performance.musiconn.de/event/fuenfzehntes-abonnement-concert-erstes-gewandhaus-leipzig-1863-01-29> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/fuenfzehntes-abonnement-concert-erstes-gewandhaus-leipzig-1863-01-29> a cto:CTO_0001005 ;
     rdfs:label "Fünfzehntes Abonnement-Concert, Erstes Gewandhaus (Leipzig), 29.1.1863" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1863-01-29" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1863-01-29" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1082526088>,
-        <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/300146477>,
-        <https://d-nb.info/gnd/300171528> ;
-    cto:relatedItem <https://d-nb.info/gnd/1082526088>,
-        <https://d-nb.info/gnd/300146477>,
-        <https://d-nb.info/gnd/300171528>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177811557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189341326> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1082526088> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146477> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/15145602485801361939> ],
         <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
-        <https://performance.musiconn.de/source/programmzettel>,
-        <https://performance.musiconn.de/work/concertino-violine-orchester-op-12-d-dur-ernst-heinrich-wilhelm>,
-        <https://performance.musiconn.de/work/der-freischuetz-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-61-c-dur-schumann-robert>,
-        <https://viaf.org/viaf/15145602485801361939>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/189341326> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/15145602485801361939>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/189341326>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/source/programmzettel> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/15145602485801361939> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177811557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189341326> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

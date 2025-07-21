@@ -1,37 +1,48 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010737> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300400446> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1933-09-16-18-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1933-09-16-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1933-09-16-18-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 16.9.1933, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1933-34> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1933-09-16T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1933-09-16T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300010737>,
-        <https://d-nb.info/gnd/300400446>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1933-34> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300010737>,
-        <https://d-nb.info/gnd/300400446>,
-        <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/assumpta-est-maria-messe-palestrina-giovanni-pierluigi-da>,
-        <https://performance.musiconn.de/work/praeludium-und-fuge-orgel-bwv-548-e-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-bach-johann-sebastian>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/209871014> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/209871014>,
-        <https://viaf.org/viaf/248189528> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300400446> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010737> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181241390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209871014> ],
+        <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181241390> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209871014> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
 

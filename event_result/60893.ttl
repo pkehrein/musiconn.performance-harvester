@@ -1,45 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300044216> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144253> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300158556> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300158564> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4050471-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sinfoniekonzert-orchesterverein-aarau-22111998-1998-11-22> ] .
 
-<https://performance.musiconn.de/event/sinfoniekonzert-orchesterverein-aarau-22111998-1998-11-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sinfoniekonzert-orchesterverein-aarau-22111998-1998-11-22> a cto:CTO_0001005 ;
     rdfs:label "Sinfoniekonzert Orchesterverein Aarau, 22.11.1998, 22.11.1998" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1998-11-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1998-11-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300044216>,
-        <https://d-nb.info/gnd/300144253>,
-        <https://d-nb.info/gnd/300158556>,
-        <https://d-nb.info/gnd/300158564>,
-        <https://d-nb.info/gnd/4050471-2> ;
-    cto:relatedItem <https://d-nb.info/gnd/300044216>,
-        <https://d-nb.info/gnd/300144253>,
-        <https://d-nb.info/gnd/300158556>,
-        <https://d-nb.info/gnd/300158564>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4050471-2> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/243431474> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300158556> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208685370> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144253> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175737337> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213968750> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214740163> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300044216> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300158564> ],
         <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-sinfoniekonzert-orchesterverein-aarau-22111998>,
         <https://performance.musiconn.de/work/fantasien-hornquartett-orchester-desportes-yvonne>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-7-a-moll-schumann-clara>,
-        <https://performance.musiconn.de/work/memories-dinescu-violeta>,
-        <https://performance.musiconn.de/work/suiten-orchester-k-38-stravinsky-igor>,
-        <https://performance.musiconn.de/work/suiten-orchester-k-45-stravinsky-igor>,
-        <https://performance.musiconn.de/work/trios-3-hoerner-orchester-op-15-dauprat-louis-francois>,
-        <https://viaf.org/viaf/175737337>,
-        <https://viaf.org/viaf/208685370>,
-        <https://viaf.org/viaf/213968750>,
-        <https://viaf.org/viaf/214740163> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4050471-2>,
-        <https://viaf.org/viaf/243431474> ;
-    cto:viaf <https://viaf.org/viaf/175737337>,
-        <https://viaf.org/viaf/208685370>,
-        <https://viaf.org/viaf/213968750>,
-        <https://viaf.org/viaf/214740163>,
-        <https://viaf.org/viaf/243431474> .
+        <https://performance.musiconn.de/work/trios-3-hoerner-orchester-op-15-dauprat-louis-francois> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175737337> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208685370> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213968750> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214740163> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/243431474> a nfdicore:NFDI_0001010 .
 

@@ -1,52 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1147670617> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010141> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010389> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026366> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300179723> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-12-12-18-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-12-12-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-12-12-18-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 12.12.1936, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1936-37> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1936-12-12T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1936-12-12T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1147670617>,
-        <https://d-nb.info/gnd/300010141>,
-        <https://d-nb.info/gnd/300010389>,
-        <https://d-nb.info/gnd/300026366>,
-        <https://d-nb.info/gnd/300179723>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1936-37> ;
-    cto:relatedItem <https://d-nb.info/gnd/1147670617>,
-        <https://d-nb.info/gnd/300010141>,
-        <https://d-nb.info/gnd/300010389>,
-        <https://d-nb.info/gnd/300026366>,
-        <https://d-nb.info/gnd/300179723>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215921842> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300179723> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010389> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010141> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182639689> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175211859> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026366> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175186138> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1147670617> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/harmoniae-angelicae-cantionum-ecclesiasticarum-joseph-lieber-joseph-mein-bodenschatz-erhard>,
         <https://performance.musiconn.de/work/jesu-wiegenlied-leipold-bruno>,
         <https://performance.musiconn.de/work/lasst-uns-das-kindlein-wiegen-unger-hermann>,
-        <https://performance.musiconn.de/work/motetten-op-74-o-heiland-reiss-die-himmel-auf-brahms-johannes>,
         <https://performance.musiconn.de/work/nachtigall-wach-auf-kranz-albert>,
         <https://performance.musiconn.de/work/nun-freut-euch-lieben-christen-gemein-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/nun-komm-der-heiden-heiland-orgel-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/orgel-buechlein-vom-himmel-kam-der-engel-schar-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/pastoralen-orgel-bwv-590-f-dur-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/weihnachtschoral-leipold-bruno>,
-        <https://viaf.org/viaf/175186138>,
-        <https://viaf.org/viaf/175211859>,
-        <https://viaf.org/viaf/182639689>,
-        <https://viaf.org/viaf/215921842> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/175186138>,
-        <https://viaf.org/viaf/175211859>,
-        <https://viaf.org/viaf/182639689>,
-        <https://viaf.org/viaf/215921842>,
-        <https://viaf.org/viaf/248189528> .
+        <https://performance.musiconn.de/work/weihnachtschoral-leipold-bruno> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175186138> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175211859> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182639689> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215921842> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
 

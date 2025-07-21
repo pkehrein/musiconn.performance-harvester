@@ -1,46 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1124811923> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1193931908> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300068646> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300126735> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2003-04-05> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2003-04-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2003-04-05> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 5.4.2003" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2003-04-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2003-04-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1124811923>,
-        <https://d-nb.info/gnd/1193931908>,
-        <https://d-nb.info/gnd/300068646>,
-        <https://d-nb.info/gnd/300126735>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1124811923>,
-        <https://d-nb.info/gnd/1193931908>,
-        <https://d-nb.info/gnd/300068646>,
-        <https://d-nb.info/gnd/300126735>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300126735> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1193931908> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300068646> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192573485> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1124811923> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179154016> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174396762> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179117260> ],
         <https://performance.musiconn.de/source/motettenbuch-2002-03>,
-        <https://performance.musiconn.de/work/das-blut-iesu-christi-bach-johann-michael>,
-        <https://performance.musiconn.de/work/du-wahrer-gott-und-davids-sohn-christe-du-lamm-gottes-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/fuerwahr-er-trug-unsre-krankheit-golle-juergen>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-138-das-agnus-dei-reger-max>,
         <https://performance.musiconn.de/work/jesu-kreuz-leiden-und-pein-gumpelzhaimer-adam>,
-        <https://performance.musiconn.de/work/nimm-von-uns-herr-gott-hauptmann-moritz>,
-        <https://performance.musiconn.de/work/preussische-fest-lieder-teil-1-im-garten-leidet-christus-not-eccard-johannes>,
-        <https://viaf.org/viaf/174396762>,
-        <https://viaf.org/viaf/179117260>,
-        <https://viaf.org/viaf/179154016>,
-        <https://viaf.org/viaf/192573485> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/174396762>,
-        <https://viaf.org/viaf/179117260>,
-        <https://viaf.org/viaf/179154016>,
-        <https://viaf.org/viaf/192573485> .
+        <https://performance.musiconn.de/work/preussische-fest-lieder-teil-1-im-garten-leidet-christus-not-eccard-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174396762> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179117260> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179154016> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192573485> a nfdicore:NFDI_0001010 .
 

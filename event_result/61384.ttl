@@ -1,43 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300016336> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110316> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140940> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141645> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-vereinskonzert-hotel-koenig-von-england-muenster-saal-des-herrn-gerbaulet-1861-12-07> ] .
 
-<https://performance.musiconn.de/event/4-vereinskonzert-hotel-koenig-von-england-muenster-saal-des-herrn-gerbaulet-1861-12-07> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-vereinskonzert-hotel-koenig-von-england-muenster-saal-des-herrn-gerbaulet-1861-12-07> a cto:CTO_0001005 ;
     rdfs:label "4. Vereinskonzert, Hotel \"König von England\" (Münster) / Saal des Herrn Gerbaulet, 7.12.1861" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1861-62> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1861-12-07" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1861-12-07" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300016336>,
-        <https://d-nb.info/gnd/300110316>,
-        <https://d-nb.info/gnd/300140940>,
-        <https://d-nb.info/gnd/300141645> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1861-62> ;
-    cto:relatedItem <https://d-nb.info/gnd/300016336>,
-        <https://d-nb.info/gnd/300110316>,
-        <https://d-nb.info/gnd/300140940>,
-        <https://d-nb.info/gnd/300141645>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hotel-koenig-von-england-muenster-saal-des-herrn-gerbaulet> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141645> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217005307> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215922002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110316> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016336> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178210081> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140940> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183064081> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1861-1862>,
         <https://performance.musiconn.de/work/das-nachtlager-in-granada-rezitativ-und-arie-kreutzer-conradin>,
-        <https://performance.musiconn.de/work/die-schoene-muellerin-ungeduld-schubert-franz>,
-        <https://performance.musiconn.de/work/iphigenie-en-aulide-ouvertuere-fassung-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/lieder-nach-gedichten-von-rellstab-und-heine-am-meer-schubert-franz>,
-        <https://performance.musiconn.de/work/quintette-oboe-klarinette-horn-fagott-klavier-kv-452-es-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-21-c-dur-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/178210081>,
-        <https://viaf.org/viaf/183064081>,
-        <https://viaf.org/viaf/215922002>,
-        <https://viaf.org/viaf/217005307> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hotel-koenig-von-england-muenster-saal-des-herrn-gerbaulet> ;
-    cto:viaf <https://viaf.org/viaf/178210081>,
-        <https://viaf.org/viaf/183064081>,
-        <https://viaf.org/viaf/215922002>,
-        <https://viaf.org/viaf/217005307> .
+        <https://performance.musiconn.de/work/iphigenie-en-aulide-ouvertuere-fassung-gluck-christoph-willibald> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178210081> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183064081> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215922002> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217005307> a nfdicore:NFDI_0001010 .
 

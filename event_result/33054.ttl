@@ -1,34 +1,42 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026897> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300034172> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/usa-2015-kravis-center-for-performing-arts-west-palm-beach-2015-03-02-20-00> ] .
 
-<https://performance.musiconn.de/event/usa-2015-kravis-center-for-performing-arts-west-palm-beach-2015-03-02-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/usa-2015-kravis-center-for-performing-arts-west-palm-beach-2015-03-02-20-00> a cto:CTO_0001005 ;
     rdfs:label "USA 2015, Kravis Center for Performing Arts (West Palm Beach), 2.3.2015, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2014-2015> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2015-03-02T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2015-03-02T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026897>,
-        <https://d-nb.info/gnd/300034172> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2014-2015> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026897>,
-        <https://d-nb.info/gnd/300034172>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/134100387> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176605857> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300034172> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194731012> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026897> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-98-e-moll-brahms-johannes>,
         <https://performance.musiconn.de/work/suite-nach-dem-film-erinnerungen-einer-geisha-brush-on-silk-williams-john>,
-        <https://performance.musiconn.de/work/suite-nach-dem-film-erinnerungen-einer-geisha-going-to-school-williams-john>,
-        <https://performance.musiconn.de/work/variacii-na-temu-rokoko-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/176605857>,
-        <https://viaf.org/viaf/194731012> ;
-    cto:relatedLocation <https://viaf.org/viaf/134100387> ;
-    cto:viaf <https://viaf.org/viaf/134100387>,
-        <https://viaf.org/viaf/176605857>,
-        <https://viaf.org/viaf/194731012> .
+        <https://performance.musiconn.de/work/suite-nach-dem-film-erinnerungen-einer-geisha-going-to-school-williams-john> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/134100387> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176605857> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194731012> a nfdicore:NFDI_0001010 .
 

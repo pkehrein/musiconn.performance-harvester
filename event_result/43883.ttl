@@ -4,27 +4,32 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1192325486> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/10-jahre-ephraim-carlebach-stiftung-altes-rathaus-leipzig-festsaal-2002-11-12> ] .
 
-<https://performance.musiconn.de/event/10-jahre-ephraim-carlebach-stiftung-altes-rathaus-leipzig-festsaal-2002-11-12> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/10-jahre-ephraim-carlebach-stiftung-altes-rathaus-leipzig-festsaal-2002-11-12> a cto:CTO_0001005 ;
     rdfs:label "10 Jahre Ephraim-Carlebach-Stiftung, Altes Rathaus (Leipzig) / Festsaal, 12.11.2002" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2002-11-12" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2002-11-12" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1192325486>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1192325486> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/programm-festakt-12-november-2002>,
         <https://performance.musiconn.de/work/hawa-nagila-fassung-gross-friedbert-idelsohn-abraham-z>,
         <https://performance.musiconn.de/work/lochen-somach-libi-psalm-16-9-11-lewandowski-louis>,
         <https://performance.musiconn.de/work/towo-lfonecho-lewandowski-louis>,
         <https://performance.musiconn.de/work/wchach-hojo-omer-nowakowsky-david> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1192325486> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

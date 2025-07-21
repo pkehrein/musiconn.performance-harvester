@@ -1,32 +1,43 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/115960374X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118505505> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4123332-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/feierlichkeiten-aus-anlass-der-fuenfzigjaehrigen-amtsjubilaeen-von-pastor-heinrich-hoeck-und-protosyndicus-johann-klefeker-sankt-michaelis-hamburg-1775-06-24> ] .
 
-<https://performance.musiconn.de/event/feierlichkeiten-aus-anlass-der-fuenfzigjaehrigen-amtsjubilaeen-von-pastor-heinrich-hoeck-und-protosyndicus-johann-klefeker-sankt-michaelis-hamburg-1775-06-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/feierlichkeiten-aus-anlass-der-fuenfzigjaehrigen-amtsjubilaeen-von-pastor-heinrich-hoeck-und-protosyndicus-johann-klefeker-sankt-michaelis-hamburg-1775-06-24> a cto:CTO_0001005 ;
     rdfs:label "Feierlichkeiten aus Anlaß der fünfzigjährigen Amtsjubiläen von Pastor Heinrich Hoeck und Protosyndicus Johann Klefeker, Sankt Michaelis (Hamburg), 24.6.1775" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1775-06-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1775-06-24" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118505505> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316738724> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4123332-3> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/115960374X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4828152684019923430005> ],
+        <https://performance.musiconn.de/source/carl-philipp-emanuel-bach-dokumente-zu-leben-und-wirken-aus-der-zeitgenoessischen-hamburgischen-presse-1767-1790-leipziger-beitraege-zur-bach-forschung-4-hildesheim-u-a> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/115960374X>,
-        <https://d-nb.info/gnd/118505505>,
-        <https://d-nb.info/gnd/4123332-3> ;
-    cto:relatedItem <https://d-nb.info/gnd/115960374X>,
-        <https://performance.musiconn.de/source/carl-philipp-emanuel-bach-dokumente-zu-leben-und-wirken-aus-der-zeitgenoessischen-hamburgischen-presse-1767-1790-leipziger-beitraege-zur-bach-forschung-4-hildesheim-u-a>,
-        <https://performance.musiconn.de/work/jubelmusik-klefeker-1775-bach-carl-philipp-emanuel>,
-        <https://viaf.org/viaf/4828152684019923430005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4123332-3>,
-        <https://viaf.org/viaf/316738724> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118505505>,
-        <https://viaf.org/viaf/204566> ;
-    cto:viaf <https://viaf.org/viaf/204566>,
-        <https://viaf.org/viaf/316738724>,
-        <https://viaf.org/viaf/4828152684019923430005> .
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204566> ] .
+
+<https://viaf.org/viaf/204566> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316738724> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4828152684019923430005> a nfdicore:NFDI_0001010 .
 

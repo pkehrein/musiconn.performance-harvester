@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30002567X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027125> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033834> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1918-12-05-19-30> ] .
 
-<https://performance.musiconn.de/event/3-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1918-12-05-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1918-12-05-19-30> a cto:CTO_0001005 ;
     rdfs:label "3. Symphonie-Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 5.12.1918, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1918-1919-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1918-12-05T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1918-12-05T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30002567X>,
-        <https://d-nb.info/gnd/300027125>,
-        <https://d-nb.info/gnd/300033834> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1918-1919-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/30002567X>,
-        <https://d-nb.info/gnd/300027125>,
-        <https://d-nb.info/gnd/300033834>,
-        <https://performance.musiconn.de/source/gedruckte-konzertprogramme-symphonie-konzerte-1908-1933>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-77-d-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/sinfonien-nr-5-op-64-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/tragische-ouverture-brahms-johannes>,
-        <https://viaf.org/viaf/177010812>,
-        <https://viaf.org/viaf/206833489>,
-        <https://viaf.org/viaf/214736935> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/177010812>,
-        <https://viaf.org/viaf/206833489>,
-        <https://viaf.org/viaf/214736935> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30002567X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033834> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214736935> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177010812> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206833489> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027125> ],
+        <https://performance.musiconn.de/source/gedruckte-konzertprogramme-symphonie-konzerte-1908-1933> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177010812> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206833489> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214736935> a nfdicore:NFDI_0001010 .
 

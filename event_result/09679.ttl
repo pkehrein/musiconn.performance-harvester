@@ -1,59 +1,84 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009984> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010001> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001001X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300136838> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300431740> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300552858> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30062249X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4192773-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-marienkirche-berlin-mitte-1988-04-12> ] .
 
-<https://performance.musiconn.de/event/konzert-marienkirche-berlin-mitte-1988-04-12> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-marienkirche-berlin-mitte-1988-04-12> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Marienkirche (Berlin-Mitte), 12.4.1988" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-04-12" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-04-12" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300010001>,
-        <https://d-nb.info/gnd/30001001X>,
-        <https://d-nb.info/gnd/300136838>,
-        <https://d-nb.info/gnd/300431740>,
-        <https://d-nb.info/gnd/300552858>,
-        <https://d-nb.info/gnd/30062249X>,
-        <https://d-nb.info/gnd/4192773-4> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300010001>,
-        <https://d-nb.info/gnd/30001001X>,
-        <https://d-nb.info/gnd/300136838>,
-        <https://d-nb.info/gnd/300431740>,
-        <https://d-nb.info/gnd/300552858>,
-        <https://d-nb.info/gnd/30062249X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/235968199> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4192773-4> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186509189> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316736830> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179407683> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300431740> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208697261> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300136838> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009984> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300552858> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177379672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186276034> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30062249X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001001X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182469156> ],
         <https://performance.musiconn.de/source/motettenbuch-1988>,
-        <https://performance.musiconn.de/work/cantiones-sacrae-duo-seraphim-clamabant-scheidt-samuel>,
-        <https://performance.musiconn.de/work/der-friede-gottes-rolle-johann-heinrich>,
-        <https://performance.musiconn.de/work/deutsches-magnificat-swv-494-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/fontana-disrael-nu-danket-alle-gott-schein-johann-hermann>,
-        <https://performance.musiconn.de/work/fuerchte-dich-nicht-ich-bin-bei-dir-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/herr-hoere-mein-gebet-op-45-richter-ernst-friedrich-eduard>,
-        <https://performance.musiconn.de/work/jesu-meine-freude-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/komm-jesu-komm-mein-leib-ist-muede-bach-johann-sebastian>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/179407683>,
-        <https://viaf.org/viaf/182469156>,
-        <https://viaf.org/viaf/186276034>,
-        <https://viaf.org/viaf/186509189>,
-        <https://viaf.org/viaf/208697261>,
-        <https://viaf.org/viaf/316736830> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4192773-4>,
-        <https://viaf.org/viaf/235968199> ;
-    cto:viaf <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/179407683>,
-        <https://viaf.org/viaf/182469156>,
-        <https://viaf.org/viaf/186276034>,
-        <https://viaf.org/viaf/186509189>,
-        <https://viaf.org/viaf/208697261>,
-        <https://viaf.org/viaf/235968199>,
-        <https://viaf.org/viaf/316736830> .
+        <https://performance.musiconn.de/work/herr-hoere-mein-gebet-op-45-richter-ernst-friedrich-eduard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177379672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179407683> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182469156> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186276034> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186509189> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208697261> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/235968199> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316736830> a nfdicore:NFDI_0001010 .
 

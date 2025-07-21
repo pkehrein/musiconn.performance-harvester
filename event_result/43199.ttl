@@ -1,52 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300144563> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144709> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144822> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145780> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145896> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300376863> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-kammermusik-abend-industrie-und-handelskammer-boerse-festsaal-frankfurt-am-main-1956-09-27-20-00> ] .
 
-<https://performance.musiconn.de/event/1-kammermusik-abend-industrie-und-handelskammer-boerse-festsaal-frankfurt-am-main-1956-09-27-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-kammermusik-abend-industrie-und-handelskammer-boerse-festsaal-frankfurt-am-main-1956-09-27-20-00> a cto:CTO_0001005 ;
     rdfs:label "1. Kammermusik-Abend, Industrie- und Handelskammer (Börse). Festsaal (Frankfurt am Main), 27.9.1956, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1956-1957> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1956-09-27T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1956-09-27T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300144563>,
-        <https://d-nb.info/gnd/300144709>,
-        <https://d-nb.info/gnd/300144822>,
-        <https://d-nb.info/gnd/300145780>,
-        <https://d-nb.info/gnd/300145896>,
-        <https://d-nb.info/gnd/300376863> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1956-1957> ;
-    cto:relatedItem <https://d-nb.info/gnd/300144563>,
-        <https://d-nb.info/gnd/300144709>,
-        <https://d-nb.info/gnd/300144822>,
-        <https://d-nb.info/gnd/300145780>,
-        <https://d-nb.info/gnd/300145896>,
-        <https://d-nb.info/gnd/300376863>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/industrie-und-handelskammer-boerse-festsaal-frankfurt-am-main> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184685850> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175218984> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211712082> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186719550> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144709> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145780> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145896> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144822> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300376863> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177003498> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144563> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179851477> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/davidsbuendlertaenze-schumann-robert>,
-        <https://performance.musiconn.de/work/fantasien-klavier-op-17-c-dur-schumann-robert>,
-        <https://performance.musiconn.de/work/frauenliebe-und-leben-schumann-robert>,
-        <https://performance.musiconn.de/work/gedichte-op-35-erstes-gruen-schumann-robert>,
-        <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-mondnacht-schumann-robert>,
-        <https://performance.musiconn.de/work/myrthen-der-nussbaum-schumann-robert>,
-        <https://performance.musiconn.de/work/volksliedchen-schumann-robert>,
-        <https://viaf.org/viaf/175218984>,
-        <https://viaf.org/viaf/177003498>,
-        <https://viaf.org/viaf/179851477>,
-        <https://viaf.org/viaf/184685850>,
-        <https://viaf.org/viaf/186719550>,
-        <https://viaf.org/viaf/211712082> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/industrie-und-handelskammer-boerse-festsaal-frankfurt-am-main> ;
-    cto:viaf <https://viaf.org/viaf/175218984>,
-        <https://viaf.org/viaf/177003498>,
-        <https://viaf.org/viaf/179851477>,
-        <https://viaf.org/viaf/184685850>,
-        <https://viaf.org/viaf/186719550>,
-        <https://viaf.org/viaf/211712082> .
+        <https://performance.musiconn.de/work/volksliedchen-schumann-robert> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175218984> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177003498> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179851477> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184685850> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186719550> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211712082> a nfdicore:NFDI_0001010 .
 

@@ -1,30 +1,36 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1181975832> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4508319-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/adventsfeier-roter-saal-neues-rathaus-dresden-roter-saal-1936-12-06-17-30> ] .
 
-<https://performance.musiconn.de/event/adventsfeier-roter-saal-neues-rathaus-dresden-roter-saal-1936-12-06-17-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/adventsfeier-roter-saal-neues-rathaus-dresden-roter-saal-1936-12-06-17-30> a cto:CTO_0001005 ;
     rdfs:label "Adventsfeier (Roter Saal), Neues Rathaus (Dresden) / Roter Saal, 6.12.1936, 17:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1936-12-06T19:15:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1936-12-06T17:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1181975832>,
-        <https://d-nb.info/gnd/4508319-8> ;
-    cto:relatedItem <https://d-nb.info/gnd/1181975832>,
-        <https://d-nb.info/gnd/4508319-8>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/neues-rathaus-dresden-roter-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1181975832> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/569155411319908940006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4508319-8> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196910116> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
         <https://performance.musiconn.de/work/erzgebirgische-lieder-anonym>,
-        <https://performance.musiconn.de/work/fruehling-fruehling-schoene-zeit-strauss-josef>,
         <https://performance.musiconn.de/work/heiligste-nacht-kranz-albert>,
         <https://performance.musiconn.de/work/in-dulci-jubilo-thiel-carl>,
-        <https://performance.musiconn.de/work/joseph-lieber-joseph-mein>,
         <https://performance.musiconn.de/work/legende-beck-reinhold-imanuel>,
         <https://performance.musiconn.de/work/lieder-singstimme-klavier-anonym>,
         <https://performance.musiconn.de/work/lieder-singstimme-laute-guenther-anton>,
@@ -32,10 +38,10 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/o-du-froehliche-riedel-hermann>,
         <https://performance.musiconn.de/work/susani>,
         <https://performance.musiconn.de/work/weihnachtslied-beck-reinhold-imanuel>,
-        <https://performance.musiconn.de/work/wiegenlied-der-hirten-an-der-krippe-zu-bethlehem-reimann-heinrich>,
-        <https://viaf.org/viaf/196910116>,
-        <https://viaf.org/viaf/569155411319908940006> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/neues-rathaus-dresden-roter-saal> ;
-    cto:viaf <https://viaf.org/viaf/196910116>,
-        <https://viaf.org/viaf/569155411319908940006> .
+        <https://performance.musiconn.de/work/wiegenlied-der-hirten-an-der-krippe-zu-bethlehem-reimann-heinrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/196910116> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/569155411319908940006> a nfdicore:NFDI_0001010 .
 

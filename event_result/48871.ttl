@@ -1,40 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300059442> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109156> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146493> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300149700> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/115th-abonnement-concert-hibiya-public-hall-tokyo-1932-10-26> ] .
 
-<https://performance.musiconn.de/event/115th-abonnement-concert-hibiya-public-hall-tokyo-1932-10-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/115th-abonnement-concert-hibiya-public-hall-tokyo-1932-10-26> a cto:CTO_0001005 ;
     rdfs:label "115th Abonnement Concert, Hibiya Public Hall (Tokyo), 26.10.1932" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1932-10-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1932-10-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300059442>,
-        <https://d-nb.info/gnd/300109156>,
-        <https://d-nb.info/gnd/300146493>,
-        <https://d-nb.info/gnd/300149700> ;
-    cto:relatedItem <https://d-nb.info/gnd/300059442>,
-        <https://d-nb.info/gnd/300109156>,
-        <https://d-nb.info/gnd/300146493>,
-        <https://d-nb.info/gnd/300149700>,
-        <https://performance.musiconn.de/source/nhk-kokyo-gakudan-ed-nhk-1977-nhk-kokyo-gakudan-goju-nenshi-1926-1977-nhk-tokyo-nippon-hoso-shuppan-kyokai>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-kv-219-a-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-82-a-moll-glazunov-aleksandr-konstantinovic>,
-        <https://performance.musiconn.de/work/prodana-nevesta-ouvertuere-smetana-bedrich>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-120-d-moll-schumann-robert>,
-        <https://viaf.org/viaf/174188651>,
-        <https://viaf.org/viaf/191498119>,
-        <https://viaf.org/viaf/194731744>,
-        <https://viaf.org/viaf/202939775> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hibiya-public-hall-tokyo> ;
-    cto:viaf <https://viaf.org/viaf/174188651>,
-        <https://viaf.org/viaf/191498119>,
-        <https://viaf.org/viaf/194731744>,
-        <https://viaf.org/viaf/202939775> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hibiya-public-hall-tokyo> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146493> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194731744> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191498119> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109156> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300149700> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300059442> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174188651> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202939775> ],
+        <https://performance.musiconn.de/source/nhk-kokyo-gakudan-ed-nhk-1977-nhk-kokyo-gakudan-goju-nenshi-1926-1977-nhk-tokyo-nippon-hoso-shuppan-kyokai> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174188651> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191498119> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194731744> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202939775> a nfdicore:NFDI_0001010 .
 

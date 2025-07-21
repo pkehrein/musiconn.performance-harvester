@@ -1,36 +1,46 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300056109> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30047931X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1940-12-06> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1940-12-06> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1940-12-06> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 6.12.1940" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1940-12-06" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1940-12-06" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300056109>,
-        <https://d-nb.info/gnd/30047931X>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/300056109>,
-        <https://d-nb.info/gnd/30047931X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300056109> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/299064213> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30047931X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180233160> ],
         <https://performance.musiconn.de/source/motettenbuch-1940>,
         <https://performance.musiconn.de/work/musae-sioniae-theil-2-in-dulci-jubilo-auswahl-praetorius-michael>,
         <https://performance.musiconn.de/work/neue-weihnachtsliedlein-in-dulci-jubilo-auswahl-schroeter-leonhart>,
-        <https://performance.musiconn.de/work/preussische-fest-lieder-teil-1-o-freude-ueber-freud-eccard-johannes>,
-        <https://performance.musiconn.de/work/sacrae-symphoniae-plaudite-psallite-jubilate-deo-omnis-terra-gabrieli-giovanni>,
-        <https://performance.musiconn.de/work/wie-schoen-singt-uns-der-engel-schar-freundt-cornelius>,
-        <https://viaf.org/viaf/180233160>,
-        <https://viaf.org/viaf/299064213> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/180233160>,
-        <https://viaf.org/viaf/299064213> .
+        <https://performance.musiconn.de/work/preussische-fest-lieder-teil-1-o-freude-ueber-freud-eccard-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180233160> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/299064213> a nfdicore:NFDI_0001010 .
 

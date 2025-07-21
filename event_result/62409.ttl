@@ -4,30 +4,41 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1020765798> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1066212899> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4127793-4> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/l-impresario-abbandonato-muenchen-1749-00-00> ] .
 
-<https://performance.musiconn.de/event/l-impresario-abbandonato-muenchen-1749-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/l-impresario-abbandonato-muenchen-1749-00-00> a cto:CTO_0001005 ;
     rdfs:label "L' impresario abbandonato, München, 1749" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1749-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1749-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1020765798>,
-        <https://d-nb.info/gnd/1066212899>,
-        <https://d-nb.info/gnd/4127793-4> ;
-    cto:relatedItem <https://performance.musiconn.de/source/il-mondo-alla-roversa-o-sia-le-donne-che-comandano-dramma-bernesco-per-musica-nellanno-1758>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1066212899> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1020765798> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/241492071> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4127793-4> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/il-mondo-alla-roversa-o-sia-le-donne-che-comandano-dramma-bernesco-per-musica-nellanno-1758>,
         <https://performance.musiconn.de/source/trolese-orazio>,
         <https://performance.musiconn.de/work/l-orazio-auletta-pietro> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4127793-4>,
-        <https://viaf.org/viaf/241492071> ;
-    cto:relatedPerson <https://d-nb.info/gnd/1020765798>,
-        <https://d-nb.info/gnd/1066212899>,
-        <https://viaf.org/viaf/4509009>,
-        <https://viaf.org/viaf/74116164> ;
-    cto:viaf <https://viaf.org/viaf/241492071>,
-        <https://viaf.org/viaf/4509009>,
-        <https://viaf.org/viaf/74116164> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/74116164> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4509009> ] .
+
+<https://viaf.org/viaf/241492071> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4509009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/74116164> a nfdicore:NFDI_0001010 .
 

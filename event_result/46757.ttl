@@ -1,29 +1,32 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1058494082> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncert-estradnoj-muzyki-leningradskij-politechniceskij-institut-imeni-m-i-kalinina-aktovyj-zal-1965-04-24> ] .
 
-<https://performance.musiconn.de/event/koncert-estradnoj-muzyki-leningradskij-politechniceskij-institut-imeni-m-i-kalinina-aktovyj-zal-1965-04-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncert-estradnoj-muzyki-leningradskij-politechniceskij-institut-imeni-m-i-kalinina-aktovyj-zal-1965-04-24> a cto:CTO_0001005 ;
     rdfs:label "Koncert ėstradnoj muzyki, Leningradskij politechničeskij institut imeni M. I. Kalinina. Aktovyj zal, 24.4.1965" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1965-04-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1965-04-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1058494082> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
-    cto:relatedItem <https://d-nb.info/gnd/1058494082>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/leningradskij-politechniceskij-institut-imeni-m-i-kalinina-aktovyj-zal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1058494082> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/310690259> ],
         <https://performance.musiconn.de/source/leningrader-fruehling-1965-20-24-25-april>,
         <https://performance.musiconn.de/source/leningrader-fruehling-1965-uebersicht>,
         <https://performance.musiconn.de/work/drejfujuscaja-pesnja-vladimircov-aleksandr-aleksandrovic>,
         <https://performance.musiconn.de/work/fejerverk-chromusin-oleg-n>,
         <https://performance.musiconn.de/work/idu-na-grozu-lied-kolker-aleksandr-n>,
-        <https://performance.musiconn.de/work/ja-sagaju-po-moskve-petrov-andrej-p>,
         <https://performance.musiconn.de/work/k-zvezdnym-daljam-firtic-georgij-i>,
         <https://performance.musiconn.de/work/more-i-gorod-petrov-andrej-p>,
         <https://performance.musiconn.de/work/na-bezymjannoj-vysote-basner-veniamin-e>,
@@ -37,8 +40,8 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/russkij-suvenir-petrov-andrej-p>,
         <https://performance.musiconn.de/work/ulybnis-vladimircov-aleksandr-aleksandrovic>,
         <https://performance.musiconn.de/work/vesennjaja-pesnja-solovev-sedoj-vasilij-p>,
-        <https://performance.musiconn.de/work/vetry-vesennie-portnov-georgij-a>,
-        <https://viaf.org/viaf/310690259> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/leningradskij-politechniceskij-institut-imeni-m-i-kalinina-aktovyj-zal> ;
-    cto:viaf <https://viaf.org/viaf/310690259> .
+        <https://performance.musiconn.de/work/vetry-vesennie-portnov-georgij-a> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/310690259> a nfdicore:NFDI_0001010 .
 

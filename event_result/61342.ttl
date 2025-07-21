@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300019289> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037090> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300059957> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300266308> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1894-01-16> ] .
 
-<https://performance.musiconn.de/event/4-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1894-01-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1894-01-16> a cto:CTO_0001005 ;
     rdfs:label "4. Konzert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 16.1.1894" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/akademische-orchester-concerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1894-01-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1894-01-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300019289>,
-        <https://d-nb.info/gnd/300037090>,
-        <https://d-nb.info/gnd/300059957>,
-        <https://d-nb.info/gnd/300266308> ;
-    cto:itemOf <https://performance.musiconn.de/series/akademische-orchester-concerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/300019289>,
-        <https://d-nb.info/gnd/300037090>,
-        <https://d-nb.info/gnd/300059957>,
-        <https://d-nb.info/gnd/300266308>,
-        <https://performance.musiconn.de/source/programmzettel-zu-hermann-kretzschmars-akademischen-orchester-concerten-in-leipzig>,
-        <https://performance.musiconn.de/work/harold-en-italie-berlioz-hector>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-11-e-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/ossian-ouvertuere-gade-niels-wilhelm>,
-        <https://performance.musiconn.de/work/ruslan-i-ljudmila-uvertjura-glinka-michail-ivanovic>,
-        <https://viaf.org/viaf/181938228>,
-        <https://viaf.org/viaf/182662222>,
-        <https://viaf.org/viaf/185140889>,
-        <https://viaf.org/viaf/213966104> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/181938228>,
-        <https://viaf.org/viaf/182662222>,
-        <https://viaf.org/viaf/185140889>,
-        <https://viaf.org/viaf/213966104> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300266308> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185140889> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300059957> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213966104> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300019289> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182662222> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037090> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181938228> ],
+        <https://performance.musiconn.de/source/programmzettel-zu-hermann-kretzschmars-akademischen-orchester-concerten-in-leipzig> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181938228> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182662222> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185140889> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213966104> a nfdicore:NFDI_0001010 .
 

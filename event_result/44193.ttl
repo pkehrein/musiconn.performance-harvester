@@ -4,19 +4,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/verleihung-des-obermayer-german-jewish-history-award-abgeordnetenhaus-berlin-plenarsaal-2017-01-23> ] .
 
-<https://performance.musiconn.de/event/verleihung-des-obermayer-german-jewish-history-award-abgeordnetenhaus-berlin-plenarsaal-2017-01-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/verleihung-des-obermayer-german-jewish-history-award-abgeordnetenhaus-berlin-plenarsaal-2017-01-23> a cto:CTO_0001005 ;
     rdfs:label "Verleihung des Obermayer German Jewish History Award, Abgeordnetenhaus (Berlin) / Plenarsaal, 23.1.2017" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2017-01-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2017-01-23" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/abgeordnetenhaus-berlin-plenarsaal> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/ehrenpreis-fuer-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/haim-shapiro-non-jewish-synagogue-choir-on-tour>,
         <https://performance.musiconn.de/source/obermayer-stiftung-geschichtspreis-fuer-heimatforscher-leipziger-synagogalchor-erhaelt-ehrenpreis>,
@@ -27,8 +31,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/kiddusch-weill-kurt>,
         <https://performance.musiconn.de/work/kinderjorn-gebirtig-mordechai-garcia-juan>,
         <https://performance.musiconn.de/work/lochen-somach-libi-psalm-16-9-11-lewandowski-louis> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/abgeordnetenhaus-berlin-plenarsaal> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

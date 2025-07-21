@@ -1,50 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1078254214> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1113792302> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1169676316> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300020627> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300132352> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/abokonzert-19-zweites-gewandhaus-leipzig-1910-02-17> ] .
 
-<https://performance.musiconn.de/event/abokonzert-19-zweites-gewandhaus-leipzig-1910-02-17> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/abokonzert-19-zweites-gewandhaus-leipzig-1910-02-17> a cto:CTO_0001005 ;
     rdfs:label "Abokonzert 19, Zweites Gewandhaus (Leipzig), 17.2.1910" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1910-02-17" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1910-02-17" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1078254214>,
-        <https://d-nb.info/gnd/1113792302>,
-        <https://d-nb.info/gnd/1169676316>,
-        <https://d-nb.info/gnd/300020627>,
-        <https://d-nb.info/gnd/300132352>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/1078254214>,
-        <https://d-nb.info/gnd/1113792302>,
-        <https://d-nb.info/gnd/1169676316>,
-        <https://d-nb.info/gnd/300020627>,
-        <https://d-nb.info/gnd/300132352>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1169676316> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4472147425859245040008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300132352> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1078254214> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178619442> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173912294> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1113792302> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1127154075979311860009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204580378> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300020627> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
         <https://performance.musiconn.de/work/festvorspiel-robert-hansen-emil>,
-        <https://performance.musiconn.de/work/il-barbiere-di-siviglia-una-voce-poco-fa-rossini-gioachino>,
-        <https://performance.musiconn.de/work/l-arlesienne-suite-1-bizet-georges>,
-        <https://performance.musiconn.de/work/l-uccellatrice-la-calandrina-jommelli-niccolo>,
-        <https://performance.musiconn.de/work/les-indes-galantes-papillon-inconstant-rameau-jean-philippe>,
-        <https://performance.musiconn.de/work/pur-dicesti-bocca-bella-lotti-antonio>,
-        <https://performance.musiconn.de/work/suiten-orchester-nr-2-op-115-e-moll-lachner-franz-paul>,
-        <https://viaf.org/viaf/1127154075979311860009>,
-        <https://viaf.org/viaf/173912294>,
-        <https://viaf.org/viaf/178619442>,
-        <https://viaf.org/viaf/204580378>,
-        <https://viaf.org/viaf/4472147425859245040008> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/1127154075979311860009>,
-        <https://viaf.org/viaf/173912294>,
-        <https://viaf.org/viaf/178619442>,
-        <https://viaf.org/viaf/204580378>,
-        <https://viaf.org/viaf/264523828>,
-        <https://viaf.org/viaf/4472147425859245040008> .
+        <https://performance.musiconn.de/work/les-indes-galantes-papillon-inconstant-rameau-jean-philippe> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1127154075979311860009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/173912294> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178619442> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204580378> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4472147425859245040008> a nfdicore:NFDI_0001010 .
 

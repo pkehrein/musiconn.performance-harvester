@@ -4,20 +4,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1165064022> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/komponistenportrait-hermann-keller-konzerthaus-berlin-1995-06-12-19-30> ] .
 
-<https://performance.musiconn.de/event/komponistenportrait-hermann-keller-konzerthaus-berlin-1995-06-12-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/komponistenportrait-hermann-keller-konzerthaus-berlin-1995-06-12-19-30> a cto:CTO_0001005 ;
     rdfs:label "Komponistenportrait: Hermann Keller, Konzerthaus (Berlin), 12.6.1995, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1995-06-12T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1995-06-12T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1165064022> ;
-    cto:relatedItem <https://performance.musiconn.de/source/plakate-programmhefte-und-rezensionen-aus-dem-nachlass-hermann-keller-3-programmhefte-1985-2002> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1165064022>,
-        <https://viaf.org/viaf/76153532491848820007> ;
-    cto:viaf <https://viaf.org/viaf/76153532491848820007> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/76153532491848820007> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1165064022> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/plakate-programmhefte-und-rezensionen-aus-dem-nachlass-hermann-keller-3-programmhefte-1985-2002> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/76153532491848820007> a nfdicore:NFDI_0001010 .
 

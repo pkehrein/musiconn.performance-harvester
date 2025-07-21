@@ -1,57 +1,81 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1089063946> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1216837449> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/123019923> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300159277> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300233663> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300233671> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300296533> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300739214> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncert-22-nojabrja-sankt-petersburger-philharmonie-kleiner-saal-1993-11-22-1> ] .
 
-<https://performance.musiconn.de/event/koncert-22-nojabrja-sankt-petersburger-philharmonie-kleiner-saal-1993-11-22-1> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncert-22-nojabrja-sankt-petersburger-philharmonie-kleiner-saal-1993-11-22-1> a cto:CTO_0001005 ;
     rdfs:label "Koncert 22. nojabrja, Sankt-Petersburger Philharmonie / Kleiner Saal, 22.11.1993" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1993-94> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1993-11-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1993-11-22" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1216837449> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/123019923> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188267512> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192579074> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/296145857883223020672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300296533> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300739214> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300159277> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1089063946> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300233671> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213969097> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300233663> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182410817> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173933490> ],
+        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1993-22-november-kleiner-saal-1> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1089063946>,
-        <https://d-nb.info/gnd/1216837449>,
-        <https://d-nb.info/gnd/123019923>,
-        <https://d-nb.info/gnd/300159277>,
-        <https://d-nb.info/gnd/300233663>,
-        <https://d-nb.info/gnd/300233671>,
-        <https://d-nb.info/gnd/300296533>,
-        <https://d-nb.info/gnd/300739214> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1993-94> ;
-    cto:relatedItem <https://d-nb.info/gnd/1089063946>,
-        <https://d-nb.info/gnd/300159277>,
-        <https://d-nb.info/gnd/300233663>,
-        <https://d-nb.info/gnd/300233671>,
-        <https://d-nb.info/gnd/300296533>,
-        <https://d-nb.info/gnd/300739214>,
-        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1993-22-november-kleiner-saal-1>,
-        <https://performance.musiconn.de/work/capriccio-ueber-die-abreise-suslin-viktor-e>,
-        <https://performance.musiconn.de/work/post-scriptum-silvestrov-valentin-vasilovic>,
-        <https://performance.musiconn.de/work/praeludien-violoncello-gubajdulina-sofija-asgatovna>,
-        <https://performance.musiconn.de/work/sonata-capricciosa-suslin-viktor-e>,
-        <https://performance.musiconn.de/work/sonaten-klavier-nr-3-silvestrov-valentin-vasilovic>,
-        <https://performance.musiconn.de/work/sonaten-violoncello-schlagzeug-suslin-viktor-e>,
-        <https://viaf.org/viaf/173933490>,
-        <https://viaf.org/viaf/182410817>,
-        <https://viaf.org/viaf/188267512>,
-        <https://viaf.org/viaf/192579074>,
-        <https://viaf.org/viaf/213969097>,
-        <https://viaf.org/viaf/296145857883223020672> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:relatedPerson <https://d-nb.info/gnd/1216837449>,
-        <https://d-nb.info/gnd/123019923>,
-        <https://viaf.org/viaf/67362792> ;
-    cto:viaf <https://viaf.org/viaf/173933490>,
-        <https://viaf.org/viaf/182410817>,
-        <https://viaf.org/viaf/188267512>,
-        <https://viaf.org/viaf/192579074>,
-        <https://viaf.org/viaf/213969097>,
-        <https://viaf.org/viaf/296145857883223020672>,
-        <https://viaf.org/viaf/67362792> .
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/67362792> ] .
+
+<https://viaf.org/viaf/173933490> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182410817> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188267512> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192579074> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213969097> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/296145857883223020672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/67362792> a nfdicore:NFDI_0001010 .
 

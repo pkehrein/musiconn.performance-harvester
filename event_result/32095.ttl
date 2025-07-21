@@ -1,37 +1,46 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30012581X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300130759> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30013603X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/9-ausserordentliches-konzert-internationales-congress-center-dresden-2007-06-23-19-30> ] .
 
-<https://performance.musiconn.de/event/9-ausserordentliches-konzert-internationales-congress-center-dresden-2007-06-23-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/9-ausserordentliches-konzert-internationales-congress-center-dresden-2007-06-23-19-30> a cto:CTO_0001005 ;
     rdfs:label "9. Außerordentliches Konzert, Internationales Congress Center (Dresden), 23.6.2007, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2006-2007> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2007-06-23T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2007-06-23T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30012581X>,
-        <https://d-nb.info/gnd/300130759>,
-        <https://d-nb.info/gnd/30013603X> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2006-2007> ;
-    cto:relatedItem <https://d-nb.info/gnd/30012581X>,
-        <https://d-nb.info/gnd/300130759>,
-        <https://d-nb.info/gnd/30013603X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/internationales-congress-center-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180762171> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30012581X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30013603X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181847868> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300130759> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186171630> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/ispanskoe-kapriccio-rimskij-korsakov-nikolaj>,
-        <https://performance.musiconn.de/work/karmen-sjuita-bizet-georges-scedrin-rodion-konstantinovic>,
-        <https://performance.musiconn.de/work/poeme-chausson-ernest>,
-        <https://performance.musiconn.de/work/tzigane-ravel-maurice>,
-        <https://viaf.org/viaf/180762171>,
-        <https://viaf.org/viaf/181847868>,
-        <https://viaf.org/viaf/186171630> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/internationales-congress-center-dresden> ;
-    cto:viaf <https://viaf.org/viaf/180762171>,
-        <https://viaf.org/viaf/181847868>,
-        <https://viaf.org/viaf/186171630> .
+        <https://performance.musiconn.de/work/poeme-chausson-ernest> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180762171> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181847868> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186171630> a nfdicore:NFDI_0001010 .
 

@@ -1,38 +1,43 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1279117621> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/127912055X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/127923931X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1279239328> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1279239387> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kammerkonzert-schloss-guestrow-festsaal-1977-11-19-11-30> ] .
 
-<https://performance.musiconn.de/event/kammerkonzert-schloss-guestrow-festsaal-1977-11-19-11-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kammerkonzert-schloss-guestrow-festsaal-1977-11-19-11-30> a cto:CTO_0001005 ;
     rdfs:label "Kammerkonzert, Schloss Güstrow / Festsaal, 19.11.1977, 11:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/52-bachfest-der-neuen-bachgesellschaft> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1977-11-19T11:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1977-11-19T11:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1279117621>,
-        <https://d-nb.info/gnd/127912055X>,
-        <https://d-nb.info/gnd/127923931X>,
-        <https://d-nb.info/gnd/1279239328>,
-        <https://d-nb.info/gnd/1279239387> ;
-    cto:itemOf <https://performance.musiconn.de/series/52-bachfest-der-neuen-bachgesellschaft> ;
-    cto:relatedItem <https://d-nb.info/gnd/1279117621>,
-        <https://d-nb.info/gnd/127912055X>,
-        <https://d-nb.info/gnd/127923931X>,
-        <https://d-nb.info/gnd/1279239328>,
-        <https://d-nb.info/gnd/1279239387>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/schloss-guestrow-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1279117621> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1279239387> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1279239328> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/127912055X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/127923931X> ],
         <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-13-programmhefte-1975-1977>,
         <https://performance.musiconn.de/work/konzerte-oboe-streicher-basso-continuo-d-moll-marcello-alessandro>,
-        <https://performance.musiconn.de/work/konzerte-trompete-oboe-streicher-basso-continuo-es-dur-hertel-johann-wilhelm>,
-        <https://performance.musiconn.de/work/maersche-nr-1-hertel-johann-wilhelm>,
-        <https://performance.musiconn.de/work/maersche-nr-2-hertel-johann-wilhelm>,
-        <https://performance.musiconn.de/work/maersche-nr-3-hertel-johann-wilhelm>,
-        <https://performance.musiconn.de/work/sinfonien-g-dur-hertel-johann-wilhelm>,
-        <https://performance.musiconn.de/work/suiten-g-dur-hertel-johann-christian> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/schloss-guestrow-festsaal> .
+        <https://performance.musiconn.de/work/konzerte-trompete-oboe-streicher-basso-continuo-es-dur-hertel-johann-wilhelm> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
 

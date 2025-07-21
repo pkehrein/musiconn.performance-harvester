@@ -1,53 +1,75 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300006659> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015585> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146469> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300391374> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300647999> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4493513-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/abokonzert-12-zweites-gewandhaus-leipzig-1897-01-14> ] .
 
-<https://performance.musiconn.de/event/abokonzert-12-zweites-gewandhaus-leipzig-1897-01-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/abokonzert-12-zweites-gewandhaus-leipzig-1897-01-14> a cto:CTO_0001005 ;
     rdfs:label "Abokonzert 12, Zweites Gewandhaus (Leipzig), 14.1.1897" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1897-01-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1897-01-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300006659>,
-        <https://d-nb.info/gnd/300015585>,
-        <https://d-nb.info/gnd/300146469>,
-        <https://d-nb.info/gnd/300391374>,
-        <https://d-nb.info/gnd/300647999>,
-        <https://d-nb.info/gnd/4439652-1>,
-        <https://d-nb.info/gnd/4493513-4> ;
-    cto:relatedItem <https://d-nb.info/gnd/300006659>,
-        <https://d-nb.info/gnd/300015585>,
-        <https://d-nb.info/gnd/300146469>,
-        <https://d-nb.info/gnd/300391374>,
-        <https://d-nb.info/gnd/300647999>,
-        <https://d-nb.info/gnd/4493513-4>,
-        <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
-        <https://performance.musiconn.de/work/charakterstuecke-klavier-mwv-u-62-e-dur-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/italienisches-konzert-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-2-op-21-f-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-2-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/serenaden-streichorchester-op-14-c-dur-fuchs-robert>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-38-b-dur-schumann-robert>,
-        <https://viaf.org/viaf/1406151474935700490005>,
-        <https://viaf.org/viaf/181427594>,
-        <https://viaf.org/viaf/183832488>,
-        <https://viaf.org/viaf/195814834>,
-        <https://viaf.org/viaf/203723336>,
-        <https://viaf.org/viaf/306409869> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/1406151474935700490005>,
-        <https://viaf.org/viaf/181427594>,
-        <https://viaf.org/viaf/183832488>,
-        <https://viaf.org/viaf/195814834>,
-        <https://viaf.org/viaf/203723336>,
-        <https://viaf.org/viaf/264523828>,
-        <https://viaf.org/viaf/306409869> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300647999> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4493513-4> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306409869> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1406151474935700490005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181427594> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183832488> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195814834> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300006659> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015585> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146469> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203723336> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300391374> ],
+        <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1406151474935700490005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181427594> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183832488> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195814834> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203723336> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/306409869> a nfdicore:NFDI_0001010 .
 

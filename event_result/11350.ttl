@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-1981-12-05> ] .
 
-<https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-1981-12-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-1981-12-05> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Thomaskirche (Leipzig), 5.12.1981" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1981-12-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1981-12-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://performance.musiconn.de/source/motettenbuch-1981>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/motettenbuch-1981>,
         <https://performance.musiconn.de/work/weihnachts-oratorium-kantate-1-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/weihnachts-oratorium-kantate-2-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/weihnachts-oratorium-kantate-3-bach-johann-sebastian> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
 

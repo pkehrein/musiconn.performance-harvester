@@ -1,52 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1062668898> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015186> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300025726> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300112092> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146221> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4806102-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzert-kulturpalast-dresden-festsaal-1975-05-27-17-00> ] .
 
-<https://performance.musiconn.de/event/sonderkonzert-kulturpalast-dresden-festsaal-1975-05-27-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzert-kulturpalast-dresden-festsaal-1975-05-27-17-00> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert, Kulturpalast (Dresden) / Festsaal, 27.5.1975, 17:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1975-05-27T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1975-05-27T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1062668898>,
-        <https://d-nb.info/gnd/300015186>,
-        <https://d-nb.info/gnd/300025726>,
-        <https://d-nb.info/gnd/300112092>,
-        <https://d-nb.info/gnd/300146221>,
-        <https://d-nb.info/gnd/4806102-5> ;
-    cto:relatedItem <https://d-nb.info/gnd/1062668898>,
-        <https://d-nb.info/gnd/300015186>,
-        <https://d-nb.info/gnd/300025726>,
-        <https://d-nb.info/gnd/300112092>,
-        <https://d-nb.info/gnd/300146221>,
-        <https://d-nb.info/gnd/4806102-5>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025726> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181445310> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186095465> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146221> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4806102-5> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300112092> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212881417> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176401772> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181042167> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015186> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1062668898> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/aufforderung-zum-tanze-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/die-zauberfloete-dies-bildnis-ist-bezaubernd-schoen-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/don-quichotte-pas-de-deux-minkus-ludwig>,
         <https://performance.musiconn.de/work/dresdner-romanze-boerner-hans>,
-        <https://performance.musiconn.de/work/fantasien-chor-klavier-orchester-op-80-c-moll-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/friedenslied-eisler-hanns>,
-        <https://performance.musiconn.de/work/im-schoensten-wiesengrunde-schubert-franz>,
-        <https://performance.musiconn.de/work/liebeslieder-op-52-brahms-johannes>,
-        <https://performance.musiconn.de/work/romanzen-und-balladen-op-67-heideroeslein-schumann-robert>,
-        <https://performance.musiconn.de/work/winterreise-der-lindenbaum-schubert-franz>,
-        <https://viaf.org/viaf/176401772>,
-        <https://viaf.org/viaf/181042167>,
-        <https://viaf.org/viaf/181445310>,
-        <https://viaf.org/viaf/186095465>,
-        <https://viaf.org/viaf/212881417> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/176401772>,
-        <https://viaf.org/viaf/181042167>,
-        <https://viaf.org/viaf/181445310>,
-        <https://viaf.org/viaf/186095465>,
-        <https://viaf.org/viaf/212881417> .
+        <https://performance.musiconn.de/work/im-schoensten-wiesengrunde-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176401772> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181042167> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181445310> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186095465> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212881417> a nfdicore:NFDI_0001010 .
 

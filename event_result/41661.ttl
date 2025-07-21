@@ -1,54 +1,72 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1191387836> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009682> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015143> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033311> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300114001> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300868588> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/grosses-abschiedskonzert-gewerbehaus-dresden-gewerbehaus-saal-1927-04-24-19-30> ] .
 
-<https://performance.musiconn.de/event/grosses-abschiedskonzert-gewerbehaus-dresden-gewerbehaus-saal-1927-04-24-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/grosses-abschiedskonzert-gewerbehaus-dresden-gewerbehaus-saal-1927-04-24-19-30> a cto:CTO_0001005 ;
     rdfs:label "Großes Abschiedskonzert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 24.4.1927, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1926-1927> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1927-04-24T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1927-04-24T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/1191387836>,
-        <https://d-nb.info/gnd/300009682>,
-        <https://d-nb.info/gnd/300015143>,
-        <https://d-nb.info/gnd/300033311>,
-        <https://d-nb.info/gnd/300114001>,
-        <https://d-nb.info/gnd/300868588> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1926-1927> ;
-    cto:relatedItem <https://d-nb.info/gnd/1191387836>,
-        <https://d-nb.info/gnd/300009682>,
-        <https://d-nb.info/gnd/300015143>,
-        <https://d-nb.info/gnd/300033311>,
-        <https://d-nb.info/gnd/300114001>,
-        <https://d-nb.info/gnd/300868588>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197648368> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174573522> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305991582> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009682> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300868588> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300114001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177421663> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1191387836> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015143> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202958990> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/blumengefluester-blon-franz-von>,
         <https://performance.musiconn.de/work/der-liebe-augustin-walzer-fall-leo>,
-        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-ouvertuere-nicolai-otto>,
-        <https://performance.musiconn.de/work/italjanskoe-kapriccio-na-temy-narodnych-pesen-tschaikowski-peter-i>,
         <https://performance.musiconn.de/work/konzerte-horn-kl-trv-117-es-dur-3-satz-arrangiert-strauss-richard>,
-        <https://performance.musiconn.de/work/konzerte-violine-streichorchester-bwv-1042-e-dur-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/militaer-marsch-fassung-orchester-schubert-franz>,
-        <https://performance.musiconn.de/work/musik-zum-trauerspiel-egmont-von-johann-wolfgang-von-goethe-ouvertuere-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/suiten-klavier-nr-3-op-72-e-moll-minuetto-raff-joseph-joachim>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-rhapsodie-nr-2-r-4414-liszt-franz>,
-        <https://viaf.org/viaf/174573522>,
-        <https://viaf.org/viaf/177421663>,
-        <https://viaf.org/viaf/197648368>,
-        <https://viaf.org/viaf/202958990>,
-        <https://viaf.org/viaf/305991582> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/174573522>,
-        <https://viaf.org/viaf/177421663>,
-        <https://viaf.org/viaf/197648368>,
-        <https://viaf.org/viaf/202958990>,
-        <https://viaf.org/viaf/305991582> .
+        <https://performance.musiconn.de/work/militaer-marsch-fassung-orchester-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174573522> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177421663> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197648368> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202958990> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305991582> a nfdicore:NFDI_0001010 .
 

@@ -1,60 +1,76 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1147670617> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300121113> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300475810> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30047931X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4576451-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-sankt-georg-schwarzenberg-erzgebirge-1967-12-15> ] .
 
-<https://performance.musiconn.de/event/konzert-sankt-georg-schwarzenberg-erzgebirge-1967-12-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-sankt-georg-schwarzenberg-erzgebirge-1967-12-15> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Sankt Georg (Schwarzenberg, Erzgebirge), 15.12.1967" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1967-12-15" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1967-12-15" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1147670617>,
-        <https://d-nb.info/gnd/300121113>,
-        <https://d-nb.info/gnd/300475810>,
-        <https://d-nb.info/gnd/30047931X>,
-        <https://d-nb.info/gnd/4576451-7> ;
-    cto:relatedItem <https://d-nb.info/gnd/1147670617>,
-        <https://d-nb.info/gnd/300121113>,
-        <https://d-nb.info/gnd/300475810>,
-        <https://d-nb.info/gnd/30047931X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4576451-7> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/244736383> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300121113> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300475810> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180233160> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182639689> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185552794> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1147670617> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181850865> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30047931X> ],
         <https://performance.musiconn.de/source/motettenbuch-1967>,
         <https://performance.musiconn.de/work/also-hat-gott-die-welt-geliebt-praetorius-hieronymus>,
         <https://performance.musiconn.de/work/altboehmische-gesaenge-teil-2-riedel-carl>,
         <https://performance.musiconn.de/work/es-kommt-ein-schiff-geladen-schleifer-karl>,
         <https://performance.musiconn.de/work/geistliche-lieder-teil-1-in-dulci-jubilo-eccard-johannes>,
-        <https://performance.musiconn.de/work/geistliche-lieder-teil-1-vom-himmel-hoch-eccard-johannes>,
         <https://performance.musiconn.de/work/gruenet-felder-gruenet-wiesen-chemin-petit-hans>,
-        <https://performance.musiconn.de/work/harmoniae-angelicae-cantionum-ecclesiasticarum-joseph-lieber-joseph-mein-bodenschatz-erhard>,
         <https://performance.musiconn.de/work/heut-kam-ein-engel-chemin-petit-hans>,
         <https://performance.musiconn.de/work/hoert-der-engel-helle-lieder-zipp-friedrich>,
         <https://performance.musiconn.de/work/maria-durch-ein-dornwald-ging-mauersberger-erhard>,
         <https://performance.musiconn.de/work/motetten-fuer-das-ganze-kirchenjahr-traeufelt-ihr-himmel-von-oben-mendelssohn-arnold-ludwig>,
-        <https://performance.musiconn.de/work/musae-sioniae-theil-6-es-ist-ein-ros-entsprungen-praetorius-michael>,
         <https://performance.musiconn.de/work/o-jesulein-zart-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/preussische-fest-lieder-teil-1-o-freude-ueber-freud-eccard-johannes>,
         <https://performance.musiconn.de/work/schlaf-mein-kindlein-chemin-petit-hans>,
         <https://performance.musiconn.de/work/schlaf-wohl-du-himmelsknabe-du-henking-bernhard>,
         <https://performance.musiconn.de/work/seht-das-kindlein-weinet-wenzel-eberhard>,
         <https://performance.musiconn.de/work/stille-nacht-heilige-nacht-chorsatz-schreck-gustav>,
-        <https://performance.musiconn.de/work/wie-schoen-singt-uns-der-engel-schar-freundt-cornelius>,
         <https://performance.musiconn.de/work/zu-bethlehem-der-engel-sprach-zipp-friedrich>,
-        <https://performance.musiconn.de/work/zu-bethlehem-geboren-zipp-friedrich>,
-        <https://viaf.org/viaf/180233160>,
-        <https://viaf.org/viaf/181850865>,
-        <https://viaf.org/viaf/182639689>,
-        <https://viaf.org/viaf/185552794> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4576451-7>,
-        <https://viaf.org/viaf/244736383> ;
-    cto:viaf <https://viaf.org/viaf/180233160>,
-        <https://viaf.org/viaf/181850865>,
-        <https://viaf.org/viaf/182639689>,
-        <https://viaf.org/viaf/185552794>,
-        <https://viaf.org/viaf/244736383> .
+        <https://performance.musiconn.de/work/zu-bethlehem-geboren-zipp-friedrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180233160> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181850865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182639689> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185552794> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/244736383> a nfdicore:NFDI_0001010 .
 

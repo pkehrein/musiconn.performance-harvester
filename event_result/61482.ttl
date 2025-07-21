@@ -1,55 +1,73 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1200360052> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300095171> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300169914> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300397607> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300506643> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300553269> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/trauerfeier-ehemaliger-krystallpalast-leipzig-alberthalle-1888-03-21> ] .
 
-<https://performance.musiconn.de/event/trauerfeier-ehemaliger-krystallpalast-leipzig-alberthalle-1888-03-21> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/trauerfeier-ehemaliger-krystallpalast-leipzig-alberthalle-1888-03-21> a cto:CTO_0001005 ;
     rdfs:label "Trauerfeier, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 21.3.1888" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1888-03-21" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1888-03-21" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1200360052>,
-        <https://d-nb.info/gnd/300095171>,
-        <https://d-nb.info/gnd/300169914>,
-        <https://d-nb.info/gnd/300397607>,
-        <https://d-nb.info/gnd/300506643>,
-        <https://d-nb.info/gnd/300553269> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
-    cto:relatedItem <https://d-nb.info/gnd/1200360052>,
-        <https://d-nb.info/gnd/300095171>,
-        <https://d-nb.info/gnd/300169914>,
-        <https://d-nb.info/gnd/300397607>,
-        <https://d-nb.info/gnd/300506643>,
-        <https://d-nb.info/gnd/300553269>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177165346> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186329322> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300095171> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300169914> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300506643> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181939210> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200360052> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/307169505> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176028648> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300553269> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300397607> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206834961> ],
         <https://performance.musiconn.de/source/liszt-verein-zum-zehnjaehrigen-jubilaeum-bericht-ueber-die-10jaehrige-thaetigkeit-des-vereins-1885-1895-leipzig-1895>,
-        <https://performance.musiconn.de/work/am-tage-aller-seelen-schubert-franz>,
-        <https://performance.musiconn.de/work/der-ring-des-nibelungen-dritter-tag-goetterdaemmerung-trauermarsch-wagner-richard>,
         <https://performance.musiconn.de/work/matthaeuspassion-choral-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/messiah-arie-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/nunc-dimittis-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/pax-vobiscum-schubert-franz>,
-        <https://performance.musiconn.de/work/psalm-23-fassung-tenorsolo-harfe-und-orgel-liszt-franz>,
         <https://performance.musiconn.de/work/selig-sind-die-toten-rust-wilhelm>,
-        <https://performance.musiconn.de/work/sonaten-klavier-op-26-trauermarsch-fassung-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/variationen-ueber-den-basso-continuo-des-ersten-satzes-der-kantate-weinen-klagen-und-des-cruzifixus-aus-der-h-moll-messe-von-js-bach-liszt-franz>,
-        <https://viaf.org/viaf/176028648>,
-        <https://viaf.org/viaf/177165346>,
-        <https://viaf.org/viaf/181939210>,
-        <https://viaf.org/viaf/186329322>,
-        <https://viaf.org/viaf/206834961>,
-        <https://viaf.org/viaf/307169505> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/176028648>,
-        <https://viaf.org/viaf/177165346>,
-        <https://viaf.org/viaf/181939210>,
-        <https://viaf.org/viaf/186329322>,
-        <https://viaf.org/viaf/206834961>,
-        <https://viaf.org/viaf/307169505> .
+        <https://performance.musiconn.de/work/sonaten-klavier-op-26-trauermarsch-fassung-beethoven-ludwig-van> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176028648> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177165346> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181939210> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186329322> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206834961> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/307169505> a nfdicore:NFDI_0001010 .
 

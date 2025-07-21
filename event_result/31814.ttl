@@ -1,31 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300093934> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300124082> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/griechenland-2005-concert-hall-kyoto-2005-03-06-21-00> ] .
 
-<https://performance.musiconn.de/event/griechenland-2005-concert-hall-kyoto-2005-03-06-21-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/griechenland-2005-concert-hall-kyoto-2005-03-06-21-00> a cto:CTO_0001005 ;
     rdfs:label "Griechenland 2005, Concert Hall (Kyoto), 6.3.2005, 21:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2004-2005> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2005-03-06T21:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2005-03-06T21:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300093934>,
-        <https://d-nb.info/gnd/300124082> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2004-2005> ;
-    cto:relatedItem <https://d-nb.info/gnd/300093934>,
-        <https://d-nb.info/gnd/300124082>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-r-456-a-dur-liszt-franz>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-27-e-moll-rachmaninov-sergej-vasilevic>,
-        <https://viaf.org/viaf/197651217>,
-        <https://viaf.org/viaf/198523973> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/concert-hall-kyoto> ;
-    cto:viaf <https://viaf.org/viaf/197651217>,
-        <https://viaf.org/viaf/198523973> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/concert-hall-kyoto> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300124082> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198523973> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093934> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197651217> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/197651217> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198523973> a nfdicore:NFDI_0001010 .
 

@@ -1,40 +1,51 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300047223> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300062346> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300194765> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/beschwingte-musik-2-konzert-gewerbehaus-dresden-gewerbehaus-saal-1942-12-02-19-00> ] .
 
-<https://performance.musiconn.de/event/beschwingte-musik-2-konzert-gewerbehaus-dresden-gewerbehaus-saal-1942-12-02-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/beschwingte-musik-2-konzert-gewerbehaus-dresden-gewerbehaus-saal-1942-12-02-19-00> a cto:CTO_0001005 ;
     rdfs:label "Beschwingte Musik (2. Konzert), Gewerbehaus (Dresden). Gewerbehaus-Saal, 2.12.1942, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1942-1943> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1942-12-02T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1942-12-02T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300047223>,
-        <https://d-nb.info/gnd/300062346>,
-        <https://d-nb.info/gnd/300194765> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1942-1943> ;
-    cto:relatedItem <https://d-nb.info/gnd/300047223>,
-        <https://d-nb.info/gnd/300062346>,
-        <https://d-nb.info/gnd/300194765>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211710193> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062346> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300047223> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178280321> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182898531> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300194765> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/3-balladen-mit-klavierbgleitung-prinz-eugen-der-edle-ritter-odins-meeresritt-archibald-douglas-loewe-carl>,
-        <https://performance.musiconn.de/work/ceska-suita-dvorak-antonin>,
         <https://performance.musiconn.de/work/das-koenigliche-opfer-ballettmusik-vollerthun-georg>,
-        <https://performance.musiconn.de/work/der-schleier-der-pierrette-hochzeitswalzer-dohnanyi-ernst-von>,
-        <https://performance.musiconn.de/work/lyrisk-suite-grieg-edvard>,
-        <https://performance.musiconn.de/work/rossiniana-respighi-ottorino>,
-        <https://viaf.org/viaf/178280321>,
-        <https://viaf.org/viaf/182898531>,
-        <https://viaf.org/viaf/211710193> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/178280321>,
-        <https://viaf.org/viaf/182898531>,
-        <https://viaf.org/viaf/211710193> .
+        <https://performance.musiconn.de/work/der-schleier-der-pierrette-hochzeitswalzer-dohnanyi-ernst-von> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178280321> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182898531> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211710193> a nfdicore:NFDI_0001010 .
 

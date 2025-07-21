@@ -1,49 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026870> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102305> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102704> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102739> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300217404> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4088405-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-bitterfeld-1959-05-13> ] .
 
-<https://performance.musiconn.de/event/konzert-bitterfeld-1959-05-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-bitterfeld-1959-05-13> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Bitterfeld, 13.5.1959" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1958-1959> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1959-05-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1959-05-13" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026870>,
-        <https://d-nb.info/gnd/300102305>,
-        <https://d-nb.info/gnd/300102704>,
-        <https://d-nb.info/gnd/300102739>,
-        <https://d-nb.info/gnd/300217404>,
-        <https://d-nb.info/gnd/4088405-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1958-1959> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026870>,
-        <https://d-nb.info/gnd/300102305>,
-        <https://d-nb.info/gnd/300102704>,
-        <https://d-nb.info/gnd/300102739>,
-        <https://d-nb.info/gnd/300217404>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/concerti-grossi-hwv-319-330-konzert-hwv-328-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/konzert-ouvertuere-zu-shakespeares-sommernachtstraum-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/musik-zu-ein-sommernachtstraum-hochzeitsmarsch-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/musik-zu-ein-sommernachtstraum-scherzo-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-73-d-dur-brahms-johannes>,
-        <https://viaf.org/viaf/179427106>,
-        <https://viaf.org/viaf/181883169>,
-        <https://viaf.org/viaf/186512571>,
-        <https://viaf.org/viaf/191495144>,
-        <https://viaf.org/viaf/205763935> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4088405-3>,
-        <https://viaf.org/viaf/125630126> ;
-    cto:viaf <https://viaf.org/viaf/125630126>,
-        <https://viaf.org/viaf/179427106>,
-        <https://viaf.org/viaf/181883169>,
-        <https://viaf.org/viaf/186512571>,
-        <https://viaf.org/viaf/191495144>,
-        <https://viaf.org/viaf/205763935> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/125630126> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4088405-3> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205763935> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102739> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026870> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179427106> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102704> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102305> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300217404> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186512571> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191495144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181883169> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/125630126> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179427106> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181883169> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186512571> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191495144> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205763935> a nfdicore:NFDI_0001010 .
 

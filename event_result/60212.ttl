@@ -1,23 +1,28 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/4007666-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/liederabend-mit-werken-der-bonner-komponistin-johanna-kinkel-bonn-1986-06-04> ] .
 
-<https://performance.musiconn.de/event/liederabend-mit-werken-der-bonner-komponistin-johanna-kinkel-bonn-1986-06-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/liederabend-mit-werken-der-bonner-komponistin-johanna-kinkel-bonn-1986-06-04> a cto:CTO_0001005 ;
     rdfs:label "Liederabend mit Werken der Bonner Komponistin Johanna Kinkel, Bonn, 4.6.1986" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-aus-dem-frauenmuseum> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-06-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-06-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4007666-0> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-aus-dem-frauenmuseum> ;
-    cto:relatedItem <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-konzerte-aus-dem-frauenmuseum-bonner-sommer-1986>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/frauenmuseum-bonn> ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242429635> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4007666-0> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-konzerte-aus-dem-frauenmuseum-bonner-sommer-1986>,
         <https://performance.musiconn.de/work/an-luna-kinkel-johanna>,
         <https://performance.musiconn.de/work/das-schloss-boncourt-kinkel-johanna>,
         <https://performance.musiconn.de/work/der-muellerin-nachbar-kinkel-johanna>,
@@ -29,8 +34,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/sechs-lieder-bettina-von-arnim-gewidmet-kinkel-johanna>,
         <https://performance.musiconn.de/work/stuermisch-wandern-kinkel-johanna>,
         <https://performance.musiconn.de/work/wasser-und-wein-kinkel-johanna> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4007666-0>,
-        <https://viaf.org/viaf/242429635> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/frauenmuseum-bonn> ;
-    cto:viaf <https://viaf.org/viaf/242429635> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/242429635> a nfdicore:NFDI_0001010 .
 

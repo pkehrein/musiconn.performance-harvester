@@ -1,59 +1,84 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30000849X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300120575> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300123671> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300125178> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300139128> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146620> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300552211> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kamernyj-chor-miciganskogo-universiteta-sankt-petersburger-philharmonie-1971-05-30> ] .
 
-<https://performance.musiconn.de/event/kamernyj-chor-miciganskogo-universiteta-sankt-petersburger-philharmonie-1971-05-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kamernyj-chor-miciganskogo-universiteta-sankt-petersburger-philharmonie-1971-05-30> a cto:CTO_0001005 ;
     rdfs:label "Kamernyj chor Mičiganskogo universiteta, Sankt-Petersburger Philharmonie, 30.5.1971" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1970-71> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1971-05-30" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1971-05-30" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30000849X>,
-        <https://d-nb.info/gnd/300120575>,
-        <https://d-nb.info/gnd/300123671>,
-        <https://d-nb.info/gnd/300125178>,
-        <https://d-nb.info/gnd/300139128>,
-        <https://d-nb.info/gnd/300146620>,
-        <https://d-nb.info/gnd/300552211>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1970-71> ;
-    cto:relatedItem <https://d-nb.info/gnd/30000849X>,
-        <https://d-nb.info/gnd/300120575>,
-        <https://d-nb.info/gnd/300123671>,
-        <https://d-nb.info/gnd/300125178>,
-        <https://d-nb.info/gnd/300139128>,
-        <https://d-nb.info/gnd/300146620>,
-        <https://d-nb.info/gnd/300552211>,
-        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1971-30-maerz>,
-        <https://performance.musiconn.de/work/chansons-1915-ravel-maurice>,
-        <https://performance.musiconn.de/work/chansons-russes-rachmaninov-sergej-vasilevic>,
-        <https://performance.musiconn.de/work/friede-auf-erden-schoenberg-arnold>,
-        <https://performance.musiconn.de/work/messen-fp-89-g-dur-poulenc-francis>,
-        <https://performance.musiconn.de/work/nach-dir-herr-verlanget-mich-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/nocevala-tucka-zolotaja-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/spanisches-liederspiel-schumann-robert>,
-        <https://viaf.org/viaf/179455817>,
-        <https://viaf.org/viaf/179752420>,
-        <https://viaf.org/viaf/185140424>,
-        <https://viaf.org/viaf/185577624>,
-        <https://viaf.org/viaf/198536243>,
-        <https://viaf.org/viaf/212880808>,
-        <https://viaf.org/viaf/219163345> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/179455817>,
-        <https://viaf.org/viaf/179752420>,
-        <https://viaf.org/viaf/185140424>,
-        <https://viaf.org/viaf/185577624>,
-        <https://viaf.org/viaf/198536243>,
-        <https://viaf.org/viaf/212880808>,
-        <https://viaf.org/viaf/219163345> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30000849X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179752420> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300120575> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185140424> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146620> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179455817> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300125178> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219163345> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198536243> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300123671> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212880808> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185577624> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300139128> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300552211> ],
+        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1971-30-maerz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179455817> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179752420> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185140424> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185577624> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198536243> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212880808> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219163345> a nfdicore:NFDI_0001010 .
 

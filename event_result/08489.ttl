@@ -1,35 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009976> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300782365> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2005-01-21> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2005-01-21> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2005-01-21> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 21.1.2005" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2005-01-21" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2005-01-21" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300782365>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300782365>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186101216> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009976> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300782365> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174651654> ],
         <https://performance.musiconn.de/source/motettenbuch-2004-05>,
         <https://performance.musiconn.de/work/choraele-aus-der-sammlung-joh-seb-bachs-vierstimmige-choralgesaenge-christ-du-bist-der-helle-tag-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/der-geist-hilft-unser-schwachheit-auf-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/fontana-disrael-was-betruebst-du-dich-meine-seele-schein-johann-hermann>,
-        <https://performance.musiconn.de/work/herr-christe-tu-mir-geben-eccard-johannes>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/186101216> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/186101216> .
+        <https://performance.musiconn.de/work/herr-christe-tu-mir-geben-eccard-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174651654> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186101216> a nfdicore:NFDI_0001010 .
 

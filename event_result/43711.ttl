@@ -4,20 +4,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1165064022> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/wohltaetigkeitskonzert-zugunsten-der-tagesstaette-berolina-tel-aviv-fuer-autistische-kinder-konzerthaus-berlin-1994-02-13-11-00> ] .
 
-<https://performance.musiconn.de/event/wohltaetigkeitskonzert-zugunsten-der-tagesstaette-berolina-tel-aviv-fuer-autistische-kinder-konzerthaus-berlin-1994-02-13-11-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/wohltaetigkeitskonzert-zugunsten-der-tagesstaette-berolina-tel-aviv-fuer-autistische-kinder-konzerthaus-berlin-1994-02-13-11-00> a cto:CTO_0001005 ;
     rdfs:label "Wohltätigkeitskonzert zugunsten der Tagesstätte BEROLINA Tel Aviv für autistische Kinder, Konzerthaus (Berlin), 13.2.1994, 11:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1994-02-13T11:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1994-02-13T11:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1165064022>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/andreas-richter-seid-froehlich-wohltaetigkeitskonzert-mit-dem-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        <https://performance.musiconn.de/corporation/saechsisches-kammerorchester-leipzig> ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/76153532491848820007> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1165064022> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/andreas-richter-seid-froehlich-wohltaetigkeitskonzert-mit-dem-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/programm-konzert-13-februar-1994>,
         <https://performance.musiconn.de/source/regina-leistner-leipziger-synagogalchor-von-kunstmusik-bis-folklore-benefizkonzert-zugunsten-israelischer-kinder>,
@@ -38,11 +47,9 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/tka-bschofor-godol-sulzer-salomon>,
         <https://performance.musiconn.de/work/wie-trinkt-der-kejsser-tee-fassung-sander-werner>,
         <https://performance.musiconn.de/work/wschomru-alman-samuel> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1165064022>,
-        <https://viaf.org/viaf/76153532491848820007> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://performance.musiconn.de/corporation/saechsisches-kammerorchester-leipzig>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/76153532491848820007> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/76153532491848820007> a nfdicore:NFDI_0001010 .
 

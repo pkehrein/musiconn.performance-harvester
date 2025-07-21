@@ -1,42 +1,56 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1225140420> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1225140854> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1225140889> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1225140994> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-stadthalle-karl-marx-stadt-1986-01-12> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-stadthalle-karl-marx-stadt-1986-01-12> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-stadthalle-karl-marx-stadt-1986-01-12> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Stadthalle (Karl-Marx-Stadt), 12.1.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-01-12" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-01-12" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/145134245> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225140854> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5076161098972929640008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4172161098970229640009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225140889> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225140420> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225140994> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/9397161098986229640004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8754161098984329640005> ],
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1225140420>,
-        <https://d-nb.info/gnd/1225140854>,
-        <https://d-nb.info/gnd/1225140889>,
-        <https://d-nb.info/gnd/1225140994> ;
-    cto:relatedItem <https://d-nb.info/gnd/1225140420>,
-        <https://d-nb.info/gnd/1225140854>,
-        <https://d-nb.info/gnd/1225140889>,
-        <https://d-nb.info/gnd/1225140994>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
-        <https://performance.musiconn.de/work/kabarettlieder-ich-such-mir-meine-braut-pester-thomas>,
-        <https://performance.musiconn.de/work/kabarettlieder-wind-im-blut-pester-thomas>,
-        <https://performance.musiconn.de/work/kabarettlieder-wir-haben-eine-puppe-pester-thomas>,
-        <https://performance.musiconn.de/work/worueber-lachen-die-leute-pester-thomas>,
-        <https://viaf.org/viaf/4172161098970229640009>,
-        <https://viaf.org/viaf/5076161098972929640008>,
-        <https://viaf.org/viaf/8754161098984329640005>,
-        <https://viaf.org/viaf/9397161098986229640004> ;
-    cto:relatedLocation <https://viaf.org/viaf/145134245> ;
-    cto:relatedPerson <https://performance.musiconn.de/person/koenig-gisela> ;
-    cto:viaf <https://viaf.org/viaf/145134245>,
-        <https://viaf.org/viaf/4172161098970229640009>,
-        <https://viaf.org/viaf/5076161098972929640008>,
-        <https://viaf.org/viaf/8754161098984329640005>,
-        <https://viaf.org/viaf/9397161098986229640004> .
+    cto:relatedPerson <https://performance.musiconn.de/person/koenig-gisela> .
+
+<https://viaf.org/viaf/145134245> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4172161098970229640009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5076161098972929640008> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8754161098984329640005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/9397161098986229640004> a nfdicore:NFDI_0001010 .
 

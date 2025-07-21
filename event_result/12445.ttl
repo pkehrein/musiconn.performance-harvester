@@ -1,59 +1,78 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1116436922> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1147670617> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300121113> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300289588> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30047931X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5060751-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-opernhaus-chemnitz-1968-12-18> ] .
 
-<https://performance.musiconn.de/event/konzert-opernhaus-chemnitz-1968-12-18> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-opernhaus-chemnitz-1968-12-18> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Opernhaus (Chemnitz), 18.12.1968" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1968-12-18" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1968-12-18" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1116436922>,
-        <https://d-nb.info/gnd/1147670617>,
-        <https://d-nb.info/gnd/300121113>,
-        <https://d-nb.info/gnd/300289588>,
-        <https://d-nb.info/gnd/30047931X>,
-        <https://d-nb.info/gnd/5060751-0> ;
-    cto:relatedItem <https://d-nb.info/gnd/1116436922>,
-        <https://d-nb.info/gnd/1147670617>,
-        <https://d-nb.info/gnd/300121113>,
-        <https://d-nb.info/gnd/300289588>,
-        <https://d-nb.info/gnd/30047931X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/149644328> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5060751-0> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300289588> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1147670617> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180233160> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/430147727631164710004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182639689> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300121113> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1116436922> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181850865> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30047931X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212884960> ],
         <https://performance.musiconn.de/source/motettenbuch-1968>,
         <https://performance.musiconn.de/work/altboehmische-gesaenge-teil-2-riedel-carl>,
         <https://performance.musiconn.de/work/auf-auf-ihr-buben-braeutigam-helmut>,
         <https://performance.musiconn.de/work/der-du-die-welt-geschaffen-hast-simon-hermann>,
         <https://performance.musiconn.de/work/der-jahreskreis-o-heiland-reiss-die-himmel-auf-distler-hugo>,
         <https://performance.musiconn.de/work/der-tag-der-ist-so-freudenreich-finck-heinrich>,
-        <https://performance.musiconn.de/work/geistliche-chormusik-das-ist-je-gewisslich-wahr-und-ein-teuer-wertes-wort-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/harmoniae-angelicae-cantionum-ecclesiasticarum-joseph-lieber-joseph-mein-bodenschatz-erhard>,
         <https://performance.musiconn.de/work/ist-es-noch-still-in-der-runde-anonym>,
-        <https://performance.musiconn.de/work/lobt-gott-ihr-christen-alle-gleich-gotschovius-nikolaus>,
-        <https://performance.musiconn.de/work/musae-sioniae-theil-6-es-ist-ein-ros-entsprungen-praetorius-michael>,
         <https://performance.musiconn.de/work/preussische-fest-lieder-teil-1-o-freude-ueber-freud-eccard-johannes>,
         <https://performance.musiconn.de/work/siehe-dein-koenig-kommt-braeutigam-volker>,
         <https://performance.musiconn.de/work/singet-frisch-und-wohlgemut-braeutigam-helmut>,
         <https://performance.musiconn.de/work/stille-nacht-heilige-nacht-chorsatz-schreck-gustav>,
-        <https://performance.musiconn.de/work/was-soll-das-bedeuten-anonym>,
-        <https://performance.musiconn.de/work/wie-schoen-singt-uns-der-engel-schar-freundt-cornelius>,
-        <https://viaf.org/viaf/180233160>,
-        <https://viaf.org/viaf/181850865>,
-        <https://viaf.org/viaf/182639689>,
-        <https://viaf.org/viaf/212884960>,
-        <https://viaf.org/viaf/430147727631164710004> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5060751-0>,
-        <https://viaf.org/viaf/149644328> ;
-    cto:viaf <https://viaf.org/viaf/149644328>,
-        <https://viaf.org/viaf/180233160>,
-        <https://viaf.org/viaf/181850865>,
-        <https://viaf.org/viaf/182639689>,
-        <https://viaf.org/viaf/212884960>,
-        <https://viaf.org/viaf/430147727631164710004> .
+        <https://performance.musiconn.de/work/was-soll-das-bedeuten-anonym> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/149644328> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180233160> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181850865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182639689> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212884960> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/430147727631164710004> a nfdicore:NFDI_0001010 .
 

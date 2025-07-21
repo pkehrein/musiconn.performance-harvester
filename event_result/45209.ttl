@@ -1,58 +1,79 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300110995> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300119194> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140541> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141769> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145772> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30019501X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300211260> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1910-12-05-20-00> ] .
 
-<https://performance.musiconn.de/event/5-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1910-12-05-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1910-12-05-20-00> a cto:CTO_0001005 ;
     rdfs:label "5. Philharmonisches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 5.12.1910, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1910-1911-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1910-12-05T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1910-12-05T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300110995>,
-        <https://d-nb.info/gnd/300119194>,
-        <https://d-nb.info/gnd/300140541>,
-        <https://d-nb.info/gnd/300141769>,
-        <https://d-nb.info/gnd/300145772>,
-        <https://d-nb.info/gnd/30019501X>,
-        <https://d-nb.info/gnd/300211260> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1910-1911-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300110995>,
-        <https://d-nb.info/gnd/300119194>,
-        <https://d-nb.info/gnd/300140541>,
-        <https://d-nb.info/gnd/300141769>,
-        <https://d-nb.info/gnd/300145772>,
-        <https://d-nb.info/gnd/30019501X>,
-        <https://d-nb.info/gnd/300211260>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211711351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300119194> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215924539> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185114977> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145772> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140541> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30019501X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185523069> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141769> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311485859> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300211260> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217006126> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110995> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175773429> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1890-1924>,
-        <https://performance.musiconn.de/work/gretchen-am-spinnrade-schubert-franz>,
-        <https://performance.musiconn.de/work/heidenroeslein-schubert-franz>,
         <https://performance.musiconn.de/work/le-nozze-di-figaro-rezitativ-und-arie-der-susanne-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-77-auftraege-schumann-robert>,
-        <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-fruehlingsnacht-schumann-robert>,
-        <https://performance.musiconn.de/work/musik-zu-heinrich-v-kleists-kaethchen-von-heilbronn-ouvertuere-pfitzner-hans>,
-        <https://performance.musiconn.de/work/sinfonien-d-589-c-dur-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-kv-183-g-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/volksliedchen-schumann-robert>,
-        <https://viaf.org/viaf/175773429>,
-        <https://viaf.org/viaf/185114977>,
-        <https://viaf.org/viaf/185523069>,
-        <https://viaf.org/viaf/211711351>,
-        <https://viaf.org/viaf/215924539>,
-        <https://viaf.org/viaf/217006126>,
-        <https://viaf.org/viaf/311485859> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/175773429>,
-        <https://viaf.org/viaf/185114977>,
-        <https://viaf.org/viaf/185523069>,
-        <https://viaf.org/viaf/211711351>,
-        <https://viaf.org/viaf/215924539>,
-        <https://viaf.org/viaf/217006126>,
-        <https://viaf.org/viaf/311485859> .
+        <https://performance.musiconn.de/work/volksliedchen-schumann-robert> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175773429> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185114977> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185523069> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211711351> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215924539> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217006126> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311485859> a nfdicore:NFDI_0001010 .
 

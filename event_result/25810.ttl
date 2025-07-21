@@ -1,40 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30002729X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027311> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300286333> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/concert-erstes-gewandhaus-leipzig-1874-02-05> ] .
 
-<https://performance.musiconn.de/event/concert-erstes-gewandhaus-leipzig-1874-02-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/concert-erstes-gewandhaus-leipzig-1874-02-05> a cto:CTO_0001005 ;
     rdfs:label "Concert, Erstes Gewandhaus (Leipzig), 5.2.1874" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1874-02-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1874-02-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/30002729X>,
-        <https://d-nb.info/gnd/300027311>,
-        <https://d-nb.info/gnd/300286333> ;
-    cto:relatedItem <https://d-nb.info/gnd/30002729X>,
-        <https://d-nb.info/gnd/300027311>,
-        <https://d-nb.info/gnd/300286333>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311579680> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209861106> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30002729X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300286333> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178636054> ],
         <https://performance.musiconn.de/source/programme-der-konzerte-im-gewandhaus-zu-leipzig-staedt-bibl-leipzig>,
         <https://performance.musiconn.de/source/programmzettel>,
-        <https://performance.musiconn.de/work/ouvertuere-zu-goethes-hermann-und-dorothea-schumann-robert>,
-        <https://performance.musiconn.de/work/praeludium-und-fuge-von-joh-seb-bach-mit-choral-von-abert-bach-johann-sebastian-abert-johann-joseph>,
-        <https://performance.musiconn.de/work/ungarische-taenze-fassung-orchester-brahms-johannes>,
-        <https://performance.musiconn.de/work/variationen-ueber-ein-thema-von-joseph-haydn-brahms-johannes>,
-        <https://viaf.org/viaf/178636054>,
-        <https://viaf.org/viaf/209861106>,
-        <https://viaf.org/viaf/311579680> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/178636054>,
-        <https://viaf.org/viaf/209861106>,
-        <https://viaf.org/viaf/311579680>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/work/praeludium-und-fuge-von-joh-seb-bach-mit-choral-von-abert-bach-johann-sebastian-abert-johann-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178636054> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209861106> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311579680> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

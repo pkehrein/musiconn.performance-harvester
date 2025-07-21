@@ -1,42 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1156749026> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1191789896> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009682> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009690> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-kammerkonzert-blockhaus-dresden-1991-02-16-19-30> ] .
 
-<https://performance.musiconn.de/event/4-kammerkonzert-blockhaus-dresden-1991-02-16-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-kammerkonzert-blockhaus-dresden-1991-02-16-19-30> a cto:CTO_0001005 ;
     rdfs:label "4. Kammerkonzert, Blockhaus (Dresden), 16.2.1991, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1990-1991> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1991-02-16T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1991-02-16T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1156749026>,
-        <https://d-nb.info/gnd/1191789896>,
-        <https://d-nb.info/gnd/300009682>,
-        <https://d-nb.info/gnd/300009690> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1990-1991> ;
-    cto:relatedItem <https://d-nb.info/gnd/1191789896>,
-        <https://d-nb.info/gnd/300009682>,
-        <https://d-nb.info/gnd/300009690>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7980152502945210800008> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1156749026> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8446156497257917740004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009682> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197648368> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192572053> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009690> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1191789896> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/konzerte-oboe-fagott-streicher-basso-continuo-g-dur-vivaldi-antonio>,
         <https://performance.musiconn.de/work/konzerte-trompete-oboe-streicher-basso-continuo-es-dur-hertel-johann-wilhelm>,
-        <https://performance.musiconn.de/work/konzerte-violine-2-streichorchester-bwv-1043-d-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/konzerte-violine-streichorchester-bwv-1042-e-dur-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonata-d-dur-leclair-jean-marie>,
-        <https://performance.musiconn.de/work/sonaten-trompete-2-oboe-2-violine-2-fagott-basso-continuo-d-dur-finger-gottfried>,
-        <https://viaf.org/viaf/192572053>,
-        <https://viaf.org/viaf/197648368>,
-        <https://viaf.org/viaf/8446156497257917740004> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1156749026>,
-        <https://viaf.org/viaf/7980152502945210800008> ;
-    cto:viaf <https://viaf.org/viaf/192572053>,
-        <https://viaf.org/viaf/197648368>,
-        <https://viaf.org/viaf/7980152502945210800008>,
-        <https://viaf.org/viaf/8446156497257917740004> .
+        <https://performance.musiconn.de/work/sonata-d-dur-leclair-jean-marie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/192572053> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197648368> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7980152502945210800008> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8446156497257917740004> a nfdicore:NFDI_0001010 .
 

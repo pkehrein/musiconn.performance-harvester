@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/118505505> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/wahl-und-einfuehrung-von-johann-von-doehren-als-pastor-der-heiligen-geist-kirche-hospital-zum-heiligen-geist-hamburg-1773-09-10> ] .
 
-<https://performance.musiconn.de/event/wahl-und-einfuehrung-von-johann-von-doehren-als-pastor-der-heiligen-geist-kirche-hospital-zum-heiligen-geist-hamburg-1773-09-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/wahl-und-einfuehrung-von-johann-von-doehren-als-pastor-der-heiligen-geist-kirche-hospital-zum-heiligen-geist-hamburg-1773-09-10> a cto:CTO_0001005 ;
     rdfs:label "Wahl und Einführung von Johann von Döhren als Pastor der Heiligen-Geist-Kirche, Hospital zum Heiligen Geist (Hamburg), 10.9.1773" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1773-09-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1773-09-10" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118505505> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hospital-zum-heiligen-geist-hamburg> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/carl-philipp-emanuel-bach-dokumente-zu-leben-und-wirken-aus-der-zeitgenoessischen-hamburgischen-presse-1767-1790-leipziger-beitraege-zur-bach-forschung-4-hildesheim-u-a> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/118505505> ;
-    cto:relatedItem <https://performance.musiconn.de/source/carl-philipp-emanuel-bach-dokumente-zu-leben-und-wirken-aus-der-zeitgenoessischen-hamburgischen-presse-1767-1790-leipziger-beitraege-zur-bach-forschung-4-hildesheim-u-a> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hospital-zum-heiligen-geist-hamburg> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118505505>,
-        <https://viaf.org/viaf/204566> ;
-    cto:viaf <https://viaf.org/viaf/204566> .
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204566> ] .
+
+<https://viaf.org/viaf/204566> a nfdicore:NFDI_0001010 .
 

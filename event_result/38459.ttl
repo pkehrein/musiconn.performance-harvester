@@ -1,53 +1,71 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026862> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033850> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300107498> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30010751X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300116853> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7670815-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sinfoniekonzert-1931-02-05-20-00> ] .
 
-<https://performance.musiconn.de/event/sinfoniekonzert-1931-02-05-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sinfoniekonzert-1931-02-05-20-00> a cto:CTO_0001005 ;
     rdfs:label "Sinfoniekonzert, 5.2.1931, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1930-1931> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1931-02-05T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1931-02-05T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026862>,
-        <https://d-nb.info/gnd/300033850>,
-        <https://d-nb.info/gnd/300107498>,
-        <https://d-nb.info/gnd/30010751X>,
-        <https://d-nb.info/gnd/300116853>,
-        <https://d-nb.info/gnd/7670815-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1930-1931> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026862>,
-        <https://d-nb.info/gnd/300033850>,
-        <https://d-nb.info/gnd/300107498>,
-        <https://d-nb.info/gnd/30010751X>,
-        <https://d-nb.info/gnd/300116853>,
-        <https://d-nb.info/gnd/7670815-9>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/turnhalle-crimmitschau> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193698494> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305991533> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217003153> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300107498> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033850> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026862> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30010751X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176838542> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7670815-9> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194733340> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300116853> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208684201> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/der-nussknacker-suite-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/deutsche-taenze-orchester-kv-600-nr-5-g-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/deutsche-taenze-orchester-kv-602-nr-3-c-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/deutsche-taenze-orchester-kv-605-nr-3-c-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-ms-21-d-dur-paganini-niccolo>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-68-c-moll-brahms-johannes>,
         <https://performance.musiconn.de/work/slavischer-tanz-nr-1-c-dur-dvorak-antonin>,
-        <https://performance.musiconn.de/work/slawischer-tanz-nr-3-as-dur-dvorak-antonin>,
-        <https://viaf.org/viaf/176838542>,
-        <https://viaf.org/viaf/193698494>,
-        <https://viaf.org/viaf/194733340>,
-        <https://viaf.org/viaf/208684201>,
-        <https://viaf.org/viaf/217003153>,
-        <https://viaf.org/viaf/305991533> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/turnhalle-crimmitschau> ;
-    cto:viaf <https://viaf.org/viaf/176838542>,
-        <https://viaf.org/viaf/193698494>,
-        <https://viaf.org/viaf/194733340>,
-        <https://viaf.org/viaf/208684201>,
-        <https://viaf.org/viaf/217003153>,
-        <https://viaf.org/viaf/305991533> .
+        <https://performance.musiconn.de/work/slawischer-tanz-nr-3-as-dur-dvorak-antonin> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176838542> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193698494> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194733340> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208684201> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217003153> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305991533> a nfdicore:NFDI_0001010 .
 

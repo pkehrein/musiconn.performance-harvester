@@ -1,50 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1252536933> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011504> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300044216> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300458576> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4301235-8> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5314651-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/klassik-clara-schumann-orchester-museumsbau-der-bundeskunsthalle-bonn> ] .
 
-<https://performance.musiconn.de/event/klassik-clara-schumann-orchester-museumsbau-der-bundeskunsthalle-bonn> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/klassik-clara-schumann-orchester-museumsbau-der-bundeskunsthalle-bonn> a cto:CTO_0001005 ;
     rdfs:label "Klassik - Clara Schumann Orchester, Museumsbau der Bundeskunsthalle (Bonn)" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2006-04-02" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2006-04-02" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1252536933>,
-        <https://d-nb.info/gnd/300011504>,
-        <https://d-nb.info/gnd/300044216>,
-        <https://d-nb.info/gnd/300458576>,
-        <https://d-nb.info/gnd/4301235-8>,
-        <https://d-nb.info/gnd/5314651-7> ;
-    cto:relatedItem <https://d-nb.info/gnd/1252536933>,
-        <https://d-nb.info/gnd/300011504>,
-        <https://d-nb.info/gnd/300044216>,
-        <https://d-nb.info/gnd/300458576>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154494011> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5314651-7> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4301235-8> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/243130083> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193663947> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011504> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5195164604105937910000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1252536933> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177407019> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300044216> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300458576> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175737337> ],
         <https://performance.musiconn.de/source/programm-konzert-klassik-clara-schumann-orchester>,
         <https://performance.musiconn.de/work/konzerte-violine-orchester-op-3-nr-3-a-dur-sirmen-maddalena-laura-lombardini>,
         <https://performance.musiconn.de/work/la-tempesta-kantate-martinez-marianne>,
-        <https://performance.musiconn.de/work/linverno-rv-297-violinkonzert-2-satz-largo-vivaldi-antonio>,
-        <https://performance.musiconn.de/work/memories-dinescu-violeta>,
-        <https://performance.musiconn.de/work/messias-er-weidet-deine-schar-wie-ein-hirte-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/ouvertueren-bwv-1068-d-dur-air-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/ouvertueren-c-dur-martinez-marianne>,
-        <https://viaf.org/viaf/175737337>,
-        <https://viaf.org/viaf/177407019>,
-        <https://viaf.org/viaf/193663947>,
-        <https://viaf.org/viaf/5195164604105937910000> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4301235-8>,
-        <https://viaf.org/viaf/243130083> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5314651-7>,
-        <https://viaf.org/viaf/154494011> ;
-    cto:viaf <https://viaf.org/viaf/154494011>,
-        <https://viaf.org/viaf/175737337>,
-        <https://viaf.org/viaf/177407019>,
-        <https://viaf.org/viaf/193663947>,
-        <https://viaf.org/viaf/243130083>,
-        <https://viaf.org/viaf/5195164604105937910000> .
+        <https://performance.musiconn.de/work/messias-er-weidet-deine-schar-wie-ein-hirte-haendel-georg-friedrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154494011> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175737337> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177407019> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193663947> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/243130083> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5195164604105937910000> a nfdicore:NFDI_0001010 .
 

@@ -1,39 +1,49 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300061668> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300434154> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-kammerkonzert-schloss-albrechtsberg-dresden-2015-09-13-19-00> ] .
 
-<https://performance.musiconn.de/event/1-kammerkonzert-schloss-albrechtsberg-dresden-2015-09-13-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-kammerkonzert-schloss-albrechtsberg-dresden-2015-09-13-19-00> a cto:CTO_0001005 ;
     rdfs:label "1. Kammerkonzert, Schloss Albrechtsberg (Dresden), 13.9.2015, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2015-2016> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2015-09-13T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2015-09-13T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300061668>,
-        <https://d-nb.info/gnd/300434154>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2015-2016> ;
-    cto:relatedItem <https://d-nb.info/gnd/300061668>,
-        <https://d-nb.info/gnd/300434154>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300061668> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300434154> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199702575> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191505843> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/barlach-figuren-fassung-fuer-viola-violoncello-kontrabass-und-klavier-promnitz-rainer>,
-        <https://performance.musiconn.de/work/goyescas-oper-intermezzo-granados-enrique>,
         <https://performance.musiconn.de/work/kartinki-s-vystavki-auswahl-musorgskij-modest-petrovic>,
         <https://performance.musiconn.de/work/kartinki-s-vystavki-fassung-klavier-streichquartett-promnitz-rainer>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-1-op-5-milhaud-darius>,
         <https://performance.musiconn.de/work/streichtrio-ciurlionis-mikalojus-konstantinas>,
-        <https://performance.musiconn.de/work/tanzende-freske-dvarionas-balys>,
-        <https://viaf.org/viaf/191505843>,
-        <https://viaf.org/viaf/199702575> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/191505843>,
-        <https://viaf.org/viaf/199702575>,
-        <https://viaf.org/viaf/237386709> .
+        <https://performance.musiconn.de/work/tanzende-freske-dvarionas-balys> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/191505843> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199702575> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
 

@@ -1,56 +1,74 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1189168014> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/126293530X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300036825> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300094981> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140665> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300279426> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/concert-mit-orchester-von-marcella-sembrich-gewerbehaus-dresden-gewerbehaus-saal-1890-03-11-19-00> ] .
 
-<https://performance.musiconn.de/event/concert-mit-orchester-von-marcella-sembrich-gewerbehaus-dresden-gewerbehaus-saal-1890-03-11-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/concert-mit-orchester-von-marcella-sembrich-gewerbehaus-dresden-gewerbehaus-saal-1890-03-11-19-00> a cto:CTO_0001005 ;
     rdfs:label "Concert mit Orchester von Marcella Sembrich, Gewerbehaus (Dresden). Gewerbehaus-Saal, 11.3.1890, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1889-1890> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1890-03-11T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1890-03-11T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/1189168014>,
-        <https://d-nb.info/gnd/126293530X>,
-        <https://d-nb.info/gnd/300036825>,
-        <https://d-nb.info/gnd/300094981>,
-        <https://d-nb.info/gnd/300140665>,
-        <https://d-nb.info/gnd/300279426> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1889-1890> ;
-    cto:relatedItem <https://d-nb.info/gnd/1189168014>,
-        <https://d-nb.info/gnd/126293530X>,
-        <https://d-nb.info/gnd/300036825>,
-        <https://d-nb.info/gnd/300094981>,
-        <https://d-nb.info/gnd/300140665>,
-        <https://d-nb.info/gnd/300279426>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2957165870989464270005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/126293530X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/244261172> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1189168014> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140665> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300279426> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300036825> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205762266> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300094981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/302725682> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191496981> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1889-1890>,
-        <https://performance.musiconn.de/work/boleros-klavier-op-19-c-dur-chopin-frederic>,
         <https://performance.musiconn.de/work/i-puritani-pollacca-bellini-vincenzo>,
-        <https://performance.musiconn.de/work/impromptus-klavier-d-899-nr-1-schubert-franz>,
         <https://performance.musiconn.de/work/la-traviata-arie-verdi-giuseppe>,
         <https://performance.musiconn.de/work/le-nozze-di-figaro-rezitativ-und-arie-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/lieder-op-37-liebst-du-um-schoenheit-kjui-cezar-antonovic>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-30-ach-wer-das-doch-koennte-berger-wilhelm>,
         <https://performance.musiconn.de/work/melusine-vorspiel-grammann-carl>,
-        <https://performance.musiconn.de/work/musik-zu-ruy-blas-ouvertuere-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/praeludium-und-fuge-op-35-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/so-hat-noch-niemand-mich-gekuesst-gruenfeld-alfred>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-nr-12-liszt-franz>,
-        <https://viaf.org/viaf/191496981>,
-        <https://viaf.org/viaf/205762266>,
-        <https://viaf.org/viaf/244261172>,
-        <https://viaf.org/viaf/2957165870989464270005>,
-        <https://viaf.org/viaf/302725682> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/191496981>,
-        <https://viaf.org/viaf/205762266>,
-        <https://viaf.org/viaf/244261172>,
-        <https://viaf.org/viaf/2957165870989464270005>,
-        <https://viaf.org/viaf/302725682> .
+        <https://performance.musiconn.de/work/so-hat-noch-niemand-mich-gekuesst-gruenfeld-alfred> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/191496981> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205762266> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/244261172> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2957165870989464270005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/302725682> a nfdicore:NFDI_0001010 .
 

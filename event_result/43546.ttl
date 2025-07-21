@@ -4,19 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-anlaesslich-der-tagung-des-praesidiums-des-hauptvorstandes-der-cdu-zentrale-schulungsstaette-der-cdu-burgscheidungen-1986-10-24> ] .
 
-<https://performance.musiconn.de/event/konzert-anlaesslich-der-tagung-des-praesidiums-des-hauptvorstandes-der-cdu-zentrale-schulungsstaette-der-cdu-burgscheidungen-1986-10-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-anlaesslich-der-tagung-des-praesidiums-des-hauptvorstandes-der-cdu-zentrale-schulungsstaette-der-cdu-burgscheidungen-1986-10-24> a cto:CTO_0001005 ;
     rdfs:label "Konzert anläßlich der Tagung des Präsidiums des Hauptvorstandes der CDU, Zentrale Schulungsstätte der CDU (Burgscheidungen), 24.10.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-10-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-10-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        <https://performance.musiconn.de/corporation/hallesches-kammerensemble-am-haus-der-dsf> ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/zentrale-schulungsstaette-der-cdu-burgscheidungen> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/programm-konzert-24-oktober-1986>,
         <https://performance.musiconn.de/work/hamchabe-es-haner-alman-samuel>,
         <https://performance.musiconn.de/work/jismchu-adirim-fassung-sander-werner>,
@@ -26,9 +31,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/toras-adonoi-psalm-19-7-9-lewandowski-louis>,
         <https://performance.musiconn.de/work/towo-lfonecho-lewandowski-louis>,
         <https://performance.musiconn.de/work/wschomru-nowakowsky-david> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/zentrale-schulungsstaette-der-cdu-burgscheidungen> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://performance.musiconn.de/corporation/hallesches-kammerensemble-am-haus-der-dsf>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

@@ -1,61 +1,82 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/118907656X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1259849325> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146256> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300225016> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300225024> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300832966> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300975716> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4104635-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-oschatz-1889-06-11> ] .
 
-<https://performance.musiconn.de/event/konzert-oschatz-1889-06-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-oschatz-1889-06-11> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Oschatz, 11.6.1889" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1889-06-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1889-06-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/118907656X>,
-        <https://d-nb.info/gnd/1259849325>,
-        <https://d-nb.info/gnd/300146256>,
-        <https://d-nb.info/gnd/300225016>,
-        <https://d-nb.info/gnd/300225024>,
-        <https://d-nb.info/gnd/300832966>,
-        <https://d-nb.info/gnd/300975716>,
-        <https://d-nb.info/gnd/4104635-3> ;
-    cto:relatedItem <https://d-nb.info/gnd/118907656X>,
-        <https://d-nb.info/gnd/1259849325>,
-        <https://d-nb.info/gnd/300146256>,
-        <https://d-nb.info/gnd/300225016>,
-        <https://d-nb.info/gnd/300225024>,
-        <https://d-nb.info/gnd/300832966>,
-        <https://d-nb.info/gnd/300975716>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4104635-3> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/240837134> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300975716> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300225024> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213992195> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201856646> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1259849325> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185754358> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219163805> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146256> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300832966> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118907656X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300225016> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191500253> ],
         <https://performance.musiconn.de/source/verzeichniss-der-motetten-1811-1905>,
         <https://performance.musiconn.de/work/am-woerther-see-arrangiert-koschat-thomas>,
         <https://performance.musiconn.de/work/gesaenge-op-110-hund-und-katzen-lachner-franz-paul>,
         <https://performance.musiconn.de/work/gesaenge-op-62-die-heinzelmaennchen-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/lieder-op-12-das-abendlaeuten-richter-ernst-friedrich-eduard>,
         <https://performance.musiconn.de/work/lieder-op-31-schilflied-rust-wilhelm>,
-        <https://performance.musiconn.de/work/lieder-op-32-abendlied-hauptmann-moritz>,
         <https://performance.musiconn.de/work/lieder-op-32-huetchen-rust-wilhelm>,
-        <https://performance.musiconn.de/work/lieder-op-32-saengerfahrt-hauptmann-moritz>,
         <https://performance.musiconn.de/work/lieder-op-6-mein-engel-huete-dein-richter-alfred>,
-        <https://performance.musiconn.de/work/quartette-op-11-schneegloeckchen-laeuten-vierling-georg>,
-        <https://performance.musiconn.de/work/romanzen-und-balladen-op-67-schoen-rothraut-schumann-robert>,
-        <https://performance.musiconn.de/work/toggenburg-rheinberger-joseph>,
-        <https://performance.musiconn.de/work/trinklieder-testament-marschner-heinrich>,
-        <https://performance.musiconn.de/work/wenns-ostern-wird-am-tiberstrom-vierling-georg>,
-        <https://viaf.org/viaf/185754358>,
-        <https://viaf.org/viaf/191500253>,
-        <https://viaf.org/viaf/201856646>,
-        <https://viaf.org/viaf/213992195>,
-        <https://viaf.org/viaf/219163805> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4104635-3>,
-        <https://viaf.org/viaf/240837134> ;
-    cto:viaf <https://viaf.org/viaf/185754358>,
-        <https://viaf.org/viaf/191500253>,
-        <https://viaf.org/viaf/201856646>,
-        <https://viaf.org/viaf/213992195>,
-        <https://viaf.org/viaf/219163805>,
-        <https://viaf.org/viaf/240837134> .
+        <https://performance.musiconn.de/work/quartette-op-11-schneegloeckchen-laeuten-vierling-georg> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185754358> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191500253> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201856646> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213992195> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219163805> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/240837134> a nfdicore:NFDI_0001010 .
 

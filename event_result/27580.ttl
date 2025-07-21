@@ -1,40 +1,49 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/107842070X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011121> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133820> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1912-11-14> ] .
 
-<https://performance.musiconn.de/event/2-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1912-11-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1912-11-14> a cto:CTO_0001005 ;
     rdfs:label "2. Philharmonisches Konzert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 14.11.1912" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1912-1913> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1912-11-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1912-11-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/107842070X>,
-        <https://d-nb.info/gnd/300011121>,
-        <https://d-nb.info/gnd/300133820> ;
-    cto:itemOf <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1912-1913> ;
-    cto:relatedItem <https://d-nb.info/gnd/107842070X>,
-        <https://d-nb.info/gnd/300011121>,
-        <https://d-nb.info/gnd/300133820>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133820> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011121> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217002822> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/107842070X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/115144782942748358103> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210938580> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
         <https://performance.musiconn.de/work/aufforderung-zum-tanze-arrangiert-berlioz-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/fantasien-org-orch-op-29-stoehr-richard>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-r-198-h-moll-saint-saens-camille>,
-        <https://performance.musiconn.de/work/sonaten-und-partiten-violine-bwv-1001-1006-partita-nr-1-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/stuecke-violine-klavier-bazzini-antonio>,
         <https://performance.musiconn.de/work/stuecke-violine-klavier-daquin-louis-claude>,
-        <https://performance.musiconn.de/work/stuecke-violine-klavier-martini>,
-        <https://viaf.org/viaf/115144782942748358103>,
-        <https://viaf.org/viaf/210938580>,
-        <https://viaf.org/viaf/217002822> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/115144782942748358103>,
-        <https://viaf.org/viaf/210938580>,
-        <https://viaf.org/viaf/217002822> .
+        <https://performance.musiconn.de/work/stuecke-violine-klavier-martini> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/115144782942748358103> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210938580> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217002822> a nfdicore:NFDI_0001010 .
 

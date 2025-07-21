@@ -1,60 +1,80 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1063974127> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1189863480> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1189863634> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118986407X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015593> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300062710> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300130368> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300173849> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/iii-philharm-popul-kuenstler-concert-gewerbehaus-dresden-gewerbehaus-saal-1894-12-11-19-00> ] .
 
-<https://performance.musiconn.de/event/iii-philharm-popul-kuenstler-concert-gewerbehaus-dresden-gewerbehaus-saal-1894-12-11-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/iii-philharm-popul-kuenstler-concert-gewerbehaus-dresden-gewerbehaus-saal-1894-12-11-19-00> a cto:CTO_0001005 ;
     rdfs:label "III. Philharm. popul. Künstler-Concert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 11.12.1894, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1894-1895> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1894-12-11T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1894-12-11T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1063974127>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/1189863480>,
-        <https://d-nb.info/gnd/1189863634>,
-        <https://d-nb.info/gnd/118986407X>,
-        <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300062710>,
-        <https://d-nb.info/gnd/300130368>,
-        <https://d-nb.info/gnd/300173849> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1894-1895> ;
-    cto:relatedItem <https://d-nb.info/gnd/1063974127>,
-        <https://d-nb.info/gnd/1189863480>,
-        <https://d-nb.info/gnd/1189863634>,
-        <https://d-nb.info/gnd/118986407X>,
-        <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300062710>,
-        <https://d-nb.info/gnd/300130368>,
-        <https://d-nb.info/gnd/300173849>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185891317> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1063974127> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181828440> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177077326> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/313252285> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300173849> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1189863480> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015593> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118986407X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300130368> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062710> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207915232> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1189863634> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1894-1895>,
         <https://performance.musiconn.de/work/albumblatt-unbekanntes-teilwerk-wagner-richard>,
         <https://performance.musiconn.de/work/il-barbiere-di-siviglia-arie-rossini-gioachino>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-2-op-22-d-moll-wieniawski-henri>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-3-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/lieder-aus-der-kabadili-altpersicher-liebesreim-seuffert-eduard>,
-        <https://performance.musiconn.de/work/lieder-op-14-die-blinde-mutter-seuffert-eduard>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-leb-wohl-liebes-gretchen-gade-niels-wilhelm>,
-        <https://performance.musiconn.de/work/neues-singen-von-alten-geschichten-leichter-verlust-meyer-helmund-erik>,
-        <https://performance.musiconn.de/work/sigurd-jorsalfar-huldigungsmarsch-grieg-edvard>,
         <https://performance.musiconn.de/work/staendchen-seuffert-eduard>,
-        <https://performance.musiconn.de/work/suiten-violine-klavier-op-34-perpetuum-mobile-ries-franz>,
-        <https://performance.musiconn.de/work/weiser-und-poet-gernerth-franz-von>,
-        <https://viaf.org/viaf/177077326>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/185891317>,
-        <https://viaf.org/viaf/207915232>,
-        <https://viaf.org/viaf/313252285> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/177077326>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/185891317>,
-        <https://viaf.org/viaf/207915232>,
-        <https://viaf.org/viaf/313252285> .
+        <https://performance.musiconn.de/work/weiser-und-poet-gernerth-franz-von> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177077326> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181828440> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185891317> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207915232> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/313252285> a nfdicore:NFDI_0001010 .
 

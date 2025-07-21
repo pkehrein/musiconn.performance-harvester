@@ -1,49 +1,64 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/119112455X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1287210783> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300025467> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300065019> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300174837> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-philharmonisches-konzert-schauspielhaus-leipzig-1904-01-04> ] .
 
-<https://performance.musiconn.de/event/6-philharmonisches-konzert-schauspielhaus-leipzig-1904-01-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-philharmonisches-konzert-schauspielhaus-leipzig-1904-01-04> a cto:CTO_0001005 ;
     rdfs:label "6. Philharmonisches Konzert, Schauspielhaus (Leipzig), 4.1.1904" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1903-1904> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1904-01-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1904-01-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/119112455X>,
-        <https://d-nb.info/gnd/1287210783>,
-        <https://d-nb.info/gnd/300025467>,
-        <https://d-nb.info/gnd/300065019>,
-        <https://d-nb.info/gnd/300108915>,
-        <https://d-nb.info/gnd/300174837> ;
-    cto:itemOf <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1903-1904> ;
-    cto:relatedItem <https://d-nb.info/gnd/1287210783>,
-        <https://d-nb.info/gnd/300025467>,
-        <https://d-nb.info/gnd/300065019>,
-        <https://d-nb.info/gnd/300108915>,
-        <https://d-nb.info/gnd/300174837>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/119112455X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215923151> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1287210783> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194733113> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108915> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181520539> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300065019> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025467> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300174837> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203706295> ],
         <https://performance.musiconn.de/source/musikalisches-wochenblatt-mw>,
         <https://performance.musiconn.de/work/die-zauberfloete-arie-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/intermezzi-klavier-op-117-brahms-johannes>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-kv-450-b-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-orch-hwv-334-haendel-georg-friedrich>,
         <https://performance.musiconn.de/work/le-nozze-di-figaro-arie-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/lucia-di-lammermoor-arie-donizetti-gaetano>,
-        <https://performance.musiconn.de/work/penthesilea-wolf-hugo>,
-        <https://performance.musiconn.de/work/stuecke-klavier-op-129-gavotte-reinecke-carl>,
-        <https://performance.musiconn.de/work/variationen-op-36-paderewski-ignacy-jan>,
-        <https://viaf.org/viaf/181520539>,
-        <https://viaf.org/viaf/194733113>,
-        <https://viaf.org/viaf/203706295>,
-        <https://viaf.org/viaf/215923151> ;
-    cto:relatedLocation <https://d-nb.info/gnd/119112455X> ;
-    cto:viaf <https://viaf.org/viaf/181520539>,
-        <https://viaf.org/viaf/194733113>,
-        <https://viaf.org/viaf/203706295>,
-        <https://viaf.org/viaf/215923151> .
+        <https://performance.musiconn.de/work/variationen-op-36-paderewski-ignacy-jan> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181520539> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194733113> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203706295> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215923151> a nfdicore:NFDI_0001010 .
 

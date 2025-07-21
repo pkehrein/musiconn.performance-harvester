@@ -1,47 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1148666117> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300134738> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300149859> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300757085> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/violinabend-abschiedskonzert-des-konzertmeisters-stefan-frenkel-gewerbehaus-dresden-gewerbehaus-saal-1926-04-13-20-00> ] .
 
-<https://performance.musiconn.de/event/violinabend-abschiedskonzert-des-konzertmeisters-stefan-frenkel-gewerbehaus-dresden-gewerbehaus-saal-1926-04-13-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/violinabend-abschiedskonzert-des-konzertmeisters-stefan-frenkel-gewerbehaus-dresden-gewerbehaus-saal-1926-04-13-20-00> a cto:CTO_0001005 ;
     rdfs:label "Violinabend (Abschiedskonzert des Konzertmeisters Stefan Frenkel), Gewerbehaus (Dresden). Gewerbehaus-Saal, 13.4.1926, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1925-1926> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1926-04-13T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1926-04-13T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1148666117>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300134738>,
-        <https://d-nb.info/gnd/300149859>,
-        <https://d-nb.info/gnd/300757085> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1925-1926> ;
-    cto:relatedItem <https://d-nb.info/gnd/1148666117>,
-        <https://d-nb.info/gnd/300134738>,
-        <https://d-nb.info/gnd/300149859>,
-        <https://d-nb.info/gnd/300757085>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182728507> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300149859> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1148666117> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180667686> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300757085> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300134738> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203726560> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1920151353518352720009> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/capriccio-frenkel-stefan>,
-        <https://performance.musiconn.de/work/fantasia-sobre-carmen-de-bizet-sarasate-pablo-de>,
         <https://performance.musiconn.de/work/konzerte-violine-orchester-nardini-pietro>,
         <https://performance.musiconn.de/work/lieder-in-waldeinsamkeit-in-stiller-nacht-der-jaeger-der-schmied-brahms-johannes>,
         <https://performance.musiconn.de/work/lieder-morgen-du-meines-herzens-kroenelein-traum-durch-die-daemmerung-zueognung-strauss-richard>,
-        <https://performance.musiconn.de/work/praeludien-und-fugen-chaconne-violine-op-117-nr-6-reger-max>,
-        <https://performance.musiconn.de/work/sicilienne-and-rigaudon-violine-klavier-kreisler-fritz>,
-        <https://performance.musiconn.de/work/stuecke-fuer-violine-und-klavier-praeludium-und-allegro-kreisler-fritz>,
-        <https://performance.musiconn.de/work/z-domoviny-smetana-bedrich>,
-        <https://viaf.org/viaf/180667686>,
-        <https://viaf.org/viaf/182728507>,
-        <https://viaf.org/viaf/1920151353518352720009>,
-        <https://viaf.org/viaf/203726560> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/180667686>,
-        <https://viaf.org/viaf/182728507>,
-        <https://viaf.org/viaf/1920151353518352720009>,
-        <https://viaf.org/viaf/203726560> .
+        <https://performance.musiconn.de/work/stuecke-fuer-violine-und-klavier-praeludium-und-allegro-kreisler-fritz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180667686> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182728507> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/1920151353518352720009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203726560> a nfdicore:NFDI_0001010 .
 

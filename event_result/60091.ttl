@@ -1,61 +1,82 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1060517841> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1259293262> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1263679447> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1263705278> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1265707529> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1266018565> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001709X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101406> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101430> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30095610X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/musikalische-auffuehrung-zur-feier-des-25jaehrigen-jubilaeums-des-herrn-concertmeister-ferdinand-david-conservatorium-der-musik-1861-02-15-18-00> ] .
 
-<https://performance.musiconn.de/event/musikalische-auffuehrung-zur-feier-des-25jaehrigen-jubilaeums-des-herrn-concertmeister-ferdinand-david-conservatorium-der-musik-1861-02-15-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/musikalische-auffuehrung-zur-feier-des-25jaehrigen-jubilaeums-des-herrn-concertmeister-ferdinand-david-conservatorium-der-musik-1861-02-15-18-00> a cto:CTO_0001005 ;
     rdfs:label "Musikalische Aufführung zur Feier des 25jährigen Jubiläums des Herrn Concertmeister Ferdinand David, Conservatorium der Musik, 15.2.1861, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzert> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1861-02-15T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1861-02-15T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1060517841>,
-        <https://d-nb.info/gnd/1259293262>,
-        <https://d-nb.info/gnd/1263679447>,
-        <https://d-nb.info/gnd/1263705278>,
-        <https://d-nb.info/gnd/1265707529>,
-        <https://d-nb.info/gnd/1266018565>,
-        <https://d-nb.info/gnd/30001709X>,
-        <https://d-nb.info/gnd/300101406>,
-        <https://d-nb.info/gnd/300101430>,
-        <https://d-nb.info/gnd/30095610X> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzert> ;
-    cto:relatedItem <https://d-nb.info/gnd/1060517841>,
-        <https://d-nb.info/gnd/1259293262>,
-        <https://d-nb.info/gnd/1263705278>,
-        <https://d-nb.info/gnd/1265707529>,
-        <https://d-nb.info/gnd/1266018565>,
-        <https://d-nb.info/gnd/30001709X>,
-        <https://d-nb.info/gnd/300101406>,
-        <https://d-nb.info/gnd/300101430>,
-        <https://d-nb.info/gnd/30095610X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1263679447> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1060517841> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/308229490> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1259293262> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101430> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1265707529> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1266018565> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101406> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174586232> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001709X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1263705278> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181937820> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30095610X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204605399> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176272911> ],
         <https://performance.musiconn.de/source/konservatorium-der-musik-hochschule-fuer-musik-konzertprogramme-1843-1948>,
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-gegr-1834-von-robert-schumann>,
-        <https://performance.musiconn.de/source/signale-fuer-die-musikalische-welt>,
-        <https://performance.musiconn.de/work/andante-und-scherzo-capriccioso-violine-orchester-op-16-david-ferdinand>,
-        <https://performance.musiconn.de/work/bunte-reihe-etuede-david-ferdinand>,
-        <https://performance.musiconn.de/work/elias-denn-er-hat-seinen-engeln-befohlen-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/elias-hebe-deine-augen-auf-zu-den-bergen-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/elias-siehe-der-hueter-israels-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/elias-wohl-dem-der-den-herrn-fuerchtet-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/hans-wacht-hirtenlied-david-ferdinand>,
-        <https://performance.musiconn.de/work/quartette-vl-1-2-va-vc-op-32-david-ferdinand>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-op-24-f-dur-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/174586232>,
-        <https://viaf.org/viaf/176272911>,
-        <https://viaf.org/viaf/181937820>,
-        <https://viaf.org/viaf/204605399>,
-        <https://viaf.org/viaf/308229490> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1263679447> ;
-    cto:viaf <https://viaf.org/viaf/174586232>,
-        <https://viaf.org/viaf/176272911>,
-        <https://viaf.org/viaf/181937820>,
-        <https://viaf.org/viaf/204605399>,
-        <https://viaf.org/viaf/308229490> .
+        <https://performance.musiconn.de/source/signale-fuer-die-musikalische-welt> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174586232> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176272911> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181937820> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204605399> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/308229490> a nfdicore:NFDI_0001010 .
 

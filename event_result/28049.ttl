@@ -1,54 +1,74 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/111255890X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/119284260X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009440X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101678> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300232098> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300321961> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300582382> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/third-concert-alhambra-syracuse-ny-1909-04-13-19-45> ] .
 
-<https://performance.musiconn.de/event/third-concert-alhambra-syracuse-ny-1909-04-13-19-45> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/third-concert-alhambra-syracuse-ny-1909-04-13-19-45> a cto:CTO_0001005 ;
     rdfs:label "Third Concert, Alhambra (Syracuse, NY), 13.4.1909, 19:45" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1908-1909> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1909-04-13T19:45:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1909-04-13T19:45:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/111255890X>,
-        <https://d-nb.info/gnd/119284260X>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300101678>,
-        <https://d-nb.info/gnd/300232098>,
-        <https://d-nb.info/gnd/300321961>,
-        <https://d-nb.info/gnd/300582382> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1908-1909> ;
-    cto:relatedItem <https://d-nb.info/gnd/111255890X>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300101678>,
-        <https://d-nb.info/gnd/300232098>,
-        <https://d-nb.info/gnd/300321961>,
-        <https://d-nb.info/gnd/300582382>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/119284260X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178524596> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009440X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174184579> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7343147270433435700005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264370818> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185491094> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/111255890X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101678> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182880938> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300321961> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300582382> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300232098> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1908-1909>,
-        <https://performance.musiconn.de/work/die-erste-walpurgisnacht-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/i-promessi-sposi-ponchielli-amilcare>,
-        <https://performance.musiconn.de/work/infelice-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/karneval-i-paris-svendsen-johan-severin>,
-        <https://performance.musiconn.de/work/les-preludes-liszt-franz>,
-        <https://performance.musiconn.de/work/sakuntala-goldmark-karl>,
         <https://performance.musiconn.de/work/serenaden-streichorchester-jambor-eugene>,
-        <https://performance.musiconn.de/work/the-voice-of-fate-berwald-william-henry>,
-        <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/178524596>,
-        <https://viaf.org/viaf/182880938>,
-        <https://viaf.org/viaf/185491094>,
-        <https://viaf.org/viaf/264370818>,
-        <https://viaf.org/viaf/7343147270433435700005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/119284260X> ;
-    cto:viaf <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/178524596>,
-        <https://viaf.org/viaf/182880938>,
-        <https://viaf.org/viaf/185491094>,
-        <https://viaf.org/viaf/264370818>,
-        <https://viaf.org/viaf/7343147270433435700005> .
+        <https://performance.musiconn.de/work/the-voice-of-fate-berwald-william-henry> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174184579> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178524596> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182880938> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185491094> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264370818> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7343147270433435700005> a nfdicore:NFDI_0001010 .
 

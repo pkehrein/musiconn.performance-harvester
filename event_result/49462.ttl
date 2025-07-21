@@ -1,52 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300034172> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300062540> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009440X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170114> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300801653> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4399716-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1925-09-06-19-00> ] .
 
-<https://performance.musiconn.de/event/1-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1925-09-06-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1925-09-06-19-00> a cto:CTO_0001005 ;
     rdfs:label "1. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 6.9.1925, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1925-1926-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1925-09-06T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1925-09-06T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300034172>,
-        <https://d-nb.info/gnd/300062540>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300170114>,
-        <https://d-nb.info/gnd/300801653>,
-        <https://d-nb.info/gnd/4399716-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1925-1926-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300034172>,
-        <https://d-nb.info/gnd/300062540>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300170114>,
-        <https://d-nb.info/gnd/300801653>,
-        <https://d-nb.info/gnd/4399716-8>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181002798> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4399716-8> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176605857> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178619765> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300801653> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300034172> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009440X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062540> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170114> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179431041> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208682942> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174184579> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
-        <https://performance.musiconn.de/work/an-der-schoenen-blauen-donau-strauss-johann>,
-        <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-vorspiel-wagner-richard>,
-        <https://performance.musiconn.de/work/les-preludes-liszt-franz>,
-        <https://performance.musiconn.de/work/meditation-sur-le-1er-prelude-de-j-s-bach-gounod-charles>,
-        <https://performance.musiconn.de/work/melodien-aus-der-oper-la-boheme-puccini-giacomo>,
-        <https://performance.musiconn.de/work/peer-gynt-suite-nr-2-op-55-grieg-edvard>,
-        <https://performance.musiconn.de/work/variacii-na-temu-rokoko-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/176605857>,
-        <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/179431041>,
-        <https://viaf.org/viaf/181002798>,
-        <https://viaf.org/viaf/208682942> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/176605857>,
-        <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/179431041>,
-        <https://viaf.org/viaf/181002798>,
-        <https://viaf.org/viaf/208682942> .
+        <https://performance.musiconn.de/work/melodien-aus-der-oper-la-boheme-puccini-giacomo> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174184579> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176605857> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178619765> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179431041> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181002798> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208682942> a nfdicore:NFDI_0001010 .
 

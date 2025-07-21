@@ -1,48 +1,66 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/2074419-5> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30000477X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009585> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300378971> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300636865> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1913-01-18-14-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1913-01-18-14-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1913-01-18-14-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 18.1.1913, 14:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1912-13> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1913-01-18T14:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1913-01-18T14:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/2074419-5>,
-        <https://d-nb.info/gnd/30000477X>,
-        <https://d-nb.info/gnd/300009585>,
-        <https://d-nb.info/gnd/300378971>,
-        <https://d-nb.info/gnd/300636865>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1912-13> ;
-    cto:relatedItem <https://d-nb.info/gnd/30000477X>,
-        <https://d-nb.info/gnd/300009585>,
-        <https://d-nb.info/gnd/300378971>,
-        <https://d-nb.info/gnd/300636865>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/2074419-5> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/139053206> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009585> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179880714> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30000477X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300636865> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217018993> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193652207> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300378971> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
         <https://performance.musiconn.de/work/cramers-uebersetzte-psalmen-mit-melodien-der-17-psalm-bearbeitet-bach-carl-philipp-emanuel>,
-        <https://performance.musiconn.de/work/gellerts-geistliche-oden-und-lieder-bitten-bearbeitet-bach-carl-philipp-emanuel>,
-        <https://performance.musiconn.de/work/ich-lasse-dich-nicht-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/konzerte-nach-verschiedenen-meistern-bwv-592-596-nr-5-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/konzerte-violine-2-streichorchester-bwv-1043-d-moll-largo-ma-non-tanto-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sie-werden-euch-in-den-bann-tun-bwv-44-christen-muessen-auf-der-erden-bach-johann-sebastian>,
-        <https://viaf.org/viaf/179880714>,
-        <https://viaf.org/viaf/193652207>,
-        <https://viaf.org/viaf/217018993> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/2074419-5>,
-        <https://viaf.org/viaf/139053206> ;
-    cto:viaf <https://viaf.org/viaf/139053206>,
-        <https://viaf.org/viaf/179880714>,
-        <https://viaf.org/viaf/193652207>,
-        <https://viaf.org/viaf/217018993>,
-        <https://viaf.org/viaf/248189528> .
+        <https://performance.musiconn.de/work/gellerts-geistliche-oden-und-lieder-bitten-bearbeitet-bach-carl-philipp-emanuel> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/139053206> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179880714> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193652207> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217018993> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
 

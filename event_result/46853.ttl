@@ -1,35 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1220466336> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1220466603> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1220466875> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-hochschule-fuer-musik-und-theater-felix-mendelssohn-bartholdy-leipzig-1990-06-25> ] .
 
-<https://performance.musiconn.de/event/konzert-hochschule-fuer-musik-und-theater-felix-mendelssohn-bartholdy-leipzig-1990-06-25> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-hochschule-fuer-musik-und-theater-felix-mendelssohn-bartholdy-leipzig-1990-06-25> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Hochschule für Musik und Theater \"Felix Mendelssohn Bartholdy\" Leipzig, 25.6.1990" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1990-06-25" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1990-06-25" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1220466336>,
-        <https://d-nb.info/gnd/1220466603>,
-        <https://d-nb.info/gnd/1220466875> ;
-    cto:relatedItem <https://d-nb.info/gnd/1220466336>,
-        <https://d-nb.info/gnd/1220466603>,
-        <https://d-nb.info/gnd/1220466875>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1990-dresden-saechsische-landesbibliothek-dresden-1991>,
-        <https://performance.musiconn.de/work/sonaten-klarinette-klavier-1990-allegro-leggiero-marggraf-jens>,
-        <https://performance.musiconn.de/work/sonaten-klarinette-klavier-1990-largo-marggraf-jens>,
-        <https://performance.musiconn.de/work/sonaten-klarinette-klavier-1990-presto-marggraf-jens>,
-        <https://viaf.org/viaf/4735160425271468320004>,
-        <https://viaf.org/viaf/528160425257968320008>,
-        <https://viaf.org/viaf/701160425258568320005> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hochschule-fuer-musik-und-theater-felix-mendelssohn-bartholdy-leipzig> ;
-    cto:viaf <https://viaf.org/viaf/4735160425271468320004>,
-        <https://viaf.org/viaf/528160425257968320008>,
-        <https://viaf.org/viaf/701160425258568320005> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hochschule-fuer-musik-und-theater-felix-mendelssohn-bartholdy-leipzig> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/528160425257968320008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1220466875> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1220466603> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/701160425258568320005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4735160425271468320004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1220466336> ],
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1990-dresden-saechsische-landesbibliothek-dresden-1991> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/4735160425271468320004> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/528160425257968320008> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/701160425258568320005> a nfdicore:NFDI_0001010 .
 

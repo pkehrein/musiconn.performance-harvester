@@ -1,45 +1,57 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300111290> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144660> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300272677> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300467311> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1925-12-04-19-00> ] .
 
-<https://performance.musiconn.de/event/kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1925-12-04-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1925-12-04-19-00> a cto:CTO_0001005 ;
     rdfs:label "Kammermusik-Abend, Kleiner Konzertsaal (Frankfurt a. M.), 4.12.1925, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1925-1926> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1925-12-04T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1925-12-04T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300111290>,
-        <https://d-nb.info/gnd/300144660>,
-        <https://d-nb.info/gnd/300272677>,
-        <https://d-nb.info/gnd/300467311> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1925-1926> ;
-    cto:relatedItem <https://d-nb.info/gnd/300111290>,
-        <https://d-nb.info/gnd/300144660>,
-        <https://d-nb.info/gnd/300272677>,
-        <https://d-nb.info/gnd/300467311>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111290> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185190679> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193659260> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300467311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300272677> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174508163> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144660> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198524501> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/arabesken-ueber-themen-des-walzers-an-der-schoenen-blauen-donau-schulz-evler-andrei>,
         <https://performance.musiconn.de/work/capriccio-b-dur-scarlatti-alessandro>,
         <https://performance.musiconn.de/work/capriccio-c-dur-scarlatti-alessandro>,
         <https://performance.musiconn.de/work/capriccio-d-dur-scarlatti-alessandro>,
-        <https://performance.musiconn.de/work/romanzen-kl-kv-anh-205-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sonaten-klavier-kv-330-c-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/symphonische-etueden-schumann-robert>,
-        <https://performance.musiconn.de/work/tokkaten-orgel-bwv-564-c-dur-fassung-bach-johann-sebastian>,
-        <https://viaf.org/viaf/174508163>,
-        <https://viaf.org/viaf/185190679>,
-        <https://viaf.org/viaf/193659260>,
-        <https://viaf.org/viaf/198524501> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/174508163>,
-        <https://viaf.org/viaf/185190679>,
-        <https://viaf.org/viaf/193659260>,
-        <https://viaf.org/viaf/198524501> .
+        <https://performance.musiconn.de/work/tokkaten-orgel-bwv-564-c-dur-fassung-bach-johann-sebastian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174508163> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185190679> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193659260> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198524501> a nfdicore:NFDI_0001010 .
 

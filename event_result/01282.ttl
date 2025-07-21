@@ -1,44 +1,58 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1191219445> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300126646> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300299079> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300687842> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1917-09-01-14-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1917-09-01-14-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1917-09-01-14-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 1.9.1917, 14:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1917-18> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1917-09-01T14:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1917-09-01T14:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1191219445>,
-        <https://d-nb.info/gnd/300126646>,
-        <https://d-nb.info/gnd/300299079>,
-        <https://d-nb.info/gnd/300687842>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1917-18> ;
-    cto:relatedItem <https://d-nb.info/gnd/1191219445>,
-        <https://d-nb.info/gnd/300126646>,
-        <https://d-nb.info/gnd/300299079>,
-        <https://d-nb.info/gnd/300687842>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300299079> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203713419> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300687842> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185082412> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300126646> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1191219445> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208699012> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/choralfantasien-op-52-halleluja-gott-zu-loben-bleibe-meine-seelenfreud-reger-max>,
         <https://performance.musiconn.de/work/das-vater-unser-lasst-aehren-reifen-im-sonnenstrahl-gulbins-max>,
-        <https://performance.musiconn.de/work/du-hast-den-ansturm-des-feindes-zerschellt-schreck-gustav>,
-        <https://performance.musiconn.de/work/gebet-fuer-das-vaterland-richter-otto>,
-        <https://performance.musiconn.de/work/geistliche-lieder-op-137-lass-dich-nur-nichts-nicht-dauern-reger-max>,
-        <https://performance.musiconn.de/work/motetten-op-47-graduale-auf-den-letzten-sonntag-im-advent-wuellner-franz>,
-        <https://viaf.org/viaf/185082412>,
-        <https://viaf.org/viaf/203713419>,
-        <https://viaf.org/viaf/208699012> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/185082412>,
-        <https://viaf.org/viaf/203713419>,
-        <https://viaf.org/viaf/208699012>,
-        <https://viaf.org/viaf/248189528> .
+        <https://performance.musiconn.de/work/gebet-fuer-das-vaterland-richter-otto> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185082412> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203713419> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208699012> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
 

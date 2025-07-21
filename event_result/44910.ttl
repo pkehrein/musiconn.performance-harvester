@@ -1,48 +1,63 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1197078355> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30007574X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300103433> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300142285> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300347383> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncerty-9-10-11-12-ijunja-sankt-petersburger-philharmonie-kleiner-saal-1993-06-12> ] .
 
-<https://performance.musiconn.de/event/koncerty-9-10-11-12-ijunja-sankt-petersburger-philharmonie-kleiner-saal-1993-06-12> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncerty-9-10-11-12-ijunja-sankt-petersburger-philharmonie-kleiner-saal-1993-06-12> a cto:CTO_0001005 ;
     rdfs:label "Koncerty 9./10./11./12 ijunja, Sankt-Petersburger Philharmonie / Kleiner Saal, 12.6.1993" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1992-93> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1993-06-12" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1993-06-12" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1197078355>,
-        <https://d-nb.info/gnd/30007574X>,
-        <https://d-nb.info/gnd/300103433>,
-        <https://d-nb.info/gnd/300142285>,
-        <https://d-nb.info/gnd/300347383> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1992-93> ;
-    cto:relatedItem <https://d-nb.info/gnd/1197078355>,
-        <https://d-nb.info/gnd/30007574X>,
-        <https://d-nb.info/gnd/300103433>,
-        <https://d-nb.info/gnd/300142285>,
-        <https://d-nb.info/gnd/300347383>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8181157162087178980007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300103433> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217011268> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30007574X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179026959> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/232015032> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1197078355> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300347383> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179246023> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300142285> ],
         <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1993-9-12-juni-kleiner-saal>,
-        <https://performance.musiconn.de/work/bagatellen-klavier-op-14-schmid-erich>,
-        <https://performance.musiconn.de/work/le-merle-noir-messiaen-olivier>,
-        <https://performance.musiconn.de/work/sevenminute-play-kelterborn-rudolf>,
         <https://performance.musiconn.de/work/sonaten-kv-304-e-moll-fassung-floete-und-klavier-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/stuecke-querfloete-klavier-denisov-edison-vasilevic>,
-        <https://performance.musiconn.de/work/taire-holliger-heinz>,
-        <https://performance.musiconn.de/work/variationen-querfloete-klavier-d-802-e-moll-schubert-franz>,
-        <https://viaf.org/viaf/179026959>,
-        <https://viaf.org/viaf/179246023>,
-        <https://viaf.org/viaf/217011268>,
-        <https://viaf.org/viaf/232015032>,
-        <https://viaf.org/viaf/8181157162087178980007> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/179026959>,
-        <https://viaf.org/viaf/179246023>,
-        <https://viaf.org/viaf/217011268>,
-        <https://viaf.org/viaf/232015032>,
-        <https://viaf.org/viaf/8181157162087178980007> .
+        <https://performance.musiconn.de/work/stuecke-querfloete-klavier-denisov-edison-vasilevic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179026959> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179246023> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217011268> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/232015032> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8181157162087178980007> a nfdicore:NFDI_0001010 .
 

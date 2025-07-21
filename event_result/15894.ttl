@@ -1,45 +1,59 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1093583223> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1264953143> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108966> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300481233> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/siebzehntes-abonnement-concert-zweites-gewandhaus-leipzig-1887-02-17> ] .
 
-<https://performance.musiconn.de/event/siebzehntes-abonnement-concert-zweites-gewandhaus-leipzig-1887-02-17> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/siebzehntes-abonnement-concert-zweites-gewandhaus-leipzig-1887-02-17> a cto:CTO_0001005 ;
     rdfs:label "Siebzehntes Abonnement-Concert, Zweites Gewandhaus (Leipzig), 17.2.1887" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1887-02-17" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1887-02-17" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1093583223>,
-        <https://d-nb.info/gnd/1264953143>,
-        <https://d-nb.info/gnd/300108966>,
-        <https://d-nb.info/gnd/300481233>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/1093583223>,
-        <https://d-nb.info/gnd/1264953143>,
-        <https://d-nb.info/gnd/300108966>,
-        <https://d-nb.info/gnd/300481233>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214739085> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1093583223> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/147145911272827062834> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108966> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1264953143> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300481233> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185553276> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
         <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
         <https://performance.musiconn.de/work/die-siebzehnjaehrige>,
         <https://performance.musiconn.de/work/ezio-tutta-racolta-ancor-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-kv-466-d-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/les-vepres-siciliennes-merci-jeunes-amies-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/schwedische-volksweisen-ach-wermeland-cursch-buehren-franz-theodor>,
-        <https://performance.musiconn.de/work/serenaden-op-80-jadassohn-salomon>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-5-c-moll-gade-niels-wilhelm>,
-        <https://viaf.org/viaf/147145911272827062834>,
-        <https://viaf.org/viaf/185553276>,
-        <https://viaf.org/viaf/214739085> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/147145911272827062834>,
-        <https://viaf.org/viaf/185553276>,
-        <https://viaf.org/viaf/214739085>,
-        <https://viaf.org/viaf/264523828> .
+        <https://performance.musiconn.de/work/serenaden-op-80-jadassohn-salomon> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/147145911272827062834> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185553276> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214739085> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
 

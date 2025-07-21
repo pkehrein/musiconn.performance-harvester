@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300069243> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300070268> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300158289> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-philharmonisches-konzert-kulturpalast-dresden-festsaal-1994-09-03-19-30> ] .
 
-<https://performance.musiconn.de/event/1-philharmonisches-konzert-kulturpalast-dresden-festsaal-1994-09-03-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-philharmonisches-konzert-kulturpalast-dresden-festsaal-1994-09-03-19-30> a cto:CTO_0001005 ;
     rdfs:label "1. Philharmonisches Konzert, Kulturpalast (Dresden) / Festsaal, 3.9.1994, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1994-1995> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1994-09-03T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1994-09-03T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300069243>,
-        <https://d-nb.info/gnd/300070268>,
-        <https://d-nb.info/gnd/300158289> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1994-1995> ;
-    cto:relatedItem <https://d-nb.info/gnd/300069243>,
-        <https://d-nb.info/gnd/300070268>,
-        <https://d-nb.info/gnd/300158289>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/le-sacre-du-printemps-stravinsky-igor>,
-        <https://performance.musiconn.de/work/sinfonia-concertante-oboe-fagott-violine-violoncello-orchester-hob-i-105-haydn-joseph>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-49-f-moll-haydn-joseph>,
-        <https://viaf.org/viaf/185151521>,
-        <https://viaf.org/viaf/200778158>,
-        <https://viaf.org/viaf/7146635477741980147> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/185151521>,
-        <https://viaf.org/viaf/200778158>,
-        <https://viaf.org/viaf/7146635477741980147> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300158289> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200778158> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300069243> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300070268> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7146635477741980147> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185151521> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185151521> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200778158> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7146635477741980147> a nfdicore:NFDI_0001010 .
 

@@ -1,49 +1,65 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1070411833> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101597> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171633> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300788096> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1879-11-04> ] .
 
-<https://performance.musiconn.de/event/2-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1879-11-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1879-11-04> a cto:CTO_0001005 ;
     rdfs:label "2. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 4.11.1879" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1879-1880> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1879-11-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1879-11-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1070411833>,
-        <https://d-nb.info/gnd/300101597>,
-        <https://d-nb.info/gnd/300171633>,
-        <https://d-nb.info/gnd/300788096>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1879-1880> ;
-    cto:relatedItem <https://d-nb.info/gnd/1070411833>,
-        <https://d-nb.info/gnd/300101597>,
-        <https://d-nb.info/gnd/300171633>,
-        <https://d-nb.info/gnd/300788096>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191497132> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171633> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217023203> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206836738> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300788096> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315584253> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1070411833> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101597> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
         <https://performance.musiconn.de/work/deutscher-tanz-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/feierliche-szene-und-marsch-seiss-isidor>,
-        <https://performance.musiconn.de/work/konzert-ouvertuere-zu-den-hebriden-op-26-mwv-p-7-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-j-155-es-dur-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/rondo-scherzando-field-john>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-44-d-moll-volkmann-robert>,
-        <https://performance.musiconn.de/work/suiten-klavier-op-162-nr-3-raff-joseph-joachim>,
-        <https://viaf.org/viaf/191497132>,
-        <https://viaf.org/viaf/206836738>,
-        <https://viaf.org/viaf/217023203>,
-        <https://viaf.org/viaf/315584253> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/191497132>,
-        <https://viaf.org/viaf/206836738>,
-        <https://viaf.org/viaf/217023203>,
-        <https://viaf.org/viaf/242717024>,
-        <https://viaf.org/viaf/315584253> .
+        <https://performance.musiconn.de/work/rondo-scherzando-field-john> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/191497132> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206836738> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217023203> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315584253> a nfdicore:NFDI_0001010 .
 

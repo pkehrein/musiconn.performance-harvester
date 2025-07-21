@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300108265> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30014220X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300172273> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300386818> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-kammermusik-abend-alte-oper-frankfurt-am-main-mozartsaal-1985-05-20-20-00> ] .
 
-<https://performance.musiconn.de/event/8-kammermusik-abend-alte-oper-frankfurt-am-main-mozartsaal-1985-05-20-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-kammermusik-abend-alte-oper-frankfurt-am-main-mozartsaal-1985-05-20-20-00> a cto:CTO_0001005 ;
     rdfs:label "8. Kammermusik-Abend, Alte Oper (Frankfurt am Main) / Mozartsaal, 20.5.1985, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1984-1985> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1985-05-20T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1985-05-20T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300108265>,
-        <https://d-nb.info/gnd/30014220X>,
-        <https://d-nb.info/gnd/300172273>,
-        <https://d-nb.info/gnd/300386818> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1984-1985> ;
-    cto:relatedItem <https://d-nb.info/gnd/300108265>,
-        <https://d-nb.info/gnd/30014220X>,
-        <https://d-nb.info/gnd/300172273>,
-        <https://d-nb.info/gnd/300386818>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/fugen-violine-viola-bassinstrument-kv-404a-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/saetze-fuer-streichtrio-1925-1-webern-anton>,
-        <https://performance.musiconn.de/work/trios-violine-viola-violoncello-d-581-b-dur-schubert-franz>,
-        <https://performance.musiconn.de/work/trios-violine-viola-violoncello-nr-1-op-34-hindemith-paul>,
-        <https://viaf.org/viaf/188264437>,
-        <https://viaf.org/viaf/207920831>,
-        <https://viaf.org/viaf/210938844>,
-        <https://viaf.org/viaf/219164482> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-am-main-mozartsaal> ;
-    cto:viaf <https://viaf.org/viaf/188264437>,
-        <https://viaf.org/viaf/207920831>,
-        <https://viaf.org/viaf/210938844>,
-        <https://viaf.org/viaf/219164482> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-am-main-mozartsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207920831> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300172273> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219164482> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300386818> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30014220X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108265> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210938844> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188264437> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/188264437> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207920831> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210938844> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219164482> a nfdicore:NFDI_0001010 .
 

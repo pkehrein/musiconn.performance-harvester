@@ -1,57 +1,76 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1054565813> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/112260467X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30003735X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145071> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300291108> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300368917> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/musikalisch-dramatische-auffuehrung-semperoper-dresden-1901-12-13-19-00> ] .
 
-<https://performance.musiconn.de/event/musikalisch-dramatische-auffuehrung-semperoper-dresden-1901-12-13-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/musikalisch-dramatische-auffuehrung-semperoper-dresden-1901-12-13-19-00> a cto:CTO_0001005 ;
     rdfs:label "Musikalisch-Dramatische Aufführung, Semperoper (Dresden), 13.12.1901, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/koenigliches-hoftheater-spielzeit-1901-1902> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1901-12-13T21:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1901-12-13T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1054565813>,
-        <https://d-nb.info/gnd/112260467X>,
-        <https://d-nb.info/gnd/30003735X>,
-        <https://d-nb.info/gnd/300145071>,
-        <https://d-nb.info/gnd/300291108>,
-        <https://d-nb.info/gnd/300368917> ;
-    cto:itemOf <https://performance.musiconn.de/series/koenigliches-hoftheater-spielzeit-1901-1902> ;
-    cto:relatedItem <https://d-nb.info/gnd/112260467X>,
-        <https://d-nb.info/gnd/30003735X>,
-        <https://d-nb.info/gnd/300145071>,
-        <https://d-nb.info/gnd/300291108>,
-        <https://d-nb.info/gnd/300368917>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309654002> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1054565813> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300368917> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145071> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300291108> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192580909> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/112260467X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30003735X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185197829> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188262809> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7619148390849410830006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218087258> ],
         <https://performance.musiconn.de/source/koenigliches-hoftheater-theaterzettel-dresden>,
-        <https://performance.musiconn.de/work/der-soldat-silcher-friedrich>,
-        <https://performance.musiconn.de/work/die-allmacht-liszt-franz>,
         <https://performance.musiconn.de/work/die-drei-roeslein-silcher-friedrich>,
         <https://performance.musiconn.de/work/etueden-klavier-chopin-frederic>,
         <https://performance.musiconn.de/work/fruehlingsstuerme-curti-franz>,
-        <https://performance.musiconn.de/work/genoveva-ouvertuere-schumann-robert>,
         <https://performance.musiconn.de/work/genoveva-szene-und-arie-schumann-robert>,
         <https://performance.musiconn.de/work/hans-und-liesel-fassung>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-17-a-moll-paderewski-ignacy-jan>,
         <https://performance.musiconn.de/work/nebeltag-hegar-friedrich>,
-        <https://performance.musiconn.de/work/nocturnes-klavier-chopin-frederic>,
         <https://performance.musiconn.de/work/phyllis-und-die-mutter-fassung>,
-        <https://performance.musiconn.de/work/walzer-auswahl-chopin-frederic>,
-        <https://viaf.org/viaf/185197829>,
-        <https://viaf.org/viaf/188262809>,
-        <https://viaf.org/viaf/192580909>,
-        <https://viaf.org/viaf/218087258>,
-        <https://viaf.org/viaf/7619148390849410830006> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1054565813>,
-        <https://viaf.org/viaf/309654002> ;
-    cto:viaf <https://viaf.org/viaf/185197829>,
-        <https://viaf.org/viaf/188262809>,
-        <https://viaf.org/viaf/192580909>,
-        <https://viaf.org/viaf/218087258>,
-        <https://viaf.org/viaf/309654002>,
-        <https://viaf.org/viaf/7619148390849410830006> .
+        <https://performance.musiconn.de/work/walzer-auswahl-chopin-frederic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185197829> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188262809> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192580909> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218087258> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309654002> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7619148390849410830006> a nfdicore:NFDI_0001010 .
 

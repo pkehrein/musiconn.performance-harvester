@@ -4,29 +4,40 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/10288207X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118540505> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4030921-6> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/l-isola-disabitata-klagenfurt-1765-00-00> ] .
 
-<https://performance.musiconn.de/event/l-isola-disabitata-klagenfurt-1765-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/l-isola-disabitata-klagenfurt-1765-00-00> a cto:CTO_0001005 ;
     rdfs:label "L' isola disabitata, Klagenfurt, 1765" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1765-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1765-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/10288207X>,
-        <https://d-nb.info/gnd/118540505>,
-        <https://d-nb.info/gnd/4030921-6> ;
-    cto:relatedItem <https://performance.musiconn.de/source/lisola-disabitata-drama-giocoso-per-musica-di-polisseno-fegejo-pastor-arcade-da-rappresentarsi-in-clagenfurt>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/10288207X> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118540505> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4030921-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/235017342> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/lisola-disabitata-drama-giocoso-per-musica-di-polisseno-fegejo-pastor-arcade-da-rappresentarsi-in-clagenfurt>,
         <https://performance.musiconn.de/work/l-isola-disabitata-scarlatti-giuseppe> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4030921-6>,
-        <https://viaf.org/viaf/235017342> ;
-    cto:relatedPerson <https://d-nb.info/gnd/10288207X>,
-        <https://d-nb.info/gnd/118540505>,
-        <https://viaf.org/viaf/44299511>,
-        <https://viaf.org/viaf/61952324> ;
-    cto:viaf <https://viaf.org/viaf/235017342>,
-        <https://viaf.org/viaf/44299511>,
-        <https://viaf.org/viaf/61952324> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/44299511> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/61952324> ] .
+
+<https://viaf.org/viaf/235017342> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/44299511> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/61952324> a nfdicore:NFDI_0001010 .
 

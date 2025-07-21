@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1068222980> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009682> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015526> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300078706> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1975-01-31> ] .
 
-<https://performance.musiconn.de/event/6-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1975-01-31> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1975-01-31> a cto:CTO_0001005 ;
     rdfs:label "6. Außerordentliches Konzert, Kulturpalast (Dresden) / Festsaal, 31.1.1975" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1975-01-31" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1975-01-31" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1068222980>,
-        <https://d-nb.info/gnd/300009682>,
-        <https://d-nb.info/gnd/300015526>,
-        <https://d-nb.info/gnd/300078706> ;
-    cto:relatedItem <https://d-nb.info/gnd/1068222980>,
-        <https://d-nb.info/gnd/300009682>,
-        <https://d-nb.info/gnd/300015526>,
-        <https://d-nb.info/gnd/300078706>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197648368> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425016> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182062812> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1068222980> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015526> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300078706> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009682> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176655157> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-13-programmhefte-1975-1977>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-61-d-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/konzerte-violine-streichorchester-bwv-1042-e-dur-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/les-quatre-elements-martin-frank>,
-        <https://performance.musiconn.de/work/the-unanswered-question-ives-charles>,
-        <https://viaf.org/viaf/176655157>,
-        <https://viaf.org/viaf/179425016>,
-        <https://viaf.org/viaf/182062812>,
-        <https://viaf.org/viaf/197648368> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/176655157>,
-        <https://viaf.org/viaf/179425016>,
-        <https://viaf.org/viaf/182062812>,
-        <https://viaf.org/viaf/197648368> .
+        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-13-programmhefte-1975-1977> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176655157> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179425016> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182062812> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197648368> a nfdicore:NFDI_0001010 .
 

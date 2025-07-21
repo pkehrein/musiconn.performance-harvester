@@ -1,53 +1,71 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015593> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026064> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300094787> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30010801X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141777> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30063871X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/10-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1902-03-14-19-30> ] .
 
-<https://performance.musiconn.de/event/10-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1902-03-14-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/10-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1902-03-14-19-30> a cto:CTO_0001005 ;
     rdfs:label "10. Philharmonisches Konzert, Convent-Garten (Hamburg) / Großer Saal, 14.3.1902, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1901-1902-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1902-03-14T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1902-03-14T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300026064>,
-        <https://d-nb.info/gnd/300094787>,
-        <https://d-nb.info/gnd/30010801X>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/30063871X> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1901-1902-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300026064>,
-        <https://d-nb.info/gnd/300094787>,
-        <https://d-nb.info/gnd/30010801X>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/30063871X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/convent-garten-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30063871X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191511737> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179456569> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183474776> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141777> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015593> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30010801X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181828440> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179042437> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026064> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300094787> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425978> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1890-1924>,
-        <https://performance.musiconn.de/work/die-entfuehrung-aus-dem-serail-ach-ich-liebte-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/eine-symphonie-zu-dantes-divina-commedia-liszt-franz>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-3-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/lieder-aus-sevilla-op-20-unter-myrthen-und-narzissen-hermann-hans>,
-        <https://performance.musiconn.de/work/lieder-aus-sevilla-op-20-wenn-vorbei-ich-gehe-hermann-hans>,
-        <https://performance.musiconn.de/work/lieder-op-106-staendchen-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-r-591-liszt-franz>,
-        <https://performance.musiconn.de/work/sinfonien-d-759-h-moll-schubert-franz>,
-        <https://viaf.org/viaf/179042437>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/179456569>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/183474776>,
-        <https://viaf.org/viaf/191511737> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/convent-garten-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/179042437>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/179456569>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/183474776>,
-        <https://viaf.org/viaf/191511737> .
+        <https://performance.musiconn.de/work/lieder-aus-sevilla-op-20-wenn-vorbei-ich-gehe-hermann-hans> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179042437> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179425978> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179456569> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181828440> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183474776> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191511737> a nfdicore:NFDI_0001010 .
 

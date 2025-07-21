@@ -1,34 +1,42 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1211992489> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300112858> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133782> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/simfoniceskij-orkestr-leningradskoj-konservatorii-im-n-a-rimskogo-korsakova-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1975-02-23> ] .
 
-<https://performance.musiconn.de/event/simfoniceskij-orkestr-leningradskoj-konservatorii-im-n-a-rimskogo-korsakova-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1975-02-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/simfoniceskij-orkestr-leningradskoj-konservatorii-im-n-a-rimskogo-korsakova-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1975-02-23> a cto:CTO_0001005 ;
     rdfs:label "Simfoničeskij orkestr Leningradskoj konservatorii im. N. A. Rimskogo-Korsakova, Gosudarstvennaja akademičeskaja kapella (Sankt Petersburg) / Koncertnyj zal, 23.2.1975" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1974-75> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1975-02-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1975-02-23" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1211992489>,
-        <https://d-nb.info/gnd/300112858>,
-        <https://d-nb.info/gnd/300133782> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1974-75> ;
-    cto:relatedItem <https://d-nb.info/gnd/300112858>,
-        <https://d-nb.info/gnd/300133782>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1211992489> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133782> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206835467> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300112858> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203708908> ],
         <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1975-23-februar-saal-kapella>,
-        <https://performance.musiconn.de/work/chovanscina-prelude-musorgskij-modest-petrovic>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-r-193-a-moll-saint-saens-camille>,
         <https://performance.musiconn.de/work/rajmonda-ausschnitte-glazunov-aleksandr-konstantinovic>,
-        <https://performance.musiconn.de/work/ruslan-i-ljudmila-ausschnitte-glinka-michail-ivanovic>,
-        <https://viaf.org/viaf/203708908>,
-        <https://viaf.org/viaf/206835467> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1211992489> ;
-    cto:viaf <https://viaf.org/viaf/203708908>,
-        <https://viaf.org/viaf/206835467> .
+        <https://performance.musiconn.de/work/ruslan-i-ljudmila-ausschnitte-glinka-michail-ivanovic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/203708908> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206835467> a nfdicore:NFDI_0001010 .
 

@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4122902-2> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/der-gebesserte-lorenz-schloss-charlottenburg-berlin-1820-08-31> ] .
 
-<https://performance.musiconn.de/event/der-gebesserte-lorenz-schloss-charlottenburg-berlin-1820-08-31> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/der-gebesserte-lorenz-schloss-charlottenburg-berlin-1820-08-31> a cto:CTO_0001005 ;
     rdfs:label "Der gebesserte Lorenz, Schloss Charlottenburg (Berlin), 31.8.1820" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1820-08-31" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1820-08-31" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4122902-2> ;
-    cto:relatedItem <https://performance.musiconn.de/source/allgemeine-musikalische-zeitung-september-1820-37>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4122902-2> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237294236> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/allgemeine-musikalische-zeitung-september-1820-37>,
         <https://performance.musiconn.de/source/berlinische-nachrichten-14091820>,
         <https://performance.musiconn.de/source/berlinische-nachrichten-29081820>,
         <https://performance.musiconn.de/work/der-gebesserte-lorenz-oder-diesmal-fehlt-immer-der-herr-fassung-eulenstein-sigora-von-1> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4122902-2>,
-        <https://viaf.org/viaf/237294236> ;
-    cto:viaf <https://viaf.org/viaf/237294236> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/237294236> a nfdicore:NFDI_0001010 .
 

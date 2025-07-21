@@ -1,33 +1,41 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1180674782> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1259849325> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-erstes-gewandhaus-leipzig-1877-01-01> ] .
 
-<https://performance.musiconn.de/event/konzert-erstes-gewandhaus-leipzig-1877-01-01> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-erstes-gewandhaus-leipzig-1877-01-01> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Erstes Gewandhaus (Leipzig), 1.1.1877" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1877-01-01" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1877-01-01" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/1180674782>,
-        <https://d-nb.info/gnd/1259849325> ;
-    cto:relatedItem <https://d-nb.info/gnd/1180674782>,
-        <https://d-nb.info/gnd/1259849325>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1259849325> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1180674782> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6021155286651987180005> ],
         <https://performance.musiconn.de/source/verzeichniss-der-motetten-1811-1905>,
         <https://performance.musiconn.de/work/es-ist-ein-ros-entsprungen-reissiger-carl-gottlieb>,
-        <https://performance.musiconn.de/work/lieder-op-12-das-abendlaeuten-richter-ernst-friedrich-eduard>,
-        <https://performance.musiconn.de/work/lieder-op-31-zum-neuen-jahr-rheinberger-joseph>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-singet-dem-herrn-ein-neues-lied-bach-johann-sebastian>,
-        <https://viaf.org/viaf/6021155286651987180005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/6021155286651987180005>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/work/lieder-op-31-zum-neuen-jahr-rheinberger-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/6021155286651987180005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

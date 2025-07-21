@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1123590257> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300007434> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009976> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300211503> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2003-06-07> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2003-06-07> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2003-06-07> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 7.6.2003" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2003-06-07" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2003-06-07" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1123590257>,
-        <https://d-nb.info/gnd/300007434>,
-        <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300211503>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1123590257>,
-        <https://d-nb.info/gnd/300007434>,
-        <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300211503>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175196168> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300211503> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1123590257> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300007434> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174651654> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009976> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1439148523892320970002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179103028> ],
         <https://performance.musiconn.de/source/motettenbuch-2002-03>,
-        <https://performance.musiconn.de/work/der-geist-hilft-unser-schwachheit-auf-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/der-heilig-geist-vom-himmel-kam-eccard-johannes>,
-        <https://performance.musiconn.de/work/florilegium-selectissimorum-hymnorum-portense-spiritus-sancti-gratia-anonym>,
-        <https://performance.musiconn.de/work/geistliche-chor-music-also-hat-gott-die-welt-geliebt-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/wer-mich-liebet-der-wird-mein-wort-halten-bwv-59-bach-johann-sebastian>,
-        <https://viaf.org/viaf/1439148523892320970002>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/175196168>,
-        <https://viaf.org/viaf/179103028> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/1439148523892320970002>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/175196168>,
-        <https://viaf.org/viaf/179103028> .
+        <https://performance.musiconn.de/work/florilegium-selectissimorum-hymnorum-portense-spiritus-sancti-gratia-anonym> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/1439148523892320970002> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174651654> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175196168> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179103028> a nfdicore:NFDI_0001010 .
 

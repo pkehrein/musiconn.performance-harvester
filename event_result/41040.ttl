@@ -1,32 +1,38 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026889> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4264112-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/12-ausserodentliches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1959-04-04-19-30> ] .
 
-<https://performance.musiconn.de/event/12-ausserodentliches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1959-04-04-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/12-ausserodentliches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1959-04-04-19-30> a cto:CTO_0001005 ;
     rdfs:label "12. Außerodentliches Konzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 4.4.1959, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1958-1959> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1959-04-04T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1959-04-04T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026889>,
-        <https://d-nb.info/gnd/4264112-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1958-1959> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026889>,
-        <https://d-nb.info/gnd/4264112-3>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211709218> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4264112-3> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026889> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175221377> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-cis-dur-krejci-isa>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-op-90-f-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/till-eulenspiegels-lustige-streiche-strauss-richard>,
-        <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/211709218> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/211709218> .
+        <https://performance.musiconn.de/work/sinfonien-nr-2-cis-dur-krejci-isa> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175221377> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211709218> a nfdicore:NFDI_0001010 .
 

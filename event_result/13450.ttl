@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1200585917> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300142943> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300742800> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1970-05-22> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1970-05-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1970-05-22> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 22.5.1970" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1970-05-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1970-05-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1200585917>,
-        <https://d-nb.info/gnd/300142943>,
-        <https://d-nb.info/gnd/300742800>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1200585917>,
-        <https://d-nb.info/gnd/300142943>,
-        <https://d-nb.info/gnd/300742800>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178421027> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300142943> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300742800> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206836225> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200585917> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3071157527429627300008> ],
         <https://performance.musiconn.de/source/motettenbuch-1970-71>,
-        <https://performance.musiconn.de/work/die-geistlichen-lieder-und-arien-aus-schemellis-gesangbuch-kommt-seelen-dieser-tag-auswahl-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/geistliche-chormusik-singet-dem-herrn-ein-neues-lied-distler-hugo>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-ich-danke-dem-herrn-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/opella-nova-theil-1-gott-der-vater-wohn-uns-bei-schein-johann-hermann>,
-        <https://viaf.org/viaf/178421027>,
-        <https://viaf.org/viaf/206836225>,
-        <https://viaf.org/viaf/3071157527429627300008> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/178421027>,
-        <https://viaf.org/viaf/206836225>,
-        <https://viaf.org/viaf/3071157527429627300008> .
+        <https://performance.musiconn.de/work/die-geistlichen-lieder-und-arien-aus-schemellis-gesangbuch-kommt-seelen-dieser-tag-auswahl-bach-johann-sebastian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178421027> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206836225> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3071157527429627300008> a nfdicore:NFDI_0001010 .
 

@@ -1,67 +1,94 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1033550981> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1080723692> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015585> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102658> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141203> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145756> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300226144> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300309856> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30031194X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1881-11-04-18-30> ] .
 
-<https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1881-11-04-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1881-11-04-18-30> a cto:CTO_0001005 ;
     rdfs:label "Drittes Museums-Concert, Großer Konzertsaal (Frankfurt a. M.), 4.11.1881, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1881-1882> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1881-11-04T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1881-11-04T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1033550981>,
-        <https://d-nb.info/gnd/1080723692>,
-        <https://d-nb.info/gnd/300015585>,
-        <https://d-nb.info/gnd/300102658>,
-        <https://d-nb.info/gnd/300141203>,
-        <https://d-nb.info/gnd/300145756>,
-        <https://d-nb.info/gnd/300226144>,
-        <https://d-nb.info/gnd/300309856>,
-        <https://d-nb.info/gnd/30031194X> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1881-1882> ;
-    cto:relatedItem <https://d-nb.info/gnd/1033550981>,
-        <https://d-nb.info/gnd/1080723692>,
-        <https://d-nb.info/gnd/300015585>,
-        <https://d-nb.info/gnd/300102658>,
-        <https://d-nb.info/gnd/300141203>,
-        <https://d-nb.info/gnd/300145756>,
-        <https://d-nb.info/gnd/300226144>,
-        <https://d-nb.info/gnd/300309856>,
-        <https://d-nb.info/gnd/30031194X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300226144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300309856> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/298791249> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30031194X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177040984> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141203> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185890974> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197653757> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015585> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1080723692> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214744339> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1033550981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102658> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145756> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/48145193348070461131> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184483949> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181427594> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182274863> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/die-schoepfung-auf-starkem-fittiche-haydn-joseph>,
-        <https://performance.musiconn.de/work/etueden-und-praeludien-etuede-nr-1-scharwenka-xaver>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-32-b-moll-scharwenka-xaver>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-2-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/liederkreis-nach-heinrich-heine-mit-myrthen-und-rosen-schumann-robert>,
-        <https://performance.musiconn.de/work/nacht-und-traeume-schubert-franz>,
-        <https://performance.musiconn.de/work/nachtstuecke-nr-4-schumann-robert>,
-        <https://performance.musiconn.de/work/praeludium-und-fuge-op-35-no-1-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/reiselied-mwv-k-90-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/sinfonien-mwv-n-18-a-moll-mendelssohn-bartholdy-felix>,
-        <https://viaf.org/viaf/177040984>,
-        <https://viaf.org/viaf/181427594>,
-        <https://viaf.org/viaf/182274863>,
-        <https://viaf.org/viaf/184483949>,
-        <https://viaf.org/viaf/185890974>,
-        <https://viaf.org/viaf/197653757>,
-        <https://viaf.org/viaf/214744339>,
-        <https://viaf.org/viaf/298791249>,
-        <https://viaf.org/viaf/48145193348070461131> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/177040984>,
-        <https://viaf.org/viaf/181427594>,
-        <https://viaf.org/viaf/182274863>,
-        <https://viaf.org/viaf/184483949>,
-        <https://viaf.org/viaf/185890974>,
-        <https://viaf.org/viaf/197653757>,
-        <https://viaf.org/viaf/214744339>,
-        <https://viaf.org/viaf/298791249>,
-        <https://viaf.org/viaf/48145193348070461131> .
+        <https://performance.musiconn.de/work/praeludium-und-fuge-op-35-no-1-mendelssohn-bartholdy-felix> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177040984> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181427594> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182274863> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184483949> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185890974> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197653757> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214744339> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/298791249> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/48145193348070461131> a nfdicore:NFDI_0001010 .
 

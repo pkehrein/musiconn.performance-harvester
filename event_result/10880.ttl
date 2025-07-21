@@ -1,33 +1,41 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30000477X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300517130> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4300889-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-nikolaikirche-leipzig-1999-06-11> ] .
 
-<https://performance.musiconn.de/event/motette-nikolaikirche-leipzig-1999-06-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-nikolaikirche-leipzig-1999-06-11> a cto:CTO_0001005 ;
     rdfs:label "Motette, Nikolaikirche (Leipzig), 11.6.1999" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1999-06-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1999-06-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30000477X>,
-        <https://d-nb.info/gnd/300517130>,
-        <https://d-nb.info/gnd/4300889-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/30000477X>,
-        <https://d-nb.info/gnd/300517130>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4300889-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173652475> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300517130> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210948936> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30000477X> ],
         <https://performance.musiconn.de/source/motettenbuch-1998-99>,
-        <https://performance.musiconn.de/work/das-grosse-abendmahl-weyrauch-johannes>,
-        <https://performance.musiconn.de/work/ich-lasse-dich-nicht-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/kleiner-psalter-op-82-herr-wie-lange-willst-du-mein-so-gar-vergessen-burkhard-willy>,
-        <https://performance.musiconn.de/work/pfingst-halleluja-braeutigam-volker>,
-        <https://viaf.org/viaf/210948936> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4300889-6>,
-        <https://viaf.org/viaf/173652475> ;
-    cto:viaf <https://viaf.org/viaf/173652475>,
-        <https://viaf.org/viaf/210948936> .
+        <https://performance.musiconn.de/work/pfingst-halleluja-braeutigam-volker> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/173652475> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210948936> a nfdicore:NFDI_0001010 .
 

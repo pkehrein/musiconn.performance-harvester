@@ -1,57 +1,78 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/105138964X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033842> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140576> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156863> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30015691X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300330782> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300600445> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/neuntes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1916-02-25-19-00> ] .
 
-<https://performance.musiconn.de/event/neuntes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1916-02-25-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/neuntes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1916-02-25-19-00> a cto:CTO_0001005 ;
     rdfs:label "Neuntes Freitags-Konzert, Großer Konzertsaal (Frankfurt a. M.), 25.2.1916, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1915-1916> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1916-02-25T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1916-02-25T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/105138964X>,
-        <https://d-nb.info/gnd/300033842>,
-        <https://d-nb.info/gnd/300140576>,
-        <https://d-nb.info/gnd/300156863>,
-        <https://d-nb.info/gnd/30015691X>,
-        <https://d-nb.info/gnd/300330782>,
-        <https://d-nb.info/gnd/300600445> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1915-1916> ;
-    cto:relatedItem <https://d-nb.info/gnd/105138964X>,
-        <https://d-nb.info/gnd/300033842>,
-        <https://d-nb.info/gnd/300140576>,
-        <https://d-nb.info/gnd/300156863>,
-        <https://d-nb.info/gnd/30015691X>,
-        <https://d-nb.info/gnd/300330782>,
-        <https://d-nb.info/gnd/300600445>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175810435> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300600445> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237425086> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033842> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179419275> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140576> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/105138964X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180757661> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156863> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30015691X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/245383451> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183913696> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/308291415> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300330782> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/capriccio-fuer-klavier-und-orchester-neitzel-otto>,
-        <https://performance.musiconn.de/work/der-hirt-auf-dem-felsen-schubert-franz>,
-        <https://performance.musiconn.de/work/lepreuve-villageoise-ouvertuere-gretry-andre-ernest-modeste>,
-        <https://performance.musiconn.de/work/lieder-op-29-schlagende-herzen-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-op-37-meinem-kinde-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-aus-der-jugendzeit-abloesung-im-sommer-mahler-gustav>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-aus-der-jugendzeit-ich-ging-mit-lust-durch-einen-gruenen-wald-mahler-gustav>,
-        <https://performance.musiconn.de/work/sinfonien-cs-27-h-moll-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/175810435>,
-        <https://viaf.org/viaf/179419275>,
-        <https://viaf.org/viaf/180757661>,
-        <https://viaf.org/viaf/183913696>,
-        <https://viaf.org/viaf/237425086>,
-        <https://viaf.org/viaf/245383451>,
-        <https://viaf.org/viaf/308291415> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/175810435>,
-        <https://viaf.org/viaf/179419275>,
-        <https://viaf.org/viaf/180757661>,
-        <https://viaf.org/viaf/183913696>,
-        <https://viaf.org/viaf/237425086>,
-        <https://viaf.org/viaf/245383451>,
-        <https://viaf.org/viaf/308291415> .
+        <https://performance.musiconn.de/work/capriccio-fuer-klavier-und-orchester-neitzel-otto> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175810435> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179419275> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180757661> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183913696> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237425086> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/245383451> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/308291415> a nfdicore:NFDI_0001010 .
 

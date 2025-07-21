@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4011890-3> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/rundfunkausstrahlung-deutschland-ddr-1988-12-06> ] .
 
-<https://performance.musiconn.de/event/rundfunkausstrahlung-deutschland-ddr-1988-12-06> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/rundfunkausstrahlung-deutschland-ddr-1988-12-06> a cto:CTO_0001005 ;
     rdfs:label "Rundfunkausstrahlung, Deutschland (DDR), 6.12.1988" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-12-06" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-12-06" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4011890-3> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1988-dresden-saechsische-landesbibliothek-dresden-1989>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/268607483> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4011890-3> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1988-dresden-saechsische-landesbibliothek-dresden-1989>,
         <https://performance.musiconn.de/work/drei-sonnenschirm-lieder-kross-erik> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4011890-3>,
-        <https://viaf.org/viaf/268607483> ;
-    cto:viaf <https://viaf.org/viaf/268607483> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/268607483> a nfdicore:NFDI_0001010 .
 

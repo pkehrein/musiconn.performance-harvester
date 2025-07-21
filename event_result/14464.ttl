@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300033338> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037821> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300208456> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300836449> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/abokonzert-3-zweites-gewandhaus-leipzig-1902-10-23> ] .
 
-<https://performance.musiconn.de/event/abokonzert-3-zweites-gewandhaus-leipzig-1902-10-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/abokonzert-3-zweites-gewandhaus-leipzig-1902-10-23> a cto:CTO_0001005 ;
     rdfs:label "Abokonzert 3, Zweites Gewandhaus (Leipzig), 23.10.1902" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1902-10-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1902-10-23" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300033338>,
-        <https://d-nb.info/gnd/300037821>,
-        <https://d-nb.info/gnd/300208456>,
-        <https://d-nb.info/gnd/300836449>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/300033338>,
-        <https://d-nb.info/gnd/300037821>,
-        <https://d-nb.info/gnd/300208456>,
-        <https://d-nb.info/gnd/300836449>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300836449> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212899215> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211709423> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300208456> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193657449> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200777095> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037821> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033338> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
-        <https://performance.musiconn.de/work/ave-maria-fassung-schubert-franz>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-cs-53-b-moll-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/rosamunde-fuerstin-von-zypern-ballettmusik-nr-1-schubert-franz>,
-        <https://performance.musiconn.de/work/scherzi-klavier-op-39-cis-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/sinfonien-wab-103-fassung-1889-bruckner-anton>,
-        <https://viaf.org/viaf/193657449>,
-        <https://viaf.org/viaf/200777095>,
-        <https://viaf.org/viaf/211709423>,
-        <https://viaf.org/viaf/212899215> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/193657449>,
-        <https://viaf.org/viaf/200777095>,
-        <https://viaf.org/viaf/211709423>,
-        <https://viaf.org/viaf/212899215>,
-        <https://viaf.org/viaf/264523828> .
+        <https://performance.musiconn.de/work/ave-maria-fassung-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/193657449> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200777095> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211709423> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212899215> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
 

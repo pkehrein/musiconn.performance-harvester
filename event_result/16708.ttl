@@ -1,45 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1069854522> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1127867679> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300232209> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4239994-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-marienkirche-guestrow-1953-10-24> ] .
 
-<https://performance.musiconn.de/event/konzert-marienkirche-guestrow-1953-10-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-marienkirche-guestrow-1953-10-24> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Marienkirche (Güstrow), 24.10.1953" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1953-10-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1953-10-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1069854522>,
-        <https://d-nb.info/gnd/1127867679>,
-        <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300232209>,
-        <https://d-nb.info/gnd/4239994-4> ;
-    cto:relatedItem <https://d-nb.info/gnd/1069854522>,
-        <https://d-nb.info/gnd/1127867679>,
-        <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300232209>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4239994-4> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/239536979> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1127867679> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1069854522> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8543149068385365730002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181241390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198527510> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315570065> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300232209> ],
         <https://performance.musiconn.de/source/motettenbuch-1953>,
-        <https://performance.musiconn.de/work/der-grimmig-tod-mit-seinem-pfeil-schoendlinger-anton>,
         <https://performance.musiconn.de/work/der-herr-ist-unser-richter-grude-fritz>,
-        <https://performance.musiconn.de/work/motetten-op-74-warum-ist-das-licht-gegeben-dem-muehseligen-auswahl-brahms-johannes>,
-        <https://performance.musiconn.de/work/musicalische-andachten-theil-5-zion-spricht-der-herr-hat-mich-verlassen-hammerschmidt-andreas>,
-        <https://performance.musiconn.de/work/opus-musicum-tomus-2-ecce-quomodo-moritur-iustus-gallus-jacobus>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-bach-johann-sebastian>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/198527510>,
-        <https://viaf.org/viaf/315570065>,
-        <https://viaf.org/viaf/8543149068385365730002> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4239994-4>,
-        <https://viaf.org/viaf/239536979> ;
-    cto:viaf <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/198527510>,
-        <https://viaf.org/viaf/239536979>,
-        <https://viaf.org/viaf/315570065>,
-        <https://viaf.org/viaf/8543149068385365730002> .
+        <https://performance.musiconn.de/work/motetten-op-74-warum-ist-das-licht-gegeben-dem-muehseligen-auswahl-brahms-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181241390> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198527510> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/239536979> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315570065> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8543149068385365730002> a nfdicore:NFDI_0001010 .
 

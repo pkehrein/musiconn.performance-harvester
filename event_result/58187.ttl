@@ -4,27 +4,34 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1208715798> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/13438587X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/matinee-berliner-schlagzeug-ensemble-komische-oper-foyer-berlin-1987-06-28> ] .
 
-<https://performance.musiconn.de/event/matinee-berliner-schlagzeug-ensemble-komische-oper-foyer-berlin-1987-06-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/matinee-berliner-schlagzeug-ensemble-komische-oper-foyer-berlin-1987-06-28> a cto:CTO_0001005 ;
     rdfs:label "Matinee, Berliner Schlagzeug-Ensemble, Komische Oper / Foyer (Berlin), 28.6.1987" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-06-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-06-28" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1208715798>,
-        <https://d-nb.info/gnd/13438587X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1987-dresden-saechsische-landesbibliothek-dresden-1988-1>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/13438587X> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1208715798> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/komische-oper-foyer-berlin> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1987-dresden-saechsische-landesbibliothek-dresden-1988-1>,
         <https://performance.musiconn.de/work/trio-concertante-fuer-schlagzeug-solisten-gruner-joachim> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/komische-oper-foyer-berlin> ;
-    cto:relatedPerson <https://d-nb.info/gnd/1208715798>,
-        <https://d-nb.info/gnd/13438587X>,
-        <https://performance.musiconn.de/person/osterloh-henry>,
-        <https://viaf.org/viaf/1473158792869639040005>,
-        <https://viaf.org/viaf/79601461> ;
-    cto:viaf <https://viaf.org/viaf/1473158792869639040005>,
-        <https://viaf.org/viaf/79601461> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1473158792869639040005> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/79601461> ],
+        <https://performance.musiconn.de/person/osterloh-henry> .
+
+<https://viaf.org/viaf/1473158792869639040005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/79601461> a nfdicore:NFDI_0001010 .
 

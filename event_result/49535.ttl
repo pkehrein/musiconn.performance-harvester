@@ -1,44 +1,57 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300121598> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300121865> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300121903> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vecer-posvjascennyj-semidesjatiletiju-so-dnja-rozdenija-sergeja-sergeevica-prokofeva-dom-kompozitorov-sankt-petersburg-1961-04-14> ] .
 
-<https://performance.musiconn.de/event/vecer-posvjascennyj-semidesjatiletiju-so-dnja-rozdenija-sergeja-sergeevica-prokofeva-dom-kompozitorov-sankt-petersburg-1961-04-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vecer-posvjascennyj-semidesjatiletiju-so-dnja-rozdenija-sergeja-sergeevica-prokofeva-dom-kompozitorov-sankt-petersburg-1961-04-14> a cto:CTO_0001005 ;
     rdfs:label "Večer posvjaščennyj semidesjatiletiju so dnja roždenija Sergeja Sergeeviča Prokof'eva, Dom kompozitorov (Sankt Petersburg), 14.4.1961" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1961-04-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1961-04-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1200899989>,
-        <https://d-nb.info/gnd/300121598>,
-        <https://d-nb.info/gnd/300121865>,
-        <https://d-nb.info/gnd/300121903> ;
-    cto:relatedItem <https://d-nb.info/gnd/300121598>,
-        <https://d-nb.info/gnd/300121865>,
-        <https://d-nb.info/gnd/300121903>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191497579> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315535703> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200779371> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300121865> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300121598> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300121903> ],
         <https://performance.musiconn.de/source/leningrader-komponistenhaus-1961-14-april>,
         <https://performance.musiconn.de/work/gavotte-klavier-prokofiev-sergei-sergeyevich>,
-        <https://performance.musiconn.de/work/mimoletnosti-prokofiev-sergei-sergeyevich>,
         <https://performance.musiconn.de/work/romeo-i-dzuletta-suite-fuer-klavier-op-75-auswahl-prokofiev-sergei-sergeyevich>,
         <https://performance.musiconn.de/work/romeo-i-dzuletta-tanec-antilskich-devusek-fassung-fuer-violine-und-klavier-prokofiev-sergei-sergeyevich>,
         <https://performance.musiconn.de/work/romeo-und-julia-maskentanz-fassung-fuer-violine-und-klavier-prokofiev-sergei-sergeyevich>,
-        <https://performance.musiconn.de/work/sonaten-klavier-nr-6-op-82-a-dur-prokofiev-sergei-sergeyevich>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-nr-1-op-80-f-moll-prokofiev-sergei-sergeyevich>,
         <https://performance.musiconn.de/work/stichotvorenija-a-achmatovoj-auswahl-prokofiev-sergei-sergeyevich>,
-        <https://performance.musiconn.de/work/vojna-i-mir-auswahl-prokofiev-sergei-sergeyevich>,
-        <https://viaf.org/viaf/191497579>,
-        <https://viaf.org/viaf/200779371>,
-        <https://viaf.org/viaf/315535703> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1200899989>,
-        <https://viaf.org/viaf/385157583849933970005> ;
-    cto:viaf <https://viaf.org/viaf/191497579>,
-        <https://viaf.org/viaf/200779371>,
-        <https://viaf.org/viaf/315535703>,
-        <https://viaf.org/viaf/385157583849933970005> .
+        <https://performance.musiconn.de/work/vojna-i-mir-auswahl-prokofiev-sergei-sergeyevich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/191497579> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200779371> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315535703> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
 

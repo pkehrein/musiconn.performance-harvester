@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1102227188> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300098006> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300808208> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-sonntags-konzert-staedtische-buehnen-frankfurt-am-main-oper-1970-03-22> ] .
 
-<https://performance.musiconn.de/event/8-sonntags-konzert-staedtische-buehnen-frankfurt-am-main-oper-1970-03-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-sonntags-konzert-staedtische-buehnen-frankfurt-am-main-oper-1970-03-22> a cto:CTO_0001005 ;
     rdfs:label "8. Sonntags-Konzert, Städtische Bühnen (Frankfurt am Main) / Oper, 22.3.1970" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1969-1970> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1970-03-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1970-03-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1102227188>,
-        <https://d-nb.info/gnd/300098006>,
-        <https://d-nb.info/gnd/300808208> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1969-1970> ;
-    cto:relatedItem <https://d-nb.info/gnd/1102227188>,
-        <https://d-nb.info/gnd/300098006>,
-        <https://d-nb.info/gnd/300808208>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-12-haydn-joseph>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-d-dur-mahler-gustav>,
-        <https://performance.musiconn.de/work/the-building-of-the-house-britten-benjamin>,
-        <https://viaf.org/viaf/174371992>,
-        <https://viaf.org/viaf/181843157>,
-        <https://viaf.org/viaf/185091495> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-oper> ;
-    cto:viaf <https://viaf.org/viaf/174371992>,
-        <https://viaf.org/viaf/181843157>,
-        <https://viaf.org/viaf/185091495> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-oper> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300808208> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300098006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181843157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185091495> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1102227188> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174371992> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174371992> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181843157> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185091495> a nfdicore:NFDI_0001010 .
 

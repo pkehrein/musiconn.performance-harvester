@@ -1,35 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026897> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109032> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141750> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzert-klubhaus-wolfen-1961-05-29-19-45> ] .
 
-<https://performance.musiconn.de/event/sonderkonzert-klubhaus-wolfen-1961-05-29-19-45> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzert-klubhaus-wolfen-1961-05-29-19-45> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert, Klubhaus (Wolfen), 29.5.1961, 19:45" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1961-05-29T19:45:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1961-05-29T19:45:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026897>,
-        <https://d-nb.info/gnd/300109032>,
-        <https://d-nb.info/gnd/300141750> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026897>,
-        <https://d-nb.info/gnd/300109032>,
-        <https://d-nb.info/gnd/300141750>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-kv-537-d-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-d-485-b-dur-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-98-e-moll-brahms-johannes>,
-        <https://viaf.org/viaf/185495735>,
-        <https://viaf.org/viaf/194731012>,
-        <https://viaf.org/viaf/198525332> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/klubhaus-wolfen> ;
-    cto:viaf <https://viaf.org/viaf/185495735>,
-        <https://viaf.org/viaf/194731012>,
-        <https://viaf.org/viaf/198525332> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/klubhaus-wolfen> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026897> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185495735> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109032> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198525332> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141750> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194731012> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185495735> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194731012> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198525332> a nfdicore:NFDI_0001010 .
 

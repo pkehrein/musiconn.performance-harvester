@@ -1,50 +1,65 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1073326373> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1114189847> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300426380> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300682840> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300813708> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/iii-eltern-abend-rosensaal-jena-1930-03-19-20-00> ] .
 
-<https://performance.musiconn.de/event/iii-eltern-abend-rosensaal-jena-1930-03-19-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/iii-eltern-abend-rosensaal-jena-1930-03-19-20-00> a cto:CTO_0001005 ;
     rdfs:label "III. Eltern-Abend, Rosensaal (Jena), 19.3.1930, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1930-03-19T21:45:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1930-03-19T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1073326373>,
-        <https://d-nb.info/gnd/1114189847>,
-        <https://d-nb.info/gnd/300426380>,
-        <https://d-nb.info/gnd/300682840>,
-        <https://d-nb.info/gnd/300813708> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1073326373>,
-        <https://d-nb.info/gnd/1114189847>,
-        <https://d-nb.info/gnd/300426380>,
-        <https://d-nb.info/gnd/300682840>,
-        <https://d-nb.info/gnd/300813708>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/rosensaal-jena> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177110753> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4240147484243249360009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215931812> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316511875> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300813708> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1114189847> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175765409> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300426380> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1073326373> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300682840> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/aus-meinem-tagebuche-band-1-reger-max>,
-        <https://performance.musiconn.de/work/aus-meinem-tagebuche-band-3-reger-max>,
         <https://performance.musiconn.de/work/das-mitleidige-maedchen-maerchen-wolff-erich-j>,
         <https://performance.musiconn.de/work/der-vogel-schliesse-mir-die-augen-beide-rasch-hugo>,
-        <https://performance.musiconn.de/work/heimat-op-59-schmid-heinrich-kaspar>,
-        <https://performance.musiconn.de/work/la-flute-de-pan-mouquet-jules>,
-        <https://performance.musiconn.de/work/schulwerk-fuer-instrumental-zusammenspiel-hindemith-paul>,
         <https://performance.musiconn.de/work/todessehnsucht-das-pantoeffelchen-rinkens-wilhelm>,
-        <https://performance.musiconn.de/work/weisst-du-noch-sommer-graener-paul>,
-        <https://viaf.org/viaf/175765409>,
-        <https://viaf.org/viaf/177110753>,
-        <https://viaf.org/viaf/215931812>,
-        <https://viaf.org/viaf/316511875>,
-        <https://viaf.org/viaf/4240147484243249360009> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/rosensaal-jena> ;
-    cto:viaf <https://viaf.org/viaf/175765409>,
-        <https://viaf.org/viaf/177110753>,
-        <https://viaf.org/viaf/215931812>,
-        <https://viaf.org/viaf/316511875>,
-        <https://viaf.org/viaf/4240147484243249360009> .
+        <https://performance.musiconn.de/work/weisst-du-noch-sommer-graener-paul> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175765409> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177110753> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215931812> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316511875> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4240147484243249360009> a nfdicore:NFDI_0001010 .
 

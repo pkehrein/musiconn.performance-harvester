@@ -1,60 +1,84 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1242483470> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1264409826> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300143958> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300172370> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300267525> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300337299> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300346913> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300677847> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-dresdner-kreuzchor-cappella-sagittariana-kreuzkirche-dresden-1985-10-13-16-00> ] .
 
-<https://performance.musiconn.de/event/konzert-dresdner-kreuzchor-cappella-sagittariana-kreuzkirche-dresden-1985-10-13-16-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-dresdner-kreuzchor-cappella-sagittariana-kreuzkirche-dresden-1985-10-13-16-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert Dresdner Kreuzchor, Cappella Sagittariana, Kreuzkirche (Dresden), 13.10.1985, 16:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/heinrich-schuetz-festtage-der-ddr-1985> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1985-10-13T16:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1985-10-13T16:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1242483470>,
-        <https://d-nb.info/gnd/1264409826>,
-        <https://d-nb.info/gnd/300143958>,
-        <https://d-nb.info/gnd/300172370>,
-        <https://d-nb.info/gnd/300267525>,
-        <https://d-nb.info/gnd/300337299>,
-        <https://d-nb.info/gnd/300346913>,
-        <https://d-nb.info/gnd/300677847>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/heinrich-schuetz-festtage-der-ddr-1985> ;
-    cto:relatedItem <https://d-nb.info/gnd/1242483470>,
-        <https://d-nb.info/gnd/1264409826>,
-        <https://d-nb.info/gnd/300143958>,
-        <https://d-nb.info/gnd/300172370>,
-        <https://d-nb.info/gnd/300267525>,
-        <https://d-nb.info/gnd/300337299>,
-        <https://d-nb.info/gnd/300346913>,
-        <https://d-nb.info/gnd/300677847>,
-        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-21-heinrich-schuetz-ehrung-1954-2002>,
-        <https://performance.musiconn.de/work/an-den-wassern-zu-babel-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/christ-ist-erstanden-von-der-marter-alle-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/der-85-psalm-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/die-sieben-worte-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/fiori-musicali-toccata-cromaticha-per-lelevatione-frescobaldi-girolamo>,
-        <https://performance.musiconn.de/work/magnificat-2-ton-weckmann-matthias>,
-        <https://performance.musiconn.de/work/psalmen-davids-psalm-84-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/tabulatura-nova-pars-1-da-jesus-an-dem-kreuze-stund-scheidt-samuel>,
-        <https://viaf.org/viaf/180456942>,
-        <https://viaf.org/viaf/181090921>,
-        <https://viaf.org/viaf/196885663>,
-        <https://viaf.org/viaf/200780498>,
-        <https://viaf.org/viaf/215938467>,
-        <https://viaf.org/viaf/294242162> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/180456942>,
-        <https://viaf.org/viaf/181090921>,
-        <https://viaf.org/viaf/196885663>,
-        <https://viaf.org/viaf/200780498>,
-        <https://viaf.org/viaf/215938467>,
-        <https://viaf.org/viaf/248189528>,
-        <https://viaf.org/viaf/294242162> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300337299> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180456942> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300172370> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1264409826> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196885663> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300677847> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/294242162> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1242483470> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215938467> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300267525> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200780498> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181090921> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300346913> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300143958> ],
+        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-21-heinrich-schuetz-ehrung-1954-2002> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180456942> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181090921> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196885663> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200780498> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215938467> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/294242162> a nfdicore:NFDI_0001010 .
 

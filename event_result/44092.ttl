@@ -4,19 +4,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/der-dybbuk-or-dolores-its-time-to-hang-up-the-castanets-baumwollspinnerei-leipzig-residenz-halle-18-2014-11-20-22-00> ] .
 
-<https://performance.musiconn.de/event/der-dybbuk-or-dolores-its-time-to-hang-up-the-castanets-baumwollspinnerei-leipzig-residenz-halle-18-2014-11-20-22-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/der-dybbuk-or-dolores-its-time-to-hang-up-the-castanets-baumwollspinnerei-leipzig-residenz-halle-18-2014-11-20-22-00> a cto:CTO_0001005 ;
     rdfs:label "Der Dybbuk or Dolores it's Time to hang up the Castanets, Baumwollspinnerei (Leipzig) / Residenz Halle 18, 20.11.2014, 22:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2014-11-20T23:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2014-11-20T22:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/baumwollspinnerei-leipzig-residenz-halle-18> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/flyer-theaterproduktion-20-november-2014>,
         <https://performance.musiconn.de/source/plakat-theaterproduktion-20-november-2014>,
         <https://performance.musiconn.de/source/programm-theaterproduktion-20-november-2014>,
@@ -30,8 +34,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/margeritkelach-fassung-gross-friedbert>,
         <https://performance.musiconn.de/work/nigun-ii-in-g-moll-kleiner-nigun-sander-werner>,
         <https://performance.musiconn.de/work/nigun-in-a-moll-sander-werner> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/baumwollspinnerei-leipzig-residenz-halle-18> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

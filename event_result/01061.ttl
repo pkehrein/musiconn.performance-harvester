@@ -1,35 +1,43 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/109822065X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1204533792> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1912-12-07-14-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1912-12-07-14-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1912-12-07-14-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 7.12.1912, 14:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1912-13> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1912-12-07T14:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1912-12-07T14:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/109822065X>,
-        <https://d-nb.info/gnd/1204533792>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1912-13> ;
-    cto:relatedItem <https://d-nb.info/gnd/109822065X>,
-        <https://d-nb.info/gnd/1204533792>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1204533792> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/109822065X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/14146217809409142410> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/bergische-weihnachtslegenden-maria-im-walde-riedel-carl>,
-        <https://performance.musiconn.de/work/stuecke-orgel-op-65-nr-1-rhapsodie-reger-max>,
         <https://performance.musiconn.de/work/stuecke-violoncello-orgel-op-10-adagio-smith-johannes>,
         <https://performance.musiconn.de/work/weihnachtskantate-arrangiert-engelsmann-walter>,
-        <https://performance.musiconn.de/work/weihnachtslied-fuchs-albert>,
-        <https://viaf.org/viaf/14146217809409142410> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/14146217809409142410>,
-        <https://viaf.org/viaf/248189528> .
+        <https://performance.musiconn.de/work/weihnachtslied-fuchs-albert> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/14146217809409142410> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
 

@@ -1,64 +1,87 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1043302840> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011822> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300121113> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300293577> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300293607> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300479018> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300479034> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-2009-12-21> ] .
 
-<https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-2009-12-21> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-2009-12-21> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Thomaskirche (Leipzig), 21.12.2009" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2009-12-21" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2009-12-21" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1043302840>,
-        <https://d-nb.info/gnd/300011822>,
-        <https://d-nb.info/gnd/300121113>,
-        <https://d-nb.info/gnd/300293577>,
-        <https://d-nb.info/gnd/300293607>,
-        <https://d-nb.info/gnd/300479018>,
-        <https://d-nb.info/gnd/300479034>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1043302840>,
-        <https://d-nb.info/gnd/300011822>,
-        <https://d-nb.info/gnd/300121113>,
-        <https://d-nb.info/gnd/300293577>,
-        <https://d-nb.info/gnd/300293607>,
-        <https://d-nb.info/gnd/300479018>,
-        <https://d-nb.info/gnd/300479034>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300293607> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305325925> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300479018> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300293577> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210942764> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181850865> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300479034> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174884959> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179510280> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300121113> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175383914> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1043302840> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011822> ],
         <https://performance.musiconn.de/source/motettenbuch-2009-10-1>,
         <https://performance.musiconn.de/work/altboehmische-gesaenge-teil-2-die-engel-und-die-hirten-riedel-carl>,
         <https://performance.musiconn.de/work/altboehmische-gesaenge-teil-2-freu-dich-erd-und-sternenzelt-riedel-carl>,
-        <https://performance.musiconn.de/work/ave-maria-zimmermann-heinz-werner>,
-        <https://performance.musiconn.de/work/choraele-aus-der-sammlung-joh-seb-bachs-vierstimmige-choralgesaenge-wie-schoen-leuchtet-der-morgenstern-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/evangelien-vesper-verkuendigung-thiele-siegfried>,
         <https://performance.musiconn.de/work/kantaten-bwv-36-nun-komm-der-heiden-heiland-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/musae-sioniae-theil-6-es-ist-ein-ros-entsprungen-praetorius-michael>,
         <https://performance.musiconn.de/work/o-du-froehliche-biller-georg-christoph>,
         <https://performance.musiconn.de/work/siehe-dein-koenig-kommt-braeutigam-volker>,
         <https://performance.musiconn.de/work/stille-nacht-heilige-nacht-chorsatz-schreck-gustav>,
-        <https://performance.musiconn.de/work/weihnachts-oratorium-brich-an-o-schoenes-morgenlicht-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/weihnachts-oratorium-gelobet-seist-du-jesu-christ-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/weihnachts-oratorium-ich-steh-an-deiner-krippen-hier-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/weihnachts-oratorium-ich-will-dich-mit-fleiss-bewahren-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/weihnachts-oratorium-wie-soll-ich-dich-empfangen-bach-johann-sebastian>,
-        <https://viaf.org/viaf/174884959>,
-        <https://viaf.org/viaf/175383914>,
-        <https://viaf.org/viaf/179510280>,
-        <https://viaf.org/viaf/181850865>,
-        <https://viaf.org/viaf/210942764>,
-        <https://viaf.org/viaf/305325925> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/174884959>,
-        <https://viaf.org/viaf/175383914>,
-        <https://viaf.org/viaf/179510280>,
-        <https://viaf.org/viaf/181850865>,
-        <https://viaf.org/viaf/210942764>,
-        <https://viaf.org/viaf/305325925> .
+        <https://performance.musiconn.de/work/weihnachts-oratorium-gelobet-seist-du-jesu-christ-bach-johann-sebastian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174884959> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175383914> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179510280> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181850865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210942764> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305325925> a nfdicore:NFDI_0001010 .
 

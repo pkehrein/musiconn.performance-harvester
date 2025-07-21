@@ -1,58 +1,79 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1214655645> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1242745661> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108176> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110081> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140746> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300185553> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300274068> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/iv-auffuehrung-volkshaus-jena-kleiner-saal-1906-03-25-20-00> ] .
 
-<https://performance.musiconn.de/event/iv-auffuehrung-volkshaus-jena-kleiner-saal-1906-03-25-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/iv-auffuehrung-volkshaus-jena-kleiner-saal-1906-03-25-20-00> a cto:CTO_0001005 ;
     rdfs:label "IV. Aufführung, Volkshaus (Jena) / Kleiner Saal, 25.3.1906, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1906-03-25T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1906-03-25T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1214655645>,
-        <https://d-nb.info/gnd/1242745661>,
-        <https://d-nb.info/gnd/300108176>,
-        <https://d-nb.info/gnd/300110081>,
-        <https://d-nb.info/gnd/300140746>,
-        <https://d-nb.info/gnd/300185553>,
-        <https://d-nb.info/gnd/300274068> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1214655645>,
-        <https://d-nb.info/gnd/1242745661>,
-        <https://d-nb.info/gnd/300108176>,
-        <https://d-nb.info/gnd/300110081>,
-        <https://d-nb.info/gnd/300140746>,
-        <https://d-nb.info/gnd/300185553>,
-        <https://d-nb.info/gnd/300274068>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/volkshaus-jena-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300185553> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300274068> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1214655645> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218084234> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213967885> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180308102> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173986416> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1242745661> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110081> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185879947> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140746> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108176> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2402163464544605680003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215924283> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/acis-and-galatea-i-rage-i-rage-i-rage-i-melt-i-burn-rezitativ-und-arie-haendel-georg-friedrich>,
         <https://performance.musiconn.de/work/aus-meiner-heimat-hildach-eugen>,
-        <https://performance.musiconn.de/work/du-bist-die-ruh-schubert-franz>,
-        <https://performance.musiconn.de/work/fantasien-klavier-kv-475-c-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/introduktion-vier-variationen-ueber-ein-originalthema-und-finale-schubert-franz>,
-        <https://performance.musiconn.de/work/lieder-frauen-singstimme-violine-klavier-op-15-der-spielmann-hildach-eugen>,
-        <https://performance.musiconn.de/work/quartette-querfloete-violine-viola-violoncello-kv-285-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/scherzos-adagios-floete-streichinstrumente-f-dur-stoer-karl>,
-        <https://performance.musiconn.de/work/unbefangenheit-weber-carl-maria-von>,
-        <https://viaf.org/viaf/173986416>,
-        <https://viaf.org/viaf/180308102>,
-        <https://viaf.org/viaf/185879947>,
-        <https://viaf.org/viaf/213967885>,
-        <https://viaf.org/viaf/215924283>,
-        <https://viaf.org/viaf/218084234>,
-        <https://viaf.org/viaf/2402163464544605680003> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/volkshaus-jena-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/173986416>,
-        <https://viaf.org/viaf/180308102>,
-        <https://viaf.org/viaf/185879947>,
-        <https://viaf.org/viaf/213967885>,
-        <https://viaf.org/viaf/215924283>,
-        <https://viaf.org/viaf/218084234>,
-        <https://viaf.org/viaf/2402163464544605680003> .
+        <https://performance.musiconn.de/work/scherzos-adagios-floete-streichinstrumente-f-dur-stoer-karl> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/173986416> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180308102> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185879947> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213967885> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215924283> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218084234> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2402163464544605680003> a nfdicore:NFDI_0001010 .
 

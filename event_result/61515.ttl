@@ -1,52 +1,71 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1290726892> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1290726906> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1290726922> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300053541> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110138> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300242980> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30026156X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4138108-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kammermusik-abend-albrechtsburg-meissen-1967-10-30-19-00> ] .
 
-<https://performance.musiconn.de/event/kammermusik-abend-albrechtsburg-meissen-1967-10-30-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kammermusik-abend-albrechtsburg-meissen-1967-10-30-19-00> a cto:CTO_0001005 ;
     rdfs:label "Kammermusik-Abend, Albrechtsburg (Meißen), 30.10.1967, 19:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1967-10-30T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1967-10-30T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1290726892>,
-        <https://d-nb.info/gnd/1290726906>,
-        <https://d-nb.info/gnd/1290726922>,
-        <https://d-nb.info/gnd/300053541>,
-        <https://d-nb.info/gnd/300110138>,
-        <https://d-nb.info/gnd/300242980>,
-        <https://d-nb.info/gnd/30026156X>,
-        <https://d-nb.info/gnd/4138108-7> ;
-    cto:relatedItem <https://d-nb.info/gnd/1290726892>,
-        <https://d-nb.info/gnd/1290726906>,
-        <https://d-nb.info/gnd/1290726922>,
-        <https://d-nb.info/gnd/300053541>,
-        <https://d-nb.info/gnd/300110138>,
-        <https://d-nb.info/gnd/300242980>,
-        <https://d-nb.info/gnd/30026156X>,
-        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-11-programmhefte-1966-1971>,
-        <https://performance.musiconn.de/work/gesaenge-1933-abbitte-fortner-wolfgang>,
-        <https://performance.musiconn.de/work/gesaenge-1933-an-die-parzen-fortner-wolfgang>,
-        <https://performance.musiconn.de/work/gesaenge-1933-hyperions-schicksalslied-fortner-wolfgang>,
-        <https://performance.musiconn.de/work/gesaenge-nach-worten-von-hoelderlin-geh-unter-schoene-sonne-fortner-wolfgang>,
-        <https://performance.musiconn.de/work/my-dark-hands-raphael-guenter>,
-        <https://performance.musiconn.de/work/quartette-violine-viola-violoncello-klavier-kv-478-g-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-kv-564-g-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/176855057>,
-        <https://viaf.org/viaf/180019020>,
-        <https://viaf.org/viaf/199707277>,
-        <https://viaf.org/viaf/214739102> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4138108-7>,
-        <https://viaf.org/viaf/263690853> ;
-    cto:viaf <https://viaf.org/viaf/176855057>,
-        <https://viaf.org/viaf/180019020>,
-        <https://viaf.org/viaf/199707277>,
-        <https://viaf.org/viaf/214739102>,
-        <https://viaf.org/viaf/263690853> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/263690853> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4138108-7> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199707277> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110138> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214739102> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300242980> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1290726906> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300053541> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176855057> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180019020> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30026156X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1290726892> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1290726922> ],
+        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-11-programmhefte-1966-1971> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176855057> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180019020> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199707277> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214739102> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/263690853> a nfdicore:NFDI_0001010 .
 

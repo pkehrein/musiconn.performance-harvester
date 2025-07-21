@@ -1,46 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300011148> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300017073> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300042507> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30012581X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300514018> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-konzert-junger-kuenstler-alte-oper-frankfurt-am-main-hindemith-saal-1987-02-13-18-00> ] .
 
-<https://performance.musiconn.de/event/4-konzert-junger-kuenstler-alte-oper-frankfurt-am-main-hindemith-saal-1987-02-13-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-konzert-junger-kuenstler-alte-oper-frankfurt-am-main-hindemith-saal-1987-02-13-18-00> a cto:CTO_0001005 ;
     rdfs:label "4. Konzert junger Künstler, Alte Oper (Frankfurt am Main) / Hindemith-Saal, 13.2.1987, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1986-1987> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-02-13T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-02-13T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300011148>,
-        <https://d-nb.info/gnd/300017073>,
-        <https://d-nb.info/gnd/300042507>,
-        <https://d-nb.info/gnd/30012581X>,
-        <https://d-nb.info/gnd/300514018> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1986-1987> ;
-    cto:relatedItem <https://d-nb.info/gnd/300011148>,
-        <https://d-nb.info/gnd/300017073>,
-        <https://d-nb.info/gnd/300042507>,
-        <https://d-nb.info/gnd/30012581X>,
-        <https://d-nb.info/gnd/300514018>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/sonaten-und-partiten-violine-bwv-1001-1006-partita-nr-2-chaconne-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-l-140-g-moll-debussy-claude>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-op-12-nr-3-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sonaten-violine-op-27-nr-3-ysaye-eugene>,
-        <https://performance.musiconn.de/work/tzigane-ravel-maurice>,
-        <https://viaf.org/viaf/181847868>,
-        <https://viaf.org/viaf/201851058>,
-        <https://viaf.org/viaf/207912313>,
-        <https://viaf.org/viaf/208694192>,
-        <https://viaf.org/viaf/210935680> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-am-main-hindemith-saal> ;
-    cto:viaf <https://viaf.org/viaf/181847868>,
-        <https://viaf.org/viaf/201851058>,
-        <https://viaf.org/viaf/207912313>,
-        <https://viaf.org/viaf/208694192>,
-        <https://viaf.org/viaf/210935680> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-am-main-hindemith-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300042507> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207912313> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30012581X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201851058> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210935680> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181847868> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300514018> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011148> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208694192> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300017073> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181847868> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201851058> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207912313> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208694192> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210935680> a nfdicore:NFDI_0001010 .
 

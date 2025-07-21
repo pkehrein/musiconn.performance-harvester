@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4300889-6> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gottesdienst-nikolaikirche-leipzig-1915-11-07> ] .
 
-<https://performance.musiconn.de/event/gottesdienst-nikolaikirche-leipzig-1915-11-07> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gottesdienst-nikolaikirche-leipzig-1915-11-07> a cto:CTO_0001005 ;
     rdfs:label "Gottesdienst, Nikolaikirche (Leipzig), 7.11.1915" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1915-11-07" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1915-11-07" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4300889-6> ;
-    cto:relatedItem <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4300889-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173652475> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
         <https://performance.musiconn.de/work/die-erloeseten-des-herrn-werden-wiederkommen-roch-friedrich-e>,
         <https://performance.musiconn.de/work/es-ist-ein-koestlich-ding-motette-roch-friedrich-e>,
         <https://performance.musiconn.de/work/ist-gott-fuer-uns-wer-mag-wider-uns-sein-roch-friedrich-e> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4300889-6>,
-        <https://viaf.org/viaf/173652475> ;
-    cto:viaf <https://viaf.org/viaf/173652475> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/173652475> a nfdicore:NFDI_0001010 .
 

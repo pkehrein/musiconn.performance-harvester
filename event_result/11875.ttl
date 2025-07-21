@@ -1,43 +1,59 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30001001X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300143605> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30029235X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300293720> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1977-11-05> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1977-11-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1977-11-05> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 5.11.1977" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1977-11-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1977-11-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30001001X>,
-        <https://d-nb.info/gnd/300143605>,
-        <https://d-nb.info/gnd/30029235X>,
-        <https://d-nb.info/gnd/300293720>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/30001001X>,
-        <https://d-nb.info/gnd/300143605>,
-        <https://d-nb.info/gnd/30029235X>,
-        <https://d-nb.info/gnd/300293720>,
-        <https://performance.musiconn.de/source/motettenbuch-1977>,
-        <https://performance.musiconn.de/work/geistliche-konzerte-swv-306-337-ich-beuge-meine-knie-gegen-dem-vater-unsers-herren-jesu-christi-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/kleine-geistliche-konzerte-swv-282-305-o-hilf-christe-gottes-sohn-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/komm-jesu-komm-mein-leib-ist-muede-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/musikalische-exequien-herr-wenn-ich-nur-dich-habe-schuetz-heinrich>,
-        <https://viaf.org/viaf/182469156>,
-        <https://viaf.org/viaf/191502083>,
-        <https://viaf.org/viaf/208685032>,
-        <https://viaf.org/viaf/215928747> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/182469156>,
-        <https://viaf.org/viaf/191502083>,
-        <https://viaf.org/viaf/208685032>,
-        <https://viaf.org/viaf/215928747> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300143605> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215928747> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001001X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30029235X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191502083> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300293720> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182469156> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208685032> ],
+        <https://performance.musiconn.de/source/motettenbuch-1977> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182469156> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191502083> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208685032> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215928747> a nfdicore:NFDI_0001010 .
 

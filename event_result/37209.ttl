@@ -1,33 +1,57 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1139179330> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1189838117> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1198222166> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300016824> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037724> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300196202> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-schueler-vortrag-volkshaus-jena-kleiner-saal-1930-09-17-19-30> ] .
 
-<https://performance.musiconn.de/event/5-schueler-vortrag-volkshaus-jena-kleiner-saal-1930-09-17-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-schueler-vortrag-volkshaus-jena-kleiner-saal-1930-09-17-19-30> a cto:CTO_0001005 ;
     rdfs:label "5. Schüler-Vortrag, Volkshaus (Jena) / Kleiner Saal, 17.9.1930, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1930-09-17T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1930-09-17T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1139179330>,
-        <https://d-nb.info/gnd/1189838117>,
-        <https://d-nb.info/gnd/1198222166>,
-        <https://d-nb.info/gnd/300016824>,
-        <https://d-nb.info/gnd/300037724>,
-        <https://d-nb.info/gnd/300196202> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1139179330>,
-        <https://d-nb.info/gnd/1189838117>,
-        <https://d-nb.info/gnd/1198222166>,
-        <https://d-nb.info/gnd/300016824>,
-        <https://d-nb.info/gnd/300037724>,
-        <https://d-nb.info/gnd/300196202>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/volkshaus-jena-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037724> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/380156253584408110001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1139179330> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1198222166> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300196202> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200781259> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204580193> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1189838117> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016824> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/509150470109304330001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4097157282928803640008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175383766> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
         <https://performance.musiconn.de/work/bourree-und-menuett-hasse-johann-adolf>,
         <https://performance.musiconn.de/work/das-roesslein-schmid-heinrich-kaspar>,
@@ -35,25 +59,19 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/grauer-himmel-toch-ernst>,
         <https://performance.musiconn.de/work/impromptu-gurlitt-cornelius>,
         <https://performance.musiconn.de/work/marschmaessig-schmid-heinrich-kaspar>,
-        <https://performance.musiconn.de/work/menuette-cembalo-hob-9-9-a-haydn-joseph>,
-        <https://performance.musiconn.de/work/praeludien-klavier-op-28-nr-15-des-dur-chopin-frederic>,
         <https://performance.musiconn.de/work/sarabande-festing-michael-christian>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-82-87-nr-82-c-dur-vivace-assai-haydn-joseph>,
-        <https://performance.musiconn.de/work/sonatinen-klavier-op-55-nr-2-kuhlau-friedrich>,
-        <https://performance.musiconn.de/work/sonatinen-klavier-op-79-g-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/stuecke-klavier-6-haendig-op-75-zilcher-johann-paul>,
-        <https://performance.musiconn.de/work/vier-ausdrucksspiele-neal-heinrich>,
-        <https://viaf.org/viaf/175383766>,
-        <https://viaf.org/viaf/200781259>,
-        <https://viaf.org/viaf/204580193>,
-        <https://viaf.org/viaf/380156253584408110001>,
-        <https://viaf.org/viaf/4097157282928803640008>,
-        <https://viaf.org/viaf/509150470109304330001> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/volkshaus-jena-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/175383766>,
-        <https://viaf.org/viaf/200781259>,
-        <https://viaf.org/viaf/204580193>,
-        <https://viaf.org/viaf/380156253584408110001>,
-        <https://viaf.org/viaf/4097157282928803640008>,
-        <https://viaf.org/viaf/509150470109304330001> .
+        <https://performance.musiconn.de/work/vier-ausdrucksspiele-neal-heinrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175383766> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200781259> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204580193> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/380156253584408110001> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4097157282928803640008> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/509150470109304330001> a nfdicore:NFDI_0001010 .
 

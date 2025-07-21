@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026870> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145403> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171463> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/asien-roch-2016-oriental-arts-center-shanghai-2016-10-25-19-30> ] .
 
-<https://performance.musiconn.de/event/asien-roch-2016-oriental-arts-center-shanghai-2016-10-25-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/asien-roch-2016-oriental-arts-center-shanghai-2016-10-25-19-30> a cto:CTO_0001005 ;
     rdfs:label "Asien-Roch 2016, Oriental Arts Center (Shanghai), 25.10.2016, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2016-2017> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2016-10-25T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2016-10-25T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026870>,
-        <https://d-nb.info/gnd/300145403>,
-        <https://d-nb.info/gnd/300171463> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2016-2017> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026870>,
-        <https://d-nb.info/gnd/300145403>,
-        <https://d-nb.info/gnd/300171463>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/euryanthe-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-54-a-moll-schumann-robert>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-73-d-dur-brahms-johannes>,
-        <https://viaf.org/viaf/191495144>,
-        <https://viaf.org/viaf/219935426>,
-        <https://viaf.org/viaf/315209867> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/oriental-arts-center-shanghai> ;
-    cto:viaf <https://viaf.org/viaf/191495144>,
-        <https://viaf.org/viaf/219935426>,
-        <https://viaf.org/viaf/315209867> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/oriental-arts-center-shanghai> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219935426> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191495144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171463> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315209867> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145403> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026870> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/191495144> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219935426> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315209867> a nfdicore:NFDI_0001010 .
 

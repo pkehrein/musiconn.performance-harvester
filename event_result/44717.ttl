@@ -1,54 +1,73 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1069955795> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/107058326X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1279916249> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037031> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30078810X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/9-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1876-02-22> ] .
 
-<https://performance.musiconn.de/event/9-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1876-02-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/9-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1876-02-22> a cto:CTO_0001005 ;
     rdfs:label "9. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 22.2.1876" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1875-1876> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1876-02-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1876-02-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1069955795>,
-        <https://d-nb.info/gnd/107058326X>,
-        <https://d-nb.info/gnd/1279916249>,
-        <https://d-nb.info/gnd/300037031>,
-        <https://d-nb.info/gnd/30078810X>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1875-1876> ;
-    cto:relatedItem <https://d-nb.info/gnd/1069955795>,
-        <https://d-nb.info/gnd/107058326X>,
-        <https://d-nb.info/gnd/1279916249>,
-        <https://d-nb.info/gnd/300037031>,
-        <https://d-nb.info/gnd/30078810X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212897904> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219161115> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/107058326X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174387817> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315574240> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1069955795> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30078810X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1279916249> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037031> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315587022> ],
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/work/abendreihn-reinecke-carl>,
-        <https://performance.musiconn.de/work/grandes-variations-de-concert-sur-un-theme-des-puritains-liszt-franz>,
-        <https://performance.musiconn.de/work/impromptus-klavier-op-29-as-dur-chopin-frederic>,
         <https://performance.musiconn.de/work/konzerte-klavier-2-orchester-thern-karoly>,
         <https://performance.musiconn.de/work/lieder-op-21-hinaus-ries-franz>,
         <https://performance.musiconn.de/work/lieder-op-39-unruhe-winterberger-alexander>,
-        <https://performance.musiconn.de/work/musik-zum-fest-nachspiel-die-ruinen-von-athen-marcia-alla-turca-bearbeitung-fuer-zwei-klaviere-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/rodelinda-regina-de-langobardi-mio-caro-bene-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/serenaden-op-46-jadassohn-salomon>,
-        <https://performance.musiconn.de/work/sinfonien-op-53-volkmann-robert>,
-        <https://viaf.org/viaf/174387817>,
-        <https://viaf.org/viaf/212897904>,
-        <https://viaf.org/viaf/219161115>,
-        <https://viaf.org/viaf/315574240>,
-        <https://viaf.org/viaf/315587022> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/174387817>,
-        <https://viaf.org/viaf/212897904>,
-        <https://viaf.org/viaf/219161115>,
-        <https://viaf.org/viaf/242717024>,
-        <https://viaf.org/viaf/315574240>,
-        <https://viaf.org/viaf/315587022> .
+        <https://performance.musiconn.de/work/musik-zum-fest-nachspiel-die-ruinen-von-athen-marcia-alla-turca-bearbeitung-fuer-zwei-klaviere-beethoven-ludwig-van> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174387817> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212897904> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219161115> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315574240> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315587022> a nfdicore:NFDI_0001010 .
 

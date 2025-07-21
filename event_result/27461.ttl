@@ -1,43 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1073318052> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300024770> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300220650> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300808208> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/9-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1902-02-03> ] .
 
-<https://performance.musiconn.de/event/9-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1902-02-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/9-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1902-02-03> a cto:CTO_0001005 ;
     rdfs:label "9. Philharmonisches Konzert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 3.2.1902" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1901-1902> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1902-02-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1902-02-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1073318052>,
-        <https://d-nb.info/gnd/300024770>,
-        <https://d-nb.info/gnd/300220650>,
-        <https://d-nb.info/gnd/300808208> ;
-    cto:itemOf <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1901-1902> ;
-    cto:relatedItem <https://d-nb.info/gnd/1073318052>,
-        <https://d-nb.info/gnd/300024770>,
-        <https://d-nb.info/gnd/300220650>,
-        <https://d-nb.info/gnd/300808208>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300220650> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1073318052> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185091495> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211714065> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300024770> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175407519> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316511689> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300808208> ],
         <https://performance.musiconn.de/source/musikalisches-wochenblatt-mw>,
-        <https://performance.musiconn.de/work/akademische-festouvertuere-brahms-johannes>,
         <https://performance.musiconn.de/work/cephale-et-procris-drei-tanzstuecke-gretry-andre-ernest-modeste>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-kv-anh-c-1404-es-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-20-f-dur-lalo-edouard>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-12-haydn-joseph>,
-        <https://performance.musiconn.de/work/sonaten-violine-1-satz-bach-johann-sebastian>,
-        <https://viaf.org/viaf/175407519>,
-        <https://viaf.org/viaf/185091495>,
-        <https://viaf.org/viaf/211714065>,
-        <https://viaf.org/viaf/316511689> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/175407519>,
-        <https://viaf.org/viaf/185091495>,
-        <https://viaf.org/viaf/211714065>,
-        <https://viaf.org/viaf/316511689> .
+        <https://performance.musiconn.de/work/sonaten-violine-1-satz-bach-johann-sebastian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175407519> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185091495> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211714065> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316511689> a nfdicore:NFDI_0001010 .
 

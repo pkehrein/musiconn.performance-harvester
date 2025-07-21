@@ -4,28 +4,35 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1028085141> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5314651-7> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/jubilaeumsfeier-45-jahre-dvbf-berufstaetigkeit-und-ehrenamt-kurhaus-wiesbaden-1996-03-16> ] .
 
-<https://performance.musiconn.de/event/jubilaeumsfeier-45-jahre-dvbf-berufstaetigkeit-und-ehrenamt-kurhaus-wiesbaden-1996-03-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/jubilaeumsfeier-45-jahre-dvbf-berufstaetigkeit-und-ehrenamt-kurhaus-wiesbaden-1996-03-16> a cto:CTO_0001005 ;
     rdfs:label "Jubiläumsfeier 45 Jahre dvbf-Berufstätigkeit und Ehrenamt, Kurhaus (Wiesbaden), 16.3.1996" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1996-03-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1996-03-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1028085141>,
-        <https://d-nb.info/gnd/5314651-7> ;
-    cto:relatedItem <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-jubilaeumsveranstaltung-des-dvbf-wiesbaden-ev-im-kurhaus-wiesbaden>,
-        <https://performance.musiconn.de/work/musik-fuer-die-frauen-dieser-welt-zimanowski-cornelia> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1028085141>,
-        <https://viaf.org/viaf/282346312> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5314651-7>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5314651-7> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154494011> ],
         <https://performance.musiconn.de/corporation/deutscher-verband-berufstaetiger-frauen-club-wiesbaden-ev>,
         <https://performance.musiconn.de/corporation/frauenchor-la-musica-wiesbaden-erbenheim>,
-        <https://performance.musiconn.de/corporation/gutenbergschule-wiesbaden-chor>,
-        <https://viaf.org/viaf/154494011> ;
-    cto:viaf <https://viaf.org/viaf/154494011>,
-        <https://viaf.org/viaf/282346312> .
+        <https://performance.musiconn.de/corporation/gutenbergschule-wiesbaden-chor> ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1028085141> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/282346312> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-jubilaeumsveranstaltung-des-dvbf-wiesbaden-ev-im-kurhaus-wiesbaden>,
+        <https://performance.musiconn.de/work/musik-fuer-die-frauen-dieser-welt-zimanowski-cornelia> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154494011> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/282346312> a nfdicore:NFDI_0001010 .
 

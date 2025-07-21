@@ -4,24 +4,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4625181-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/juedisch-literarischer-nachmittag-alte-handelsboerse-leipzig-1976-01-31-15-00> ] .
 
-<https://performance.musiconn.de/event/juedisch-literarischer-nachmittag-alte-handelsboerse-leipzig-1976-01-31-15-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/juedisch-literarischer-nachmittag-alte-handelsboerse-leipzig-1976-01-31-15-00> a cto:CTO_0001005 ;
     rdfs:label "Jüdisch-literarischer Nachmittag, Alte Handelsbörse (Leipzig), 31.1.1976, 15:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1976-01-31T15:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1976-01-31T15:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4625181-9>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4625181-9> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/einladung-musikalisch-literarische-veranstaltung-31-januar-1976>,
         <https://performance.musiconn.de/source/israelitische-religionsgemeinde-zu-leipzig-1> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4625181-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

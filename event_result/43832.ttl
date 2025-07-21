@@ -4,20 +4,28 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7732526-6> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/benefizkonzert-fuer-den-foerderverein-haus-des-lebens-mahn-und-begegnungsstaette-juedischer-friedhof-halle-sankt-ulrich-halle-saale-2000-04-02-17-00> ] .
 
-<https://performance.musiconn.de/event/benefizkonzert-fuer-den-foerderverein-haus-des-lebens-mahn-und-begegnungsstaette-juedischer-friedhof-halle-sankt-ulrich-halle-saale-2000-04-02-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/benefizkonzert-fuer-den-foerderverein-haus-des-lebens-mahn-und-begegnungsstaette-juedischer-friedhof-halle-sankt-ulrich-halle-saale-2000-04-02-17-00> a cto:CTO_0001005 ;
     rdfs:label "Benefizkonzert für den Förderverein Haus des Lebens Mahn- und Begegnungsstätte jüdischer Friedhof Halle, Sankt Ulrich (Halle (Saale)), 2.4.2000, 17:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2000-04-02T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2000-04-02T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X>,
-        <https://d-nb.info/gnd/7732526-6> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7732526-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/239264608> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/programm-konzert-2-april-2000>,
         <https://performance.musiconn.de/work/a-semerl-fassung-sander-werner>,
         <https://performance.musiconn.de/work/die-nacht-fassung-dorfman-joseph-gelbart-michl>,
@@ -35,10 +43,9 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/shtiler-shtiler-fassung-shur-bonia-volkoviski-alek>,
         <https://performance.musiconn.de/work/sisu-wsimchu-fassung-weintraub-hirsch>,
         <https://performance.musiconn.de/work/wschomru-nowakowsky-david> ;
-    cto:relatedLocation <https://d-nb.info/gnd/7732526-6>,
-        <https://viaf.org/viaf/239264608> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/239264608> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/239264608> a nfdicore:NFDI_0001010 .
 

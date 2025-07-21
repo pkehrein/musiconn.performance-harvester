@@ -1,46 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1177937840> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300005636> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300073615> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300940440> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2003-01-24> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2003-01-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2003-01-24> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 24.1.2003" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2003-01-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2003-01-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1177937840>,
-        <https://d-nb.info/gnd/300005636>,
-        <https://d-nb.info/gnd/300073615>,
-        <https://d-nb.info/gnd/300940440>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1177937840>,
-        <https://d-nb.info/gnd/300005636>,
-        <https://d-nb.info/gnd/300073615>,
-        <https://d-nb.info/gnd/300940440>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205760257> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300940440> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206857142> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1177937840> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300073615> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201850710> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300005636> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/293311638> ],
         <https://performance.musiconn.de/source/motettenbuch-2002-03>,
         <https://performance.musiconn.de/work/aus-tiefer-not-schrei-ich-zu-dir-aus-tiefer-not-arrangiert-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/choraele-aus-der-sammlung-joh-seb-bachs-vierstimmige-choralgesaenge-kyrie-gott-vater-in-ewigkeit-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-33-fuehre-mich-schreck-gustav>,
-        <https://performance.musiconn.de/work/johannespassion-dein-will-gescheh-herr-gott-zugleich-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/liturgische-gesaenge-nr-5-herr-du-bist-wuerdig-zu-nehmen-preis-herzogenberg-heinrich-von>,
         <https://performance.musiconn.de/work/motetten-op-23-troeste-uns-gott-unser-heiland-auswahl-schreck-gustav>,
-        <https://performance.musiconn.de/work/psalm-23-op-42-schreck-gustav>,
-        <https://viaf.org/viaf/201850710>,
-        <https://viaf.org/viaf/205760257>,
-        <https://viaf.org/viaf/206857142>,
-        <https://viaf.org/viaf/293311638> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/201850710>,
-        <https://viaf.org/viaf/205760257>,
-        <https://viaf.org/viaf/206857142>,
-        <https://viaf.org/viaf/293311638> .
+        <https://performance.musiconn.de/work/psalm-23-op-42-schreck-gustav> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201850710> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205760257> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206857142> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/293311638> a nfdicore:NFDI_0001010 .
 

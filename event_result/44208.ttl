@@ -1,59 +1,78 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/107367018X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1211598462> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010672> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300039298> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/301020493> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5530891-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/klingende-toleranz-konzert-zum-26-kurt-weill-fest-petruskirche-dessau-2018-03-10-19-30> ] .
 
-<https://performance.musiconn.de/event/klingende-toleranz-konzert-zum-26-kurt-weill-fest-petruskirche-dessau-2018-03-10-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/klingende-toleranz-konzert-zum-26-kurt-weill-fest-petruskirche-dessau-2018-03-10-19-30> a cto:CTO_0001005 ;
     rdfs:label "Klingende Toleranz / Konzert zum 26. Kurt Weill Fest, Petruskirche (Dessau), 10.3.2018, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2018-03-10T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2018-03-10T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/107367018X>,
-        <https://d-nb.info/gnd/1211598462>,
-        <https://d-nb.info/gnd/300010672>,
-        <https://d-nb.info/gnd/300039298>,
-        <https://d-nb.info/gnd/301020493>,
-        <https://d-nb.info/gnd/5513287-X>,
-        <https://d-nb.info/gnd/5530891-0> ;
-    cto:relatedItem <https://d-nb.info/gnd/107367018X>,
-        <https://d-nb.info/gnd/1211598462>,
-        <https://d-nb.info/gnd/300010672>,
-        <https://d-nb.info/gnd/300039298>,
-        <https://d-nb.info/gnd/301020493>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5530891-0> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/131817280> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/petruskirche-dessau> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194730499> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219960564> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/107367018X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300039298> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184284887> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1211598462> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301020493> ],
         <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/johannes-killyen-klingender-aufruf-zur-toleranz-konzert-von-1926-wurde-rekonstruiert>,
         <https://performance.musiconn.de/source/programmbuch-konzert-10-maerz-2018>,
         <https://performance.musiconn.de/work/al-naharot-bavel-psalm-137-rossi-salamone>,
         <https://performance.musiconn.de/work/debora-gehdort-zu-zuechtigen-haendel-georg-friedrich>,
         <https://performance.musiconn.de/work/debora-vor-gottes-angesicht-sinkt-tyrannenpracht-in-staub-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/fantasie-und-fuge-orgel-bwv-542-g-moll-fantasie-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/geistliche-lieder-herr-wir-traun-auf-deine-guete-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/geistliche-lieder-lass-o-herr-mich-hilfe-finden-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/ich-hebe-meine-augen-auf-psalm-121-jadassohn-salomon>,
         <https://performance.musiconn.de/work/lamnazeach-al-hagitit-psalm-8-rossi-salamone>,
         <https://performance.musiconn.de/work/ma-towu-lewandowski-louis>,
         <https://performance.musiconn.de/work/motetten-op-81-nr-1-wenn-der-herr-die-gefangenen-zions-erloesen-wird-mendelssohn-arnold-ludwig>,
-        <https://performance.musiconn.de/work/paulus-jerusalem-jerusalem-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/sonaten-violine-violone-op-5-nr-12-corelli-arcangelo>,
-        <https://performance.musiconn.de/work/tauw-lhaudauss-psalm-92-lampel-samuel>,
-        <https://viaf.org/viaf/184284887>,
-        <https://viaf.org/viaf/194730499>,
-        <https://viaf.org/viaf/219960564> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/petruskirche-dessau> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://d-nb.info/gnd/5530891-0>,
-        <https://viaf.org/viaf/131817280>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/131817280>,
-        <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/184284887>,
-        <https://viaf.org/viaf/194730499>,
-        <https://viaf.org/viaf/219960564> .
+        <https://performance.musiconn.de/work/tauw-lhaudauss-psalm-92-lampel-samuel> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/131817280> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184284887> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194730499> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219960564> a nfdicore:NFDI_0001010 .
 

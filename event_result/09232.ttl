@@ -1,43 +1,56 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009267> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300187882> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300211112> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-zweites-gewandhaus-leipzig-1987-03-07> ] .
 
-<https://performance.musiconn.de/event/konzert-zweites-gewandhaus-leipzig-1987-03-07> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-zweites-gewandhaus-leipzig-1987-03-07> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Zweites Gewandhaus (Leipzig), 7.3.1987" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-03-07" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-03-07" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009267>,
-        <https://d-nb.info/gnd/300187882>,
-        <https://d-nb.info/gnd/300211112>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009267>,
-        <https://d-nb.info/gnd/300187882>,
-        <https://d-nb.info/gnd/300211112>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178265482> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009267> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207915617> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200781696> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300187882> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300211112> ],
         <https://performance.musiconn.de/source/motettenbuch-1987>,
-        <https://performance.musiconn.de/work/gesaenge-op-43-hochzeitslied-schreck-gustav>,
-        <https://performance.musiconn.de/work/lieder-op-25-fruehzeitiger-fruehling-hauptmann-moritz>,
         <https://performance.musiconn.de/work/lieder-op-25-heidenroeslein-hauptmann-moritz>,
         <https://performance.musiconn.de/work/lieder-op-54-schmetterlingslied-richter-ernst-friedrich-eduard>,
         <https://performance.musiconn.de/work/lieder-op-54-schnelle-bluete-richter-ernst-friedrich-eduard>,
         <https://performance.musiconn.de/work/lieder-op-54-vom-berg-ergeht-ein-rufen-richter-ernst-friedrich-eduard>,
-        <https://performance.musiconn.de/work/preise-dein-gluecke-gesegnetes-sachsen-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/quartette-op-41-fruehlingsglaube-rust-wilhelm>,
-        <https://viaf.org/viaf/178265482>,
-        <https://viaf.org/viaf/200781696>,
-        <https://viaf.org/viaf/207915617> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/178265482>,
-        <https://viaf.org/viaf/200781696>,
-        <https://viaf.org/viaf/207915617>,
-        <https://viaf.org/viaf/264523828> .
+        <https://performance.musiconn.de/work/quartette-op-41-fruehlingsglaube-rust-wilhelm> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178265482> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200781696> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207915617> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
 

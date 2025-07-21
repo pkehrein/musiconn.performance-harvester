@@ -1,42 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1035443473> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300222629> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300556578> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vi-wohltaetigkeits-konzert-gewerbehaus-dresden-gewerbehaus-saal-1915-04-13-20-00> ] .
 
-<https://performance.musiconn.de/event/vi-wohltaetigkeits-konzert-gewerbehaus-dresden-gewerbehaus-saal-1915-04-13-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vi-wohltaetigkeits-konzert-gewerbehaus-dresden-gewerbehaus-saal-1915-04-13-20-00> a cto:CTO_0001005 ;
     rdfs:label "VI. Wohltätigkeits-Konzert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 13.4.1915, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1914-1915> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1915-04-13T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1915-04-13T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1035443473>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300222629>,
-        <https://d-nb.info/gnd/300556578> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1914-1915> ;
-    cto:relatedItem <https://d-nb.info/gnd/1035443473>,
-        <https://d-nb.info/gnd/300222629>,
-        <https://d-nb.info/gnd/300556578>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1035443473> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/302196703> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300222629> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217016861> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206837966> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300556578> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1914-1915>,
-        <https://performance.musiconn.de/work/bismarck-wohlgemuth-gustav>,
         <https://performance.musiconn.de/work/die-adler-von-mars-la-tour-nicode-jean-louis>,
         <https://performance.musiconn.de/work/einst-geschiehts-feigerl-rudolf>,
         <https://performance.musiconn.de/work/emden-juengst-hugo>,
-        <https://performance.musiconn.de/work/gesaenge-op-33-verfuehrung-strauss-richard>,
         <https://performance.musiconn.de/work/kinderchor-anonym>,
-        <https://performance.musiconn.de/work/korsholma-jaernefelt-armas>,
-        <https://performance.musiconn.de/work/natur-reichert-johannes>,
-        <https://viaf.org/viaf/206837966>,
-        <https://viaf.org/viaf/217016861>,
-        <https://viaf.org/viaf/302196703> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/206837966>,
-        <https://viaf.org/viaf/217016861>,
-        <https://viaf.org/viaf/302196703> .
+        <https://performance.musiconn.de/work/natur-reichert-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/206837966> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217016861> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/302196703> a nfdicore:NFDI_0001010 .
 

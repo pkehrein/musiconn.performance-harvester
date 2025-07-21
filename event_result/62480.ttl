@@ -4,28 +4,35 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/101069375> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/135971594> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/la-cascina-teatro-de-la-santa-cruz-barcelona-1761-00-00> ] .
 
-<https://performance.musiconn.de/event/la-cascina-teatro-de-la-santa-cruz-barcelona-1761-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/la-cascina-teatro-de-la-santa-cruz-barcelona-1761-00-00> a cto:CTO_0001005 ;
     rdfs:label "La cascina, Teatro de la Santa Cruz (Barcelona), 1761" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1761-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1761-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/101069375>,
-        <https://d-nb.info/gnd/135971594> ;
-    cto:relatedItem <https://performance.musiconn.de/source/alier-i-aixala-opera>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/135971594> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/101069375> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/teatro-de-la-santa-cruz-barcelona> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/alier-i-aixala-opera>,
         <https://performance.musiconn.de/source/la-cascina-dramma-giocoso-per-musica-da-rappresentarsi-nel-teatro-della-molto-illustre-citta-di-barcellona-nellanno-1761>,
         <https://performance.musiconn.de/work/la-cascina-anonym-scolari-giuseppe> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/teatro-de-la-santa-cruz-barcelona> ;
-    cto:relatedPerson <https://d-nb.info/gnd/101069375>,
-        <https://d-nb.info/gnd/135971594>,
-        <https://performance.musiconn.de/person/llado-jose>,
-        <https://viaf.org/viaf/53450166>,
-        <https://viaf.org/viaf/7744276> ;
-    cto:viaf <https://viaf.org/viaf/53450166>,
-        <https://viaf.org/viaf/7744276> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7744276> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/53450166> ],
+        <https://performance.musiconn.de/person/llado-jose> .
+
+<https://viaf.org/viaf/53450166> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7744276> a nfdicore:NFDI_0001010 .
 

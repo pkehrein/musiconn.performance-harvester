@@ -4,20 +4,28 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4253322-3> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/synagogenmusik-jiddische-und-hebraeische-folklore-in-freier-bearbeitung-marienkirche-herford-2000-11-11-20-00> ] .
 
-<https://performance.musiconn.de/event/synagogenmusik-jiddische-und-hebraeische-folklore-in-freier-bearbeitung-marienkirche-herford-2000-11-11-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/synagogenmusik-jiddische-und-hebraeische-folklore-in-freier-bearbeitung-marienkirche-herford-2000-11-11-20-00> a cto:CTO_0001005 ;
     rdfs:label "Synagogenmusik - Jiddische und hebräische Folklore in freier Bearbeitung, Marienkirche (Herford), 11.11.2000, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2000-11-11T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2000-11-11T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4253322-3>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/245743245> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4253322-3> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/programm-konzert-11-november-2000>,
         <https://performance.musiconn.de/work/as-der-rebbe-elimelech-fassung-gross-friedbert>,
         <https://performance.musiconn.de/work/hamchabe-es-haner-alman-samuel>,
@@ -35,10 +43,9 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/toras-adonoi-psalm-19-7-9-lewandowski-louis>,
         <https://performance.musiconn.de/work/wschomru-nowakowsky-david>,
         <https://performance.musiconn.de/work/yerushalayim-shel-sahav-fassung-gross-friedbert-shemer-naomi> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4253322-3>,
-        <https://viaf.org/viaf/245743245> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/245743245> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/245743245> a nfdicore:NFDI_0001010 .
 

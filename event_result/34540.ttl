@@ -1,45 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1119179149> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015488> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015593> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037996> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4215065-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/10-zyklus-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1960-05-22> ] .
 
-<https://performance.musiconn.de/event/10-zyklus-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1960-05-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/10-zyklus-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1960-05-22> a cto:CTO_0001005 ;
     rdfs:label "10. Zyklus Konzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 22.5.1960" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1960-05-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1960-05-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1119179149>,
-        <https://d-nb.info/gnd/300015488>,
-        <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300037996>,
-        <https://d-nb.info/gnd/4215065-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1119179149>,
-        <https://d-nb.info/gnd/300015488>,
-        <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300037996>,
-        <https://d-nb.info/gnd/4215065-6>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-3-op-37-c-moll-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-3-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/ouverture-en-hommage-a-mozart-martin-frank>,
-        <https://performance.musiconn.de/work/variationen-ueber-la-ci-darem-la-mano-chopin-frederic>,
-        <https://performance.musiconn.de/work/variationen-und-fuge-ueber-ein-thema-von-mozart-op-132-reger-max>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/189665501>,
-        <https://viaf.org/viaf/205758904>,
-        <https://viaf.org/viaf/237121163>,
-        <https://viaf.org/viaf/3315147967354584200005> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/189665501>,
-        <https://viaf.org/viaf/205758904>,
-        <https://viaf.org/viaf/237121163>,
-        <https://viaf.org/viaf/3315147967354584200005> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015488> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205758904> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1119179149> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237121163> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189665501> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3315147967354584200005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037996> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4215065-6> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181828440> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015593> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181828440> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189665501> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205758904> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237121163> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3315147967354584200005> a nfdicore:NFDI_0001010 .
 

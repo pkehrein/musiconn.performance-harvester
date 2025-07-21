@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1089086296> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-theaterbau-des-schauspielhauses-berlin-1825-10-16> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-theaterbau-des-schauspielhauses-berlin-1825-10-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-theaterbau-des-schauspielhauses-berlin-1825-10-16> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Theaterbau des Schauspielhauses Berlin, 16.10.1825" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1825-10-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1825-10-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1089086296> ;
-    cto:relatedItem <https://performance.musiconn.de/source/katalogisat-das-concert-am-hofe-komische-oper-in-1-aufzug-nach-dem-franzoesischen-le-concert-a-la-cour-des-scribe-und-meleville-von-friederike-ellmenreich-musik-von-auber-16-october-1825>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/313145858154823022430> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1089086296> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/katalogisat-das-concert-am-hofe-komische-oper-in-1-aufzug-nach-dem-franzoesischen-le-concert-a-la-cour-des-scribe-und-meleville-von-friederike-ellmenreich-musik-von-auber-16-october-1825>,
         <https://performance.musiconn.de/source/katalogisat-die-nachtwandlerin-lustspiel-in-2-abtheilungen-nach-scribe-bearbeitet-und-in-musik-gesetzt-von-c-blum-16-october-1825>,
         <https://performance.musiconn.de/work/die-nachtwandlerin-fassung-blum-carl>,
         <https://performance.musiconn.de/work/le-concert-a-la-cour-ou-la-debutante-fassung-auber-daniel-francois-esprit> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1089086296>,
-        <https://viaf.org/viaf/313145858154823022430> ;
-    cto:viaf <https://viaf.org/viaf/313145858154823022430> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/313145858154823022430> a nfdicore:NFDI_0001010 .
 

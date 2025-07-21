@@ -1,53 +1,75 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1063180414> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1109812159> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1170607616> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009984> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300025157> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300087896> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4240603-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-lidkoeping-1953-04-19> ] .
 
-<https://performance.musiconn.de/event/konzert-lidkoeping-1953-04-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-lidkoeping-1953-04-19> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Lidköping, 19.4.1953" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1953-04-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1953-04-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1063180414>,
-        <https://d-nb.info/gnd/1109812159>,
-        <https://d-nb.info/gnd/1170607616>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300025157>,
-        <https://d-nb.info/gnd/300087896>,
-        <https://d-nb.info/gnd/4240603-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/1063180414>,
-        <https://d-nb.info/gnd/1109812159>,
-        <https://d-nb.info/gnd/1170607616>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300025157>,
-        <https://d-nb.info/gnd/300087896>,
-        <https://performance.musiconn.de/source/motettenbuch-1953>,
-        <https://performance.musiconn.de/work/cymbalum-sionium-o-domine-jesu-christe-schein-johann-hermann>,
-        <https://performance.musiconn.de/work/deutsche-messe-op-42-david-johann-nepomuk>,
-        <https://performance.musiconn.de/work/fest-und-gedenksprueche-brahms-johannes>,
-        <https://performance.musiconn.de/work/jesu-meine-freude-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/symphoniae-sacrae-liber-2-timor-et-tremor-gabrieli-giovanni>,
-        <https://performance.musiconn.de/work/tristis-est-anima-mea-kuhnau-johann>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/180037857>,
-        <https://viaf.org/viaf/180852813>,
-        <https://viaf.org/viaf/184024188>,
-        <https://viaf.org/viaf/185210418>,
-        <https://viaf.org/viaf/3212148523899120970005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4240603-1>,
-        <https://viaf.org/viaf/150245057> ;
-    cto:viaf <https://viaf.org/viaf/150245057>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/180037857>,
-        <https://viaf.org/viaf/180852813>,
-        <https://viaf.org/viaf/184024188>,
-        <https://viaf.org/viaf/185210418>,
-        <https://viaf.org/viaf/3212148523899120970005> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/150245057> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4240603-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1063180414> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170607616> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185210418> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180852813> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177379672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3212148523899120970005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180037857> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184024188> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1109812159> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300087896> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009984> ],
+        <https://performance.musiconn.de/source/motettenbuch-1953> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/150245057> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177379672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180037857> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180852813> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184024188> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185210418> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3212148523899120970005> a nfdicore:NFDI_0001010 .
 

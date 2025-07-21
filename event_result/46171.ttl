@@ -1,37 +1,46 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300016352> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109784> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300234716> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1937-10-25> ] .
 
-<https://performance.musiconn.de/event/3-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1937-10-25> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1937-10-25> a cto:CTO_0001005 ;
     rdfs:label "3. Philharmonisches Konzert, Convent-Garten (Hamburg) / Großer Saal, 25.10.1937" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1937-1938-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1937-10-25" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1937-10-25" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300016352>,
-        <https://d-nb.info/gnd/300109784>,
-        <https://d-nb.info/gnd/300234716> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1937-1938-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300016352>,
-        <https://d-nb.info/gnd/300109784>,
-        <https://d-nb.info/gnd/300234716>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/convent-garten-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300234716> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186431507> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016352> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/54145858139323022840> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208681899> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109784> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1925-1937>,
-        <https://performance.musiconn.de/work/die-amerikanerin-jcfb-g-47-a-bach-johann-christoph-friedrich>,
-        <https://performance.musiconn.de/work/non-temer-amato-bene-kv-505-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-36-d-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/symphonische-phantasie-op-20-hoeller-karl>,
-        <https://viaf.org/viaf/186431507>,
-        <https://viaf.org/viaf/208681899>,
-        <https://viaf.org/viaf/54145858139323022840> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/convent-garten-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/186431507>,
-        <https://viaf.org/viaf/208681899>,
-        <https://viaf.org/viaf/54145858139323022840> .
+        <https://performance.musiconn.de/work/symphonische-phantasie-op-20-hoeller-karl> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/186431507> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208681899> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/54145858139323022840> a nfdicore:NFDI_0001010 .
 

@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015933> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015992> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzert-bankgebaeude-der-deutschen-bank-frankfurt-am-main-saal-1960-06-14-20-00> ] .
 
-<https://performance.musiconn.de/event/sonderkonzert-bankgebaeude-der-deutschen-bank-frankfurt-am-main-saal-1960-06-14-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzert-bankgebaeude-der-deutschen-bank-frankfurt-am-main-saal-1960-06-14-20-00> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert, Bankgebäude der Deutschen Bank (Frankfurt am Main). Saal, 14.6.1960, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1959-1960> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1960-06-14T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1960-06-14T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015933>,
-        <https://d-nb.info/gnd/300015941>,
-        <https://d-nb.info/gnd/300015992> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1959-1960> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015933>,
-        <https://d-nb.info/gnd/300015941>,
-        <https://d-nb.info/gnd/300015992>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-18-nr-5-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-18-nr-6-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-74-es-dur-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/185089590>,
-        <https://viaf.org/viaf/196877424>,
-        <https://viaf.org/viaf/204580186> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/bankgebaeude-der-deutschen-bank-frankfurt-am-main-saal> ;
-    cto:viaf <https://viaf.org/viaf/185089590>,
-        <https://viaf.org/viaf/196877424>,
-        <https://viaf.org/viaf/204580186> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/bankgebaeude-der-deutschen-bank-frankfurt-am-main-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015933> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204580186> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015992> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196877424> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185089590> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185089590> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196877424> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204580186> a nfdicore:NFDI_0001010 .
 

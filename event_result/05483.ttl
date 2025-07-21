@@ -1,43 +1,57 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1071468154> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175503894> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108508> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300425937> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300668937> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/matinee-1945-07-01-10-30> ] .
 
-<https://performance.musiconn.de/event/matinee-1945-07-01-10-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/matinee-1945-07-01-10-30> a cto:CTO_0001005 ;
     rdfs:label "Matinee, 1.7.1945, 10:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1945-1946> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1945-07-01T10:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1945-07-01T10:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1071468154>,
-        <https://d-nb.info/gnd/1175503894>,
-        <https://d-nb.info/gnd/300108508>,
-        <https://d-nb.info/gnd/300425937>,
-        <https://d-nb.info/gnd/300668937> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1945-1946> ;
-    cto:relatedItem <https://d-nb.info/gnd/1071468154>,
-        <https://d-nb.info/gnd/300108508>,
-        <https://d-nb.info/gnd/300425937>,
-        <https://d-nb.info/gnd/300668937>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175503894> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1071468154> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315963602> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300425937> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300668937> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196887605> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177348732> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108508> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210953116> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1945-1946>,
-        <https://performance.musiconn.de/work/eine-kleine-nachtmusik-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/englische-suiten-nr-2-sarabande-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/nocturne-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/serenaden-op-55-trunk-richard>,
-        <https://performance.musiconn.de/work/serenaden-violoncello-streichorchester-nr-3-op-69-d-moll-volkmann-robert>,
-        <https://viaf.org/viaf/177348732>,
-        <https://viaf.org/viaf/196887605>,
-        <https://viaf.org/viaf/210953116>,
-        <https://viaf.org/viaf/315963602> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175503894> ;
-    cto:viaf <https://viaf.org/viaf/177348732>,
-        <https://viaf.org/viaf/196887605>,
-        <https://viaf.org/viaf/210953116>,
-        <https://viaf.org/viaf/315963602> .
+        <https://performance.musiconn.de/work/nocturne-tschaikowski-peter-i> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177348732> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196887605> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210953116> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315963602> a nfdicore:NFDI_0001010 .
 

@@ -4,19 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4504768-6> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-1907-12-31> ] .
 
-<https://performance.musiconn.de/event/konzert-1907-12-31> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-1907-12-31> a cto:CTO_0001005 ;
     rdfs:label "Konzert, 31.12.1907" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1907-12-31" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1907-12-31" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4504768-6> ;
-    cto:relatedItem <https://performance.musiconn.de/source/programmzettel-einladung-deutscher-musik-geselligkeitsverein-litovel-littau-littau-31121907>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/deutscher-musik-geselligkeitsverein-litovel>,
+        <https://performance.musiconn.de/corporation/musikverein-litovel> ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4504768-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242729639> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/programmzettel-einladung-deutscher-musik-geselligkeitsverein-litovel-littau-littau-31121907>,
         <https://performance.musiconn.de/work/bier-polka-pache-johannes>,
         <https://performance.musiconn.de/work/die-alte-weibermuehle-stieber-paul>,
         <https://performance.musiconn.de/work/die-feschen-tirolerinnen-werner-c>,
@@ -30,9 +35,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/venus-auf-erden-ouvertuere-lincke-paul>,
         <https://performance.musiconn.de/work/was-gibt-es-denn-neues-drescher-j>,
         <https://performance.musiconn.de/work/weinsprueche-op-18-zehngraf-josef> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4504768-6>,
-        <https://viaf.org/viaf/242729639> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/deutscher-musik-geselligkeitsverein-litovel>,
-        <https://performance.musiconn.de/corporation/musikverein-litovel> ;
-    cto:viaf <https://viaf.org/viaf/242729639> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/242729639> a nfdicore:NFDI_0001010 .
 

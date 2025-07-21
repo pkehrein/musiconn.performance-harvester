@@ -1,57 +1,79 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1241313-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300094035> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300094949> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300279507> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300610386> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300610394> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300610408> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sofie-menter-gedenkkonzert-zum-100-todesjahr-gasteig-muenchen-kleiner-konzertsaal-2018-07-14> ] .
 
-<https://performance.musiconn.de/event/sofie-menter-gedenkkonzert-zum-100-todesjahr-gasteig-muenchen-kleiner-konzertsaal-2018-07-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sofie-menter-gedenkkonzert-zum-100-todesjahr-gasteig-muenchen-kleiner-konzertsaal-2018-07-14> a cto:CTO_0001005 ;
     rdfs:label "Sofie Menter. Gedenkkonzert zum 100. Todesjahr, Gasteig (München) / Kleiner Konzertsaal, 14.7.2018" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/komponistinnen-entdecken-und-foerdern-veranstaltungsreihe-von-musica-femina-muenchen-ev> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2018-07-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2018-07-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1241313-6>,
-        <https://d-nb.info/gnd/300094035>,
-        <https://d-nb.info/gnd/300094949>,
-        <https://d-nb.info/gnd/300279507>,
-        <https://d-nb.info/gnd/300610386>,
-        <https://d-nb.info/gnd/300610394>,
-        <https://d-nb.info/gnd/300610408> ;
-    cto:itemOf <https://performance.musiconn.de/series/komponistinnen-entdecken-und-foerdern-veranstaltungsreihe-von-musica-femina-muenchen-ev> ;
-    cto:relatedItem <https://d-nb.info/gnd/300094035>,
-        <https://d-nb.info/gnd/300094949>,
-        <https://d-nb.info/gnd/300279507>,
-        <https://d-nb.info/gnd/300610386>,
-        <https://d-nb.info/gnd/300610394>,
-        <https://d-nb.info/gnd/300610408>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/156839204> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1241313-6> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/gasteig-muenchen-kleiner-konzertsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300094949> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209877124> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300610386> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175096364> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210951502> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215936677> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183930508> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218082125> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300610394> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300610408> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300279507> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300094035> ],
         <https://performance.musiconn.de/source/programm-komponistinnenkonzert-41-durchgang>,
         <https://performance.musiconn.de/work/bearbeitung-der-sonate-a-dur-allegro-von-domenico-scarlatti-menter-sophie>,
-        <https://performance.musiconn.de/work/consolation-menter-sophie>,
-        <https://performance.musiconn.de/work/danse-macabre-klavierbearbeitung-von-franz-liszt-s-555-saint-saens-camille>,
-        <https://performance.musiconn.de/work/etueden-kl-r-6-waldesrauschen-liszt-franz>,
-        <https://performance.musiconn.de/work/liebestraeume-o-lieb-solang-du-lieben-kannst-liszt-franz>,
-        <https://performance.musiconn.de/work/romanzen-kl-op-5-menter-sophie>,
-        <https://performance.musiconn.de/work/tarantellen-kl-op-4-menter-sophie>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-nr-6-liszt-franz>,
-        <https://viaf.org/viaf/175096364>,
-        <https://viaf.org/viaf/183930508>,
-        <https://viaf.org/viaf/209877124>,
-        <https://viaf.org/viaf/210951502>,
-        <https://viaf.org/viaf/215936677>,
-        <https://viaf.org/viaf/218082125> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/gasteig-muenchen-kleiner-konzertsaal> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/1241313-6>,
-        <https://viaf.org/viaf/156839204> ;
-    cto:viaf <https://viaf.org/viaf/156839204>,
-        <https://viaf.org/viaf/175096364>,
-        <https://viaf.org/viaf/183930508>,
-        <https://viaf.org/viaf/209877124>,
-        <https://viaf.org/viaf/210951502>,
-        <https://viaf.org/viaf/215936677>,
-        <https://viaf.org/viaf/218082125> .
+        <https://performance.musiconn.de/work/danse-macabre-klavierbearbeitung-von-franz-liszt-s-555-saint-saens-camille> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/156839204> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175096364> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183930508> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209877124> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210951502> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215936677> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218082125> a nfdicore:NFDI_0001010 .
 

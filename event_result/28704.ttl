@@ -1,29 +1,36 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300460767> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4580783-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/am-1-feiertag-sophienkirche-dresden-1914-04-12-11-30> ] .
 
-<https://performance.musiconn.de/event/am-1-feiertag-sophienkirche-dresden-1914-04-12-11-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/am-1-feiertag-sophienkirche-dresden-1914-04-12-11-30> a cto:CTO_0001005 ;
     rdfs:label "Am 1. Feiertag, Sophienkirche (Dresden), 12.4.1914, 11:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/musik-in-der-kreuz-und-sophienkirche-zu-dresden-waehrend-des-heiligen-osterfestes-1914> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1914-04-12T11:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1914-04-12T11:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300460767>,
-        <https://d-nb.info/gnd/4580783-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/musik-in-der-kreuz-und-sophienkirche-zu-dresden-waehrend-des-heiligen-osterfestes-1914> ;
-    cto:relatedItem <https://d-nb.info/gnd/300460767>,
-        <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/geistliche-lieder-op-71-osterlied-becker-albert>,
-        <https://viaf.org/viaf/203718097> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4580783-8>,
-        <https://viaf.org/viaf/238124134> ;
-    cto:viaf <https://viaf.org/viaf/203718097>,
-        <https://viaf.org/viaf/238124134> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/238124134> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4580783-8> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300460767> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203718097> ],
+        <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/203718097> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/238124134> a nfdicore:NFDI_0001010 .
 

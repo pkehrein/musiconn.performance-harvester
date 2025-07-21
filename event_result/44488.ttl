@@ -1,52 +1,71 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300037651> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300103069> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30014475X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300527705> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300701152> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1864-02-16> ] .
 
-<https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1864-02-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1864-02-16> a cto:CTO_0001005 ;
     rdfs:label "8. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 16.2.1864" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1863-1864> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1864-02-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1864-02-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300037651>,
-        <https://d-nb.info/gnd/300103069>,
-        <https://d-nb.info/gnd/30014475X>,
-        <https://d-nb.info/gnd/300527705>,
-        <https://d-nb.info/gnd/300701152>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1863-1864> ;
-    cto:relatedItem <https://d-nb.info/gnd/300037651>,
-        <https://d-nb.info/gnd/300103069>,
-        <https://d-nb.info/gnd/30014475X>,
-        <https://d-nb.info/gnd/300527705>,
-        <https://d-nb.info/gnd/300701152>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214754800> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30014475X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205772193> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211711085> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300103069> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179025422> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300701152> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210938941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037651> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300527705> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
-        <https://performance.musiconn.de/source/whistling-carl-wilhelm-der-musikverein-euterpe-zu-leipzig-1824-1874-leipzig-1874>,
-        <https://performance.musiconn.de/work/fantasiestuecke-kl-op-12-grillen-schumann-robert>,
-        <https://performance.musiconn.de/work/innere-stimmen-stille-liebe-jensen-adolf>,
-        <https://performance.musiconn.de/work/polonaise-mit-vorangehendem-andante-spianato-chopin-frederic>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-mwv-q-33-c-moll-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/trios-vl-vc-kl-op-83-hummel-johann-nepomuk>,
-        <https://viaf.org/viaf/179025422>,
-        <https://viaf.org/viaf/205772193>,
-        <https://viaf.org/viaf/210938941>,
-        <https://viaf.org/viaf/211711085>,
-        <https://viaf.org/viaf/214754800> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/179025422>,
-        <https://viaf.org/viaf/205772193>,
-        <https://viaf.org/viaf/210938941>,
-        <https://viaf.org/viaf/211711085>,
-        <https://viaf.org/viaf/214754800>,
-        <https://viaf.org/viaf/242717024> .
+        <https://performance.musiconn.de/source/whistling-carl-wilhelm-der-musikverein-euterpe-zu-leipzig-1824-1874-leipzig-1874> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179025422> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205772193> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210938941> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211711085> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214754800> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
 

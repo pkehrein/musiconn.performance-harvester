@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300016336> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300042302> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300158076> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4493513-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/drittes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1930-11-07-19-30> ] .
 
-<https://performance.musiconn.de/event/drittes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1930-11-07-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/drittes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1930-11-07-19-30> a cto:CTO_0001005 ;
     rdfs:label "Drittes Freitags-Konzert, Großer Konzertsaal (Frankfurt a. M.), 7.11.1930, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1930-1931> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1930-11-07T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1930-11-07T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300016336>,
-        <https://d-nb.info/gnd/300042302>,
-        <https://d-nb.info/gnd/300158076>,
-        <https://d-nb.info/gnd/4493513-4> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1930-1931> ;
-    cto:relatedItem <https://d-nb.info/gnd/300016336>,
-        <https://d-nb.info/gnd/300042302>,
-        <https://d-nb.info/gnd/300158076>,
-        <https://d-nb.info/gnd/4493513-4>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/feuervogel-suite-stravinsky-igor>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-2-op-21-f-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/prelude-a-lapres-midi-dun-faune-debussy-claude>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-21-c-dur-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/1406151474935700490005>,
-        <https://viaf.org/viaf/199705195>,
-        <https://viaf.org/viaf/215922002>,
-        <https://viaf.org/viaf/307491596> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/1406151474935700490005>,
-        <https://viaf.org/viaf/199705195>,
-        <https://viaf.org/viaf/215922002>,
-        <https://viaf.org/viaf/307491596> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300042302> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215922002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300158076> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/307491596> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4493513-4> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1406151474935700490005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199705195> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016336> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1406151474935700490005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199705195> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215922002> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/307491596> a nfdicore:NFDI_0001010 .
 

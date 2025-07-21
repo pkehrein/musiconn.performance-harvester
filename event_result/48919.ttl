@@ -1,25 +1,28 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015194> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/158th-abonnement-concert-hibiya-public-hall-tokyo-1935-09-27> ] .
 
-<https://performance.musiconn.de/event/158th-abonnement-concert-hibiya-public-hall-tokyo-1935-09-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/158th-abonnement-concert-hibiya-public-hall-tokyo-1935-09-27> a cto:CTO_0001005 ;
     rdfs:label "158th Abonnement Concert, Hibiya Public Hall (Tokyo), 27.9.1935" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1935-09-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1935-09-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015194> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015194>,
-        <https://performance.musiconn.de/source/nhk-kokyo-gakudan-ed-nhk-1977-nhk-kokyo-gakudan-goju-nenshi-1926-1977-nhk-tokyo-nippon-hoso-shuppan-kyokai>,
-        <https://performance.musiconn.de/work/fidelio-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/177579813> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hibiya-public-hall-tokyo> ;
-    cto:viaf <https://viaf.org/viaf/177579813> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hibiya-public-hall-tokyo> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177579813> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015194> ],
+        <https://performance.musiconn.de/source/nhk-kokyo-gakudan-ed-nhk-1977-nhk-kokyo-gakudan-goju-nenshi-1926-1977-nhk-tokyo-nippon-hoso-shuppan-kyokai> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177579813> a nfdicore:NFDI_0001010 .
 

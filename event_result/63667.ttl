@@ -1,51 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1118781929> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1259288064> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1282102877> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300017146> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171463> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300439520> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-vereinskonzert-rathaus-muenster-westf-friedenssaal-1869-01-30> ] .
 
-<https://performance.musiconn.de/event/6-vereinskonzert-rathaus-muenster-westf-friedenssaal-1869-01-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-vereinskonzert-rathaus-muenster-westf-friedenssaal-1869-01-30> a cto:CTO_0001005 ;
     rdfs:label "6. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 30.1.1869" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1868-69> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1869-01-30" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1869-01-30" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1118781929>,
-        <https://d-nb.info/gnd/1259288064>,
-        <https://d-nb.info/gnd/1282102877>,
-        <https://d-nb.info/gnd/300017146>,
-        <https://d-nb.info/gnd/300171463>,
-        <https://d-nb.info/gnd/300439520>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1868-69> ;
-    cto:relatedItem <https://d-nb.info/gnd/1118781929>,
-        <https://d-nb.info/gnd/1259288064>,
-        <https://d-nb.info/gnd/1282102877>,
-        <https://d-nb.info/gnd/300017146>,
-        <https://d-nb.info/gnd/300171463>,
-        <https://d-nb.info/gnd/300439520>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1282102877> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1259288064> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177665129> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185871299> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1118781929> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315209867> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182056302> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300439520> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6421167807418518130006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300017146> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171463> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1868-1869>,
-        <https://performance.musiconn.de/work/euryanthe-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/fruehlings-botschaft-gade-niels-wilhelm>,
-        <https://performance.musiconn.de/work/lieder-op-1-ach-es-sitzt-mein-lieb-und-weint-grimm-julius-otto>,
-        <https://performance.musiconn.de/work/lieder-op-11-wie-scheinen-die-sternlein-so-hell-grimm-julius-otto>,
-        <https://performance.musiconn.de/work/lieder-op-71-an-die-entfernte-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/sonaten-klavier-4-haendig-d-812-c-dur-arrangement-schubert-franz>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-op-47-a-dur-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/177665129>,
-        <https://viaf.org/viaf/182056302>,
-        <https://viaf.org/viaf/185871299>,
-        <https://viaf.org/viaf/315209867>,
-        <https://viaf.org/viaf/6421167807418518130006> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/177665129>,
-        <https://viaf.org/viaf/182056302>,
-        <https://viaf.org/viaf/185871299>,
-        <https://viaf.org/viaf/315209867>,
-        <https://viaf.org/viaf/6421167807418518130006> .
+        <https://performance.musiconn.de/work/sonaten-klavier-4-haendig-d-812-c-dur-arrangement-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177665129> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182056302> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185871299> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315209867> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6421167807418518130006> a nfdicore:NFDI_0001010 .
 

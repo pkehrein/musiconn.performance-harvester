@@ -1,55 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1079034064> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1160698864> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300047398> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145071> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30026058X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300808267> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/abokonzert-7-zweites-gewandhaus-leipzig-1896-12-03> ] .
 
-<https://performance.musiconn.de/event/abokonzert-7-zweites-gewandhaus-leipzig-1896-12-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/abokonzert-7-zweites-gewandhaus-leipzig-1896-12-03> a cto:CTO_0001005 ;
     rdfs:label "Abokonzert 7, Zweites Gewandhaus (Leipzig), 3.12.1896" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1896-12-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1896-12-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1079034064>,
-        <https://d-nb.info/gnd/1160698864>,
-        <https://d-nb.info/gnd/300047398>,
-        <https://d-nb.info/gnd/300145071>,
-        <https://d-nb.info/gnd/30026058X>,
-        <https://d-nb.info/gnd/300808267>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/1079034064>,
-        <https://d-nb.info/gnd/1160698864>,
-        <https://d-nb.info/gnd/300047398>,
-        <https://d-nb.info/gnd/300145071>,
-        <https://d-nb.info/gnd/30026058X>,
-        <https://d-nb.info/gnd/300808267>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213971679> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300808267> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204581071> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182073287> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193673346> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145071> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1160698864> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300047398> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30026058X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185197829> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1079034064> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183102804> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
-        <https://performance.musiconn.de/work/elisabetta-regina-dinghilterra-ouvertuere-rossini-gioachino>,
         <https://performance.musiconn.de/work/feramors-ich-kann-nicht-ruhn-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/genoveva-ouvertuere-schumann-robert>,
-        <https://performance.musiconn.de/work/gesaenge-aus-wilhelm-meister-lied-der-mignon-nr-2-schubert-franz>,
-        <https://performance.musiconn.de/work/gesaenge-op-17-im-herbst-franz-robert>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-b-191-h-moll-dvorak-antonin>,
-        <https://performance.musiconn.de/work/lieder-op-26-fruehlingslied-fielitz-alexander-von>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-88-89-nr-1-haydn-joseph>,
-        <https://viaf.org/viaf/182073287>,
-        <https://viaf.org/viaf/183102804>,
-        <https://viaf.org/viaf/185197829>,
-        <https://viaf.org/viaf/193673346>,
-        <https://viaf.org/viaf/204581071>,
-        <https://viaf.org/viaf/213971679> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/182073287>,
-        <https://viaf.org/viaf/183102804>,
-        <https://viaf.org/viaf/185197829>,
-        <https://viaf.org/viaf/193673346>,
-        <https://viaf.org/viaf/204581071>,
-        <https://viaf.org/viaf/213971679>,
-        <https://viaf.org/viaf/264523828> .
+        <https://performance.musiconn.de/work/lieder-op-26-fruehlingslied-fielitz-alexander-von> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182073287> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183102804> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185197829> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193673346> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204581071> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213971679> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
 

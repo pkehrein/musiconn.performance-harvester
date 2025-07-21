@@ -1,32 +1,38 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300064322> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300065132> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1927-12-05> ] .
 
-<https://performance.musiconn.de/event/6-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1927-12-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1927-12-05> a cto:CTO_0001005 ;
     rdfs:label "6. Philharmonisches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 5.12.1927" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1927-1928-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1927-12-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1927-12-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300064322>,
-        <https://d-nb.info/gnd/300065132> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1927-1928-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300064322>,
-        <https://d-nb.info/gnd/300065132>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300065132> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300064322> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215923167> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199702631> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1925-1937>,
-        <https://performance.musiconn.de/work/concerti-grossi-orchester-hwv-312-317-nr-2-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/concerto-grosso-nr-25-wassermusik-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/konzerte-orgel-orchester-hwv-306-311-nr-4-haendel-georg-friedrich>,
-        <https://viaf.org/viaf/199702631>,
-        <https://viaf.org/viaf/215923167> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/199702631>,
-        <https://viaf.org/viaf/215923167> .
+        <https://performance.musiconn.de/work/concerto-grosso-nr-25-wassermusik-haendel-georg-friedrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/199702631> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215923167> a nfdicore:NFDI_0001010 .
 

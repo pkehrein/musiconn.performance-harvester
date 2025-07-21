@@ -1,32 +1,43 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1024539474> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1224623916> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/124172857> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/komposition-fuer-gesang-soloin-stilo-recitativo-nach-eine-gedicht-von-lord-byron-lit-musik-abend-lord-byron-heilig-geist-kirche-blasewitz-dresden-1986-09-10> ] .
 
-<https://performance.musiconn.de/event/komposition-fuer-gesang-soloin-stilo-recitativo-nach-eine-gedicht-von-lord-byron-lit-musik-abend-lord-byron-heilig-geist-kirche-blasewitz-dresden-1986-09-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/komposition-fuer-gesang-soloin-stilo-recitativo-nach-eine-gedicht-von-lord-byron-lit-musik-abend-lord-byron-heilig-geist-kirche-blasewitz-dresden-1986-09-10> a cto:CTO_0001005 ;
     rdfs:label "Komposition für Gesang solo(in stilo recitativo) nach eine Gedicht von Lord Byron; Lit.-Musik. Abend \"Lord Byron\", Heilig-Geist-Kirche Blasewitz (Dresden), 10.9.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-09-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-09-10" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/124172857> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/252815656> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1024539474> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1224623916> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3041161030921523920009> ],
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1024539474>,
-        <https://d-nb.info/gnd/1224623916>,
-        <https://d-nb.info/gnd/124172857> ;
-    cto:relatedItem <https://d-nb.info/gnd/1224623916>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
-        <https://performance.musiconn.de/work/komposition-fuer-gesang-solo-promnitz-rainer>,
-        <https://viaf.org/viaf/3041161030921523920009> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1024539474>,
-        <https://viaf.org/viaf/252815656> ;
-    cto:relatedPerson <https://d-nb.info/gnd/124172857>,
-        <https://viaf.org/viaf/44484242> ;
-    cto:viaf <https://viaf.org/viaf/252815656>,
-        <https://viaf.org/viaf/3041161030921523920009>,
-        <https://viaf.org/viaf/44484242> .
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/44484242> ] .
+
+<https://viaf.org/viaf/252815656> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3041161030921523920009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/44484242> a nfdicore:NFDI_0001010 .
 

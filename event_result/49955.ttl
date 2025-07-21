@@ -1,39 +1,49 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1194214045> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300438621> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vecer-kamernoj-muzyki-dom-kompozitorov-sankt-petersburg-1968-12-11> ] .
 
-<https://performance.musiconn.de/event/vecer-kamernoj-muzyki-dom-kompozitorov-sankt-petersburg-1968-12-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vecer-kamernoj-muzyki-dom-kompozitorov-sankt-petersburg-1968-12-11> a cto:CTO_0001005 ;
     rdfs:label "Večer kamernoj muzyki, Dom kompozitorov (Sankt Petersburg), 11.12.1968" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1968-12-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1968-12-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1194214045>,
-        <https://d-nb.info/gnd/1200899989>,
-        <https://d-nb.info/gnd/300438621> ;
-    cto:relatedItem <https://d-nb.info/gnd/1194214045>,
-        <https://d-nb.info/gnd/300438621>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5684156811379745390007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1194214045> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196887992> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300438621> ],
         <https://performance.musiconn.de/source/leningrader-komponistenhaus-1968-11-dezember>,
-        <https://performance.musiconn.de/work/praeludien-klavier-1965-mamisasvili-nodar>,
         <https://performance.musiconn.de/work/praeludien-klavier-balancivadze-dzardzi-andreevic>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-6-cincaje-sulxan>,
         <https://performance.musiconn.de/work/romans-ekaterine-cavcavadze-cicisvili-givi>,
         <https://performance.musiconn.de/work/romansy-na-stichi-a-kalandadze-davitasvili-meri>,
         <https://performance.musiconn.de/work/romansy-na-stichi-n-baratasvili-azarasvili-vaza>,
         <https://performance.musiconn.de/work/sonaten-klavier-gabunija-nodar-k>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-nr-2-saverzasvili-aleksandr-vasilevic>,
-        <https://viaf.org/viaf/196887992>,
-        <https://viaf.org/viaf/5684156811379745390007> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1200899989>,
-        <https://viaf.org/viaf/385157583849933970005> ;
-    cto:viaf <https://viaf.org/viaf/196887992>,
-        <https://viaf.org/viaf/385157583849933970005>,
-        <https://viaf.org/viaf/5684156811379745390007> .
+        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-nr-2-saverzasvili-aleksandr-vasilevic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/196887992> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5684156811379745390007> a nfdicore:NFDI_0001010 .
 

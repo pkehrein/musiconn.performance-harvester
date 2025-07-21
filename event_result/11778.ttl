@@ -1,55 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1032791101> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001550X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300036558> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009454X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30036248X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300580258> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/dreizehntes-abonnement-concert-zweites-gewandhaus-leipzig-1891-01-08> ] .
 
-<https://performance.musiconn.de/event/dreizehntes-abonnement-concert-zweites-gewandhaus-leipzig-1891-01-08> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/dreizehntes-abonnement-concert-zweites-gewandhaus-leipzig-1891-01-08> a cto:CTO_0001005 ;
     rdfs:label "Dreizehntes Abonnement-Concert, Zweites Gewandhaus (Leipzig), 8.1.1891" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1891-01-08" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1891-01-08" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1032791101>,
-        <https://d-nb.info/gnd/30001550X>,
-        <https://d-nb.info/gnd/300036558>,
-        <https://d-nb.info/gnd/30009454X>,
-        <https://d-nb.info/gnd/30036248X>,
-        <https://d-nb.info/gnd/300580258>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/1032791101>,
-        <https://d-nb.info/gnd/30001550X>,
-        <https://d-nb.info/gnd/300036558>,
-        <https://d-nb.info/gnd/30009454X>,
-        <https://d-nb.info/gnd/30036248X>,
-        <https://d-nb.info/gnd/300580258>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179694867> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1032791101> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174808226> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182693812> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300580258> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009454X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179831076> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300036558> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/298196659> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196891795> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001550X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30036248X> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
         <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
-        <https://performance.musiconn.de/work/gavotte-lully-jean-baptiste>,
-        <https://performance.musiconn.de/work/hippolite-et-aricie-rameau-jean-philippe>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-5-op-73-es-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/les-abencerages-ouvertuere-cherubini-luigi>,
-        <https://performance.musiconn.de/work/nocturnes-klavier-op-9-nr-3-h-dur-chopin-frederic>,
-        <https://performance.musiconn.de/work/rhapsodie-espagnole-liszt-franz>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-op-15-a-moll-gade-niels-wilhelm>,
-        <https://viaf.org/viaf/174808226>,
-        <https://viaf.org/viaf/179694867>,
-        <https://viaf.org/viaf/179831076>,
-        <https://viaf.org/viaf/182693812>,
-        <https://viaf.org/viaf/196891795>,
-        <https://viaf.org/viaf/298196659> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/174808226>,
-        <https://viaf.org/viaf/179694867>,
-        <https://viaf.org/viaf/179831076>,
-        <https://viaf.org/viaf/182693812>,
-        <https://viaf.org/viaf/196891795>,
-        <https://viaf.org/viaf/264523828>,
-        <https://viaf.org/viaf/298196659> .
+        <https://performance.musiconn.de/work/gavotte-lully-jean-baptiste> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174808226> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179694867> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179831076> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182693812> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196891795> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/298196659> a nfdicore:NFDI_0001010 .
 

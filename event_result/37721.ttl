@@ -1,42 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300024770> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300039298> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109156> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4264112-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/fuenftes-sonntags-konzert-grosser-konzertsaal-frankfurt-a-m-1907-12-29-17-30> ] .
 
-<https://performance.musiconn.de/event/fuenftes-sonntags-konzert-grosser-konzertsaal-frankfurt-a-m-1907-12-29-17-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/fuenftes-sonntags-konzert-grosser-konzertsaal-frankfurt-a-m-1907-12-29-17-30> a cto:CTO_0001005 ;
     rdfs:label "Fünftes Sonntags-Konzert, Großer Konzertsaal (Frankfurt a. M.), 29.12.1907, 17:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1907-1908> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1907-12-29T17:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1907-12-29T17:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300024770>,
-        <https://d-nb.info/gnd/300039298>,
-        <https://d-nb.info/gnd/300109156>,
-        <https://d-nb.info/gnd/4264112-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1907-1908> ;
-    cto:relatedItem <https://d-nb.info/gnd/300024770>,
-        <https://d-nb.info/gnd/300039298>,
-        <https://d-nb.info/gnd/300109156>,
-        <https://d-nb.info/gnd/4264112-3>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109156> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175407519> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174188651> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4264112-3> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300024770> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175221377> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300039298> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184284887> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/akademische-festouvertuere-brahms-johannes>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-kv-219-a-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sonaten-und-partiten-violine-bwv-1001-1006-partita-nr-2-chaconne-bearbeitung-joachim-raff-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonaten-violine-violone-op-5-nr-12-corelli-arcangelo>,
-        <https://performance.musiconn.de/work/till-eulenspiegels-lustige-streiche-strauss-richard>,
-        <https://viaf.org/viaf/174188651>,
-        <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/175407519>,
-        <https://viaf.org/viaf/184284887> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/174188651>,
-        <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/175407519>,
-        <https://viaf.org/viaf/184284887> .
+        <https://performance.musiconn.de/work/sonaten-und-partiten-violine-bwv-1001-1006-partita-nr-2-chaconne-bearbeitung-joachim-raff-bach-johann-sebastian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174188651> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175221377> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175407519> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184284887> a nfdicore:NFDI_0001010 .
 

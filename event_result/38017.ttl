@@ -1,49 +1,64 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/105856790X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1058570617> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015585> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300098006> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7670520-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/erstes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1917-09-28-19-00> ] .
 
-<https://performance.musiconn.de/event/erstes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1917-09-28-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/erstes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1917-09-28-19-00> a cto:CTO_0001005 ;
     rdfs:label "Erstes Freitags-Konzert, Großer Konzertsaal (Frankfurt a. M.), 28.9.1917, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1917-1918> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1917-09-28T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1917-09-28T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/105856790X>,
-        <https://d-nb.info/gnd/1058570617>,
-        <https://d-nb.info/gnd/300015585>,
-        <https://d-nb.info/gnd/300098006>,
-        <https://d-nb.info/gnd/7670520-1> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1917-1918> ;
-    cto:relatedItem <https://d-nb.info/gnd/105856790X>,
-        <https://d-nb.info/gnd/1058570617>,
-        <https://d-nb.info/gnd/300015585>,
-        <https://d-nb.info/gnd/300098006>,
-        <https://d-nb.info/gnd/7670520-1>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183726950> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015585> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300098006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7670520-1> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/105856790X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181843157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/293654845> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181427594> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1058570617> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184287600> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/gesaenge-op-43-die-mainacht-brahms-johannes>,
         <https://performance.musiconn.de/work/gesaenge-op-6-spanisches-lied-brahms-johannes-1>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-2-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/musik-zum-trauerspiel-egmont-von-johann-wolfgang-von-goethe-zwei-lieder-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/romanzen-singstimme-klavier-op-33-muss-es-eine-trennung-geben-brahms-johannes>,
-        <https://performance.musiconn.de/work/romanzen-singstimme-klavier-op-33-ruhe-suessliebchen-brahms-johannes>,
-        <https://performance.musiconn.de/work/rosamunde-fuerstin-von-zypern-zwischenaktmusik-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-d-dur-mahler-gustav>,
-        <https://viaf.org/viaf/181427594>,
-        <https://viaf.org/viaf/181843157>,
-        <https://viaf.org/viaf/183726950>,
-        <https://viaf.org/viaf/184287600>,
-        <https://viaf.org/viaf/293654845> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/181427594>,
-        <https://viaf.org/viaf/181843157>,
-        <https://viaf.org/viaf/183726950>,
-        <https://viaf.org/viaf/184287600>,
-        <https://viaf.org/viaf/293654845> .
+        <https://performance.musiconn.de/work/rosamunde-fuerstin-von-zypern-zwischenaktmusik-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181427594> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181843157> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183726950> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184287600> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/293654845> a nfdicore:NFDI_0001010 .
 

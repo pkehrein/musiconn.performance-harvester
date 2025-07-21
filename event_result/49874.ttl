@@ -1,47 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300042485> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300042582> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300301987> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300302495> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300678703> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-kammermusik-abend-alte-oper-frankfurt-am-main-mozartsaal-1995-04-06-20-00> ] .
 
-<https://performance.musiconn.de/event/7-kammermusik-abend-alte-oper-frankfurt-am-main-mozartsaal-1995-04-06-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-kammermusik-abend-alte-oper-frankfurt-am-main-mozartsaal-1995-04-06-20-00> a cto:CTO_0001005 ;
     rdfs:label "7. Kammermusik-Abend, Alte Oper (Frankfurt am Main) / Mozartsaal, 6.4.1995, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1994-1995> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1995-04-06T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1995-04-06T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300042485>,
-        <https://d-nb.info/gnd/300042582>,
-        <https://d-nb.info/gnd/300301987>,
-        <https://d-nb.info/gnd/300302495>,
-        <https://d-nb.info/gnd/300678703> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1994-1995> ;
-    cto:relatedItem <https://d-nb.info/gnd/300042485>,
-        <https://d-nb.info/gnd/300042582>,
-        <https://d-nb.info/gnd/300301987>,
-        <https://d-nb.info/gnd/300302495>,
-        <https://d-nb.info/gnd/300678703>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-am-main-mozartsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178822784> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300042485> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300302495> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300678703> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300042582> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218087533> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206833709> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300301987> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198529257> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181126073> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/duos-floete-viola-op-21-1-g-dur-hoffmeister-franz-anton>,
-        <https://performance.musiconn.de/work/elegien-viola-k-72-stravinsky-igor>,
-        <https://performance.musiconn.de/work/sad-radosti-i-pecali-gubajdulina-sofija-asgatovna>,
-        <https://performance.musiconn.de/work/sonaten-harfe-1939-hindemith-paul>,
-        <https://performance.musiconn.de/work/sonaten-querfloete-viola-harfe-l-137-debussy-claude>,
-        <https://performance.musiconn.de/work/syrinx-debussy-claude>,
-        <https://viaf.org/viaf/178822784>,
-        <https://viaf.org/viaf/181126073>,
-        <https://viaf.org/viaf/198529257>,
-        <https://viaf.org/viaf/206833709>,
-        <https://viaf.org/viaf/218087533> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-am-main-mozartsaal> ;
-    cto:viaf <https://viaf.org/viaf/178822784>,
-        <https://viaf.org/viaf/181126073>,
-        <https://viaf.org/viaf/198529257>,
-        <https://viaf.org/viaf/206833709>,
-        <https://viaf.org/viaf/218087533> .
+        <https://performance.musiconn.de/work/duos-floete-viola-op-21-1-g-dur-hoffmeister-franz-anton> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178822784> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181126073> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198529257> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206833709> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218087533> a nfdicore:NFDI_0001010 .
 

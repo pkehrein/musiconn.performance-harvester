@@ -1,44 +1,58 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/105138964X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/106013490X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300107331> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300808224> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4113353-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zwinger-serenade-zwinger-dresden-1938-06-11-20-30> ] .
 
-<https://performance.musiconn.de/event/zwinger-serenade-zwinger-dresden-1938-06-11-20-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zwinger-serenade-zwinger-dresden-1938-06-11-20-30> a cto:CTO_0001005 ;
     rdfs:label "Zwinger-Serenade, Zwinger (Dresden), 11.6.1938, 20:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1937-1938> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1938-06-11T20:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1938-06-11T20:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/105138964X>,
-        <https://d-nb.info/gnd/106013490X>,
-        <https://d-nb.info/gnd/300107331>,
-        <https://d-nb.info/gnd/300808224>,
-        <https://d-nb.info/gnd/4113353-5> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1937-1938> ;
-    cto:relatedItem <https://d-nb.info/gnd/105138964X>,
-        <https://d-nb.info/gnd/106013490X>,
-        <https://d-nb.info/gnd/300107331>,
-        <https://d-nb.info/gnd/300808224>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4113353-5> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311439406> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183913696> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184677599> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/106013490X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300808224> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/105138964X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300107331> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179031703> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/ballett-suite-nr-1-fassung-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/cosi-fan-tutte-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/don-giovanni-staendchen-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/la-serenata-posate-dormite-bassani-giovanni-battista>,
-        <https://performance.musiconn.de/work/lepreuve-villageoise-ouvertuere-gretry-andre-ernest-modeste>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-9-haydn-joseph>,
-        <https://viaf.org/viaf/179031703>,
-        <https://viaf.org/viaf/183913696>,
-        <https://viaf.org/viaf/184677599>,
-        <https://viaf.org/viaf/311439406> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4113353-5> ;
-    cto:viaf <https://viaf.org/viaf/179031703>,
-        <https://viaf.org/viaf/183913696>,
-        <https://viaf.org/viaf/184677599>,
-        <https://viaf.org/viaf/311439406> .
+        <https://performance.musiconn.de/work/don-giovanni-staendchen-mozart-wolfgang-amadeus> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179031703> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183913696> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184677599> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311439406> a nfdicore:NFDI_0001010 .
 

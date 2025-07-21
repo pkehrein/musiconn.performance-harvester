@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1147324751> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300007973> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010982> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011199> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300950381> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/abendmusik-kollegienkirche-jena-1931-06-14-20-00> ] .
 
-<https://performance.musiconn.de/event/abendmusik-kollegienkirche-jena-1931-06-14-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/abendmusik-kollegienkirche-jena-1931-06-14-20-00> a cto:CTO_0001005 ;
     rdfs:label "Abendmusik, Kollegienkirche (Jena), 14.6.1931, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/abendmusiken> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1931-06-14T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1931-06-14T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1147324751>,
-        <https://d-nb.info/gnd/300007973>,
-        <https://d-nb.info/gnd/300010982>,
-        <https://d-nb.info/gnd/300011199>,
-        <https://d-nb.info/gnd/300950381> ;
-    cto:itemOf <https://performance.musiconn.de/series/abendmusiken> ;
-    cto:relatedItem <https://d-nb.info/gnd/300007973>,
-        <https://d-nb.info/gnd/300010982>,
-        <https://d-nb.info/gnd/300011199>,
-        <https://d-nb.info/gnd/300950381>,
-        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/herr-gehe-nicht-ins-gericht-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/himmelskoenig-sei-willkommen-sonata-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonaten-querfloete-violine-basso-continuo-g-dur>,
-        <https://performance.musiconn.de/work/sonaten-viola-da-gamba-cembalo-bwv-1027-g-dur-bach-johann-sebastian>,
-        <https://viaf.org/viaf/180685032>,
-        <https://viaf.org/viaf/191494730>,
-        <https://viaf.org/viaf/198547321>,
-        <https://viaf.org/viaf/201850924> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1147324751>,
-        <https://viaf.org/viaf/5643151247953244270002> ;
-    cto:viaf <https://viaf.org/viaf/180685032>,
-        <https://viaf.org/viaf/191494730>,
-        <https://viaf.org/viaf/198547321>,
-        <https://viaf.org/viaf/201850924>,
-        <https://viaf.org/viaf/5643151247953244270002> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1147324751> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5643151247953244270002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300007973> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198547321> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300950381> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180685032> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191494730> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011199> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010982> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201850924> ],
+        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180685032> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191494730> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198547321> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201850924> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5643151247953244270002> a nfdicore:NFDI_0001010 .
 

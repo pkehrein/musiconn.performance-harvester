@@ -4,24 +4,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/134344774> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gemeinsame-veranstaltung-verband-der-komponisten-und-musikwissenschaftler-der-ddr-zentralhaus-zentralhaus-d-deutsch-sowjetische-freundschaft-berlin-1985-05-18> ] .
 
-<https://performance.musiconn.de/event/gemeinsame-veranstaltung-verband-der-komponisten-und-musikwissenschaftler-der-ddr-zentralhaus-zentralhaus-d-deutsch-sowjetische-freundschaft-berlin-1985-05-18> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gemeinsame-veranstaltung-verband-der-komponisten-und-musikwissenschaftler-der-ddr-zentralhaus-zentralhaus-d-deutsch-sowjetische-freundschaft-berlin-1985-05-18> a cto:CTO_0001005 ;
     rdfs:label "Gemeinsame Veranstaltung Verband der Komponisten und Musikwissenschaftler der DDR/Zentralhaus, Zentralhaus d. Deutsch-Sowjetische Freundschaft (Berlin), 18.5.1985" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1985-05-18" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1985-05-18" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/134344774> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1985-und-nachtrag-1976-1984-dresden-saechsische-landesbibliothek-dresden-1986>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/134344774> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/zentralhaus-d-deutsch-sowjetische-freundschaft-berlin> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1985-und-nachtrag-1976-1984-dresden-saechsische-landesbibliothek-dresden-1986>,
         <https://performance.musiconn.de/work/als-namenloses-lied-stoeckigt-michael>,
         <https://performance.musiconn.de/work/kammerkonzert-fuer-klavier-und-blaeser-liberacion-op-51-jung-helge>,
         <https://performance.musiconn.de/work/sextette-violine-2-viola-2-violoncello-kontrabass-wilbrandt-juergen> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/zentralhaus-d-deutsch-sowjetische-freundschaft-berlin> ;
-    cto:relatedPerson <https://d-nb.info/gnd/134344774>,
-        <https://viaf.org/viaf/21254148> ;
-    cto:viaf <https://viaf.org/viaf/21254148> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/21254148> ] .
+
+<https://viaf.org/viaf/21254148> a nfdicore:NFDI_0001010 .
 

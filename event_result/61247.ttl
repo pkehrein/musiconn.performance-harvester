@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1059786184> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300003692> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300003773> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300302290> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sinfonik-chorsinfonik-konzerthalle-carl-philipp-emanuel-bach-frankfurt-oder-1988-12-13-20-00> ] .
 
-<https://performance.musiconn.de/event/sinfonik-chorsinfonik-konzerthalle-carl-philipp-emanuel-bach-frankfurt-oder-1988-12-13-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sinfonik-chorsinfonik-konzerthalle-carl-philipp-emanuel-bach-frankfurt-oder-1988-12-13-20-00> a cto:CTO_0001005 ;
     rdfs:label "Sinfonik, Chorsinfonik, Konzerthalle \"Carl Philipp Emanuel Bach\" (Frankfurt (Oder)), 13.12.1988, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/carl-philipp-emanuel-bach-festtage> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-12-13T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-12-13T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1059786184>,
-        <https://d-nb.info/gnd/300003692>,
-        <https://d-nb.info/gnd/300003773>,
-        <https://d-nb.info/gnd/300302290> ;
-    cto:itemOf <https://performance.musiconn.de/series/carl-philipp-emanuel-bach-festtage> ;
-    cto:relatedItem <https://d-nb.info/gnd/1059786184>,
-        <https://d-nb.info/gnd/300003692>,
-        <https://d-nb.info/gnd/300003773>,
-        <https://d-nb.info/gnd/300302290>,
-        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-5-programmhefte-kammerorchester-carl-philipp-emanuel-bach-1980-1989>,
-        <https://performance.musiconn.de/work/konzerte-cembalo-klavier-orchester-wq-47-es-dur-bach-carl-philipp-emanuel>,
-        <https://performance.musiconn.de/work/magnificat-wq-215-bach-carl-philipp-emanuel>,
-        <https://performance.musiconn.de/work/sinfonien-wq-180-g-dur-bach-carl-philipp-emanuel>,
-        <https://performance.musiconn.de/work/sinfonien-wq-183-nr-4-bach-carl-philipp-emanuel>,
-        <https://viaf.org/viaf/188269325>,
-        <https://viaf.org/viaf/209860531>,
-        <https://viaf.org/viaf/261927910>,
-        <https://viaf.org/viaf/311194188> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/konzerthalle-carl-philipp-emanuel-bach-frankfurt-oder> ;
-    cto:viaf <https://viaf.org/viaf/188269325>,
-        <https://viaf.org/viaf/209860531>,
-        <https://viaf.org/viaf/261927910>,
-        <https://viaf.org/viaf/311194188> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/konzerthalle-carl-philipp-emanuel-bach-frankfurt-oder> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/261927910> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1059786184> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300003692> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188269325> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311194188> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209860531> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300302290> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300003773> ],
+        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-5-programmhefte-kammerorchester-carl-philipp-emanuel-bach-1980-1989> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/188269325> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209860531> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/261927910> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311194188> a nfdicore:NFDI_0001010 .
 

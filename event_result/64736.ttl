@@ -1,46 +1,66 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1037483561> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1129883647> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300370504> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300610327> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4433695-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/trojahn-10-90-1-koelner-philharmonie-koeln-1990-10-20> ] .
 
-<https://performance.musiconn.de/event/trojahn-10-90-1-koelner-philharmonie-koeln-1990-10-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/trojahn-10-90-1-koelner-philharmonie-koeln-1990-10-20> a cto:CTO_0001005 ;
     rdfs:label "Trojahn 10/90/1, Kölner Philharmonie (Köln), 20.10.1990" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1990-10-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1990-10-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1037483561>,
-        <https://d-nb.info/gnd/1129883647>,
-        <https://d-nb.info/gnd/300370504>,
-        <https://d-nb.info/gnd/300610327>,
-        <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/4433695-0> ;
-    cto:relatedItem <https://d-nb.info/gnd/1037483561>,
-        <https://d-nb.info/gnd/1129883647>,
-        <https://d-nb.info/gnd/300370504>,
-        <https://d-nb.info/gnd/300610327>,
-        <https://performance.musiconn.de/work/con-luigi-dallapiccola-nono-luigi>,
-        <https://performance.musiconn.de/work/poemi-dallapiccola-luigi>,
-        <https://performance.musiconn.de/work/polifonica-monodia-ritmica-nono-luigi>,
-        <https://performance.musiconn.de/work/quasi-una-fantasia-kurtag-gyoergy>,
-        <https://viaf.org/viaf/175225727>,
-        <https://viaf.org/viaf/182047345>,
-        <https://viaf.org/viaf/183767033>,
-        <https://viaf.org/viaf/184827387> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4433695-0>,
-        <https://viaf.org/viaf/239180838> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/175225727>,
-        <https://viaf.org/viaf/182047345>,
-        <https://viaf.org/viaf/183767033>,
-        <https://viaf.org/viaf/184827387>,
-        <https://viaf.org/viaf/239180838> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4433695-0> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/239180838> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300610327> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1129883647> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300370504> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175225727> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184827387> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183767033> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182047345> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1037483561> ] ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175225727> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182047345> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183767033> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184827387> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/239180838> a nfdicore:NFDI_0001010 .
 

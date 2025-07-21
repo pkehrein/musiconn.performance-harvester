@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1174828722> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1174830565> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300129076> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1934-11-10-18-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1934-11-10-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1934-11-10-18-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 10.11.1934, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1934-35> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1934-11-10T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1934-11-10T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1174828722>,
-        <https://d-nb.info/gnd/1174830565>,
-        <https://d-nb.info/gnd/300129076>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1934-35> ;
-    cto:relatedItem <https://d-nb.info/gnd/1174828722>,
-        <https://d-nb.info/gnd/1174830565>,
-        <https://d-nb.info/gnd/300129076>,
-        <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/geistliche-chormusik-wach-auf-du-deutsches-reich-distler-hugo>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-gott-ist-unsre-zuversicht-fortner-wolfgang>,
-        <https://performance.musiconn.de/work/sonaten-orgel-c-moll-reubke-julius>,
-        <https://viaf.org/viaf/177002455>,
-        <https://viaf.org/viaf/3413154741641953110005>,
-        <https://viaf.org/viaf/5149154741649953110008> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/177002455>,
-        <https://viaf.org/viaf/248189528>,
-        <https://viaf.org/viaf/3413154741641953110005>,
-        <https://viaf.org/viaf/5149154741649953110008> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3413154741641953110005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1174828722> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1174830565> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177002455> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5149154741649953110008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300129076> ],
+        <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177002455> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3413154741641953110005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5149154741649953110008> a nfdicore:NFDI_0001010 .
 

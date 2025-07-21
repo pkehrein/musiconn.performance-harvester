@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1114080292> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300004575> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300028768> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300049846> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-kammerkonzert-plus-schloss-albrechtsberg-dresden-2007-01-28-19-00> ] .
 
-<https://performance.musiconn.de/event/1-kammerkonzert-plus-schloss-albrechtsberg-dresden-2007-01-28-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-kammerkonzert-plus-schloss-albrechtsberg-dresden-2007-01-28-19-00> a cto:CTO_0001005 ;
     rdfs:label "1. Kammerkonzert-Plus, Schloss Albrechtsberg (Dresden), 28.1.2007, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2006-2007> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2007-01-28T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2007-01-28T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1114080292>,
-        <https://d-nb.info/gnd/300004575>,
-        <https://d-nb.info/gnd/300028768>,
-        <https://d-nb.info/gnd/300049846>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2006-2007> ;
-    cto:relatedItem <https://d-nb.info/gnd/1114080292>,
-        <https://d-nb.info/gnd/300004575>,
-        <https://d-nb.info/gnd/300028768>,
-        <https://d-nb.info/gnd/300049846>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/lachrymae-viola-streichorchester-britten-benjamin>,
-        <https://performance.musiconn.de/work/serenaden-streichorchester-op-20-elgar-edward>,
-        <https://performance.musiconn.de/work/sinfonien-w-c-7-12-nr-6-bach-johann-christian>,
-        <https://performance.musiconn.de/work/variations-on-a-theme-of-frank-bridge-britten-benjamin>,
-        <https://viaf.org/viaf/1416147484319949360009>,
-        <https://viaf.org/viaf/184319741>,
-        <https://viaf.org/viaf/191495734>,
-        <https://viaf.org/viaf/208681593> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/1416147484319949360009>,
-        <https://viaf.org/viaf/184319741>,
-        <https://viaf.org/viaf/191495734>,
-        <https://viaf.org/viaf/208681593>,
-        <https://viaf.org/viaf/237386709> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1114080292> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300004575> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1416147484319949360009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300028768> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208681593> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300049846> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184319741> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191495734> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1416147484319949360009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184319741> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191495734> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208681593> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
 

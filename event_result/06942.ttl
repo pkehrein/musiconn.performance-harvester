@@ -1,58 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1060330989> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1186296372> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300094981> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171781> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300182503> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300259425> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300783604> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/grosses-concert-mit-orchester-neustaedter-gesellschaftshaus-dresden-1890-01-24-20-00> ] .
 
-<https://performance.musiconn.de/event/grosses-concert-mit-orchester-neustaedter-gesellschaftshaus-dresden-1890-01-24-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/grosses-concert-mit-orchester-neustaedter-gesellschaftshaus-dresden-1890-01-24-20-00> a cto:CTO_0001005 ;
     rdfs:label "Grosses Concert mit Orchester, Neustädter Gesellschaftshaus (Dresden), 24.1.1890, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1889-1890> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1890-01-24T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1890-01-24T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1060330989>,
-        <https://d-nb.info/gnd/1186296372>,
-        <https://d-nb.info/gnd/300094981>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/300182503>,
-        <https://d-nb.info/gnd/300259425>,
-        <https://d-nb.info/gnd/300783604> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1889-1890> ;
-    cto:relatedItem <https://d-nb.info/gnd/1060330989>,
-        <https://d-nb.info/gnd/1186296372>,
-        <https://d-nb.info/gnd/300094981>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/300182503>,
-        <https://d-nb.info/gnd/300259425>,
-        <https://d-nb.info/gnd/300783604>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/neustaedter-gesellschaftshaus-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191496981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300094981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1186296372> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/295383942> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300783604> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175097640> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311444574> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300259425> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300182503> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309560042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1060330989> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175812110> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1889-1890>,
-        <https://performance.musiconn.de/work/etueden-klavier-op-25-nr-9-chopin-frederic>,
         <https://performance.musiconn.de/work/fruehlingslied-gounod-charles>,
         <https://performance.musiconn.de/work/les-mousquetaires-de-la-reine-arie-halevy-fromental>,
-        <https://performance.musiconn.de/work/lieder-op-1-sie-sagen-es-waere-die-liebe-kirchner-theodor>,
-        <https://performance.musiconn.de/work/lieder-op-18-ich-glaubte-die-lerche-sie-dachte-schon-piutti-carl>,
         <https://performance.musiconn.de/work/nocturnes-klavier-field-john>,
-        <https://performance.musiconn.de/work/norma-fantasie-liszt-franz>,
-        <https://performance.musiconn.de/work/oberon-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/peer-gynt-op-23-kanske-vil-der-ga-bade-vinter-og-var-grieg-edvard>,
-        <https://performance.musiconn.de/work/rondos-klavier-orchester-mwv-o-10-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-nr-12-liszt-franz>,
-        <https://viaf.org/viaf/175097640>,
-        <https://viaf.org/viaf/175812110>,
-        <https://viaf.org/viaf/191496981>,
-        <https://viaf.org/viaf/295383942>,
-        <https://viaf.org/viaf/309560042>,
-        <https://viaf.org/viaf/311444574> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/neustaedter-gesellschaftshaus-dresden> ;
-    cto:viaf <https://viaf.org/viaf/175097640>,
-        <https://viaf.org/viaf/175812110>,
-        <https://viaf.org/viaf/191496981>,
-        <https://viaf.org/viaf/295383942>,
-        <https://viaf.org/viaf/309560042>,
-        <https://viaf.org/viaf/311444574> .
+        <https://performance.musiconn.de/work/norma-fantasie-liszt-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175097640> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175812110> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191496981> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/295383942> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309560042> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311444574> a nfdicore:NFDI_0001010 .
 

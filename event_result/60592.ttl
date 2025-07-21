@@ -1,42 +1,56 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1190762447> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102305> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144253> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146485> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300358547> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-philharmonisches-konzert-neubrandenburg-11111993-haus-der-kultur-und-bildung-neubrandenburg-1993-11-11> ] .
 
-<https://performance.musiconn.de/event/3-philharmonisches-konzert-neubrandenburg-11111993-haus-der-kultur-und-bildung-neubrandenburg-1993-11-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-philharmonisches-konzert-neubrandenburg-11111993-haus-der-kultur-und-bildung-neubrandenburg-1993-11-11> a cto:CTO_0001005 ;
     rdfs:label "3. Philharmonisches Konzert, Neubrandenburg, 11.11.1993, Haus der Kultur und Bildung (Neubrandenburg), 11.11.1993" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1993-11-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1993-11-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1190762447>,
-        <https://d-nb.info/gnd/300102305>,
-        <https://d-nb.info/gnd/300144253>,
-        <https://d-nb.info/gnd/300146485>,
-        <https://d-nb.info/gnd/300358547> ;
-    cto:relatedItem <https://d-nb.info/gnd/300102305>,
-        <https://d-nb.info/gnd/300144253>,
-        <https://d-nb.info/gnd/300146485>,
-        <https://d-nb.info/gnd/300358547>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1190762447> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186512571> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144253> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179822789> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102305> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213968750> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146485> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205767763> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300358547> ],
         <https://performance.musiconn.de/source/1-nachlass-elke-mascha-blankenburg-programm-3-philharmonisches-konzert-hkb-neubrandenburg-11111993>,
-        <https://performance.musiconn.de/work/konzert-ouvertuere-zu-shakespeares-sommernachtstraum-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-7-a-moll-schumann-clara>,
-        <https://performance.musiconn.de/work/musik-zu-ein-sommernachtstraum-buehnenmusik-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/ouvertuere-orchester-c-dur-hensel-fanny>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-op-97-es-dur-schumann-robert>,
-        <https://viaf.org/viaf/179822789>,
-        <https://viaf.org/viaf/186512571>,
-        <https://viaf.org/viaf/205767763>,
-        <https://viaf.org/viaf/213968750> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1190762447> ;
-    cto:viaf <https://viaf.org/viaf/179822789>,
-        <https://viaf.org/viaf/186512571>,
-        <https://viaf.org/viaf/205767763>,
-        <https://viaf.org/viaf/213968750> .
+        <https://performance.musiconn.de/work/musik-zu-ein-sommernachtstraum-buehnenmusik-mendelssohn-bartholdy-felix> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179822789> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186512571> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205767763> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213968750> a nfdicore:NFDI_0001010 .
 

@@ -1,58 +1,81 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1147769982> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1194011144> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009992> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300068670> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30010247X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300414838> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300833911> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4662006-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-sankt-petri-kirche-riga-1866-11-20> ] .
 
-<https://performance.musiconn.de/event/konzert-sankt-petri-kirche-riga-1866-11-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-sankt-petri-kirche-riga-1866-11-20> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Sankt Petri-Kirche (Riga), 20.11.1866" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1866-11-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1866-11-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1147769982>,
-        <https://d-nb.info/gnd/1194011144>,
-        <https://d-nb.info/gnd/300009992>,
-        <https://d-nb.info/gnd/300068670>,
-        <https://d-nb.info/gnd/30010247X>,
-        <https://d-nb.info/gnd/300414838>,
-        <https://d-nb.info/gnd/300833911>,
-        <https://d-nb.info/gnd/4662006-0> ;
-    cto:relatedItem <https://d-nb.info/gnd/1147769982>,
-        <https://d-nb.info/gnd/1194011144>,
-        <https://d-nb.info/gnd/300009992>,
-        <https://d-nb.info/gnd/300068670>,
-        <https://d-nb.info/gnd/30010247X>,
-        <https://d-nb.info/gnd/300414838>,
-        <https://d-nb.info/gnd/300833911>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/bachverein-riga> ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4662006-0> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248287319> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186902685> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1194011144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300414838> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300068670> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300833911> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009992> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1147769982> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207921602> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182657321> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30010247X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218081387> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179183307> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219932297> ],
         <https://performance.musiconn.de/source/latvijas-universitates-akademiska-biblioteka-inv-nr-22153-inv-nr-22148-s-d2-6>,
-        <https://performance.musiconn.de/work/die-letzten-dinge-selig-sind-die-toten-spohr-louis>,
-        <https://performance.musiconn.de/work/jesu-meine-freude-jesu-meine-freude-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/missa-pro-defunctis-lux-aeterna-jommelli-niccolo>,
-        <https://performance.musiconn.de/work/neue-weihnachtsliedlein-freut-euch-ihr-lieben-christen-schroeter-leonhart>,
-        <https://performance.musiconn.de/work/nun-hab-ich-ueberwunden-bach-johann-michael>,
-        <https://performance.musiconn.de/work/psalm-2-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/responsoria-in-parasceve-tenebrae-factae-sunt-haydn-michael>,
-        <https://performance.musiconn.de/work/wer-unter-dem-schirm-des-hoechsten-sitzet-hauptmann-moritz>,
-        <https://viaf.org/viaf/179183307>,
-        <https://viaf.org/viaf/182657321>,
-        <https://viaf.org/viaf/186902685>,
-        <https://viaf.org/viaf/207921602>,
-        <https://viaf.org/viaf/218081387>,
-        <https://viaf.org/viaf/219932297> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4662006-0>,
-        <https://viaf.org/viaf/248287319> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/bachverein-riga> ;
-    cto:viaf <https://viaf.org/viaf/179183307>,
-        <https://viaf.org/viaf/182657321>,
-        <https://viaf.org/viaf/186902685>,
-        <https://viaf.org/viaf/207921602>,
-        <https://viaf.org/viaf/218081387>,
-        <https://viaf.org/viaf/219932297>,
-        <https://viaf.org/viaf/248287319> .
+        <https://performance.musiconn.de/work/missa-pro-defunctis-lux-aeterna-jommelli-niccolo> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179183307> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182657321> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186902685> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207921602> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218081387> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219932297> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248287319> a nfdicore:NFDI_0001010 .
 

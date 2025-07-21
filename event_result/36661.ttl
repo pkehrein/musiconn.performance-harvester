@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300121458> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171668> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300511558> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300808240> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-zykluskonzert-kulturpalast-dresden-festsaal-1975-12-14> ] .
 
-<https://performance.musiconn.de/event/3-zykluskonzert-kulturpalast-dresden-festsaal-1975-12-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-zykluskonzert-kulturpalast-dresden-festsaal-1975-12-14> a cto:CTO_0001005 ;
     rdfs:label "3. Zykluskonzert, Kulturpalast (Dresden) / Festsaal, 14.12.1975" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1975-12-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1975-12-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300121458>,
-        <https://d-nb.info/gnd/300171668>,
-        <https://d-nb.info/gnd/300511558>,
-        <https://d-nb.info/gnd/300808240> ;
-    cto:relatedItem <https://d-nb.info/gnd/300121458>,
-        <https://d-nb.info/gnd/300171668>,
-        <https://d-nb.info/gnd/300511558>,
-        <https://d-nb.info/gnd/300808240>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300121458> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171668> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188283434> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176205808> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193656492> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300511558> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202949000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300808240> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-13-programmhefte-1975-1977>,
-        <https://performance.musiconn.de/work/divertimenti-hob-1012-haydn-joseph>,
-        <https://performance.musiconn.de/work/konzerte-klarinette-orchester-j-118-es-dur-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-3-haydn-joseph>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-25-d-dur-prokofiev-sergei-sergeyevich>,
-        <https://viaf.org/viaf/176205808>,
-        <https://viaf.org/viaf/188283434>,
-        <https://viaf.org/viaf/193656492>,
-        <https://viaf.org/viaf/202949000> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/176205808>,
-        <https://viaf.org/viaf/188283434>,
-        <https://viaf.org/viaf/193656492>,
-        <https://viaf.org/viaf/202949000> .
+        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-13-programmhefte-1975-1977> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176205808> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188283434> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193656492> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202949000> a nfdicore:NFDI_0001010 .
 

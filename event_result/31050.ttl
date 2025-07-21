@@ -1,26 +1,29 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300166192> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/italien-1998-teatro-alighieri-ravenna-1998-03-22-20-25> ] .
 
-<https://performance.musiconn.de/event/italien-1998-teatro-alighieri-ravenna-1998-03-22-20-25> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/italien-1998-teatro-alighieri-ravenna-1998-03-22-20-25> a cto:CTO_0001005 ;
     rdfs:label "Italien 1998, Teatro Alighieri (Ravenna), 22.3.1998, 20:25" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1997-1998> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1998-03-22T20:25:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1998-03-22T20:25:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300166192> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1997-1998> ;
-    cto:relatedItem <https://d-nb.info/gnd/300166192>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/requiem-h-3-verdi-giuseppe>,
-        <https://viaf.org/viaf/179826316> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/teatro-alighieri-ravenna> ;
-    cto:viaf <https://viaf.org/viaf/179826316> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/teatro-alighieri-ravenna> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300166192> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179826316> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179826316> a nfdicore:NFDI_0001010 .
 

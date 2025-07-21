@@ -1,56 +1,78 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1109812159> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001001X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300142838> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300396600> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300664524> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300782322> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4508173-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-paulanerkirche-amberg-oberpfalz-1993-11-09> ] .
 
-<https://performance.musiconn.de/event/konzert-paulanerkirche-amberg-oberpfalz-1993-11-09> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-paulanerkirche-amberg-oberpfalz-1993-11-09> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Paulanerkirche Amberg (Oberpfalz), 9.11.1993" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1993-11-09" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1993-11-09" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1109812159>,
-        <https://d-nb.info/gnd/30001001X>,
-        <https://d-nb.info/gnd/300142838>,
-        <https://d-nb.info/gnd/300396600>,
-        <https://d-nb.info/gnd/300664524>,
-        <https://d-nb.info/gnd/300782322>,
-        <https://d-nb.info/gnd/4508173-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1109812159>,
-        <https://d-nb.info/gnd/30001001X>,
-        <https://d-nb.info/gnd/300142838>,
-        <https://d-nb.info/gnd/300396600>,
-        <https://d-nb.info/gnd/300664524>,
-        <https://d-nb.info/gnd/300782322>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4508173-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/246952238> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200786376> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176408768> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1198148209325400460005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185553028> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1109812159> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300142838> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182469156> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001001X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300396600> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300664524> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300782322> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3212148523899120970005> ],
         <https://performance.musiconn.de/source/motettenbuch-1993>,
         <https://performance.musiconn.de/work/alta-trinita-beata-anonym>,
         <https://performance.musiconn.de/work/der-herr-segne-dich-bertram-hans-georg>,
-        <https://performance.musiconn.de/work/fontana-disrael-unser-leben-waehret-siebzig-jahr-schein-johann-hermann>,
-        <https://performance.musiconn.de/work/geistliche-chormusik-ich-weiss-dass-mein-erloeser-lebt-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/komm-jesu-komm-mein-leib-ist-muede-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/motetten-op-29-schaffe-in-mir-gott-ein-rein-herz-brahms-johannes>,
-        <https://performance.musiconn.de/work/motetten-op-72-vater-unser-schwarz-schilling-reinhard>,
-        <https://performance.musiconn.de/work/stationen-auf-dem-weg-zur-freiheit-schlenker-manfred>,
-        <https://performance.musiconn.de/work/symphoniae-sacrae-liber-2-timor-et-tremor-gabrieli-giovanni>,
-        <https://viaf.org/viaf/1198148209325400460005>,
-        <https://viaf.org/viaf/176408768>,
-        <https://viaf.org/viaf/182469156>,
-        <https://viaf.org/viaf/185553028>,
-        <https://viaf.org/viaf/200786376>,
-        <https://viaf.org/viaf/3212148523899120970005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4508173-6>,
-        <https://viaf.org/viaf/246952238> ;
-    cto:viaf <https://viaf.org/viaf/1198148209325400460005>,
-        <https://viaf.org/viaf/176408768>,
-        <https://viaf.org/viaf/182469156>,
-        <https://viaf.org/viaf/185553028>,
-        <https://viaf.org/viaf/200786376>,
-        <https://viaf.org/viaf/246952238>,
-        <https://viaf.org/viaf/3212148523899120970005> .
+        <https://performance.musiconn.de/work/motetten-op-72-vater-unser-schwarz-schilling-reinhard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1198148209325400460005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176408768> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182469156> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185553028> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200786376> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/246952238> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3212148523899120970005> a nfdicore:NFDI_0001010 .
 

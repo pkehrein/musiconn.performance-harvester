@@ -4,22 +4,25 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/10403582X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/festliche-eroeffnung-der-dresdner-musikfestspiele-1986-neues-rathaus-dresden-plenarsaal-1986-05-24> ] .
 
-<https://performance.musiconn.de/event/festliche-eroeffnung-der-dresdner-musikfestspiele-1986-neues-rathaus-dresden-plenarsaal-1986-05-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/festliche-eroeffnung-der-dresdner-musikfestspiele-1986-neues-rathaus-dresden-plenarsaal-1986-05-24> a cto:CTO_0001005 ;
     rdfs:label "Festliche Eröffnung der Dresdner Musikfestspiele 1986, Neues Rathaus (Dresden) / Plenarsaal, 24.5.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-05-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-05-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/10403582X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/10403582X> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/neues-rathaus-dresden-plenarsaal> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
         <https://performance.musiconn.de/work/partita-fuer-klavier-griesbach-karl-rudi> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/neues-rathaus-dresden-plenarsaal> ;
-    cto:relatedPerson <https://d-nb.info/gnd/10403582X>,
-        <https://viaf.org/viaf/12186325> ;
-    cto:viaf <https://viaf.org/viaf/12186325> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/12186325> ] .
+
+<https://viaf.org/viaf/12186325> a nfdicore:NFDI_0001010 .
 

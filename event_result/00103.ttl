@@ -1,45 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/117863504X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1189176912> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1193947804> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/2074419-5> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300129793> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1913-02-08-14-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1913-02-08-14-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1913-02-08-14-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 8.2.1913, 14:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1912-13> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1913-02-08T14:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1913-02-08T14:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/117863504X>,
-        <https://d-nb.info/gnd/1189176912>,
-        <https://d-nb.info/gnd/1193947804>,
-        <https://d-nb.info/gnd/2074419-5>,
-        <https://d-nb.info/gnd/300129793>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1912-13> ;
-    cto:relatedItem <https://d-nb.info/gnd/117863504X>,
-        <https://d-nb.info/gnd/1189176912>,
-        <https://d-nb.info/gnd/1193947804>,
-        <https://d-nb.info/gnd/300129793>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/2074419-5> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/139053206> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1193947804> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1189176912> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208684716> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300129793> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/117863504X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3438155105817976320001> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/kirchliche-chorgesaenge-fuerwahr-er-trug-unsere-krankheit-faisst-immanuel>,
-        <https://performance.musiconn.de/work/motetten-op-9-lasset-uns-mit-jesu-ziehen-succo-reinhold>,
-        <https://performance.musiconn.de/work/musikalisches-opfer-sonata-largo-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonaten-orgel-nr-3-op-88-g-dur-rheinberger-joseph>,
-        <https://performance.musiconn.de/work/wie-eine-christ-liebende-seele-christo-sein-kreuz-nachtragen-muss-reimann-heinrich>,
-        <https://viaf.org/viaf/208684716>,
-        <https://viaf.org/viaf/3438155105817976320001> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/2074419-5>,
-        <https://viaf.org/viaf/139053206> ;
-    cto:viaf <https://viaf.org/viaf/139053206>,
-        <https://viaf.org/viaf/208684716>,
-        <https://viaf.org/viaf/248189528>,
-        <https://viaf.org/viaf/3438155105817976320001> .
+        <https://performance.musiconn.de/work/wie-eine-christ-liebende-seele-christo-sein-kreuz-nachtragen-muss-reimann-heinrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/139053206> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208684716> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3438155105817976320001> a nfdicore:NFDI_0001010 .
 

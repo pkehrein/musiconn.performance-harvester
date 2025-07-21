@@ -1,29 +1,36 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/118505505> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30000348X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/die-auferstehung-und-die-himmelfahrt-jesu-konzertsaal-auf-dem-kamp-konzertsaal-auf-dem-valentinskamp-hamburg-1778-03-18-17-30> ] .
 
-<https://performance.musiconn.de/event/die-auferstehung-und-die-himmelfahrt-jesu-konzertsaal-auf-dem-kamp-konzertsaal-auf-dem-valentinskamp-hamburg-1778-03-18-17-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/die-auferstehung-und-die-himmelfahrt-jesu-konzertsaal-auf-dem-kamp-konzertsaal-auf-dem-valentinskamp-hamburg-1778-03-18-17-30> a cto:CTO_0001005 ;
     rdfs:label "Die Auferstehung und die Himmelfahrt Jesu - Konzertsaal auf dem Kamp, Konzertsaal auf dem Valentinskamp (Hamburg), 18.3.1778, 17:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1778-03-18T17:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1778-03-18T17:30:00" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118505505> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/konzertsaal-auf-dem-valentinskamp-hamburg> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30000348X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218079718> ],
+        <https://performance.musiconn.de/source/carl-philipp-emanuel-bach-dokumente-zu-leben-und-wirken-aus-der-zeitgenoessischen-hamburgischen-presse-1767-1790-leipziger-beitraege-zur-bach-forschung-4-hildesheim-u-a> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/118505505>,
-        <https://d-nb.info/gnd/30000348X> ;
-    cto:relatedItem <https://d-nb.info/gnd/30000348X>,
-        <https://performance.musiconn.de/source/carl-philipp-emanuel-bach-dokumente-zu-leben-und-wirken-aus-der-zeitgenoessischen-hamburgischen-presse-1767-1790-leipziger-beitraege-zur-bach-forschung-4-hildesheim-u-a>,
-        <https://performance.musiconn.de/work/carl-wilhelm-rammlers-auferstehung-und-himmelfahrt-jesu-bach-carl-philipp-emanuel>,
-        <https://viaf.org/viaf/218079718> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/konzertsaal-auf-dem-valentinskamp-hamburg> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118505505>,
-        <https://viaf.org/viaf/204566> ;
-    cto:viaf <https://viaf.org/viaf/204566>,
-        <https://viaf.org/viaf/218079718> .
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204566> ] .
+
+<https://viaf.org/viaf/204566> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218079718> a nfdicore:NFDI_0001010 .
 

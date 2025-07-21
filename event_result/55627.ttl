@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4005728-8> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/nurmahal-berlin-1830-01-10> ] .
 
-<https://performance.musiconn.de/event/nurmahal-berlin-1830-01-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/nurmahal-berlin-1830-01-10> a cto:CTO_0001005 ;
     rdfs:label "Nurmahal, Berlin, 10.1.1830" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1830-01-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1830-01-10" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4005728-8> ;
-    cto:relatedItem <https://performance.musiconn.de/source/allgemeine-musikalische-zeitung-vom-03031830-9>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/122530980> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4005728-8> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/allgemeine-musikalische-zeitung-vom-03031830-9>,
         <https://performance.musiconn.de/work/nurmahal-oder-das-rosenfest-von-kaschmir-fassung-spontini-gaspare> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4005728-8>,
-        <https://viaf.org/viaf/122530980> ;
-    cto:viaf <https://viaf.org/viaf/122530980> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/122530980> a nfdicore:NFDI_0001010 .
 

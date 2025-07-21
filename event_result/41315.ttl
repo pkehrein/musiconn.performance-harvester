@@ -1,26 +1,29 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300029969> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-grosses-sinfoniekonzert-vereinshaus-zinzendorfstrasse-17-dresden-1923-11-05> ] .
 
-<https://performance.musiconn.de/event/2-grosses-sinfoniekonzert-vereinshaus-zinzendorfstrasse-17-dresden-1923-11-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-grosses-sinfoniekonzert-vereinshaus-zinzendorfstrasse-17-dresden-1923-11-05> a cto:CTO_0001005 ;
     rdfs:label "2. Großes Sinfoniekonzert, Vereinshaus Zinzendorfstraße 17 (Dresden), 5.11.1923" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1923-1924> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1923-11-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1923-11-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300029969> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1923-1924> ;
-    cto:relatedItem <https://d-nb.info/gnd/300029969>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/sinfonien-wab-103-d-moll-bruckner-anton>,
-        <https://viaf.org/viaf/210936154> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/vereinshaus-zinzendorfstrasse-17-dresden> ;
-    cto:viaf <https://viaf.org/viaf/210936154> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/vereinshaus-zinzendorfstrasse-17-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029969> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210936154> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/210936154> a nfdicore:NFDI_0001010 .
 

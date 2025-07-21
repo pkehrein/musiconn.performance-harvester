@@ -4,25 +4,32 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/132563045> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/friedensgottesdienst-kreuzkirche-dresden-1987-02-13> ] .
 
-<https://performance.musiconn.de/event/friedensgottesdienst-kreuzkirche-dresden-1987-02-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/friedensgottesdienst-kreuzkirche-dresden-1987-02-13> a cto:CTO_0001005 ;
     rdfs:label "Friedensgottesdienst, Kreuzkirche (Dresden), 13.2.1987" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-02-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-02-13" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/132563045>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1987-dresden-saechsische-landesbibliothek-dresden-1988-1>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/132563045> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1987-dresden-saechsische-landesbibliothek-dresden-1988-1>,
         <https://performance.musiconn.de/work/re-aktion-auf-gerd-zachers-radioaktiven-choral-vom-651986-winkler-michael-christfried> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:relatedPerson <https://d-nb.info/gnd/132563045>,
-        <https://viaf.org/viaf/15934974> ;
-    cto:viaf <https://viaf.org/viaf/15934974>,
-        <https://viaf.org/viaf/248189528> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/15934974> ] .
+
+<https://viaf.org/viaf/15934974> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
 

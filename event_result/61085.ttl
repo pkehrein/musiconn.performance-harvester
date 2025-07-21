@@ -1,36 +1,46 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1083294741> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300044216> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300458576> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/serenadenkonzert-im-kreuzgang-mit-dem-clara-schumann-kammerorchester-koeln-unter-der-leitung-von-elke-mascha-blankenburg-2581996-klosteranlage-der-ehemaligen-benediktinerabtei-brauweiler-pulheim-brauweiler-1996-08-25> ] .
 
-<https://performance.musiconn.de/event/serenadenkonzert-im-kreuzgang-mit-dem-clara-schumann-kammerorchester-koeln-unter-der-leitung-von-elke-mascha-blankenburg-2581996-klosteranlage-der-ehemaligen-benediktinerabtei-brauweiler-pulheim-brauweiler-1996-08-25> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/serenadenkonzert-im-kreuzgang-mit-dem-clara-schumann-kammerorchester-koeln-unter-der-leitung-von-elke-mascha-blankenburg-2581996-klosteranlage-der-ehemaligen-benediktinerabtei-brauweiler-pulheim-brauweiler-1996-08-25> a cto:CTO_0001005 ;
     rdfs:label "Serenadenkonzert im Kreuzgang mit dem Clara Schumann Kammerorchester Köln unter der Leitung von Elke Mascha Blankenburg, 25.8.1996, Klosteranlage der ehemaligen Benediktinerabtei Brauweiler (Pulheim-Brauweiler), 25.8.1996" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1996-08-25" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1996-08-25" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1083294741>,
-        <https://d-nb.info/gnd/300044216>,
-        <https://d-nb.info/gnd/300458576> ;
-    cto:relatedItem <https://d-nb.info/gnd/300044216>,
-        <https://d-nb.info/gnd/300458576>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1083294741> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/41145602493001362056> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300458576> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175737337> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300044216> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193663947> ],
         <https://performance.musiconn.de/source/programm-serenadenkonzert-des-clara-schumann-kammerorchesters-koeln>,
         <https://performance.musiconn.de/work/konzerte-violine-orchester-op-3-nr-4-c-dur-sirmen-maddalena-laura-lombardini>,
         <https://performance.musiconn.de/work/la-tempesta-kantate-martinez-marianne>,
-        <https://performance.musiconn.de/work/memories-dinescu-violeta>,
-        <https://performance.musiconn.de/work/ouvertueren-c-dur-martinez-marianne>,
-        <https://performance.musiconn.de/work/sinfonietta-streichorchester-heller-barbara>,
-        <https://viaf.org/viaf/175737337>,
-        <https://viaf.org/viaf/193663947> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1083294741>,
-        <https://viaf.org/viaf/41145602493001362056> ;
-    cto:viaf <https://viaf.org/viaf/175737337>,
-        <https://viaf.org/viaf/193663947>,
-        <https://viaf.org/viaf/41145602493001362056> .
+        <https://performance.musiconn.de/work/sinfonietta-streichorchester-heller-barbara> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175737337> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193663947> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/41145602493001362056> a nfdicore:NFDI_0001010 .
 

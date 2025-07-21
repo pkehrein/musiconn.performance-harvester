@@ -1,58 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1070114464> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1080702679> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1190658097> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146493> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30018235X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300537646> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-abonnementkonzert-altes-theater-leipzig-1869-10-26> ] .
 
-<https://performance.musiconn.de/event/1-abonnementkonzert-altes-theater-leipzig-1869-10-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-abonnementkonzert-altes-theater-leipzig-1869-10-26> a cto:CTO_0001005 ;
     rdfs:label "1. Abonnementkonzert, Altes Theater (Leipzig), 26.10.1869" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1869-1870> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1869-10-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1869-10-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1070114464>,
-        <https://d-nb.info/gnd/1080702679>,
-        <https://d-nb.info/gnd/1190658097>,
-        <https://d-nb.info/gnd/300146493>,
-        <https://d-nb.info/gnd/30018235X>,
-        <https://d-nb.info/gnd/300537646> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1869-1870> ;
-    cto:relatedItem <https://d-nb.info/gnd/1070114464>,
-        <https://d-nb.info/gnd/1080702679>,
-        <https://d-nb.info/gnd/300146493>,
-        <https://d-nb.info/gnd/30018235X>,
-        <https://d-nb.info/gnd/300537646>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1190658097> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/295641961> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30018235X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300537646> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191498119> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1070114464> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185731978> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315579529> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1080702679> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146493> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213979788> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/45145193341070461439> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/work/balladen-op-16-hartmann-ludwig>,
         <https://performance.musiconn.de/work/die-schoepfung-es-bringe-die-erde-hervor-haydn-joseph>,
         <https://performance.musiconn.de/work/etueden-kl-op-10-der-gnomentanz-seeling-hans>,
-        <https://performance.musiconn.de/work/euryanthe-wo-berg-ich-mich-weber-carl-maria-von>,
         <https://performance.musiconn.de/work/fruehlingslied-gounod-charles>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-4-op-70-d-moll-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/ouvertuere-zu-prometheus-bargiel-woldemar>,
         <https://performance.musiconn.de/work/rigaudons-und-tambourin-rameau-jean-philippe>,
         <https://performance.musiconn.de/work/sechs-lieder-op-20-wenn-ich-in-deine-augen-seh-hartmann-ludwig>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-120-d-moll-schumann-robert>,
-        <https://performance.musiconn.de/work/stuecke-kl-op-32-widmung-jadassohn-salomon>,
         <https://performance.musiconn.de/work/tarantellen-klavier-raff-joseph-joachim>,
-        <https://performance.musiconn.de/work/valse-impromptu-hartmann-ludwig>,
-        <https://viaf.org/viaf/185731978>,
-        <https://viaf.org/viaf/191498119>,
-        <https://viaf.org/viaf/213979788>,
-        <https://viaf.org/viaf/315579529>,
-        <https://viaf.org/viaf/45145193341070461439> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1190658097>,
-        <https://viaf.org/viaf/295641961> ;
-    cto:viaf <https://viaf.org/viaf/185731978>,
-        <https://viaf.org/viaf/191498119>,
-        <https://viaf.org/viaf/213979788>,
-        <https://viaf.org/viaf/295641961>,
-        <https://viaf.org/viaf/315579529>,
-        <https://viaf.org/viaf/45145193341070461439> .
+        <https://performance.musiconn.de/work/valse-impromptu-hartmann-ludwig> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185731978> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191498119> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213979788> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/295641961> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315579529> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/45145193341070461439> a nfdicore:NFDI_0001010 .
 

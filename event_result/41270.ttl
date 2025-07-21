@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/102480030X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026862> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141777> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170114> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171528> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/265-konzert-stadthalle-goerlitz-1916-03-01-20-00> ] .
 
-<https://performance.musiconn.de/event/265-konzert-stadthalle-goerlitz-1916-03-01-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/265-konzert-stadthalle-goerlitz-1916-03-01-20-00> a cto:CTO_0001005 ;
     rdfs:label "265. Konzert, Stadthalle (Görlitz), 1.3.1916, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1915-1916> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1916-03-01T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1916-03-01T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/102480030X>,
-        <https://d-nb.info/gnd/300026862>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300170114>,
-        <https://d-nb.info/gnd/300171528> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1915-1916> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026862>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300170114>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/der-freischuetz-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-vorspiel-wagner-richard>,
-        <https://performance.musiconn.de/work/sinfonien-d-759-h-moll-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-68-c-moll-brahms-johannes>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/217003153> ;
-    cto:relatedLocation <https://d-nb.info/gnd/102480030X>,
-        <https://viaf.org/viaf/256783317> ;
-    cto:viaf <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/217003153>,
-        <https://viaf.org/viaf/256783317> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/102480030X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/256783317> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217003153> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425978> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170114> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141777> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177811557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178619765> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026862> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177811557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178619765> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179425978> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217003153> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/256783317> a nfdicore:NFDI_0001010 .
 

@@ -4,24 +4,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4513905-2> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/festival-juedischer-choere-europas-2023-chor-zu-chor-konzert-synagoge-wien-2023-05-18-17-00> ] .
 
-<https://performance.musiconn.de/event/festival-juedischer-choere-europas-2023-chor-zu-chor-konzert-synagoge-wien-2023-05-18-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/festival-juedischer-choere-europas-2023-chor-zu-chor-konzert-synagoge-wien-2023-05-18-17-00> a cto:CTO_0001005 ;
     rdfs:label "Festival jüdischer Chöre Europas 2023 / Chor-zu-Chor-Konzert, Synagoge Wien, 18.5.2023, 17:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2023-05-18T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2023-05-18T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4513905-2> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4513905-2> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/152570742> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/work/huljet-huljet-kinderlech-jung-fredo-gebirtig-mordechai>,
         <https://performance.musiconn.de/work/hungerik-dein-ketzele-fassung-gross-friedbert-gebirtig-mordechai>,
         <https://performance.musiconn.de/work/kiddusch-weill-kurt>,
         <https://performance.musiconn.de/work/segen-lampel-samuel> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4513905-2>,
-        <https://viaf.org/viaf/152570742> ;
-    cto:viaf <https://viaf.org/viaf/152570742> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/152570742> a nfdicore:NFDI_0001010 .
 

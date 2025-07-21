@@ -1,40 +1,56 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/100524907> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/102077018X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118739964> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/120517973> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/orazio-theater-am-gaensemarkt-hamburg-1745-08-23> ] .
 
-<https://performance.musiconn.de/event/orazio-theater-am-gaensemarkt-hamburg-1745-08-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/orazio-theater-am-gaensemarkt-hamburg-1745-08-23> a cto:CTO_0001005 ;
     rdfs:label "Orazio, Theater am Gänsemarkt (Hamburg), 23.8.1745" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/orazio> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1745-08-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1745-08-23" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/100524907>,
-        <https://d-nb.info/gnd/102077018X>,
-        <https://d-nb.info/gnd/118739964>,
-        <https://d-nb.info/gnd/120517973> ;
-    cto:itemOf <https://performance.musiconn.de/series/orazio> ;
-    cto:relatedItem <https://performance.musiconn.de/source/baerwald-oper-vol-1>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/102077018X> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/100524907> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/120517973> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118739964> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/theater-am-gaensemarkt-hamburg> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/baerwald-oper-vol-1>,
         <https://performance.musiconn.de/source/mueller-von-asow-mingotti>,
         <https://performance.musiconn.de/source/orazio-opera-bernesca-in-musica-da-rappresentarsi>,
         <https://performance.musiconn.de/work/l-orazio-auletta-pietro> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/theater-am-gaensemarkt-hamburg> ;
-    cto:relatedPerson <https://d-nb.info/gnd/100524907>,
-        <https://d-nb.info/gnd/102077018X>,
-        <https://d-nb.info/gnd/118739964>,
-        <https://d-nb.info/gnd/120517973>,
-        <https://viaf.org/viaf/226062684>,
-        <https://viaf.org/viaf/233210162>,
-        <https://viaf.org/viaf/66656806>,
-        <https://viaf.org/viaf/79169092> ;
-    cto:viaf <https://viaf.org/viaf/226062684>,
-        <https://viaf.org/viaf/233210162>,
-        <https://viaf.org/viaf/66656806>,
-        <https://viaf.org/viaf/79169092> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/79169092> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/233210162> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/226062684> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/66656806> ] .
+
+<https://viaf.org/viaf/226062684> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/233210162> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/66656806> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/79169092> a nfdicore:NFDI_0001010 .
 

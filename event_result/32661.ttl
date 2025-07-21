@@ -1,27 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300016360> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108060> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108087> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-ausserordentliches-konzert-kulturpalast-dresden-festsaal-2012-01-29-11-00> ] .
 
-<https://performance.musiconn.de/event/3-ausserordentliches-konzert-kulturpalast-dresden-festsaal-2012-01-29-11-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-ausserordentliches-konzert-kulturpalast-dresden-festsaal-2012-01-29-11-00> a cto:CTO_0001005 ;
     rdfs:label "3. Außerordentliches Konzert, Kulturpalast (Dresden) / Festsaal, 29.1.2012, 11:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2011-2012> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2012-01-29T11:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2012-01-29T11:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300016360>,
-        <https://d-nb.info/gnd/300108060>,
-        <https://d-nb.info/gnd/300108087> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2011-2012> ;
-    cto:relatedItem <https://d-nb.info/gnd/300016360>,
-        <https://d-nb.info/gnd/300108060>,
-        <https://d-nb.info/gnd/300108087>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108060> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016360> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179062815> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108087> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176199389> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/bir-verd-i-ra-na-eine-liebliche-rose-efendi-hamamizade-dede>,
         <https://performance.musiconn.de/work/buelbuel-i-hos-neva-schoen-singende-nachtigall-efendi-hamamizade-dede>,
@@ -30,14 +40,11 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/deutscher-tanz-nr-4-kv-571-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/deutscher-tanz-nr-5-kv-571-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/deutscher-tanz-nr-6-kv-571-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/die-entfuehrung-aus-dem-serail-ouvertuere-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/die-entfuehrung-aus-dem-serail-traurigkeit-ward-mir-zum-lose-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/mahur-pesrev-marsch-in-der-tongattung-mahur-gazi-giray-han-ii-bora-ebuelfeth>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-op-55-es-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/yine-bir-guel-nihal-eine-junge-rose-nahm-mir-wieder-einmal-mein-herz-efendi-hamamizade-dede>,
-        <https://viaf.org/viaf/176199389>,
-        <https://viaf.org/viaf/179062815> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/176199389>,
-        <https://viaf.org/viaf/179062815> .
+        <https://performance.musiconn.de/work/yine-bir-guel-nihal-eine-junge-rose-nahm-mir-wieder-einmal-mein-herz-efendi-hamamizade-dede> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176199389> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179062815> a nfdicore:NFDI_0001010 .
 

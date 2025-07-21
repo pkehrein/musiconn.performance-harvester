@@ -1,32 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1268744875> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1268747254> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300373597> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gruppe-neue-musik-hanns-eisler-museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal-1989-10-07-16-00> ] .
 
-<https://performance.musiconn.de/event/gruppe-neue-musik-hanns-eisler-museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal-1989-10-07-16-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gruppe-neue-musik-hanns-eisler-museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal-1989-10-07-16-00> a cto:CTO_0001005 ;
     rdfs:label "Gruppe Neue Musik Hanns Eisler, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Steinsaal, 7.10.1989, 16:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/3-dresdner-tage-der-zeitgenoessischen-musik-1989> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1989-10-07T16:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1989-10-07T16:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1268744875>,
-        <https://d-nb.info/gnd/1268747254>,
-        <https://d-nb.info/gnd/300373597> ;
-    cto:itemOf <https://performance.musiconn.de/series/3-dresdner-tage-der-zeitgenoessischen-musik-1989> ;
-    cto:relatedItem <https://d-nb.info/gnd/1268744875>,
-        <https://d-nb.info/gnd/1268747254>,
-        <https://d-nb.info/gnd/300373597>,
-        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-45-dresdner-tage-fuer-zeitgenoessische-musik-1988-1989-1991>,
-        <https://performance.musiconn.de/work/gutes-verhaeltnis-zu-pferden-neuerliche-annaeherung-an-wladimir-majakowski-schenker-friedrich>,
-        <https://performance.musiconn.de/work/quartette-oboe-violoncello-schlagzeug-klavier-1955-wolpe-stefan>,
-        <https://performance.musiconn.de/work/sonaten-oboe-klavier-wolpe-stefan>,
-        <https://viaf.org/viaf/219170004> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal> ;
-    cto:viaf <https://viaf.org/viaf/219170004> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219170004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300373597> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1268744875> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1268747254> ],
+        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-45-dresdner-tage-fuer-zeitgenoessische-musik-1988-1989-1991> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/219170004> a nfdicore:NFDI_0001010 .
 

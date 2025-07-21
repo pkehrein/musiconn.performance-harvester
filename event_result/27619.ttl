@@ -1,24 +1,32 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1033369896> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300062427> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-schuetzenhaus-garten-maehrisch-schoenberg-1898-05-28> ] .
 
-<https://performance.musiconn.de/event/konzert-schuetzenhaus-garten-maehrisch-schoenberg-1898-05-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-schuetzenhaus-garten-maehrisch-schoenberg-1898-05-28> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Schützenhaus Garten (Mährisch-Schönberg), 28.5.1898" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1898-05-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1898-05-28" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1033369896>,
-        <https://d-nb.info/gnd/300062427> ;
-    cto:relatedItem <https://d-nb.info/gnd/1033369896>,
-        <https://d-nb.info/gnd/300062427>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/schuetzenhaus-garten-maehrisch-schoenberg> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182269781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1033369896> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062427> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182069393> ],
         <https://performance.musiconn.de/source/programmheft-maennergesangverein-und-damenchor-m-schoenberg-sumperk-maehrisch-schoenberg-maehrisch-schoenberg-29-30051898>,
         <https://performance.musiconn.de/work/abschied-vom-walde-klauer-f-g>,
         <https://performance.musiconn.de/work/der-kleine-tambour-weinberger-carl>,
@@ -26,18 +34,16 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/du-mein-heimatthal-schmied-e>,
         <https://performance.musiconn.de/work/gesaenge-op-52-waldlied-palme-rudolph>,
         <https://performance.musiconn.de/work/heinrich-der-loewe-triumphmarsch-kretschmer-edmund>,
-        <https://performance.musiconn.de/work/landkjenning-grieg-edvard>,
         <https://performance.musiconn.de/work/maerzenluft-metzler-d-e>,
         <https://performance.musiconn.de/work/mammons-palast-ouvertuere-titl-anton-emil>,
         <https://performance.musiconn.de/work/neuer-fruehling-perschke-f>,
-        <https://performance.musiconn.de/work/norske-danser-grieg-edvard>,
         <https://performance.musiconn.de/work/sons-des-harpes-op-4-nero-carlo>,
         <https://performance.musiconn.de/work/traue-nicht-metzler-d-e>,
         <https://performance.musiconn.de/work/wiegenlied-flies-bernhard>,
-        <https://performance.musiconn.de/work/wiener-spaziergaenge-op-215-komzak-karl>,
-        <https://viaf.org/viaf/182069393>,
-        <https://viaf.org/viaf/182269781> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/schuetzenhaus-garten-maehrisch-schoenberg> ;
-    cto:viaf <https://viaf.org/viaf/182069393>,
-        <https://viaf.org/viaf/182269781> .
+        <https://performance.musiconn.de/work/wiener-spaziergaenge-op-215-komzak-karl> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182069393> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182269781> a nfdicore:NFDI_0001010 .
 

@@ -1,59 +1,78 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1045711519> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1122355262> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1192378342> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015143> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30003704X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146469> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7578801-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1898-02-01> ] .
 
-<https://performance.musiconn.de/event/7-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1898-02-01> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1898-02-01> a cto:CTO_0001005 ;
     rdfs:label "7. Philharmonisches Konzert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 1.2.1898" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1897-1898> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1898-02-01" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1898-02-01" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1045711519>,
-        <https://d-nb.info/gnd/1122355262>,
-        <https://d-nb.info/gnd/1192378342>,
-        <https://d-nb.info/gnd/300015143>,
-        <https://d-nb.info/gnd/30003704X>,
-        <https://d-nb.info/gnd/300146469>,
-        <https://d-nb.info/gnd/7578801-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1897-1898> ;
-    cto:relatedItem <https://d-nb.info/gnd/1045711519>,
-        <https://d-nb.info/gnd/1122355262>,
-        <https://d-nb.info/gnd/1192378342>,
-        <https://d-nb.info/gnd/300015143>,
-        <https://d-nb.info/gnd/30003704X>,
-        <https://d-nb.info/gnd/300146469>,
-        <https://d-nb.info/gnd/7578801-9>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306409869> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174573522> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7578801-9> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015143> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1045711519> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30003704X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183267227> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214737144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183288250> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1122355262> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5817148269818305230001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1192378342> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146469> ],
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/work/6-stuecke-fuer-klavier-praeludium-reinecke-carl>,
         <https://performance.musiconn.de/work/alceste-w-37-rezitativ-und-arie-wohin-unglueckliche-alceste-gluck-christoph-willibald>,
         <https://performance.musiconn.de/work/geheimnis-richard-hans>,
-        <https://performance.musiconn.de/work/impromptus-klavier-op-36-fis-dur-chopin-frederic>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-1-d-moll-burmeister-richard>,
         <https://performance.musiconn.de/work/konzertetuede-op-52-nr-3-goetz-hermann>,
-        <https://performance.musiconn.de/work/lieder-op-27-ruhe-meine-seele-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-schlummre-kind-richard-hans>,
-        <https://performance.musiconn.de/work/musik-zum-trauerspiel-egmont-von-johann-wolfgang-von-goethe-ouvertuere-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/schlichte-weisen-all-mein-gedanken-strauss-richard>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-38-b-dur-schumann-robert>,
-        <https://performance.musiconn.de/work/stuecke-fuer-klavier-op-7-fruehlingsgruss-goetz-hermann>,
-        <https://viaf.org/viaf/174573522>,
-        <https://viaf.org/viaf/183267227>,
-        <https://viaf.org/viaf/183288250>,
-        <https://viaf.org/viaf/214737144>,
-        <https://viaf.org/viaf/306409869>,
-        <https://viaf.org/viaf/5817148269818305230001> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/174573522>,
-        <https://viaf.org/viaf/183267227>,
-        <https://viaf.org/viaf/183288250>,
-        <https://viaf.org/viaf/214737144>,
-        <https://viaf.org/viaf/306409869>,
-        <https://viaf.org/viaf/5817148269818305230001> .
+        <https://performance.musiconn.de/work/stuecke-fuer-klavier-op-7-fruehlingsgruss-goetz-hermann> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174573522> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183267227> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183288250> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214737144> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/306409869> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5817148269818305230001> a nfdicore:NFDI_0001010 .
 

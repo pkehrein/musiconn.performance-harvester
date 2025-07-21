@@ -1,33 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/118540505> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/121409163> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4799651-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/il-signor-dottore-hoftheater-hildburghausen-1764-06-00> ] .
 
-<https://performance.musiconn.de/event/il-signor-dottore-hoftheater-hildburghausen-1764-06-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/il-signor-dottore-hoftheater-hildburghausen-1764-06-00> a cto:CTO_0001005 ;
     rdfs:label "Il signor dottore, Hoftheater (Hildburghausen), 6/1764" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1764-06-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1764-06-00" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/121409163> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118540505> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hoftheater-hildburghausen> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196916651> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4799651-1> ],
+        <https://performance.musiconn.de/source/il-signor-dottore-dramma-giocoso-per-musica-da-polliseno-fregeio-pastor-arcade-da-rappresentarsi-nel-teatro-ducale-a-hildburghausen-nelanno-1764> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/118540505>,
-        <https://d-nb.info/gnd/121409163>,
-        <https://d-nb.info/gnd/4799651-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/4799651-1>,
-        <https://performance.musiconn.de/source/il-signor-dottore-dramma-giocoso-per-musica-da-polliseno-fregeio-pastor-arcade-da-rappresentarsi-nel-teatro-ducale-a-hildburghausen-nelanno-1764>,
-        <https://performance.musiconn.de/work/il-signor-dottore-fischietti-domenico>,
-        <https://viaf.org/viaf/196916651> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hoftheater-hildburghausen> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118540505>,
-        <https://d-nb.info/gnd/121409163>,
-        <https://viaf.org/viaf/118496187>,
-        <https://viaf.org/viaf/44299511> ;
-    cto:viaf <https://viaf.org/viaf/118496187>,
-        <https://viaf.org/viaf/196916651>,
-        <https://viaf.org/viaf/44299511> .
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/44299511> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/118496187> ] .
+
+<https://viaf.org/viaf/118496187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196916651> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/44299511> a nfdicore:NFDI_0001010 .
 

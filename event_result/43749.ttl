@@ -4,20 +4,28 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4277461-5> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/synagogalmusik-jiddische-und-hebraeische-folklore-in-freier-bearbeitung-sankt-andreas-eisleben-1996-06-21-18-15> ] .
 
-<https://performance.musiconn.de/event/synagogalmusik-jiddische-und-hebraeische-folklore-in-freier-bearbeitung-sankt-andreas-eisleben-1996-06-21-18-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/synagogalmusik-jiddische-und-hebraeische-folklore-in-freier-bearbeitung-sankt-andreas-eisleben-1996-06-21-18-15> a cto:CTO_0001005 ;
     rdfs:label "Synagogalmusik - Jiddische und hebräische Folklore in freier Bearbeitung, Sankt Andreas (Eisleben), 21.6.1996, 18:15" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1996-06-21T18:15:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1996-06-21T18:15:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4277461-5>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4277461-5> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/240926582> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/programm-konzert-21-juni-1996>,
         <https://performance.musiconn.de/work/a-geneiwe-fassung-sander-werner>,
         <https://performance.musiconn.de/work/adonoi-moloch-alman-samuel>,
@@ -33,10 +41,9 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/vshavu-banim-fassung-moddel-philip-carlebach-shlomo>,
         <https://performance.musiconn.de/work/wschomru-alman-samuel>,
         <https://performance.musiconn.de/work/yerushalayim-shel-sahav-fassung-gross-friedbert-shemer-naomi> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4277461-5>,
-        <https://viaf.org/viaf/240926582> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/240926582> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/240926582> a nfdicore:NFDI_0001010 .
 

@@ -1,35 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300028792> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30003377X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300070462> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/schulkonzert-kulturpalast-dresden-festsaal-1975-01-13-17-00> ] .
 
-<https://performance.musiconn.de/event/schulkonzert-kulturpalast-dresden-festsaal-1975-01-13-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/schulkonzert-kulturpalast-dresden-festsaal-1975-01-13-17-00> a cto:CTO_0001005 ;
     rdfs:label "Schulkonzert, Kulturpalast (Dresden) / Festsaal, 13.1.1975, 17:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1975-01-13T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1975-01-13T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300028792>,
-        <https://d-nb.info/gnd/30003377X>,
-        <https://d-nb.info/gnd/300070462> ;
-    cto:relatedItem <https://d-nb.info/gnd/300028792>,
-        <https://d-nb.info/gnd/30003377X>,
-        <https://d-nb.info/gnd/300070462>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/serenaden-streichorch-cs-45-2-satz-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-6-haydn-joseph>,
-        <https://performance.musiconn.de/work/the-young-persons-guide-to-the-orchestra-britten-benjamin>,
-        <https://viaf.org/viaf/183881845>,
-        <https://viaf.org/viaf/198522489>,
-        <https://viaf.org/viaf/204601476> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/183881845>,
-        <https://viaf.org/viaf/198522489>,
-        <https://viaf.org/viaf/204601476> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183881845> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300070462> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204601476> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30003377X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300028792> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198522489> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/183881845> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198522489> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204601476> a nfdicore:NFDI_0001010 .
 

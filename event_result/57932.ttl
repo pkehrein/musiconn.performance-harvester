@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1091076286> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-theaterbau-des-koenigsstaedtischen-theaters-berlin-1825-06-10> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-theaterbau-des-koenigsstaedtischen-theaters-berlin-1825-06-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-theaterbau-des-koenigsstaedtischen-theaters-berlin-1825-06-10> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Theaterbau des Königsstädtischen Theaters (Berlin), 10.6.1825" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1825-06-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1825-06-10" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1091076286> ;
-    cto:relatedItem <https://performance.musiconn.de/source/katalogisat-die-schneidermamsells-vaudeville-in-1-akt-frei-bearbeitet-und-mit-bekannten-melodieen-versehen-10-juni-1825>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1091076286> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/235553194> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/katalogisat-die-schneidermamsells-vaudeville-in-1-akt-frei-bearbeitet-und-mit-bekannten-melodieen-versehen-10-juni-1825>,
         <https://performance.musiconn.de/source/repertorium-des-koenigsstaedtischen-theaters-in-berlin-vom-ersten-januar-bis-ein-und-dreissigsten-december-1825-1826-zweites-heft>,
         <https://performance.musiconn.de/work/der-fiaker-als-marquis-fassung-mueller-wenzel>,
         <https://performance.musiconn.de/work/die-schneider-mamsells-fassung-weber-carl-maria-von-mozart-wolfgang-amadeus-marschner-heinrich-boieldieu-francois-adrien-himmel-friedrich-heinrich-weigl-joseph-haibel-johann-jakob-kauer-ferdinand-verschiedene> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1091076286>,
-        <https://viaf.org/viaf/235553194> ;
-    cto:viaf <https://viaf.org/viaf/235553194> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/235553194> a nfdicore:NFDI_0001010 .
 

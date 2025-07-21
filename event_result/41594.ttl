@@ -1,48 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1081790741> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1191387836> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009440X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155271> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170475> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/orchester-programm-grosses-festkonzert-1927-01-09-20-00> ] .
 
-<https://performance.musiconn.de/event/orchester-programm-grosses-festkonzert-1927-01-09-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/orchester-programm-grosses-festkonzert-1927-01-09-20-00> a cto:CTO_0001005 ;
     rdfs:label "Orchester-Programm (Großes Festkonzert), 9.1.1927, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1926-1927> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1927-01-09T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1927-01-09T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1081790741>,
-        <https://d-nb.info/gnd/1191387836>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300155271>,
-        <https://d-nb.info/gnd/300170475> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1926-1927> ;
-    cto:relatedItem <https://d-nb.info/gnd/1081790741>,
-        <https://d-nb.info/gnd/1191387836>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300155271>,
-        <https://d-nb.info/gnd/300170475>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/vereinshaus-zinzendorfstrasse-17-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176131149> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170475> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155271> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/32145424474086830950> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009440X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1081790741> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174184579> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2916150567609906370005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1191387836> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/achtung-new-york-borchert-walter>,
         <https://performance.musiconn.de/work/carmen-fantasie-bizet-georges>,
         <https://performance.musiconn.de/work/flirtation-steck-r>,
-        <https://performance.musiconn.de/work/kaiser-walzer-strauss-johann>,
-        <https://performance.musiconn.de/work/la-gioconda-ballettmusik-ponchielli-amilcare>,
-        <https://performance.musiconn.de/work/les-preludes-liszt-franz>,
-        <https://performance.musiconn.de/work/suiten-klavier-nr-3-op-72-e-moll-minuetto-raff-joseph-joachim>,
-        <https://performance.musiconn.de/work/tannhaeuser-und-der-saengerkrieg-auf-wartburg-ouvertuere-wagner-richard>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-nr-1-liszt-franz>,
-        <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/176131149>,
-        <https://viaf.org/viaf/2916150567609906370005>,
-        <https://viaf.org/viaf/32145424474086830950> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/vereinshaus-zinzendorfstrasse-17-dresden> ;
-    cto:viaf <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/176131149>,
-        <https://viaf.org/viaf/2916150567609906370005>,
-        <https://viaf.org/viaf/32145424474086830950> .
+        <https://performance.musiconn.de/work/la-gioconda-ballettmusik-ponchielli-amilcare> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174184579> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176131149> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2916150567609906370005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/32145424474086830950> a nfdicore:NFDI_0001010 .
 

@@ -1,54 +1,76 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/105369735X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026862> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102305> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300132352> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141653> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156790> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/abokonzert-3-zweites-gewandhaus-leipzig-1904-10-27> ] .
 
-<https://performance.musiconn.de/event/abokonzert-3-zweites-gewandhaus-leipzig-1904-10-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/abokonzert-3-zweites-gewandhaus-leipzig-1904-10-27> a cto:CTO_0001005 ;
     rdfs:label "Abokonzert 3, Zweites Gewandhaus (Leipzig), 27.10.1904" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1904-10-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1904-10-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/105369735X>,
-        <https://d-nb.info/gnd/300026862>,
-        <https://d-nb.info/gnd/300102305>,
-        <https://d-nb.info/gnd/300132352>,
-        <https://d-nb.info/gnd/300141653>,
-        <https://d-nb.info/gnd/300156790>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/105369735X>,
-        <https://d-nb.info/gnd/300026862>,
-        <https://d-nb.info/gnd/300102305>,
-        <https://d-nb.info/gnd/300132352>,
-        <https://d-nb.info/gnd/300141653>,
-        <https://d-nb.info/gnd/300156790>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178619442> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102305> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179505655> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026862> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186512571> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/105369735X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176620383> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156790> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178648047> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300132352> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217003153> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141653> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
-        <https://performance.musiconn.de/work/cephale-et-procris-drei-tanzstuecke-gretry-andre-ernest-modeste>,
-        <https://performance.musiconn.de/work/die-schoene-muellerin-wohin-schubert-franz>,
-        <https://performance.musiconn.de/work/digte-af-vilhelm-krag-mens-jeg-venter-grieg-edvard>,
-        <https://performance.musiconn.de/work/il-barbiere-di-siviglia-una-voce-poco-fa-rossini-gioachino>,
-        <https://performance.musiconn.de/work/konzert-ouvertuere-zu-shakespeares-sommernachtstraum-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/lieder-von-af-von-schack-staendchen-strauss-richard>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-68-c-moll-brahms-johannes>,
-        <https://viaf.org/viaf/176620383>,
-        <https://viaf.org/viaf/178619442>,
-        <https://viaf.org/viaf/178648047>,
-        <https://viaf.org/viaf/179505655>,
-        <https://viaf.org/viaf/186512571>,
-        <https://viaf.org/viaf/217003153> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/176620383>,
-        <https://viaf.org/viaf/178619442>,
-        <https://viaf.org/viaf/178648047>,
-        <https://viaf.org/viaf/179505655>,
-        <https://viaf.org/viaf/186512571>,
-        <https://viaf.org/viaf/217003153>,
-        <https://viaf.org/viaf/264523828> .
+        <https://performance.musiconn.de/work/cephale-et-procris-drei-tanzstuecke-gretry-andre-ernest-modeste> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176620383> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178619442> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178648047> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179505655> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186512571> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217003153> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
 

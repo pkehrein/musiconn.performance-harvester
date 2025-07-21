@@ -1,29 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1031490280> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1037693752> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/orazio-theaterbau-des-burgtheaters-wien-1748-09-02> ] .
 
-<https://performance.musiconn.de/event/orazio-theaterbau-des-burgtheaters-wien-1748-09-02> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/orazio-theaterbau-des-burgtheaters-wien-1748-09-02> a cto:CTO_0001005 ;
     rdfs:label "Orazio, Theaterbau des Burgtheaters (Wien), 2.9.1748" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/orazio-4> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1748-09-02" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1748-09-02" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1031490280>,
-        <https://d-nb.info/gnd/1037693752> ;
-    cto:itemOf <https://performance.musiconn.de/series/orazio-4> ;
-    cto:relatedItem <https://performance.musiconn.de/source/zechmeister-theater>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1037693752> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/296668366> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1031490280> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/zechmeister-theater>,
         <https://performance.musiconn.de/work/l-orazio-auletta-pietro> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1031490280>,
-        <https://viaf.org/viaf/296668366> ;
-    cto:relatedPerson <https://d-nb.info/gnd/1037693752>,
-        <https://viaf.org/viaf/304957357> ;
-    cto:viaf <https://viaf.org/viaf/296668366>,
-        <https://viaf.org/viaf/304957357> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/304957357> ] .
+
+<https://viaf.org/viaf/296668366> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/304957357> a nfdicore:NFDI_0001010 .
 

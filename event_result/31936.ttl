@@ -1,40 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30004755X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30025041X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300842724> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-kammerkonzert-schloss-albrechtsberg-dresden-2006-04-02-19-00> ] .
 
-<https://performance.musiconn.de/event/4-kammerkonzert-schloss-albrechtsberg-dresden-2006-04-02-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-kammerkonzert-schloss-albrechtsberg-dresden-2006-04-02-19-00> a cto:CTO_0001005 ;
     rdfs:label "4. Kammerkonzert, Schloss Albrechtsberg (Dresden), 2.4.2006, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2005-2006> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2006-04-02T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2006-04-02T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30004755X>,
-        <https://d-nb.info/gnd/30025041X>,
-        <https://d-nb.info/gnd/300842724>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2005-2006> ;
-    cto:relatedItem <https://d-nb.info/gnd/30004755X>,
-        <https://d-nb.info/gnd/30025041X>,
-        <https://d-nb.info/gnd/300842724>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189339030> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212883984> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30004755X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300842724> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210957923> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30025041X> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/hymnus-schnittke-alfred>,
-        <https://performance.musiconn.de/work/nocturnes-streichorchester-b-47-h-dur-dvorak-antonin>,
-        <https://performance.musiconn.de/work/stabat-mater-g-532-boccherini-luigi>,
-        <https://performance.musiconn.de/work/trios-violine-2-viola-1982-rentzsch-friedhelm>,
-        <https://viaf.org/viaf/189339030>,
-        <https://viaf.org/viaf/210957923>,
-        <https://viaf.org/viaf/212883984> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/189339030>,
-        <https://viaf.org/viaf/210957923>,
-        <https://viaf.org/viaf/212883984>,
-        <https://viaf.org/viaf/237386709> .
+        <https://performance.musiconn.de/work/hymnus-schnittke-alfred> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/189339030> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210957923> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212883984> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
 

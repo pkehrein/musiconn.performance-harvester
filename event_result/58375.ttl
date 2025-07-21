@@ -4,30 +4,37 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1141193116> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/116829516> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/festveranstaltung-d-rates-d-bezirkes-u-d-bez-vorstandes-d-fdgb-zum-40-jahrestag-d-fdgb-friedrichsbrunn-1985-06-18> ] .
 
-<https://performance.musiconn.de/event/festveranstaltung-d-rates-d-bezirkes-u-d-bez-vorstandes-d-fdgb-zum-40-jahrestag-d-fdgb-friedrichsbrunn-1985-06-18> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/festveranstaltung-d-rates-d-bezirkes-u-d-bez-vorstandes-d-fdgb-zum-40-jahrestag-d-fdgb-friedrichsbrunn-1985-06-18> a cto:CTO_0001005 ;
     rdfs:label "Festveranstaltung d. Rates d. Bezirkes u. d. Bez.-Vorstandes d. FDGB zum 40. Jahrestag d. FDGB, Friedrichsbrunn, 18.6.1985" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1985-06-18" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1985-06-18" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1141193116>,
-        <https://d-nb.info/gnd/116829516> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1985-und-nachtrag-1976-1984-dresden-saechsische-landesbibliothek-dresden-1986>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/116829516> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1141193116> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248989832> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1985-und-nachtrag-1976-1984-dresden-saechsische-landesbibliothek-dresden-1986>,
         <https://performance.musiconn.de/work/der-friede-auf-erden-pfeiffer-dankward>,
         <https://performance.musiconn.de/work/festmusik-fuer-streichquintett-reiche-johannes> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1141193116>,
-        <https://viaf.org/viaf/248989832> ;
-    cto:relatedPerson <https://d-nb.info/gnd/116829516>,
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/59845752> ],
         <https://performance.musiconn.de/person/doelle-bernhard>,
         <https://performance.musiconn.de/person/engler-lydia>,
         <https://performance.musiconn.de/person/goering-peter>,
-        <https://performance.musiconn.de/person/opolka-hans>,
-        <https://viaf.org/viaf/59845752> ;
-    cto:viaf <https://viaf.org/viaf/248989832>,
-        <https://viaf.org/viaf/59845752> .
+        <https://performance.musiconn.de/person/opolka-hans> .
+
+<https://viaf.org/viaf/248989832> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/59845752> a nfdicore:NFDI_0001010 .
 

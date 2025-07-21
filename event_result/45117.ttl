@@ -1,42 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026862> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033362> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133731> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170068> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/10-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1903-03-20-19-30> ] .
 
-<https://performance.musiconn.de/event/10-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1903-03-20-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/10-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1903-03-20-19-30> a cto:CTO_0001005 ;
     rdfs:label "10. Philharmonisches Konzert, Convent-Garten (Hamburg) / Großer Saal, 20.3.1903, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1902-1903-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1903-03-20T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1903-03-20T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026862>,
-        <https://d-nb.info/gnd/300033362>,
-        <https://d-nb.info/gnd/300133731>,
-        <https://d-nb.info/gnd/300170068> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1902-1903-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026862>,
-        <https://d-nb.info/gnd/300033362>,
-        <https://d-nb.info/gnd/300133731>,
-        <https://d-nb.info/gnd/300170068>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/convent-garten-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204580748> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033362> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133731> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026862> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183465659> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174586672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217003153> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170068> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1890-1924>,
-        <https://performance.musiconn.de/work/introduction-et-rondo-capriccioso-saint-saens-camille>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-cs-54-d-dur-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/lohengrin-vorspiel-wagner-richard>,
-        <https://performance.musiconn.de/work/psalmen-chor-blechblaeser-pauken-harfe-barth-richard>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-68-c-moll-brahms-johannes>,
-        <https://viaf.org/viaf/174586672>,
-        <https://viaf.org/viaf/183465659>,
-        <https://viaf.org/viaf/204580748>,
-        <https://viaf.org/viaf/217003153> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/convent-garten-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/174586672>,
-        <https://viaf.org/viaf/183465659>,
-        <https://viaf.org/viaf/204580748>,
-        <https://viaf.org/viaf/217003153> .
+        <https://performance.musiconn.de/work/psalmen-chor-blechblaeser-pauken-harfe-barth-richard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174586672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183465659> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204580748> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217003153> a nfdicore:NFDI_0001010 .
 

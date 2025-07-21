@@ -1,38 +1,51 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1217210415> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1217210687> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1217210814> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4007768-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-borna-1989-10-19> ] .
 
-<https://performance.musiconn.de/event/konzert-borna-1989-10-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-borna-1989-10-19> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Borna, 19.10.1989" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1989-10-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1989-10-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1217210415>,
-        <https://d-nb.info/gnd/1217210687>,
-        <https://d-nb.info/gnd/1217210814>,
-        <https://d-nb.info/gnd/4007768-8> ;
-    cto:relatedItem <https://d-nb.info/gnd/1217210415>,
-        <https://d-nb.info/gnd/1217210687>,
-        <https://d-nb.info/gnd/1217210814>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1989-dresden-eigenverlag-der-saechsischen-landesbibliothek-dresden-1990>,
-        <https://performance.musiconn.de/work/divertimenti-orchester-1989-marsch-wallborn-hartmut>,
-        <https://performance.musiconn.de/work/divertimenti-orchester-1989-prolog-wallborn-hartmut>,
-        <https://performance.musiconn.de/work/divertimenti-orchester-1989-scherzo-wallborn-hartmut>,
-        <https://viaf.org/viaf/1890160001831530300006>,
-        <https://viaf.org/viaf/3500160001836330300007>,
-        <https://viaf.org/viaf/4641160001839730300000> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4007768-8>,
-        <https://viaf.org/viaf/238329927> ;
-    cto:viaf <https://viaf.org/viaf/1890160001831530300006>,
-        <https://viaf.org/viaf/238329927>,
-        <https://viaf.org/viaf/3500160001836330300007>,
-        <https://viaf.org/viaf/4641160001839730300000> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/238329927> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4007768-8> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1217210814> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3500160001836330300007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1890160001831530300006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1217210687> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4641160001839730300000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1217210415> ],
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1989-dresden-eigenverlag-der-saechsischen-landesbibliothek-dresden-1990> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1890160001831530300006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/238329927> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3500160001836330300007> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4641160001839730300000> a nfdicore:NFDI_0001010 .
 

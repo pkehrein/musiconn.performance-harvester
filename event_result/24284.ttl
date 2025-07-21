@@ -1,41 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300006764> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300008872> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300872178> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4535431-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-marktkirche-sankt-johannes-magdeburg-2010-03-14> ] .
 
-<https://performance.musiconn.de/event/konzert-marktkirche-sankt-johannes-magdeburg-2010-03-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-marktkirche-sankt-johannes-magdeburg-2010-03-14> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Marktkirche Sankt Johannes (Magdeburg), 14.3.2010" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2010-03-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2010-03-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300006764>,
-        <https://d-nb.info/gnd/300008872>,
-        <https://d-nb.info/gnd/300872178>,
-        <https://d-nb.info/gnd/4535431-5> ;
-    cto:relatedItem <https://d-nb.info/gnd/300006764>,
-        <https://d-nb.info/gnd/300008872>,
-        <https://d-nb.info/gnd/300872178>,
-        <https://performance.musiconn.de/source/motettenbuch-2009-10-2>,
-        <https://performance.musiconn.de/work/himmelskoenig-sei-willkommen-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/jauchzet-dem-herrn-alle-welt>,
-        <https://performance.musiconn.de/work/psalm-71-telemann-georg-philipp>,
-        <https://performance.musiconn.de/work/wie-schoen-leuchtet-der-morgenstern-bach-johann-sebastian>,
-        <https://viaf.org/viaf/175151659>,
-        <https://viaf.org/viaf/175874309>,
-        <https://viaf.org/viaf/180237500>,
-        <https://viaf.org/viaf/3763151595772405470007> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4535431-5>,
-        <https://viaf.org/viaf/245830511> ;
-    cto:viaf <https://viaf.org/viaf/175151659>,
-        <https://viaf.org/viaf/175874309>,
-        <https://viaf.org/viaf/180237500>,
-        <https://viaf.org/viaf/245830511>,
-        <https://viaf.org/viaf/3763151595772405470007> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4535431-5> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/245830511> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3763151595772405470007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300006764> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300008872> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175151659> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180237500> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300872178> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175874309> ],
+        <https://performance.musiconn.de/source/motettenbuch-2009-10-2> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175151659> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175874309> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180237500> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/245830511> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3763151595772405470007> a nfdicore:NFDI_0001010 .
 

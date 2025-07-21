@@ -1,56 +1,74 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1047656086> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300004664> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300006659> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300180292> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300335652> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300352840> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zweiter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1929-10-25-19-30> ] .
 
-<https://performance.musiconn.de/event/zweiter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1929-10-25-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zweiter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1929-10-25-19-30> a cto:CTO_0001005 ;
     rdfs:label "Zweiter Kammermusik-Abend, Kleiner Konzertsaal (Frankfurt a. M.), 25.10.1929, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1929-1930> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1929-10-25T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1929-10-25T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1047656086>,
-        <https://d-nb.info/gnd/300004664>,
-        <https://d-nb.info/gnd/300006659>,
-        <https://d-nb.info/gnd/300180292>,
-        <https://d-nb.info/gnd/300335652>,
-        <https://d-nb.info/gnd/300352840> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1929-1930> ;
-    cto:relatedItem <https://d-nb.info/gnd/1047656086>,
-        <https://d-nb.info/gnd/300004664>,
-        <https://d-nb.info/gnd/300006659>,
-        <https://d-nb.info/gnd/300180292>,
-        <https://d-nb.info/gnd/300335652>,
-        <https://d-nb.info/gnd/300352840>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306361100> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300335652> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300352840> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1047656086> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178199555> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300004664> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300006659> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205767065> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183832488> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300180292> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203705732> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207915428> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
         <https://performance.musiconn.de/work/alma-mia-dove-ten-vai-gagliano-marco-da>,
         <https://performance.musiconn.de/work/ecco-laurora-perez-david>,
         <https://performance.musiconn.de/work/fatal-forza-hasse-johann-adolf>,
-        <https://performance.musiconn.de/work/italienisches-konzert-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/la-liberta-e-palinodia-a-nice-quando-lo-stral-spezzai-paisiello-giovanni>,
         <https://performance.musiconn.de/work/lontananza-crudel-steffani-agostino>,
-        <https://performance.musiconn.de/work/madrigale-buch-1-baci-soavi-e-cari-monteverdi-claudio>,
-        <https://performance.musiconn.de/work/o-mirate-che-portenti-carissimi-giacomo>,
-        <https://performance.musiconn.de/work/sonaten-klavier-w-a-1-6-nr-6-bach-johann-christian>,
-        <https://performance.musiconn.de/work/stabat-mater-1841-quando-corpus-morietur-rossini-gioachino>,
-        <https://performance.musiconn.de/work/vo-cercando-fra-le-ombre-astorga-emanuele-d>,
-        <https://viaf.org/viaf/178199555>,
-        <https://viaf.org/viaf/183832488>,
-        <https://viaf.org/viaf/203705732>,
-        <https://viaf.org/viaf/205767065>,
-        <https://viaf.org/viaf/207915428>,
-        <https://viaf.org/viaf/306361100> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/178199555>,
-        <https://viaf.org/viaf/183832488>,
-        <https://viaf.org/viaf/203705732>,
-        <https://viaf.org/viaf/205767065>,
-        <https://viaf.org/viaf/207915428>,
-        <https://viaf.org/viaf/306361100> .
+        <https://performance.musiconn.de/work/o-mirate-che-portenti-carissimi-giacomo> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178199555> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183832488> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203705732> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205767065> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207915428> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/306361100> a nfdicore:NFDI_0001010 .
 

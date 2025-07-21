@@ -1,43 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300080468> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300223897> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300238606> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4217158-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sowjetunion-1-90-1-kaunas-1990-02-09-19-30> ] .
 
-<https://performance.musiconn.de/event/sowjetunion-1-90-1-kaunas-1990-02-09-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sowjetunion-1-90-1-kaunas-1990-02-09-19-30> a cto:CTO_0001005 ;
     rdfs:label "Sowjetunion 1/90/1, Kaunas, 9.2.1990, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/tournee-sowjetunion-1990> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1990-02-09T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1990-02-09T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300080468>,
-        <https://d-nb.info/gnd/300223897>,
-        <https://d-nb.info/gnd/300238606>,
-        <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/4217158-1> ;
-    cto:itemOf <https://performance.musiconn.de/series/tournee-sowjetunion-1990> ;
-    cto:relatedItem <https://d-nb.info/gnd/300080468>,
-        <https://d-nb.info/gnd/300223897>,
-        <https://d-nb.info/gnd/300238606>,
-        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/fantasiestuecke-fl-kl-1988-kagel-mauricio>,
-        <https://performance.musiconn.de/work/fuerst-igor-strawinsky-kagel-mauricio>,
-        <https://performance.musiconn.de/work/variete-kagel-mauricio>,
-        <https://viaf.org/viaf/192573767>,
-        <https://viaf.org/viaf/199706815>,
-        <https://viaf.org/viaf/213971176> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4217158-1>,
-        <https://viaf.org/viaf/487145424523486830313> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/192573767>,
-        <https://viaf.org/viaf/199706815>,
-        <https://viaf.org/viaf/213971176>,
-        <https://viaf.org/viaf/487145424523486830313> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/487145424523486830313> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4217158-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300223897> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300238606> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199706815> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300080468> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213971176> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192573767> ],
+        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192573767> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199706815> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213971176> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/487145424523486830313> a nfdicore:NFDI_0001010 .
 

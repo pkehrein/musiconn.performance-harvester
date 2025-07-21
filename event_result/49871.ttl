@@ -1,49 +1,59 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1286602629> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300254253> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300515243> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300874685> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-kammermusik-abend-alte-oper-frankfurt-am-main-mozartsaal-1995-03-21-20-00> ] .
 
-<https://performance.musiconn.de/event/6-kammermusik-abend-alte-oper-frankfurt-am-main-mozartsaal-1995-03-21-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-kammermusik-abend-alte-oper-frankfurt-am-main-mozartsaal-1995-03-21-20-00> a cto:CTO_0001005 ;
     rdfs:label "6. Kammermusik-Abend, Alte Oper (Frankfurt am Main) / Mozartsaal, 21.3.1995, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1994-1995> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1995-03-21T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1995-03-21T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1286602629>,
-        <https://d-nb.info/gnd/300254253>,
-        <https://d-nb.info/gnd/300515243>,
-        <https://d-nb.info/gnd/300874685> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1994-1995> ;
-    cto:relatedItem <https://d-nb.info/gnd/1286602629>,
-        <https://d-nb.info/gnd/300254253>,
-        <https://d-nb.info/gnd/300515243>,
-        <https://d-nb.info/gnd/300874685>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-am-main-mozartsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300254253> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300874685> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217025602> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300515243> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176820712> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180504428> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1286602629> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
         <https://performance.musiconn.de/work/alma-mater-ante-thorum>,
-        <https://performance.musiconn.de/work/canticum-canticorum-2-moody-ivan>,
         <https://performance.musiconn.de/work/content-desir-crecquillon-thomas>,
         <https://performance.musiconn.de/work/diversi-diversa-orant-gombert-nicolas>,
-        <https://performance.musiconn.de/work/here-in-hiding-macmillan-james>,
         <https://performance.musiconn.de/work/incantation-robinson-paul>,
         <https://performance.musiconn.de/work/kullervos-message-tormis-veljo>,
         <https://performance.musiconn.de/work/la-flours-diver-guillaume-le-vinier>,
         <https://performance.musiconn.de/work/lament-on-the-fall-of-constantinople-dufay-guillaume>,
-        <https://performance.musiconn.de/work/only-feldman-morton>,
         <https://performance.musiconn.de/work/orja-palk-tormis-veljo>,
         <https://performance.musiconn.de/work/quo-que-logre>,
-        <https://performance.musiconn.de/work/summa-paert-arvo>,
-        <https://performance.musiconn.de/work/vivre-ne-plus-crecquillon-thomas>,
-        <https://viaf.org/viaf/176820712>,
-        <https://viaf.org/viaf/180504428>,
-        <https://viaf.org/viaf/217025602> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-am-main-mozartsaal> ;
-    cto:viaf <https://viaf.org/viaf/176820712>,
-        <https://viaf.org/viaf/180504428>,
-        <https://viaf.org/viaf/217025602> .
+        <https://performance.musiconn.de/work/vivre-ne-plus-crecquillon-thomas> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176820712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180504428> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217025602> a nfdicore:NFDI_0001010 .
 

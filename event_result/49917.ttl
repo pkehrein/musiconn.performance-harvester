@@ -1,39 +1,49 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1246891239> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30017036X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300545215> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4493513-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/12-sinfoniekonzert-staatstheater-dresden-grosses-haus-1966-06-10-20-00> ] .
 
-<https://performance.musiconn.de/event/12-sinfoniekonzert-staatstheater-dresden-grosses-haus-1966-06-10-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/12-sinfoniekonzert-staatstheater-dresden-grosses-haus-1966-06-10-20-00> a cto:CTO_0001005 ;
     rdfs:label "12. Sinfoniekonzert, Staatstheater (Dresden) / Großes Haus, 10.6.1966, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/reihe-a-sinfoniekonzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1966-06-10T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1966-06-10T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1246891239>,
-        <https://d-nb.info/gnd/30017036X>,
-        <https://d-nb.info/gnd/300545215>,
-        <https://d-nb.info/gnd/4493513-4> ;
-    cto:itemOf <https://performance.musiconn.de/series/reihe-a-sinfoniekonzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1246891239>,
-        <https://d-nb.info/gnd/30017036X>,
-        <https://d-nb.info/gnd/300545215>,
-        <https://d-nb.info/gnd/4493513-4>,
-        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-1-staatskapelle-dresden-1955-1976>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-2-op-21-f-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/partita-piccola-thilman-johannes-paul>,
-        <https://performance.musiconn.de/work/siegfried-idyll-wagner-richard>,
-        <https://performance.musiconn.de/work/symphonische-adaptation-des-quintetts-es-dur-kv-614-v-w-a-mozart-dessau-paul>,
-        <https://viaf.org/viaf/1406151474935700490005>,
-        <https://viaf.org/viaf/184684908>,
-        <https://viaf.org/viaf/200790419> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/staatstheater-dresden-grosses-haus> ;
-    cto:viaf <https://viaf.org/viaf/1406151474935700490005>,
-        <https://viaf.org/viaf/184684908>,
-        <https://viaf.org/viaf/200790419> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/staatstheater-dresden-grosses-haus> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4493513-4> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300545215> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200790419> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184684908> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30017036X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1246891239> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1406151474935700490005> ],
+        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-1-staatskapelle-dresden-1955-1976> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1406151474935700490005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184684908> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200790419> a nfdicore:NFDI_0001010 .
 

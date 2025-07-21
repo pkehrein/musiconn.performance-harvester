@@ -1,58 +1,83 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1225736943> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300016352> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300169507> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170424> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300182961> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300808208> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7626808-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/abokonzert-6-zweites-gewandhaus-leipzig-1897-11-11> ] .
 
-<https://performance.musiconn.de/event/abokonzert-6-zweites-gewandhaus-leipzig-1897-11-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/abokonzert-6-zweites-gewandhaus-leipzig-1897-11-11> a cto:CTO_0001005 ;
     rdfs:label "Abokonzert 6, Zweites Gewandhaus (Leipzig), 11.11.1897" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1897-11-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1897-11-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1225736943>,
-        <https://d-nb.info/gnd/300016352>,
-        <https://d-nb.info/gnd/300169507>,
-        <https://d-nb.info/gnd/300170424>,
-        <https://d-nb.info/gnd/300182961>,
-        <https://d-nb.info/gnd/300808208>,
-        <https://d-nb.info/gnd/4439652-1>,
-        <https://d-nb.info/gnd/7626808-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/1225736943>,
-        <https://d-nb.info/gnd/300016352>,
-        <https://d-nb.info/gnd/300169507>,
-        <https://d-nb.info/gnd/300170424>,
-        <https://d-nb.info/gnd/300182961>,
-        <https://d-nb.info/gnd/300808208>,
-        <https://d-nb.info/gnd/7626808-1>,
-        <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
-        <https://performance.musiconn.de/work/gesaenge-op-21-willkommen-mein-wald-franz-robert>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-33-a-moll-volkmann-robert>,
-        <https://performance.musiconn.de/work/liederkreis-op-39-intermezzo-schumann-robert>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-12-haydn-joseph>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-36-d-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/tannhaeuser-und-der-saengerkrieg-auf-wartburg-dich-teure-halle-gruess-ich-wieder-wagner-richard>,
-        <https://performance.musiconn.de/work/vor-meiner-wiege-schubert-franz>,
-        <https://viaf.org/viaf/180230191>,
-        <https://viaf.org/viaf/180876630>,
-        <https://viaf.org/viaf/185091495>,
-        <https://viaf.org/viaf/194734442>,
-        <https://viaf.org/viaf/208681899>,
-        <https://viaf.org/viaf/4084161212183240070007>,
-        <https://viaf.org/viaf/4146708017500840076> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/180230191>,
-        <https://viaf.org/viaf/180876630>,
-        <https://viaf.org/viaf/185091495>,
-        <https://viaf.org/viaf/194734442>,
-        <https://viaf.org/viaf/208681899>,
-        <https://viaf.org/viaf/264523828>,
-        <https://viaf.org/viaf/4084161212183240070007>,
-        <https://viaf.org/viaf/4146708017500840076> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180230191> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300169507> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170424> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185091495> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4146708017500840076> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7626808-1> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300808208> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180876630> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225736943> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194734442> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016352> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300182961> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208681899> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4084161212183240070007> ],
+        <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180230191> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180876630> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185091495> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194734442> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208681899> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4084161212183240070007> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4146708017500840076> a nfdicore:NFDI_0001010 .
 

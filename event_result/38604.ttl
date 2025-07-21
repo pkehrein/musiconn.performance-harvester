@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300024770> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30002567X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110758> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30059075X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-philharmonisches-konzert-stadtschuetzenhaus-halle-grosser-saal-1933-04-07-19-45> ] .
 
-<https://performance.musiconn.de/event/7-philharmonisches-konzert-stadtschuetzenhaus-halle-grosser-saal-1933-04-07-19-45> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-philharmonisches-konzert-stadtschuetzenhaus-halle-grosser-saal-1933-04-07-19-45> a cto:CTO_0001005 ;
     rdfs:label "7. Philharmonisches Konzert, Stadtschützenhaus (Halle) / Großer Saal, 7.4.1933, 19:45" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1932-1933> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1933-04-07T19:45:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1933-04-07T19:45:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300024770>,
-        <https://d-nb.info/gnd/30002567X>,
-        <https://d-nb.info/gnd/300110758>,
-        <https://d-nb.info/gnd/30059075X> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1932-1933> ;
-    cto:relatedItem <https://d-nb.info/gnd/300024770>,
-        <https://d-nb.info/gnd/30002567X>,
-        <https://d-nb.info/gnd/300110758>,
-        <https://d-nb.info/gnd/30059075X>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/akademische-festouvertuere-brahms-johannes>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-77-d-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/serenaden-orchester-kv-320-d-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/serenaden-orchester-op-15-fiedler-max>,
-        <https://viaf.org/viaf/174207677>,
-        <https://viaf.org/viaf/175407519>,
-        <https://viaf.org/viaf/214736935>,
-        <https://viaf.org/viaf/214751455> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/stadtschuetzenhaus-halle-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/174207677>,
-        <https://viaf.org/viaf/175407519>,
-        <https://viaf.org/viaf/214736935>,
-        <https://viaf.org/viaf/214751455> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/stadtschuetzenhaus-halle-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300024770> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175407519> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214751455> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110758> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30059075X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174207677> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30002567X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214736935> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174207677> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175407519> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214736935> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214751455> a nfdicore:NFDI_0001010 .
 

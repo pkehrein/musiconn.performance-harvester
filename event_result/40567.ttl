@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300029209> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300113056> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300318790> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300808216> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-philharmonisches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1956-01-29-19-00> ] .
 
-<https://performance.musiconn.de/event/6-philharmonisches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1956-01-29-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-philharmonisches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1956-01-29-19-00> a cto:CTO_0001005 ;
     rdfs:label "6. Philharmonisches Konzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 29.1.1956, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1955-1956> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1956-01-29T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1956-01-29T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300029209>,
-        <https://d-nb.info/gnd/300113056>,
-        <https://d-nb.info/gnd/300318790>,
-        <https://d-nb.info/gnd/300808216> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1955-1956> ;
-    cto:relatedItem <https://d-nb.info/gnd/300029209>,
-        <https://d-nb.info/gnd/300113056>,
-        <https://d-nb.info/gnd/300318790>,
-        <https://d-nb.info/gnd/300808216>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/eine-nacht-auf-dem-kahlen-berge-musorgskij-modest-petrovic>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-1-op-26-g-moll-bruch-max>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-102-b-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-cilensek-johann>,
-        <https://viaf.org/viaf/184285928>,
-        <https://viaf.org/viaf/201852567>,
-        <https://viaf.org/viaf/203713875>,
-        <https://viaf.org/viaf/219160905> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/184285928>,
-        <https://viaf.org/viaf/201852567>,
-        <https://viaf.org/viaf/203713875>,
-        <https://viaf.org/viaf/219160905> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300808216> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201852567> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219160905> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300318790> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203713875> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184285928> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300113056> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029209> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/184285928> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201852567> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203713875> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219160905> a nfdicore:NFDI_0001010 .
 

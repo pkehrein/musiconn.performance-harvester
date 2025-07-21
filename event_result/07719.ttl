@@ -1,54 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1071676814> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1182931855> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300351658> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300387571> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300394047> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-des-dresdner-orpheus-gewerbehaus-dresden-gewerbehaus-saal-1894-02-01-19-30> ] .
 
-<https://performance.musiconn.de/event/konzert-des-dresdner-orpheus-gewerbehaus-dresden-gewerbehaus-saal-1894-02-01-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-des-dresdner-orpheus-gewerbehaus-dresden-gewerbehaus-saal-1894-02-01-19-30> a cto:CTO_0001005 ;
     rdfs:label "Konzert des Dresdner Orpheus, Gewerbehaus (Dresden). Gewerbehaus-Saal, 1.2.1894, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1893-1894> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1894-02-01T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1894-02-01T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1071676814>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/1182931855>,
-        <https://d-nb.info/gnd/300351658>,
-        <https://d-nb.info/gnd/300387571>,
-        <https://d-nb.info/gnd/300394047> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1893-1894> ;
-    cto:relatedItem <https://d-nb.info/gnd/1071676814>,
-        <https://d-nb.info/gnd/1182931855>,
-        <https://d-nb.info/gnd/300351658>,
-        <https://d-nb.info/gnd/300387571>,
-        <https://d-nb.info/gnd/300394047>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300351658> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/926155566422413380006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219169426> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213975322> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1182931855> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1071676814> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300387571> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215931060> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300394047> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1893-1894>,
         <https://performance.musiconn.de/work/die-zauberfloete-arie-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/etudes-caracteristiques-si-oiseau-jetais-henselt-adolf-von>,
         <https://performance.musiconn.de/work/guillaume-tell-rezitativ-und-kavatine-rossini-gioachino>,
         <https://performance.musiconn.de/work/herrat-ouvertuere-draeseke-felix>,
         <https://performance.musiconn.de/work/im-maien-doering-carl-heinrich>,
-        <https://performance.musiconn.de/work/lieder-op-33-der-traeumende-see-schumann-robert>,
-        <https://performance.musiconn.de/work/lieder-op-49-wunderbar-ist-mir-geschehn-hauptmann-moritz>,
         <https://performance.musiconn.de/work/phyllis-und-die-mutter-fassung>,
         <https://performance.musiconn.de/work/praeludien-b-dur-chopin-frederic>,
-        <https://performance.musiconn.de/work/sinfonische-konzerte-klavier-orchester-nr-3-op-45-es-dur-litolff-henry>,
         <https://performance.musiconn.de/work/sommernacht-kluge-albert>,
         <https://performance.musiconn.de/work/sonaten-violoncello-klavier-op-18-d-dur-praeludium-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/totenvolk-hegar-friedrich>,
-        <https://performance.musiconn.de/work/untreue-silcher-friedrich>,
-        <https://viaf.org/viaf/213975322>,
-        <https://viaf.org/viaf/215931060>,
-        <https://viaf.org/viaf/219169426>,
-        <https://viaf.org/viaf/926155566422413380006> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/213975322>,
-        <https://viaf.org/viaf/215931060>,
-        <https://viaf.org/viaf/219169426>,
-        <https://viaf.org/viaf/926155566422413380006> .
+        <https://performance.musiconn.de/work/untreue-silcher-friedrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/213975322> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215931060> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219169426> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/926155566422413380006> a nfdicore:NFDI_0001010 .
 

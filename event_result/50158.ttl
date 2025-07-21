@@ -1,56 +1,73 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1071676814> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1257244191> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1259539261> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1259546977> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300017863> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300070098> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300204515> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1854-03-06-18-00> ] .
 
-<https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1854-03-06-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1854-03-06-18-00> a cto:CTO_0001005 ;
     rdfs:label "Haupt-Prüfung am Conservatorium der Musik zu Leipzig, Erstes Gewandhaus (Leipzig), 6.3.1854, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/pruefung> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1854-03-06T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1854-03-06T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1071676814>,
-        <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/1257244191>,
-        <https://d-nb.info/gnd/1259539261>,
-        <https://d-nb.info/gnd/1259546977>,
-        <https://d-nb.info/gnd/300017863>,
-        <https://d-nb.info/gnd/300070098>,
-        <https://d-nb.info/gnd/300204515> ;
-    cto:itemOf <https://performance.musiconn.de/series/pruefung> ;
-    cto:relatedItem <https://d-nb.info/gnd/1071676814>,
-        <https://d-nb.info/gnd/1257244191>,
-        <https://d-nb.info/gnd/1259539261>,
-        <https://d-nb.info/gnd/1259546977>,
-        <https://d-nb.info/gnd/300017863>,
-        <https://d-nb.info/gnd/300070098>,
-        <https://d-nb.info/gnd/300204515>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1071676814> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1259546977> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1259539261> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1257244191> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178466744> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300017863> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300204515> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300070098> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180263900> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182487746> ],
         <https://performance.musiconn.de/source/konservatorium-der-musik-hochschule-fuer-musik-konzertprogramme-1843-1948>,
         <https://performance.musiconn.de/source/konservatorium-der-musik-hochschule-fuer-musik-pruefungsprotokolle>,
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-gegr-1834-von-robert-schumann>,
         <https://performance.musiconn.de/source/signale-fuer-die-musikalische-welt>,
-        <https://performance.musiconn.de/work/die-schoepfung-nun-beut-die-flur-das-frische-gruen-haydn-joseph>,
         <https://performance.musiconn.de/work/fantasie-violoncello-kummer-friedrich-august>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-4-op-64-e-dur-allegro-maestoso-moscheles-ignaz>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-23-allegro-david-ferdinand>,
-        <https://performance.musiconn.de/work/norma-casta-diva-bellini-vincenzo>,
-        <https://performance.musiconn.de/work/serenade-und-allegro-giojoso-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/sinfonien-langert-august>,
-        <https://performance.musiconn.de/work/sinfonische-konzerte-klavier-orchester-nr-3-op-45-es-dur-litolff-henry>,
-        <https://performance.musiconn.de/work/variationen-violine-orchester-david-ferdinand>,
-        <https://viaf.org/viaf/178466744>,
-        <https://viaf.org/viaf/180263900>,
-        <https://viaf.org/viaf/182487746> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/178466744>,
-        <https://viaf.org/viaf/180263900>,
-        <https://viaf.org/viaf/182487746>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/work/variationen-violine-orchester-david-ferdinand> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178466744> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180263900> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182487746> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

@@ -4,24 +4,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1138800252> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/lecole-des-femmes-hotel-de-conde-paris-1680-02-00> ] .
 
-<https://performance.musiconn.de/event/lecole-des-femmes-hotel-de-conde-paris-1680-02-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/lecole-des-femmes-hotel-de-conde-paris-1680-02-00> a cto:CTO_0001005 ;
     rdfs:label "L'École des femmes, Hôtel de Condé (Paris), 2/1680" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1680-02-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1680-02-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1138800252> ;
-    cto:relatedItem <https://performance.musiconn.de/source/beauchamps-1735-bd-3-81-82>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/9235150382271513500007> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1138800252> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/beauchamps-1735-bd-3-81-82>,
         <https://performance.musiconn.de/source/hourcade-2002-294>,
         <https://performance.musiconn.de/source/mercure-galant-1680-bd-3-216>,
         <https://performance.musiconn.de/source/onlinequelle-154>,
         <https://performance.musiconn.de/work/lecole-des-femmes> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1138800252>,
-        <https://viaf.org/viaf/9235150382271513500007> ;
-    cto:viaf <https://viaf.org/viaf/9235150382271513500007> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/9235150382271513500007> a nfdicore:NFDI_0001010 .
 

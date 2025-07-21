@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300093926> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300157576> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30026884X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4264112-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-montags-konzert-staedtische-buehnen-frankfurt-am-main-oper-1971-09-13> ] .
 
-<https://performance.musiconn.de/event/1-montags-konzert-staedtische-buehnen-frankfurt-am-main-oper-1971-09-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-montags-konzert-staedtische-buehnen-frankfurt-am-main-oper-1971-09-13> a cto:CTO_0001005 ;
     rdfs:label "1. Montags-Konzert, Städtische Bühnen (Frankfurt am Main) / Oper, 13.9.1971" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1971-1972> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1971-09-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1971-09-13" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300093926>,
-        <https://d-nb.info/gnd/300157576>,
-        <https://d-nb.info/gnd/30026884X>,
-        <https://d-nb.info/gnd/4264112-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1971-1972> ;
-    cto:relatedItem <https://d-nb.info/gnd/300093926>,
-        <https://d-nb.info/gnd/300157576>,
-        <https://d-nb.info/gnd/30026884X>,
-        <https://d-nb.info/gnd/4264112-3>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/bajka-stravinsky-igor>,
-        <https://performance.musiconn.de/work/grande-ouverture-du-roi-lear-berlioz-hector>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-r-455-es-dur-liszt-franz>,
-        <https://performance.musiconn.de/work/till-eulenspiegels-lustige-streiche-strauss-richard>,
-        <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/177459508>,
-        <https://viaf.org/viaf/185147632>,
-        <https://viaf.org/viaf/199703437> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-oper> ;
-    cto:viaf <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/177459508>,
-        <https://viaf.org/viaf/185147632>,
-        <https://viaf.org/viaf/199703437> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-oper> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177459508> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199703437> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185147632> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30026884X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4264112-3> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175221377> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093926> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157576> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175221377> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177459508> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185147632> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199703437> a nfdicore:NFDI_0001010 .
 

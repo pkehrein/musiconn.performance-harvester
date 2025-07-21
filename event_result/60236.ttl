@@ -1,54 +1,73 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1072475987> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1077121687> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1292097825> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30053390X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300661886> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300806000> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/301018790> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-auffuehrungsabend-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1970-10-28-20-00> ] .
 
-<https://performance.musiconn.de/event/1-auffuehrungsabend-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1970-10-28-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-auffuehrungsabend-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1970-10-28-20-00> a cto:CTO_0001005 ;
     rdfs:label "1. Aufführungsabend, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 28.10.1970, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/staatskapelle-dresden-spielzeit-1970-1971> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1970-10-28T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1970-10-28T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1072475987>,
-        <https://d-nb.info/gnd/1077121687>,
-        <https://d-nb.info/gnd/1292097825>,
-        <https://d-nb.info/gnd/30053390X>,
-        <https://d-nb.info/gnd/300661886>,
-        <https://d-nb.info/gnd/300806000>,
-        <https://d-nb.info/gnd/301018790> ;
-    cto:itemOf <https://performance.musiconn.de/series/staatskapelle-dresden-spielzeit-1970-1971> ;
-    cto:relatedItem <https://d-nb.info/gnd/1072475987>,
-        <https://d-nb.info/gnd/1077121687>,
-        <https://d-nb.info/gnd/1292097825>,
-        <https://d-nb.info/gnd/30053390X>,
-        <https://d-nb.info/gnd/300661886>,
-        <https://d-nb.info/gnd/300806000>,
-        <https://d-nb.info/gnd/301018790>,
-        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-1-staatskapelle-dresden-1955-1976>,
-        <https://performance.musiconn.de/work/kammerkonzert-hartmann-karl-amadeus>,
-        <https://performance.musiconn.de/work/klage-der-ariadne-orff-carl>,
-        <https://performance.musiconn.de/work/piccola-musica-notturna-dallapiccola-luigi>,
-        <https://performance.musiconn.de/work/sinfonischer-prolog-bothe-wolfgang>,
-        <https://performance.musiconn.de/work/thamos-koenig-in-aegypten-gottheit-ueber-alle-maechtig-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/thamos-koenig-in-aegypten-ihr-kinder-des-staubes-erzittert-und-bebet-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/thamos-koenig-in-aegypten-schon-weichet-dir-sonne-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/175604798>,
-        <https://viaf.org/viaf/175983110>,
-        <https://viaf.org/viaf/179354344>,
-        <https://viaf.org/viaf/181843188>,
-        <https://viaf.org/viaf/182783798>,
-        <https://viaf.org/viaf/183746407> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/175604798>,
-        <https://viaf.org/viaf/175983110>,
-        <https://viaf.org/viaf/179354344>,
-        <https://viaf.org/viaf/181843188>,
-        <https://viaf.org/viaf/182783798>,
-        <https://viaf.org/viaf/183746407> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175604798> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301018790> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179354344> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182783798> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300806000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1077121687> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300661886> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175983110> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183746407> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1072475987> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181843188> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1292097825> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30053390X> ],
+        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-1-staatskapelle-dresden-1955-1976> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175604798> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175983110> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179354344> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181843188> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182783798> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183746407> a nfdicore:NFDI_0001010 .
 

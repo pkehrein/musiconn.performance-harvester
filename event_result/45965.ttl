@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300054211> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171463> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300703635> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-11-01> ] .
 
-<https://performance.musiconn.de/event/3-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-11-01> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-11-01> a cto:CTO_0001005 ;
     rdfs:label "3. Philharmonisches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 1.11.1926" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1926-1927-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1926-11-01" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1926-11-01" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300054211>,
-        <https://d-nb.info/gnd/300171463>,
-        <https://d-nb.info/gnd/300703635> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1926-1927-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300054211>,
-        <https://d-nb.info/gnd/300171463>,
-        <https://d-nb.info/gnd/300703635>,
-        <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1925-1937>,
-        <https://performance.musiconn.de/work/euryanthe-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-10-g-moll-sgambati-giovanni>,
-        <https://performance.musiconn.de/work/sinfonien-fwv-48-d-moll-franck-cesar>,
-        <https://viaf.org/viaf/188280263>,
-        <https://viaf.org/viaf/213966526>,
-        <https://viaf.org/viaf/315209867> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/188280263>,
-        <https://viaf.org/viaf/213966526>,
-        <https://viaf.org/viaf/315209867> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171463> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315209867> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300054211> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300703635> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188280263> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213966526> ],
+        <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1925-1937> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/188280263> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213966526> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315209867> a nfdicore:NFDI_0001010 .
 

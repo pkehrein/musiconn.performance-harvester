@@ -1,40 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1220669369> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1220669806> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/122067057X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1220671045> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-erweiterte-oberschule-j-r-becher-jena-aula-1990-06-16> ] .
 
-<https://performance.musiconn.de/event/konzert-erweiterte-oberschule-j-r-becher-jena-aula-1990-06-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-erweiterte-oberschule-j-r-becher-jena-aula-1990-06-16> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Erweiterte Oberschule \"J. R. Becher\" (Jena) / Aula, 16.6.1990" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1990-06-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1990-06-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1220669369>,
-        <https://d-nb.info/gnd/1220669806>,
-        <https://d-nb.info/gnd/122067057X>,
-        <https://d-nb.info/gnd/1220671045> ;
-    cto:relatedItem <https://d-nb.info/gnd/1220669369>,
-        <https://d-nb.info/gnd/1220669806>,
-        <https://d-nb.info/gnd/122067057X>,
-        <https://d-nb.info/gnd/1220671045>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1990-dresden-saechsische-landesbibliothek-dresden-1991>,
-        <https://performance.musiconn.de/work/auf-reisen-haensel-lutz>,
-        <https://performance.musiconn.de/work/im-dunkel-der-nacht-haensel-lutz>,
-        <https://performance.musiconn.de/work/kleiner-wettstreit-haensel-lutz>,
-        <https://performance.musiconn.de/work/maerchen-haensel-lutz>,
-        <https://viaf.org/viaf/1579160486174205180009>,
-        <https://viaf.org/viaf/2458160486074405180009>,
-        <https://viaf.org/viaf/3807160486079305180006>,
-        <https://viaf.org/viaf/4157160486115105180006> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/erweiterte-oberschule-j-r-becher-jena-aula> ;
-    cto:viaf <https://viaf.org/viaf/1579160486174205180009>,
-        <https://viaf.org/viaf/2458160486074405180009>,
-        <https://viaf.org/viaf/3807160486079305180006>,
-        <https://viaf.org/viaf/4157160486115105180006> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/erweiterte-oberschule-j-r-becher-jena-aula> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1220669806> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1220669369> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3807160486079305180006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1579160486174205180009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/122067057X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4157160486115105180006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2458160486074405180009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1220671045> ],
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1990-dresden-saechsische-landesbibliothek-dresden-1991> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1579160486174205180009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2458160486074405180009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3807160486079305180006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4157160486115105180006> a nfdicore:NFDI_0001010 .
 

@@ -1,54 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300119739> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300186096> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300492030> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300546440> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300835825> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4433695-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gruber-1-88-1-koelner-philharmonie-koeln-1988-01-16> ] .
 
-<https://performance.musiconn.de/event/gruber-1-88-1-koelner-philharmonie-koeln-1988-01-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gruber-1-88-1-koelner-philharmonie-koeln-1988-01-16> a cto:CTO_0001005 ;
     rdfs:label "Gruber 1/88/1, Kölner Philharmonie (Köln), 16.1.1988" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-01-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-01-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300119739>,
-        <https://d-nb.info/gnd/300186096>,
-        <https://d-nb.info/gnd/300492030>,
-        <https://d-nb.info/gnd/300546440>,
-        <https://d-nb.info/gnd/300835825>,
-        <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/4433695-0> ;
-    cto:relatedItem <https://d-nb.info/gnd/300119739>,
-        <https://d-nb.info/gnd/300186096>,
-        <https://d-nb.info/gnd/300492030>,
-        <https://d-nb.info/gnd/300546440>,
-        <https://d-nb.info/gnd/300835825>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4433695-0> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/239180838> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185014539> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300119739> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300186096> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192574632> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218094124> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300546440> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300835825> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194734881> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300492030> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178833995> ],
         <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/a-jazz-symphony-antheil-george>,
-        <https://performance.musiconn.de/work/frankenstein-1979-gruber-heinz-karl>,
         <https://performance.musiconn.de/work/jazz-sonata-for-ensemble-antheil-george>,
-        <https://performance.musiconn.de/work/kammer-symphonie-soiree-tyrolienne-pirchner-werner>,
-        <https://performance.musiconn.de/work/konzerte-maultrommel-mandola-orch-albrechtsberger-johann-georg>,
-        <https://performance.musiconn.de/work/songs-for-a-mad-king-davies-peter-maxwell>,
-        <https://performance.musiconn.de/work/twilight-music-schwertsik-kurt>,
-        <https://viaf.org/viaf/178833995>,
-        <https://viaf.org/viaf/185014539>,
-        <https://viaf.org/viaf/192574632>,
-        <https://viaf.org/viaf/194734881>,
-        <https://viaf.org/viaf/218094124> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4433695-0>,
-        <https://viaf.org/viaf/239180838> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/178833995>,
-        <https://viaf.org/viaf/185014539>,
-        <https://viaf.org/viaf/192574632>,
-        <https://viaf.org/viaf/194734881>,
-        <https://viaf.org/viaf/218094124>,
-        <https://viaf.org/viaf/239180838> .
+        <https://performance.musiconn.de/work/twilight-music-schwertsik-kurt> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178833995> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185014539> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192574632> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194734881> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218094124> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/239180838> a nfdicore:NFDI_0001010 .
 

@@ -1,39 +1,48 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/104506503X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010265> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300090374> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sechster-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1937-01-29-20-00> ] .
 
-<https://performance.musiconn.de/event/sechster-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1937-01-29-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sechster-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1937-01-29-20-00> a cto:CTO_0001005 ;
     rdfs:label "Sechster Kammermusik-Abend, Kleiner Konzertsaal (Frankfurt a. M.), 29.1.1937, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1936-1937> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1937-01-29T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1937-01-29T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/104506503X>,
-        <https://d-nb.info/gnd/300010265>,
-        <https://d-nb.info/gnd/300090374> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1936-1937> ;
-    cto:relatedItem <https://d-nb.info/gnd/104506503X>,
-        <https://d-nb.info/gnd/300010265>,
-        <https://d-nb.info/gnd/300090374>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010265> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207911449> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305435821> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210937541> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300090374> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/104506503X> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
         <https://performance.musiconn.de/work/duos-viola-damore-viola-da-gamba-milandre>,
-        <https://performance.musiconn.de/work/ouvertueren-und-sonaten-violine-2-basso-continuo-op-13-sonate-nr-1-leclair-jean-marie>,
-        <https://performance.musiconn.de/work/partiten-klavier-bwv-825-830-nr-4-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/sonaten-viola-da-gamba-basso-continuo-twv-41-e-5-e-moll-telemann-georg-philipp>,
-        <https://performance.musiconn.de/work/sonaten-viola-damore-basso-continuo-d-dur-stamitz-carl>,
-        <https://performance.musiconn.de/work/trios-viola-damore-viola-da-gamba-basso-continuo-g-dur-loeillet-jean-baptiste>,
-        <https://viaf.org/viaf/207911449>,
-        <https://viaf.org/viaf/210937541>,
-        <https://viaf.org/viaf/305435821> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/207911449>,
-        <https://viaf.org/viaf/210937541>,
-        <https://viaf.org/viaf/305435821> .
+        <https://performance.musiconn.de/work/trios-viola-damore-viola-da-gamba-basso-continuo-g-dur-loeillet-jean-baptiste> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/207911449> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210937541> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305435821> a nfdicore:NFDI_0001010 .
 

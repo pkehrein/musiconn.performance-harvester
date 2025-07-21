@@ -1,52 +1,71 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300036566> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300042779> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109873> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141785> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300588666> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/viertes-abonnement-concert-zweites-gewandhaus-leipzig-1884-12-18> ] .
 
-<https://performance.musiconn.de/event/viertes-abonnement-concert-zweites-gewandhaus-leipzig-1884-12-18> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/viertes-abonnement-concert-zweites-gewandhaus-leipzig-1884-12-18> a cto:CTO_0001005 ;
     rdfs:label "Viertes Abonnement-Concert, Zweites Gewandhaus (Leipzig), 18.12.1884" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1884-12-18" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1884-12-18" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300036566>,
-        <https://d-nb.info/gnd/300042779>,
-        <https://d-nb.info/gnd/300109873>,
-        <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300588666>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/300036566>,
-        <https://d-nb.info/gnd/300042779>,
-        <https://d-nb.info/gnd/300109873>,
-        <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300588666>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109873> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199717047> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178619457> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180233295> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300042779> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176199499> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300588666> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174994351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300036566> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
         <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
-        <https://performance.musiconn.de/work/anacreon-ouvertuere-cherubini-luigi>,
         <https://performance.musiconn.de/work/gavotte-klengel-julius>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-nr-2-op-14-a-moll-davydov-karl-ju>,
-        <https://performance.musiconn.de/work/lakme-ou-va-la-jeune-indoue-delibes-leo>,
-        <https://performance.musiconn.de/work/le-nozze-di-figaro-giunse-alfin-il-momento-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/nocturne-d-dur-klengel-julius>,
-        <https://performance.musiconn.de/work/polonaise-a-moll-klengel-julius>,
-        <https://performance.musiconn.de/work/sinfonien-d-944-c-dur-schubert-franz>,
-        <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/176199499>,
-        <https://viaf.org/viaf/178619457>,
-        <https://viaf.org/viaf/180233295>,
-        <https://viaf.org/viaf/199717047> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/176199499>,
-        <https://viaf.org/viaf/178619457>,
-        <https://viaf.org/viaf/180233295>,
-        <https://viaf.org/viaf/199717047>,
-        <https://viaf.org/viaf/264523828> .
+        <https://performance.musiconn.de/work/polonaise-a-moll-klengel-julius> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174994351> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176199499> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178619457> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180233295> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199717047> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
 

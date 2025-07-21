@@ -1,55 +1,73 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1299970648> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037414> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300094809> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300166249> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300321961> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300342438> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-vereinskonzert-rathaus-muenster-westf-friedenssaal-1892-01-16> ] .
 
-<https://performance.musiconn.de/event/5-vereinskonzert-rathaus-muenster-westf-friedenssaal-1892-01-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-vereinskonzert-rathaus-muenster-westf-friedenssaal-1892-01-16> a cto:CTO_0001005 ;
     rdfs:label "5. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 16.1.1892" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1891-92> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1892-01-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1892-01-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1299970648>,
-        <https://d-nb.info/gnd/300037414>,
-        <https://d-nb.info/gnd/300094809>,
-        <https://d-nb.info/gnd/300166249>,
-        <https://d-nb.info/gnd/300321961>,
-        <https://d-nb.info/gnd/300342438>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1891-92> ;
-    cto:relatedItem <https://d-nb.info/gnd/1299970648>,
-        <https://d-nb.info/gnd/300037414>,
-        <https://d-nb.info/gnd/300094809>,
-        <https://d-nb.info/gnd/300166249>,
-        <https://d-nb.info/gnd/300321961>,
-        <https://d-nb.info/gnd/300342438>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300321961> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300166249> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183070691> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300342438> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178819298> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306425369> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1299970648> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300094809> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037414> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195806047> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182880938> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1891-1892>,
-        <https://performance.musiconn.de/work/episoden-aus-lenaus-faust-der-tanz-in-der-dorfschenke-fassung-klavier-liszt-franz>,
         <https://performance.musiconn.de/work/fior-di-margherita-arditi-luigi>,
         <https://performance.musiconn.de/work/kuriose-frage-reinecke-carl>,
-        <https://performance.musiconn.de/work/lieder-op-201-wildfang-taubert-wilhelm>,
-        <https://performance.musiconn.de/work/nocturnes-klavier-op-15-nr-2-fis-dur-chopin-frederic>,
         <https://performance.musiconn.de/work/polonaise-mit-vorangehendem-andante-spianato-bearbeitung-von-erdmannsdoerfer-chopin-frederic>,
         <https://performance.musiconn.de/work/praeludien-klavier-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/rigoletto-caro-nome-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/romanzen-und-balladen-singstimme-klavier-op-45-fruehlingsfahrt-schumann-robert>,
-        <https://performance.musiconn.de/work/sakuntala-goldmark-karl>,
-        <https://performance.musiconn.de/work/sonaten-und-partiten-violine-bwv-1001-1006-partita-nr-3-gavotte-en-rondeau-fassung-linke-klavierhand-bach-johann-sebastian>,
-        <https://viaf.org/viaf/178819298>,
-        <https://viaf.org/viaf/182880938>,
-        <https://viaf.org/viaf/183070691>,
-        <https://viaf.org/viaf/195806047>,
-        <https://viaf.org/viaf/306425369> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/178819298>,
-        <https://viaf.org/viaf/182880938>,
-        <https://viaf.org/viaf/183070691>,
-        <https://viaf.org/viaf/195806047>,
-        <https://viaf.org/viaf/306425369> .
+        <https://performance.musiconn.de/work/sonaten-und-partiten-violine-bwv-1001-1006-partita-nr-3-gavotte-en-rondeau-fassung-linke-klavierhand-bach-johann-sebastian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178819298> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182880938> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183070691> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195806047> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/306425369> a nfdicore:NFDI_0001010 .
 

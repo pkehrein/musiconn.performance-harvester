@@ -1,42 +1,56 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1088354793> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1190754452> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30033138X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300425929> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300729162> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/10-dresdner-abend-museumsbau-des-deutschen-hygiene-museum-dresden-2015-04-22-20-00> ] .
 
-<https://performance.musiconn.de/event/10-dresdner-abend-museumsbau-des-deutschen-hygiene-museum-dresden-2015-04-22-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/10-dresdner-abend-museumsbau-des-deutschen-hygiene-museum-dresden-2015-04-22-20-00> a cto:CTO_0001005 ;
     rdfs:label "10. Dresdner Abend, Museumsbau des Deutschen Hygiene-Museum (Dresden), 22.4.2015, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2014-2015> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2015-04-22T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2015-04-22T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1088354793>,
-        <https://d-nb.info/gnd/1190754452>,
-        <https://d-nb.info/gnd/30033138X>,
-        <https://d-nb.info/gnd/300425929>,
-        <https://d-nb.info/gnd/300729162> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2014-2015> ;
-    cto:relatedItem <https://d-nb.info/gnd/1088354793>,
-        <https://d-nb.info/gnd/30033138X>,
-        <https://d-nb.info/gnd/300425929>,
-        <https://d-nb.info/gnd/300729162>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-35-toch-ernst>,
-        <https://performance.musiconn.de/work/passacaglia-concertante-veress-sandor>,
-        <https://performance.musiconn.de/work/serenaden-streichorchester-nr-1-op-62-c-dur-volkmann-robert>,
-        <https://performance.musiconn.de/work/serenaden-streichorchester-nr-2-op-63-f-dur-volkmann-robert>,
-        <https://viaf.org/viaf/174012527>,
-        <https://viaf.org/viaf/192579845>,
-        <https://viaf.org/viaf/204599272>,
-        <https://viaf.org/viaf/206843504> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1190754452> ;
-    cto:viaf <https://viaf.org/viaf/174012527>,
-        <https://viaf.org/viaf/192579845>,
-        <https://viaf.org/viaf/204599272>,
-        <https://viaf.org/viaf/206843504> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1190754452> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174012527> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300425929> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300729162> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192579845> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206843504> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204599272> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1088354793> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30033138X> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174012527> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192579845> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204599272> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206843504> a nfdicore:NFDI_0001010 .
 

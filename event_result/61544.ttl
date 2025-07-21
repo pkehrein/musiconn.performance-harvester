@@ -1,40 +1,51 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1024521451> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101902> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145071> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/12-vereinskonzert-rathaus-muenster-westf-friedenssaal-1865-05-13> ] .
 
-<https://performance.musiconn.de/event/12-vereinskonzert-rathaus-muenster-westf-friedenssaal-1865-05-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/12-vereinskonzert-rathaus-muenster-westf-friedenssaal-1865-05-13> a cto:CTO_0001005 ;
     rdfs:label "12. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 13.5.1865" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1864-65> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1865-05-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1865-05-13" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1024521451>,
-        <https://d-nb.info/gnd/300101902>,
-        <https://d-nb.info/gnd/300145071>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1864-65> ;
-    cto:relatedItem <https://d-nb.info/gnd/1024521451>,
-        <https://d-nb.info/gnd/300101902>,
-        <https://d-nb.info/gnd/300145071>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215924093> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/258601107> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101902> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145071> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1024521451> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185197829> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1864-1865>,
-        <https://performance.musiconn.de/work/die-nachtigall-mwv-f-24-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/genoveva-ouvertuere-schumann-robert>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-mwv-o-14-e-moll-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/lieder-op-8-morgenlied-grimm-julius-otto>,
         <https://performance.musiconn.de/work/scheiden-grimm-julius-otto>,
-        <https://performance.musiconn.de/work/sinfonien-es-dur-haydn-joseph>,
-        <https://viaf.org/viaf/185197829>,
-        <https://viaf.org/viaf/215924093>,
-        <https://viaf.org/viaf/258601107> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/185197829>,
-        <https://viaf.org/viaf/215924093>,
-        <https://viaf.org/viaf/258601107> .
+        <https://performance.musiconn.de/work/sinfonien-es-dur-haydn-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185197829> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215924093> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/258601107> a nfdicore:NFDI_0001010 .
 

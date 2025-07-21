@@ -1,40 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300033907> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300457316> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300638795> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vecer-muzyki-dlja-kamernogo-orkestra-sankt-petersburger-philharmonie-2002-01-16> ] .
 
-<https://performance.musiconn.de/event/vecer-muzyki-dlja-kamernogo-orkestra-sankt-petersburger-philharmonie-2002-01-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vecer-muzyki-dlja-kamernogo-orkestra-sankt-petersburger-philharmonie-2002-01-16> a cto:CTO_0001005 ;
     rdfs:label "Večer muzyki dlja kamernogo orkestra, Sankt-Petersburger Philharmonie, 16.1.2002" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-2001-2002> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2002-01-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2002-01-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300033907>,
-        <https://d-nb.info/gnd/300457316>,
-        <https://d-nb.info/gnd/300638795>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-2001-2002> ;
-    cto:relatedItem <https://d-nb.info/gnd/300033907>,
-        <https://d-nb.info/gnd/300457316>,
-        <https://d-nb.info/gnd/300638795>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185193987> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300457316> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300638795> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212894064> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177826346> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033907> ],
         <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-2002-16-januar>,
-        <https://performance.musiconn.de/work/kammersinfonien-nr-1-op-145-weinberg-mieczyslaw>,
-        <https://performance.musiconn.de/work/pavane-for-18-strings-sharlat-yevgeniy>,
-        <https://performance.musiconn.de/work/rossijskie-fotografii-scedrin-rodion-konstantinovic>,
-        <https://performance.musiconn.de/work/sekstet-vospominanie-o-florencii-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/177826346>,
-        <https://viaf.org/viaf/185193987>,
-        <https://viaf.org/viaf/212894064> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/177826346>,
-        <https://viaf.org/viaf/185193987>,
-        <https://viaf.org/viaf/212894064> .
+        <https://performance.musiconn.de/work/pavane-for-18-strings-sharlat-yevgeniy> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177826346> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185193987> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212894064> a nfdicore:NFDI_0001010 .
 

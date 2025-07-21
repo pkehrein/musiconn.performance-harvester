@@ -1,45 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1136549722> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30002522X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026420> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/301030847> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1918-06-15-14-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1918-06-15-14-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1918-06-15-14-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 15.6.1918, 14:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1917-18> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1918-06-15T14:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1918-06-15T14:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1136549722>,
-        <https://d-nb.info/gnd/30002522X>,
-        <https://d-nb.info/gnd/300026420>,
-        <https://d-nb.info/gnd/301030847>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1917-18> ;
-    cto:relatedItem <https://d-nb.info/gnd/1136549722>,
-        <https://d-nb.info/gnd/30002522X>,
-        <https://d-nb.info/gnd/300026420>,
-        <https://d-nb.info/gnd/301030847>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185684902> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30002522X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248251685> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301030847> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185488561> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026420> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/921150033023311180009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1136549722> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/geistliches-lied-brahms-johannes>,
-        <https://performance.musiconn.de/work/konzerte-violine-streichorchester-bwv-1041-a-moll-satz-2-andante-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/motetten-op-741-lasset-uns-unser-herz-brahms-johannes>,
-        <https://performance.musiconn.de/work/praeludium-und-fuge-orgel-bwv-552-es-dur-praeludium-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/psalm-13-brahms-johannes>,
-        <https://viaf.org/viaf/185488561>,
-        <https://viaf.org/viaf/185684902>,
-        <https://viaf.org/viaf/248251685>,
-        <https://viaf.org/viaf/921150033023311180009> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/185488561>,
-        <https://viaf.org/viaf/185684902>,
-        <https://viaf.org/viaf/248189528>,
-        <https://viaf.org/viaf/248251685>,
-        <https://viaf.org/viaf/921150033023311180009> .
+        <https://performance.musiconn.de/work/motetten-op-741-lasset-uns-unser-herz-brahms-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185488561> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185684902> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248251685> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/921150033023311180009> a nfdicore:NFDI_0001010 .
 

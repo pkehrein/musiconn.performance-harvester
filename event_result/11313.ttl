@@ -1,33 +1,36 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1189103745> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-koeniglich-staedtischer-redouten-saal-olmuetz-1861-04-21> ] .
 
-<https://performance.musiconn.de/event/konzert-koeniglich-staedtischer-redouten-saal-olmuetz-1861-04-21> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-koeniglich-staedtischer-redouten-saal-olmuetz-1861-04-21> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Königlich Städtischer Redouten-Saal (Olmütz), 21.4.1861" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1861-04-21" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1861-04-21" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1189103745> ;
-    cto:relatedItem <https://d-nb.info/gnd/1189103745>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/koeniglich-staedtischer-redouten-saal-olmuetz> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8838156223672705400007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1189103745> ],
         <https://performance.musiconn.de/source/programmzettel-maenner-gesang-verein-olmuetz-vom-21041861>,
         <https://performance.musiconn.de/work/das-herzschlagen-kunze-c>,
         <https://performance.musiconn.de/work/festchor-becker-valentin-eduard>,
         <https://performance.musiconn.de/work/hymne-an-mozart-lachner-franz-paul>,
         <https://performance.musiconn.de/work/im-walde-kuecken-friedrich-wilhelm>,
         <https://performance.musiconn.de/work/lieder-op-146-was-rauschen-die-wogen-abt-franz>,
-        <https://performance.musiconn.de/work/lieder-singstimme-2-klavier-op-62-morgenwanderung-abt-franz>,
         <https://performance.musiconn.de/work/nocturne-kwizda-a>,
         <https://performance.musiconn.de/work/rhapsodie-ueber-robert-kwizda-a>,
-        <https://performance.musiconn.de/work/tenor-solo-mit-brummchor-conradin-carl>,
-        <https://viaf.org/viaf/8838156223672705400007> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/koeniglich-staedtischer-redouten-saal-olmuetz> ;
-    cto:viaf <https://viaf.org/viaf/8838156223672705400007> .
+        <https://performance.musiconn.de/work/tenor-solo-mit-brummchor-conradin-carl> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/8838156223672705400007> a nfdicore:NFDI_0001010 .
 

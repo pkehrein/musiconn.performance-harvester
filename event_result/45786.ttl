@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300019157> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300054211> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300088930> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/9-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1921-02-07-19-30> ] .
 
-<https://performance.musiconn.de/event/9-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1921-02-07-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/9-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1921-02-07-19-30> a cto:CTO_0001005 ;
     rdfs:label "9. Philharmonisches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 7.2.1921, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1920-1921-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1921-02-07T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1921-02-07T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300019157>,
-        <https://d-nb.info/gnd/300054211>,
-        <https://d-nb.info/gnd/300088930> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1920-1921-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300019157>,
-        <https://d-nb.info/gnd/300054211>,
-        <https://d-nb.info/gnd/300088930>,
-        <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1890-1924>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-d-moll-lalo-edouard>,
-        <https://performance.musiconn.de/work/le-carnaval-romain-berlioz-hector>,
-        <https://performance.musiconn.de/work/sinfonien-fwv-48-d-moll-franck-cesar>,
-        <https://viaf.org/viaf/185089854>,
-        <https://viaf.org/viaf/200778601>,
-        <https://viaf.org/viaf/213966526> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/185089854>,
-        <https://viaf.org/viaf/200778601>,
-        <https://viaf.org/viaf/213966526> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200778601> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300088930> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185089854> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300054211> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300019157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213966526> ],
+        <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1890-1924> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185089854> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200778601> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213966526> a nfdicore:NFDI_0001010 .
 

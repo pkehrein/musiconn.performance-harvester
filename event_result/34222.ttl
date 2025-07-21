@@ -1,29 +1,32 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/104920106X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/cephale-et-procris-theatre-de-la-rue-des-fosses-saint-germain-des-pres-comedie-francaise-paris-1711-10-27> ] .
 
-<https://performance.musiconn.de/event/cephale-et-procris-theatre-de-la-rue-des-fosses-saint-germain-des-pres-comedie-francaise-paris-1711-10-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/cephale-et-procris-theatre-de-la-rue-des-fosses-saint-germain-des-pres-comedie-francaise-paris-1711-10-27> a cto:CTO_0001005 ;
     rdfs:label "Céphale et Procris, Théâtre de la rue des Fossés Saint-Germain-des-Prés, Comédie-Française (Paris), 27.10.1711" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1711-10-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1711-10-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/104920106X> ;
-    cto:relatedItem <https://d-nb.info/gnd/104920106X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/theatre-de-la-rue-des-fosses-saint-germain-des-pres-comedie-francaise-paris> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/104920106X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186347676> ],
         <https://performance.musiconn.de/source/beauchamps-1735-bd-2-272>,
         <https://performance.musiconn.de/source/hourcade-2002-333>,
         <https://performance.musiconn.de/source/onlinequelle-383>,
         <https://performance.musiconn.de/source/onlinequelle-384>,
-        <https://performance.musiconn.de/source/textquelle-digitalisat-161>,
-        <https://performance.musiconn.de/work/cephale-et-procris-jacquet-de-la-guerre-elisabeth-claude>,
-        <https://viaf.org/viaf/186347676> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/theatre-de-la-rue-des-fosses-saint-germain-des-pres-comedie-francaise-paris> ;
-    cto:viaf <https://viaf.org/viaf/186347676> .
+        <https://performance.musiconn.de/source/textquelle-digitalisat-161> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/186347676> a nfdicore:NFDI_0001010 .
 

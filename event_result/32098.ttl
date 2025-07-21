@@ -1,42 +1,56 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300030088> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300054157> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300201737> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300722923> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzert-kreuzkirche-dresden-2007-07-08-17-00> ] .
 
-<https://performance.musiconn.de/event/sonderkonzert-kreuzkirche-dresden-2007-07-08-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzert-kreuzkirche-dresden-2007-07-08-17-00> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert, Kreuzkirche (Dresden), 8.7.2007, 17:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2006-2007> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2007-07-08T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2007-07-08T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300030088>,
-        <https://d-nb.info/gnd/300054157>,
-        <https://d-nb.info/gnd/300201737>,
-        <https://d-nb.info/gnd/300722923>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2006-2007> ;
-    cto:relatedItem <https://d-nb.info/gnd/300030088>,
-        <https://d-nb.info/gnd/300054157>,
-        <https://d-nb.info/gnd/300201737>,
-        <https://d-nb.info/gnd/300722923>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/pater-noster-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/psalm-13-liszt-franz>,
-        <https://performance.musiconn.de/work/psaume-150-franck-cesar>,
-        <https://performance.musiconn.de/work/te-deum-wab-45-c-dur-bruckner-anton>,
-        <https://viaf.org/viaf/177486701>,
-        <https://viaf.org/viaf/178827696>,
-        <https://viaf.org/viaf/193652765> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/177486701>,
-        <https://viaf.org/viaf/178827696>,
-        <https://viaf.org/viaf/193652765>,
-        <https://viaf.org/viaf/248189528> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178827696> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177486701> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300054157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300201737> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300722923> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193652765> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300030088> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177486701> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178827696> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193652765> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
 

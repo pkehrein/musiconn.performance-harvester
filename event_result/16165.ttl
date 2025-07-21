@@ -1,56 +1,75 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300006659> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300036558> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300093616> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171781> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30071856X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1861-11-26> ] .
 
-<https://performance.musiconn.de/event/4-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1861-11-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1861-11-26> a cto:CTO_0001005 ;
     rdfs:label "4. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 26.11.1861" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1861-1862> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1861-11-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1861-11-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300006659>,
-        <https://d-nb.info/gnd/300036558>,
-        <https://d-nb.info/gnd/300093616>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/30071856X>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1861-1862> ;
-    cto:relatedItem <https://d-nb.info/gnd/300006659>,
-        <https://d-nb.info/gnd/300036558>,
-        <https://d-nb.info/gnd/300093616>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/30071856X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300036558> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206851059> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30071856X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300006659> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183832488> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093616> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174808226> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186496501> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309560042> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
         <https://performance.musiconn.de/source/whistling-carl-wilhelm-der-musikverein-euterpe-zu-leipzig-1824-1874-leipzig-1874>,
-        <https://performance.musiconn.de/work/festklaenge-liszt-franz>,
-        <https://performance.musiconn.de/work/italienisches-konzert-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/les-abencerages-ouvertuere-cherubini-luigi>,
-        <https://performance.musiconn.de/work/lieder-r-592-liszt-franz>,
         <https://performance.musiconn.de/work/messiah-arie-haendel-georg-friedrich>,
         <https://performance.musiconn.de/work/novelletten-klavier-op-21-d-dur-schumann-robert>,
-        <https://performance.musiconn.de/work/oberon-ouvertuere-weber-carl-maria-von>,
         <https://performance.musiconn.de/work/semiramis-kavatine-rossini-gioachino>,
-        <https://performance.musiconn.de/work/walzer-klavier-as-dur-chopin-frederic>,
-        <https://viaf.org/viaf/174808226>,
-        <https://viaf.org/viaf/183832488>,
-        <https://viaf.org/viaf/186496501>,
-        <https://viaf.org/viaf/206851059>,
-        <https://viaf.org/viaf/309560042> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/174808226>,
-        <https://viaf.org/viaf/183832488>,
-        <https://viaf.org/viaf/186496501>,
-        <https://viaf.org/viaf/206851059>,
-        <https://viaf.org/viaf/242717024>,
-        <https://viaf.org/viaf/309560042> .
+        <https://performance.musiconn.de/work/walzer-klavier-as-dur-chopin-frederic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174808226> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183832488> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186496501> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206851059> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309560042> a nfdicore:NFDI_0001010 .
 

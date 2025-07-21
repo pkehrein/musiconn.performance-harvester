@@ -1,46 +1,58 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1155539877> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1178446433> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300159218> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171463> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/29-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-12-26-19-00> ] .
 
-<https://performance.musiconn.de/event/29-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-12-26-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/29-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-12-26-19-00> a cto:CTO_0001005 ;
     rdfs:label "29. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 26.12.1926, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1926-1927-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1926-12-26T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1926-12-26T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1155539877>,
-        <https://d-nb.info/gnd/1178446433>,
-        <https://d-nb.info/gnd/300159218>,
-        <https://d-nb.info/gnd/300171463> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1926-1927-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/1155539877>,
-        <https://d-nb.info/gnd/1178446433>,
-        <https://d-nb.info/gnd/300159218>,
-        <https://d-nb.info/gnd/300171463>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1155539877> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180155105758976320009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171463> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315209867> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300159218> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1178446433> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174798165> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3828152331605003260002> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
         <https://performance.musiconn.de/work/andante-religioso-op-5-huber-walter>,
-        <https://performance.musiconn.de/work/ballet-egyptien-suite-nr-1-luigini-alexandre>,
-        <https://performance.musiconn.de/work/ein-morgen-ein-mittag-ein-abend-in-wien-ouvertuere-suppe-franz-von>,
-        <https://performance.musiconn.de/work/elfenlegende-oberthuer-charles>,
-        <https://performance.musiconn.de/work/euryanthe-ouvertuere-weber-carl-maria-von>,
         <https://performance.musiconn.de/work/lohengrin-auswahl-wagner-richard>,
         <https://performance.musiconn.de/work/melodien-aus-der-oper-fra-diavolo-auber-daniel-francois-esprit>,
         <https://performance.musiconn.de/work/menuette-boccherini-luigi>,
-        <https://performance.musiconn.de/work/variationen-orchester-stoever-walter>,
-        <https://viaf.org/viaf/174798165>,
-        <https://viaf.org/viaf/180155105758976320009>,
-        <https://viaf.org/viaf/315209867>,
-        <https://viaf.org/viaf/3828152331605003260002> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/174798165>,
-        <https://viaf.org/viaf/180155105758976320009>,
-        <https://viaf.org/viaf/315209867>,
-        <https://viaf.org/viaf/3828152331605003260002> .
+        <https://performance.musiconn.de/work/variationen-orchester-stoever-walter> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174798165> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180155105758976320009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315209867> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3828152331605003260002> a nfdicore:NFDI_0001010 .
 

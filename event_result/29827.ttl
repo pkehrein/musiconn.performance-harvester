@@ -1,44 +1,57 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1156749026> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300051298> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30005596X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300219911> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-kammerkonzert-blockhaus-dresden-1987-06-13-19-30> ] .
 
-<https://performance.musiconn.de/event/8-kammerkonzert-blockhaus-dresden-1987-06-13-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-kammerkonzert-blockhaus-dresden-1987-06-13-19-30> a cto:CTO_0001005 ;
     rdfs:label "8. Kammerkonzert, Blockhaus (Dresden), 13.6.1987, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1986-1987> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-06-13T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-06-13T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1156749026>,
-        <https://d-nb.info/gnd/300051298>,
-        <https://d-nb.info/gnd/30005596X>,
-        <https://d-nb.info/gnd/300219911> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1986-1987> ;
-    cto:relatedItem <https://d-nb.info/gnd/300051298>,
-        <https://d-nb.info/gnd/30005596X>,
-        <https://d-nb.info/gnd/300219911>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7980152502945210800008> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1156749026> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199702413> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30005596X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197653505> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194738722> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300051298> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300219911> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/di-stella-infesta-aldrovandini-guiseppe>,
-        <https://performance.musiconn.de/work/kanzonen-1608-la-spiritata-gabrieli-giovanni>,
         <https://performance.musiconn.de/work/musikalisches-opfer-auzuege-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/pavanen-gaillarden-buch-2-capriccio-stravagante-farina-carlo>,
-        <https://performance.musiconn.de/work/sonaten-im-kanon-nr-1-telemann-georg-philipp>,
         <https://performance.musiconn.de/work/sonaten-violine-2-basso-continuo-f-dur-loeillet-jean-baptiste>,
         <https://performance.musiconn.de/work/sonaten-violine-2-basso-continuo-g-dur-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/vaghe-luci-caldara-antonio>,
-        <https://viaf.org/viaf/194738722>,
-        <https://viaf.org/viaf/197653505>,
-        <https://viaf.org/viaf/199702413> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1156749026>,
-        <https://viaf.org/viaf/7980152502945210800008> ;
-    cto:viaf <https://viaf.org/viaf/194738722>,
-        <https://viaf.org/viaf/197653505>,
-        <https://viaf.org/viaf/199702413>,
-        <https://viaf.org/viaf/7980152502945210800008> .
+        <https://performance.musiconn.de/work/vaghe-luci-caldara-antonio> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/194738722> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197653505> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199702413> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7980152502945210800008> a nfdicore:NFDI_0001010 .
 

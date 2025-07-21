@@ -1,53 +1,72 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300065566> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300094930> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111169> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171528> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7687516-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1851-12-16> ] .
 
-<https://performance.musiconn.de/event/3-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1851-12-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1851-12-16> a cto:CTO_0001005 ;
     rdfs:label "3. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 16.12.1851" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1851-1852> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1851-12-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1851-12-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300065566>,
-        <https://d-nb.info/gnd/300094930>,
-        <https://d-nb.info/gnd/300111169>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/4381134-6>,
-        <https://d-nb.info/gnd/7687516-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1851-1852> ;
-    cto:relatedItem <https://d-nb.info/gnd/300065566>,
-        <https://d-nb.info/gnd/300094930>,
-        <https://d-nb.info/gnd/300111169>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/7687516-7>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182681837> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177844989> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300094930> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213967533> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177811557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7687516-7> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111169> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300065566> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/313526316> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/source/whistling-carl-wilhelm-der-musikverein-euterpe-zu-leipzig-1824-1874-leipzig-1874>,
-        <https://performance.musiconn.de/work/der-freischuetz-ouvertuere-weber-carl-maria-von>,
         <https://performance.musiconn.de/work/illustrations-sur-un-motif-de-verdis-rigoletto-op18-jaell-alfred>,
-        <https://performance.musiconn.de/work/litaliana-in-algeri-arie-rossini-gioachino>,
-        <https://performance.musiconn.de/work/rinaldo-oper-hwv-7-a-lascia-chio-pianga-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/sinfonien-kv-551-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-nr-2-liszt-franz>,
-        <https://performance.musiconn.de/work/variationen-ueber-la-ci-darem-la-mano-aus-der-oper-don-giovanni-von-wa-mozart-chopin-frederic>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/177844989>,
-        <https://viaf.org/viaf/182681837>,
-        <https://viaf.org/viaf/213967533>,
-        <https://viaf.org/viaf/313526316> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/177844989>,
-        <https://viaf.org/viaf/182681837>,
-        <https://viaf.org/viaf/213967533>,
-        <https://viaf.org/viaf/242717024>,
-        <https://viaf.org/viaf/313526316> .
+        <https://performance.musiconn.de/work/litaliana-in-algeri-arie-rossini-gioachino> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177811557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177844989> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182681837> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213967533> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/313526316> a nfdicore:NFDI_0001010 .
 

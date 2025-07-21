@@ -1,65 +1,88 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1084611848> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1151669067> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1170209564> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1177272172> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1177295008> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1177297604> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300044259> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300289596> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/dresdner-kreuzchor-bach-saal-berlin-tiergarten-1935-10-22-20-00> ] .
 
-<https://performance.musiconn.de/event/dresdner-kreuzchor-bach-saal-berlin-tiergarten-1935-10-22-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/dresdner-kreuzchor-bach-saal-berlin-tiergarten-1935-10-22-20-00> a cto:CTO_0001005 ;
     rdfs:label "Dresdner Kreuzchor, Bach-Saal (Berlin-Tiergarten), 22.10.1935, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1935-36> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1935-10-22T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1935-10-22T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1084611848>,
-        <https://d-nb.info/gnd/1151669067>,
-        <https://d-nb.info/gnd/1170209564>,
-        <https://d-nb.info/gnd/1177272172>,
-        <https://d-nb.info/gnd/1177295008>,
-        <https://d-nb.info/gnd/1177297604>,
-        <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300044259>,
-        <https://d-nb.info/gnd/300289596> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1935-36> ;
-    cto:relatedItem <https://d-nb.info/gnd/1151669067>,
-        <https://d-nb.info/gnd/1170209564>,
-        <https://d-nb.info/gnd/1177272172>,
-        <https://d-nb.info/gnd/1177295008>,
-        <https://d-nb.info/gnd/1177297604>,
-        <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300044259>,
-        <https://d-nb.info/gnd/300289596>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1084611848> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/359145857911023021337> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174110202> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1177295008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175266510> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181241390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300044259> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3021151778260718130006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1177297604> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300289596> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6453148209314400460001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1177272172> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1151669067> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1996154137633915370000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170209564> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
         <https://performance.musiconn.de/work/als-einst-im-maien-anonym>,
-        <https://performance.musiconn.de/work/altdeutsche-geistliche-chorsuite-reinhold-otto>,
-        <https://performance.musiconn.de/work/deutsche-choralmesse-distler-hugo>,
         <https://performance.musiconn.de/work/die-strassburger-muensterengelchen-grabner-hermann>,
         <https://performance.musiconn.de/work/es-waren-zwei-koenigskinder-fassung-ochs-siegfried>,
-        <https://performance.musiconn.de/work/geistliche-chormusik-unser-wandel-ist-im-himmel-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/gesaenge-frauen-chor-op-42-immer-wenn-der-maerzwind-weht-mendelssohn-arnold-ludwig>,
-        <https://performance.musiconn.de/work/kapitaen-und-leutenant-woyrsch-felix>,
-        <https://performance.musiconn.de/work/libro-de-villanelle-moresche-et-altre-canzoni-o-la-o-che-bon-eccho-lasso-orlando-di>,
-        <https://performance.musiconn.de/work/lieder-aus-dem-ungarischen-schlummerlied-goehler-georg>,
-        <https://performance.musiconn.de/work/madrigale-stimme-5-il-bianco-e-dolce-cigno-vecchi-orazio>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/was-blasen-die-trompeten-mauersberger-rudolf>,
-        <https://viaf.org/viaf/174110202>,
-        <https://viaf.org/viaf/175266510>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/1996154137633915370000>,
-        <https://viaf.org/viaf/3021151778260718130006>,
-        <https://viaf.org/viaf/6453148209314400460001> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1084611848>,
-        <https://viaf.org/viaf/359145857911023021337> ;
-    cto:viaf <https://viaf.org/viaf/174110202>,
-        <https://viaf.org/viaf/175266510>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/1996154137633915370000>,
-        <https://viaf.org/viaf/3021151778260718130006>,
-        <https://viaf.org/viaf/359145857911023021337>,
-        <https://viaf.org/viaf/6453148209314400460001> .
+        <https://performance.musiconn.de/work/kapitaen-und-leutenant-woyrsch-felix> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174110202> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175266510> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181241390> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/1996154137633915370000> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3021151778260718130006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/359145857911023021337> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6453148209314400460001> a nfdicore:NFDI_0001010 .
 

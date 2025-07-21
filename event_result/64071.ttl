@@ -1,60 +1,84 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1208852574> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/129238574X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1292396555> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1297872460> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015755> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300036558> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146493> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300788010> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-vereinskonzert-rathaus-muenster-westf-friedenssaal-1877-10-27> ] .
 
-<https://performance.musiconn.de/event/2-vereinskonzert-rathaus-muenster-westf-friedenssaal-1877-10-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-vereinskonzert-rathaus-muenster-westf-friedenssaal-1877-10-27> a cto:CTO_0001005 ;
     rdfs:label "2. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 27.10.1877" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1877-78> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1877-10-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1877-10-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1208852574>,
-        <https://d-nb.info/gnd/129238574X>,
-        <https://d-nb.info/gnd/1292396555>,
-        <https://d-nb.info/gnd/1297872460>,
-        <https://d-nb.info/gnd/300015755>,
-        <https://d-nb.info/gnd/300036558>,
-        <https://d-nb.info/gnd/300146493>,
-        <https://d-nb.info/gnd/300788010>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1877-78> ;
-    cto:relatedItem <https://d-nb.info/gnd/1208852574>,
-        <https://d-nb.info/gnd/129238574X>,
-        <https://d-nb.info/gnd/1292396555>,
-        <https://d-nb.info/gnd/1297872460>,
-        <https://d-nb.info/gnd/300015755>,
-        <https://d-nb.info/gnd/300036558>,
-        <https://d-nb.info/gnd/300146493>,
-        <https://d-nb.info/gnd/300788010>,
-        <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1877-1878>,
-        <https://performance.musiconn.de/work/konzertstuecke-violine-orchester-op-62-saint-saens-camille>,
-        <https://performance.musiconn.de/work/les-abencerages-ouvertuere-cherubini-luigi>,
-        <https://performance.musiconn.de/work/lieder-frauenchor-orchester-op-16-abendlied-wuellner-franz>,
-        <https://performance.musiconn.de/work/lieder-frauenchor-orchester-op-16-die-libellen-wuellner-franz>,
-        <https://performance.musiconn.de/work/lieder-frauenchor-orchester-op-16-trost-wuellner-franz>,
-        <https://performance.musiconn.de/work/meeres-stille-und-glueckliche-fahrt-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/romanzen-violine-orchester-op-3-f-dur-barth-richard>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-120-d-moll-schumann-robert>,
-        <https://viaf.org/viaf/174808226>,
-        <https://viaf.org/viaf/179098535>,
-        <https://viaf.org/viaf/191498119>,
-        <https://viaf.org/viaf/1923168657969319520006>,
-        <https://viaf.org/viaf/205779390>,
-        <https://viaf.org/viaf/575168657962719520008>,
-        <https://viaf.org/viaf/757158792836239040005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/174808226>,
-        <https://viaf.org/viaf/179098535>,
-        <https://viaf.org/viaf/191498119>,
-        <https://viaf.org/viaf/1923168657969319520006>,
-        <https://viaf.org/viaf/205779390>,
-        <https://viaf.org/viaf/575168657962719520008>,
-        <https://viaf.org/viaf/757158792836239040005> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015755> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/757158792836239040005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146493> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179098535> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/575168657962719520008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1208852574> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300788010> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1923168657969319520006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/129238574X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205779390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191498119> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174808226> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300036558> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1292396555> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1297872460> ],
+        <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1877-1878> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174808226> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179098535> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191498119> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/1923168657969319520006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205779390> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/575168657962719520008> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/757158792836239040005> a nfdicore:NFDI_0001010 .
 

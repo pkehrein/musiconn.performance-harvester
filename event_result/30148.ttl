@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1089086296> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300085273> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300277466> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300490666> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzert-theaterbau-des-schauspielhauses-berlin-1990-01-15-20-00> ] .
 
-<https://performance.musiconn.de/event/sonderkonzert-theaterbau-des-schauspielhauses-berlin-1990-01-15-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzert-theaterbau-des-schauspielhauses-berlin-1990-01-15-20-00> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert, Theaterbau des Schauspielhauses Berlin, 15.1.1990, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1989-1990> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1990-01-15T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1990-01-15T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1089086296>,
-        <https://d-nb.info/gnd/300085273>,
-        <https://d-nb.info/gnd/300277466>,
-        <https://d-nb.info/gnd/300490666> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1989-1990> ;
-    cto:relatedItem <https://d-nb.info/gnd/300085273>,
-        <https://d-nb.info/gnd/300277466>,
-        <https://d-nb.info/gnd/300490666>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-35-d-dur-korngold-erich-wolfgang>,
-        <https://performance.musiconn.de/work/peinture-denisov-edison-vasilevic>,
-        <https://performance.musiconn.de/work/sinfonien-s-1-d-moll-ives-charles>,
-        <https://viaf.org/viaf/203712815>,
-        <https://viaf.org/viaf/206834789>,
-        <https://viaf.org/viaf/232197910> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1089086296>,
-        <https://viaf.org/viaf/313145858154823022430> ;
-    cto:viaf <https://viaf.org/viaf/203712815>,
-        <https://viaf.org/viaf/206834789>,
-        <https://viaf.org/viaf/232197910>,
-        <https://viaf.org/viaf/313145858154823022430> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1089086296> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/313145858154823022430> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300085273> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/232197910> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300277466> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300490666> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206834789> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203712815> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/203712815> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206834789> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/232197910> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/313145858154823022430> a nfdicore:NFDI_0001010 .
 

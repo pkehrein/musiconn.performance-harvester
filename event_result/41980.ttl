@@ -1,52 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300007345> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011490> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009972X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171528> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300787928> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300812108> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/drittes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1927-10-28-20-00> ] .
 
-<https://performance.musiconn.de/event/drittes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1927-10-28-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/drittes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1927-10-28-20-00> a cto:CTO_0001005 ;
     rdfs:label "Drittes Freitags-Konzert, Großer Konzertsaal (Frankfurt a. M.), 28.10.1927, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1927-1928> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1927-10-28T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1927-10-28T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300007345>,
-        <https://d-nb.info/gnd/300011490>,
-        <https://d-nb.info/gnd/30009972X>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/300787928>,
-        <https://d-nb.info/gnd/300812108> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1927-1928> ;
-    cto:relatedItem <https://d-nb.info/gnd/300007345>,
-        <https://d-nb.info/gnd/300011490>,
-        <https://d-nb.info/gnd/30009972X>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/300787928>,
-        <https://d-nb.info/gnd/300812108>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300812108> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181477251> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219953317> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300787928> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177158123> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199701139> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206835123> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177811557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011490> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009972X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300007345> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/der-freischuetz-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/jauchzet-gott-in-allen-landen-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-folge-1-hat-dich-die-liebe-beruehrt-marx-joseph>,
-        <https://performance.musiconn.de/work/marienlied-fassung-singst-org-marx-joseph>,
-        <https://performance.musiconn.de/work/ouvertueren-bwv-1068-d-dur-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/serenaden-orch-op-62-milhaud-darius>,
-        <https://performance.musiconn.de/work/venetianisches-wiegenlied-und-gestern-hat-er-mir-rosen-gebracht-marx-joseph>,
-        <https://viaf.org/viaf/177158123>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/181477251>,
-        <https://viaf.org/viaf/199701139>,
-        <https://viaf.org/viaf/206835123>,
-        <https://viaf.org/viaf/219953317> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/177158123>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/181477251>,
-        <https://viaf.org/viaf/199701139>,
-        <https://viaf.org/viaf/206835123>,
-        <https://viaf.org/viaf/219953317> .
+        <https://performance.musiconn.de/work/venetianisches-wiegenlied-und-gestern-hat-er-mir-rosen-gebracht-marx-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177158123> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177811557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181477251> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199701139> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206835123> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219953317> a nfdicore:NFDI_0001010 .
 

@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300019157> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033850> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009440X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/the-31th-regular-concert-hall-of-the-tokyo-academy-of-music-1916-05-28-02-00> ] .
 
-<https://performance.musiconn.de/event/the-31th-regular-concert-hall-of-the-tokyo-academy-of-music-1916-05-28-02-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/the-31th-regular-concert-hall-of-the-tokyo-academy-of-music-1916-05-28-02-00> a cto:CTO_0001005 ;
     rdfs:label "The 31th regular concert, Hall of the Tokyo Academy of Music, 28.5.1916, 02:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1916-05-28T02:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1916-05-28T02:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300019157>,
-        <https://d-nb.info/gnd/300033850>,
-        <https://d-nb.info/gnd/30009440X> ;
-    cto:relatedItem <https://d-nb.info/gnd/300019157>,
-        <https://d-nb.info/gnd/300033850>,
-        <https://d-nb.info/gnd/30009440X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hall-of-the-tokyo-academy-of-music> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174184579> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305991533> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185089854> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009440X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300019157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033850> ],
         <https://performance.musiconn.de/source/nihon-no-yogaku-hyakunenshi-100-years-clonicle-of-western-music-in-japan-ed-akiyama-tatsuhide-daiichi-hoki-syuppan-1966>,
-        <https://performance.musiconn.de/source/tokyo-ongaku-gakkou-sougakudou-nenpyo-chronological-table-of-the-hall-of-tokyo-music-academy-ed-tokyo-geijutu-daigaku-ongaku-gakubu-ongaku-kenkyu-senta-nihon-kindai-ongaku-kan-nihon-kindai-ongakukan-1990>,
-        <https://performance.musiconn.de/work/der-nussknacker-suite-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/le-carnaval-romain-berlioz-hector>,
-        <https://performance.musiconn.de/work/les-preludes-liszt-franz>,
-        <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/185089854>,
-        <https://viaf.org/viaf/305991533> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hall-of-the-tokyo-academy-of-music> ;
-    cto:viaf <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/185089854>,
-        <https://viaf.org/viaf/305991533> .
+        <https://performance.musiconn.de/source/tokyo-ongaku-gakkou-sougakudou-nenpyo-chronological-table-of-the-hall-of-tokyo-music-academy-ed-tokyo-geijutu-daigaku-ongaku-gakubu-ongaku-kenkyu-senta-nihon-kindai-ongaku-kan-nihon-kindai-ongakukan-1990> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174184579> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185089854> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305991533> a nfdicore:NFDI_0001010 .
 

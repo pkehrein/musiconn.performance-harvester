@@ -1,40 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300074492> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300172265> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300269498> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4407464-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-dresdner-abend-2012-10-10-20-00> ] .
 
-<https://performance.musiconn.de/event/1-dresdner-abend-2012-10-10-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-dresdner-abend-2012-10-10-20-00> a cto:CTO_0001005 ;
     rdfs:label "1. Dresdner Abend, 10.10.2012, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2012-2013> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2012-10-10T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2012-10-10T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300074492>,
-        <https://d-nb.info/gnd/300172265>,
-        <https://d-nb.info/gnd/300269498>,
-        <https://d-nb.info/gnd/4407464-5> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2012-2013> ;
-    cto:relatedItem <https://d-nb.info/gnd/300074492>,
-        <https://d-nb.info/gnd/300172265>,
-        <https://d-nb.info/gnd/300269498>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4407464-5> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/241195702> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300269498> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300172265> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1429148523892320970007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219162066> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300074492> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217009286> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzertmusik-op-48-definitive-fassung-hindemith-paul>,
-        <https://performance.musiconn.de/work/saetze-violine-2-viola-violoncello-op-5-fassung-fuer-streichorchester-webern-anton>,
-        <https://performance.musiconn.de/work/serenaden-oboe-englischhorn-streicher-op-27-schoeck-othmar>,
-        <https://performance.musiconn.de/work/suiten-streichorchester-op-59-schoeck-othmar>,
-        <https://viaf.org/viaf/1429148523892320970007>,
-        <https://viaf.org/viaf/217009286>,
-        <https://viaf.org/viaf/219162066> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4407464-5>,
-        <https://viaf.org/viaf/241195702> ;
-    cto:viaf <https://viaf.org/viaf/1429148523892320970007>,
-        <https://viaf.org/viaf/217009286>,
-        <https://viaf.org/viaf/219162066>,
-        <https://viaf.org/viaf/241195702> .
+        <https://performance.musiconn.de/work/serenaden-oboe-englischhorn-streicher-op-27-schoeck-othmar> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1429148523892320970007> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217009286> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219162066> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/241195702> a nfdicore:NFDI_0001010 .
 

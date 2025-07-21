@@ -1,52 +1,64 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1292594314> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1292820764> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1292829532> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1292831871> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1292833904> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1292835141> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/129353658X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1293537128> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1872-05-13-17-00> ] .
 
-<https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1872-05-13-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1872-05-13-17-00> a cto:CTO_0001005 ;
     rdfs:label "Haupt-Prüfung am Conservatorium der Musik zu Leipzig, Erstes Gewandhaus (Leipzig), 13.5.1872, 17:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/pruefung> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1872-05-13T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1872-05-13T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/1292594314>,
-        <https://d-nb.info/gnd/1292820764>,
-        <https://d-nb.info/gnd/1292829532>,
-        <https://d-nb.info/gnd/1292831871>,
-        <https://d-nb.info/gnd/1292833904>,
-        <https://d-nb.info/gnd/1292835141>,
-        <https://d-nb.info/gnd/129353658X>,
-        <https://d-nb.info/gnd/1293537128> ;
-    cto:itemOf <https://performance.musiconn.de/series/pruefung> ;
-    cto:relatedItem <https://d-nb.info/gnd/1292594314>,
-        <https://d-nb.info/gnd/1292820764>,
-        <https://d-nb.info/gnd/1292829532>,
-        <https://d-nb.info/gnd/1292831871>,
-        <https://d-nb.info/gnd/1292833904>,
-        <https://d-nb.info/gnd/1292835141>,
-        <https://d-nb.info/gnd/129353658X>,
-        <https://d-nb.info/gnd/1293537128>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1292829532> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1292594314> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1292831871> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1293537128> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1292820764> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1292833904> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/129353658X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1292835141> ],
         <https://performance.musiconn.de/source/konservatorium-der-musik-hochschule-fuer-musik-konzertprogramme-1843-1948>,
         <https://performance.musiconn.de/source/musikalisches-wochenblatt-mw>,
         <https://performance.musiconn.de/source/programme-der-konzerte-im-gewandhaus-zu-leipzig-staedt-bibl-leipzig>,
         <https://performance.musiconn.de/source/programmzettel>,
-        <https://performance.musiconn.de/source/signale-fuer-die-musikalische-welt>,
-        <https://performance.musiconn.de/work/heimkehr-klengel-paul>,
-        <https://performance.musiconn.de/work/klage-klengel-paul>,
-        <https://performance.musiconn.de/work/ouvertueren-orchester-e-dur-loehr-george-samuel-lewis>,
-        <https://performance.musiconn.de/work/ouvertueren-orchester-e-moll-kwast-james>,
-        <https://performance.musiconn.de/work/sinfonien-orchester-c-dur-maas-louis>,
-        <https://performance.musiconn.de/work/sinfonien-orchester-c-moll-shakespeare-william>,
-        <https://performance.musiconn.de/work/sinfonien-orchester-d-dur-andante-heller-wenzel-josef>,
-        <https://performance.musiconn.de/work/zwei-praeludien-und-zwei-fugen-klavier-bruchmann-friedrich-august> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/source/signale-fuer-die-musikalische-welt> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

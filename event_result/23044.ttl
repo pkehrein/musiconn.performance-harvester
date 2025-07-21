@@ -4,20 +4,21 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1192324099> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gottesdienst-lutherkirche-leipzig-1889-05-12> ] .
 
-<https://performance.musiconn.de/event/gottesdienst-lutherkirche-leipzig-1889-05-12> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gottesdienst-lutherkirche-leipzig-1889-05-12> a cto:CTO_0001005 ;
     rdfs:label "Gottesdienst, Lutherkirche (Leipzig), 12.5.1889" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1889-05-12" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1889-05-12" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1192324099> ;
-    cto:relatedItem <https://performance.musiconn.de/source/motettenbuch-1889-90>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1192324099> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/motettenbuch-1889-90>,
         <https://performance.musiconn.de/work/paulus-der-herr-wird-die-traenen-von-allen-angesichtern-abwischen-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/paulus-ich-danke-dir-herr-mein-gott-mendelssohn-bartholdy-felix> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1192324099> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
 

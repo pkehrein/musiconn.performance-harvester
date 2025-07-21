@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1091076286> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/das-ehepaar-aus-der-alten-zeit-theaterbau-des-koenigsstaedtischen-theaters-berlin-1825-12-23> ] .
 
-<https://performance.musiconn.de/event/das-ehepaar-aus-der-alten-zeit-theaterbau-des-koenigsstaedtischen-theaters-berlin-1825-12-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/das-ehepaar-aus-der-alten-zeit-theaterbau-des-koenigsstaedtischen-theaters-berlin-1825-12-23> a cto:CTO_0001005 ;
     rdfs:label "Das Ehepaar aus der alten Zeit, Theaterbau des Königsstädtischen Theaters (Berlin), 23.12.1825" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1825-12-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1825-12-23" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1091076286> ;
-    cto:relatedItem <https://performance.musiconn.de/source/katalogisat-das-ehepaar-aus-der-alten-zeit-lokaler-scherz-in-1-akt-als-vaudeville-behandelt-und-mit-bekannten-melodieen-versehen-23-dezember-1825>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/235553194> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1091076286> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/katalogisat-das-ehepaar-aus-der-alten-zeit-lokaler-scherz-in-1-akt-als-vaudeville-behandelt-und-mit-bekannten-melodieen-versehen-23-dezember-1825>,
         <https://performance.musiconn.de/work/das-ehepaar-aus-der-alten-zeit-fassung-weber-carl-maria-von-mozart-wolfgang-amadeus-himmel-friedrich-heinrich-seyfried-ignaz-xaver-von-wranitzky-paul-desaugiers-marc-antoine> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1091076286>,
-        <https://viaf.org/viaf/235553194> ;
-    cto:viaf <https://viaf.org/viaf/235553194> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/235553194> a nfdicore:NFDI_0001010 .
 

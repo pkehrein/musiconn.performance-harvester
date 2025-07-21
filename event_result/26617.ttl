@@ -1,45 +1,58 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1317864727> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1318126010> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1318128080> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30032037X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300353537> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzert-vii-hauptpruefung-am-koeniglichen-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1876-06-28-18-00> ] .
 
-<https://performance.musiconn.de/event/sonderkonzert-vii-hauptpruefung-am-koeniglichen-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1876-06-28-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzert-vii-hauptpruefung-am-koeniglichen-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1876-06-28-18-00> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert VII. Hauptprüfung am Königlichen Conservatorium der Musik zu Leipzig, Erstes Gewandhaus (Leipzig), 28.6.1876, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/pruefung> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1876-06-28T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1876-06-28T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/1317864727>,
-        <https://d-nb.info/gnd/1318126010>,
-        <https://d-nb.info/gnd/1318128080>,
-        <https://d-nb.info/gnd/30032037X>,
-        <https://d-nb.info/gnd/300353537> ;
-    cto:itemOf <https://performance.musiconn.de/series/pruefung> ;
-    cto:relatedItem <https://d-nb.info/gnd/1317864727>,
-        <https://d-nb.info/gnd/1318126010>,
-        <https://d-nb.info/gnd/1318128080>,
-        <https://d-nb.info/gnd/30032037X>,
-        <https://d-nb.info/gnd/300353537>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1318126010> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211716392> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1318128080> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1317864727> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300353537> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192580474> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30032037X> ],
         <https://performance.musiconn.de/source/konservatorium-der-musik-hochschule-fuer-musik-konzertprogramme-1843-1948>,
         <https://performance.musiconn.de/source/programmzettel>,
-        <https://performance.musiconn.de/source/signale-fuer-die-musikalische-welt>,
-        <https://performance.musiconn.de/work/archibald-douglas-loewe-carl>,
-        <https://performance.musiconn.de/work/lieder-h-26a-die-teilung-der-erde-haydn-joseph>,
-        <https://performance.musiconn.de/work/ouvertuere-zur-braut-von-messina-zoellner-heinrich>,
-        <https://performance.musiconn.de/work/passecaille-klinkhardt-traugott-1>,
-        <https://performance.musiconn.de/work/ukrainische-serenade-kalacevskyj-mychajlo-mykolajovyc>,
-        <https://viaf.org/viaf/192580474>,
-        <https://viaf.org/viaf/211716392> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/192580474>,
-        <https://viaf.org/viaf/211716392>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/source/signale-fuer-die-musikalische-welt> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/192580474> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211716392> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

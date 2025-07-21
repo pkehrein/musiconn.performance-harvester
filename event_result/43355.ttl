@@ -1,48 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1160067546> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1183024452> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009728X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300467168> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncert-26-aprelja-sankt-petersburger-philharmonie-kleiner-saal-1971-04-26> ] .
 
-<https://performance.musiconn.de/event/koncert-26-aprelja-sankt-petersburger-philharmonie-kleiner-saal-1971-04-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncert-26-aprelja-sankt-petersburger-philharmonie-kleiner-saal-1971-04-26> a cto:CTO_0001005 ;
     rdfs:label "Koncert 26. aprelja, Sankt-Petersburger Philharmonie / Kleiner Saal, 26.4.1971" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1970-71> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1971-04-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1971-04-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1160067546>,
-        <https://d-nb.info/gnd/1183024452>,
-        <https://d-nb.info/gnd/30009728X>,
-        <https://d-nb.info/gnd/300467168> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1970-71> ;
-    cto:relatedItem <https://d-nb.info/gnd/1160067546>,
-        <https://d-nb.info/gnd/1183024452>,
-        <https://d-nb.info/gnd/30009728X>,
-        <https://d-nb.info/gnd/300467168>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7197155566468113380008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7652152744545427850009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1160067546> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009728X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300467168> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176543932> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1183024452> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174189368> ],
         <https://performance.musiconn.de/source/7-leningrader-fruehling-1971-uebersicht>,
         <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1971-26-april>,
-        <https://performance.musiconn.de/work/a-piacere-serocki-kazimierz>,
         <https://performance.musiconn.de/work/improvisazione-na-skrzypce-i-fortepian-spisak-michal>,
         <https://performance.musiconn.de/work/muzyka-uliczna-penherski-zbigniew>,
         <https://performance.musiconn.de/work/sonaten-floete-klavier-perkowski-piotr>,
         <https://performance.musiconn.de/work/sonaten-klavier-twardowski-romuald>,
-        <https://performance.musiconn.de/work/tokkaten-klavier-1960-borkowski-marian>,
         <https://performance.musiconn.de/work/trios-floete-viola-harfe-paciorkiewicz-tadeusz>,
-        <https://performance.musiconn.de/work/utwor-na-kwartet-smyczkowy-lukaszewski-wojciech>,
-        <https://performance.musiconn.de/work/wariacje-i-fuga-1966-rudzinski-witold>,
-        <https://performance.musiconn.de/work/wariacje-na-temat-paganiniego-lutoslawski-witold>,
-        <https://viaf.org/viaf/174189368>,
-        <https://viaf.org/viaf/176543932>,
-        <https://viaf.org/viaf/7197155566468113380008>,
-        <https://viaf.org/viaf/7652152744545427850009> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/174189368>,
-        <https://viaf.org/viaf/176543932>,
-        <https://viaf.org/viaf/7197155566468113380008>,
-        <https://viaf.org/viaf/7652152744545427850009> .
+        <https://performance.musiconn.de/work/utwor-na-kwartet-smyczkowy-lukaszewski-wojciech> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174189368> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176543932> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7197155566468113380008> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7652152744545427850009> a nfdicore:NFDI_0001010 .
 

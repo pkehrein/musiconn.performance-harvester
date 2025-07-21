@@ -1,48 +1,65 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300097255> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101929> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300208227> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300266537> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300722176> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-kammerkonzert-schloss-albrechtsberg-dresden-2014-06-22-19-00> ] .
 
-<https://performance.musiconn.de/event/6-kammerkonzert-schloss-albrechtsberg-dresden-2014-06-22-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-kammerkonzert-schloss-albrechtsberg-dresden-2014-06-22-19-00> a cto:CTO_0001005 ;
     rdfs:label "6. Kammerkonzert, Schloss Albrechtsberg (Dresden), 22.6.2014, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2013-2014> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2014-06-22T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2014-06-22T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300097255>,
-        <https://d-nb.info/gnd/300101929>,
-        <https://d-nb.info/gnd/300208227>,
-        <https://d-nb.info/gnd/300266537>,
-        <https://d-nb.info/gnd/300722176>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2013-2014> ;
-    cto:relatedItem <https://d-nb.info/gnd/300097255>,
-        <https://d-nb.info/gnd/300101929>,
-        <https://d-nb.info/gnd/300208227>,
-        <https://d-nb.info/gnd/300266537>,
-        <https://d-nb.info/gnd/300722176>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211713705> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/231822808> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300266537> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1325149416745789730004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101929> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210954680> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300097255> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300208227> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300722176> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzertstuecke-klarinette-bassetthorn-klavier-mwv-q-23-f-moll-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/konzertstuecke-klarinette-bassetthorn-klavier-mwv-q-24-d-moll-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/preludia-taneczne-klarinette-klavier-lutoslawski-witold>,
-        <https://performance.musiconn.de/work/sonatensatz-fagott-klavier-glinka-michail-ivanovic>,
-        <https://performance.musiconn.de/work/trio-pathetique-glinka-michail-ivanovic>,
-        <https://performance.musiconn.de/work/trios-klarinette-violoncello-klavier-rota-nino>,
-        <https://viaf.org/viaf/1325149416745789730004>,
-        <https://viaf.org/viaf/210954680>,
-        <https://viaf.org/viaf/211713705>,
-        <https://viaf.org/viaf/231822808> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/1325149416745789730004>,
-        <https://viaf.org/viaf/210954680>,
-        <https://viaf.org/viaf/211713705>,
-        <https://viaf.org/viaf/231822808>,
-        <https://viaf.org/viaf/237386709> .
+        <https://performance.musiconn.de/work/sonatensatz-fagott-klavier-glinka-michail-ivanovic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1325149416745789730004> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210954680> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211713705> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/231822808> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
 

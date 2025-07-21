@@ -1,57 +1,76 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1103053744> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027257> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300094930> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155581> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300561954> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/korol-cyganskoj-skripki-robi-lakatos-i-ego-ansambl-sankt-petersburger-philharmonie-2001-12-23> ] .
 
-<https://performance.musiconn.de/event/korol-cyganskoj-skripki-robi-lakatos-i-ego-ansambl-sankt-petersburger-philharmonie-2001-12-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/korol-cyganskoj-skripki-robi-lakatos-i-ego-ansambl-sankt-petersburger-philharmonie-2001-12-23> a cto:CTO_0001005 ;
     rdfs:label "Korol' cyganskoj skripki Robi Lakatoš i ego ansambl', Sankt-Petersburger Philharmonie, 23.12.2001" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-2001-2002> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2001-12-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2001-12-23" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1103053744>,
-        <https://d-nb.info/gnd/300027257>,
-        <https://d-nb.info/gnd/300094930>,
-        <https://d-nb.info/gnd/300155581>,
-        <https://d-nb.info/gnd/300561954>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-2001-2002> ;
-    cto:relatedItem <https://d-nb.info/gnd/1103053744>,
-        <https://d-nb.info/gnd/300027257>,
-        <https://d-nb.info/gnd/300094930>,
-        <https://d-nb.info/gnd/300155581>,
-        <https://d-nb.info/gnd/300561954>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/45146573815738101297> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300094930> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300561954> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213417760> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1103053744> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155581> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213967533> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185351206> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181446529> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027257> ],
         <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-2001-23-dezember>,
         <https://performance.musiconn.de/work/a-minute-for-menuhin-lakatos-roby-cseki-kalman>,
         <https://performance.musiconn.de/work/ciocarlia-dinicu-grigoras>,
         <https://performance.musiconn.de/work/clouds-bearbeitung-roby-lakatos-reinhardt-django>,
-        <https://performance.musiconn.de/work/csardas-monti-vittorio>,
-        <https://performance.musiconn.de/work/dve-gitary>,
         <https://performance.musiconn.de/work/hora-di-marrakchi-lakatos-roby>,
         <https://performance.musiconn.de/work/kallai-kettos-fassung-roby-lakatos-kodaly-zoltan>,
         <https://performance.musiconn.de/work/mon-pot-le-gitan-heyral-marc>,
         <https://performance.musiconn.de/work/symphony-the-bird-in-the-dust-lakatos-roby-1>,
-        <https://performance.musiconn.de/work/tango-to-evora-bearbeitung-roby-lakatos-lakatos-roby-mckennitt-loreena>,
-        <https://performance.musiconn.de/work/tritsch-tratsch-polka-strauss-johann>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-nr-2-liszt-franz>,
-        <https://performance.musiconn.de/work/ungarische-taenze-nr-5-brahms-johannes>,
-        <https://viaf.org/viaf/181446529>,
-        <https://viaf.org/viaf/185351206>,
-        <https://viaf.org/viaf/213417760>,
-        <https://viaf.org/viaf/213967533>,
-        <https://viaf.org/viaf/45146573815738101297> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/181446529>,
-        <https://viaf.org/viaf/185351206>,
-        <https://viaf.org/viaf/213417760>,
-        <https://viaf.org/viaf/213967533>,
-        <https://viaf.org/viaf/45146573815738101297> .
+        <https://performance.musiconn.de/work/tango-to-evora-bearbeitung-roby-lakatos-lakatos-roby-mckennitt-loreena> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181446529> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185351206> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213417760> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213967533> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/45146573815738101297> a nfdicore:NFDI_0001010 .
 

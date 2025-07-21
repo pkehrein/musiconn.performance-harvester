@@ -1,64 +1,88 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/104646101X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1170614582> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1246375036> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300250258> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300467060> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300842023> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300865880> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30097132X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzert-alte-oper-frankfurt-a-main-grosser-saal-2016-01-14-20-00> ] .
 
-<https://performance.musiconn.de/event/sonderkonzert-alte-oper-frankfurt-a-main-grosser-saal-2016-01-14-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzert-alte-oper-frankfurt-a-main-grosser-saal-2016-01-14-20-00> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert, Alte Oper (Frankfurt a. Main). Großer Saal, 14.1.2016, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2015-2016> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2016-01-14T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2016-01-14T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/104646101X>,
-        <https://d-nb.info/gnd/1170614582>,
-        <https://d-nb.info/gnd/1246375036>,
-        <https://d-nb.info/gnd/300250258>,
-        <https://d-nb.info/gnd/300467060>,
-        <https://d-nb.info/gnd/300842023>,
-        <https://d-nb.info/gnd/300865880>,
-        <https://d-nb.info/gnd/30097132X> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2015-2016> ;
-    cto:relatedItem <https://d-nb.info/gnd/104646101X>,
-        <https://d-nb.info/gnd/1170614582>,
-        <https://d-nb.info/gnd/1246375036>,
-        <https://d-nb.info/gnd/300250258>,
-        <https://d-nb.info/gnd/300467060>,
-        <https://d-nb.info/gnd/300842023>,
-        <https://d-nb.info/gnd/300865880>,
-        <https://d-nb.info/gnd/30097132X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189360368> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300250258> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315193255> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30097132X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/104646101X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175963373> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170614582> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300865880> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175603524> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1246375036> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300842023> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3500154198358520230006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306267065> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300467060> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188288346> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186304788> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/asventuras-gerassimez-alexej>,
-        <https://performance.musiconn.de/work/das-wohltemperierte-klavier-teil-2-praeludium-und-fuge-bwv-881-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/der-letzte-tanz-im-orient-gerassimez-wassily>,
-        <https://performance.musiconn.de/work/libertango-sammut-eric>,
         <https://performance.musiconn.de/work/melancholia-gerassimez-wassily>,
-        <https://performance.musiconn.de/work/music-for-pieces-of-wood-reich-steve>,
-        <https://performance.musiconn.de/work/paganini-jazz-say-fazil>,
-        <https://performance.musiconn.de/work/piazonore-gerassimez-alexej>,
-        <https://performance.musiconn.de/work/toccata-koppel-anders>,
-        <https://performance.musiconn.de/work/transition-gerassimez-wassily>,
-        <https://performance.musiconn.de/work/variationen-ueber-ein-thema-von-rossini-martinu-bohuslav>,
-        <https://viaf.org/viaf/175603524>,
-        <https://viaf.org/viaf/175963373>,
-        <https://viaf.org/viaf/186304788>,
-        <https://viaf.org/viaf/188288346>,
-        <https://viaf.org/viaf/189360368>,
-        <https://viaf.org/viaf/306267065>,
-        <https://viaf.org/viaf/315193255>,
-        <https://viaf.org/viaf/3500154198358520230006> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/175603524>,
-        <https://viaf.org/viaf/175963373>,
-        <https://viaf.org/viaf/186304788>,
-        <https://viaf.org/viaf/188288346>,
-        <https://viaf.org/viaf/189360368>,
-        <https://viaf.org/viaf/306267065>,
-        <https://viaf.org/viaf/315193255>,
-        <https://viaf.org/viaf/3500154198358520230006> .
+        <https://performance.musiconn.de/work/toccata-koppel-anders> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175603524> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175963373> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186304788> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188288346> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189360368> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/306267065> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315193255> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3500154198358520230006> a nfdicore:NFDI_0001010 .
 

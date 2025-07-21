@@ -1,35 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300016425> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108907> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300491654> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-philharmonisches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1967-02-19-19-30> ] .
 
-<https://performance.musiconn.de/event/7-philharmonisches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1967-02-19-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-philharmonisches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1967-02-19-19-30> a cto:CTO_0001005 ;
     rdfs:label "7. Philharmonisches Konzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 19.2.1967, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1967-02-19T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1967-02-19T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300016425>,
-        <https://d-nb.info/gnd/300108907>,
-        <https://d-nb.info/gnd/300491654> ;
-    cto:relatedItem <https://d-nb.info/gnd/300016425>,
-        <https://d-nb.info/gnd/300108907>,
-        <https://d-nb.info/gnd/300491654>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-kv-449-es-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-13-es-dur-enescu-george>,
-        <https://performance.musiconn.de/work/sinfonien-nr-8-op-93-f-dur-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/197660351>,
-        <https://viaf.org/viaf/198521904>,
-        <https://viaf.org/viaf/211711314> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/197660351>,
-        <https://viaf.org/viaf/198521904>,
-        <https://viaf.org/viaf/211711314> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211711314> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016425> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197660351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300491654> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108907> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198521904> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/197660351> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198521904> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211711314> a nfdicore:NFDI_0001010 .
 

@@ -1,47 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015283> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037651> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30019353X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30071789X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-vereinskonzert-rathaus-muenster-westf-friedenssaal-1873-02-08> ] .
 
-<https://performance.musiconn.de/event/7-vereinskonzert-rathaus-muenster-westf-friedenssaal-1873-02-08> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-vereinskonzert-rathaus-muenster-westf-friedenssaal-1873-02-08> a cto:CTO_0001005 ;
     rdfs:label "7. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 8.2.1873" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1872-73> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1873-02-08" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1873-02-08" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015283>,
-        <https://d-nb.info/gnd/300037651>,
-        <https://d-nb.info/gnd/30019353X>,
-        <https://d-nb.info/gnd/30071789X>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1872-73> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015283>,
-        <https://d-nb.info/gnd/300037651>,
-        <https://d-nb.info/gnd/30019353X>,
-        <https://d-nb.info/gnd/30071789X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30071789X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015283> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30019353X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174126385> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179656851> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037651> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215921963> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179025422> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1872-1873>,
         <https://performance.musiconn.de/work/elegien-violine-orchester-op-10-c-moll-fassung-violine-ernst-heinrich-wilhelm>,
-        <https://performance.musiconn.de/work/elias-hoere-israel-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/fidelio-ouvertuere-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/lieder-op-3-erste-meerfahrt-grimm-julius-otto>,
         <https://performance.musiconn.de/work/lieder-op-3-gebet-auf-dem-wasser-grimm-julius-otto>,
-        <https://performance.musiconn.de/work/polonaise-mit-vorangehendem-andante-spianato-chopin-frederic>,
         <https://performance.musiconn.de/work/scherzo-violine-spohr-louis>,
-        <https://performance.musiconn.de/work/schoen-ellen-op-24-bruch-max>,
-        <https://performance.musiconn.de/work/sinfonien-es-dur-haydn-joseph>,
-        <https://viaf.org/viaf/174126385>,
-        <https://viaf.org/viaf/179025422>,
-        <https://viaf.org/viaf/179656851>,
-        <https://viaf.org/viaf/215921963> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/174126385>,
-        <https://viaf.org/viaf/179025422>,
-        <https://viaf.org/viaf/179656851>,
-        <https://viaf.org/viaf/215921963> .
+        <https://performance.musiconn.de/work/sinfonien-es-dur-haydn-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174126385> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179025422> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179656851> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215921963> a nfdicore:NFDI_0001010 .
 

@@ -1,33 +1,40 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300072813> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/henze-5-6-87-hochschule-fuer-musik-koeln-1987-06-02> ] .
 
-<https://performance.musiconn.de/event/henze-5-6-87-hochschule-fuer-musik-koeln-1987-06-02> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/henze-5-6-87-hochschule-fuer-musik-koeln-1987-06-02> a cto:CTO_0001005 ;
     rdfs:label "Henze 5-6/87, Hochschule für Musik (Köln), 2.6.1987" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-06-02" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-06-02" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300072813>,
-        <https://d-nb.info/gnd/3008405-2> ;
-    cto:relatedItem <https://d-nb.info/gnd/300072813>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hochschule-fuer-musik-koeln> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300072813> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/274926240> ],
         <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
         <https://performance.musiconn.de/work/herr-nun-laessest-du-deinen-diener-in-frieden-fahren-bearbeitung-schuetz-heinrich-henze-hans-werner-glanert-detlev>,
-        <https://performance.musiconn.de/work/ode-an-eine-aeolsharfe-henze-hans-werner>,
         <https://performance.musiconn.de/work/quis-dabit-capiti-meo-aquam-bearbeitung-isaac-heinrich-henze-hans-werner-glanert-detlev>,
         <https://performance.musiconn.de/work/royal-winter-musik-ariel-henze-hans-werner>,
-        <https://performance.musiconn.de/work/royal-winter-musik-oberon-henze-hans-werner>,
-        <https://viaf.org/viaf/274926240> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hochschule-fuer-musik-koeln> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/274926240> .
+        <https://performance.musiconn.de/work/royal-winter-musik-oberon-henze-hans-werner> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/274926240> a nfdicore:NFDI_0001010 .
 

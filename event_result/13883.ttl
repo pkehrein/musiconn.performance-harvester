@@ -1,54 +1,76 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300056788> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144903> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146418> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300180942> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300487223> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300488998> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-zweites-gewandhaus-leipzig-1940-01-25> ] .
 
-<https://performance.musiconn.de/event/konzert-zweites-gewandhaus-leipzig-1940-01-25> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-zweites-gewandhaus-leipzig-1940-01-25> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Zweites Gewandhaus (Leipzig), 25.1.1940" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1940-01-25" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1940-01-25" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300056788>,
-        <https://d-nb.info/gnd/300144903>,
-        <https://d-nb.info/gnd/300146418>,
-        <https://d-nb.info/gnd/300180942>,
-        <https://d-nb.info/gnd/300487223>,
-        <https://d-nb.info/gnd/300488998>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/300056788>,
-        <https://d-nb.info/gnd/300144903>,
-        <https://d-nb.info/gnd/300146418>,
-        <https://d-nb.info/gnd/300180942>,
-        <https://d-nb.info/gnd/300487223>,
-        <https://d-nb.info/gnd/300488998>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300487223> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146418> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205762395> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214748623> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181348868> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300488998> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/293130432> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144903> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186552780> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192584176> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300056788> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300180942> ],
         <https://performance.musiconn.de/source/motettenbuch-1940>,
-        <https://performance.musiconn.de/work/ballettos-1591-amor-vittorioso-gastoldi-giovanni-giacomo>,
-        <https://performance.musiconn.de/work/beim-abschied-zu-singen-schumann-robert>,
-        <https://performance.musiconn.de/work/ctyri-sbory-ukolebavka-dvorak-antonin>,
-        <https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-29-zigeunerleben-schumann-robert>,
-        <https://performance.musiconn.de/work/il-primo-libro-di-canzon-villanesche-chi-la-gagliarda-donne-voimparare-donato-baldassare>,
-        <https://performance.musiconn.de/work/romanzen-und-balladen-op-146-das-schifflein-schumann-robert>,
-        <https://performance.musiconn.de/work/v-prirode-b-126-vecerni-les-rozvazal-zvonky-dvorak-antonin>,
-        <https://viaf.org/viaf/181348868>,
-        <https://viaf.org/viaf/186552780>,
-        <https://viaf.org/viaf/192584176>,
-        <https://viaf.org/viaf/205762395>,
-        <https://viaf.org/viaf/214748623>,
-        <https://viaf.org/viaf/293130432> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/181348868>,
-        <https://viaf.org/viaf/186552780>,
-        <https://viaf.org/viaf/192584176>,
-        <https://viaf.org/viaf/205762395>,
-        <https://viaf.org/viaf/214748623>,
-        <https://viaf.org/viaf/264523828>,
-        <https://viaf.org/viaf/293130432> .
+        <https://performance.musiconn.de/work/il-primo-libro-di-canzon-villanesche-chi-la-gagliarda-donne-voimparare-donato-baldassare> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181348868> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186552780> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192584176> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205762395> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214748623> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/293130432> a nfdicore:NFDI_0001010 .
 

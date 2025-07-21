@@ -1,45 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1046154052> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1190658097> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145543> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171463> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7585890-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/10-abonnementkonzert-altes-theater-leipzig-1870-03-08> ] .
 
-<https://performance.musiconn.de/event/10-abonnementkonzert-altes-theater-leipzig-1870-03-08> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/10-abonnementkonzert-altes-theater-leipzig-1870-03-08> a cto:CTO_0001005 ;
     rdfs:label "10. Abonnementkonzert, Altes Theater (Leipzig), 8.3.1870" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1869-1870> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1870-03-08" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1870-03-08" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1046154052>,
-        <https://d-nb.info/gnd/1190658097>,
-        <https://d-nb.info/gnd/300145543>,
-        <https://d-nb.info/gnd/300171463>,
-        <https://d-nb.info/gnd/7585890-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1869-1870> ;
-    cto:relatedItem <https://d-nb.info/gnd/1046154052>,
-        <https://d-nb.info/gnd/300145543>,
-        <https://d-nb.info/gnd/300171463>,
-        <https://d-nb.info/gnd/7585890-3>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1190658097> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/295641961> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171463> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177213610> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175455812> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1046154052> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305929520> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315209867> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145543> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7585890-3> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
-        <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
-        <https://performance.musiconn.de/work/comala-gade-niels-wilhelm>,
-        <https://performance.musiconn.de/work/elias-es-ist-genug-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/euryanthe-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/lieder-gesaenge-und-requiem-requiem-fuer-mignon-schumann-robert>,
-        <https://viaf.org/viaf/175455812>,
-        <https://viaf.org/viaf/177213610>,
-        <https://viaf.org/viaf/305929520>,
-        <https://viaf.org/viaf/315209867> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1190658097>,
-        <https://viaf.org/viaf/295641961> ;
-    cto:viaf <https://viaf.org/viaf/175455812>,
-        <https://viaf.org/viaf/177213610>,
-        <https://viaf.org/viaf/295641961>,
-        <https://viaf.org/viaf/305929520>,
-        <https://viaf.org/viaf/315209867> .
+        <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175455812> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177213610> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/295641961> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305929520> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315209867> a nfdicore:NFDI_0001010 .
 

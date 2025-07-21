@@ -1,35 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/105265326X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015186> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sechstes-abonnement-concert-zweites-gewandhaus-leipzig-1890-11-06> ] .
 
-<https://performance.musiconn.de/event/sechstes-abonnement-concert-zweites-gewandhaus-leipzig-1890-11-06> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sechstes-abonnement-concert-zweites-gewandhaus-leipzig-1890-11-06> a cto:CTO_0001005 ;
     rdfs:label "Sechstes Abonnement-Concert, Zweites Gewandhaus (Leipzig), 6.11.1890" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1890-11-06" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1890-11-06" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/105265326X>,
-        <https://d-nb.info/gnd/300015186>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/105265326X>,
-        <https://d-nb.info/gnd/300015186>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309597646> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181042167> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015186> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/105265326X> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
         <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
-        <https://performance.musiconn.de/work/fantasien-chor-klavier-orchester-op-80-c-moll-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-120-fassung-1851-schumann-robert>,
-        <https://performance.musiconn.de/work/sommertagsbilder-reinecke-carl>,
-        <https://viaf.org/viaf/181042167>,
-        <https://viaf.org/viaf/309597646> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/181042167>,
-        <https://viaf.org/viaf/264523828>,
-        <https://viaf.org/viaf/309597646> .
+        <https://performance.musiconn.de/work/sommertagsbilder-reinecke-carl> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181042167> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309597646> a nfdicore:NFDI_0001010 .
 

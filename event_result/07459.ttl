@@ -1,47 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1188835327> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015593> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141785> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170351> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300179758> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1889-11-16-19-30> ] .
 
-<https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1889-11-16-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1889-11-16-19-30> a cto:CTO_0001005 ;
     rdfs:label "Sinfonie-Concert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 16.11.1889, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1889-1890> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1889-11-16T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1889-11-16T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/1188835327>,
-        <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300170351>,
-        <https://d-nb.info/gnd/300179758> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1889-1890> ;
-    cto:relatedItem <https://d-nb.info/gnd/1188835327>,
-        <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300170351>,
-        <https://d-nb.info/gnd/300179758>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181828440> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174994351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300179758> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180026361> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015593> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189342072> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1188835327> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1889-1890>,
         <https://performance.musiconn.de/work/ave-maria-blumer-theodor>,
-        <https://performance.musiconn.de/work/der-ring-des-nibelungen-zweiter-tag-siegfried-waldweben-wagner-richard>,
-        <https://performance.musiconn.de/work/fetes-dhebe-musette-et-tambourin-rameau-jean-philippe>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-3-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/musikalische-dorfgeschichten-kretschmer-edmund>,
-        <https://performance.musiconn.de/work/polonaisen-violine-orchester-nr-2-op-21-a-dur-wieniawski-henri>,
-        <https://performance.musiconn.de/work/sinfonien-d-944-c-dur-schubert-franz>,
-        <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/180026361>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/189342072> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/180026361>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/189342072> .
+        <https://performance.musiconn.de/work/fetes-dhebe-musette-et-tambourin-rameau-jean-philippe> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174994351> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180026361> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181828440> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189342072> a nfdicore:NFDI_0001010 .
 

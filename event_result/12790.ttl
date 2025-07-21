@@ -1,48 +1,67 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009976> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300126743> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30012676X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300126778> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300126794> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1966-05-27> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1966-05-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1966-05-27> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 27.5.1966" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1966-05-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1966-05-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300126743>,
-        <https://d-nb.info/gnd/30012676X>,
-        <https://d-nb.info/gnd/300126778>,
-        <https://d-nb.info/gnd/300126794>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300126743>,
-        <https://d-nb.info/gnd/30012676X>,
-        <https://d-nb.info/gnd/300126778>,
-        <https://d-nb.info/gnd/300126794>,
-        <https://performance.musiconn.de/source/motettenbuch-1966>,
-        <https://performance.musiconn.de/work/der-geist-hilft-unser-schwachheit-auf-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-138-kreuzfahrerlied-reger-max>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-138-morgengesang-reger-max>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-138-nachtlied-reger-max>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-138-unser-lieben-frauen-traum-reger-max>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/181197642>,
-        <https://viaf.org/viaf/181283723>,
-        <https://viaf.org/viaf/182292233>,
-        <https://viaf.org/viaf/185467648> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/181197642>,
-        <https://viaf.org/viaf/181283723>,
-        <https://viaf.org/viaf/182292233>,
-        <https://viaf.org/viaf/185467648> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009976> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300126794> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185467648> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181197642> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300126743> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182292233> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174651654> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30012676X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181283723> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300126778> ],
+        <https://performance.musiconn.de/source/motettenbuch-1966> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174651654> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181197642> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181283723> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182292233> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185467648> a nfdicore:NFDI_0001010 .
 

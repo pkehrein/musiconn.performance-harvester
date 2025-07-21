@@ -1,34 +1,41 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300093632> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170114> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300794959> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/musik-fest-des-liszt-vereins-ii-konzert-1899-01-23> ] .
 
-<https://performance.musiconn.de/event/musik-fest-des-liszt-vereins-ii-konzert-1899-01-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/musik-fest-des-liszt-vereins-ii-konzert-1899-01-23> a cto:CTO_0001005 ;
     rdfs:label "Musik-Fest des Liszt-Vereins, II. Konzert, 23.1.1899" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1899-01-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1899-01-23" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300093632>,
-        <https://d-nb.info/gnd/300170114>,
-        <https://d-nb.info/gnd/300794959> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
-    cto:relatedItem <https://d-nb.info/gnd/300093632>,
-        <https://d-nb.info/gnd/300170114>,
-        <https://d-nb.info/gnd/300794959>,
-        <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-vorspiel-wagner-richard>,
-        <https://performance.musiconn.de/work/franz-schuberts-grosse-fantasie-liszt-franz>,
-        <https://performance.musiconn.de/work/rhapsodie-espagnole-arrangiert-liszt-franz>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-23-g-dur-weingartner-felix>,
-        <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/195807463> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hessischer-rundfunk-grosser-sendesaal> ;
-    cto:viaf <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/195807463> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hessischer-rundfunk-grosser-sendesaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093632> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178619765> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170114> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300794959> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195807463> ],
+        <https://performance.musiconn.de/work/rhapsodie-espagnole-arrangiert-liszt-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178619765> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195807463> a nfdicore:NFDI_0001010 .
 

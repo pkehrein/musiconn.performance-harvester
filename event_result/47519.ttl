@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1054565813> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-semperoper-dresden-1989-05-26> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-semperoper-dresden-1989-05-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-semperoper-dresden-1989-05-26> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Semperoper (Dresden), 26.5.1989" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1989-05-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1989-05-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1054565813> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1989-dresden-eigenverlag-der-saechsischen-landesbibliothek-dresden-1990>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1054565813> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309654002> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1989-dresden-eigenverlag-der-saechsischen-landesbibliothek-dresden-1990>,
         <https://performance.musiconn.de/work/lieber-frieden-ballett-wissmann-friedbert> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1054565813>,
-        <https://viaf.org/viaf/309654002> ;
-    cto:viaf <https://viaf.org/viaf/309654002> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/309654002> a nfdicore:NFDI_0001010 .
 

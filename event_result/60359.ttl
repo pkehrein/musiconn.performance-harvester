@@ -1,23 +1,27 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/4387052-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/komponistinnen-staebe-und-saiten-seidlvilla-muenchen-2012-05-12> ] .
 
-<https://performance.musiconn.de/event/komponistinnen-staebe-und-saiten-seidlvilla-muenchen-2012-05-12> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/komponistinnen-staebe-und-saiten-seidlvilla-muenchen-2012-05-12> a cto:CTO_0001005 ;
     rdfs:label "Komponistinnen : Stäbe und Saiten, Seidlvilla (München), 12.5.2012" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/komponistinnen-neue-konzertreihe-im-muenchner-kulturleben> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2012-05-12" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2012-05-12" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4387052-1> ;
-    cto:itemOf <https://performance.musiconn.de/series/komponistinnen-neue-konzertreihe-im-muenchner-kulturleben> ;
-    cto:relatedItem <https://performance.musiconn.de/source/programm-komponistinnenkonzert-37-durchgang>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/153430262> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4387052-1> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/programm-komponistinnenkonzert-37-durchgang>,
         <https://performance.musiconn.de/work/archaia-maric-ljubica>,
         <https://performance.musiconn.de/work/auf-dem-weg-misula-olga>,
         <https://performance.musiconn.de/work/geisterspiel-lee-myung-sun>,
@@ -25,7 +29,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/suiten-marimba-vibraphon-goto-elina>,
         <https://performance.musiconn.de/work/suiten-violoncello-marimba-goto-elina>,
         <https://performance.musiconn.de/work/three-images-karpovna-shleg-ludmila> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4387052-1>,
-        <https://viaf.org/viaf/153430262> ;
-    cto:viaf <https://viaf.org/viaf/153430262> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/153430262> a nfdicore:NFDI_0001010 .
 

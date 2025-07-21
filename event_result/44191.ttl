@@ -4,20 +4,30 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4797192-7> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/abschlusskonzert-des-louis-lewandowski-festivals-synagoge-rykestrasse-berlin-2016-12-18-17-00> ] .
 
-<https://performance.musiconn.de/event/abschlusskonzert-des-louis-lewandowski-festivals-synagoge-rykestrasse-berlin-2016-12-18-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/abschlusskonzert-des-louis-lewandowski-festivals-synagoge-rykestrasse-berlin-2016-12-18-17-00> a cto:CTO_0001005 ;
     rdfs:label "Abschlusskonzert des Louis Lewandowski Festivals, Synagoge Rykestraße (Berlin), 18.12.2016, 17:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2016-12-18T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2016-12-18T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4797192-7>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        <https://performance.musiconn.de/corporation/synagogal-ensemble-berlin>,
+        <https://performance.musiconn.de/corporation/the-lewandowski-chorale-johannesburg> ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4797192-7> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/127026724> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/christine-schmitt-louis-lewandowski-festival-choere-in-der-synagoge>,
         <https://performance.musiconn.de/source/christine-schmitt-louis-lewandowski-festival-von-marzahn-bis-koepenick>,
         <https://performance.musiconn.de/source/nils-busch-petersen-synagogalmusik-erlebt-renaissance-wiederkehr-einer-fast-verdraengten-musikalischen-kultur>,
@@ -28,12 +38,9 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/ki-lo-naeh-boehme-ludwig-rittangel-johann-stephan>,
         <https://performance.musiconn.de/work/klagegesaenge-aus-dem-oratorium-jephta-carissimi-giacomo>,
         <https://performance.musiconn.de/work/shir-hamaalot-ashre-kol-yere-adonai-psalm-128-rossi-salamone> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4797192-7>,
-        <https://viaf.org/viaf/127026724> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://performance.musiconn.de/corporation/synagogal-ensemble-berlin>,
-        <https://performance.musiconn.de/corporation/the-lewandowski-chorale-johannesburg>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/127026724>,
-        <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/127026724> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

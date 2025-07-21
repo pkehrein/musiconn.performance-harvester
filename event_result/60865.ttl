@@ -1,57 +1,72 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1064689124> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009186> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300257090> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300873107> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300978081> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzert-alte-oper-frankfurt-a-main-grosser-saal-2014-02-27-20-00> ] .
 
-<https://performance.musiconn.de/event/sonderkonzert-alte-oper-frankfurt-a-main-grosser-saal-2014-02-27-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzert-alte-oper-frankfurt-a-main-grosser-saal-2014-02-27-20-00> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert, Alte Oper (Frankfurt a. Main). Großer Saal, 27.2.2014, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2013-2014> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2014-02-27T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2014-02-27T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1064689124>,
-        <https://d-nb.info/gnd/300009186>,
-        <https://d-nb.info/gnd/300257090>,
-        <https://d-nb.info/gnd/300873107>,
-        <https://d-nb.info/gnd/300978081> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2013-2014> ;
-    cto:relatedItem <https://d-nb.info/gnd/1064689124>,
-        <https://d-nb.info/gnd/300009186>,
-        <https://d-nb.info/gnd/300257090>,
-        <https://d-nb.info/gnd/300873107>,
-        <https://d-nb.info/gnd/300978081>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212900310> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1064689124> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211734452> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180231982> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300873107> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300978081> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/313272102> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181068333> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009186> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300257090> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
         <https://performance.musiconn.de/work/an-eye-for-optical-theory-nyman-michael>,
-        <https://performance.musiconn.de/work/der-fluyten-lust-hof-laura-eyck-jacob-van>,
         <https://performance.musiconn.de/work/folk-tune-rhapsody-i-motschmann-johannes>,
         <https://performance.musiconn.de/work/folk-tune-rhapsody-iii-motschmann-johannes>,
         <https://performance.musiconn.de/work/ich-hab-die-nacht-getraeumet-fassung>,
         <https://performance.musiconn.de/work/kauppa-kahden-valtonen-jonne>,
-        <https://performance.musiconn.de/work/konzerte-orch-rv-151-vivaldi-antonio>,
         <https://performance.musiconn.de/work/kumru-1997-fassung-say-fazil>,
-        <https://performance.musiconn.de/work/miniatjury-na-gruzinskie-narodnye-temy-cincaje-sulxan>,
-        <https://performance.musiconn.de/work/praeludien-klavier-op-41-auerbach-lera>,
         <https://performance.musiconn.de/work/rondeau-livre-i-deuxieme-suite-duphly-jacques>,
         <https://performance.musiconn.de/work/the-old-lautar-zurbin-lev>,
         <https://performance.musiconn.de/work/trad-ungarisch-csillagok-fassung>,
         <https://performance.musiconn.de/work/two-step-passion-fassung-ince-kamran>,
-        <https://performance.musiconn.de/work/was-mir-behagt-ist-nur-die-muntre-jagd-bwv-208-schafe-koennen-sicher-weiden-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/wild-heart-meijering-chiel>,
-        <https://viaf.org/viaf/180231982>,
-        <https://viaf.org/viaf/181068333>,
-        <https://viaf.org/viaf/211734452>,
-        <https://viaf.org/viaf/212900310>,
-        <https://viaf.org/viaf/313272102> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/180231982>,
-        <https://viaf.org/viaf/181068333>,
-        <https://viaf.org/viaf/211734452>,
-        <https://viaf.org/viaf/212900310>,
-        <https://viaf.org/viaf/313272102> .
+        <https://performance.musiconn.de/work/wild-heart-meijering-chiel> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180231982> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181068333> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211734452> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212900310> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/313272102> a nfdicore:NFDI_0001010 .
 

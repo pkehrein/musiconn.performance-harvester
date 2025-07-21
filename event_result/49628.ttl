@@ -1,52 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300024770> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300062540> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009440X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300098200> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155921> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30078774X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/41-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1927-02-13-19-00> ] .
 
-<https://performance.musiconn.de/event/41-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1927-02-13-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/41-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1927-02-13-19-00> a cto:CTO_0001005 ;
     rdfs:label "41. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 13.2.1927, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1926-1927-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1927-02-13T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1927-02-13T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300024770>,
-        <https://d-nb.info/gnd/300062540>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300098200>,
-        <https://d-nb.info/gnd/300155921>,
-        <https://d-nb.info/gnd/30078774X> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1926-1927-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300024770>,
-        <https://d-nb.info/gnd/300062540>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300098200>,
-        <https://d-nb.info/gnd/300155921>,
-        <https://d-nb.info/gnd/30078774X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300098200> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208682942> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155921> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215941473> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181033187> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30078774X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062540> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174184579> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009440X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300024770> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175407519> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178193908> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
-        <https://performance.musiconn.de/work/akademische-festouvertuere-brahms-johannes>,
-        <https://performance.musiconn.de/work/aquarellen-strauss-josef>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-59-a-moll-klughardt-august>,
-        <https://performance.musiconn.de/work/les-dragons-de-villars-ouvertuere-maillart-louis-aime>,
-        <https://performance.musiconn.de/work/les-preludes-liszt-franz>,
-        <https://performance.musiconn.de/work/melodien-aus-hoffmanns-erzaehlungen-offenbach-jacques>,
-        <https://performance.musiconn.de/work/peer-gynt-suite-nr-2-op-55-grieg-edvard>,
-        <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/175407519>,
-        <https://viaf.org/viaf/178193908>,
-        <https://viaf.org/viaf/181033187>,
-        <https://viaf.org/viaf/208682942>,
-        <https://viaf.org/viaf/215941473> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/175407519>,
-        <https://viaf.org/viaf/178193908>,
-        <https://viaf.org/viaf/181033187>,
-        <https://viaf.org/viaf/208682942>,
-        <https://viaf.org/viaf/215941473> .
+        <https://performance.musiconn.de/work/melodien-aus-hoffmanns-erzaehlungen-offenbach-jacques> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174184579> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175407519> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178193908> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181033187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208682942> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215941473> a nfdicore:NFDI_0001010 .
 

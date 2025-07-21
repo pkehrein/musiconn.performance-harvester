@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300102283> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110359> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300251629> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-kammerkonzert-schloss-albrechtsberg-dresden-2016-11-06-19-00> ] .
 
-<https://performance.musiconn.de/event/3-kammerkonzert-schloss-albrechtsberg-dresden-2016-11-06-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-kammerkonzert-schloss-albrechtsberg-dresden-2016-11-06-19-00> a cto:CTO_0001005 ;
     rdfs:label "3. Kammerkonzert, Schloss Albrechtsberg (Dresden), 6.11.2016, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2016-2017> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2016-11-06T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2016-11-06T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300102283>,
-        <https://d-nb.info/gnd/300110359>,
-        <https://d-nb.info/gnd/300251629>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2016-2017> ;
-    cto:relatedItem <https://d-nb.info/gnd/300102283>,
-        <https://d-nb.info/gnd/300110359>,
-        <https://d-nb.info/gnd/300251629>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/eisblumen-holliger-heinz>,
-        <https://performance.musiconn.de/work/oktette-violine-4-viola-2-violoncello-2-mwv-r-20-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/quintette-violine-2-viola-2-violoncello-kv-515-c-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/186535208>,
-        <https://viaf.org/viaf/198524269>,
-        <https://viaf.org/viaf/215924306> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/186535208>,
-        <https://viaf.org/viaf/198524269>,
-        <https://viaf.org/viaf/215924306>,
-        <https://viaf.org/viaf/237386709> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102283> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300251629> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215924306> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186535208> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110359> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198524269> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/186535208> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198524269> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215924306> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
 

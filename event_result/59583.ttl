@@ -1,29 +1,36 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1225880785> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/124849008> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-opera-stabile-hamburg-1986-11-22> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-opera-stabile-hamburg-1986-11-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-opera-stabile-hamburg-1986-11-22> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Opera Stabile (Hamburg), 22.11.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-11-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-11-22" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/124849008> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/opera-stabile-hamburg> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/808161211549840070006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225880785> ],
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1225880785>,
-        <https://d-nb.info/gnd/124849008> ;
-    cto:relatedItem <https://d-nb.info/gnd/1225880785>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
-        <https://performance.musiconn.de/work/shakespeare-sonette-fuer-countertenor-und-cembalo-zechlin-ruth>,
-        <https://viaf.org/viaf/808161211549840070006> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/opera-stabile-hamburg> ;
-    cto:relatedPerson <https://d-nb.info/gnd/124849008>,
-        <https://viaf.org/viaf/49412251> ;
-    cto:viaf <https://viaf.org/viaf/49412251>,
-        <https://viaf.org/viaf/808161211549840070006> .
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/49412251> ] .
+
+<https://viaf.org/viaf/49412251> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/808161211549840070006> a nfdicore:NFDI_0001010 .
 

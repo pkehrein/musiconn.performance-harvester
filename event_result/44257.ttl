@@ -4,26 +4,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gedenkkonzert-fuer-samuel-lampel-gedenkstaette-am-ort-der-grossen-gemeindesynagoge-gottschedstrasse-leipzig-2014-09-09-17-30> ] .
 
-<https://performance.musiconn.de/event/gedenkkonzert-fuer-samuel-lampel-gedenkstaette-am-ort-der-grossen-gemeindesynagoge-gottschedstrasse-leipzig-2014-09-09-17-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gedenkkonzert-fuer-samuel-lampel-gedenkstaette-am-ort-der-grossen-gemeindesynagoge-gottschedstrasse-leipzig-2014-09-09-17-30> a cto:CTO_0001005 ;
     rdfs:label "Gedenkkonzert für Samuel Lampel, Gedenkstätte am Ort der Großen Gemeindesynagoge Gottschedstraße (Leipzig), 9.9.2014, 17:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2014-09-09T17:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2014-09-09T17:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        <https://performance.musiconn.de/corporation/mdr-sinfonieorchester-streichquartett> ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/gedenkstaette-am-ort-der-grossen-gemeindesynagoge-gottschedstrasse-leipzig> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/flyer-konzert-9-september-2014>,
         <https://performance.musiconn.de/source/uta-boerner-gedenkanstoss-stolpersteine-fuer-rosa-und-samuel-lampel>,
         <https://performance.musiconn.de/work/ono-towo-lfonecho-sulzer-salomon>,
         <https://performance.musiconn.de/work/tauw-lhaudauss-psalm-92-lampel-samuel> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/gedenkstaette-am-ort-der-grossen-gemeindesynagoge-gottschedstrasse-leipzig> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://performance.musiconn.de/corporation/mdr-sinfonieorchester-streichquartett>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

@@ -1,50 +1,67 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170025> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170092> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300213263> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300395981> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4264112-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1921-02-27-19-00> ] .
 
-<https://performance.musiconn.de/event/philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1921-02-27-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1921-02-27-19-00> a cto:CTO_0001005 ;
     rdfs:label "Philharmonisches Konzert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 27.2.1921, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1920-1921> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1921-02-27T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1921-02-27T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300170025>,
-        <https://d-nb.info/gnd/300170092>,
-        <https://d-nb.info/gnd/300213263>,
-        <https://d-nb.info/gnd/300395981>,
-        <https://d-nb.info/gnd/4264112-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1920-1921> ;
-    cto:relatedItem <https://d-nb.info/gnd/300170025>,
-        <https://d-nb.info/gnd/300170092>,
-        <https://d-nb.info/gnd/300213263>,
-        <https://d-nb.info/gnd/300395981>,
-        <https://d-nb.info/gnd/4264112-3>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300213263> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211712631> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300395981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179830238> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185094981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170025> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170092> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181940485> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175221377> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4264112-3> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/ballata-delle-gnomidi-respighi-ottorino>,
-        <https://performance.musiconn.de/work/benvenuto-cellini-ouvertuere-berlioz-hector>,
-        <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-morgenlich-leuchtend-im-rosigen-schein-wagner-richard>,
         <https://performance.musiconn.de/work/la-fanciulla-del-west-arie-puccini-giacomo>,
         <https://performance.musiconn.de/work/la-gioconda-arie-ponchielli-amilcare>,
-        <https://performance.musiconn.de/work/lafricaine-arie-meyerbeer-giacomo>,
-        <https://performance.musiconn.de/work/lohengrin-in-fernem-land-wagner-richard>,
-        <https://performance.musiconn.de/work/till-eulenspiegels-lustige-streiche-strauss-richard>,
-        <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/179830238>,
-        <https://viaf.org/viaf/181940485>,
-        <https://viaf.org/viaf/185094981>,
-        <https://viaf.org/viaf/211712631> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/179830238>,
-        <https://viaf.org/viaf/181940485>,
-        <https://viaf.org/viaf/185094981>,
-        <https://viaf.org/viaf/211712631> .
+        <https://performance.musiconn.de/work/lafricaine-arie-meyerbeer-giacomo> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175221377> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179830238> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181940485> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185094981> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211712631> a nfdicore:NFDI_0001010 .
 

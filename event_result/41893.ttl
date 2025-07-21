@@ -1,50 +1,65 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1170367925> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102658> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300132549> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300211716> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300395450> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-philharmonisches-konzert-stadtschuetzenhaus-halle-grosser-saal-1929-10-24-20-00> ] .
 
-<https://performance.musiconn.de/event/2-philharmonisches-konzert-stadtschuetzenhaus-halle-grosser-saal-1929-10-24-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-philharmonisches-konzert-stadtschuetzenhaus-halle-grosser-saal-1929-10-24-20-00> a cto:CTO_0001005 ;
     rdfs:label "2. Philharmonisches Konzert, Stadtschützenhaus (Halle) / Großer Saal, 24.10.1929, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1929-1930> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1929-10-24T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1929-10-24T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170367925>,
-        <https://d-nb.info/gnd/300102658>,
-        <https://d-nb.info/gnd/300132549>,
-        <https://d-nb.info/gnd/300211716>,
-        <https://d-nb.info/gnd/300395450> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1929-1930> ;
-    cto:relatedItem <https://d-nb.info/gnd/1170367925>,
-        <https://d-nb.info/gnd/300102658>,
-        <https://d-nb.info/gnd/300132549>,
-        <https://d-nb.info/gnd/300211716>,
-        <https://d-nb.info/gnd/300395450>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/stadtschuetzenhaus-halle-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300211716> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102658> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/19145304723878610989> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300132549> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170367925> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194740133> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181850459> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201856202> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185890974> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300395450> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/british-folk-music-settings-grainger-percy>,
         <https://performance.musiconn.de/work/dank-sei-dir-herr-haendel-georg-friedrich>,
         <https://performance.musiconn.de/work/der-barbier-von-sevilla-arie-rossini-gioachino>,
-        <https://performance.musiconn.de/work/gesaenge-op-33-pilgers-morgenlied-strauss-richard>,
-        <https://performance.musiconn.de/work/guillaume-tell-oper-1829-ouvertuere-rossini-gioachino>,
         <https://performance.musiconn.de/work/intermezzi-goldoniani-op127-bossi-marco-enrico>,
-        <https://performance.musiconn.de/work/sinfonien-mwv-n-18-a-moll-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/szene-veneziane-mancinelli-luigi>,
-        <https://performance.musiconn.de/work/un-ballo-in-maschera-alzati-la-tuo-figlio-rezitativ-und-arie-verdi-giuseppe>,
-        <https://viaf.org/viaf/181850459>,
-        <https://viaf.org/viaf/185890974>,
-        <https://viaf.org/viaf/19145304723878610989>,
-        <https://viaf.org/viaf/194740133>,
-        <https://viaf.org/viaf/201856202> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/stadtschuetzenhaus-halle-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/181850459>,
-        <https://viaf.org/viaf/185890974>,
-        <https://viaf.org/viaf/19145304723878610989>,
-        <https://viaf.org/viaf/194740133>,
-        <https://viaf.org/viaf/201856202> .
+        <https://performance.musiconn.de/work/szene-veneziane-mancinelli-luigi> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181850459> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185890974> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/19145304723878610989> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194740133> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201856202> a nfdicore:NFDI_0001010 .
 

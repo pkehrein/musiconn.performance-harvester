@@ -1,29 +1,32 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300166699> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/verdi-opernabend-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1952-12-25> ] .
 
-<https://performance.musiconn.de/event/verdi-opernabend-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1952-12-25> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/verdi-opernabend-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1952-12-25> a cto:CTO_0001005 ;
     rdfs:label "Verdi-Opernabend, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 25.12.1952" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1952-1953> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1952-12-25" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1952-12-25" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300166699> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1952-1953> ;
-    cto:relatedItem <https://d-nb.info/gnd/300166699>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178215038> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300166699> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/aida-vorspiel-holde-aida-als-sieger-kehre-heim-verdi-giuseppe>,
         <https://performance.musiconn.de/work/il-trovatore-auswahl-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/la-forza-del-destino-ouvertuere-die-stunde-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/les-vepres-siciliennes-ouvertuere-verdi-giuseppe>,
-        <https://viaf.org/viaf/178215038> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/178215038> .
+        <https://performance.musiconn.de/work/la-forza-del-destino-ouvertuere-die-stunde-verdi-giuseppe> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178215038> a nfdicore:NFDI_0001010 .
 

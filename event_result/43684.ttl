@@ -4,20 +4,28 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4212264-8> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/der-traum-von-europa-berliner-philharmonie-berlin-1992-06-28> ] .
 
-<https://performance.musiconn.de/event/der-traum-von-europa-berliner-philharmonie-berlin-1992-06-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/der-traum-von-europa-berliner-philharmonie-berlin-1992-06-28> a cto:CTO_0001005 ;
     rdfs:label "Der Traum von Europa, Berliner Philharmonie (Berlin), 28.6.1992" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1992-06-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1992-06-28" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4212264-8>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/244606041> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4212264-8> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/edith-opelt-der-alte-traum-vom-gemeinsamen-europa-will-quadflieg-las-in-der-philharmonie-den-florenzer-essay-von-stefan-zweig>,
         <https://performance.musiconn.de/source/liesel-markowski-literarisch-musikalisches-programm-in-der-berliner-philharmonie-der-traum-von-europa>,
         <https://performance.musiconn.de/source/plakat-musikalisch-literarische-veranstaltung-28-juni-1992>,
@@ -27,10 +35,9 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/schiwisi-adonoi-psalm-16-8-9-lewandowski-louis>,
         <https://performance.musiconn.de/work/tka-bschofor-godol-sulzer-salomon>,
         <https://performance.musiconn.de/work/toras-adonoi-psalm-19-7-9-lewandowski-louis> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4212264-8>,
-        <https://viaf.org/viaf/244606041> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/244606041> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/244606041> a nfdicore:NFDI_0001010 .
 

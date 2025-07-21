@@ -1,49 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1127867679> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1176460765> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300005164> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010001> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300143737> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4192773-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-marienkirche-berlin-mitte-1950-11-05> ] .
 
-<https://performance.musiconn.de/event/konzert-marienkirche-berlin-mitte-1950-11-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-marienkirche-berlin-mitte-1950-11-05> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Marienkirche (Berlin-Mitte), 5.11.1950" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1950-11-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1950-11-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1127867679>,
-        <https://d-nb.info/gnd/1176460765>,
-        <https://d-nb.info/gnd/300005164>,
-        <https://d-nb.info/gnd/300010001>,
-        <https://d-nb.info/gnd/300143737>,
-        <https://d-nb.info/gnd/4192773-4> ;
-    cto:relatedItem <https://d-nb.info/gnd/1127867679>,
-        <https://d-nb.info/gnd/1176460765>,
-        <https://d-nb.info/gnd/300005164>,
-        <https://d-nb.info/gnd/300010001>,
-        <https://d-nb.info/gnd/300143737>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/235968199> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4192773-4> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5502154923709263780009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180964575> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1176460765> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300005164> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1127867679> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193655948> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300143737> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179407683> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8543149068385365730002> ],
         <https://performance.musiconn.de/source/motettenbuch-1950>,
-        <https://performance.musiconn.de/work/cantiones-sacrae-de-festis-praecipuis-totius-anni-pater-noster-qui-es-in-coelis-hassler-hans-leo>,
-        <https://performance.musiconn.de/work/fuerchte-dich-nicht-ich-bin-bei-dir-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/ich-weiss-dass-mein-erloeser-lebt-bach-johann-michael>,
-        <https://performance.musiconn.de/work/motetten-op-74-warum-ist-das-licht-gegeben-dem-muehseligen-auswahl-brahms-johannes>,
-        <https://performance.musiconn.de/work/musicalische-andachten-theil-5-zion-spricht-der-herr-hat-mich-verlassen-hammerschmidt-andreas>,
-        <https://performance.musiconn.de/work/psalmen-davids-psalm-98-schuetz-heinrich>,
-        <https://viaf.org/viaf/179407683>,
-        <https://viaf.org/viaf/180964575>,
-        <https://viaf.org/viaf/193655948>,
-        <https://viaf.org/viaf/5502154923709263780009>,
-        <https://viaf.org/viaf/8543149068385365730002> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4192773-4>,
-        <https://viaf.org/viaf/235968199> ;
-    cto:viaf <https://viaf.org/viaf/179407683>,
-        <https://viaf.org/viaf/180964575>,
-        <https://viaf.org/viaf/193655948>,
-        <https://viaf.org/viaf/235968199>,
-        <https://viaf.org/viaf/5502154923709263780009>,
-        <https://viaf.org/viaf/8543149068385365730002> .
+        <https://performance.musiconn.de/work/motetten-op-74-warum-ist-das-licht-gegeben-dem-muehseligen-auswahl-brahms-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179407683> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180964575> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193655948> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/235968199> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5502154923709263780009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8543149068385365730002> a nfdicore:NFDI_0001010 .
 

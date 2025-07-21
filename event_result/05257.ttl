@@ -1,53 +1,71 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175565539> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009984> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300025874> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300087896> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140614> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300498357> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/dresdner-kreuzchor-old-zion-lutheran-church-philadelphia-1935-03-28-20-00> ] .
 
-<https://performance.musiconn.de/event/dresdner-kreuzchor-old-zion-lutheran-church-philadelphia-1935-03-28-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/dresdner-kreuzchor-old-zion-lutheran-church-philadelphia-1935-03-28-20-00> a cto:CTO_0001005 ;
     rdfs:label "Dresdner Kreuzchor, Old Zion Lutheran Church (Philadelphia), 28.3.1935, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1934-35> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1935-03-28T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1935-03-28T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175565539>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300025874>,
-        <https://d-nb.info/gnd/300087896>,
-        <https://d-nb.info/gnd/300140614>,
-        <https://d-nb.info/gnd/300498357> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1934-35> ;
-    cto:relatedItem <https://d-nb.info/gnd/1175565539>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300025874>,
-        <https://d-nb.info/gnd/300087896>,
-        <https://d-nb.info/gnd/300140614>,
-        <https://d-nb.info/gnd/300498357>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/old-zion-lutheran-church-philadelphia> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300498357> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/9417154801969456310000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140614> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300087896> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180852813> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025874> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184812011> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009984> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175565539> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177379672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185469755> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/87145858134423022690> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/im-abendrot-schubert-franz>,
-        <https://performance.musiconn.de/work/jesu-meine-freude-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/largo-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/liebe-liebe-dir-ergeb-ich-mich-cornelius-peter>,
-        <https://performance.musiconn.de/work/lieder-gemischter-chor-op-60-palmsonntagmorgen-bruch-max>,
-        <https://performance.musiconn.de/work/lieder-op-49-wiegenlied-brahms-johannes>,
-        <https://performance.musiconn.de/work/sinfonien-d-dur-2-satz-haydn-joseph>,
-        <https://performance.musiconn.de/work/tristis-est-anima-mea-kuhnau-johann>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/180852813>,
-        <https://viaf.org/viaf/184812011>,
-        <https://viaf.org/viaf/185469755>,
-        <https://viaf.org/viaf/87145858134423022690>,
-        <https://viaf.org/viaf/9417154801969456310000> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/old-zion-lutheran-church-philadelphia> ;
-    cto:viaf <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/180852813>,
-        <https://viaf.org/viaf/184812011>,
-        <https://viaf.org/viaf/185469755>,
-        <https://viaf.org/viaf/87145858134423022690>,
-        <https://viaf.org/viaf/9417154801969456310000> .
+        <https://performance.musiconn.de/work/sinfonien-d-dur-2-satz-haydn-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177379672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180852813> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184812011> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185469755> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/87145858134423022690> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/9417154801969456310000> a nfdicore:NFDI_0001010 .
 

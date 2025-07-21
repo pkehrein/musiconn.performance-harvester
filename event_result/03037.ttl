@@ -1,51 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1284222675> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1284222799> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141440> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300352913> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300576099> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300862377> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/9-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1882-02-24-19-00> ] .
 
-<https://performance.musiconn.de/event/9-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1882-02-24-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/9-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1882-02-24-19-00> a cto:CTO_0001005 ;
     rdfs:label "9. Kammermusik-Abend, Kleiner Konzertsaal (Frankfurt a. M.), 24.2.1882, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1881-1882> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1882-02-24T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1882-02-24T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1284222675>,
-        <https://d-nb.info/gnd/1284222799>,
-        <https://d-nb.info/gnd/300141440>,
-        <https://d-nb.info/gnd/300352913>,
-        <https://d-nb.info/gnd/300576099>,
-        <https://d-nb.info/gnd/300862377> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1881-1882> ;
-    cto:relatedItem <https://d-nb.info/gnd/1284222675>,
-        <https://d-nb.info/gnd/1284222799>,
-        <https://d-nb.info/gnd/300141440>,
-        <https://d-nb.info/gnd/300352913>,
-        <https://d-nb.info/gnd/300576099>,
-        <https://d-nb.info/gnd/300862377>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/duette-1801-dite-almeno-cherubini-luigi>,
-        <https://performance.musiconn.de/work/duette-1801-la-mia-fille-cherubini-luigi>,
-        <https://performance.musiconn.de/work/duette-op-20-die-meere-brahms-johannes>,
-        <https://performance.musiconn.de/work/duette-op-61-die-schwestern-brahms-johannes>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-d-810-d-moll-schubert-franz>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-80-nr-3-haydn-joseph>,
-        <https://viaf.org/viaf/184106691>,
-        <https://viaf.org/viaf/184687994>,
-        <https://viaf.org/viaf/202944623>,
-        <https://viaf.org/viaf/207914472>,
-        <https://viaf.org/viaf/302058621>,
-        <https://viaf.org/viaf/302169390> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/184106691>,
-        <https://viaf.org/viaf/184687994>,
-        <https://viaf.org/viaf/202944623>,
-        <https://viaf.org/viaf/207914472>,
-        <https://viaf.org/viaf/302058621>,
-        <https://viaf.org/viaf/302169390> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/302058621> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1284222675> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141440> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1284222799> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300862377> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300576099> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184687994> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300352913> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184106691> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207914472> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/302169390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202944623> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/184106691> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184687994> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202944623> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207914472> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/302058621> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/302169390> a nfdicore:NFDI_0001010 .
 

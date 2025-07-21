@@ -1,50 +1,66 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026692> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037929> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145934> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4443016-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1878-02-05> ] .
 
-<https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1878-02-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1878-02-05> a cto:CTO_0001005 ;
     rdfs:label "8. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 5.2.1878" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1877-1878> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1878-02-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1878-02-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026692>,
-        <https://d-nb.info/gnd/300037929>,
-        <https://d-nb.info/gnd/300145934>,
-        <https://d-nb.info/gnd/4381134-6>,
-        <https://d-nb.info/gnd/4443016-4> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1877-1878> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026692>,
-        <https://d-nb.info/gnd/300037929>,
-        <https://d-nb.info/gnd/300145934>,
-        <https://d-nb.info/gnd/4443016-4>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145934> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026692> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203706658> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/268057968> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4443016-4> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208712286> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182661476> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037929> ],
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
         <https://performance.musiconn.de/work/bunte-reihe-ungarisch-liszt-franz>,
         <https://performance.musiconn.de/work/die-lotosblume-fassung-klavier-schumann-robert>,
-        <https://performance.musiconn.de/work/hakon-jarl-reinecke-carl>,
         <https://performance.musiconn.de/work/menuette-boccherini-luigi>,
-        <https://performance.musiconn.de/work/norwegische-melodie-svendsen-johan-severin>,
-        <https://performance.musiconn.de/work/ouvertuere-scherzo-und-finale-schumann-robert>,
-        <https://performance.musiconn.de/work/rhapsodien-alt-maennerchor-orchester-op-53-brahms-johannes>,
-        <https://performance.musiconn.de/work/tarantellen-klavier-op-43-as-dur-chopin-frederic>,
-        <https://viaf.org/viaf/182661476>,
-        <https://viaf.org/viaf/203706658>,
-        <https://viaf.org/viaf/208712286>,
-        <https://viaf.org/viaf/268057968> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/182661476>,
-        <https://viaf.org/viaf/203706658>,
-        <https://viaf.org/viaf/208712286>,
-        <https://viaf.org/viaf/242717024>,
-        <https://viaf.org/viaf/268057968> .
+        <https://performance.musiconn.de/work/norwegische-melodie-svendsen-johan-severin> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182661476> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203706658> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208712286> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/268057968> a nfdicore:NFDI_0001010 .
 

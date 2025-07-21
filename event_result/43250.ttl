@@ -1,51 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1044198230> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1189855593> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300019203> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026870> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300262086> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/301009015> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-museums-konzert-staedtische-buehnen-frankfurt-am-main-grosses-haus-1959-02-23-19-30> ] .
 
-<https://performance.musiconn.de/event/8-museums-konzert-staedtische-buehnen-frankfurt-am-main-grosses-haus-1959-02-23-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-museums-konzert-staedtische-buehnen-frankfurt-am-main-grosses-haus-1959-02-23-19-30> a cto:CTO_0001005 ;
     rdfs:label "8. Museums-Konzert, Städtische Bühnen (Frankfurt am Main) / Großes Haus, 23.2.1959, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1958-1959> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1959-02-23T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1959-02-23T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1044198230>,
-        <https://d-nb.info/gnd/1189855593>,
-        <https://d-nb.info/gnd/300019203>,
-        <https://d-nb.info/gnd/300026870>,
-        <https://d-nb.info/gnd/300262086>,
-        <https://d-nb.info/gnd/301009015> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1958-1959> ;
-    cto:relatedItem <https://d-nb.info/gnd/1044198230>,
-        <https://d-nb.info/gnd/1189855593>,
-        <https://d-nb.info/gnd/300019203>,
-        <https://d-nb.info/gnd/300026870>,
-        <https://d-nb.info/gnd/300262086>,
-        <https://d-nb.info/gnd/301009015>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/cosi-fan-tutte-e-amore-un-ladroncello-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/la-damnation-de-faust-damour-lardente-flamme-berlioz-hector>,
-        <https://performance.musiconn.de/work/la-damnation-de-faust-le-roi-de-thule-berlioz-hector>,
-        <https://performance.musiconn.de/work/nehmt-meinen-dank-ihr-holden-goenner-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-73-d-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-henze-hans-werner>,
-        <https://viaf.org/viaf/174838931>,
-        <https://viaf.org/viaf/182065435>,
-        <https://viaf.org/viaf/182677132>,
-        <https://viaf.org/viaf/183542937>,
-        <https://viaf.org/viaf/191495144>,
-        <https://viaf.org/viaf/200803383> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-grosses-haus> ;
-    cto:viaf <https://viaf.org/viaf/174838931>,
-        <https://viaf.org/viaf/182065435>,
-        <https://viaf.org/viaf/182677132>,
-        <https://viaf.org/viaf/183542937>,
-        <https://viaf.org/viaf/191495144>,
-        <https://viaf.org/viaf/200803383> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-grosses-haus> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301009015> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300019203> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183542937> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191495144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026870> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182677132> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300262086> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1044198230> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1189855593> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200803383> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174838931> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182065435> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174838931> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182065435> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182677132> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183542937> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191495144> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200803383> a nfdicore:NFDI_0001010 .
 

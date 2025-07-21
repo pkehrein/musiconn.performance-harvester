@@ -4,29 +4,36 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4410249-5> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/musikalisch-literarische-veranstaltung-haus-des-buches-leipzig-1997-06-04-20-00> ] .
 
-<https://performance.musiconn.de/event/musikalisch-literarische-veranstaltung-haus-des-buches-leipzig-1997-06-04-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/musikalisch-literarische-veranstaltung-haus-des-buches-leipzig-1997-06-04-20-00> a cto:CTO_0001005 ;
     rdfs:label "Musikalisch-literarische Veranstaltung, Haus des Buches (Leipzig), 4.6.1997, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1997-06-04T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1997-06-04T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4410249-5>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/246942583> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4410249-5> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/work/dayenu-moddel-philip>,
         <https://performance.musiconn.de/work/ez-chajim-hi-naumbourg-samuel>,
         <https://performance.musiconn.de/work/lochen-somach-libi-psalm-16-9-11-lewandowski-louis>,
         <https://performance.musiconn.de/work/omar-adoschem-ljakoiw-fassung-sander-werner>,
         <https://performance.musiconn.de/work/wchach-hojo-omer-nowakowsky-david> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4410249-5>,
-        <https://viaf.org/viaf/246942583> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/246942583> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/246942583> a nfdicore:NFDI_0001010 .
 

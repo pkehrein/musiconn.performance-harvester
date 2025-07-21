@@ -1,48 +1,63 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300145780> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300211260> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300274068> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300279884> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300300158> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1914-01-29-20-00> ] .
 
-<https://performance.musiconn.de/event/4-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1914-01-29-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1914-01-29-20-00> a cto:CTO_0001005 ;
     rdfs:label "4. Symphonie-Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 29.1.1914, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1913-1914-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1914-01-29T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1914-01-29T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300145780>,
-        <https://d-nb.info/gnd/300211260>,
-        <https://d-nb.info/gnd/300274068>,
-        <https://d-nb.info/gnd/300279884>,
-        <https://d-nb.info/gnd/300300158> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1913-1914-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300145780>,
-        <https://d-nb.info/gnd/300211260>,
-        <https://d-nb.info/gnd/300274068>,
-        <https://d-nb.info/gnd/300279884>,
-        <https://d-nb.info/gnd/300300158>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185523069> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300274068> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186511262> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300211260> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205765627> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185879947> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145780> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300300158> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179851477> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300279884> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-symphonie-konzerte-1908-1933>,
         <https://performance.musiconn.de/work/der-freischuetz-endlich-nahte-mir-der-schlummer-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/du-bist-die-ruh-schubert-franz>,
-        <https://performance.musiconn.de/work/hero-und-leander-op-20-ertel-jean-paul>,
-        <https://performance.musiconn.de/work/ich-frage-keine-blume-schubert-franz>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-77-auftraege-schumann-robert>,
-        <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-mondnacht-schumann-robert>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-g-moll-kalinnikov-vasilij-s>,
-        <https://viaf.org/viaf/179851477>,
-        <https://viaf.org/viaf/185523069>,
-        <https://viaf.org/viaf/185879947>,
-        <https://viaf.org/viaf/186511262>,
-        <https://viaf.org/viaf/205765627> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/179851477>,
-        <https://viaf.org/viaf/185523069>,
-        <https://viaf.org/viaf/185879947>,
-        <https://viaf.org/viaf/186511262>,
-        <https://viaf.org/viaf/205765627> .
+        <https://performance.musiconn.de/work/hero-und-leander-op-20-ertel-jean-paul> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179851477> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185523069> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185879947> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186511262> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205765627> a nfdicore:NFDI_0001010 .
 

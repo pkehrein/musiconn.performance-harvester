@@ -1,43 +1,59 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1071689002> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009399> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30007543X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300220456> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5074761-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/landhaus-konzert-stadtmuseum-dresden-1978-04-16-19-00> ] .
 
-<https://performance.musiconn.de/event/landhaus-konzert-stadtmuseum-dresden-1978-04-16-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/landhaus-konzert-stadtmuseum-dresden-1978-04-16-19-00> a cto:CTO_0001005 ;
     rdfs:label "Landhaus-Konzert, Stadtmuseum Dresden, 16.4.1978, 19:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1978-04-16T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1978-04-16T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1071689002>,
-        <https://d-nb.info/gnd/300009399>,
-        <https://d-nb.info/gnd/30007543X>,
-        <https://d-nb.info/gnd/300220456>,
-        <https://d-nb.info/gnd/5074761-7> ;
-    cto:relatedItem <https://d-nb.info/gnd/1071689002>,
-        <https://d-nb.info/gnd/300009399>,
-        <https://d-nb.info/gnd/30007543X>,
-        <https://d-nb.info/gnd/300220456>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/divertimenti-violine-2-violoncello-klavier-hob-14-13-haydn-joseph>,
-        <https://performance.musiconn.de/work/konzerte-cembalo-orchester-bwv-1052-1058-nr-4-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/quartette-violine-viola-violoncello-kontrabass-nr-2-hoffmeister-franz-anton>,
-        <https://performance.musiconn.de/work/sonatinen-klarinette-klavier-h-356-martinu-bohuslav>,
-        <https://viaf.org/viaf/191500085>,
-        <https://viaf.org/viaf/195807018>,
-        <https://viaf.org/viaf/201850845>,
-        <https://viaf.org/viaf/315968011> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5074761-7>,
-        <https://viaf.org/viaf/126221316> ;
-    cto:viaf <https://viaf.org/viaf/126221316>,
-        <https://viaf.org/viaf/191500085>,
-        <https://viaf.org/viaf/195807018>,
-        <https://viaf.org/viaf/201850845>,
-        <https://viaf.org/viaf/315968011> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5074761-7> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/126221316> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195807018> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315968011> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300220456> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30007543X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191500085> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1071689002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009399> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201850845> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/126221316> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191500085> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195807018> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201850845> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315968011> a nfdicore:NFDI_0001010 .
 

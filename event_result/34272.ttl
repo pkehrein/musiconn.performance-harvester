@@ -4,24 +4,25 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4222712-4> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/le-ballet-des-vingt-quatre-heures-chateau-de-chantilly-chantilly-1722-11-05> ] .
 
-<https://performance.musiconn.de/event/le-ballet-des-vingt-quatre-heures-chateau-de-chantilly-chantilly-1722-11-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/le-ballet-des-vingt-quatre-heures-chateau-de-chantilly-chantilly-1722-11-05> a cto:CTO_0001005 ;
     rdfs:label "Le Ballet des vingt-quatre heures, Château de Chantilly (Chantilly), 5.11.1722" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1722-11-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1722-11-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4222712-4> ;
-    cto:relatedItem <https://performance.musiconn.de/source/beauchamps-1735-bd-3-91>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4222712-4> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/beauchamps-1735-bd-3-91>,
         <https://performance.musiconn.de/source/musikalie-digitalisat-153>,
         <https://performance.musiconn.de/source/onlinequelle-460>,
         <https://performance.musiconn.de/source/onlinequelle-461>,
         <https://performance.musiconn.de/source/textquelle-60>,
         <https://performance.musiconn.de/source/textquelle-digitalisat-198>,
         <https://performance.musiconn.de/work/le-ballet-des-vingt-quatre-heures-aubert-jacques> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4222712-4> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
 

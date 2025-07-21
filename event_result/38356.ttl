@@ -1,32 +1,38 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300069936> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110243> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sechster-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1926-01-15-19-00> ] .
 
-<https://performance.musiconn.de/event/sechster-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1926-01-15-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sechster-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1926-01-15-19-00> a cto:CTO_0001005 ;
     rdfs:label "Sechster Kammermusik-Abend, Kleiner Konzertsaal (Frankfurt a. M.), 15.1.1926, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1925-1926> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1926-01-15T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1926-01-15T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300069936>,
-        <https://d-nb.info/gnd/300110243> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1925-1926> ;
-    cto:relatedItem <https://d-nb.info/gnd/300069936>,
-        <https://d-nb.info/gnd/300110243>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300069936> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193653858> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110243> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197650928> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-72-c-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-kv-589-b-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/suite-e-moll-chemin-petit-hans>,
-        <https://viaf.org/viaf/193653858>,
-        <https://viaf.org/viaf/197650928> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/193653858>,
-        <https://viaf.org/viaf/197650928> .
+        <https://performance.musiconn.de/work/suite-e-moll-chemin-petit-hans> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/193653858> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197650928> a nfdicore:NFDI_0001010 .
 

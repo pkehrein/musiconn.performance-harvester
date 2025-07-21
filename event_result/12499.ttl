@@ -1,41 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1193931703> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30000866X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026366> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1960-09-10> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1960-09-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1960-09-10> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 10.9.1960" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1960-09-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1960-09-10" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1193931703>,
-        <https://d-nb.info/gnd/30000866X>,
-        <https://d-nb.info/gnd/300026366>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1193931703>,
-        <https://d-nb.info/gnd/30000866X>,
-        <https://d-nb.info/gnd/300026366>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174601780> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026366> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30000866X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1193931703> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175186138> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6628156762974141300008> ],
         <https://performance.musiconn.de/source/motettenbuch-1960>,
         <https://performance.musiconn.de/work/evangelien-motetten-1957-jesus-die-auferstehung-und-das-leben-strohbach-siegfried>,
         <https://performance.musiconn.de/work/evangelien-motetten-1957-jesus-und-der-oberzoellner-zacharias-strohbach-siegfried>,
-        <https://performance.musiconn.de/work/evangelien-motetten-1957-jesus-und-die-ehebrecherin-strohbach-siegfried>,
-        <https://performance.musiconn.de/work/ihr-die-ihr-euch-von-christo-nennet-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/motetten-op-74-o-heiland-reiss-die-himmel-auf-brahms-johannes>,
-        <https://performance.musiconn.de/work/sey-nun-wieder-zufrieden-meine-seele-bach-johann-michael>,
-        <https://viaf.org/viaf/174601780>,
-        <https://viaf.org/viaf/175186138>,
-        <https://viaf.org/viaf/6628156762974141300008> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/174601780>,
-        <https://viaf.org/viaf/175186138>,
-        <https://viaf.org/viaf/6628156762974141300008> .
+        <https://performance.musiconn.de/work/evangelien-motetten-1957-jesus-und-die-ehebrecherin-strohbach-siegfried> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174601780> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175186138> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6628156762974141300008> a nfdicore:NFDI_0001010 .
 

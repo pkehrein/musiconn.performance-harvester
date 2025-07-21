@@ -1,55 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/105265326X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/113609380X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1155878248> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300070098> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111924> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300711158> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zwanzigstes-abonnement-concert-zweites-gewandhaus-leipzig-1886-03-04> ] .
 
-<https://performance.musiconn.de/event/zwanzigstes-abonnement-concert-zweites-gewandhaus-leipzig-1886-03-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zwanzigstes-abonnement-concert-zweites-gewandhaus-leipzig-1886-03-04> a cto:CTO_0001005 ;
     rdfs:label "Zwanzigstes Abonnement-Concert, Zweites Gewandhaus (Leipzig), 4.3.1886" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1886-03-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1886-03-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/105265326X>,
-        <https://d-nb.info/gnd/113609380X>,
-        <https://d-nb.info/gnd/1155878248>,
-        <https://d-nb.info/gnd/300070098>,
-        <https://d-nb.info/gnd/300111924>,
-        <https://d-nb.info/gnd/300711158>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/105265326X>,
-        <https://d-nb.info/gnd/113609380X>,
-        <https://d-nb.info/gnd/1155878248>,
-        <https://d-nb.info/gnd/300070098>,
-        <https://d-nb.info/gnd/300111924>,
-        <https://d-nb.info/gnd/300711158>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1155878248> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175023645> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195822919> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/105265326X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300070098> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178739886> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111924> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300711158> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3674152381772701950009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/113609380X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182487746> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309597646> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
         <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
-        <https://performance.musiconn.de/work/das-veilchen-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/die-schoepfung-nun-beut-die-flur-das-frische-gruen-haydn-joseph>,
-        <https://performance.musiconn.de/work/gesaenge-op-14-widmung-franz-robert>,
-        <https://performance.musiconn.de/work/konzerte-harfe-orchester-op-182-e-moll-reinecke-carl>,
-        <https://performance.musiconn.de/work/lieder-op-74-pierscien-chopin-frederic>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-120-fassung-1851-schumann-robert>,
-        <https://performance.musiconn.de/work/suiten-orchester-nr-5-op-135-c-moll-lachner-franz-paul>,
-        <https://viaf.org/viaf/175023645>,
-        <https://viaf.org/viaf/178739886>,
-        <https://viaf.org/viaf/182487746>,
-        <https://viaf.org/viaf/195822919>,
-        <https://viaf.org/viaf/309597646>,
-        <https://viaf.org/viaf/3674152381772701950009> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/175023645>,
-        <https://viaf.org/viaf/178739886>,
-        <https://viaf.org/viaf/182487746>,
-        <https://viaf.org/viaf/195822919>,
-        <https://viaf.org/viaf/264523828>,
-        <https://viaf.org/viaf/309597646>,
-        <https://viaf.org/viaf/3674152381772701950009> .
+        <https://performance.musiconn.de/work/lieder-op-74-pierscien-chopin-frederic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175023645> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178739886> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182487746> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195822919> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309597646> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3674152381772701950009> a nfdicore:NFDI_0001010 .
 

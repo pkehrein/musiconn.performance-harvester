@@ -1,22 +1,26 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300399359> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/le-mariage-force-louvre-appartement-bas-de-la-reine-mere-paris-1664-01-29> ] .
 
-<https://performance.musiconn.de/event/le-mariage-force-louvre-appartement-bas-de-la-reine-mere-paris-1664-01-29> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/le-mariage-force-louvre-appartement-bas-de-la-reine-mere-paris-1664-01-29> a cto:CTO_0001005 ;
     rdfs:label "Le Mariage forcé, Louvre, Appartement bas de la Reine mère (Paris), 29.1.1664" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1664-01-29" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1664-01-29" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300399359> ;
-    cto:relatedItem <https://d-nb.info/gnd/300399359>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/louvre-appartement-bas-de-la-reine-mere-paris> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174437072> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300399359> ],
         <https://performance.musiconn.de/source/beauchamps-1735-bd-3-70-71>,
         <https://performance.musiconn.de/source/gazette-1664-02-02>,
         <https://performance.musiconn.de/source/hourcade-2002-277>,
@@ -24,9 +28,8 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/source/musikalie-digitalisat-14>,
         <https://performance.musiconn.de/source/onlinequelle-60>,
         <https://performance.musiconn.de/source/onlinequelle-61>,
-        <https://performance.musiconn.de/source/textquelle-digitalisat-30>,
-        <https://performance.musiconn.de/work/le-mariage-force-lully-jean-baptiste>,
-        <https://viaf.org/viaf/174437072> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/louvre-appartement-bas-de-la-reine-mere-paris> ;
-    cto:viaf <https://viaf.org/viaf/174437072> .
+        <https://performance.musiconn.de/source/textquelle-digitalisat-30> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174437072> a nfdicore:NFDI_0001010 .
 

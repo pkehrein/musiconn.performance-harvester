@@ -1,59 +1,83 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1222547821> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1279560770> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300060327> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300060343> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300060351> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109784> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300302290> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300856784> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4119801-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/schatzkammerkonzert-casino-bern-1990-12-16-20-15> ] .
 
-<https://performance.musiconn.de/event/schatzkammerkonzert-casino-bern-1990-12-16-20-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/schatzkammerkonzert-casino-bern-1990-12-16-20-15> a cto:CTO_0001005 ;
     rdfs:label "Schatzkammerkonzert, Casino (Bern), 16.12.1990, 20:15" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1990-12-16T20:15:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1990-12-16T20:15:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1222547821>,
-        <https://d-nb.info/gnd/1279560770>,
-        <https://d-nb.info/gnd/300060327>,
-        <https://d-nb.info/gnd/300060343>,
-        <https://d-nb.info/gnd/300060351>,
-        <https://d-nb.info/gnd/300109784>,
-        <https://d-nb.info/gnd/300302290>,
-        <https://d-nb.info/gnd/300856784>,
-        <https://d-nb.info/gnd/4119801-3> ;
-    cto:relatedItem <https://d-nb.info/gnd/1222547821>,
-        <https://d-nb.info/gnd/1279560770>,
-        <https://d-nb.info/gnd/300060327>,
-        <https://d-nb.info/gnd/300060343>,
-        <https://d-nb.info/gnd/300060351>,
-        <https://d-nb.info/gnd/300109784>,
-        <https://d-nb.info/gnd/300302290>,
-        <https://d-nb.info/gnd/300856784>,
-        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-6-programmhefte-kammerorchester-carl-philipp-emanuel-bach-1990-1992>,
-        <https://performance.musiconn.de/work/non-temer-amato-bene-kv-505-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/orfeo-ed-euridice-che-fiero-momento-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/orfeo-ed-euridice-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/orphee-et-eurydice-ballet-des-ombres-heureuses-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/orphee-et-eurydice-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/orphee-et-eurydice-w41-air-de-furie-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-82-87-nr-85-b-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/sinfonien-wq-180-g-dur-bach-carl-philipp-emanuel>,
-        <https://viaf.org/viaf/177820918>,
-        <https://viaf.org/viaf/180827187>,
-        <https://viaf.org/viaf/188269325>,
-        <https://viaf.org/viaf/190440398>,
-        <https://viaf.org/viaf/3666160728526210380004>,
-        <https://viaf.org/viaf/54145858139323022840> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4119801-3>,
-        <https://viaf.org/viaf/247226555> ;
-    cto:viaf <https://viaf.org/viaf/177820918>,
-        <https://viaf.org/viaf/180827187>,
-        <https://viaf.org/viaf/188269325>,
-        <https://viaf.org/viaf/190440398>,
-        <https://viaf.org/viaf/247226555>,
-        <https://viaf.org/viaf/3666160728526210380004>,
-        <https://viaf.org/viaf/54145858139323022840> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/247226555> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4119801-3> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300060343> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190440398> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180827187> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177820918> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3666160728526210380004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188269325> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300060327> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109784> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1279560770> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1222547821> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300856784> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300302290> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/54145858139323022840> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300060351> ],
+        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-6-programmhefte-kammerorchester-carl-philipp-emanuel-bach-1990-1992> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177820918> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180827187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188269325> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190440398> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/247226555> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3666160728526210380004> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/54145858139323022840> a nfdicore:NFDI_0001010 .
 

@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/118779524> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/emira-theater-auf-dem-tummelplatz-graz-1747-00-00> ] .
 
-<https://performance.musiconn.de/event/emira-theater-auf-dem-tummelplatz-graz-1747-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/emira-theater-auf-dem-tummelplatz-graz-1747-00-00> a cto:CTO_0001005 ;
     rdfs:label "Emira, Theater auf dem Tummelplatz (Graz), 1747" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1747-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1747-00-00" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118779524> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/theater-auf-dem-tummelplatz-graz> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/118779524> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/theater-auf-dem-tummelplatz-graz> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118779524>,
-        <https://performance.musiconn.de/person/conforti-michele>,
-        <https://viaf.org/viaf/56796786> ;
-    cto:viaf <https://viaf.org/viaf/56796786> .
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/56796786> ],
+        <https://performance.musiconn.de/person/conforti-michele> .
+
+<https://viaf.org/viaf/56796786> a nfdicore:NFDI_0001010 .
 

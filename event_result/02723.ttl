@@ -1,66 +1,90 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1080647260> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1115366629> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/123523455X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001550X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30003735X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145772> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300756577> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300949251> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-museums-concert-grosser-konzertsaal-frankfurt-a-m-1865-11-10-18-30> ] .
 
-<https://performance.musiconn.de/event/3-museums-concert-grosser-konzertsaal-frankfurt-a-m-1865-11-10-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-museums-concert-grosser-konzertsaal-frankfurt-a-m-1865-11-10-18-30> a cto:CTO_0001005 ;
     rdfs:label "3. Museums-Concert, Großer Konzertsaal (Frankfurt a. M.), 10.11.1865, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1865-1866> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1865-11-10T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1865-11-10T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1080647260>,
-        <https://d-nb.info/gnd/1115366629>,
-        <https://d-nb.info/gnd/123523455X>,
-        <https://d-nb.info/gnd/30001550X>,
-        <https://d-nb.info/gnd/30003735X>,
-        <https://d-nb.info/gnd/300145772>,
-        <https://d-nb.info/gnd/300756577>,
-        <https://d-nb.info/gnd/300949251> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1865-1866> ;
-    cto:relatedItem <https://d-nb.info/gnd/1080647260>,
-        <https://d-nb.info/gnd/1115366629>,
-        <https://d-nb.info/gnd/123523455X>,
-        <https://d-nb.info/gnd/30001550X>,
-        <https://d-nb.info/gnd/30003735X>,
-        <https://d-nb.info/gnd/300145772>,
-        <https://d-nb.info/gnd/300756577>,
-        <https://d-nb.info/gnd/300949251>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1115366629> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001550X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188262809> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/123523455X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198547299> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30003735X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185035027> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300756577> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145772> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300949251> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180794632> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179831076> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3639147605355057760004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1080647260> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185114977> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/39145193380170460223> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/cantemire-ouvertuere-fesca-friedrich-ernst>,
-        <https://performance.musiconn.de/work/der-letzte-gruss-levi-hermann>,
         <https://performance.musiconn.de/work/hans-heiling-arie-marschner-heinrich>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-5-op-73-es-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-fruehlingsnacht-schumann-robert>,
         <https://performance.musiconn.de/work/nachtstueck-schumann-robert>,
-        <https://performance.musiconn.de/work/nocturnes-klavier-chopin-frederic>,
         <https://performance.musiconn.de/work/romanzen-klavier-schumann-robert>,
-        <https://performance.musiconn.de/work/romanzen-singstimme-klavier-op-33-sind-es-schmerzen-brahms-johannes>,
         <https://performance.musiconn.de/work/sinfonien-d-200-4-satz-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-d-417-1-satz-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-d-417-2-satz-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-d-589-c-dur-3-satz-schubert-franz>,
-        <https://viaf.org/viaf/179831076>,
-        <https://viaf.org/viaf/180794632>,
-        <https://viaf.org/viaf/185035027>,
-        <https://viaf.org/viaf/185114977>,
-        <https://viaf.org/viaf/188262809>,
-        <https://viaf.org/viaf/198547299>,
-        <https://viaf.org/viaf/3639147605355057760004>,
-        <https://viaf.org/viaf/39145193380170460223> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/179831076>,
-        <https://viaf.org/viaf/180794632>,
-        <https://viaf.org/viaf/185035027>,
-        <https://viaf.org/viaf/185114977>,
-        <https://viaf.org/viaf/188262809>,
-        <https://viaf.org/viaf/198547299>,
-        <https://viaf.org/viaf/3639147605355057760004>,
-        <https://viaf.org/viaf/39145193380170460223> .
+        <https://performance.musiconn.de/work/sinfonien-d-417-1-satz-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179831076> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180794632> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185035027> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185114977> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188262809> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198547299> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3639147605355057760004> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/39145193380170460223> a nfdicore:NFDI_0001010 .
 

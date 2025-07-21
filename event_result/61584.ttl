@@ -1,25 +1,28 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300099290> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/65-galeriekonzert-sempergalerie-dresden-gobelinsaal-1968-01-20-19-30> ] .
 
-<https://performance.musiconn.de/event/65-galeriekonzert-sempergalerie-dresden-gobelinsaal-1968-01-20-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/65-galeriekonzert-sempergalerie-dresden-gobelinsaal-1968-01-20-19-30> a cto:CTO_0001005 ;
     rdfs:label "65. Galeriekonzert, Sempergalerie (Dresden) / Gobelinsaal, 20.1.1968, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1968-01-20T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1968-01-20T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300099290> ;
-    cto:relatedItem <https://d-nb.info/gnd/300099290>,
-        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-11-programmhefte-1966-1971>,
-        <https://performance.musiconn.de/work/le-vin-herbe-martin-frank>,
-        <https://viaf.org/viaf/7852147270435635700008> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sempergalerie-dresden-gobelinsaal> ;
-    cto:viaf <https://viaf.org/viaf/7852147270435635700008> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sempergalerie-dresden-gobelinsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300099290> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7852147270435635700008> ],
+        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-11-programmhefte-1966-1971> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/7852147270435635700008> a nfdicore:NFDI_0001010 .
 

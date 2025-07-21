@@ -1,55 +1,73 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1069514535> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1176461672> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300062699> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30014007X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145624> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30030014X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/iii-auffuehrung-volkshaus-jena-kleiner-saal-1906-02-25-17-00> ] .
 
-<https://performance.musiconn.de/event/iii-auffuehrung-volkshaus-jena-kleiner-saal-1906-02-25-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/iii-auffuehrung-volkshaus-jena-kleiner-saal-1906-02-25-17-00> a cto:CTO_0001005 ;
     rdfs:label "III. Aufführung, Volkshaus (Jena) / Kleiner Saal, 25.2.1906, 17:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1906-02-25T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1906-02-25T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1069514535>,
-        <https://d-nb.info/gnd/1176461672>,
-        <https://d-nb.info/gnd/300062699>,
-        <https://d-nb.info/gnd/30014007X>,
-        <https://d-nb.info/gnd/300145624>,
-        <https://d-nb.info/gnd/30030014X> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1069514535>,
-        <https://d-nb.info/gnd/1176461672>,
-        <https://d-nb.info/gnd/300062699>,
-        <https://d-nb.info/gnd/30014007X>,
-        <https://d-nb.info/gnd/300145624>,
-        <https://d-nb.info/gnd/30030014X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/volkshaus-jena-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30030014X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1176461672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186379041> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062699> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30014007X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1845154923694263780007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315123963> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1069514535> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217006208> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145624> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190419174> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179881214> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
         <https://performance.musiconn.de/work/abschied-der-voegel-hildach-eugen>,
-        <https://performance.musiconn.de/work/an-die-musik-schubert-franz>,
-        <https://performance.musiconn.de/work/cavatine-et-aubade-mauresque-sauret-emile>,
         <https://performance.musiconn.de/work/der-engel-rubinstejn-anton-g>,
         <https://performance.musiconn.de/work/die-wolke-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/lieder-nach-gedichten-von-rellstab-und-heine-aufenthalt-schubert-franz>,
-        <https://performance.musiconn.de/work/lieder-op-43-schoen-bluemelein-schumann-robert>,
-        <https://performance.musiconn.de/work/quintette-fl-vl-va-1-2-vc-op-21-romberg-andreas>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-op-45-grieg-edvard>,
-        <https://performance.musiconn.de/work/ungarischer-tanz-nr-4-joachim-joseph-brahms-johannes>,
-        <https://viaf.org/viaf/179881214>,
-        <https://viaf.org/viaf/1845154923694263780007>,
-        <https://viaf.org/viaf/186379041>,
-        <https://viaf.org/viaf/190419174>,
-        <https://viaf.org/viaf/217006208>,
-        <https://viaf.org/viaf/315123963> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/volkshaus-jena-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/179881214>,
-        <https://viaf.org/viaf/1845154923694263780007>,
-        <https://viaf.org/viaf/186379041>,
-        <https://viaf.org/viaf/190419174>,
-        <https://viaf.org/viaf/217006208>,
-        <https://viaf.org/viaf/315123963> .
+        <https://performance.musiconn.de/work/ungarischer-tanz-nr-4-joachim-joseph-brahms-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179881214> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/1845154923694263780007> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186379041> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190419174> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217006208> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315123963> a nfdicore:NFDI_0001010 .
 

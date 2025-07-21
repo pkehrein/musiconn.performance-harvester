@@ -1,30 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/118722700> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4635364-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/il-re-alla-caccia-teatro-de-la-santa-cruz-barcelona-1764-00-00> ] .
 
-<https://performance.musiconn.de/event/il-re-alla-caccia-teatro-de-la-santa-cruz-barcelona-1764-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/il-re-alla-caccia-teatro-de-la-santa-cruz-barcelona-1764-00-00> a cto:CTO_0001005 ;
     rdfs:label "Il re alla caccia, Teatro de la Santa Cruz (Barcelona), 1764" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1764-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1764-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/118722700>,
-        <https://d-nb.info/gnd/4635364-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/4635364-1>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118722700> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/teatro-de-la-santa-cruz-barcelona> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215957350> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4635364-1> ],
         <https://performance.musiconn.de/source/alier-i-aixala-opera>,
-        <https://performance.musiconn.de/source/il-re-alla-caccia-dramma-giocoso-per-musica-da-rappresentarsi-nel-teatro-della-molto-illustre-citta-di-barcellona-lanno-1764-dedicato-allillustrissimo-signore-don-ignazio-gonzalez-c>,
-        <https://performance.musiconn.de/work/il-re-alla-caccia-galuppi-baldassare>,
-        <https://viaf.org/viaf/215957350> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/teatro-de-la-santa-cruz-barcelona> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118722700>,
-        <https://viaf.org/viaf/22327261> ;
-    cto:viaf <https://viaf.org/viaf/215957350>,
-        <https://viaf.org/viaf/22327261> .
+        <https://performance.musiconn.de/source/il-re-alla-caccia-dramma-giocoso-per-musica-da-rappresentarsi-nel-teatro-della-molto-illustre-citta-di-barcellona-lanno-1764-dedicato-allillustrissimo-signore-don-ignazio-gonzalez-c> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/22327261> ] .
+
+<https://viaf.org/viaf/215957350> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/22327261> a nfdicore:NFDI_0001010 .
 

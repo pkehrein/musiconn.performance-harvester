@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1159904294> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033338> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300042302> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133057> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-philharmonisches-konzert-kulturpalast-dresden-festsaal-1993-01-24-19-30> ] .
 
-<https://performance.musiconn.de/event/6-philharmonisches-konzert-kulturpalast-dresden-festsaal-1993-01-24-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-philharmonisches-konzert-kulturpalast-dresden-festsaal-1993-01-24-19-30> a cto:CTO_0001005 ;
     rdfs:label "6. Philharmonisches Konzert, Kulturpalast (Dresden) / Festsaal, 24.1.1993, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1992-1993> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1993-01-24T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1993-01-24T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1159904294>,
-        <https://d-nb.info/gnd/300033338>,
-        <https://d-nb.info/gnd/300042302>,
-        <https://d-nb.info/gnd/300133057> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1992-1993> ;
-    cto:relatedItem <https://d-nb.info/gnd/1159904294>,
-        <https://d-nb.info/gnd/300033338>,
-        <https://d-nb.info/gnd/300042302>,
-        <https://d-nb.info/gnd/300133057>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-cs-53-b-moll-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/phedre-massenet-jules>,
-        <https://performance.musiconn.de/work/prelude-a-lapres-midi-dun-faune-debussy-claude>,
-        <https://performance.musiconn.de/work/sinfonien-l-67-a-dur-roussel-albert>,
-        <https://viaf.org/viaf/200777095>,
-        <https://viaf.org/viaf/218083033>,
-        <https://viaf.org/viaf/293160975>,
-        <https://viaf.org/viaf/307491596> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/200777095>,
-        <https://viaf.org/viaf/218083033>,
-        <https://viaf.org/viaf/293160975>,
-        <https://viaf.org/viaf/307491596> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1159904294> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200777095> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218083033> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/307491596> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033338> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/293160975> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133057> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300042302> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/200777095> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218083033> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/293160975> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/307491596> a nfdicore:NFDI_0001010 .
 

@@ -1,48 +1,63 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1147410798> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300154887> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155190> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155247> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155743> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/13-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-10-29-20-00> ] .
 
-<https://performance.musiconn.de/event/13-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-10-29-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/13-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-10-29-20-00> a cto:CTO_0001005 ;
     rdfs:label "13. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 29.10.1926, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1926-1927-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1926-10-29T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1926-10-29T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1147410798>,
-        <https://d-nb.info/gnd/300154887>,
-        <https://d-nb.info/gnd/300155190>,
-        <https://d-nb.info/gnd/300155247>,
-        <https://d-nb.info/gnd/300155743> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1926-1927-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/1147410798>,
-        <https://d-nb.info/gnd/300154887>,
-        <https://d-nb.info/gnd/300155190>,
-        <https://d-nb.info/gnd/300155247>,
-        <https://d-nb.info/gnd/300155743>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300154887> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184181031> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1147410798> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155190> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309564531> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155247> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/294178997> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175375450> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155743> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181418428> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
-        <https://performance.musiconn.de/work/bei-uns-zhaus-strauss-johann>,
-        <https://performance.musiconn.de/work/der-zigeunerbaron-ouvertuere-strauss-johann>,
-        <https://performance.musiconn.de/work/geschichten-aus-dem-wienerwald-strauss-johann>,
-        <https://performance.musiconn.de/work/indigo-und-die-vierzig-raeuber-ouvertuere-strauss-johann>,
         <https://performance.musiconn.de/work/melodien-aus-der-operette-prinz-methusalem-strauss-johann>,
-        <https://performance.musiconn.de/work/tausend-und-eine-nacht-intermezzo-strauss-johann>,
-        <https://performance.musiconn.de/work/volkssaenger-strauss-johann>,
-        <https://viaf.org/viaf/175375450>,
-        <https://viaf.org/viaf/181418428>,
-        <https://viaf.org/viaf/184181031>,
-        <https://viaf.org/viaf/294178997>,
-        <https://viaf.org/viaf/309564531> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/175375450>,
-        <https://viaf.org/viaf/181418428>,
-        <https://viaf.org/viaf/184181031>,
-        <https://viaf.org/viaf/294178997>,
-        <https://viaf.org/viaf/309564531> .
+        <https://performance.musiconn.de/work/tausend-und-eine-nacht-intermezzo-strauss-johann> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175375450> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181418428> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184181031> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/294178997> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309564531> a nfdicore:NFDI_0001010 .
 

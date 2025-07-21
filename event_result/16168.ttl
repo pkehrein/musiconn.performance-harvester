@@ -1,43 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1266345744> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145934> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300211236> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/9-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1862-02-25> ] .
 
-<https://performance.musiconn.de/event/9-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1862-02-25> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/9-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1862-02-25> a cto:CTO_0001005 ;
     rdfs:label "9. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 25.2.1862" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1861-1862> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1862-02-25" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1862-02-25" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1266345744>,
-        <https://d-nb.info/gnd/300145934>,
-        <https://d-nb.info/gnd/300211236>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1861-1862> ;
-    cto:relatedItem <https://d-nb.info/gnd/1266345744>,
-        <https://d-nb.info/gnd/300145934>,
-        <https://d-nb.info/gnd/300211236>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300211236> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145934> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1266345744> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181504757> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/268057968> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
         <https://performance.musiconn.de/source/whistling-carl-wilhelm-der-musikverein-euterpe-zu-leipzig-1824-1874-leipzig-1874>,
         <https://performance.musiconn.de/work/carnevalouvertuere-draeseke-felix>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-45-d-dur-allegro-molique-bernhard>,
         <https://performance.musiconn.de/work/music-for-the-royal-fireworks-ouvertuere-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/ouvertuere-scherzo-und-finale-schumann-robert>,
-        <https://performance.musiconn.de/work/sinfonien-b-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/souvenir-de-spa-servais-adrien-francois>,
-        <https://viaf.org/viaf/181504757>,
-        <https://viaf.org/viaf/268057968> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/181504757>,
-        <https://viaf.org/viaf/242717024>,
-        <https://viaf.org/viaf/268057968> .
+        <https://performance.musiconn.de/work/sinfonien-b-dur-haydn-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181504757> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/268057968> a nfdicore:NFDI_0001010 .
 

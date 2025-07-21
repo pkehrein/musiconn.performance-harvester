@@ -1,56 +1,75 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300036760> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009440X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170068> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171528> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300582374> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4078704-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/dresden-philharmonic-orchestra-usa-1909-04-23> ] .
 
-<https://performance.musiconn.de/event/dresden-philharmonic-orchestra-usa-1909-04-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/dresden-philharmonic-orchestra-usa-1909-04-23> a cto:CTO_0001005 ;
     rdfs:label "Dresden Philharmonic Orchestra, USA, 23.4.1909" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1908-1909> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1909-04-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1909-04-23" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300036760>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300170068>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/300582374>,
-        <https://d-nb.info/gnd/4078704-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1908-1909> ;
-    cto:relatedItem <https://d-nb.info/gnd/300036760>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300170068>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/300582374>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4078704-7> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/130168302> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203706615> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170068> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300036760> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009440X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174586672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174184579> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184897139> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177811557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300582374> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1908-1909>,
-        <https://performance.musiconn.de/work/balladen-klavier-op-23-g-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/der-freischuetz-ouvertuere-weber-carl-maria-von>,
         <https://performance.musiconn.de/work/fantasien-floete-titsehek>,
         <https://performance.musiconn.de/work/fantasien-violoncello-popper-david>,
         <https://performance.musiconn.de/work/joys-of-spring-giebel>,
         <https://performance.musiconn.de/work/konzerte-klarinette-orchester-weber-carl-maria-von>,
         <https://performance.musiconn.de/work/konzerte-posaune-orchester-saxe>,
-        <https://performance.musiconn.de/work/les-preludes-liszt-franz>,
-        <https://performance.musiconn.de/work/lohengrin-vorspiel-wagner-richard>,
-        <https://performance.musiconn.de/work/romeo-og-julie-svendsen-johan-severin>,
         <https://performance.musiconn.de/work/songsters-of-the-spring-vincent-charles>,
-        <https://performance.musiconn.de/work/sweet-and-low-anonym>,
-        <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/174586672>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/184897139>,
-        <https://viaf.org/viaf/203706615> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4078704-7>,
-        <https://viaf.org/viaf/130168302> ;
-    cto:viaf <https://viaf.org/viaf/130168302>,
-        <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/174586672>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/184897139>,
-        <https://viaf.org/viaf/203706615> .
+        <https://performance.musiconn.de/work/sweet-and-low-anonym> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/130168302> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174184579> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174586672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177811557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184897139> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203706615> a nfdicore:NFDI_0001010 .
 

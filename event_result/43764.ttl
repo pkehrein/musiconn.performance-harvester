@@ -4,20 +4,28 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1192951832> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/mitwirkung-leipziger-markttage-markt-leipzig-leipzig-1996-09-29-13-45> ] .
 
-<https://performance.musiconn.de/event/mitwirkung-leipziger-markttage-markt-leipzig-leipzig-1996-09-29-13-45> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/mitwirkung-leipziger-markttage-markt-leipzig-leipzig-1996-09-29-13-45> a cto:CTO_0001005 ;
     rdfs:label "Mitwirkung Leipziger Markttage, Markt Leipzig (Leipzig), 29.9.1996, 13:45" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1996-09-29T14:15:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1996-09-29T13:45:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1192951832>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1192951832> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2965156619144128780009> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/work/dem-baal-schem-toiws-semerl-fassung-sander-werner>,
         <https://performance.musiconn.de/work/hages-fassung-amiran-pugatschov-emanuel>,
         <https://performance.musiconn.de/work/hawa-nagila-fassung-gross-friedbert-idelsohn-abraham-z>,
@@ -27,10 +35,9 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/ojfn-pripetschik-fassung-sander-werner-warschawski-mark>,
         <https://performance.musiconn.de/work/omar-adoschem-ljakoiw-fassung-sander-werner>,
         <https://performance.musiconn.de/work/rajsele-fassung-gross-friedbert-gebirtig-mordechai> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1192951832>,
-        <https://viaf.org/viaf/2965156619144128780009> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/2965156619144128780009> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2965156619144128780009> a nfdicore:NFDI_0001010 .
 

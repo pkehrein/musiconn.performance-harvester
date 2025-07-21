@@ -4,26 +4,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4277998-4> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/les-amours-du-printemps-schloss-fontainebleau-fontainebleau-1737-11-07> ] .
 
-<https://performance.musiconn.de/event/les-amours-du-printemps-schloss-fontainebleau-fontainebleau-1737-11-07> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/les-amours-du-printemps-schloss-fontainebleau-fontainebleau-1737-11-07> a cto:CTO_0001005 ;
     rdfs:label "Les Amours du printemps, Schloss Fontainebleau (Fontainebleau), 7.11.1737" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1737-11-07" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1737-11-07" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4277998-4> ;
-    cto:relatedItem <https://performance.musiconn.de/source/la-valliere-1760-192>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237368299> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4277998-4> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/la-valliere-1760-192>,
         <https://performance.musiconn.de/source/musikalie-digitalisat-184>,
         <https://performance.musiconn.de/source/onlinequelle-548>,
         <https://performance.musiconn.de/source/onlinequelle-549>,
         <https://performance.musiconn.de/source/textquelle-digitalisat-239>,
         <https://performance.musiconn.de/source/textquelle-digitalisat-240>,
         <https://performance.musiconn.de/work/les-amours-du-printemps-colin-de-blamont-francois> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4277998-4>,
-        <https://viaf.org/viaf/237368299> ;
-    cto:viaf <https://viaf.org/viaf/237368299> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/237368299> a nfdicore:NFDI_0001010 .
 

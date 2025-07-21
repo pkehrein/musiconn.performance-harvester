@@ -1,59 +1,82 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175503894> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155107> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155271> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155379> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155425> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155433> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155743> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4399716-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ein-abend-mit-johann-strauss-kirchgemeindesaal-strehlen-dresden-1946-03-06> ] .
 
-<https://performance.musiconn.de/event/ein-abend-mit-johann-strauss-kirchgemeindesaal-strehlen-dresden-1946-03-06> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ein-abend-mit-johann-strauss-kirchgemeindesaal-strehlen-dresden-1946-03-06> a cto:CTO_0001005 ;
     rdfs:label "Ein Abend mit Johann Strauß, Kirchgemeindesaal Strehlen (Dresden), 6.3.1946" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1945-1946> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1946-03-06" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1946-03-06" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175503894>,
-        <https://d-nb.info/gnd/300155107>,
-        <https://d-nb.info/gnd/300155271>,
-        <https://d-nb.info/gnd/300155379>,
-        <https://d-nb.info/gnd/300155425>,
-        <https://d-nb.info/gnd/300155433>,
-        <https://d-nb.info/gnd/300155743>,
-        <https://d-nb.info/gnd/4399716-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1945-1946> ;
-    cto:relatedItem <https://d-nb.info/gnd/300155107>,
-        <https://d-nb.info/gnd/300155271>,
-        <https://d-nb.info/gnd/300155379>,
-        <https://d-nb.info/gnd/300155425>,
-        <https://d-nb.info/gnd/300155433>,
-        <https://d-nb.info/gnd/300155743>,
-        <https://d-nb.info/gnd/4399716-8>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175503894> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/395144783058759828568> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309564531> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155271> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181002798> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184962905> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155107> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4399716-8> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155425> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155433> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155379> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155743> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176131149> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176609137> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177384467> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/an-der-schoenen-blauen-donau-strauss-johann>,
-        <https://performance.musiconn.de/work/der-zigeunerbaron-ouvertuere-strauss-johann>,
-        <https://performance.musiconn.de/work/die-fledermaus-ouvertuere-strauss-johann>,
-        <https://performance.musiconn.de/work/eine-nacht-in-venedig-ouvertuere-strauss-johann>,
-        <https://performance.musiconn.de/work/kaiser-walzer-strauss-johann>,
-        <https://performance.musiconn.de/work/perpetuum-mobile-strauss-johann>,
-        <https://performance.musiconn.de/work/persischer-marsch-strauss-johann>,
         <https://performance.musiconn.de/work/strauss-walzer-intermezzo-strauss-johann>,
-        <https://performance.musiconn.de/work/tausend-und-eine-nacht-intermezzo-strauss-johann>,
-        <https://viaf.org/viaf/176131149>,
-        <https://viaf.org/viaf/176609137>,
-        <https://viaf.org/viaf/177384467>,
-        <https://viaf.org/viaf/181002798>,
-        <https://viaf.org/viaf/184962905>,
-        <https://viaf.org/viaf/309564531>,
-        <https://viaf.org/viaf/395144783058759828568> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175503894> ;
-    cto:viaf <https://viaf.org/viaf/176131149>,
-        <https://viaf.org/viaf/176609137>,
-        <https://viaf.org/viaf/177384467>,
-        <https://viaf.org/viaf/181002798>,
-        <https://viaf.org/viaf/184962905>,
-        <https://viaf.org/viaf/309564531>,
-        <https://viaf.org/viaf/395144783058759828568> .
+        <https://performance.musiconn.de/work/tausend-und-eine-nacht-intermezzo-strauss-johann> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176131149> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176609137> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177384467> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181002798> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184962905> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309564531> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/395144783058759828568> a nfdicore:NFDI_0001010 .
 

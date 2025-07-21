@@ -1,36 +1,46 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300060351> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300299931> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zwoelftes-abonnement-concert-erstes-gewandhaus-leipzig-1873-01-09> ] .
 
-<https://performance.musiconn.de/event/zwoelftes-abonnement-concert-erstes-gewandhaus-leipzig-1873-01-09> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zwoelftes-abonnement-concert-erstes-gewandhaus-leipzig-1873-01-09> a cto:CTO_0001005 ;
     rdfs:label "Zwölftes Abonnement-Concert, Erstes Gewandhaus (Leipzig), 9.1.1873" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1873-01-09" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1873-01-09" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/300060351>,
-        <https://d-nb.info/gnd/300299931> ;
-    cto:relatedItem <https://d-nb.info/gnd/300060351>,
-        <https://d-nb.info/gnd/300299931>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180827187> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300299931> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300060351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211715717> ],
         <https://performance.musiconn.de/source/programme-der-konzerte-im-gewandhaus-zu-leipzig-staedt-bibl-leipzig>,
         <https://performance.musiconn.de/source/programmzettel>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-9-op-55-d-moll-spohr-louis>,
-        <https://performance.musiconn.de/work/orphee-et-eurydice-ballet-des-ombres-heureuses-gluck-christoph-willibald>,
         <https://performance.musiconn.de/work/orphee-et-eurydice-danse-des-furies-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-4-haydn-joseph>,
-        <https://viaf.org/viaf/180827187>,
-        <https://viaf.org/viaf/211715717> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/180827187>,
-        <https://viaf.org/viaf/211715717>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-4-haydn-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180827187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211715717> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

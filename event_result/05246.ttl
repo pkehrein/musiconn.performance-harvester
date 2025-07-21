@@ -1,42 +1,56 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175500941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029209> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300047347> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141777> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300149611> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-ballsaal-constantia-dresden-1945-09-13-18-00> ] .
 
-<https://performance.musiconn.de/event/konzert-ballsaal-constantia-dresden-1945-09-13-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-ballsaal-constantia-dresden-1945-09-13-18-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Ballsaal Constantia (Dresden), 13.9.1945, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1945-1946> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1945-09-13T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1945-09-13T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175500941>,
-        <https://d-nb.info/gnd/300029209>,
-        <https://d-nb.info/gnd/300047347>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300149611> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1945-1946> ;
-    cto:relatedItem <https://d-nb.info/gnd/300029209>,
-        <https://d-nb.info/gnd/300047347>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300149611>,
-        <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1945-1946>,
-        <https://performance.musiconn.de/work/karneval-b-169-dvorak-antonin>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-1-op-26-g-moll-bruch-max>,
-        <https://performance.musiconn.de/work/ma-vlast-vltava-smetana-bedrich>,
-        <https://performance.musiconn.de/work/sinfonien-d-759-h-moll-schubert-franz>,
-        <https://viaf.org/viaf/175777382>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/213996466>,
-        <https://viaf.org/viaf/219160905> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175500941> ;
-    cto:viaf <https://viaf.org/viaf/175777382>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/213996466>,
-        <https://viaf.org/viaf/219160905> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175500941> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219160905> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425978> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141777> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213996466> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175777382> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300149611> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029209> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300047347> ],
+        <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1945-1946> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175777382> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179425978> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213996466> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219160905> a nfdicore:NFDI_0001010 .
 

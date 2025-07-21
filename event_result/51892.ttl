@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1171262361> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/iphigenia-in-tauris-theaterbau-des-koeniglichen-nationaltheaters-berlin-1806-10-26> ] .
 
-<https://performance.musiconn.de/event/iphigenia-in-tauris-theaterbau-des-koeniglichen-nationaltheaters-berlin-1806-10-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/iphigenia-in-tauris-theaterbau-des-koeniglichen-nationaltheaters-berlin-1806-10-26> a cto:CTO_0001005 ;
     rdfs:label "Iphigenia in Tauris, Theaterbau des Königlichen Nationaltheaters (Berlin), 26.10.1806" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1806-10-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1806-10-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1171262361> ;
-    cto:relatedItem <https://performance.musiconn.de/source/theater-datenbank-der-berliner-klassik>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1171262361> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7507157162108278980004> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/theater-datenbank-der-berliner-klassik>,
         <https://performance.musiconn.de/work/iphigenie-en-tauride-fassung-gluck-christoph-willibald> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1171262361>,
-        <https://viaf.org/viaf/7507157162108278980004> ;
-    cto:viaf <https://viaf.org/viaf/7507157162108278980004> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/7507157162108278980004> a nfdicore:NFDI_0001010 .
 

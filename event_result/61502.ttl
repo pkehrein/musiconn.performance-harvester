@@ -1,43 +1,57 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015526> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111126> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300958870> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300971117> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/12-vereinskonzert-rathaus-muenster-westf-friedenssaal-1864-04-16> ] .
 
-<https://performance.musiconn.de/event/12-vereinskonzert-rathaus-muenster-westf-friedenssaal-1864-04-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/12-vereinskonzert-rathaus-muenster-westf-friedenssaal-1864-04-16> a cto:CTO_0001005 ;
     rdfs:label "12. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 16.4.1864" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1863-64> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1864-04-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1864-04-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015526>,
-        <https://d-nb.info/gnd/300111126>,
-        <https://d-nb.info/gnd/300958870>,
-        <https://d-nb.info/gnd/300971117>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1863-64> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015526>,
-        <https://d-nb.info/gnd/300111126>,
-        <https://d-nb.info/gnd/300958870>,
-        <https://d-nb.info/gnd/300971117>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180685549> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015526> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111126> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300971117> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425016> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175011143> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300958870> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/292511986> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1863-1864>,
-        <https://performance.musiconn.de/work/der-sturm-haydn-joseph>,
-        <https://performance.musiconn.de/work/il-ritorno-di-tobia-svanisce-in-un-momento-haydn-joseph>,
-        <https://performance.musiconn.de/work/iphigenie-en-aulide-ouvertuere-fassung-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-61-d-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-kv-504-d-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/175011143>,
-        <https://viaf.org/viaf/179425016>,
-        <https://viaf.org/viaf/180685549>,
-        <https://viaf.org/viaf/292511986> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/175011143>,
-        <https://viaf.org/viaf/179425016>,
-        <https://viaf.org/viaf/180685549>,
-        <https://viaf.org/viaf/292511986> .
+        <https://performance.musiconn.de/work/iphigenie-en-aulide-ouvertuere-fassung-gluck-christoph-willibald> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175011143> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179425016> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180685549> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/292511986> a nfdicore:NFDI_0001010 .
 

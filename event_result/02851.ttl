@@ -1,56 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1079253009> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/113609380X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1155199685> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300014864> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101597> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300231954> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300412053> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/elftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1874-03-06-18-30> ] .
 
-<https://performance.musiconn.de/event/elftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1874-03-06-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/elftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1874-03-06-18-30> a cto:CTO_0001005 ;
     rdfs:label "Elftes Museums-Concert, Großer Konzertsaal (Frankfurt a. M.), 6.3.1874, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1873-1874> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1874-03-06T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1874-03-06T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1079253009>,
-        <https://d-nb.info/gnd/113609380X>,
-        <https://d-nb.info/gnd/1155199685>,
-        <https://d-nb.info/gnd/300014864>,
-        <https://d-nb.info/gnd/300101597>,
-        <https://d-nb.info/gnd/300231954>,
-        <https://d-nb.info/gnd/300412053> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1873-1874> ;
-    cto:relatedItem <https://d-nb.info/gnd/1079253009>,
-        <https://d-nb.info/gnd/113609380X>,
-        <https://d-nb.info/gnd/1155199685>,
-        <https://d-nb.info/gnd/300014864>,
-        <https://d-nb.info/gnd/300101597>,
-        <https://d-nb.info/gnd/300231954>,
-        <https://d-nb.info/gnd/300412053>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/an-die-ferne-geliebte-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/gesaenge-des-harfners-aus-wilhelm-meister-wer-sich-der-einsamkeit-ergibt-schubert-franz>,
-        <https://performance.musiconn.de/work/gesaenge-op-14-widmung-franz-robert>,
-        <https://performance.musiconn.de/work/konzert-ouvertuere-zu-den-hebriden-op-26-mwv-p-7-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-3-op-45-g-dur-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-51-auf-dem-rhein-schumann-robert>,
-        <https://performance.musiconn.de/work/wallenstein-rheinberger-joseph>,
-        <https://viaf.org/viaf/176133744>,
-        <https://viaf.org/viaf/178739886>,
-        <https://viaf.org/viaf/186319957>,
-        <https://viaf.org/viaf/191497132>,
-        <https://viaf.org/viaf/206843003>,
-        <https://viaf.org/viaf/3373152261527517180006>,
-        <https://viaf.org/viaf/75144898663950290286> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/176133744>,
-        <https://viaf.org/viaf/178739886>,
-        <https://viaf.org/viaf/186319957>,
-        <https://viaf.org/viaf/191497132>,
-        <https://viaf.org/viaf/206843003>,
-        <https://viaf.org/viaf/3373152261527517180006>,
-        <https://viaf.org/viaf/75144898663950290286> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3373152261527517180006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1155199685> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300231954> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300412053> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300014864> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/75144898663950290286> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206843003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178739886> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191497132> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1079253009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176133744> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101597> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186319957> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/113609380X> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176133744> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178739886> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186319957> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191497132> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206843003> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3373152261527517180006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/75144898663950290286> a nfdicore:NFDI_0001010 .
 

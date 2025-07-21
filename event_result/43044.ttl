@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300110995> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141785> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300277407> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4626826-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzert-jahrhunderthalle-hoechst-frankfurt-am-main-1969-04-18-20-00> ] .
 
-<https://performance.musiconn.de/event/sonderkonzert-jahrhunderthalle-hoechst-frankfurt-am-main-1969-04-18-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzert-jahrhunderthalle-hoechst-frankfurt-am-main-1969-04-18-20-00> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert, Jahrhunderthalle Hoechst (Frankfurt am Main), 18.4.1969, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1968-1969> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1969-04-18T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1969-04-18T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300110995>,
-        <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300277407>,
-        <https://d-nb.info/gnd/4626826-1> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1968-1969> ;
-    cto:relatedItem <https://d-nb.info/gnd/300110995>,
-        <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300277407>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/partiten-orch-1957-walton-william-sir>,
-        <https://performance.musiconn.de/work/sinfonien-d-944-c-dur-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-kv-183-g-moll-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/189344731>,
-        <https://viaf.org/viaf/211711351> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4626826-1>,
-        <https://viaf.org/viaf/155447550> ;
-    cto:viaf <https://viaf.org/viaf/155447550>,
-        <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/189344731>,
-        <https://viaf.org/viaf/211711351> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/155447550> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4626826-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189344731> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110995> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300277407> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211711351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174994351> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/155447550> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174994351> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189344731> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211711351> a nfdicore:NFDI_0001010 .
 

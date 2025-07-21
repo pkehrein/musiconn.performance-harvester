@@ -1,35 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300012519> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300034172> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102658> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/137th-abonnement-concert-hibiya-public-hall-tokyo-1934-03-14> ] .
 
-<https://performance.musiconn.de/event/137th-abonnement-concert-hibiya-public-hall-tokyo-1934-03-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/137th-abonnement-concert-hibiya-public-hall-tokyo-1934-03-14> a cto:CTO_0001005 ;
     rdfs:label "137th Abonnement Concert, Hibiya Public Hall (Tokyo), 14.3.1934" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1934-03-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1934-03-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300012519>,
-        <https://d-nb.info/gnd/300034172>,
-        <https://d-nb.info/gnd/300102658> ;
-    cto:relatedItem <https://d-nb.info/gnd/300012519>,
-        <https://d-nb.info/gnd/300034172>,
-        <https://d-nb.info/gnd/300102658>,
-        <https://performance.musiconn.de/source/nhk-kokyo-gakudan-ed-nhk-1977-nhk-kokyo-gakudan-goju-nenshi-1926-1977-nhk-tokyo-nippon-hoso-shuppan-kyokai>,
-        <https://performance.musiconn.de/work/islamej-balakirev-milij-a>,
-        <https://performance.musiconn.de/work/sinfonien-mwv-n-18-a-moll-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/variacii-na-temu-rokoko-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/176605857>,
-        <https://viaf.org/viaf/183830096>,
-        <https://viaf.org/viaf/185890974> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hibiya-public-hall-tokyo> ;
-    cto:viaf <https://viaf.org/viaf/176605857>,
-        <https://viaf.org/viaf/183830096>,
-        <https://viaf.org/viaf/185890974> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hibiya-public-hall-tokyo> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176605857> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185890974> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300034172> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300012519> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102658> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183830096> ],
+        <https://performance.musiconn.de/source/nhk-kokyo-gakudan-ed-nhk-1977-nhk-kokyo-gakudan-goju-nenshi-1926-1977-nhk-tokyo-nippon-hoso-shuppan-kyokai> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176605857> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183830096> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185890974> a nfdicore:NFDI_0001010 .
 

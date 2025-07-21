@@ -1,35 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026846> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033907> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5067105-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-kammermusik-abend-alte-oper-frankfurt-am-main-mozartsaal-1985-10-07-20-00> ] .
 
-<https://performance.musiconn.de/event/1-kammermusik-abend-alte-oper-frankfurt-am-main-mozartsaal-1985-10-07-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-kammermusik-abend-alte-oper-frankfurt-am-main-mozartsaal-1985-10-07-20-00> a cto:CTO_0001005 ;
     rdfs:label "1. Kammermusik-Abend, Alte Oper (Frankfurt am Main) / Mozartsaal, 7.10.1985, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1985-1986> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1985-10-07T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1985-10-07T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026846>,
-        <https://d-nb.info/gnd/300033907>,
-        <https://d-nb.info/gnd/5067105-4> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1985-1986> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026846>,
-        <https://d-nb.info/gnd/300033907>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/sekstet-vospominanie-o-florencii-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/sextette-violine-2-viola-2-violoncello-2-op-36-g-dur-brahms-johannes>,
-        <https://viaf.org/viaf/177826346>,
-        <https://viaf.org/viaf/219160848> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-am-main-mozartsaal> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5067105-4>,
-        <https://viaf.org/viaf/159584485> ;
-    cto:viaf <https://viaf.org/viaf/159584485>,
-        <https://viaf.org/viaf/177826346>,
-        <https://viaf.org/viaf/219160848> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5067105-4> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/159584485> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-am-main-mozartsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033907> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026846> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219160848> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177826346> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/159584485> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177826346> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219160848> a nfdicore:NFDI_0001010 .
 

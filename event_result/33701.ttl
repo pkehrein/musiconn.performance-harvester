@@ -1,69 +1,101 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1060085488> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1074723767> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/134925653> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010370> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300066414> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300075936> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300276877> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30036721X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30048464X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30061800X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/orgelkonzert-kulturpalast-dresden-2019-04-17-20-00> ] .
 
-<https://performance.musiconn.de/event/orgelkonzert-kulturpalast-dresden-2019-04-17-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/orgelkonzert-kulturpalast-dresden-2019-04-17-20-00> a cto:CTO_0001005 ;
     rdfs:label "Orgelkonzert, Kulturpalast (Dresden), 17.4.2019, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2018-2019> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2019-04-17T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2019-04-17T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1060085488>,
-        <https://d-nb.info/gnd/1074723767>,
-        <https://d-nb.info/gnd/134925653>,
-        <https://d-nb.info/gnd/300010370>,
-        <https://d-nb.info/gnd/300066414>,
-        <https://d-nb.info/gnd/300075936>,
-        <https://d-nb.info/gnd/300276877>,
-        <https://d-nb.info/gnd/30036721X>,
-        <https://d-nb.info/gnd/30048464X>,
-        <https://d-nb.info/gnd/30061800X> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2018-2019> ;
-    cto:relatedItem <https://d-nb.info/gnd/1074723767>,
-        <https://d-nb.info/gnd/300010370>,
-        <https://d-nb.info/gnd/300066414>,
-        <https://d-nb.info/gnd/300075936>,
-        <https://d-nb.info/gnd/300276877>,
-        <https://d-nb.info/gnd/30036721X>,
-        <https://d-nb.info/gnd/30048464X>,
-        <https://d-nb.info/gnd/30061800X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/134925653> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311438221> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1060085488> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177437497> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300066414> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30048464X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300276877> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181232723> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316783338> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178741943> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189338155> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300075936> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30061800X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425997> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1074723767> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010370> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182660816> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30036721X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182119016> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/abendzauber-bruckner-anton>,
-        <https://performance.musiconn.de/work/evocations-evocation-2-escaich-thierry>,
-        <https://performance.musiconn.de/work/fanfare-der-stadt-wien-strauss-richard>,
-        <https://performance.musiconn.de/work/le-bourgeois-gentilhomme-marche-pour-la-ceremonie-turque-lully-jean-baptiste>,
-        <https://performance.musiconn.de/work/passacaglien-orgel-bwv-582-c-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sacrae-symphoniae-canzon-dudodecimi-toni-gabrieli-giovanni>,
-        <https://performance.musiconn.de/work/the-planets-mars-the-bringer-of-war-holst-gustav>,
-        <https://performance.musiconn.de/work/vetrate-di-chiesa-respighi-ottorino>,
-        <https://performance.musiconn.de/work/zadok-the-priest-haendel-georg-friedrich>,
-        <https://viaf.org/viaf/177437497>,
-        <https://viaf.org/viaf/178741943>,
-        <https://viaf.org/viaf/179425997>,
-        <https://viaf.org/viaf/181232723>,
-        <https://viaf.org/viaf/182119016>,
-        <https://viaf.org/viaf/182660816>,
-        <https://viaf.org/viaf/189338155>,
-        <https://viaf.org/viaf/316783338> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1060085488>,
-        <https://viaf.org/viaf/311438221> ;
-    cto:relatedPerson <https://d-nb.info/gnd/134925653>,
-        <https://viaf.org/viaf/118042697> ;
-    cto:viaf <https://viaf.org/viaf/118042697>,
-        <https://viaf.org/viaf/177437497>,
-        <https://viaf.org/viaf/178741943>,
-        <https://viaf.org/viaf/179425997>,
-        <https://viaf.org/viaf/181232723>,
-        <https://viaf.org/viaf/182119016>,
-        <https://viaf.org/viaf/182660816>,
-        <https://viaf.org/viaf/189338155>,
-        <https://viaf.org/viaf/311438221>,
-        <https://viaf.org/viaf/316783338> .
+        <https://performance.musiconn.de/work/sacrae-symphoniae-canzon-dudodecimi-toni-gabrieli-giovanni> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/118042697> ] .
+
+<https://viaf.org/viaf/118042697> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177437497> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178741943> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179425997> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181232723> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182119016> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182660816> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189338155> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311438221> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316783338> a nfdicore:NFDI_0001010 .
 

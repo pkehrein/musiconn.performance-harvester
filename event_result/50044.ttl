@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300561008> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300599099> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300601530> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300638027> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/aspirantenkonzert-hochschule-fuer-musik-hanns-eisler-berlin-saal-201-1969-07-01-14-00> ] .
 
-<https://performance.musiconn.de/event/aspirantenkonzert-hochschule-fuer-musik-hanns-eisler-berlin-saal-201-1969-07-01-14-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/aspirantenkonzert-hochschule-fuer-musik-hanns-eisler-berlin-saal-201-1969-07-01-14-00> a cto:CTO_0001005 ;
     rdfs:label "Aspirantenkonzert, Hochschule für Musik Hanns Eisler (Berlin) / Saal 201, 1.7.1969, 14:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/woche-der-neuen-musik> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1969-07-01T14:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1969-07-01T14:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300561008>,
-        <https://d-nb.info/gnd/300599099>,
-        <https://d-nb.info/gnd/300601530>,
-        <https://d-nb.info/gnd/300638027> ;
-    cto:itemOf <https://performance.musiconn.de/series/woche-der-neuen-musik> ;
-    cto:relatedItem <https://d-nb.info/gnd/300561008>,
-        <https://d-nb.info/gnd/300599099>,
-        <https://d-nb.info/gnd/300601530>,
-        <https://d-nb.info/gnd/300638027>,
-        <https://performance.musiconn.de/source/plakate-programmhefte-und-rezensionen-aus-dem-nachlass-hermann-keller-2-programmhefte-1955-1984>,
-        <https://performance.musiconn.de/work/werke-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/werke-brahms-johannes>,
-        <https://performance.musiconn.de/work/werke-henze-hans-werner>,
-        <https://performance.musiconn.de/work/werke-schostakowitsch-dmitri-d>,
-        <https://viaf.org/viaf/182123856>,
-        <https://viaf.org/viaf/184647671>,
-        <https://viaf.org/viaf/198538789>,
-        <https://viaf.org/viaf/219947918> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hochschule-fuer-musik-hanns-eisler-berlin-saal-201> ;
-    cto:viaf <https://viaf.org/viaf/182123856>,
-        <https://viaf.org/viaf/184647671>,
-        <https://viaf.org/viaf/198538789>,
-        <https://viaf.org/viaf/219947918> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hochschule-fuer-musik-hanns-eisler-berlin-saal-201> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300561008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300638027> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182123856> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184647671> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198538789> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300599099> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300601530> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219947918> ],
+        <https://performance.musiconn.de/source/plakate-programmhefte-und-rezensionen-aus-dem-nachlass-hermann-keller-2-programmhefte-1955-1984> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182123856> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184647671> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198538789> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219947918> a nfdicore:NFDI_0001010 .
 

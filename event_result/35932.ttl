@@ -1,33 +1,40 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1142149242> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300054211> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300128959> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1970-01-23-20-00> ] .
 
-<https://performance.musiconn.de/event/6-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1970-01-23-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1970-01-23-20-00> a cto:CTO_0001005 ;
     rdfs:label "6. Außerordentliches Konzert, Kulturpalast (Dresden) / Festsaal, 23.1.1970, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1970-01-23T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1970-01-23T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1142149242>,
-        <https://d-nb.info/gnd/300054211>,
-        <https://d-nb.info/gnd/300128959> ;
-    cto:relatedItem <https://d-nb.info/gnd/1142149242>,
-        <https://d-nb.info/gnd/300054211>,
-        <https://d-nb.info/gnd/300128959>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/fontane-di-roma-respighi-ottorino>,
-        <https://performance.musiconn.de/work/ma-mere-loye-orchesterfassung-ravel-maurice>,
-        <https://performance.musiconn.de/work/sinfonien-fwv-48-d-moll-franck-cesar>,
-        <https://viaf.org/viaf/179831510>,
-        <https://viaf.org/viaf/213966526> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/179831510>,
-        <https://viaf.org/viaf/213966526> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300054211> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1142149242> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300128959> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179831510> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213966526> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179831510> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213966526> a nfdicore:NFDI_0001010 .
 

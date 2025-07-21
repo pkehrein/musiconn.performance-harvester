@@ -4,22 +4,25 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1091076286> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-theaterbau-des-koenigsstaedtischen-theaters-berlin-1826-06-07> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-theaterbau-des-koenigsstaedtischen-theaters-berlin-1826-06-07> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-theaterbau-des-koenigsstaedtischen-theaters-berlin-1826-06-07> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Theaterbau des Königsstädtischen Theaters (Berlin), 7.6.1826" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1826-06-07" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1826-06-07" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1091076286> ;
-    cto:relatedItem <https://performance.musiconn.de/source/repertorium-des-koenigsstaedtischen-theaters-in-berlin-vom-ersten-januar-bis-ein-und-dreissigsten-december-1826-1827-drittes-heft>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1091076286> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/235553194> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/repertorium-des-koenigsstaedtischen-theaters-in-berlin-vom-ersten-januar-bis-ein-und-dreissigsten-december-1826-1827-drittes-heft>,
         <https://performance.musiconn.de/work/der-fiaker-als-marquis-fassung-mueller-wenzel>,
         <https://performance.musiconn.de/work/die-ochsenmenuett-fassung-1824-haydn-joseph> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1091076286>,
-        <https://viaf.org/viaf/235553194> ;
-    cto:viaf <https://viaf.org/viaf/235553194> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/235553194> a nfdicore:NFDI_0001010 .
 

@@ -1,62 +1,86 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1122658877> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1267634588> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1284075230> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1284234983> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026730> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145837> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300257155> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300808240> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/siebentes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1884-01-18-18-30> ] .
 
-<https://performance.musiconn.de/event/siebentes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1884-01-18-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/siebentes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1884-01-18-18-30> a cto:CTO_0001005 ;
     rdfs:label "Siebentes Museums-Concert, Großer Konzertsaal (Frankfurt a. M.), 18.1.1884, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1883-1884> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1884-01-18T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1884-01-18T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1122658877>,
-        <https://d-nb.info/gnd/1267634588>,
-        <https://d-nb.info/gnd/1284075230>,
-        <https://d-nb.info/gnd/1284234983>,
-        <https://d-nb.info/gnd/300026730>,
-        <https://d-nb.info/gnd/300145837>,
-        <https://d-nb.info/gnd/300257155>,
-        <https://d-nb.info/gnd/300808240> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1883-1884> ;
-    cto:relatedItem <https://d-nb.info/gnd/1122658877>,
-        <https://d-nb.info/gnd/1267634588>,
-        <https://d-nb.info/gnd/1284075230>,
-        <https://d-nb.info/gnd/1284234983>,
-        <https://d-nb.info/gnd/300026730>,
-        <https://d-nb.info/gnd/300145837>,
-        <https://d-nb.info/gnd/300257155>,
-        <https://d-nb.info/gnd/300808240>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026730> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195811480> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188283434> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1122658877> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300808240> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1284234983> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2794155566457313380003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2309148390869010830004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1267634588> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1566167988956333830002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/226166293186900710009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185905012> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1284075230> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145837> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300257155> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182666899> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/all-ungherese-wilhelmj-august>,
-        <https://performance.musiconn.de/work/italienische-suite-nach-niccolo-paganini-wilhelmj-august>,
-        <https://performance.musiconn.de/work/liederkreis-op-24-schoene-wiege-schumann-robert>,
-        <https://performance.musiconn.de/work/manfred-ouvertuere-schumann-robert>,
-        <https://performance.musiconn.de/work/notenbuch-der-anna-magdalena-bach-nr-2-willst-du-dein-herz-mir-schenken>,
-        <https://performance.musiconn.de/work/odysseus-penelopes-trauer-bruch-max>,
-        <https://performance.musiconn.de/work/parsifal-paraphrase-wilhelmj-august>,
-        <https://performance.musiconn.de/work/romanzen-und-lieder-op-84-vergebliches-staendchen-brahms-johannes>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-3-haydn-joseph>,
-        <https://viaf.org/viaf/1566167988956333830002>,
-        <https://viaf.org/viaf/182666899>,
-        <https://viaf.org/viaf/185905012>,
-        <https://viaf.org/viaf/188283434>,
-        <https://viaf.org/viaf/195811480>,
-        <https://viaf.org/viaf/226166293186900710009>,
-        <https://viaf.org/viaf/2309148390869010830004>,
-        <https://viaf.org/viaf/2794155566457313380003> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/1566167988956333830002>,
-        <https://viaf.org/viaf/182666899>,
-        <https://viaf.org/viaf/185905012>,
-        <https://viaf.org/viaf/188283434>,
-        <https://viaf.org/viaf/195811480>,
-        <https://viaf.org/viaf/226166293186900710009>,
-        <https://viaf.org/viaf/2309148390869010830004>,
-        <https://viaf.org/viaf/2794155566457313380003> .
+        <https://performance.musiconn.de/work/all-ungherese-wilhelmj-august> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1566167988956333830002> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182666899> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185905012> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188283434> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195811480> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/226166293186900710009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2309148390869010830004> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2794155566457313380003> a nfdicore:NFDI_0001010 .
 

@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300034172> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300048106> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133782> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300148127> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-montags-konzert-alte-oper-frankfurt-a-main-grosser-saal-2006-11-06-20-00> ] .
 
-<https://performance.musiconn.de/event/3-montags-konzert-alte-oper-frankfurt-a-main-grosser-saal-2006-11-06-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-montags-konzert-alte-oper-frankfurt-a-main-grosser-saal-2006-11-06-20-00> a cto:CTO_0001005 ;
     rdfs:label "3. Montags-Konzert, Alte Oper (Frankfurt a. Main). Großer Saal, 6.11.2006, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2006-2007> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2006-11-06T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2006-11-06T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300034172>,
-        <https://d-nb.info/gnd/300048106>,
-        <https://d-nb.info/gnd/300133782>,
-        <https://d-nb.info/gnd/300148127> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2006-2007> ;
-    cto:relatedItem <https://d-nb.info/gnd/300034172>,
-        <https://d-nb.info/gnd/300048106>,
-        <https://d-nb.info/gnd/300133782>,
-        <https://d-nb.info/gnd/300148127>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/finlandia-sibelius-jean>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-r-193-a-moll-saint-saens-camille>,
-        <https://performance.musiconn.de/work/sinfonien-b-141-d-moll-dvorak-antonin>,
-        <https://performance.musiconn.de/work/variacii-na-temu-rokoko-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/176605857>,
-        <https://viaf.org/viaf/203708908>,
-        <https://viaf.org/viaf/210936448>,
-        <https://viaf.org/viaf/232106313> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/176605857>,
-        <https://viaf.org/viaf/203708908>,
-        <https://viaf.org/viaf/210936448>,
-        <https://viaf.org/viaf/232106313> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300034172> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133782> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300148127> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/232106313> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300048106> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210936448> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176605857> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203708908> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176605857> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203708908> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210936448> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/232106313> a nfdicore:NFDI_0001010 .
 

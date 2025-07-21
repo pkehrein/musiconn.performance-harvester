@@ -1,25 +1,31 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1095520784> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1250789184> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/volksliederabend-paradiesschule-jena-1931-03-08-19-30> ] .
 
-<https://performance.musiconn.de/event/volksliederabend-paradiesschule-jena-1931-03-08-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/volksliederabend-paradiesschule-jena-1931-03-08-19-30> a cto:CTO_0001005 ;
     rdfs:label "Volksliederabend, Paradiesschule (Jena), 8.3.1931, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1931-03-08T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1931-03-08T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1095520784>,
-        <https://d-nb.info/gnd/1250789184> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1095520784>,
-        <https://d-nb.info/gnd/1250789184>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/paradiesschule-jena> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1095520784> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/314146029399535820806> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1250789184> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
         <https://performance.musiconn.de/work/ach-wie-ists-moeglich-dann>,
         <https://performance.musiconn.de/work/alleweil-kann-mer-net-lustig-sein>,
@@ -30,15 +36,13 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/ergoetzlichkeit-zu-rechter-zeit-krieger-adam>,
         <https://performance.musiconn.de/work/flieg-her-flieg-hin-waldvoegelein>,
         <https://performance.musiconn.de/work/mein-schatz-der-ist-auf-der-wanderschaft>,
-        <https://performance.musiconn.de/work/neue-arien-der-augen-schein-krieger-adam>,
         <https://performance.musiconn.de/work/oh-unbezwinglich-starker-held-st-michael>,
         <https://performance.musiconn.de/work/schneiders-hoellenfahrt-anonym>,
         <https://performance.musiconn.de/work/sitzt-a-klans-vogel>,
         <https://performance.musiconn.de/work/sonaten-violine-2-orgel-b-dur-gluck-christoph-willibald>,
         <https://performance.musiconn.de/work/weiss-mir-ein-schoenes-roeselein>,
-        <https://performance.musiconn.de/work/wenn-ich-ein-voeglein-waer>,
-        <https://performance.musiconn.de/work/wir-bergleute>,
-        <https://viaf.org/viaf/314146029399535820806> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/paradiesschule-jena> ;
-    cto:viaf <https://viaf.org/viaf/314146029399535820806> .
+        <https://performance.musiconn.de/work/wir-bergleute> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/314146029399535820806> a nfdicore:NFDI_0001010 .
 

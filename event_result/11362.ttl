@@ -1,56 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029535> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029780> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300126751> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300126778> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300326459> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300871635> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-erloeserkirche-plauen-1972-06-24> ] .
 
-<https://performance.musiconn.de/event/konzert-erloeserkirche-plauen-1972-06-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-erloeserkirche-plauen-1972-06-24> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Erlöserkirche (Plauen), 24.6.1972" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1972-06-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1972-06-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300029535>,
-        <https://d-nb.info/gnd/300029780>,
-        <https://d-nb.info/gnd/300126751>,
-        <https://d-nb.info/gnd/300126778>,
-        <https://d-nb.info/gnd/300326459>,
-        <https://d-nb.info/gnd/300871635> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300029535>,
-        <https://d-nb.info/gnd/300029780>,
-        <https://d-nb.info/gnd/300126751>,
-        <https://d-nb.info/gnd/300126778>,
-        <https://d-nb.info/gnd/300326459>,
-        <https://d-nb.info/gnd/300871635>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/erloeserkirche-plauen> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188285307> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174185373> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181283723> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029780> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300871635> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186056964> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300126778> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194731077> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300326459> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181241390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029535> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192574818> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300126751> ],
         <https://performance.musiconn.de/source/motettenbuch-1972>,
-        <https://performance.musiconn.de/work/ave-maria-wab-6-f-dur-bruckner-anton>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-138-der-mensch-lebt-und-bestehet-nur-eine-kleine-zeit-reger-max>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-138-nachtlied-reger-max>,
-        <https://performance.musiconn.de/work/herr-christ-der-einig-gotts-sohn-weyrauch-johannes>,
-        <https://performance.musiconn.de/work/kleine-passion-nach-dem-evangelium-des-johannes-weyrauch-johannes>,
-        <https://performance.musiconn.de/work/motetten-op-74-warum-ist-das-licht-gegeben-dem-muehseligen-auswahl-brahms-johannes>,
-        <https://performance.musiconn.de/work/os-justi-bruckner-anton>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-bach-johann-sebastian>,
-        <https://viaf.org/viaf/174185373>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/181283723>,
-        <https://viaf.org/viaf/186056964>,
-        <https://viaf.org/viaf/188285307>,
-        <https://viaf.org/viaf/192574818>,
-        <https://viaf.org/viaf/194731077> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/erloeserkirche-plauen> ;
-    cto:viaf <https://viaf.org/viaf/174185373>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/181283723>,
-        <https://viaf.org/viaf/186056964>,
-        <https://viaf.org/viaf/188285307>,
-        <https://viaf.org/viaf/192574818>,
-        <https://viaf.org/viaf/194731077> .
+        <https://performance.musiconn.de/work/motetten-op-74-warum-ist-das-licht-gegeben-dem-muehseligen-auswahl-brahms-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174185373> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181241390> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181283723> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186056964> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188285307> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192574818> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194731077> a nfdicore:NFDI_0001010 .
 

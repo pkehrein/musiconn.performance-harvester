@@ -1,31 +1,34 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/104920106X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/cephale-et-procris-theatre-du-palais-royal-paris-1694-04-00> ] .
 
-<https://performance.musiconn.de/event/cephale-et-procris-theatre-du-palais-royal-paris-1694-04-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/cephale-et-procris-theatre-du-palais-royal-paris-1694-04-00> a cto:CTO_0001005 ;
     rdfs:label "Céphale et Procris, Théâtre du Palais-Royal (Paris), 4/1694" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1694-04-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1694-04-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/104920106X> ;
-    cto:relatedItem <https://d-nb.info/gnd/104920106X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/theatre-du-palais-royal-paris-1> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186347676> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/104920106X> ],
         <https://performance.musiconn.de/source/beauchamps-1735-bd-3-100>,
         <https://performance.musiconn.de/source/hourcade-2002-313>,
         <https://performance.musiconn.de/source/musikalie-13>,
         <https://performance.musiconn.de/source/onlinequelle-213>,
         <https://performance.musiconn.de/source/onlinequelle-219>,
         <https://performance.musiconn.de/source/onlinequelle-220>,
-        <https://performance.musiconn.de/source/textquelle-digitalisat-94>,
-        <https://performance.musiconn.de/work/cephale-et-procris-jacquet-de-la-guerre-elisabeth-claude>,
-        <https://viaf.org/viaf/186347676> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/theatre-du-palais-royal-paris-1> ;
-    cto:viaf <https://viaf.org/viaf/186347676> .
+        <https://performance.musiconn.de/source/textquelle-digitalisat-94> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/186347676> a nfdicore:NFDI_0001010 .
 

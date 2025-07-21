@@ -1,51 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300108974> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300158602> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300219261> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300392982> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300594178> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4530321-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/11-museums-konzert-staedtische-buehnen-frankfurt-am-main-grosses-haus-1961-04-10-20-00> ] .
 
-<https://performance.musiconn.de/event/11-museums-konzert-staedtische-buehnen-frankfurt-am-main-grosses-haus-1961-04-10-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/11-museums-konzert-staedtische-buehnen-frankfurt-am-main-grosses-haus-1961-04-10-20-00> a cto:CTO_0001005 ;
     rdfs:label "11. Museums-Konzert, Städtische Bühnen (Frankfurt am Main) / Großes Haus, 10.4.1961, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1960-1961> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1961-04-10T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1961-04-10T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300108974>,
-        <https://d-nb.info/gnd/300158602>,
-        <https://d-nb.info/gnd/300219261>,
-        <https://d-nb.info/gnd/300392982>,
-        <https://d-nb.info/gnd/300594178>,
-        <https://d-nb.info/gnd/4530321-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1960-1961> ;
-    cto:relatedItem <https://d-nb.info/gnd/300108974>,
-        <https://d-nb.info/gnd/300158602>,
-        <https://d-nb.info/gnd/300219261>,
-        <https://d-nb.info/gnd/300392982>,
-        <https://d-nb.info/gnd/300594178>,
-        <https://d-nb.info/gnd/4530321-6>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/circus-polka-stravinsky-igor>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-kv-467-c-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/scherzo-a-la-russe-stravinsky-igor>,
-        <https://performance.musiconn.de/work/sinfonien-h-202-honegger-arthur>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-82-87-nr-87-a-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/tango-fassung-orch-stravinsky-igor>,
-        <https://viaf.org/viaf/173858113>,
-        <https://viaf.org/viaf/184346346>,
-        <https://viaf.org/viaf/185117703>,
-        <https://viaf.org/viaf/201854838>,
-        <https://viaf.org/viaf/214000279>,
-        <https://viaf.org/viaf/215924254> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-grosses-haus> ;
-    cto:viaf <https://viaf.org/viaf/173858113>,
-        <https://viaf.org/viaf/184346346>,
-        <https://viaf.org/viaf/185117703>,
-        <https://viaf.org/viaf/201854838>,
-        <https://viaf.org/viaf/214000279>,
-        <https://viaf.org/viaf/215924254> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-grosses-haus> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173858113> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201854838> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300158602> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300392982> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4530321-6> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215924254> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300594178> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214000279> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300219261> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185117703> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108974> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184346346> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/173858113> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184346346> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185117703> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201854838> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214000279> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215924254> a nfdicore:NFDI_0001010 .
 

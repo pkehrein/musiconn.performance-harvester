@@ -1,48 +1,67 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1169691404> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300056478> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300556233> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300705697> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4592443-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-unserer-lieben-frauen-auf-dem-berge-penig-1926-07-04> ] .
 
-<https://performance.musiconn.de/event/konzert-unserer-lieben-frauen-auf-dem-berge-penig-1926-07-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-unserer-lieben-frauen-auf-dem-berge-penig-1926-07-04> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Unserer Lieben Frauen auf dem Berge (Penig), 4.7.1926" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1926-07-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1926-07-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1169691404>,
-        <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300056478>,
-        <https://d-nb.info/gnd/300556233>,
-        <https://d-nb.info/gnd/300705697>,
-        <https://d-nb.info/gnd/4592443-0> ;
-    cto:relatedItem <https://d-nb.info/gnd/1169691404>,
-        <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300056478>,
-        <https://d-nb.info/gnd/300556233>,
-        <https://d-nb.info/gnd/300705697>,
-        <https://performance.musiconn.de/source/programmmappe-1924-1928>,
-        <https://performance.musiconn.de/work/motetten-fuer-das-ganze-kirchenjahr-motette-zum-trinitatisfest-mendelssohn-arnold-ludwig>,
-        <https://performance.musiconn.de/work/opus-musicum-tomus-1-pater-noster-qui-es-in-coelis-gallus-jacobus>,
-        <https://performance.musiconn.de/work/psalmen-davids-psalm-6-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/valet-und-trost-lied-rosenmueller-johann>,
-        <https://viaf.org/viaf/174086108>,
-        <https://viaf.org/viaf/177902951>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/251940032>,
-        <https://viaf.org/viaf/8439154076010011860001> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4592443-0>,
-        <https://viaf.org/viaf/244738087> ;
-    cto:viaf <https://viaf.org/viaf/174086108>,
-        <https://viaf.org/viaf/177902951>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/244738087>,
-        <https://viaf.org/viaf/251940032>,
-        <https://viaf.org/viaf/8439154076010011860001> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4592443-0> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/244738087> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300705697> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181241390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177902951> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300556233> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/251940032> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8439154076010011860001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1169691404> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300056478> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174086108> ],
+        <https://performance.musiconn.de/source/programmmappe-1924-1928> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174086108> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177902951> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181241390> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/244738087> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/251940032> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8439154076010011860001> a nfdicore:NFDI_0001010 .
 

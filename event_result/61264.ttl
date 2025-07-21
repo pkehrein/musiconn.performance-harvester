@@ -4,20 +4,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4511603-9> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kammerorchester-carl-philipp-emanuel-bach-brandenburgische-sommerkonzerte-1992-dom-brandenburg-brandenburg-an-der-havel-1992-06-28-17-00> ] .
 
-<https://performance.musiconn.de/event/kammerorchester-carl-philipp-emanuel-bach-brandenburgische-sommerkonzerte-1992-dom-brandenburg-brandenburg-an-der-havel-1992-06-28-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kammerorchester-carl-philipp-emanuel-bach-brandenburgische-sommerkonzerte-1992-dom-brandenburg-brandenburg-an-der-havel-1992-06-28-17-00> a cto:CTO_0001005 ;
     rdfs:label "Kammerorchester Carl Philipp Emanuel Bach. Brandenburgische Sommerkonzerte 1992, Dom Brandenburg (Brandenburg an der Havel), 28.6.1992, 17:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1992-06-28T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1992-06-28T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4511603-9> ;
-    cto:relatedItem <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-6-programmhefte-kammerorchester-carl-philipp-emanuel-bach-1990-1992> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4511603-9>,
-        <https://viaf.org/viaf/155169885> ;
-    cto:viaf <https://viaf.org/viaf/155169885> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/155169885> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4511603-9> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-6-programmhefte-kammerorchester-carl-philipp-emanuel-bach-1990-1992> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/155169885> a nfdicore:NFDI_0001010 .
 

@@ -4,23 +4,28 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/134461207> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4625181-9> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kammerkonzert-d-verband-der-komponisten-und-musikwissenschaftler-der-ddr-bezirksverband-leipzig-alte-handelsboerse-leipzig-1987-04-08> ] .
 
-<https://performance.musiconn.de/event/kammerkonzert-d-verband-der-komponisten-und-musikwissenschaftler-der-ddr-bezirksverband-leipzig-alte-handelsboerse-leipzig-1987-04-08> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kammerkonzert-d-verband-der-komponisten-und-musikwissenschaftler-der-ddr-bezirksverband-leipzig-alte-handelsboerse-leipzig-1987-04-08> a cto:CTO_0001005 ;
     rdfs:label "Kammerkonzert d. Verband der Komponisten und Musikwissenschaftler der DDR, Bezirksverband Leipzig, Alte Handelsbörse (Leipzig), 8.4.1987" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-04-08" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-04-08" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/134461207>,
-        <https://d-nb.info/gnd/4625181-9> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1987-dresden-saechsische-landesbibliothek-dresden-1988-1>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/134461207> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4625181-9> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1987-dresden-saechsische-landesbibliothek-dresden-1988-1>,
         <https://performance.musiconn.de/work/tubaballade-treibmann-karl-ottomar> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4625181-9> ;
-    cto:relatedPerson <https://d-nb.info/gnd/134461207>,
-        <https://viaf.org/viaf/79632313> ;
-    cto:viaf <https://viaf.org/viaf/79632313> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/79632313> ] .
+
+<https://viaf.org/viaf/79632313> a nfdicore:NFDI_0001010 .
 

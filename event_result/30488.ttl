@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026897> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156723> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300239815> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-philharmonisches-konzert-kulturpalast-dresden-festsaal-1993-01-10-19-30> ] .
 
-<https://performance.musiconn.de/event/5-philharmonisches-konzert-kulturpalast-dresden-festsaal-1993-01-10-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-philharmonisches-konzert-kulturpalast-dresden-festsaal-1993-01-10-19-30> a cto:CTO_0001005 ;
     rdfs:label "5. Philharmonisches Konzert, Kulturpalast (Dresden) / Festsaal, 10.1.1993, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1992-1993> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1993-01-10T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1993-01-10T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026897>,
-        <https://d-nb.info/gnd/300156723>,
-        <https://d-nb.info/gnd/300239815> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1992-1993> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026897>,
-        <https://d-nb.info/gnd/300156723>,
-        <https://d-nb.info/gnd/300239815>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/les-offrandes-oubliees-messiaen-olivier>,
-        <https://performance.musiconn.de/work/letzte-lieder-strauss-richard>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-98-e-moll-brahms-johannes>,
-        <https://viaf.org/viaf/181020010>,
-        <https://viaf.org/viaf/181497031>,
-        <https://viaf.org/viaf/194731012> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/181020010>,
-        <https://viaf.org/viaf/181497031>,
-        <https://viaf.org/viaf/194731012> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181020010> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300239815> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026897> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156723> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194731012> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181497031> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181020010> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181497031> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194731012> a nfdicore:NFDI_0001010 .
 

@@ -1,32 +1,43 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1148973788> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118932322> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1225498635> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/soiree-wutiker-steinberg-stadel-bruch-stuecke-nach-gedichten-von-marlis-afranke-fuer-singstimme-rezitation-und-klavier-auch-gesang-wutike-1986-06-27> ] .
 
-<https://performance.musiconn.de/event/soiree-wutiker-steinberg-stadel-bruch-stuecke-nach-gedichten-von-marlis-afranke-fuer-singstimme-rezitation-und-klavier-auch-gesang-wutike-1986-06-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/soiree-wutiker-steinberg-stadel-bruch-stuecke-nach-gedichten-von-marlis-afranke-fuer-singstimme-rezitation-und-klavier-auch-gesang-wutike-1986-06-27> a cto:CTO_0001005 ;
     rdfs:label "Soiree \"Wutiker Steinberg Stadel\"; Bruch-Stücke nach Gedichten von Marlis A.Franke für Singstimme (Rezitation) und Klavier (auch Gesang), Wutike, 27.6.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-06-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-06-27" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118932322> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1148973788> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4354151433040956420000> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2673161152496035190007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225498635> ],
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1148973788>,
-        <https://d-nb.info/gnd/118932322>,
-        <https://d-nb.info/gnd/1225498635> ;
-    cto:relatedItem <https://d-nb.info/gnd/1225498635>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
-        <https://performance.musiconn.de/work/bruch-stuecke-zimmermann-walter>,
-        <https://viaf.org/viaf/2673161152496035190007> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1148973788>,
-        <https://viaf.org/viaf/4354151433040956420000> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118932322>,
-        <https://viaf.org/viaf/18021105> ;
-    cto:viaf <https://viaf.org/viaf/18021105>,
-        <https://viaf.org/viaf/2673161152496035190007>,
-        <https://viaf.org/viaf/4354151433040956420000> .
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/18021105> ] .
+
+<https://viaf.org/viaf/18021105> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2673161152496035190007> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4354151433040956420000> a nfdicore:NFDI_0001010 .
 

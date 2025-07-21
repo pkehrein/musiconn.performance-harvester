@@ -1,32 +1,39 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300158378> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncert-zakrytie-sankt-petersburger-philharmonie-2001-05-26> ] .
 
-<https://performance.musiconn.de/event/koncert-zakrytie-sankt-petersburger-philharmonie-2001-05-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncert-zakrytie-sankt-petersburger-philharmonie-2001-05-26> a cto:CTO_0001005 ;
     rdfs:label "Koncert-zakrytie, Sankt-Petersburger Philharmonie, 26.5.2001" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-2000-2001> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2001-05-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2001-05-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300158378>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-2000-2001> ;
-    cto:relatedItem <https://d-nb.info/gnd/300158378>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176017840> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300158378> ],
         <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-2001-26-mai>,
-        <https://performance.musiconn.de/work/a-sermon-a-narrative-and-a-prayer-stravinsky-igor>,
         <https://performance.musiconn.de/work/angel-akymenko-fedir>,
         <https://performance.musiconn.de/work/kartinki-s-vystavki-fassung-gortschakow-gorcakov-sergej-p>,
-        <https://performance.musiconn.de/work/videnija-ioanna-groznogo-suite-slonimskij-sergej-michajlovic>,
-        <https://viaf.org/viaf/176017840> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/176017840> .
+        <https://performance.musiconn.de/work/videnija-ioanna-groznogo-suite-slonimskij-sergej-michajlovic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176017840> a nfdicore:NFDI_0001010 .
 

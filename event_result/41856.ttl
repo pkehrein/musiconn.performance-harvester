@@ -1,23 +1,25 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/grosses-extra-konzert-gewerbehaus-dresden-gewerbehaus-saal-1928-02-12> ] .
 
-<https://performance.musiconn.de/event/grosses-extra-konzert-gewerbehaus-dresden-gewerbehaus-saal-1928-02-12> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/grosses-extra-konzert-gewerbehaus-dresden-gewerbehaus-saal-1928-02-12> a cto:CTO_0001005 ;
     rdfs:label "Großes Extra-Konzert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 12.2.1928" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1927-1928> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1928-02-12" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1928-02-12" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1927-1928> ;
-    cto:relatedItem <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/der-fliegende-hollaender-auswahl-wagner-richard>,
         <https://performance.musiconn.de/work/der-ring-des-nibelungen-erster-tag-die-walkuere-auswahl-wagner-richard>,
         <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-auswahl-wagner-richard>,
@@ -26,5 +28,5 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/parsifal-auswahl-wagner-richard>,
         <https://performance.musiconn.de/work/rienzi-der-letzte-der-tribunen-auswahl-wagner-richard>,
         <https://performance.musiconn.de/work/tannhaeuser-und-der-saengerkrieg-auf-wartburg-auswahl-wagner-richard> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
 

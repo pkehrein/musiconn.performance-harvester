@@ -1,58 +1,78 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1108592244> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/114194345X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1190755114> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300180209> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30019109X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300194331> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300971842> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-haus-leipzig-leipzig-1967-06-06> ] .
 
-<https://performance.musiconn.de/event/konzert-haus-leipzig-leipzig-1967-06-06> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-haus-leipzig-leipzig-1967-06-06> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Haus Leipzig (Leipzig), 6.6.1967" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1967-06-06" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1967-06-06" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1108592244>,
-        <https://d-nb.info/gnd/114194345X>,
-        <https://d-nb.info/gnd/1190755114>,
-        <https://d-nb.info/gnd/300180209>,
-        <https://d-nb.info/gnd/30019109X>,
-        <https://d-nb.info/gnd/300194331>,
-        <https://d-nb.info/gnd/300971842> ;
-    cto:relatedItem <https://d-nb.info/gnd/1108592244>,
-        <https://d-nb.info/gnd/114194345X>,
-        <https://d-nb.info/gnd/300180209>,
-        <https://d-nb.info/gnd/30019109X>,
-        <https://d-nb.info/gnd/300194331>,
-        <https://d-nb.info/gnd/300971842>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1190755114> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300971842> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185217951> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1108592244> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/298035854> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179427272> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300180209> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/114194345X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204584697> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30019109X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300194331> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178423310> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209865043> ],
         <https://performance.musiconn.de/source/motettenbuch-1967>,
         <https://performance.musiconn.de/work/ausfahrt-kuhn-siegfried>,
-        <https://performance.musiconn.de/work/das-leben-schubert-franz>,
-        <https://performance.musiconn.de/work/der-gutzgauch-auf-dem-zaune-sass-lemlin-lorenz>,
         <https://performance.musiconn.de/work/die-liebe-maienzeit-anonym>,
         <https://performance.musiconn.de/work/goethes-lieder-oden-und-romanzen-teil-2-das-veilchen-reichardt-johann-friedrich>,
         <https://performance.musiconn.de/work/hab-sonne-im-herzen-mauersberger-erhard>,
-        <https://performance.musiconn.de/work/insprugk-ich-muss-dich-lassen-isaac-heinrich>,
-        <https://performance.musiconn.de/work/laub-gras-und-bluet-senfl-ludwig>,
         <https://performance.musiconn.de/work/lebensspruch-weismann-wilhelm>,
-        <https://performance.musiconn.de/work/lieder-hob-26-a-1-24-die-landlust-haydn-joseph>,
         <https://performance.musiconn.de/work/preciosa-zigeunerchor-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/servia-musicale-prima-wir-lieben-sehr-im-herzen-friderici-daniel>,
-        <https://performance.musiconn.de/work/tanzlied-weismann-wilhelm>,
-        <https://viaf.org/viaf/178423310>,
-        <https://viaf.org/viaf/179427272>,
-        <https://viaf.org/viaf/185217951>,
-        <https://viaf.org/viaf/204584697>,
-        <https://viaf.org/viaf/209865043>,
-        <https://viaf.org/viaf/298035854> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1190755114> ;
-    cto:viaf <https://viaf.org/viaf/178423310>,
-        <https://viaf.org/viaf/179427272>,
-        <https://viaf.org/viaf/185217951>,
-        <https://viaf.org/viaf/204584697>,
-        <https://viaf.org/viaf/209865043>,
-        <https://viaf.org/viaf/298035854> .
+        <https://performance.musiconn.de/work/tanzlied-weismann-wilhelm> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178423310> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179427272> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185217951> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204584697> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209865043> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/298035854> a nfdicore:NFDI_0001010 .
 

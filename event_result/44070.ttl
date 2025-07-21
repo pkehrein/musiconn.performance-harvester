@@ -1,35 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1098432525> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300506325> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/rodion-scedrin-sankt-petersburger-philharmonie-1974-05-20> ] .
 
-<https://performance.musiconn.de/event/rodion-scedrin-sankt-petersburger-philharmonie-1974-05-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/rodion-scedrin-sankt-petersburger-philharmonie-1974-05-20> a cto:CTO_0001005 ;
     rdfs:label "Rodion Ščedrin, Sankt-Petersburger Philharmonie, 20.5.1974" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1973-74> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1974-05-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1974-05-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1098432525>,
-        <https://d-nb.info/gnd/300506325>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1973-74> ;
-    cto:relatedItem <https://d-nb.info/gnd/1098432525>,
-        <https://d-nb.info/gnd/300506325>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213978781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1098432525> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300506325> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309146216696309092200> ],
         <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1974-20-mai>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-5-d-dur-scedrin-rodion-konstantinovic>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-2-op-35-scedrin-rodion-konstantinovic>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-3-scedrin-rodion-konstantinovic>,
-        <https://viaf.org/viaf/213978781>,
-        <https://viaf.org/viaf/309146216696309092200> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/213978781>,
-        <https://viaf.org/viaf/309146216696309092200> .
+        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-3-scedrin-rodion-konstantinovic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213978781> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309146216696309092200> a nfdicore:NFDI_0001010 .
 

@@ -1,55 +1,74 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1047835177> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/119031956X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102305> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300149611> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170300> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30028909X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300908628> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/9-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1924-09-28-19-00> ] .
 
-<https://performance.musiconn.de/event/9-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1924-09-28-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/9-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1924-09-28-19-00> a cto:CTO_0001005 ;
     rdfs:label "9. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 28.9.1924, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1924-1925-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1924-09-28T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1924-09-28T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1047835177>,
-        <https://d-nb.info/gnd/119031956X>,
-        <https://d-nb.info/gnd/300102305>,
-        <https://d-nb.info/gnd/300149611>,
-        <https://d-nb.info/gnd/300170300>,
-        <https://d-nb.info/gnd/30028909X>,
-        <https://d-nb.info/gnd/300908628> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1924-1925-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/1047835177>,
-        <https://d-nb.info/gnd/119031956X>,
-        <https://d-nb.info/gnd/300102305>,
-        <https://d-nb.info/gnd/300149611>,
-        <https://d-nb.info/gnd/300170300>,
-        <https://d-nb.info/gnd/30028909X>,
-        <https://d-nb.info/gnd/300908628>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183261770> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175394232> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300149611> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185888653> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186512571> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300908628> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102305> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170300> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1047835177> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186708409> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213996466> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30028909X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/119031956X> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
-        <https://performance.musiconn.de/work/elegiske-melodier-hjertesar-grieg-edvard>,
-        <https://performance.musiconn.de/work/elegiske-melodier-varen-grieg-edvard>,
-        <https://performance.musiconn.de/work/konzert-ouvertuere-zu-shakespeares-sommernachtstraum-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-nr-2-op-38-c-moll-de-swert-jules>,
-        <https://performance.musiconn.de/work/la-traviata-fantasie-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/les-sirenes-waldteufel-emil>,
-        <https://performance.musiconn.de/work/ma-vlast-vltava-smetana-bedrich>,
-        <https://performance.musiconn.de/work/rienzi-der-letzte-der-tribunen-ouvertuere-wagner-richard>,
-        <https://viaf.org/viaf/175394232>,
-        <https://viaf.org/viaf/183261770>,
-        <https://viaf.org/viaf/185888653>,
-        <https://viaf.org/viaf/186512571>,
-        <https://viaf.org/viaf/186708409>,
-        <https://viaf.org/viaf/213996466> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/175394232>,
-        <https://viaf.org/viaf/183261770>,
-        <https://viaf.org/viaf/185888653>,
-        <https://viaf.org/viaf/186512571>,
-        <https://viaf.org/viaf/186708409>,
-        <https://viaf.org/viaf/213996466> .
+        <https://performance.musiconn.de/work/la-traviata-fantasie-verdi-giuseppe> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175394232> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183261770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185888653> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186512571> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186708409> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213996466> a nfdicore:NFDI_0001010 .
 

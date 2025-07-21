@@ -1,58 +1,79 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/114194345X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1170209564> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1170701159> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1170917453> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1192923065> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027354> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037805> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-abend-kreuzschule-georgplatz-dresden-1933-11-16-20-00> ] .
 
-<https://performance.musiconn.de/event/konzert-abend-kreuzschule-georgplatz-dresden-1933-11-16-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-abend-kreuzschule-georgplatz-dresden-1933-11-16-20-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert-Abend, Kreuzschule (Georgplatz, Dresden), 16.11.1933, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1933-34> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1933-11-16T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1933-11-16T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/114194345X>,
-        <https://d-nb.info/gnd/1170209564>,
-        <https://d-nb.info/gnd/1170701159>,
-        <https://d-nb.info/gnd/1170917453>,
-        <https://d-nb.info/gnd/1192923065>,
-        <https://d-nb.info/gnd/300027354>,
-        <https://d-nb.info/gnd/300037805> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1933-34> ;
-    cto:relatedItem <https://d-nb.info/gnd/114194345X>,
-        <https://d-nb.info/gnd/1170209564>,
-        <https://d-nb.info/gnd/1170701159>,
-        <https://d-nb.info/gnd/1170917453>,
-        <https://d-nb.info/gnd/300027354>,
-        <https://d-nb.info/gnd/300037805>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1192923065> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170209564> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037805> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1996154137633915370000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170701159> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170917453> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179427272> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/9362154198340520230006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174110202> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027354> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/301773233> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210936288> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8280154198335820230009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/114194345X> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
         <https://performance.musiconn.de/work/es-jagt-ein-jaeger-vor-dem-holz-leonhard-johannes>,
         <https://performance.musiconn.de/work/es-ritt-ein-jaeger-hetzen-aus-teuglin-hans>,
-        <https://performance.musiconn.de/work/frisch-auf-in-gottes-namen-vom-brandt-jobst>,
-        <https://performance.musiconn.de/work/ich-soll-und-muss-ein-buhlen-haben-senfl-ludwig>,
-        <https://performance.musiconn.de/work/insprugk-ich-muss-dich-lassen-isaac-heinrich>,
-        <https://performance.musiconn.de/work/libro-de-villanelle-moresche-et-altre-canzoni-o-la-o-che-bon-eccho-lasso-orlando-di>,
-        <https://performance.musiconn.de/work/scherzi-klavier-op-20-h-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/und-da-ich-sass-heintz-wolff>,
-        <https://performance.musiconn.de/work/variationen-und-fuge-klavier-op-24-b-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/was-blasen-die-trompeten-mauersberger-rudolf>,
-        <https://viaf.org/viaf/174110202>,
-        <https://viaf.org/viaf/179427272>,
-        <https://viaf.org/viaf/1996154137633915370000>,
-        <https://viaf.org/viaf/210936288>,
-        <https://viaf.org/viaf/301773233>,
-        <https://viaf.org/viaf/8280154198335820230009>,
-        <https://viaf.org/viaf/9362154198340520230006> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1192923065> ;
-    cto:viaf <https://viaf.org/viaf/174110202>,
-        <https://viaf.org/viaf/179427272>,
-        <https://viaf.org/viaf/1996154137633915370000>,
-        <https://viaf.org/viaf/210936288>,
-        <https://viaf.org/viaf/301773233>,
-        <https://viaf.org/viaf/8280154198335820230009>,
-        <https://viaf.org/viaf/9362154198340520230006> .
+        <https://performance.musiconn.de/work/und-da-ich-sass-heintz-wolff> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174110202> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179427272> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/1996154137633915370000> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210936288> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/301773233> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8280154198335820230009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/9362154198340520230006> a nfdicore:NFDI_0001010 .
 

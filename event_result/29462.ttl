@@ -1,59 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1125555548> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1152421182> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300002890> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300055374> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300090714> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300214375> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/philharmoniker-anders-kulturpalast-dresden-festsaal-1984-10-13-18-00> ] .
 
-<https://performance.musiconn.de/event/philharmoniker-anders-kulturpalast-dresden-festsaal-1984-10-13-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/philharmoniker-anders-kulturpalast-dresden-festsaal-1984-10-13-18-00> a cto:CTO_0001005 ;
     rdfs:label "Philharmoniker Anders, Kulturpalast (Dresden) / Festsaal, 13.10.1984, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1984-1985> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1984-10-13T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1984-10-13T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1125555548>,
-        <https://d-nb.info/gnd/1152421182>,
-        <https://d-nb.info/gnd/300002890>,
-        <https://d-nb.info/gnd/300055374>,
-        <https://d-nb.info/gnd/300090714>,
-        <https://d-nb.info/gnd/300214375> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1984-1985> ;
-    cto:relatedItem <https://d-nb.info/gnd/1125555548>,
-        <https://d-nb.info/gnd/1152421182>,
-        <https://d-nb.info/gnd/300002890>,
-        <https://d-nb.info/gnd/300055374>,
-        <https://d-nb.info/gnd/300090714>,
-        <https://d-nb.info/gnd/300214375>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/sinus-combo> ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180292548> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184278226> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1125555548> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300090714> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1152421182> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176622788> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174661823> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300055374> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182488789> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300002890> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183076408> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300214375> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/adagio-bearbeitung-fuer-saxophon-und-orchester-marcello-benedetto>,
         <https://performance.musiconn.de/work/capricen-trompete-andre-maurice>,
-        <https://performance.musiconn.de/work/die-lustige-witwe-lippen-schweigen-lehar-franz>,
-        <https://performance.musiconn.de/work/einzug-der-gladiatoren-fucik-julius>,
-        <https://performance.musiconn.de/work/gold-und-silber-lehar-franz>,
-        <https://performance.musiconn.de/work/il-bacio-arditi-luigi>,
-        <https://performance.musiconn.de/work/jalousie-gade-jacob>,
         <https://performance.musiconn.de/work/kiss-me-kate-wo-ist-die-liebestolle-zeit-porter-cole>,
         <https://performance.musiconn.de/work/lateinamerikanische-taenze-joseck-guenter>,
-        <https://performance.musiconn.de/work/limelight-chaplin-charlie>,
         <https://performance.musiconn.de/work/poeme-bearbeitung-fuer-saxophon-und-orchester-fibich-zdenek>,
         <https://performance.musiconn.de/work/speak-softly-love-rota-nino>,
-        <https://performance.musiconn.de/work/teufelstanz-hellmesberger-joseph>,
-        <https://viaf.org/viaf/174661823>,
-        <https://viaf.org/viaf/176622788>,
-        <https://viaf.org/viaf/180292548>,
-        <https://viaf.org/viaf/182488789>,
-        <https://viaf.org/viaf/183076408>,
-        <https://viaf.org/viaf/184278226> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/sinus-combo> ;
-    cto:viaf <https://viaf.org/viaf/174661823>,
-        <https://viaf.org/viaf/176622788>,
-        <https://viaf.org/viaf/180292548>,
-        <https://viaf.org/viaf/182488789>,
-        <https://viaf.org/viaf/183076408>,
-        <https://viaf.org/viaf/184278226> .
+        <https://performance.musiconn.de/work/teufelstanz-hellmesberger-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174661823> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176622788> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180292548> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182488789> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183076408> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184278226> a nfdicore:NFDI_0001010 .
 

@@ -1,54 +1,72 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1075514150> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1075554926> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1285906403> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027370> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102240> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300299931> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-vereinskonzert-rathaus-muenster-westf-friedenssaal-1870-02-25> ] .
 
-<https://performance.musiconn.de/event/7-vereinskonzert-rathaus-muenster-westf-friedenssaal-1870-02-25> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-vereinskonzert-rathaus-muenster-westf-friedenssaal-1870-02-25> a cto:CTO_0001005 ;
     rdfs:label "7. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 25.2.1870" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1869-70> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1870-02-25" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1870-02-25" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1075514150>,
-        <https://d-nb.info/gnd/1075554926>,
-        <https://d-nb.info/gnd/1285906403>,
-        <https://d-nb.info/gnd/300027370>,
-        <https://d-nb.info/gnd/300102240>,
-        <https://d-nb.info/gnd/300299931>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1869-70> ;
-    cto:relatedItem <https://d-nb.info/gnd/1075514150>,
-        <https://d-nb.info/gnd/1075554926>,
-        <https://d-nb.info/gnd/1285906403>,
-        <https://d-nb.info/gnd/300027370>,
-        <https://d-nb.info/gnd/300102240>,
-        <https://d-nb.info/gnd/300299931>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/317066991> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182026570> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181290065> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1285906403> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102240> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211715717> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1075554926> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184346555> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300299931> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027370> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1075514150> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1869-1870>,
         <https://performance.musiconn.de/work/barcarole-violine-spohr-louis>,
-        <https://performance.musiconn.de/work/gesaenge-op-4-er-ist-gekommen-franz-robert>,
-        <https://performance.musiconn.de/work/konzert-ouvertuere-mwv-p-5-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-9-op-55-d-moll-spohr-louis>,
         <https://performance.musiconn.de/work/lieder-op-1-hast-dus-denn-ganz-vergessen-grimm-julius-otto>,
-        <https://performance.musiconn.de/work/oberon-a-lonely-arab-maid-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/oberon-o-araby-dear-araby-weber-carl-maria-von>,
         <https://performance.musiconn.de/work/scherzo-violine-spohr-louis>,
-        <https://performance.musiconn.de/work/sinfonien-c-dur-schubert-franz>,
-        <https://performance.musiconn.de/work/volkskinderlieder-sandmaennchen-brahms-johannes>,
-        <https://viaf.org/viaf/181290065>,
-        <https://viaf.org/viaf/182026570>,
-        <https://viaf.org/viaf/184346555>,
-        <https://viaf.org/viaf/211715717>,
-        <https://viaf.org/viaf/317066991> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/181290065>,
-        <https://viaf.org/viaf/182026570>,
-        <https://viaf.org/viaf/184346555>,
-        <https://viaf.org/viaf/211715717>,
-        <https://viaf.org/viaf/317066991> .
+        <https://performance.musiconn.de/work/sinfonien-c-dur-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181290065> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182026570> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184346555> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211715717> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/317066991> a nfdicore:NFDI_0001010 .
 

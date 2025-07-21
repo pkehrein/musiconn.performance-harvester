@@ -1,51 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1099322251> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1196978018> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30000995X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300137273> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140088> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300247095> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300629141> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/politischer-festakt-kongresshalle-leipzig-1947-09-08> ] .
 
-<https://performance.musiconn.de/event/politischer-festakt-kongresshalle-leipzig-1947-09-08> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/politischer-festakt-kongresshalle-leipzig-1947-09-08> a cto:CTO_0001005 ;
     rdfs:label "politischer Festakt, Kongresshalle (Leipzig), 8.9.1947" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1947-09-08" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1947-09-08" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1099322251>,
-        <https://d-nb.info/gnd/1196978018>,
-        <https://d-nb.info/gnd/30000995X>,
-        <https://d-nb.info/gnd/300137273>,
-        <https://d-nb.info/gnd/300140088>,
-        <https://d-nb.info/gnd/300247095>,
-        <https://d-nb.info/gnd/300629141> ;
-    cto:relatedItem <https://d-nb.info/gnd/1196978018>,
-        <https://d-nb.info/gnd/30000995X>,
-        <https://d-nb.info/gnd/300137273>,
-        <https://d-nb.info/gnd/300140088>,
-        <https://d-nb.info/gnd/300247095>,
-        <https://d-nb.info/gnd/300629141>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/240146284233415330352> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1099322251> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300247095> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211714621> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300137273> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1196978018> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30000995X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140088> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185711418> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210951998> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300629141> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211711899> ],
         <https://performance.musiconn.de/source/motettenbuch-1947>,
-        <https://performance.musiconn.de/work/an-die-sonne-d-439-schubert-franz>,
-        <https://performance.musiconn.de/work/gesaenge-chor-op-42-vineta-brahms-johannes>,
         <https://performance.musiconn.de/work/il-primo-libro-di-canzon-villanesche-chi-la-gagliarda-donne-voimparare-donato-baldassare>,
-        <https://performance.musiconn.de/work/lieder-op-39-im-walde-fassung-chor-schumann-robert>,
-        <https://performance.musiconn.de/work/lila-beherzigung-fassung-chor-reichardt-johann-friedrich>,
-        <https://performance.musiconn.de/work/musica-boscareccia-teil-2-viel-schoener-bluemelein-schein-johann-hermann>,
-        <https://performance.musiconn.de/work/psalmen-davids-jauchzet-dem-herren-alle-welt-singet-ruehmet-und-lobet-swv-47-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-alles-was-odem-hat-lobe-den-herrn-bach-johann-sebastian>,
-        <https://viaf.org/viaf/185711418>,
-        <https://viaf.org/viaf/210951998>,
-        <https://viaf.org/viaf/211711899>,
-        <https://viaf.org/viaf/211714621> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1099322251>,
-        <https://viaf.org/viaf/240146284233415330352> ;
-    cto:viaf <https://viaf.org/viaf/185711418>,
-        <https://viaf.org/viaf/210951998>,
-        <https://viaf.org/viaf/211711899>,
-        <https://viaf.org/viaf/211714621>,
-        <https://viaf.org/viaf/240146284233415330352> .
+        <https://performance.musiconn.de/work/lieder-op-39-im-walde-fassung-chor-schumann-robert> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185711418> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210951998> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211711899> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211714621> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/240146284233415330352> a nfdicore:NFDI_0001010 .
 

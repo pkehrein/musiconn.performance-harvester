@@ -1,40 +1,49 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1104521938> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027311> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300477430> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/9-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1897-03-05-19-30> ] .
 
-<https://performance.musiconn.de/event/9-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1897-03-05-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/9-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1897-03-05-19-30> a cto:CTO_0001005 ;
     rdfs:label "9. Philharmonisches Konzert, Convent-Garten (Hamburg) / Großer Saal, 5.3.1897, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1896-1897-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1897-03-05T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1897-03-05T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1104521938>,
-        <https://d-nb.info/gnd/300027311>,
-        <https://d-nb.info/gnd/300477430> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1896-1897-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/1104521938>,
-        <https://d-nb.info/gnd/300027311>,
-        <https://d-nb.info/gnd/300477430>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/convent-garten-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/36146708299400842664> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215933140> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1104521938> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300477430> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311579680> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1890-1924>,
         <https://performance.musiconn.de/work/feramors-rezitativ-und-arie-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/gesaenge-op-31-wenn-es-schummert-auf-der-welt-hermann-hans>,
-        <https://performance.musiconn.de/work/lied-vom-glueck-humperdinck-engelbert>,
         <https://performance.musiconn.de/work/lieder-op-26-fruehlingslied-fielitz-alexander-von>,
         <https://performance.musiconn.de/work/serenaden-orchester-schrattenholz-leo>,
-        <https://performance.musiconn.de/work/sinfonien-g-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/variationen-ueber-ein-thema-von-joseph-haydn-brahms-johannes>,
-        <https://viaf.org/viaf/215933140>,
-        <https://viaf.org/viaf/311579680>,
-        <https://viaf.org/viaf/36146708299400842664> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/convent-garten-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/215933140>,
-        <https://viaf.org/viaf/311579680>,
-        <https://viaf.org/viaf/36146708299400842664> .
+        <https://performance.musiconn.de/work/sinfonien-g-moll-mozart-wolfgang-amadeus> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/215933140> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311579680> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/36146708299400842664> a nfdicore:NFDI_0001010 .
 

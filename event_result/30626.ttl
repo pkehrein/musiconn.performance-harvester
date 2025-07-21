@@ -1,59 +1,84 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1053538235> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1078793352> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300097948> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300172257> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300236115> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300582242> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300843380> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-kammerkonzert-schloss-albrechtsberg-dresden-1994-03-20-19-00> ] .
 
-<https://performance.musiconn.de/event/4-kammerkonzert-schloss-albrechtsberg-dresden-1994-03-20-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-kammerkonzert-schloss-albrechtsberg-dresden-1994-03-20-19-00> a cto:CTO_0001005 ;
     rdfs:label "4. Kammerkonzert, Schloss Albrechtsberg (Dresden), 20.3.1994, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1993-1994> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1994-03-20T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1994-03-20T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1053538235>,
-        <https://d-nb.info/gnd/1078793352>,
-        <https://d-nb.info/gnd/300097948>,
-        <https://d-nb.info/gnd/300172257>,
-        <https://d-nb.info/gnd/300236115>,
-        <https://d-nb.info/gnd/300582242>,
-        <https://d-nb.info/gnd/300843380>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1993-1994> ;
-    cto:relatedItem <https://d-nb.info/gnd/1053538235>,
-        <https://d-nb.info/gnd/1078793352>,
-        <https://d-nb.info/gnd/300097948>,
-        <https://d-nb.info/gnd/300172257>,
-        <https://d-nb.info/gnd/300236115>,
-        <https://d-nb.info/gnd/300582242>,
-        <https://d-nb.info/gnd/300843380>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/berceuse-elegiaque-busoni-ferruccio>,
-        <https://performance.musiconn.de/work/duo-sur-un-theme-de-la-naissance-de-la-lyre-roussel-albert>,
-        <https://performance.musiconn.de/work/lieder-eines-fahrenden-gesellen-mahler-gustav>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-13-18-nr-17-f-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/saetze-violine-2-viola-violoncello-op-5-webern-anton>,
-        <https://performance.musiconn.de/work/septett-militaire-hummel-johann-nepomuk>,
-        <https://performance.musiconn.de/work/serenaden-klar-1-2-trp-fg-nr-1-sutermeister-heinrich>,
-        <https://viaf.org/viaf/174587567>,
-        <https://viaf.org/viaf/177007225>,
-        <https://viaf.org/viaf/181931436>,
-        <https://viaf.org/viaf/191510182>,
-        <https://viaf.org/viaf/201872946>,
-        <https://viaf.org/viaf/234752923>,
-        <https://viaf.org/viaf/330144782961183486397> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/174587567>,
-        <https://viaf.org/viaf/177007225>,
-        <https://viaf.org/viaf/181931436>,
-        <https://viaf.org/viaf/191510182>,
-        <https://viaf.org/viaf/201872946>,
-        <https://viaf.org/viaf/234752923>,
-        <https://viaf.org/viaf/237386709>,
-        <https://viaf.org/viaf/330144782961183486397> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/234752923> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1078793352> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300172257> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201872946> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300236115> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300582242> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/330144782961183486397> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300097948> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177007225> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1053538235> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191510182> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181931436> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300843380> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174587567> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174587567> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177007225> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181931436> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191510182> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201872946> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/234752923> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/330144782961183486397> a nfdicore:NFDI_0001010 .
 

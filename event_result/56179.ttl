@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1089086296> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/der-hahn-im-korbe-theaterbau-des-schauspielhauses-berlin-1825-11-29> ] .
 
-<https://performance.musiconn.de/event/der-hahn-im-korbe-theaterbau-des-schauspielhauses-berlin-1825-11-29> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/der-hahn-im-korbe-theaterbau-des-schauspielhauses-berlin-1825-11-29> a cto:CTO_0001005 ;
     rdfs:label "Der Hahn im Korbe, Theaterbau des Schauspielhauses Berlin, 29.11.1825" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1825-11-29" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1825-11-29" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1089086296> ;
-    cto:relatedItem <https://performance.musiconn.de/source/katalogisat-der-hahn-im-korbe-vaudeville-in-1-aufzug-nach-dem-franzoesischen-bearbeitet-von-karl-august-ludwig-von-lichtenstein-29-november-1825>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1089086296> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/313145858154823022430> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/katalogisat-der-hahn-im-korbe-vaudeville-in-1-aufzug-nach-dem-franzoesischen-bearbeitet-von-karl-august-ludwig-von-lichtenstein-29-november-1825>,
         <https://performance.musiconn.de/work/der-hahn-im-korbe-fassung-mozart-wolfgang-amadeus-paisiello-giovanni-dittersdorf-karl-ditters-von-verschiedene> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1089086296>,
-        <https://viaf.org/viaf/313145858154823022430> ;
-    cto:viaf <https://viaf.org/viaf/313145858154823022430> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/313145858154823022430> a nfdicore:NFDI_0001010 .
 

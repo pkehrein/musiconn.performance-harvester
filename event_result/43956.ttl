@@ -1,32 +1,43 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/16071023-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300316321> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4070734-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/die-beiden-schuetzen-elberfeld-1840-11-07-18-00> ] .
 
-<https://performance.musiconn.de/event/die-beiden-schuetzen-elberfeld-1840-11-07-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/die-beiden-schuetzen-elberfeld-1840-11-07-18-00> a cto:CTO_0001005 ;
     rdfs:label "Die beiden Schützen, Elberfeld, 7.11.1840, 18:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1840-11-07T20:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1840-11-07T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/16071023-6>,
-        <https://d-nb.info/gnd/300316321>,
-        <https://d-nb.info/gnd/4070734-9> ;
-    cto:relatedItem <https://d-nb.info/gnd/300316321>,
-        <https://performance.musiconn.de/source/plakat-concessionirtes-theater-in-elberfeld-7-november-1840>,
-        <https://performance.musiconn.de/work/die-beiden-schuetzen-lortzing-albert>,
-        <https://viaf.org/viaf/177219447> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4070734-9>,
-        <https://viaf.org/viaf/243785709> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/16071023-6>,
-        <https://viaf.org/viaf/132092649> ;
-    cto:viaf <https://viaf.org/viaf/132092649>,
-        <https://viaf.org/viaf/177219447>,
-        <https://viaf.org/viaf/243785709> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132092649> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/16071023-6> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/243785709> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4070734-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300316321> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177219447> ],
+        <https://performance.musiconn.de/source/plakat-concessionirtes-theater-in-elberfeld-7-november-1840> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132092649> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177219447> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/243785709> a nfdicore:NFDI_0001010 .
 

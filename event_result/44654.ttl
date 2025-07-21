@@ -1,27 +1,30 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30009647X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/regina-ludwigshafen-theater-im-pfalzbau-2013-11-21> ] .
 
-<https://performance.musiconn.de/event/regina-ludwigshafen-theater-im-pfalzbau-2013-11-21> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/regina-ludwigshafen-theater-im-pfalzbau-2013-11-21> a cto:CTO_0001005 ;
     rdfs:label "Regina, Ludwigshafen. Theater im Pfalzbau, 21.11.2013" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/pfalztheater-kaiserslautern-spielzeit-2013-14> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2013-11-21" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2013-11-21" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30009647X> ;
-    cto:itemOf <https://performance.musiconn.de/series/pfalztheater-kaiserslautern-spielzeit-2013-14> ;
-    cto:relatedItem <https://d-nb.info/gnd/30009647X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ludwigshafen-theater-im-pfalzbau> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175634575> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009647X> ],
         <https://performance.musiconn.de/source/postkarte-pfalztheater-kaiserslautern-spielzeit-2013-14-lortzing-regina>,
-        <https://performance.musiconn.de/source/programmheft-pfalztheater-kaiserslautern-spielzeit-2013-14-heft-1-lortzing-regina>,
-        <https://performance.musiconn.de/work/regina-lortzing-albert>,
-        <https://viaf.org/viaf/175634575> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ludwigshafen-theater-im-pfalzbau> ;
-    cto:viaf <https://viaf.org/viaf/175634575> .
+        <https://performance.musiconn.de/source/programmheft-pfalztheater-kaiserslautern-spielzeit-2013-14-heft-1-lortzing-regina> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175634575> a nfdicore:NFDI_0001010 .
 

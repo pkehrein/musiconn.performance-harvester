@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300107684> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30012578X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300280084> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-philharmonisches-konzert-kulturpalast-dresden-festsaal-1970-04-17-20-00> ] .
 
-<https://performance.musiconn.de/event/8-philharmonisches-konzert-kulturpalast-dresden-festsaal-1970-04-17-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-philharmonisches-konzert-kulturpalast-dresden-festsaal-1970-04-17-20-00> a cto:CTO_0001005 ;
     rdfs:label "8. Philharmonisches Konzert, Kulturpalast (Dresden) / Festsaal, 17.4.1970, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1970-04-17T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1970-04-17T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300107684>,
-        <https://d-nb.info/gnd/30012578X>,
-        <https://d-nb.info/gnd/300280084> ;
-    cto:relatedItem <https://d-nb.info/gnd/300107684>,
-        <https://d-nb.info/gnd/30012578X>,
-        <https://d-nb.info/gnd/300280084>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30012578X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199704240> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300280084> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300107684> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181461332> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185501054> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/divertimenti-orchester-kv-251-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/le-tombeau-de-couperin-fassung-orch-ravel-maurice>,
-        <https://performance.musiconn.de/work/magyar-kepek-bartok-bela>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-4-haydn-joseph>,
-        <https://viaf.org/viaf/181461332>,
-        <https://viaf.org/viaf/185501054>,
-        <https://viaf.org/viaf/199704240> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/181461332>,
-        <https://viaf.org/viaf/185501054>,
-        <https://viaf.org/viaf/199704240> .
+        <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-4-haydn-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181461332> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185501054> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199704240> a nfdicore:NFDI_0001010 .
 

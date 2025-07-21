@@ -4,20 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1191131998> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ausstellungseroeffnung-museum-der-bildenden-kuenste-leipzig-1990-12-16> ] .
 
-<https://performance.musiconn.de/event/ausstellungseroeffnung-museum-der-bildenden-kuenste-leipzig-1990-12-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ausstellungseroeffnung-museum-der-bildenden-kuenste-leipzig-1990-12-16> a cto:CTO_0001005 ;
     rdfs:label "Ausstellungseröffnung, Museum der bildenden Künste (Leipzig), 16.12.1990" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1990-12-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1990-12-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1191131998>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1191131998> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/christiane-agricola-ausstellung-hilft-die-mauer-nach-israel-zu-ueberwinden-museum-der-bildenden-kuenste-zeigt-skulpturen-und-grafiken>,
         <https://performance.musiconn.de/source/moritz-jaehnig-kluft-zu-einem-kulturkreis-wird-geschlossen-kuenstler-aus-israel-setzten-mit-einer-ausstellung-im-museum-bildender-kuenste-in-leipzig-zeiche>,
         <https://performance.musiconn.de/work/al-sfod-fassung-millet-joseph>,
@@ -26,8 +32,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/ma-towu-lewandowski-louis>,
         <https://performance.musiconn.de/work/nigun-sander-werner>,
         <https://performance.musiconn.de/work/omar-adoschem-ljakoiw-fassung-sander-werner> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1191131998> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

@@ -1,46 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1198165677> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1203161131> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30010278X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300356153> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300460767> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1918-04-13-14-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1918-04-13-14-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1918-04-13-14-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 13.4.1918, 14:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1917-18> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1918-04-13T14:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1918-04-13T14:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1198165677>,
-        <https://d-nb.info/gnd/1203161131>,
-        <https://d-nb.info/gnd/30010278X>,
-        <https://d-nb.info/gnd/300356153>,
-        <https://d-nb.info/gnd/300460767>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1917-18> ;
-    cto:relatedItem <https://d-nb.info/gnd/1198165677>,
-        <https://d-nb.info/gnd/1203161131>,
-        <https://d-nb.info/gnd/30010278X>,
-        <https://d-nb.info/gnd/300356153>,
-        <https://d-nb.info/gnd/300460767>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201853470> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300460767> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30010278X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203718097> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300356153> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183543769> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1203161131> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1198165677> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/geistliche-lieder-op-36-gebet-becker-albert>,
-        <https://performance.musiconn.de/work/geistliche-lieder-op-71-osterlied-becker-albert>,
-        <https://performance.musiconn.de/work/motetten-op-84-choral-motette-becker-albert>,
-        <https://performance.musiconn.de/work/paulus-lasst-uns-singen-von-der-gnade-des-herrn-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/sonaten-orgel-mwv-w-56-f-moll-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/surrexit-pastor-bonus-tulerunt-dominum-meum-mendelssohn-bartholdy-felix>,
-        <https://viaf.org/viaf/183543769>,
-        <https://viaf.org/viaf/201853470>,
-        <https://viaf.org/viaf/203718097> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/183543769>,
-        <https://viaf.org/viaf/201853470>,
-        <https://viaf.org/viaf/203718097>,
-        <https://viaf.org/viaf/248189528> .
+        <https://performance.musiconn.de/work/surrexit-pastor-bonus-tulerunt-dominum-meum-mendelssohn-bartholdy-felix> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/183543769> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201853470> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203718097> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
 

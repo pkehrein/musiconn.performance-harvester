@@ -1,55 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1074379810> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300016379> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145772> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145837> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300299982> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300949979> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/einundzwanzigstes-abonnement-concert-zweites-gewandhaus-leipzig-1886-03-11> ] .
 
-<https://performance.musiconn.de/event/einundzwanzigstes-abonnement-concert-zweites-gewandhaus-leipzig-1886-03-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/einundzwanzigstes-abonnement-concert-zweites-gewandhaus-leipzig-1886-03-11> a cto:CTO_0001005 ;
     rdfs:label "Einundzwanzigstes Abonnement-Concert, Zweites Gewandhaus (Leipzig), 11.3.1886" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1886-03-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1886-03-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1074379810>,
-        <https://d-nb.info/gnd/300016379>,
-        <https://d-nb.info/gnd/300145772>,
-        <https://d-nb.info/gnd/300145837>,
-        <https://d-nb.info/gnd/300299982>,
-        <https://d-nb.info/gnd/300949979>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/1074379810>,
-        <https://d-nb.info/gnd/300016379>,
-        <https://d-nb.info/gnd/300145772>,
-        <https://d-nb.info/gnd/300145837>,
-        <https://d-nb.info/gnd/300299982>,
-        <https://d-nb.info/gnd/300949979>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145772> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182666899> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212878467> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016379> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1074379810> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211733558> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145837> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179497381> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300299982> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185114977> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300949979> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215928930> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
         <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-6-op-28-g-moll-spohr-louis>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-24-ries-ferdinand>,
-        <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-fruehlingsnacht-schumann-robert>,
-        <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-waldesgespraech-schumann-robert>,
-        <https://performance.musiconn.de/work/mailied-reinecke-carl>,
-        <https://performance.musiconn.de/work/manfred-ouvertuere-schumann-robert>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-60-b-dur-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/179497381>,
-        <https://viaf.org/viaf/182666899>,
-        <https://viaf.org/viaf/185114977>,
-        <https://viaf.org/viaf/211733558>,
-        <https://viaf.org/viaf/212878467>,
-        <https://viaf.org/viaf/215928930> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/179497381>,
-        <https://viaf.org/viaf/182666899>,
-        <https://viaf.org/viaf/185114977>,
-        <https://viaf.org/viaf/211733558>,
-        <https://viaf.org/viaf/212878467>,
-        <https://viaf.org/viaf/215928930>,
-        <https://viaf.org/viaf/264523828> .
+        <https://performance.musiconn.de/work/mailied-reinecke-carl> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179497381> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182666899> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185114977> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211733558> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212878467> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215928930> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
 

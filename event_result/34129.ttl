@@ -4,25 +4,28 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4194431-8> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/la-mascarade-du-roi-de-la-chine-schloss-versailles-1700-01-07> ] .
 
-<https://performance.musiconn.de/event/la-mascarade-du-roi-de-la-chine-schloss-versailles-1700-01-07> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/la-mascarade-du-roi-de-la-chine-schloss-versailles-1700-01-07> a cto:CTO_0001005 ;
     rdfs:label "La Mascarade du Roi de la Chine, Schloss Versailles, 7.1.1700" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1700-01-07" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1700-01-07" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4194431-8> ;
-    cto:relatedItem <https://performance.musiconn.de/source/mercure-galant-1700-bd-2-154-155>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4194431-8> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/233744168> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/mercure-galant-1700-bd-2-154-155>,
         <https://performance.musiconn.de/source/musikalie-18>,
         <https://performance.musiconn.de/source/onlinequelle-275>,
         <https://performance.musiconn.de/source/textquelle-34>,
         <https://performance.musiconn.de/source/warris-warrick-marsh-1994-19>,
         <https://performance.musiconn.de/work/la-mascarade-du-roi-de-la-chine-philidor-andre> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4194431-8>,
-        <https://viaf.org/viaf/233744168> ;
-    cto:viaf <https://viaf.org/viaf/233744168> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/233744168> a nfdicore:NFDI_0001010 .
 

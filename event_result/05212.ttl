@@ -1,58 +1,76 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1122372582> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1125560649> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1170080391> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300067984> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300076053> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300603037> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/25-konzert-schuetzenhaus-bischofswerda-1935-01-28-20-00> ] .
 
-<https://performance.musiconn.de/event/25-konzert-schuetzenhaus-bischofswerda-1935-01-28-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/25-konzert-schuetzenhaus-bischofswerda-1935-01-28-20-00> a cto:CTO_0001005 ;
     rdfs:label "25. Konzert, Schützenhaus (Bischofswerda), 28.1.1935, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1934-35> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1935-01-28T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1935-01-28T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1122372582>,
-        <https://d-nb.info/gnd/1125560649>,
-        <https://d-nb.info/gnd/1170080391>,
-        <https://d-nb.info/gnd/300067984>,
-        <https://d-nb.info/gnd/300076053>,
-        <https://d-nb.info/gnd/300603037> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1934-35> ;
-    cto:relatedItem <https://d-nb.info/gnd/1122372582>,
-        <https://d-nb.info/gnd/1125560649>,
-        <https://d-nb.info/gnd/1170080391>,
-        <https://d-nb.info/gnd/300067984>,
-        <https://d-nb.info/gnd/300076053>,
-        <https://d-nb.info/gnd/300603037>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/schuetzenhaus-bischofswerda> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177654406> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186698050> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184409116> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179924241> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1122372582> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170080391> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176817650> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300603037> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1125560649> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186532267> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300067984> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300076053> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
         <https://performance.musiconn.de/work/chorsuite-landrai-erwin>,
         <https://performance.musiconn.de/work/die-strassburger-muensterengelchen-grabner-hermann>,
-        <https://performance.musiconn.de/work/domine-ad-adiuvandum-me-homilius-gottfried-august>,
         <https://performance.musiconn.de/work/geistliches-trinklied-der-nonnen-am-niederrhein-grabner-hermann>,
         <https://performance.musiconn.de/work/jan-hinnerk-up-de-lammerstraat-roentgen-julius>,
-        <https://performance.musiconn.de/work/liebe-ich-will-dich-lieben-meine-krone-cornelius-peter>,
         <https://performance.musiconn.de/work/lob-gottes-gerhardt-paul>,
-        <https://performance.musiconn.de/work/lustgarten-neuer-teutscher-gesaeng-balletti-galliarden-und-intraden-tantzen-und-springen-hassler-hans-leo>,
-        <https://performance.musiconn.de/work/madrigals-and-mottets-set-1-what-is-our-life-gibbons-orlando>,
         <https://performance.musiconn.de/work/reise-ins-schlaraffenland-huber-hans>,
-        <https://performance.musiconn.de/work/sola-soletta-conversi-girolamo>,
-        <https://performance.musiconn.de/work/todos-los-bienes-del-mundo-encina-juan-del>,
-        <https://performance.musiconn.de/work/y-voi-roma>,
-        <https://viaf.org/viaf/176817650>,
-        <https://viaf.org/viaf/177654406>,
-        <https://viaf.org/viaf/179924241>,
-        <https://viaf.org/viaf/184409116>,
-        <https://viaf.org/viaf/186532267>,
-        <https://viaf.org/viaf/186698050> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/schuetzenhaus-bischofswerda> ;
-    cto:viaf <https://viaf.org/viaf/176817650>,
-        <https://viaf.org/viaf/177654406>,
-        <https://viaf.org/viaf/179924241>,
-        <https://viaf.org/viaf/184409116>,
-        <https://viaf.org/viaf/186532267>,
-        <https://viaf.org/viaf/186698050> .
+        <https://performance.musiconn.de/work/y-voi-roma> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176817650> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177654406> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179924241> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184409116> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186532267> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186698050> a nfdicore:NFDI_0001010 .
 

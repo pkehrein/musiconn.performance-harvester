@@ -4,27 +4,30 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/2000648-2> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/komponistinnen-matinee-2-lieder-und-klavierwerke-von-clara-schumann-wieck-und-robert-schumann-kammerspiele-nuernberg> ] .
 
-<https://performance.musiconn.de/event/komponistinnen-matinee-2-lieder-und-klavierwerke-von-clara-schumann-wieck-und-robert-schumann-kammerspiele-nuernberg> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/komponistinnen-matinee-2-lieder-und-klavierwerke-von-clara-schumann-wieck-und-robert-schumann-kammerspiele-nuernberg> a cto:CTO_0001005 ;
     rdfs:label "Komponistinnen - Matinee 2: Lieder und Klavierwerke von Clara Schumann-Wieck und Robert Schumann, Kammerspiele (Nürnberg)" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1996-03-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1996-03-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/2000648-2> ;
-    cto:relatedItem <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-flyer-komponistinnen-3-matineen-in-den-nuernberger-kammerspielen-matinee-2-clara-schumann>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/155414399> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/2000648-2> ],
+        <https://performance.musiconn.de/corporation/bayrischer-rundfunk-studio-franken>,
+        <https://performance.musiconn.de/corporation/staedtische-buehnen-nuernberg> ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kammerspiele-nuernberg> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-flyer-komponistinnen-3-matineen-in-den-nuernberger-kammerspielen-matinee-2-clara-schumann>,
         <https://performance.musiconn.de/work/klavierwerke-schumann-clara>,
         <https://performance.musiconn.de/work/klavierwerke-schumann-robert>,
         <https://performance.musiconn.de/work/lieder-schumann-clara-1>,
         <https://performance.musiconn.de/work/lieder-schumann-robert-1> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kammerspiele-nuernberg> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/2000648-2>,
-        <https://performance.musiconn.de/corporation/bayrischer-rundfunk-studio-franken>,
-        <https://performance.musiconn.de/corporation/staedtische-buehnen-nuernberg>,
-        <https://viaf.org/viaf/155414399> ;
-    cto:viaf <https://viaf.org/viaf/155414399> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/155414399> a nfdicore:NFDI_0001010 .
 

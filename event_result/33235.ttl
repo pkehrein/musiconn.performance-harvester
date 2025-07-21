@@ -1,33 +1,41 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1190754452> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037902> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300222343> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-kammermusik-im-museum-museumsbau-des-deutschen-hygiene-museum-dresden-2016-06-19> ] .
 
-<https://performance.musiconn.de/event/2-kammermusik-im-museum-museumsbau-des-deutschen-hygiene-museum-dresden-2016-06-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-kammermusik-im-museum-museumsbau-des-deutschen-hygiene-museum-dresden-2016-06-19> a cto:CTO_0001005 ;
     rdfs:label "2. Kammermusik im Museum, Museumsbau des Deutschen Hygiene-Museum (Dresden), 19.6.2016" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2015-2016> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2016-06-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2016-06-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1190754452>,
-        <https://d-nb.info/gnd/300037902>,
-        <https://d-nb.info/gnd/300222343> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2015-2016> ;
-    cto:relatedItem <https://d-nb.info/gnd/300037902>,
-        <https://d-nb.info/gnd/300222343>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1190754452> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300222343> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037902> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196882493> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211709434> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/grand-duo-concertant-ueber-themen-aus-meyerbeers-robert-le-diable-chopin-frederic-franchomme-auguste>,
-        <https://performance.musiconn.de/work/sonaten-violoncello-klavier-op-65-g-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/trios-querfloete-violoncello-klavier-j-259-weber-carl-maria-von>,
-        <https://viaf.org/viaf/196882493>,
-        <https://viaf.org/viaf/211709434> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1190754452> ;
-    cto:viaf <https://viaf.org/viaf/196882493>,
-        <https://viaf.org/viaf/211709434> .
+        <https://performance.musiconn.de/work/grand-duo-concertant-ueber-themen-aus-meyerbeers-robert-le-diable-chopin-frederic-franchomme-auguste> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/196882493> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211709434> a nfdicore:NFDI_0001010 .
 

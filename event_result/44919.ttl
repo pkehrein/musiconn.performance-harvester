@@ -1,31 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300016867> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144660> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncert-3-marta-sankt-petersburger-philharmonie-kleiner-saal-1994-03-03> ] .
 
-<https://performance.musiconn.de/event/koncert-3-marta-sankt-petersburger-philharmonie-kleiner-saal-1994-03-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncert-3-marta-sankt-petersburger-philharmonie-kleiner-saal-1994-03-03> a cto:CTO_0001005 ;
     rdfs:label "Koncert 3. marta, Sankt-Petersburger Philharmonie / Kleiner Saal, 3.3.1994" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1993-94> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1994-03-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1994-03-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300016867>,
-        <https://d-nb.info/gnd/300144660> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1993-94> ;
-    cto:relatedItem <https://d-nb.info/gnd/300016867>,
-        <https://d-nb.info/gnd/300144660>,
-        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1994-3-maerz-kleiner-saal>,
-        <https://performance.musiconn.de/work/sonaten-klavier-op-106-b-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/symphonische-etueden-schumann-robert>,
-        <https://viaf.org/viaf/174508163>,
-        <https://viaf.org/viaf/186299955> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/174508163>,
-        <https://viaf.org/viaf/186299955> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016867> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144660> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174508163> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186299955> ],
+        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1994-3-maerz-kleiner-saal> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174508163> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186299955> a nfdicore:NFDI_0001010 .
 

@@ -1,41 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30000477X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300005164> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300044240> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300725922> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1967-06-09> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1967-06-09> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1967-06-09> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 9.6.1967" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1967-06-09" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1967-06-09" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30000477X>,
-        <https://d-nb.info/gnd/300005164>,
-        <https://d-nb.info/gnd/300044240>,
-        <https://d-nb.info/gnd/300725922>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/30000477X>,
-        <https://d-nb.info/gnd/300005164>,
-        <https://d-nb.info/gnd/300044240>,
-        <https://d-nb.info/gnd/300725922>,
-        <https://performance.musiconn.de/source/motettenbuch-1967>,
-        <https://performance.musiconn.de/work/evangelien-motetten-jesus-der-retter-im-seesturm-strohbach-siegfried>,
-        <https://performance.musiconn.de/work/ich-lasse-dich-nicht-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/ich-weiss-dass-mein-erloeser-lebt-bach-johann-michael>,
-        <https://performance.musiconn.de/work/kleine-choralmotetten-op-62-lobe-den-herren-den-maechtigen-koenig-der-ehren-distler-hugo>,
-        <https://viaf.org/viaf/180964575>,
-        <https://viaf.org/viaf/205759488>,
-        <https://viaf.org/viaf/213984754> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/180964575>,
-        <https://viaf.org/viaf/205759488>,
-        <https://viaf.org/viaf/213984754> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300044240> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205759488> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213984754> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30000477X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300005164> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300725922> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180964575> ],
+        <https://performance.musiconn.de/source/motettenbuch-1967> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180964575> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205759488> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213984754> a nfdicore:NFDI_0001010 .
 

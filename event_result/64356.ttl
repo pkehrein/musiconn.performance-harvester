@@ -1,56 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1267634588> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1287085334> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300025408> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300048114> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146175> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30042714X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300430361> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-vereinskonzert-rathaus-muenster-westf-friedenssaal-1899-03-09> ] .
 
-<https://performance.musiconn.de/event/6-vereinskonzert-rathaus-muenster-westf-friedenssaal-1899-03-09> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-vereinskonzert-rathaus-muenster-westf-friedenssaal-1899-03-09> a cto:CTO_0001005 ;
     rdfs:label "6. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 9.3.1899" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1898-99> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1899-03-09" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1899-03-09" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1267634588>,
-        <https://d-nb.info/gnd/1287085334>,
-        <https://d-nb.info/gnd/300025408>,
-        <https://d-nb.info/gnd/300048114>,
-        <https://d-nb.info/gnd/300146175>,
-        <https://d-nb.info/gnd/30042714X>,
-        <https://d-nb.info/gnd/300430361>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1898-99> ;
-    cto:relatedItem <https://d-nb.info/gnd/1267634588>,
-        <https://d-nb.info/gnd/1287085334>,
-        <https://d-nb.info/gnd/300025408>,
-        <https://d-nb.info/gnd/300048114>,
-        <https://d-nb.info/gnd/300146175>,
-        <https://d-nb.info/gnd/30042714X>,
-        <https://d-nb.info/gnd/300430361>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/226166293186900710009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146175> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188272564> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1267634588> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300048114> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210946608> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025408> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199701586> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30042714X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196878160> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1287085334> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300430361> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183274824> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1898-1899>,
-        <https://performance.musiconn.de/work/gedichte-aus-friedrich-rueckerts-liebesfruehling-rose-meer-und-sonne-schumann-robert>,
-        <https://performance.musiconn.de/work/gesaenge-alt-viola-klavier-op-91-brahms-johannes>,
-        <https://performance.musiconn.de/work/humoresken-orchester-e-dur-humperdinck-engelbert>,
-        <https://performance.musiconn.de/work/lustspiel-ouvertuere-smetana-bedrich>,
-        <https://performance.musiconn.de/work/odysseus-penelopes-trauer-bruch-max>,
-        <https://performance.musiconn.de/work/romanzen-und-balladen-op-53-der-arme-peter-schumann-robert>,
-        <https://performance.musiconn.de/work/serenaden-streichorch-op-242-reinecke-carl>,
-        <https://performance.musiconn.de/work/sinfonien-b-163-g-dur-dvorak-antonin>,
-        <https://viaf.org/viaf/183274824>,
-        <https://viaf.org/viaf/188272564>,
-        <https://viaf.org/viaf/196878160>,
-        <https://viaf.org/viaf/199701586>,
-        <https://viaf.org/viaf/210946608>,
-        <https://viaf.org/viaf/226166293186900710009> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/183274824>,
-        <https://viaf.org/viaf/188272564>,
-        <https://viaf.org/viaf/196878160>,
-        <https://viaf.org/viaf/199701586>,
-        <https://viaf.org/viaf/210946608>,
-        <https://viaf.org/viaf/226166293186900710009> .
+        <https://performance.musiconn.de/work/lustspiel-ouvertuere-smetana-bedrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/183274824> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188272564> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196878160> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199701586> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210946608> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/226166293186900710009> a nfdicore:NFDI_0001010 .
 

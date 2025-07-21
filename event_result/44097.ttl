@@ -4,19 +4,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/eroeffnung-der-juedischen-woche-gedenkstaette-am-ort-der-grossen-gemeindesynagoge-gottschedstrasse-leipzig-2015-06-28-17-00> ] .
 
-<https://performance.musiconn.de/event/eroeffnung-der-juedischen-woche-gedenkstaette-am-ort-der-grossen-gemeindesynagoge-gottschedstrasse-leipzig-2015-06-28-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/eroeffnung-der-juedischen-woche-gedenkstaette-am-ort-der-grossen-gemeindesynagoge-gottschedstrasse-leipzig-2015-06-28-17-00> a cto:CTO_0001005 ;
     rdfs:label "Eröffnung der Jüdischen Woche, Gedenkstätte am Ort der Großen Gemeindesynagoge Gottschedstraße (Leipzig), 28.6.2015, 17:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2015-06-28T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2015-06-28T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/angelika-raulien-tage-wie-der-heutige-beweisen-dass-versoehnung-moeglich-ist-eroeffnung-der-11-juedischen-woche-wiedersehensfreude-haelt-sich-an-kein-protokoll>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/gedenkstaette-am-ort-der-grossen-gemeindesynagoge-gottschedstrasse-leipzig> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/angelika-raulien-tage-wie-der-heutige-beweisen-dass-versoehnung-moeglich-ist-eroeffnung-der-11-juedischen-woche-wiedersehensfreude-haelt-sich-an-kein-protokoll>,
         <https://performance.musiconn.de/source/programm-eroeffnungsveranstaltung-28-juni-2015>,
         <https://performance.musiconn.de/source/programmbuch-eroeffnungsveranstaltung-28-juni-2015>,
         <https://performance.musiconn.de/work/bulbes-heyn-thomas>,
@@ -24,8 +28,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/ma-tovu-schalit-heinrich>,
         <https://performance.musiconn.de/work/margeritkelach-fassung-gross-friedbert>,
         <https://performance.musiconn.de/work/ojfn-weg-schtejt-a-bojm-jung-fredo-laskovsky-philip> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/gedenkstaette-am-ort-der-grossen-gemeindesynagoge-gottschedstrasse-leipzig> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

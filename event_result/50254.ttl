@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1089086296> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/der-schnee-theaterbau-des-schauspielhauses-berlin-1824-08-10> ] .
 
-<https://performance.musiconn.de/event/der-schnee-theaterbau-des-schauspielhauses-berlin-1824-08-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/der-schnee-theaterbau-des-schauspielhauses-berlin-1824-08-10> a cto:CTO_0001005 ;
     rdfs:label "Der Schnee, Theaterbau des Schauspielhauses Berlin, 10.8.1824" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1824-08-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1824-08-10" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1089086296> ;
-    cto:relatedItem <https://performance.musiconn.de/source/katalogisat-der-schnee-singspiel-in-4-abtheilungen-nach-dem-franzoesischen-der-herren-scribe-und-delavigne-von-c-herklots-musik-von-auber-10-august-1824>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1089086296> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/313145858154823022430> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/katalogisat-der-schnee-singspiel-in-4-abtheilungen-nach-dem-franzoesischen-der-herren-scribe-und-delavigne-von-c-herklots-musik-von-auber-10-august-1824>,
         <https://performance.musiconn.de/work/la-neige-fassung-1824-auber-daniel-francois-esprit> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1089086296>,
-        <https://viaf.org/viaf/313145858154823022430> ;
-    cto:viaf <https://viaf.org/viaf/313145858154823022430> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/313145858154823022430> a nfdicore:NFDI_0001010 .
 

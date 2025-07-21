@@ -1,35 +1,42 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1241313-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300002785> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/komponistinnen-begegnungen-komponistinnen-aus-deutschland-und-ex-jugoslawien-gasteig-muenchen-kleiner-konzertsaal-2007-06-09> ] .
 
-<https://performance.musiconn.de/event/komponistinnen-begegnungen-komponistinnen-aus-deutschland-und-ex-jugoslawien-gasteig-muenchen-kleiner-konzertsaal-2007-06-09> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/komponistinnen-begegnungen-komponistinnen-aus-deutschland-und-ex-jugoslawien-gasteig-muenchen-kleiner-konzertsaal-2007-06-09> a cto:CTO_0001005 ;
     rdfs:label "Komponistinnen : Begegnungen - Komponistinnen aus Deutschland und Ex-Jugoslawien, Gasteig (München) / Kleiner Konzertsaal, 9.6.2007" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/komponistinnen-neue-konzertreihe-im-muenchner-kulturleben> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2007-06-09" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2007-06-09" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1241313-6>,
-        <https://d-nb.info/gnd/300002785> ;
-    cto:itemOf <https://performance.musiconn.de/series/komponistinnen-neue-konzertreihe-im-muenchner-kulturleben> ;
-    cto:relatedItem <https://d-nb.info/gnd/300002785>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1241313-6> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/156839204> ],
+        <https://performance.musiconn.de/corporation/versus-vox-ensemble-muenchen> ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/gasteig-muenchen-kleiner-konzertsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300002785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203705659> ],
         <https://performance.musiconn.de/source/musica-femina-muenchen-ev-programm-30-komponistinnenkonzert>,
         <https://performance.musiconn.de/work/sextett-eberhardt-dorothee>,
-        <https://performance.musiconn.de/work/sonaten-querfloete-basso-continuo-f-dur-amalie-preussen-prinzessin>,
         <https://performance.musiconn.de/work/suite-nach-serbischen-volksmelodien-violine-violoncello-boskovic-dijana>,
         <https://performance.musiconn.de/work/the-emigres-waltz-a-collection-of-american-furniture-music-pieces-kammerensemble-bogojevic-natasa>,
-        <https://performance.musiconn.de/work/zwischen-ost-und-west-floete-perkussion-boskovic-dijana>,
-        <https://viaf.org/viaf/203705659> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/gasteig-muenchen-kleiner-konzertsaal> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/1241313-6>,
-        <https://performance.musiconn.de/corporation/versus-vox-ensemble-muenchen>,
-        <https://viaf.org/viaf/156839204> ;
-    cto:viaf <https://viaf.org/viaf/156839204>,
-        <https://viaf.org/viaf/203705659> .
+        <https://performance.musiconn.de/work/zwischen-ost-und-west-floete-perkussion-boskovic-dijana> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/156839204> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203705659> a nfdicore:NFDI_0001010 .
 

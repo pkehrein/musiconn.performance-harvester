@@ -1,55 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30012533X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133707> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300134274> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300323026> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30046701X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300509952> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-kammerkonzert-schloss-albrechtsberg-dresden-1994-09-18-19-00> ] .
 
-<https://performance.musiconn.de/event/1-kammerkonzert-schloss-albrechtsberg-dresden-1994-09-18-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-kammerkonzert-schloss-albrechtsberg-dresden-1994-09-18-19-00> a cto:CTO_0001005 ;
     rdfs:label "1. Kammerkonzert, Schloss Albrechtsberg (Dresden), 18.9.1994, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1994-1995> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1994-09-18T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1994-09-18T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30012533X>,
-        <https://d-nb.info/gnd/300133707>,
-        <https://d-nb.info/gnd/300134274>,
-        <https://d-nb.info/gnd/300323026>,
-        <https://d-nb.info/gnd/30046701X>,
-        <https://d-nb.info/gnd/300509952>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1994-1995> ;
-    cto:relatedItem <https://d-nb.info/gnd/30012533X>,
-        <https://d-nb.info/gnd/300133707>,
-        <https://d-nb.info/gnd/300134274>,
-        <https://d-nb.info/gnd/300323026>,
-        <https://d-nb.info/gnd/30046701X>,
-        <https://d-nb.info/gnd/300509952>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133707> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200779448> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208684771> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184746464> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300509952> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300134274> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30046701X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30012533X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198535014> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185708490> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300323026> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200788126> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/au-matin-tournier-marcel>,
-        <https://performance.musiconn.de/work/chanson-dans-la-nuit-salzedo-carlos>,
-        <https://performance.musiconn.de/work/fantasien-violine-harfe-r-136-a-dur-saint-saens-camille>,
-        <https://performance.musiconn.de/work/introduction-et-allegro-querfloete-klarinette-harfe-violine-2-viola-violoncello-1905-ravel-maurice>,
-        <https://performance.musiconn.de/work/metamorphosen-ueber-ein-thema-aus-die-moldau-von-f-smetana-koetsier-jan>,
-        <https://performance.musiconn.de/work/quintette-trompete-2-horn-posaune-tuba-op-73-arnold-malcolm>,
-        <https://performance.musiconn.de/work/quintette-violine-viola-klarinette-horn-fagott-es-dur-haydn-michael>,
-        <https://viaf.org/viaf/184746464>,
-        <https://viaf.org/viaf/185708490>,
-        <https://viaf.org/viaf/198535014>,
-        <https://viaf.org/viaf/200779448>,
-        <https://viaf.org/viaf/200788126>,
-        <https://viaf.org/viaf/208684771> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/184746464>,
-        <https://viaf.org/viaf/185708490>,
-        <https://viaf.org/viaf/198535014>,
-        <https://viaf.org/viaf/200779448>,
-        <https://viaf.org/viaf/200788126>,
-        <https://viaf.org/viaf/208684771>,
-        <https://viaf.org/viaf/237386709> .
+        <https://performance.musiconn.de/work/quintette-violine-viola-klarinette-horn-fagott-es-dur-haydn-michael> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/184746464> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185708490> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198535014> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200779448> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200788126> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208684771> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
 

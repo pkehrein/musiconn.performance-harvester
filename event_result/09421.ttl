@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1115504770> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1124871748> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30036055X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300827245> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1996-04-12> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1996-04-12> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1996-04-12> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 12.4.1996" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1996-04-12" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1996-04-12" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1115504770>,
-        <https://d-nb.info/gnd/1124871748>,
-        <https://d-nb.info/gnd/30036055X>,
-        <https://d-nb.info/gnd/300827245>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1115504770>,
-        <https://d-nb.info/gnd/1124871748>,
-        <https://d-nb.info/gnd/30036055X>,
-        <https://d-nb.info/gnd/300827245>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300827245> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1124871748> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30036055X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174043482> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1115504770> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174793692> ],
         <https://performance.musiconn.de/source/motettenbuch-1995-96>,
-        <https://performance.musiconn.de/work/hear-my-prayer-o-lord-purcell-henry>,
         <https://performance.musiconn.de/work/nunc-dimittis-gesius-bartholomaeus>,
-        <https://performance.musiconn.de/work/preussische-fest-lieder-teil-2-zu-dieser-oesterlichen-zeit-eccard-johannes>,
-        <https://performance.musiconn.de/work/symphoniae-sacrae-swv-398-418-der-herr-ist-mein-hirt-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/symphoniae-sacrae-swv-398-418-feget-den-alten-sauerteig-aus-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/symphoniae-sacrae-swv-398-418-wo-der-herr-nicht-das-haus-bauet-schuetz-heinrich>,
-        <https://viaf.org/viaf/174043482>,
-        <https://viaf.org/viaf/174793692> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/174043482>,
-        <https://viaf.org/viaf/174793692> .
+        <https://performance.musiconn.de/work/preussische-fest-lieder-teil-2-zu-dieser-oesterlichen-zeit-eccard-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174043482> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174793692> a nfdicore:NFDI_0001010 .
 

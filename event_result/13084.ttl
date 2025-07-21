@@ -4,19 +4,20 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1192327756> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-opernhaus-leipzig-1964-02-29> ] .
 
-<https://performance.musiconn.de/event/konzert-opernhaus-leipzig-1964-02-29> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-opernhaus-leipzig-1964-02-29> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Opernhaus (Leipzig), 29.2.1964" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1964-02-29" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1964-02-29" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1192327756> ;
-    cto:relatedItem <https://performance.musiconn.de/source/motettenbuch-1964>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1192327756> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/motettenbuch-1964>,
         <https://performance.musiconn.de/work/geschwinde-geschwinde-ihr-wirbelnden-winde-labt-das-herz-ihr-holden-saiten-bach-johann-sebastian> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1192327756> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
 

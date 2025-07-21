@@ -1,46 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1156749026> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300104707> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30017618X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300608489> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300752318> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-kammerkonzert-blockhaus-dresden-1987-04-11-19-30> ] .
 
-<https://performance.musiconn.de/event/6-kammerkonzert-blockhaus-dresden-1987-04-11-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-kammerkonzert-blockhaus-dresden-1987-04-11-19-30> a cto:CTO_0001005 ;
     rdfs:label "6. Kammerkonzert, Blockhaus (Dresden), 11.4.1987, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1986-1987> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-04-11T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-04-11T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1156749026>,
-        <https://d-nb.info/gnd/300104707>,
-        <https://d-nb.info/gnd/30017618X>,
-        <https://d-nb.info/gnd/300608489>,
-        <https://d-nb.info/gnd/300752318> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1986-1987> ;
-    cto:relatedItem <https://d-nb.info/gnd/300104707>,
-        <https://d-nb.info/gnd/30017618X>,
-        <https://d-nb.info/gnd/300608489>,
-        <https://d-nb.info/gnd/300752318>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7980152502945210800008> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1156749026> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177063371> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30017618X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300752318> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209881050> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300104707> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202951811> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300608489> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181696082> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/calls-lischka-rainer>,
-        <https://performance.musiconn.de/work/erwartungen-zechlin-ruth>,
-        <https://performance.musiconn.de/work/la-cheminee-du-roi-rene-milhaud-darius>,
-        <https://performance.musiconn.de/work/quintette-floete-oboe-klarinette-horn-fagott-op-100-nr-3-reicha-anton>,
         <https://performance.musiconn.de/work/quintette-nr-4-b-dur-rossini-gioachino>,
-        <https://performance.musiconn.de/work/trois-pieces-breves-ibert-jacques>,
-        <https://viaf.org/viaf/177063371>,
-        <https://viaf.org/viaf/181696082>,
-        <https://viaf.org/viaf/202951811>,
-        <https://viaf.org/viaf/209881050> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1156749026>,
-        <https://viaf.org/viaf/7980152502945210800008> ;
-    cto:viaf <https://viaf.org/viaf/177063371>,
-        <https://viaf.org/viaf/181696082>,
-        <https://viaf.org/viaf/202951811>,
-        <https://viaf.org/viaf/209881050>,
-        <https://viaf.org/viaf/7980152502945210800008> .
+        <https://performance.musiconn.de/work/trois-pieces-breves-ibert-jacques> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177063371> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181696082> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202951811> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209881050> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7980152502945210800008> a nfdicore:NFDI_0001010 .
 

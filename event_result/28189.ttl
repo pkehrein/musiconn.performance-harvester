@@ -1,47 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029209> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300039379> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300088981> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133715> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/iv-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1912-01-09-19-30> ] .
 
-<https://performance.musiconn.de/event/iv-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1912-01-09-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/iv-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1912-01-09-19-30> a cto:CTO_0001005 ;
     rdfs:label "IV. Philharmonisches Konzert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 9.1.1912, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1911-1912> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1912-01-09T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1912-01-09T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300029209>,
-        <https://d-nb.info/gnd/300039379>,
-        <https://d-nb.info/gnd/300088981>,
-        <https://d-nb.info/gnd/300133715> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1911-1912> ;
-    cto:relatedItem <https://d-nb.info/gnd/300029209>,
-        <https://d-nb.info/gnd/300039379>,
-        <https://d-nb.info/gnd/300088981>,
-        <https://d-nb.info/gnd/300133715>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133715> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300088981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029209> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219160905> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300039379> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185902837> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178583086> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179215200> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1911-1912>,
-        <https://performance.musiconn.de/work/der-barbier-von-bagdad-ouvertuere-cornelius-peter>,
-        <https://performance.musiconn.de/work/havanaise-saint-saens-camille>,
         <https://performance.musiconn.de/work/im-sturme-berger-wilhelm>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-1-op-26-g-moll-bruch-max>,
         <https://performance.musiconn.de/work/le-cid-de-cet-affreux-massenet-jules>,
         <https://performance.musiconn.de/work/sonett-taubert-ernst-eduard>,
         <https://performance.musiconn.de/work/stille-stunde-raabe-peter>,
-        <https://performance.musiconn.de/work/symphonie-espagnole-lalo-edouard>,
-        <https://performance.musiconn.de/work/trennung-reifner-vinzenz>,
-        <https://viaf.org/viaf/178583086>,
-        <https://viaf.org/viaf/179215200>,
-        <https://viaf.org/viaf/185902837>,
-        <https://viaf.org/viaf/219160905> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/178583086>,
-        <https://viaf.org/viaf/179215200>,
-        <https://viaf.org/viaf/185902837>,
-        <https://viaf.org/viaf/219160905> .
+        <https://performance.musiconn.de/work/trennung-reifner-vinzenz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178583086> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179215200> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185902837> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219160905> a nfdicore:NFDI_0001010 .
 

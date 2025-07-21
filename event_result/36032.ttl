@@ -1,35 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300141785> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156456> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300545215> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-festkonzert-kulturpalast-dresden-festsaal-1970-11-26-20-00> ] .
 
-<https://performance.musiconn.de/event/4-festkonzert-kulturpalast-dresden-festsaal-1970-11-26-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-festkonzert-kulturpalast-dresden-festsaal-1970-11-26-20-00> a cto:CTO_0001005 ;
     rdfs:label "4. Festkonzert, Kulturpalast (Dresden) / Festsaal, 26.11.1970, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1970-11-26T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1970-11-26T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300156456>,
-        <https://d-nb.info/gnd/300545215> ;
-    cto:relatedItem <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300156456>,
-        <https://d-nb.info/gnd/300545215>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/don-quixote-strauss-richard>,
-        <https://performance.musiconn.de/work/sinfonien-d-944-c-dur-schubert-franz>,
-        <https://performance.musiconn.de/work/symphonische-adaptation-des-quintetts-es-dur-kv-614-v-w-a-mozart-dessau-paul>,
-        <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/183353711>,
-        <https://viaf.org/viaf/200790419> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/183353711>,
-        <https://viaf.org/viaf/200790419> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156456> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183353711> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174994351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200790419> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300545215> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174994351> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183353711> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200790419> a nfdicore:NFDI_0001010 .
 

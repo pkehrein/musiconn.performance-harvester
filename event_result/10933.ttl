@@ -1,53 +1,75 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1063180414> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010001> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001001X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300025157> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300143737> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300664532> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4099614-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-lichtenstein-sachsen-1982-06-24> ] .
 
-<https://performance.musiconn.de/event/konzert-lichtenstein-sachsen-1982-06-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-lichtenstein-sachsen-1982-06-24> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Lichtenstein (Sachsen), 24.6.1982" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1982-06-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1982-06-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1063180414>,
-        <https://d-nb.info/gnd/300010001>,
-        <https://d-nb.info/gnd/30001001X>,
-        <https://d-nb.info/gnd/300025157>,
-        <https://d-nb.info/gnd/300143737>,
-        <https://d-nb.info/gnd/300664532>,
-        <https://d-nb.info/gnd/4099614-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/1063180414>,
-        <https://d-nb.info/gnd/300010001>,
-        <https://d-nb.info/gnd/30001001X>,
-        <https://d-nb.info/gnd/300025157>,
-        <https://d-nb.info/gnd/300143737>,
-        <https://d-nb.info/gnd/300664532>,
-        <https://performance.musiconn.de/source/motettenbuch-1982>,
-        <https://performance.musiconn.de/work/deutsche-messe-op-42-david-johann-nepomuk>,
-        <https://performance.musiconn.de/work/fest-und-gedenksprueche-brahms-johannes>,
-        <https://performance.musiconn.de/work/fuerchte-dich-nicht-ich-bin-bei-dir-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/komm-jesu-komm-mein-leib-ist-muede-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/o-herr-mache-mich-zum-werkzeug-deines-friedens-hessenberg-kurt>,
-        <https://performance.musiconn.de/work/psalmen-davids-psalm-98-schuetz-heinrich>,
-        <https://viaf.org/viaf/179407683>,
-        <https://viaf.org/viaf/180037857>,
-        <https://viaf.org/viaf/182469156>,
-        <https://viaf.org/viaf/183220988>,
-        <https://viaf.org/viaf/184024188>,
-        <https://viaf.org/viaf/193655948> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4099614-1>,
-        <https://viaf.org/viaf/246553495> ;
-    cto:viaf <https://viaf.org/viaf/179407683>,
-        <https://viaf.org/viaf/180037857>,
-        <https://viaf.org/viaf/182469156>,
-        <https://viaf.org/viaf/183220988>,
-        <https://viaf.org/viaf/184024188>,
-        <https://viaf.org/viaf/193655948>,
-        <https://viaf.org/viaf/246553495> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/246553495> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4099614-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1063180414> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180037857> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300664532> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182469156> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184024188> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183220988> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193655948> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179407683> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001001X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300143737> ],
+        <https://performance.musiconn.de/source/motettenbuch-1982> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179407683> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180037857> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182469156> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183220988> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184024188> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193655948> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/246553495> a nfdicore:NFDI_0001010 .
 

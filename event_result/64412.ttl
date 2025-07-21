@@ -1,46 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1101970219> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300149964> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300187025> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300369158> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300373082> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/bausteine-museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal-1987-10-09-20-00> ] .
 
-<https://performance.musiconn.de/event/bausteine-museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal-1987-10-09-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/bausteine-museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal-1987-10-09-20-00> a cto:CTO_0001005 ;
     rdfs:label "Bausteine, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Steinsaal, 9.10.1987, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/1-dresdner-tage-der-zeitgenoessischen-musik-1987> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-10-09T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-10-09T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1101970219>,
-        <https://d-nb.info/gnd/300149964>,
-        <https://d-nb.info/gnd/300187025>,
-        <https://d-nb.info/gnd/300369158>,
-        <https://d-nb.info/gnd/300373082> ;
-    cto:itemOf <https://performance.musiconn.de/series/1-dresdner-tage-der-zeitgenoessischen-musik-1987> ;
-    cto:relatedItem <https://d-nb.info/gnd/1101970219>,
-        <https://d-nb.info/gnd/300149964>,
-        <https://d-nb.info/gnd/300187025>,
-        <https://d-nb.info/gnd/300369158>,
-        <https://d-nb.info/gnd/300373082>,
-        <https://performance.musiconn.de/source/1-dresdner-tage-der-zeitgenoessischen-musik>,
-        <https://performance.musiconn.de/work/derive-nr-1-boulez-pierre>,
-        <https://performance.musiconn.de/work/improvisation-sur-le-nom-de-pierre-boulez-hoeller-york>,
-        <https://performance.musiconn.de/work/madrigale-nach-gedichten-von-francisco-tanzer-schnittke-alfred>,
-        <https://performance.musiconn.de/work/st-4-1080262-xenakis-iannis>,
-        <https://performance.musiconn.de/work/teile-dich-nacht-yun-isang>,
-        <https://viaf.org/viaf/176547418>,
-        <https://viaf.org/viaf/185289076>,
-        <https://viaf.org/viaf/186391960>,
-        <https://viaf.org/viaf/215925118>,
-        <https://viaf.org/viaf/6362157704215344440006> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal> ;
-    cto:viaf <https://viaf.org/viaf/176547418>,
-        <https://viaf.org/viaf/185289076>,
-        <https://viaf.org/viaf/186391960>,
-        <https://viaf.org/viaf/215925118>,
-        <https://viaf.org/viaf/6362157704215344440006> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6362157704215344440006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300369158> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300187025> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300373082> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300149964> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215925118> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186391960> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176547418> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185289076> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1101970219> ],
+        <https://performance.musiconn.de/source/1-dresdner-tage-der-zeitgenoessischen-musik> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176547418> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185289076> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186391960> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215925118> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6362157704215344440006> a nfdicore:NFDI_0001010 .
 

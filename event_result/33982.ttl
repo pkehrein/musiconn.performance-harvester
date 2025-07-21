@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4194431-8> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ballet-avec-eglogue-comedie-et-bal-schloss-versailles-1669-08-11> ] .
 
-<https://performance.musiconn.de/event/ballet-avec-eglogue-comedie-et-bal-schloss-versailles-1669-08-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ballet-avec-eglogue-comedie-et-bal-schloss-versailles-1669-08-11> a cto:CTO_0001005 ;
     rdfs:label "Ballet avec églogue, comédie et bal, Schloss Versailles, 11.8.1669" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1669-08-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1669-08-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4194431-8> ;
-    cto:relatedItem <https://performance.musiconn.de/source/gazette-1669-08-16>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/233744168> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4194431-8> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/gazette-1669-08-16>,
         <https://performance.musiconn.de/source/hourcade-2002-284>,
         <https://performance.musiconn.de/source/robinet-1669-08-17>,
         <https://performance.musiconn.de/work/ballet-avec-eglogue-comedie-et-bal> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4194431-8>,
-        <https://viaf.org/viaf/233744168> ;
-    cto:viaf <https://viaf.org/viaf/233744168> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/233744168> a nfdicore:NFDI_0001010 .
 

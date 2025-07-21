@@ -4,22 +4,25 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4062501-1> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/la-costanza-di-rosmonda-venedig-1659-00-00> ] .
 
-<https://performance.musiconn.de/event/la-costanza-di-rosmonda-venedig-1659-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/la-costanza-di-rosmonda-venedig-1659-00-00> a cto:CTO_0001005 ;
     rdfs:label "La Costanza di Rosmonda, Venedig, 1659" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1659-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1659-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4062501-1> ;
-    cto:relatedItem <https://performance.musiconn.de/source/corago-repertorio-e-archivio-di-libretti-del-melodramma-italiano-dal-1600-al-1900>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4062501-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316755417> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/corago-repertorio-e-archivio-di-libretti-del-melodramma-italiano-dal-1600-al-1900>,
         <https://performance.musiconn.de/source/sartori-claudio-i-libretti-italiani-a-stampa-dalle-origini-al-1800-6-bde-cuneo-bertola-locatelli-19901993>,
         <https://performance.musiconn.de/work/la-costanza-di-rosmonda-volpe-giovanni-battista> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4062501-1>,
-        <https://viaf.org/viaf/316755417> ;
-    cto:viaf <https://viaf.org/viaf/316755417> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/316755417> a nfdicore:NFDI_0001010 .
 

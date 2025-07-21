@@ -1,54 +1,72 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1052227465> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015593> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033311> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300116853> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133634> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300169949> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/populaeres-eroeffnungs-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1896-10-04> ] .
 
-<https://performance.musiconn.de/event/populaeres-eroeffnungs-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1896-10-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/populaeres-eroeffnungs-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1896-10-04> a cto:CTO_0001005 ;
     rdfs:label "Populäres (Eröffnungs-)Konzert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 4.10.1896" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1896-1897> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1896-10-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1896-10-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1052227465>,
-        <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300033311>,
-        <https://d-nb.info/gnd/300116853>,
-        <https://d-nb.info/gnd/300133634>,
-        <https://d-nb.info/gnd/300169949> ;
-    cto:itemOf <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1896-1897> ;
-    cto:relatedItem <https://d-nb.info/gnd/1052227465>,
-        <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300033311>,
-        <https://d-nb.info/gnd/300116853>,
-        <https://d-nb.info/gnd/300133634>,
-        <https://d-nb.info/gnd/300169949>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305991582> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015593> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181828440> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186514878> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300116853> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194733340> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133634> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300169949> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1052227465> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/295807811> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309582148> ],
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/work/das-heimchen-am-herd-vorspiel-3-akt-goldmark-karl>,
-        <https://performance.musiconn.de/work/italjanskoe-kapriccio-na-temy-narodnych-pesen-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/kaisermarsch-wagner-richard>,
-        <https://performance.musiconn.de/work/kleopatra-vorspiel-enna-august>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-ms-21-d-dur-paganini-niccolo>,
         <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-20-d-moll-1-satz-klengel-julius>,
-        <https://performance.musiconn.de/work/le-deluge-prelude-saint-saens-camille>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-3-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/valse-caprice-winderstein-hans>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/186514878>,
-        <https://viaf.org/viaf/194733340>,
-        <https://viaf.org/viaf/295807811>,
-        <https://viaf.org/viaf/305991582>,
-        <https://viaf.org/viaf/309582148> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/186514878>,
-        <https://viaf.org/viaf/194733340>,
-        <https://viaf.org/viaf/295807811>,
-        <https://viaf.org/viaf/305991582>,
-        <https://viaf.org/viaf/309582148> .
+        <https://performance.musiconn.de/work/valse-caprice-winderstein-hans> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181828440> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186514878> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194733340> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/295807811> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305991582> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309582148> a nfdicore:NFDI_0001010 .
 

@@ -1,37 +1,48 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1069442429> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300123779> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300157797> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/85th-abonnement-concert-nihon-seinenkan-hall-tokyo-1931-03-08> ] .
 
-<https://performance.musiconn.de/event/85th-abonnement-concert-nihon-seinenkan-hall-tokyo-1931-03-08> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/85th-abonnement-concert-nihon-seinenkan-hall-tokyo-1931-03-08> a cto:CTO_0001005 ;
     rdfs:label "85th Abonnement Concert, Nihon Seinenkan Hall (Tokyo), 8.3.1931" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1931-03-08" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1931-03-08" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1069442429>,
-        <https://d-nb.info/gnd/300123779>,
-        <https://d-nb.info/gnd/300157797> ;
-    cto:relatedItem <https://d-nb.info/gnd/1069442429>,
-        <https://d-nb.info/gnd/300123779>,
-        <https://d-nb.info/gnd/300157797>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/141981202> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219935037> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174218082> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300123779> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184134840> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157797> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1069442429> ],
         <https://performance.musiconn.de/source/nhk-kokyo-gakudan-ed-nhk-1977-nhk-kokyo-gakudan-goju-nenshi-1926-1977-nhk-tokyo-nippon-hoso-shuppan-kyokai>,
-        <https://performance.musiconn.de/work/die-floete-von-sanssouci-graener-paul>,
-        <https://performance.musiconn.de/work/feuerwerk-stravinsky-igor>,
-        <https://performance.musiconn.de/work/kleine-ballett-musik-fuer-orchester-gretry-andre-ernest-modeste>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-2-op-18-rachmaninov-sergej-vasilevic>,
-        <https://viaf.org/viaf/174218082>,
-        <https://viaf.org/viaf/184134840>,
-        <https://viaf.org/viaf/219935037> ;
-    cto:relatedLocation <https://viaf.org/viaf/141981202> ;
-    cto:viaf <https://viaf.org/viaf/141981202>,
-        <https://viaf.org/viaf/174218082>,
-        <https://viaf.org/viaf/184134840>,
-        <https://viaf.org/viaf/219935037> .
+        <https://performance.musiconn.de/work/kleine-ballett-musik-fuer-orchester-gretry-andre-ernest-modeste> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/141981202> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174218082> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184134840> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219935037> a nfdicore:NFDI_0001010 .
 

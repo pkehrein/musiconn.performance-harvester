@@ -1,26 +1,29 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/122463733X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-haus-d-deutsch-sowjetische-freundschaft-gera-1986-04-22> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-haus-d-deutsch-sowjetische-freundschaft-gera-1986-04-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-haus-d-deutsch-sowjetische-freundschaft-gera-1986-04-22> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Haus d. Deutsch-Sowjetische Freundschaft (Gera), 22.4.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-04-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-04-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/122463733X> ;
-    cto:relatedItem <https://d-nb.info/gnd/122463733X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/haus-d-deutsch-sowjetische-freundschaft-gera> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/122463733X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2703161030920523920004> ],
         <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
-        <https://performance.musiconn.de/work/ein-lied-es-ruht-zapf-helmut>,
-        <https://performance.musiconn.de/work/snegunotschka-fuer-kinderchor-haehnel-gustav>,
-        <https://viaf.org/viaf/2703161030920523920004> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/haus-d-deutsch-sowjetische-freundschaft-gera> ;
-    cto:viaf <https://viaf.org/viaf/2703161030920523920004> .
+        <https://performance.musiconn.de/work/snegunotschka-fuer-kinderchor-haehnel-gustav> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/2703161030920523920004> a nfdicore:NFDI_0001010 .
 

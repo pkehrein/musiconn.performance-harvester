@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/100524907> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/la-finta-cameriera-teatro-de-la-santa-cruz-barcelona-1750-08-21> ] .
 
-<https://performance.musiconn.de/event/la-finta-cameriera-teatro-de-la-santa-cruz-barcelona-1750-08-21> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/la-finta-cameriera-teatro-de-la-santa-cruz-barcelona-1750-08-21> a cto:CTO_0001005 ;
     rdfs:label "La finta cameriera, Teatro de la Santa Cruz (Barcelona), 21.8.1750" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1750-08-21" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1750-08-21" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/100524907> ;
-    cto:relatedItem <https://performance.musiconn.de/source/alier-i-aixala-opera>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/100524907> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/teatro-de-la-santa-cruz-barcelona> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/alier-i-aixala-opera>,
         <https://performance.musiconn.de/source/la-fingida-camarera-dramma-comico-en-musica-para-reppresentarse-en-el-theatro-de-la-muy-ilustre-ciudad-de-barcelona-este-ano-del-1750>,
         <https://performance.musiconn.de/work/il-gismondo-latilla-gaetano> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/teatro-de-la-santa-cruz-barcelona> ;
-    cto:relatedPerson <https://d-nb.info/gnd/100524907>,
-        <https://viaf.org/viaf/66656806> ;
-    cto:viaf <https://viaf.org/viaf/66656806> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/66656806> ] .
+
+<https://viaf.org/viaf/66656806> a nfdicore:NFDI_0001010 .
 

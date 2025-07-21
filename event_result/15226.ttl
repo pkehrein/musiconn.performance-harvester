@@ -1,25 +1,28 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300024975> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-schwedische-st-katharinen-kirche-st-petersburg-1910-03-18-1> ] .
 
-<https://performance.musiconn.de/event/konzert-schwedische-st-katharinen-kirche-st-petersburg-1910-03-18-1> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-schwedische-st-katharinen-kirche-st-petersburg-1910-03-18-1> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Schwedische St.-Katharinen-Kirche (St. Petersburg), 18.3.1910" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1910-03-18" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1910-03-18" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300024975> ;
-    cto:relatedItem <https://d-nb.info/gnd/300024975>,
-        <https://performance.musiconn.de/source/mitteilung-nach-recherche-janna-kniazeva-st-petersburg>,
-        <https://performance.musiconn.de/work/ein-deutsches-requiem-brahms-johannes>,
-        <https://viaf.org/viaf/306402664> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/schwedische-st-katharinen-kirche-st-petersburg> ;
-    cto:viaf <https://viaf.org/viaf/306402664> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/schwedische-st-katharinen-kirche-st-petersburg> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300024975> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306402664> ],
+        <https://performance.musiconn.de/source/mitteilung-nach-recherche-janna-kniazeva-st-petersburg> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/306402664> a nfdicore:NFDI_0001010 .
 

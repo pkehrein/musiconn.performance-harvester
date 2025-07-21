@@ -1,37 +1,47 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300095171> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4415203-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4828190-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kirchen-concert-peterskirche-leipzig-1886-10-24> ] .
 
-<https://performance.musiconn.de/event/kirchen-concert-peterskirche-leipzig-1886-10-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kirchen-concert-peterskirche-leipzig-1886-10-24> a cto:CTO_0001005 ;
     rdfs:label "Kirchen-Concert, Peterskirche (Leipzig), 24.10.1886" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1886-10-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1886-10-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300095171>,
-        <https://d-nb.info/gnd/4415203-6>,
-        <https://d-nb.info/gnd/4828190-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
-    cto:relatedItem <https://d-nb.info/gnd/300095171>,
-        <https://d-nb.info/gnd/4828190-6>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248260646> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4415203-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185944978> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206834961> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4828190-6> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300095171> ],
         <https://performance.musiconn.de/source/liszt-verein-zum-zehnjaehrigen-jubilaeum-bericht-ueber-die-10jaehrige-thaetigkeit-des-vereins-1885-1895-leipzig-1895>,
-        <https://performance.musiconn.de/work/cantico-del-sol-di-san-francesco-liszt-franz>,
         <https://performance.musiconn.de/work/der-137-psalm-liszt-franz-1>,
         <https://performance.musiconn.de/work/missa-choralis-chor-orgel-d-moll-liszt-franz>,
-        <https://performance.musiconn.de/work/ungarische-kroenungsmesse-benedictus-arrangiert-liszt-franz>,
-        <https://performance.musiconn.de/work/variationen-ueber-den-basso-continuo-des-ersten-satzes-der-kantate-weinen-klagen-und-des-cruzifixus-aus-der-h-moll-messe-von-js-bach-liszt-franz>,
-        <https://viaf.org/viaf/185944978>,
-        <https://viaf.org/viaf/206834961> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4415203-6>,
-        <https://viaf.org/viaf/248260646> ;
-    cto:viaf <https://viaf.org/viaf/185944978>,
-        <https://viaf.org/viaf/206834961>,
-        <https://viaf.org/viaf/248260646> .
+        <https://performance.musiconn.de/work/ungarische-kroenungsmesse-benedictus-arrangiert-liszt-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185944978> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206834961> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248260646> a nfdicore:NFDI_0001010 .
 

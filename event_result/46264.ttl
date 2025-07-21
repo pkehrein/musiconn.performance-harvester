@@ -1,55 +1,73 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300025793> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026013> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026048> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146477> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300193548> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300199740> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-populaeres-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1910-01-04-20-30> ] .
 
-<https://performance.musiconn.de/event/5-populaeres-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1910-01-04-20-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-populaeres-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1910-01-04-20-30> a cto:CTO_0001005 ;
     rdfs:label "5. Populäres Symphonie-Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 4.1.1910, 20:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1909-1910-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1910-01-04T20:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1910-01-04T20:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300025793>,
-        <https://d-nb.info/gnd/300026013>,
-        <https://d-nb.info/gnd/300026048>,
-        <https://d-nb.info/gnd/300146477>,
-        <https://d-nb.info/gnd/300193548>,
-        <https://d-nb.info/gnd/300199740> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1909-1910-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300025793>,
-        <https://d-nb.info/gnd/300026013>,
-        <https://d-nb.info/gnd/300026048>,
-        <https://d-nb.info/gnd/300146477>,
-        <https://d-nb.info/gnd/300193548>,
-        <https://d-nb.info/gnd/300199740>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176434630> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177214795> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181512100> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189341326> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026013> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025793> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178288960> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146477> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300199740> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175006089> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300193548> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026048> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-symphonie-konzerte-1908-1933>,
         <https://performance.musiconn.de/work/abendempfindung-fassung-singst-orchester-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/cyrano-de-bergerac-wagenaar-johan>,
         <https://performance.musiconn.de/work/das-veilchen-fassung-singst-orchester-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/lieder-op-105-auf-dem-kirchhofe-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-op-46-an-die-nachtigall-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-op-47-sonntag-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-op-96-wir-wandelten-brahms-johannes>,
         <https://performance.musiconn.de/work/ridente-la-calma-fassung-singst-orchester-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-61-c-dur-schumann-robert>,
-        <https://performance.musiconn.de/work/wiegenlied-fassung-singst-orchester-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/175006089>,
-        <https://viaf.org/viaf/176434630>,
-        <https://viaf.org/viaf/177214795>,
-        <https://viaf.org/viaf/178288960>,
-        <https://viaf.org/viaf/181512100>,
-        <https://viaf.org/viaf/189341326> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/175006089>,
-        <https://viaf.org/viaf/176434630>,
-        <https://viaf.org/viaf/177214795>,
-        <https://viaf.org/viaf/178288960>,
-        <https://viaf.org/viaf/181512100>,
-        <https://viaf.org/viaf/189341326> .
+        <https://performance.musiconn.de/work/wiegenlied-fassung-singst-orchester-mozart-wolfgang-amadeus> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175006089> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176434630> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177214795> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178288960> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181512100> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189341326> a nfdicore:NFDI_0001010 .
 

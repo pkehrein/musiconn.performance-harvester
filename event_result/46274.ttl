@@ -1,32 +1,35 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/109859102X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-populaeres-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1911-02-09-20-00> ] .
 
-<https://performance.musiconn.de/event/5-populaeres-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1911-02-09-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-populaeres-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1911-02-09-20-00> a cto:CTO_0001005 ;
     rdfs:label "5. Populäres Symphonie-Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 9.2.1911, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1910-1911-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1911-02-09T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1911-02-09T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/109859102X> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1910-1911-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/109859102X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/109859102X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185291268> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-symphonie-konzerte-1908-1933>,
         <https://performance.musiconn.de/work/der-heilgen-kunst-gehoert-mein-leben-kothen-carl-axel-friherre-von>,
         <https://performance.musiconn.de/work/en-droemmarens-sang-till-livet-jaernefelt-armas>,
         <https://performance.musiconn.de/work/indisk-sang-melartin-erkki>,
-        <https://performance.musiconn.de/work/koskenlaskijan-morsiamet-sibelius-jean>,
         <https://performance.musiconn.de/work/lieder-maennerchor-orchester-op-31-athenarnes-sang-sibelius-jean>,
         <https://performance.musiconn.de/work/lieder-op-2-syystunnelma-kuula-toivo>,
-        <https://performance.musiconn.de/work/symphonische-bilder-op-24-palmgren-selim>,
-        <https://viaf.org/viaf/185291268> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/185291268> .
+        <https://performance.musiconn.de/work/symphonische-bilder-op-24-palmgren-selim> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185291268> a nfdicore:NFDI_0001010 .
 

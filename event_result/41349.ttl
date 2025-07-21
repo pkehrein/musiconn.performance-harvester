@@ -1,46 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/107210301X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1150518448> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300016360> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7714705-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-roenisch-konzert-gewerbehaus-dresden-gewerbehaus-saal-1925-03-03-19-30> ] .
 
-<https://performance.musiconn.de/event/6-roenisch-konzert-gewerbehaus-dresden-gewerbehaus-saal-1925-03-03-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-roenisch-konzert-gewerbehaus-dresden-gewerbehaus-saal-1925-03-03-19-30> a cto:CTO_0001005 ;
     rdfs:label "6. Rönisch-Konzert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 3.3.1925, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1924-1925> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1925-03-03T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1925-03-03T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/107210301X>,
-        <https://d-nb.info/gnd/1150518448>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300016360>,
-        <https://d-nb.info/gnd/7714705-4> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1924-1925> ;
-    cto:relatedItem <https://d-nb.info/gnd/107210301X>,
-        <https://d-nb.info/gnd/1150518448>,
-        <https://d-nb.info/gnd/300016360>,
-        <https://d-nb.info/gnd/7714705-4>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016360> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183474748> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315978086> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174405437> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/107210301X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7714705-4> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1150518448> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179062815> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/impresii-vladigerov-panco>,
-        <https://performance.musiconn.de/work/lolita-buzzi-peccia-arturo>,
         <https://performance.musiconn.de/work/maria-mari-di-capua-eduardo>,
         <https://performance.musiconn.de/work/pagliacci-auswahl-leoncavallo-ruggiero>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-op-55-es-dur-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/sorrentinische-serenade-de-curtis-ernesto>,
-        <https://performance.musiconn.de/work/tosca-auswahl-puccini-giacomo>,
-        <https://performance.musiconn.de/work/variationen-ueber-ein-kinderlied-dohnanyi-ernst-von>,
-        <https://viaf.org/viaf/174405437>,
-        <https://viaf.org/viaf/179062815>,
-        <https://viaf.org/viaf/183474748>,
-        <https://viaf.org/viaf/315978086> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/174405437>,
-        <https://viaf.org/viaf/179062815>,
-        <https://viaf.org/viaf/183474748>,
-        <https://viaf.org/viaf/315978086> .
+        <https://performance.musiconn.de/work/tosca-auswahl-puccini-giacomo> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174405437> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179062815> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183474748> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315978086> a nfdicore:NFDI_0001010 .
 

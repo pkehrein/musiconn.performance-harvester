@@ -4,19 +4,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/synagogale-musik-und-jiddische-folklore-40-jahre-deutscher-koordinierungsrat-der-gesellschaften-fuer-christlich-juedische-zusammenarbeit-kurtheater-bad-nauheim-1989-11-04-20-00> ] .
 
-<https://performance.musiconn.de/event/synagogale-musik-und-jiddische-folklore-40-jahre-deutscher-koordinierungsrat-der-gesellschaften-fuer-christlich-juedische-zusammenarbeit-kurtheater-bad-nauheim-1989-11-04-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/synagogale-musik-und-jiddische-folklore-40-jahre-deutscher-koordinierungsrat-der-gesellschaften-fuer-christlich-juedische-zusammenarbeit-kurtheater-bad-nauheim-1989-11-04-20-00> a cto:CTO_0001005 ;
     rdfs:label "Synagogale Musik und jiddische Folklore - 40 Jahre Deutscher Koordinierungsrat der Gesellschaften für Christlich-Jüdische Zusammenarbeit, Kurtheater (Bad Nauheim), 4.11.1989, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1989-11-04T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1989-11-04T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kurtheater-bad-nauheim> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/dienst-am-juedischen-erbe-als-verpflichtung-konzert-des-leipziger-synagogalchores-im-kurtheater-gestaltete-sich-zu-einem-aussergewoehnlichen-musikalischen-ereignis>,
         <https://performance.musiconn.de/source/plakat-konzert-4-november-1989>,
         <https://performance.musiconn.de/source/programm-konzert-4-november-1989>,
@@ -38,8 +42,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/schma-kolenu-rumschinsky-joseph>,
         <https://performance.musiconn.de/work/tka-bschofor-godol-sulzer-salomon>,
         <https://performance.musiconn.de/work/wschomru-nowakowsky-david> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kurtheater-bad-nauheim> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

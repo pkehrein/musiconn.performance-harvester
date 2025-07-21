@@ -1,36 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1211992489> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010710> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111193> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/isaj-braudo-i-ego-ucenikov-cikl-organnych-koncertov-konzert-24-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1967-00-00> ] .
 
-<https://performance.musiconn.de/event/isaj-braudo-i-ego-ucenikov-cikl-organnych-koncertov-konzert-24-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1967-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/isaj-braudo-i-ego-ucenikov-cikl-organnych-koncertov-konzert-24-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1967-00-00> a cto:CTO_0001005 ;
     rdfs:label "Isaj Braudo i ego učenikov - Cikl organnych koncertov (Konzert 2.4), Gosudarstvennaja akademičeskaja kapella (Sankt Petersburg) / Koncertnyj zal, 1967" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/isaj-braudo-i-ego-ucenikov-cikl-organnych-koncertov> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1967-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1967-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1211992489>,
-        <https://d-nb.info/gnd/300010710>,
-        <https://d-nb.info/gnd/300111193> ;
-    cto:itemOf <https://performance.musiconn.de/series/isaj-braudo-i-ego-ucenikov-cikl-organnych-koncertov> ;
-    cto:relatedItem <https://d-nb.info/gnd/300010710>,
-        <https://d-nb.info/gnd/300111193>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1211992489> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111193> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185858395> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218079929> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010710> ],
         <https://performance.musiconn.de/source/leningrader-philharmonie-festival-1967-isaj-braudo>,
         <https://performance.musiconn.de/work/hirtenlied-purcell-henry>,
-        <https://performance.musiconn.de/work/kirchensonaten-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/messen-kv-427-auswahl-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/pesn-o-lesach-auswahl-schostakowitsch-dmitri-d>,
-        <https://performance.musiconn.de/work/praeludium-largo-und-allegro-orgel-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/praeludium-und-fuge-orgel-bwv-546-c-moll-bach-johann-sebastian>,
-        <https://viaf.org/viaf/185858395>,
-        <https://viaf.org/viaf/218079929> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1211992489> ;
-    cto:viaf <https://viaf.org/viaf/185858395>,
-        <https://viaf.org/viaf/218079929> .
+        <https://performance.musiconn.de/work/praeludium-largo-und-allegro-orgel-haendel-georg-friedrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185858395> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218079929> a nfdicore:NFDI_0001010 .
 

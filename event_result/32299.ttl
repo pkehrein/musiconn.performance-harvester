@@ -1,40 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300110138> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30014198X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30050635X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-kammerkonzert-schloss-albrechtsberg-dresden-2009-02-18-20-00> ] .
 
-<https://performance.musiconn.de/event/3-kammerkonzert-schloss-albrechtsberg-dresden-2009-02-18-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-kammerkonzert-schloss-albrechtsberg-dresden-2009-02-18-20-00> a cto:CTO_0001005 ;
     rdfs:label "3. Kammerkonzert, Schloss Albrechtsberg (Dresden), 18.2.2009, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2008-2009> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2009-02-18T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2009-02-18T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300110138>,
-        <https://d-nb.info/gnd/30014198X>,
-        <https://d-nb.info/gnd/30050635X>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2008-2009> ;
-    cto:relatedItem <https://d-nb.info/gnd/300110138>,
-        <https://d-nb.info/gnd/30014198X>,
-        <https://d-nb.info/gnd/30050635X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110138> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30050635X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214739102> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30014198X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191508133> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199704759> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/quartette-violine-viola-violoncello-klavier-kv-478-g-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-d-385-a-moll-schubert-franz>,
-        <https://performance.musiconn.de/work/sonaten-violoncello-klavier-op-119-c-dur-debussy-claude>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-nr-1-op-8-h-dur-1854-brahms-johannes>,
-        <https://viaf.org/viaf/191508133>,
-        <https://viaf.org/viaf/199704759>,
-        <https://viaf.org/viaf/214739102> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/191508133>,
-        <https://viaf.org/viaf/199704759>,
-        <https://viaf.org/viaf/214739102>,
-        <https://viaf.org/viaf/237386709> .
+        <https://performance.musiconn.de/work/sonaten-violoncello-klavier-op-119-c-dur-debussy-claude> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/191508133> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199704759> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214739102> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
 

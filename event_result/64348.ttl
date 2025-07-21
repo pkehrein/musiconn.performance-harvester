@@ -1,41 +1,50 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1189170671> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1299959113> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1299961037> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/129997077X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300229704> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/stadien-haus-schevenstrasse-dresden-1987-10-06-16-30> ] .
 
-<https://performance.musiconn.de/event/stadien-haus-schevenstrasse-dresden-1987-10-06-16-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/stadien-haus-schevenstrasse-dresden-1987-10-06-16-30> a cto:CTO_0001005 ;
     rdfs:label "Stadien, Haus Schevenstraße (Dresden), 6.10.1987, 16:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/1-dresdner-tage-der-zeitgenoessischen-musik-1987> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-10-06T16:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-10-06T16:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1189170671>,
-        <https://d-nb.info/gnd/1299959113>,
-        <https://d-nb.info/gnd/1299961037>,
-        <https://d-nb.info/gnd/129997077X>,
-        <https://d-nb.info/gnd/300229704> ;
-    cto:itemOf <https://performance.musiconn.de/series/1-dresdner-tage-der-zeitgenoessischen-musik-1987> ;
-    cto:relatedItem <https://d-nb.info/gnd/1189170671>,
-        <https://d-nb.info/gnd/1299959113>,
-        <https://d-nb.info/gnd/1299961037>,
-        <https://d-nb.info/gnd/129997077X>,
-        <https://d-nb.info/gnd/300229704>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/haus-schevenstrasse-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300229704> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/129997077X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8617156223636105400005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1299961037> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1299959113> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194735898> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1189170671> ],
         <https://performance.musiconn.de/source/1-dresdner-tage-der-zeitgenoessischen-musik>,
-        <https://performance.musiconn.de/source/leisse-kerstin-aufschlussreiches-von-den-1-dresdner-tagen-der-zeitgenoessischen-musik-in-die-union-27101987>,
-        <https://performance.musiconn.de/work/multiplo-weiss-manfred>,
-        <https://performance.musiconn.de/work/quartette-klavier-violine-viola-violoncello-strauss-wolfgang>,
-        <https://performance.musiconn.de/work/quintette-querfloete-oboe-klarinette-horn-fagott-nr-3-kraetzschmar-wilfried>,
-        <https://performance.musiconn.de/work/sonaten-floete-klavier-finke-fidelio-f>,
-        <https://performance.musiconn.de/work/sonatinen-klavier-op-39-thilman-johannes-paul>,
-        <https://viaf.org/viaf/194735898>,
-        <https://viaf.org/viaf/8617156223636105400005> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/haus-schevenstrasse-dresden> ;
-    cto:viaf <https://viaf.org/viaf/194735898>,
-        <https://viaf.org/viaf/8617156223636105400005> .
+        <https://performance.musiconn.de/source/leisse-kerstin-aufschlussreiches-von-den-1-dresdner-tagen-der-zeitgenoessischen-musik-in-die-union-27101987> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/194735898> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8617156223636105400005> a nfdicore:NFDI_0001010 .
 

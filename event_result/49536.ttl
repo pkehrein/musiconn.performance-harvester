@@ -4,19 +4,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/tvorceskij-vecer-leonida-v-viskareva-i-aleksandra-a-cernova-dom-kompozitorov-sankt-petersburg-1961-04-17> ] .
 
-<https://performance.musiconn.de/event/tvorceskij-vecer-leonida-v-viskareva-i-aleksandra-a-cernova-dom-kompozitorov-sankt-petersburg-1961-04-17> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/tvorceskij-vecer-leonida-v-viskareva-i-aleksandra-a-cernova-dom-kompozitorov-sankt-petersburg-1961-04-17> a cto:CTO_0001005 ;
     rdfs:label "Tvorčeskij večer Leonida V. Viškareva i Aleksandra A. Černova, Dom kompozitorov (Sankt Petersburg), 17.4.1961" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1961-04-17" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1961-04-17" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1200899989> ;
-    cto:relatedItem <https://performance.musiconn.de/source/leningrader-komponistenhaus-1961-17-april>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/leningrader-komponistenhaus-1961-17-april>,
         <https://performance.musiconn.de/work/idet-ijun-cernov-aleksandr-a>,
         <https://performance.musiconn.de/work/italjanskie-vpecatlenija-auswahl-cernov-aleksandr-a>,
         <https://performance.musiconn.de/work/o-rose-cvetok-mectaet-cernov-aleksandr-a>,
@@ -27,7 +30,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/sonaten-klavier-viskarev-leonid-vasilevic>,
         <https://performance.musiconn.de/work/vepskaja-sjuita-viskarev-leonid-vasilevic>,
         <https://performance.musiconn.de/work/zadumalis-sady-cernov-aleksandr-a> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1200899989>,
-        <https://viaf.org/viaf/385157583849933970005> ;
-    cto:viaf <https://viaf.org/viaf/385157583849933970005> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
 

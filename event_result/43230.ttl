@@ -1,42 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009674> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300107552> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300168543> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300931921> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-kammermusik-abend-buchhaendler-haus-frankfurt-am-main-cantate-saal-1957-10-18-19-30> ] .
 
-<https://performance.musiconn.de/event/2-kammermusik-abend-buchhaendler-haus-frankfurt-am-main-cantate-saal-1957-10-18-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-kammermusik-abend-buchhaendler-haus-frankfurt-am-main-cantate-saal-1957-10-18-19-30> a cto:CTO_0001005 ;
     rdfs:label "2. Kammermusik-Abend, Buchhändler-Haus (Frankfurt am Main). Cantate-Saal, 18.10.1957, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1957-1958> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1957-10-18T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1957-10-18T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009674>,
-        <https://d-nb.info/gnd/300107552>,
-        <https://d-nb.info/gnd/300168543>,
-        <https://d-nb.info/gnd/300931921> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1957-1958> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009674>,
-        <https://d-nb.info/gnd/300107552>,
-        <https://d-nb.info/gnd/300168543>,
-        <https://d-nb.info/gnd/300931921>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/buchhaendler-haus-frankfurt-am-main-cantate-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217002782> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300931921> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300107552> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218104866> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300168543> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197652249> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188264428> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009674> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/concerti-grossi-op-6-nr-7-d-dur-corelli-arcangelo>,
-        <https://performance.musiconn.de/work/divertimenti-violine-2-viola-bassinstrument-kv-136-d-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-violine-2-streichorchester-basso-continuo-op-3-nr-3-manfredini-francesco>,
-        <https://performance.musiconn.de/work/konzerte-violine-streichorchester-bwv-1041-a-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-rv-401-c-moll-vivaldi-antonio>,
-        <https://viaf.org/viaf/188264428>,
-        <https://viaf.org/viaf/197652249>,
-        <https://viaf.org/viaf/217002782>,
-        <https://viaf.org/viaf/218104866> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/buchhaendler-haus-frankfurt-am-main-cantate-saal> ;
-    cto:viaf <https://viaf.org/viaf/188264428>,
-        <https://viaf.org/viaf/197652249>,
-        <https://viaf.org/viaf/217002782>,
-        <https://viaf.org/viaf/218104866> .
+        <https://performance.musiconn.de/work/konzerte-violine-2-streichorchester-basso-continuo-op-3-nr-3-manfredini-francesco> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/188264428> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197652249> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217002782> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218104866> a nfdicore:NFDI_0001010 .
 

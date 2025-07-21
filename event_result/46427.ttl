@@ -1,35 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300033826> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300121547> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vecer-simfoniceskoj-muzyki-sankt-petersburger-philharmonie-2002-10-11> ] .
 
-<https://performance.musiconn.de/event/vecer-simfoniceskoj-muzyki-sankt-petersburger-philharmonie-2002-10-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vecer-simfoniceskoj-muzyki-sankt-petersburger-philharmonie-2002-10-11> a cto:CTO_0001005 ;
     rdfs:label "Večer simfoničeskoj muzyki, Sankt-Petersburger Philharmonie, 11.10.2002" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-2002-2003> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2002-10-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2002-10-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300033826>,
-        <https://d-nb.info/gnd/300121547>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-2002-2003> ;
-    cto:relatedItem <https://d-nb.info/gnd/300033826>,
-        <https://d-nb.info/gnd/300121547>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300121547> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033826> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205759295> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217005590> ],
         <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-2002-11-oktober>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-2-op-63-g-moll-prokofiev-sergei-sergeyevich>,
-        <https://performance.musiconn.de/work/nia-korolev-anatolij-a>,
-        <https://performance.musiconn.de/work/sinfonien-cs-24-f-moll-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/205759295>,
-        <https://viaf.org/viaf/217005590> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/205759295>,
-        <https://viaf.org/viaf/217005590> .
+        <https://performance.musiconn.de/work/nia-korolev-anatolij-a> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205759295> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217005590> a nfdicore:NFDI_0001010 .
 

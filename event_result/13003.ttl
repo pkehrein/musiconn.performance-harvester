@@ -1,34 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1033369896> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-festplatz-maehrisch-schoenberg-1899-08-20> ] .
 
-<https://performance.musiconn.de/event/konzert-festplatz-maehrisch-schoenberg-1899-08-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-festplatz-maehrisch-schoenberg-1899-08-20> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Festplatz (Mährisch Schönberg), 20.8.1899" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1899-08-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1899-08-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1033369896> ;
-    cto:relatedItem <https://d-nb.info/gnd/1033369896>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/festplatz-maehrisch-schoenberg> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182069393> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1033369896> ],
         <https://performance.musiconn.de/source/programmheft-maennergesangverein-m-schoenberg-sumperk-maehrisch-schoenbergmaehrisch-schoenberg-19-20081899>,
         <https://performance.musiconn.de/work/das-erste-lied-tschirsch-wilhelm>,
         <https://performance.musiconn.de/work/gesaenge-chor-orchester-op-267-abt-franz>,
         <https://performance.musiconn.de/work/heimweh-heim-j>,
         <https://performance.musiconn.de/work/hymnen-chor-op-36-fiby-heinrich>,
         <https://performance.musiconn.de/work/in-die-weite-reiser-august>,
-        <https://performance.musiconn.de/work/landkjenning-grieg-edvard>,
         <https://performance.musiconn.de/work/lobpreiset-laut-und-ruehmt-und-ehrt-ernst-ii-sachsen-coburg-gotha-herzog>,
         <https://performance.musiconn.de/work/rueckerinnerung-reiser-august>,
         <https://performance.musiconn.de/work/seligster-traum-op-6-kamm-ferdinand>,
-        <https://performance.musiconn.de/work/wach-auf-du-schoene-traeumerin-gericke-wilhelm>,
-        <https://viaf.org/viaf/182069393> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/festplatz-maehrisch-schoenberg> ;
-    cto:viaf <https://viaf.org/viaf/182069393> .
+        <https://performance.musiconn.de/work/wach-auf-du-schoene-traeumerin-gericke-wilhelm> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182069393> a nfdicore:NFDI_0001010 .
 

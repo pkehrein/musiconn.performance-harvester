@@ -1,51 +1,66 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/114519740X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109881> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300112165> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300165633> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300166494> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-prominentenkonzert-1946-06-10> ] .
 
-<https://performance.musiconn.de/event/2-prominentenkonzert-1946-06-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-prominentenkonzert-1946-06-10> a cto:CTO_0001005 ;
     rdfs:label "2. Prominentenkonzert, 10.6.1946" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1945-1946> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1946-06-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1946-06-10" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/114519740X>,
-        <https://d-nb.info/gnd/300109881>,
-        <https://d-nb.info/gnd/300112165>,
-        <https://d-nb.info/gnd/300165633>,
-        <https://d-nb.info/gnd/300166494> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1945-1946> ;
-    cto:relatedItem <https://d-nb.info/gnd/114519740X>,
-        <https://d-nb.info/gnd/300109881>,
-        <https://d-nb.info/gnd/300112165>,
-        <https://d-nb.info/gnd/300165633>,
-        <https://d-nb.info/gnd/300166494>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/open-air-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186706068> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300165633> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300112165> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/21146095293700372266> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109881> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/295433799> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207915041> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/114519740X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300166494> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/308292403> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/aida-arie-der-aida-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/die-zauberfloete-ouvertuere-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/duett-der-aida-und-amonasro-zu-aida-verdi-giuseppe>,
         <https://performance.musiconn.de/work/ein-maskenball-arie-des-rene-verdi-giuseppe>,
         <https://performance.musiconn.de/work/ein-maskenball-szene-und-arie-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/la-forza-del-destino-ouvertuere-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/la-forza-del-destino-pace-pace-mio-dio-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/la-traviata-vorspiel-3-akt-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/le-nozze-di-figaro-e-susanna-non-vien-rezitativ-und-arie-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/le-nozze-di-figaro-hai-gia-vinta-la-causa-rezitativ-und-arie-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/186706068>,
-        <https://viaf.org/viaf/207915041>,
-        <https://viaf.org/viaf/21146095293700372266>,
-        <https://viaf.org/viaf/295433799>,
-        <https://viaf.org/viaf/308292403> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/open-air-dresden> ;
-    cto:viaf <https://viaf.org/viaf/186706068>,
-        <https://viaf.org/viaf/207915041>,
-        <https://viaf.org/viaf/21146095293700372266>,
-        <https://viaf.org/viaf/295433799>,
-        <https://viaf.org/viaf/308292403> .
+        <https://performance.musiconn.de/work/la-forza-del-destino-pace-pace-mio-dio-verdi-giuseppe> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/186706068> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207915041> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/21146095293700372266> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/295433799> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/308292403> a nfdicore:NFDI_0001010 .
 

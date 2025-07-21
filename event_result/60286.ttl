@@ -1,27 +1,42 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1171583389> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300649290> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4061849-3> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5076953-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/orgelmarathon-unna-2006-11-09> ] .
 
-<https://performance.musiconn.de/event/orgelmarathon-unna-2006-11-09> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/orgelmarathon-unna-2006-11-09> a cto:CTO_0001005 ;
     rdfs:label "Orgelmarathon, Unna, 9.11.2006" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/orgel-festival-zum-6-fanny-mendelssohn-wettbewerb-fuer-komposition> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2006-11-09" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2006-11-09" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1171583389>,
-        <https://d-nb.info/gnd/300649290>,
-        <https://d-nb.info/gnd/4061849-3>,
-        <https://d-nb.info/gnd/5076953-4> ;
-    cto:itemOf <https://performance.musiconn.de/series/orgel-festival-zum-6-fanny-mendelssohn-wettbewerb-fuer-komposition> ;
-    cto:relatedItem <https://d-nb.info/gnd/1171583389>,
-        <https://d-nb.info/gnd/300649290>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/130482309> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5076953-4> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/312808229> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4061849-3> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207927795> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300649290> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1171583389> ],
         <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-orgel-festival-zum-6-fanny-mendelssohn-wettbewerb-fuer-komposition>,
         <https://performance.musiconn.de/work/capriccio-at-the-tomb-of-fra-angelico-fujiie-keiko>,
         <https://performance.musiconn.de/work/contes-nr-3-la-reine-de-lorage-bacewicz-grazyna>,
@@ -29,17 +44,14 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/esquisse-bacewicz-grazyna>,
         <https://performance.musiconn.de/work/mittelalterliche-reminiszenzen-snizkova-jitka>,
         <https://performance.musiconn.de/work/sisyphus-ansink-caroline>,
-        <https://performance.musiconn.de/work/svetloe-i-temnoe-gubajdulina-sofija-asgatovna>,
         <https://performance.musiconn.de/work/te-deum-pour-orgue-op-11-demessieux-jeanne>,
         <https://performance.musiconn.de/work/wie-schoen-leuchtet-der-morgenstern-fantasie-und-fuge-senfter-johanna>,
-        <https://performance.musiconn.de/work/zeichenreihen-dinescu-violeta>,
-        <https://performance.musiconn.de/work/zwei-miniaturen-heller-barbara>,
-        <https://viaf.org/viaf/207927795> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4061849-3>,
-        <https://viaf.org/viaf/312808229> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5076953-4>,
-        <https://viaf.org/viaf/130482309> ;
-    cto:viaf <https://viaf.org/viaf/130482309>,
-        <https://viaf.org/viaf/207927795>,
-        <https://viaf.org/viaf/312808229> .
+        <https://performance.musiconn.de/work/zwei-miniaturen-heller-barbara> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/130482309> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207927795> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/312808229> a nfdicore:NFDI_0001010 .
 

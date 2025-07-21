@@ -1,50 +1,67 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1211851044> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001483X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300014864> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015968> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141432> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1863-01-14> ] .
 
-<https://performance.musiconn.de/event/6-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1863-01-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1863-01-14> a cto:CTO_0001005 ;
     rdfs:label "6. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 14.1.1863" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1862-1863> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1863-01-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1863-01-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1211851044>,
-        <https://d-nb.info/gnd/30001483X>,
-        <https://d-nb.info/gnd/300014864>,
-        <https://d-nb.info/gnd/300015968>,
-        <https://d-nb.info/gnd/300141432>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1862-1863> ;
-    cto:relatedItem <https://d-nb.info/gnd/1211851044>,
-        <https://d-nb.info/gnd/30001483X>,
-        <https://d-nb.info/gnd/300014864>,
-        <https://d-nb.info/gnd/300015968>,
-        <https://d-nb.info/gnd/300141432>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015968> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185904198> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177655300> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141432> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1211851044> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186319957> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001483X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218080031> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300014864> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
-        <https://performance.musiconn.de/source/whistling-carl-wilhelm-der-musikverein-euterpe-zu-leipzig-1824-1874-leipzig-1874>,
-        <https://performance.musiconn.de/work/adelaide-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/an-die-ferne-geliebte-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-d-804-a-moll-schubert-franz>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-47-nr-3-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-59-nr-1-f-dur-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/177655300>,
-        <https://viaf.org/viaf/185904198>,
-        <https://viaf.org/viaf/186319957>,
-        <https://viaf.org/viaf/218080031> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/177655300>,
-        <https://viaf.org/viaf/185904198>,
-        <https://viaf.org/viaf/186319957>,
-        <https://viaf.org/viaf/218080031>,
-        <https://viaf.org/viaf/242717024> .
+        <https://performance.musiconn.de/source/whistling-carl-wilhelm-der-musikverein-euterpe-zu-leipzig-1824-1874-leipzig-1874> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177655300> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185904198> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186319957> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218080031> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
 

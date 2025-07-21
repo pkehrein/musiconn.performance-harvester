@@ -1,52 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1284770575> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1285045521> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300265662> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300347383> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300347596> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300355831> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7743597-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kammerkonzert-mary-wigman-schule-dresden-1991-10-05-17-00> ] .
 
-<https://performance.musiconn.de/event/kammerkonzert-mary-wigman-schule-dresden-1991-10-05-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kammerkonzert-mary-wigman-schule-dresden-1991-10-05-17-00> a cto:CTO_0001005 ;
     rdfs:label "Kammerkonzert, Mary-Wigman-Schule (Dresden), 5.10.1991, 17:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/5-dresdner-tage-der-zeitgenoessischen-musik-1991> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1991-10-05T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1991-10-05T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1284770575>,
-        <https://d-nb.info/gnd/1285045521>,
-        <https://d-nb.info/gnd/300265662>,
-        <https://d-nb.info/gnd/300347383>,
-        <https://d-nb.info/gnd/300347596>,
-        <https://d-nb.info/gnd/300355831>,
-        <https://d-nb.info/gnd/7743597-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/5-dresdner-tage-der-zeitgenoessischen-musik-1991> ;
-    cto:relatedItem <https://d-nb.info/gnd/1284770575>,
-        <https://d-nb.info/gnd/1285045521>,
-        <https://d-nb.info/gnd/300265662>,
-        <https://d-nb.info/gnd/300347383>,
-        <https://d-nb.info/gnd/300347596>,
-        <https://d-nb.info/gnd/300355831>,
-        <https://d-nb.info/gnd/7743597-7>,
-        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-45-dresdner-tage-fuer-zeitgenoessische-musik-1988-1989-1991>,
-        <https://performance.musiconn.de/work/anima-truempy-balz>,
-        <https://performance.musiconn.de/work/bagatellen-klavier-op-14-schmid-erich>,
-        <https://performance.musiconn.de/work/bleu-demierre-jacques>,
-        <https://performance.musiconn.de/work/chansons-violees-wyttenbach-juerg>,
-        <https://performance.musiconn.de/work/notturni-va-kl-1990-wildberger-jacques>,
-        <https://performance.musiconn.de/work/nouvelles-chansons-violees-wyttenbach-juerg>,
-        <https://performance.musiconn.de/work/sonaten-viola-baz-5-7-zimmermann-bernd-alois>,
-        <https://viaf.org/viaf/190426427>,
-        <https://viaf.org/viaf/191501427>,
-        <https://viaf.org/viaf/204675852>,
-        <https://viaf.org/viaf/217011268>,
-        <https://viaf.org/viaf/219941114> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/mary-wigman-schule-dresden> ;
-    cto:viaf <https://viaf.org/viaf/190426427>,
-        <https://viaf.org/viaf/191501427>,
-        <https://viaf.org/viaf/204675852>,
-        <https://viaf.org/viaf/217011268>,
-        <https://viaf.org/viaf/219941114> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/mary-wigman-schule-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300347383> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190426427> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219941114> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300347596> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1285045521> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7743597-7> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191501427> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300355831> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1284770575> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204675852> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300265662> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217011268> ],
+        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-45-dresdner-tage-fuer-zeitgenoessische-musik-1988-1989-1991> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/190426427> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191501427> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204675852> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217011268> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219941114> a nfdicore:NFDI_0001010 .
 

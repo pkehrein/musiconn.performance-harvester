@@ -1,40 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1277909997> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1277913781> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1277918414> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1277928053> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-klubhaus-schkopau-1989-12-05> ] .
 
-<https://performance.musiconn.de/event/konzert-klubhaus-schkopau-1989-12-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-klubhaus-schkopau-1989-12-05> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Klubhaus (Schkopau), 5.12.1989" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1989-12-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1989-12-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1277909997>,
-        <https://d-nb.info/gnd/1277913781>,
-        <https://d-nb.info/gnd/1277918414>,
-        <https://d-nb.info/gnd/1277928053> ;
-    cto:relatedItem <https://d-nb.info/gnd/1277909997>,
-        <https://d-nb.info/gnd/1277913781>,
-        <https://d-nb.info/gnd/1277918414>,
-        <https://d-nb.info/gnd/1277928053>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1989-dresden-eigenverlag-der-saechsischen-landesbibliothek-dresden-1990>,
-        <https://performance.musiconn.de/work/der-titel-des-programms-gaebler-werner>,
-        <https://performance.musiconn.de/work/moeblierte-melancholie-gaebler-werner>,
-        <https://performance.musiconn.de/work/offener-brief-an-angestellte-gaebler-werner>,
-        <https://performance.musiconn.de/work/sphaerenklaenge-gaebler-werner>,
-        <https://viaf.org/viaf/2654167391533183590004>,
-        <https://viaf.org/viaf/3603167391538183590002>,
-        <https://viaf.org/viaf/4673167391543883590001>,
-        <https://viaf.org/viaf/677167391522783590003> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/klubhaus-schkopau> ;
-    cto:viaf <https://viaf.org/viaf/2654167391533183590004>,
-        <https://viaf.org/viaf/3603167391538183590002>,
-        <https://viaf.org/viaf/4673167391543883590001>,
-        <https://viaf.org/viaf/677167391522783590003> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/klubhaus-schkopau> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/677167391522783590003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2654167391533183590004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1277913781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1277918414> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4673167391543883590001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1277928053> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1277909997> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3603167391538183590002> ],
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1989-dresden-eigenverlag-der-saechsischen-landesbibliothek-dresden-1990> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/2654167391533183590004> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3603167391538183590002> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4673167391543883590001> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/677167391522783590003> a nfdicore:NFDI_0001010 .
 

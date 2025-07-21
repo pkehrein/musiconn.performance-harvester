@@ -1,22 +1,27 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300000464> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-1902-12-31> ] .
 
-<https://performance.musiconn.de/event/konzert-1902-12-31> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-1902-12-31> a cto:CTO_0001005 ;
     rdfs:label "Konzert, 31.12.1902" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1902-12-31" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1902-12-31" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300000464> ;
-    cto:relatedItem <https://d-nb.info/gnd/300000464>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/deutscher-musik-geselligkeitsverein-litovel> ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturhaus-leipzig> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/301051101> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300000464> ],
         <https://performance.musiconn.de/source/programmzettel-einladung-deutscher-musik-geselligkeitsverein-litovel-littau-littau-31121902>,
         <https://performance.musiconn.de/work/am-spinnrad-op-183-eilenberg-richard>,
         <https://performance.musiconn.de/work/auf-glattem-boden-op-55-kristinus-c-r>,
@@ -25,12 +30,10 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/fridolin-oder-der-gang-nach-dem-eisenhammer-thiele-richard>,
         <https://performance.musiconn.de/work/kurze-musikalische-notizen-kral-johann-nepomuk>,
         <https://performance.musiconn.de/work/neuester-bauernkalender-op-67-wagner-rudolf>,
-        <https://performance.musiconn.de/work/si-jetais-roi-ouverture-adam-adolphe>,
         <https://performance.musiconn.de/work/unter-neuem-regime-op-32-ertl-dominik>,
         <https://performance.musiconn.de/work/walpurgisnacht-guenther-jaeckel-a>,
-        <https://performance.musiconn.de/work/wiener-extrablaetter-op-78-translateur-siegfried>,
-        <https://viaf.org/viaf/301051101> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturhaus-leipzig> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/deutscher-musik-geselligkeitsverein-litovel> ;
-    cto:viaf <https://viaf.org/viaf/301051101> .
+        <https://performance.musiconn.de/work/wiener-extrablaetter-op-78-translateur-siegfried> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/301051101> a nfdicore:NFDI_0001010 .
 

@@ -1,46 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300001541> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300001568> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300001592> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026870> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300051190> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/spanien-2010-lauditori-barcelona-2010-04-12-08-00> ] .
 
-<https://performance.musiconn.de/event/spanien-2010-lauditori-barcelona-2010-04-12-08-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/spanien-2010-lauditori-barcelona-2010-04-12-08-00> a cto:CTO_0001005 ;
     rdfs:label "Spanien 2010, L´Auditori (Barcelona), 12.4.2010, 08:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2009-2010> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2010-04-12T08:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2010-04-12T08:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300001541>,
-        <https://d-nb.info/gnd/300001568>,
-        <https://d-nb.info/gnd/300001592>,
-        <https://d-nb.info/gnd/300026870>,
-        <https://d-nb.info/gnd/300051190> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2009-2010> ;
-    cto:relatedItem <https://d-nb.info/gnd/300001541>,
-        <https://d-nb.info/gnd/300001568>,
-        <https://d-nb.info/gnd/300001592>,
-        <https://d-nb.info/gnd/300026870>,
-        <https://d-nb.info/gnd/300051190>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/noches-en-los-jardines-de-espana-falla-manuel-de>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-73-d-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/suite-espagnole-t-61-asturias-albeniz-isaac>,
-        <https://performance.musiconn.de/work/suite-espagnole-t-61-granada-albeniz-isaac>,
-        <https://performance.musiconn.de/work/suite-espanola-no-1-castilla-albeniz-isaac>,
-        <https://viaf.org/viaf/175810540>,
-        <https://viaf.org/viaf/177991085>,
-        <https://viaf.org/viaf/181874528>,
-        <https://viaf.org/viaf/182685162>,
-        <https://viaf.org/viaf/191495144> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/lauditori-barcelona> ;
-    cto:viaf <https://viaf.org/viaf/175810540>,
-        <https://viaf.org/viaf/177991085>,
-        <https://viaf.org/viaf/181874528>,
-        <https://viaf.org/viaf/182685162>,
-        <https://viaf.org/viaf/191495144> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/lauditori-barcelona> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177991085> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300051190> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175810540> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182685162> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300001592> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026870> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300001568> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191495144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300001541> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181874528> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175810540> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177991085> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181874528> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182685162> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191495144> a nfdicore:NFDI_0001010 .
 

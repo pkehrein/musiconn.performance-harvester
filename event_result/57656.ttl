@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4122902-2> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-schloss-charlottenburg-berlin-1824-07-26> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-schloss-charlottenburg-berlin-1824-07-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-schloss-charlottenburg-berlin-1824-07-26> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Schloss Charlottenburg (Berlin), 26.7.1824" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1824-07-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1824-07-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4122902-2> ;
-    cto:relatedItem <https://performance.musiconn.de/source/katalogisat-deux-ans-dabsence-ou-le-retour-du-mari-vaudeville-nouveau-de-mr-armand-gouffe-moreau-et-chazet-26-july-1824>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237294236> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4122902-2> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/katalogisat-deux-ans-dabsence-ou-le-retour-du-mari-vaudeville-nouveau-de-mr-armand-gouffe-moreau-et-chazet-26-july-1824>,
         <https://performance.musiconn.de/source/katalogisat-pommadin-ou-le-perruquier-dupe-vaudeville-en-1-acte-de-mr-martainvillepommadin-oder-der-betrogene-friseur-26-july-1824>,
         <https://performance.musiconn.de/work/deux-ans-dabsence-ou-le-retour-du-mari-fassung-anonym>,
         <https://performance.musiconn.de/work/pommadin-ou-le-perruquier-dupe-fassung-anonym> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4122902-2>,
-        <https://viaf.org/viaf/237294236> ;
-    cto:viaf <https://viaf.org/viaf/237294236> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/237294236> a nfdicore:NFDI_0001010 .
 

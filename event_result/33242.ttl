@@ -1,49 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1058227920> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1072114194> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108370> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30015108X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300467257> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4336039-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/philharmonie-im-albertinum-1-albertinum-dresden-2016-09-04-19-30> ] .
 
-<https://performance.musiconn.de/event/philharmonie-im-albertinum-1-albertinum-dresden-2016-09-04-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/philharmonie-im-albertinum-1-albertinum-dresden-2016-09-04-19-30> a cto:CTO_0001005 ;
     rdfs:label "Philharmonie im Albertinum 1, Albertinum (Dresden), 4.9.2016, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2016-2017> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2016-09-04T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2016-09-04T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1058227920>,
-        <https://d-nb.info/gnd/1072114194>,
-        <https://d-nb.info/gnd/300108370>,
-        <https://d-nb.info/gnd/30015108X>,
-        <https://d-nb.info/gnd/300467257>,
-        <https://d-nb.info/gnd/4336039-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2016-2017> ;
-    cto:relatedItem <https://d-nb.info/gnd/1058227920>,
-        <https://d-nb.info/gnd/1072114194>,
-        <https://d-nb.info/gnd/300108370>,
-        <https://d-nb.info/gnd/30015108X>,
-        <https://d-nb.info/gnd/300467257>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/ascanio-in-alba-cara-lontano-ancora-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/io-ti-lascio-kv-255-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/mitridate-gia-dagli-occhi-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/mitridate-re-di-ponto-ouvertuere-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-43-c-moll-schostakowitsch-dmitri-d>,
-        <https://viaf.org/viaf/174982740>,
-        <https://viaf.org/viaf/186233169>,
-        <https://viaf.org/viaf/195816641>,
-        <https://viaf.org/viaf/204583629>,
-        <https://viaf.org/viaf/304924308> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4336039-7>,
-        <https://viaf.org/viaf/126175762> ;
-    cto:viaf <https://viaf.org/viaf/126175762>,
-        <https://viaf.org/viaf/174982740>,
-        <https://viaf.org/viaf/186233169>,
-        <https://viaf.org/viaf/195816641>,
-        <https://viaf.org/viaf/204583629>,
-        <https://viaf.org/viaf/304924308> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/126175762> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4336039-7> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108370> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186233169> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195816641> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174982740> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300467257> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1058227920> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/304924308> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30015108X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204583629> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1072114194> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/126175762> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174982740> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186233169> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195816641> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204583629> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/304924308> a nfdicore:NFDI_0001010 .
 

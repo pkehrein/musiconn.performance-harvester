@@ -1,59 +1,84 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300027338> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300041918> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300041926> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300042094> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140797> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30018378X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300407262> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/fortepiannyj-vecer-fransua-kerdankoff-sankt-petersburger-philharmonie-1995-03-10> ] .
 
-<https://performance.musiconn.de/event/fortepiannyj-vecer-fransua-kerdankoff-sankt-petersburger-philharmonie-1995-03-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/fortepiannyj-vecer-fransua-kerdankoff-sankt-petersburger-philharmonie-1995-03-10> a cto:CTO_0001005 ;
     rdfs:label "Fortepiannyj večer: Fransua Kerdankoff, Sankt-Petersburger Philharmonie, 10.3.1995" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1994-95> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1995-03-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1995-03-10" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300027338>,
-        <https://d-nb.info/gnd/300041918>,
-        <https://d-nb.info/gnd/300041926>,
-        <https://d-nb.info/gnd/300042094>,
-        <https://d-nb.info/gnd/300140797>,
-        <https://d-nb.info/gnd/30018378X>,
-        <https://d-nb.info/gnd/300407262>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1994-95> ;
-    cto:relatedItem <https://d-nb.info/gnd/300027338>,
-        <https://d-nb.info/gnd/300041918>,
-        <https://d-nb.info/gnd/300041926>,
-        <https://d-nb.info/gnd/300042094>,
-        <https://d-nb.info/gnd/300140797>,
-        <https://d-nb.info/gnd/30018378X>,
-        <https://d-nb.info/gnd/300407262>,
-        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1995-10-maerz>,
-        <https://performance.musiconn.de/work/estampien-klavier-l-100-jardins-sous-la-pluie-debussy-claude>,
-        <https://performance.musiconn.de/work/estampien-klavier-l-100-la-soiree-dans-grenade-debussy-claude>,
-        <https://performance.musiconn.de/work/estampien-klavier-l-100-pagodes-debussy-claude>,
-        <https://performance.musiconn.de/work/lisle-joyeuse-debussy-claude>,
-        <https://performance.musiconn.de/work/stuecke-klavier-d-946-schubert-franz>,
-        <https://performance.musiconn.de/work/variationen-klavier-op-21-nr-1-brahms-johannes>,
-        <https://performance.musiconn.de/work/variationen-ueber-ein-thema-von-robert-schumann-klavier-brahms-johannes>,
-        <https://viaf.org/viaf/174173313>,
-        <https://viaf.org/viaf/176602244>,
-        <https://viaf.org/viaf/179117992>,
-        <https://viaf.org/viaf/183952783>,
-        <https://viaf.org/viaf/185493441>,
-        <https://viaf.org/viaf/295128736>,
-        <https://viaf.org/viaf/311807882> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/174173313>,
-        <https://viaf.org/viaf/176602244>,
-        <https://viaf.org/viaf/179117992>,
-        <https://viaf.org/viaf/183952783>,
-        <https://viaf.org/viaf/185493441>,
-        <https://viaf.org/viaf/295128736>,
-        <https://viaf.org/viaf/311807882> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/295128736> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183952783> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300407262> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027338> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174173313> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179117992> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300041918> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140797> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30018378X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311807882> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185493441> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300042094> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300041926> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176602244> ],
+        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1995-10-maerz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174173313> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176602244> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179117992> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183952783> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185493441> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/295128736> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311807882> a nfdicore:NFDI_0001010 .
 

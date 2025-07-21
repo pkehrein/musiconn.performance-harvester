@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300110170> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171846> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30037237X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-kammerkonzert-alte-oper-frankfurt-a-main-grosser-saal-2015-01-15-20-00> ] .
 
-<https://performance.musiconn.de/event/4-kammerkonzert-alte-oper-frankfurt-a-main-grosser-saal-2015-01-15-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-kammerkonzert-alte-oper-frankfurt-a-main-grosser-saal-2015-01-15-20-00> a cto:CTO_0001005 ;
     rdfs:label "4. Kammerkonzert, Alte Oper (Frankfurt a. Main). Großer Saal, 15.1.2015, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2014-2015> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2015-01-15T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2015-01-15T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300110170>,
-        <https://d-nb.info/gnd/300171846>,
-        <https://d-nb.info/gnd/30037237X> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2014-2015> ;
-    cto:relatedItem <https://d-nb.info/gnd/300110170>,
-        <https://d-nb.info/gnd/300171846>,
-        <https://d-nb.info/gnd/30037237X>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-kv-421-d-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/quartette-vl-1-2-va-vc-op-33-dohnanyi-ernst-von>,
-        <https://performance.musiconn.de/work/quintette-klarinette-violine-2-viola-violoncello-j-182-b-dur-weber-carl-maria-von>,
-        <https://viaf.org/viaf/188264519>,
-        <https://viaf.org/viaf/188270958>,
-        <https://viaf.org/viaf/199705531> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/188264519>,
-        <https://viaf.org/viaf/188270958>,
-        <https://viaf.org/viaf/199705531> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171846> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199705531> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110170> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30037237X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188264519> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188270958> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/188264519> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188270958> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199705531> a nfdicore:NFDI_0001010 .
 

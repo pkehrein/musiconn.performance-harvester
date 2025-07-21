@@ -1,47 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300027311> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300039131> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300112203> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300113056> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300132352> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zehntes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1911-02-24-19-00> ] .
 
-<https://performance.musiconn.de/event/zehntes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1911-02-24-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zehntes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1911-02-24-19-00> a cto:CTO_0001005 ;
     rdfs:label "Zehntes Freitags-Konzert, Großer Konzertsaal (Frankfurt a. M.), 24.2.1911, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1910-1911> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1911-02-24T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1911-02-24T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300027311>,
-        <https://d-nb.info/gnd/300039131>,
-        <https://d-nb.info/gnd/300112203>,
-        <https://d-nb.info/gnd/300113056>,
-        <https://d-nb.info/gnd/300132352> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1910-1911> ;
-    cto:relatedItem <https://d-nb.info/gnd/300027311>,
-        <https://d-nb.info/gnd/300039131>,
-        <https://d-nb.info/gnd/300112203>,
-        <https://d-nb.info/gnd/300113056>,
-        <https://d-nb.info/gnd/300132352>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178619442> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300132352> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311579680> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184285928> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184688381> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300039131> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181445685> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300112203> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300113056> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/concerti-grossi-op-6-nr-8-corelli-arcangelo>,
-        <https://performance.musiconn.de/work/die-zauberfloete-o-zittre-nicht-mein-lieber-sohn-rezitativ-und-arie-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/eine-nacht-auf-dem-kahlen-berge-musorgskij-modest-petrovic>,
-        <https://performance.musiconn.de/work/il-barbiere-di-siviglia-una-voce-poco-fa-rossini-gioachino>,
-        <https://performance.musiconn.de/work/ouverture-pour-orchestre-sur-un-theme-de-marche-espagnole-balakirev-milij-a>,
-        <https://performance.musiconn.de/work/variationen-ueber-ein-thema-von-joseph-haydn-brahms-johannes>,
-        <https://viaf.org/viaf/178619442>,
-        <https://viaf.org/viaf/181445685>,
-        <https://viaf.org/viaf/184285928>,
-        <https://viaf.org/viaf/184688381>,
-        <https://viaf.org/viaf/311579680> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/178619442>,
-        <https://viaf.org/viaf/181445685>,
-        <https://viaf.org/viaf/184285928>,
-        <https://viaf.org/viaf/184688381>,
-        <https://viaf.org/viaf/311579680> .
+        <https://performance.musiconn.de/work/ouverture-pour-orchestre-sur-un-theme-de-marche-espagnole-balakirev-milij-a> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178619442> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181445685> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184285928> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184688381> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311579680> a nfdicore:NFDI_0001010 .
 

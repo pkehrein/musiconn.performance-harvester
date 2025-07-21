@@ -1,68 +1,95 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300033249> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033311> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300112114> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300112165> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300132298> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300132549> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300149611> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171404> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171528> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1958-09-06-19-00> ] .
 
-<https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1958-09-06-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-der-dresdner-philharmonie-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1958-09-06-19-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert der Dresdner Philharmonie, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 6.9.1958, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1958-1959> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1958-09-06T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1958-09-06T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300033249>,
-        <https://d-nb.info/gnd/300033311>,
-        <https://d-nb.info/gnd/300112114>,
-        <https://d-nb.info/gnd/300112165>,
-        <https://d-nb.info/gnd/300132298>,
-        <https://d-nb.info/gnd/300132549>,
-        <https://d-nb.info/gnd/300149611>,
-        <https://d-nb.info/gnd/300171404>,
-        <https://d-nb.info/gnd/300171528> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1958-1959> ;
-    cto:relatedItem <https://d-nb.info/gnd/300033249>,
-        <https://d-nb.info/gnd/300033311>,
-        <https://d-nb.info/gnd/300112114>,
-        <https://d-nb.info/gnd/300112165>,
-        <https://d-nb.info/gnd/300132298>,
-        <https://d-nb.info/gnd/300132549>,
-        <https://d-nb.info/gnd/300149611>,
-        <https://d-nb.info/gnd/300171404>,
-        <https://d-nb.info/gnd/300171528>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300132549> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300112114> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177811557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/232441134> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181054259> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300149611> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/19145304723878610989> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213996466> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171404> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208682228> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/308292403> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300112165> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300132298> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175790959> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033249> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305991582> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/aufforderung-zum-tanze-weber-carl-maria-von-1>,
-        <https://performance.musiconn.de/work/der-freischuetz-ouvertuere-weber-carl-maria-von>,
         <https://performance.musiconn.de/work/der-freischuetz-schweig-damit-dich-niemand-warnt-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/der-rosenkavalier-walzer-strauss-richard>,
-        <https://performance.musiconn.de/work/die-zauberfloete-in-diesen-heilgen-hallen-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/die-zauberfloete-ouvertuere-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/evgenij-onegin-ljubvi-vse-vozrasty-pokorny-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/guillaume-tell-oper-1829-ouvertuere-rossini-gioachino>,
-        <https://performance.musiconn.de/work/il-barbiere-di-siviglia-la-calunnia-e-un-venticello-rossini-gioachino>,
-        <https://performance.musiconn.de/work/italjanskoe-kapriccio-na-temy-narodnych-pesen-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/ma-vlast-vltava-smetana-bedrich>,
-        <https://viaf.org/viaf/175790959>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/181054259>,
-        <https://viaf.org/viaf/19145304723878610989>,
-        <https://viaf.org/viaf/208682228>,
-        <https://viaf.org/viaf/213996466>,
-        <https://viaf.org/viaf/232441134>,
-        <https://viaf.org/viaf/305991582>,
-        <https://viaf.org/viaf/308292403> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/175790959>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/181054259>,
-        <https://viaf.org/viaf/19145304723878610989>,
-        <https://viaf.org/viaf/208682228>,
-        <https://viaf.org/viaf/213996466>,
-        <https://viaf.org/viaf/232441134>,
-        <https://viaf.org/viaf/305991582>,
-        <https://viaf.org/viaf/308292403> .
+        <https://performance.musiconn.de/work/der-rosenkavalier-walzer-strauss-richard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175790959> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177811557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181054259> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/19145304723878610989> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208682228> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213996466> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/232441134> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305991582> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/308292403> a nfdicore:NFDI_0001010 .
 

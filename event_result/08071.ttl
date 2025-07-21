@@ -1,35 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1184938679> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009070> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2003-10-11> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2003-10-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2003-10-11> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 11.10.2003" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2003-10-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2003-10-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1184938679>,
-        <https://d-nb.info/gnd/300009070>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1184938679>,
-        <https://d-nb.info/gnd/300009070>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219160399> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7473155708725222580002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009070> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1184938679> ],
         <https://performance.musiconn.de/source/motettenbuch-2003-04>,
-        <https://performance.musiconn.de/work/mein-herze-schwimmt-im-blut-bwv-1991-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/motetten-op-110-ich-aber-bin-elend-brahms-johannes>,
         <https://performance.musiconn.de/work/psalm-22-richter-ernst-friedrich-eduard>,
-        <https://performance.musiconn.de/work/psalm-23-op-42-schreck-gustav>,
-        <https://viaf.org/viaf/219160399>,
-        <https://viaf.org/viaf/7473155708725222580002> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/219160399>,
-        <https://viaf.org/viaf/7473155708725222580002> .
+        <https://performance.musiconn.de/work/psalm-23-op-42-schreck-gustav> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219160399> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7473155708725222580002> a nfdicore:NFDI_0001010 .
 

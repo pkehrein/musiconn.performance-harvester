@@ -1,37 +1,46 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1059150794> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108966> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300808208> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/achter-letzter-kammermusik-abend-grosser-konzertsaal-frankfurt-a-m-1938-03-18-20-00-1> ] .
 
-<https://performance.musiconn.de/event/achter-letzter-kammermusik-abend-grosser-konzertsaal-frankfurt-a-m-1938-03-18-20-00-1> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/achter-letzter-kammermusik-abend-grosser-konzertsaal-frankfurt-a-m-1938-03-18-20-00-1> a cto:CTO_0001005 ;
     rdfs:label "Achter (letzter) Kammermusik-Abend, Großer Konzertsaal (Frankfurt a. M.), 18.3.1938, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1937-1938> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1938-03-18T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1938-03-18T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1059150794>,
-        <https://d-nb.info/gnd/300108966>,
-        <https://d-nb.info/gnd/300808208> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1937-1938> ;
-    cto:relatedItem <https://d-nb.info/gnd/1059150794>,
-        <https://d-nb.info/gnd/300108966>,
-        <https://d-nb.info/gnd/300808208>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185091495> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108966> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/310705099> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1059150794> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214739085> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300808208> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-kaminski-heinrich>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-kv-466-d-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-klavier-streichorchester-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-12-haydn-joseph>,
-        <https://viaf.org/viaf/185091495>,
-        <https://viaf.org/viaf/214739085>,
-        <https://viaf.org/viaf/310705099> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/185091495>,
-        <https://viaf.org/viaf/214739085>,
-        <https://viaf.org/viaf/310705099> .
+        <https://performance.musiconn.de/work/konzerte-klavier-streichorchester-bach-johann-sebastian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185091495> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214739085> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/310705099> a nfdicore:NFDI_0001010 .
 

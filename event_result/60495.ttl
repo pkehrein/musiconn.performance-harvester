@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1064327834> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300017391> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300142250> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-kammermusik-abend-alte-oper-frankfurt-a-main-grosser-saal-2002-12-12-20-00> ] .
 
-<https://performance.musiconn.de/event/3-kammermusik-abend-alte-oper-frankfurt-a-main-grosser-saal-2002-12-12-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-kammermusik-abend-alte-oper-frankfurt-a-main-grosser-saal-2002-12-12-20-00> a cto:CTO_0001005 ;
     rdfs:label "3. Kammermusik-Abend, Alte Oper (Frankfurt a. Main). Großer Saal, 12.12.2002, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2002-2003> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2002-12-12T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2002-12-12T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1064327834>,
-        <https://d-nb.info/gnd/300017391>,
-        <https://d-nb.info/gnd/300142250> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2002-2003> ;
-    cto:relatedItem <https://d-nb.info/gnd/1064327834>,
-        <https://d-nb.info/gnd/300017391>,
-        <https://d-nb.info/gnd/300142250>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-d-929-es-dur-schubert-franz>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-op-1-nr-2-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/trios-vl-vc-kl-hob-1524-26-trio-hob-1526-haydn-joseph>,
-        <https://viaf.org/viaf/190420990>,
-        <https://viaf.org/viaf/218080077>,
-        <https://viaf.org/viaf/313264932> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/190420990>,
-        <https://viaf.org/viaf/218080077>,
-        <https://viaf.org/viaf/313264932> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300017391> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/313264932> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1064327834> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190420990> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218080077> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300142250> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/190420990> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218080077> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/313264932> a nfdicore:NFDI_0001010 .
 

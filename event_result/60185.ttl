@@ -1,32 +1,36 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1268751464> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1268751928> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300074727> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300485018> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-kammerabend-gemaeldegalerie-alte-meister-dresden-gobelinsaal-1969-09-16-20-00> ] .
 
-<https://performance.musiconn.de/event/1-kammerabend-gemaeldegalerie-alte-meister-dresden-gobelinsaal-1969-09-16-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-kammerabend-gemaeldegalerie-alte-meister-dresden-gobelinsaal-1969-09-16-20-00> a cto:CTO_0001005 ;
     rdfs:label "1. Kammerabend, Gemäldegalerie Alte Meister (Dresden) / Gobelinsaal, 16.9.1969, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/staatskapelle-dresden-spielzeit-1969-1970> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1969-09-16T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1969-09-16T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1268751464>,
-        <https://d-nb.info/gnd/1268751928>,
-        <https://d-nb.info/gnd/300074727>,
-        <https://d-nb.info/gnd/300485018> ;
-    cto:itemOf <https://performance.musiconn.de/series/staatskapelle-dresden-spielzeit-1969-1970> ;
-    cto:relatedItem <https://d-nb.info/gnd/1268751464>,
-        <https://d-nb.info/gnd/1268751928>,
-        <https://d-nb.info/gnd/300074727>,
-        <https://d-nb.info/gnd/300485018>,
-        <https://performance.musiconn.de/work/kleine-sonate-fuer-viola-damore-und-klavier-hindemith-paul>,
-        <https://performance.musiconn.de/work/quintette-floete-oboe-klarinette-horn-fagott-op-247-kehrer-willy>,
-        <https://performance.musiconn.de/work/sonaten-violine-violoncello-cembalo-trantow-herbert>,
-        <https://performance.musiconn.de/work/sonatine-fuer-violine-und-cembalo-piston-walter> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/gemaeldegalerie-alte-meister-dresden-gobelinsaal> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/gemaeldegalerie-alte-meister-dresden-gobelinsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1268751464> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300074727> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300485018> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1268751928> ] ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
 

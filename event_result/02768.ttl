@@ -1,53 +1,71 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1068781734> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/107250930X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001502X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108346> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300302584> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300665121> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-10-08-18-30> ] .
 
-<https://performance.musiconn.de/event/1-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-10-08-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-museums-concert-grosser-konzertsaal-frankfurt-a-m-1869-10-08-18-30> a cto:CTO_0001005 ;
     rdfs:label "1. Museums-Concert, Großer Konzertsaal (Frankfurt a. M.), 8.10.1869, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1869-1870> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1869-10-08T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1869-10-08T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1068781734>,
-        <https://d-nb.info/gnd/107250930X>,
-        <https://d-nb.info/gnd/30001502X>,
-        <https://d-nb.info/gnd/300108346>,
-        <https://d-nb.info/gnd/300302584>,
-        <https://d-nb.info/gnd/300665121> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1869-1870> ;
-    cto:relatedItem <https://d-nb.info/gnd/1068781734>,
-        <https://d-nb.info/gnd/107250930X>,
-        <https://d-nb.info/gnd/30001502X>,
-        <https://d-nb.info/gnd/300108346>,
-        <https://d-nb.info/gnd/300302584>,
-        <https://d-nb.info/gnd/300665121>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191512436> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1068781734> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300302584> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001502X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180635194> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177840977> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182059092> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300665121> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/107250930X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179424830> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108346> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209868213> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/die-allmacht-d-852-schubert-franz>,
-        <https://performance.musiconn.de/work/fantaisie-brillante-sur-la-marche-et-la-romance-dotello-de-rossini-ernst-heinrich-wilhelm>,
-        <https://performance.musiconn.de/work/idomeneo-re-di-creta-zeffiretti-lusinghieri-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/konzerte-violine-orchester-auswahl-paganini-niccolo>,
-        <https://performance.musiconn.de/work/lieder-op-67-in-der-fremde-taubert-wilhelm>,
-        <https://performance.musiconn.de/work/ouvertuere-zum-trauerspiel-coriolan-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-d-759-h-moll-allegro-moderato-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-d-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/177840977>,
-        <https://viaf.org/viaf/179424830>,
-        <https://viaf.org/viaf/180635194>,
-        <https://viaf.org/viaf/182059092>,
-        <https://viaf.org/viaf/191512436>,
-        <https://viaf.org/viaf/209868213> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/177840977>,
-        <https://viaf.org/viaf/179424830>,
-        <https://viaf.org/viaf/180635194>,
-        <https://viaf.org/viaf/182059092>,
-        <https://viaf.org/viaf/191512436>,
-        <https://viaf.org/viaf/209868213> .
+        <https://performance.musiconn.de/work/sinfonien-d-dur-mozart-wolfgang-amadeus> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177840977> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179424830> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180635194> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182059092> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191512436> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209868213> a nfdicore:NFDI_0001010 .
 

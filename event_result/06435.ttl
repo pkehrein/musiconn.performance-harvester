@@ -1,43 +1,57 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1183153163> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133731> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300167113> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300863888> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/viertes-philharmonies-concert-gewerbehaus-dresden-gewerbehaus-saal-1888-02-08-19-00> ] .
 
-<https://performance.musiconn.de/event/viertes-philharmonies-concert-gewerbehaus-dresden-gewerbehaus-saal-1888-02-08-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/viertes-philharmonies-concert-gewerbehaus-dresden-gewerbehaus-saal-1888-02-08-19-00> a cto:CTO_0001005 ;
     rdfs:label "Viertes Philharmonies Concert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 8.2.1888, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1887-1888> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1888-02-08T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1888-02-08T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/1183153163>,
-        <https://d-nb.info/gnd/300133731>,
-        <https://d-nb.info/gnd/300167113>,
-        <https://d-nb.info/gnd/300863888> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1887-1888> ;
-    cto:relatedItem <https://d-nb.info/gnd/1183153163>,
-        <https://d-nb.info/gnd/300133731>,
-        <https://d-nb.info/gnd/300167113>,
-        <https://d-nb.info/gnd/300863888>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219955626> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/895155566452513380006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1183153163> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183465659> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133731> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300863888> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184761018> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300167113> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1887-1888>,
-        <https://performance.musiconn.de/work/aus-italien-auf-der-campagna-strauss-richard>,
-        <https://performance.musiconn.de/work/festouvertuere-taubert-ernst-eduard>,
-        <https://performance.musiconn.de/work/introduction-et-rondo-capriccioso-saint-saens-camille>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-5-op-37-a-moll-vieuxtemps-henri>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-32-g-moll-gernsheim-friedrich>,
-        <https://viaf.org/viaf/183465659>,
-        <https://viaf.org/viaf/184761018>,
-        <https://viaf.org/viaf/219955626>,
-        <https://viaf.org/viaf/895155566452513380006> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/183465659>,
-        <https://viaf.org/viaf/184761018>,
-        <https://viaf.org/viaf/219955626>,
-        <https://viaf.org/viaf/895155566452513380006> .
+        <https://performance.musiconn.de/work/festouvertuere-taubert-ernst-eduard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/183465659> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184761018> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219955626> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/895155566452513380006> a nfdicore:NFDI_0001010 .
 

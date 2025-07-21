@@ -1,36 +1,43 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1187610208> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300216343> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300915845> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/familienabend-der-kreuzgemeinde-vereinshaus-zinzendorfstrasse-17-dresden-1912-12-10-20-00> ] .
 
-<https://performance.musiconn.de/event/familienabend-der-kreuzgemeinde-vereinshaus-zinzendorfstrasse-17-dresden-1912-12-10-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/familienabend-der-kreuzgemeinde-vereinshaus-zinzendorfstrasse-17-dresden-1912-12-10-20-00> a cto:CTO_0001005 ;
     rdfs:label "Familienabend der Kreuzgemeinde, Vereinshaus Zinzendorfstraße 17 (Dresden), 10.12.1912, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1912-13> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1912-12-10T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1912-12-10T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1187610208>,
-        <https://d-nb.info/gnd/300216343>,
-        <https://d-nb.info/gnd/300915845> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1912-13> ;
-    cto:relatedItem <https://d-nb.info/gnd/1187610208>,
-        <https://d-nb.info/gnd/300216343>,
-        <https://d-nb.info/gnd/300915845>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/vereinshaus-zinzendorfstrasse-17-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300915845> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199706668> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300216343> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212901526> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1187610208> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/bergische-weihnachtslegenden-christkindleins-bergfahrt-riedel-carl>,
-        <https://performance.musiconn.de/work/fantaisie-de-concert-sur-o-sanctissima-lux-friedrich>,
         <https://performance.musiconn.de/work/magnificat-nr-2-homilius-gottfried-august>,
-        <https://performance.musiconn.de/work/stuecke-orgel-1887-variationen-ueber-stille-nacht-pfretzschner-christian-robert>,
-        <https://performance.musiconn.de/work/welche-freude-christ-ist-geboren-fuchs-albert>,
-        <https://viaf.org/viaf/199706668>,
-        <https://viaf.org/viaf/212901526> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/vereinshaus-zinzendorfstrasse-17-dresden> ;
-    cto:viaf <https://viaf.org/viaf/199706668>,
-        <https://viaf.org/viaf/212901526> .
+        <https://performance.musiconn.de/work/welche-freude-christ-ist-geboren-fuchs-albert> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/199706668> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212901526> a nfdicore:NFDI_0001010 .
 

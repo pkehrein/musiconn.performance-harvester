@@ -1,33 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1213672708> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300237200> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncert-27-maja-sankt-petersburger-philharmonie-kleiner-saal-1988-05-27> ] .
 
-<https://performance.musiconn.de/event/koncert-27-maja-sankt-petersburger-philharmonie-kleiner-saal-1988-05-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncert-27-maja-sankt-petersburger-philharmonie-kleiner-saal-1988-05-27> a cto:CTO_0001005 ;
     rdfs:label "Koncert 27. maja, Sankt-Petersburger Philharmonie / Kleiner Saal, 27.5.1988" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1987-88> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-05-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-05-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1213672708>,
-        <https://d-nb.info/gnd/300237200> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1987-88> ;
-    cto:relatedItem <https://d-nb.info/gnd/1213672708>,
-        <https://d-nb.info/gnd/300237200>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300237200> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180788125> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1213672708> ],
         <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1988-27-mai-kleiner-saal>,
         <https://performance.musiconn.de/work/anneaux-de-lumiere-louvier-alain>,
         <https://performance.musiconn.de/work/concierto-a-cuatro-barce-ramon>,
         <https://performance.musiconn.de/work/czarna-rosa-nichifor-serban>,
-        <https://performance.musiconn.de/work/nocturnal-no-6-balej-virko>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-11-cincaje-sulxan>,
-        <https://performance.musiconn.de/work/tema-lachenmann-helmut>,
-        <https://viaf.org/viaf/180788125> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/180788125> .
+        <https://performance.musiconn.de/work/nocturnal-no-6-balej-virko> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180788125> a nfdicore:NFDI_0001010 .
 

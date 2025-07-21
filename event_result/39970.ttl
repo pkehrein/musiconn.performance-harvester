@@ -1,42 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015593> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300083858> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300808267> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4264112-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gastkonzert-fdgb-haus-altenburg-1951-10-31-19-30> ] .
 
-<https://performance.musiconn.de/event/gastkonzert-fdgb-haus-altenburg-1951-10-31-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gastkonzert-fdgb-haus-altenburg-1951-10-31-19-30> a cto:CTO_0001005 ;
     rdfs:label "Gastkonzert, FDGB-Haus (Altenburg), 31.10.1951, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1951-1952> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1951-10-31T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1951-10-31T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300083858>,
-        <https://d-nb.info/gnd/300808267>,
-        <https://d-nb.info/gnd/4264112-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1951-1952> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300083858>,
-        <https://d-nb.info/gnd/300808267>,
-        <https://d-nb.info/gnd/4264112-3>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/fdgb-haus-altenburg> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300808267> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181828440> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186687666> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015593> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300083858> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193673346> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4264112-3> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175221377> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/galantai-tancok-kodaly-zoltan>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-3-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/ouvertuere-fantasie-romeo-und-julia-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-88-89-nr-1-haydn-joseph>,
-        <https://performance.musiconn.de/work/till-eulenspiegels-lustige-streiche-strauss-richard>,
-        <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/186687666>,
-        <https://viaf.org/viaf/193673346> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/fdgb-haus-altenburg> ;
-    cto:viaf <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/186687666>,
-        <https://viaf.org/viaf/193673346> .
+        <https://performance.musiconn.de/work/ouvertuere-fantasie-romeo-und-julia-tschaikowski-peter-i> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175221377> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181828440> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186687666> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193673346> a nfdicore:NFDI_0001010 .
 

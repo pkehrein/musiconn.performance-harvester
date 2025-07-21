@@ -1,53 +1,72 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1119371066> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033311> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109911> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300132549> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171528> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4048149-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-prominentenkonzert-1946-08-22> ] .
 
-<https://performance.musiconn.de/event/4-prominentenkonzert-1946-08-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-prominentenkonzert-1946-08-22> a cto:CTO_0001005 ;
     rdfs:label "4. Prominentenkonzert, 22.8.1946" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1946-1947> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1946-08-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1946-08-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1119371066>,
-        <https://d-nb.info/gnd/300033311>,
-        <https://d-nb.info/gnd/300109911>,
-        <https://d-nb.info/gnd/300132549>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/4048149-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1946-1947> ;
-    cto:relatedItem <https://d-nb.info/gnd/1119371066>,
-        <https://d-nb.info/gnd/300033311>,
-        <https://d-nb.info/gnd/300109911>,
-        <https://d-nb.info/gnd/300132549>,
-        <https://d-nb.info/gnd/300171528>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/244977146> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4048149-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183911740> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300132549> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/19145304723878610989> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7300147967371284200001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177811557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1119371066> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305991582> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109911> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/arie-des-tamino-aus-der-oper-die-zauberfloete-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/carmen-arie-des-don-jose-bizet-georges>,
         <https://performance.musiconn.de/work/carmen-ballettmusik-bizet-georges>,
-        <https://performance.musiconn.de/work/der-freischuetz-nein-laenger-trag-ich-nicht-die-qualen-scene-und-arie-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/der-freischuetz-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/guillaume-tell-oper-1829-ouvertuere-rossini-gioachino>,
-        <https://performance.musiconn.de/work/italjanskoe-kapriccio-na-temy-narodnych-pesen-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/le-nozze-di-figaro-ouvertuere-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/tosca-arie-des-cavaradossi-puccini-giacomo>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/183911740>,
-        <https://viaf.org/viaf/19145304723878610989>,
-        <https://viaf.org/viaf/305991582>,
-        <https://viaf.org/viaf/7300147967371284200001> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4048149-9>,
-        <https://viaf.org/viaf/244977146> ;
-    cto:viaf <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/183911740>,
-        <https://viaf.org/viaf/19145304723878610989>,
-        <https://viaf.org/viaf/244977146>,
-        <https://viaf.org/viaf/305991582>,
-        <https://viaf.org/viaf/7300147967371284200001> .
+        <https://performance.musiconn.de/work/tosca-arie-des-cavaradossi-puccini-giacomo> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177811557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183911740> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/19145304723878610989> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/244977146> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305991582> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7300147967371284200001> a nfdicore:NFDI_0001010 .
 

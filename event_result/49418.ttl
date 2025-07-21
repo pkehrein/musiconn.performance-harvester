@@ -1,35 +1,42 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300604408> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kamernyj-koncert-23-april-1972-dom-kompozitorov-sankt-petersburg-1972-04-23> ] .
 
-<https://performance.musiconn.de/event/kamernyj-koncert-23-april-1972-dom-kompozitorov-sankt-petersburg-1972-04-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kamernyj-koncert-23-april-1972-dom-kompozitorov-sankt-petersburg-1972-04-23> a cto:CTO_0001005 ;
     rdfs:label "Kamernyj koncert (23. April 1972), Dom kompozitorov (Sankt Petersburg), 23.4.1972" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1972-04-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1972-04-23" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1200899989>,
-        <https://d-nb.info/gnd/300604408> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
-    cto:relatedItem <https://d-nb.info/gnd/300604408>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300604408> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219175944> ],
         <https://performance.musiconn.de/source/8-leningrader-fruehling-1972-23-april>,
         <https://performance.musiconn.de/source/8-leningrader-fruehling-1972-uebersicht>,
         <https://performance.musiconn.de/work/antifony-slonimskij-sergej-michajlovic>,
         <https://performance.musiconn.de/work/iz-drevnearmjanskogo-eposa-arzoumanov-valery>,
         <https://performance.musiconn.de/work/konzerte-floete-kammerorchester-grinblats-romualds>,
         <https://performance.musiconn.de/work/ocarovan-grad-veselov-vadim-fedorovic>,
-        <https://performance.musiconn.de/work/romansy-na-stichi-f-tjutceva-salmanov-vadim-n>,
-        <https://performance.musiconn.de/work/sonaten-klavier-nr-3-ustvolskaja-galina-ivanovna>,
-        <https://viaf.org/viaf/219175944> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1200899989>,
-        <https://viaf.org/viaf/385157583849933970005> ;
-    cto:viaf <https://viaf.org/viaf/219175944>,
-        <https://viaf.org/viaf/385157583849933970005> .
+        <https://performance.musiconn.de/work/romansy-na-stichi-f-tjutceva-salmanov-vadim-n> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/219175944> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
 

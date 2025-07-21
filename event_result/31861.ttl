@@ -1,39 +1,48 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300168721> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300656874> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300982135> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-zykluskonzert-kulturpalast-dresden-festsaal-2005-09-18-19-30> ] .
 
-<https://performance.musiconn.de/event/1-zykluskonzert-kulturpalast-dresden-festsaal-2005-09-18-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-zykluskonzert-kulturpalast-dresden-festsaal-2005-09-18-19-30> a cto:CTO_0001005 ;
     rdfs:label "1. Zykluskonzert, Kulturpalast (Dresden) / Festsaal, 18.9.2005, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2005-2006> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2005-09-18T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2005-09-18T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300168721>,
-        <https://d-nb.info/gnd/300656874>,
-        <https://d-nb.info/gnd/300982135> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2005-2006> ;
-    cto:relatedItem <https://d-nb.info/gnd/300168721>,
-        <https://d-nb.info/gnd/300656874>,
-        <https://d-nb.info/gnd/300982135>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183137785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184892052> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300982135> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300168721> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198539321> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300656874> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/concertos-jagdhorn-2-floete-2-oboe-2-streicher-basso-continuo-heinichen-johann-david>,
         <https://performance.musiconn.de/work/il-geodeone-mi-vegga-oh-dio-ode-le-strida-porpora-nicola>,
-        <https://performance.musiconn.de/work/konzerte-rv-577-vivaldi-antonio>,
-        <https://performance.musiconn.de/work/scena-ed-aria-dellopera-ines-de-castro-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-j-51-c-dur-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/umbras-culpae-dissipate-hasse-johann-adolf>,
-        <https://viaf.org/viaf/183137785>,
-        <https://viaf.org/viaf/184892052>,
-        <https://viaf.org/viaf/198539321> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/183137785>,
-        <https://viaf.org/viaf/184892052>,
-        <https://viaf.org/viaf/198539321> .
+        <https://performance.musiconn.de/work/umbras-culpae-dissipate-hasse-johann-adolf> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/183137785> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184892052> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198539321> a nfdicore:NFDI_0001010 .
 

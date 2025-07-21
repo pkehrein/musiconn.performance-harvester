@@ -1,37 +1,48 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300087896> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300241119> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300267495> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1945-06-23> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1945-06-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1945-06-23> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 23.6.1945" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1945-06-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1945-06-23" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300087896>,
-        <https://d-nb.info/gnd/300241119>,
-        <https://d-nb.info/gnd/300267495>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/300087896>,
-        <https://d-nb.info/gnd/300241119>,
-        <https://d-nb.info/gnd/300267495>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300087896> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300267495> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180852813> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300241119> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176802294> ],
         <https://performance.musiconn.de/source/motettenbuch-1945>,
-        <https://performance.musiconn.de/work/geistliche-chor-music-selig-sind-die-toten-die-in-dem-herren-sterben-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/motetten-1935-ich-wollt-dass-ich-daheime-waer-david-johann-nepomuk>,
-        <https://performance.musiconn.de/work/tristis-est-anima-mea-kuhnau-johann>,
-        <https://performance.musiconn.de/work/wachet-auf-ruft-uns-die-stimme-auswahl-bach-johann-sebastian>,
-        <https://viaf.org/viaf/176802294>,
-        <https://viaf.org/viaf/180852813> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/176802294>,
-        <https://viaf.org/viaf/180852813> .
+        <https://performance.musiconn.de/work/wachet-auf-ruft-uns-die-stimme-auswahl-bach-johann-sebastian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176802294> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180852813> a nfdicore:NFDI_0001010 .
 

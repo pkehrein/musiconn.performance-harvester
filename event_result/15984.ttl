@@ -1,46 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300186703> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300274408> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30035701X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300730314> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1883-12-04> ] .
 
-<https://performance.musiconn.de/event/4-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1883-12-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1883-12-04> a cto:CTO_0001005 ;
     rdfs:label "4. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 4.12.1883" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1883-1884> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1883-12-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1883-12-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300186703>,
-        <https://d-nb.info/gnd/300274408>,
-        <https://d-nb.info/gnd/30035701X>,
-        <https://d-nb.info/gnd/300730314>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1883-1884> ;
-    cto:relatedItem <https://d-nb.info/gnd/300186703>,
-        <https://d-nb.info/gnd/300274408>,
-        <https://d-nb.info/gnd/30035701X>,
-        <https://d-nb.info/gnd/300730314>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30035701X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/298971331> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182901718> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178291184> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300274408> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300730314> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176602318> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300186703> ],
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
-        <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
-        <https://performance.musiconn.de/work/den-bergtekne-grieg-edvard>,
-        <https://performance.musiconn.de/work/der-rose-pilgerfahrt-schumann-robert>,
-        <https://performance.musiconn.de/work/im-hochland-gade-niels-wilhelm>,
-        <https://performance.musiconn.de/work/landerkennung-grieg-edvard>,
-        <https://viaf.org/viaf/176602318>,
-        <https://viaf.org/viaf/178291184>,
-        <https://viaf.org/viaf/182901718>,
-        <https://viaf.org/viaf/298971331> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/176602318>,
-        <https://viaf.org/viaf/178291184>,
-        <https://viaf.org/viaf/182901718>,
-        <https://viaf.org/viaf/242717024>,
-        <https://viaf.org/viaf/298971331> .
+        <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176602318> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178291184> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182901718> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/298971331> a nfdicore:NFDI_0001010 .
 

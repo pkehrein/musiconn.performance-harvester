@@ -4,25 +4,28 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1084609428> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-gebaeude-der-koeniglichen-oper-berlin-berlin-1822-10-27> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-gebaeude-der-koeniglichen-oper-berlin-berlin-1822-10-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-gebaeude-der-koeniglichen-oper-berlin-berlin-1822-10-27> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Gebäude der Königlichen Oper Berlin (Berlin), 27.10.1822" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1822-10-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1822-10-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1084609428> ;
-    cto:relatedItem <https://performance.musiconn.de/source/katalogisat-das-fest-des-mars-heroisch-pantomimisches-divertissement-vom-koenigl-solotaenzer-lauchery-musik-vom-koenigl-musik-director-schneider-27-october-1822>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/533149662172407020006> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1084609428> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/katalogisat-das-fest-des-mars-heroisch-pantomimisches-divertissement-vom-koenigl-solotaenzer-lauchery-musik-vom-koenigl-musik-director-schneider-27-october-1822>,
         <https://performance.musiconn.de/source/katalogisat-das-hausgesinde-komisches-singspiel-in-1-aufzug-nach-einer-franzoesischen-idee-bearbeitet-von-koller-die-musik-ist-vom-kapellmeister-fischer-27-october-1822>,
         <https://performance.musiconn.de/source/katalogisat-zwei-worte-oder-die-herberge-im-walde-singspiel-in-1-aufzug-nach-dem-franzoesischen-bearbeitet-von-c-herklots-musik-von-dalayrac-27-october-1822>,
         <https://performance.musiconn.de/work/das-fest-des-mars-fassung-schneider-georg-abraham>,
         <https://performance.musiconn.de/work/das-hausgesinde-fassung-fischer-anton-friedrich>,
         <https://performance.musiconn.de/work/deux-mots-ou-une-nuit-dans-la-foret-fassung-dalayrac-nicolas> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1084609428>,
-        <https://viaf.org/viaf/533149662172407020006> ;
-    cto:viaf <https://viaf.org/viaf/533149662172407020006> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/533149662172407020006> a nfdicore:NFDI_0001010 .
 

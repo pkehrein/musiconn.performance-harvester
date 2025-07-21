@@ -4,19 +4,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1089086296> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-theaterbau-des-schauspielhauses-berlin-1825-12-26> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-theaterbau-des-schauspielhauses-berlin-1825-12-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-theaterbau-des-schauspielhauses-berlin-1825-12-26> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Theaterbau des Schauspielhauses Berlin, 26.12.1825" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1825-12-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1825-12-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1089086296> ;
-    cto:relatedItem <https://performance.musiconn.de/source/katalogisat-das-kaethchen-von-heilbronn-grosses-ritter-schauspiel-in-5-akten-nebst-einem-vorspiel-in-1-akt-genannt-das-vehmgericht-von-heinrich-v-kleist-fuer-die-buehnen-bearbeitet-von-holbein-26-dezember-1825>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/313145858154823022430> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1089086296> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/katalogisat-das-kaethchen-von-heilbronn-grosses-ritter-schauspiel-in-5-akten-nebst-einem-vorspiel-in-1-akt-genannt-das-vehmgericht-von-heinrich-v-kleist-fuer-die-buehnen-bearbeitet-von-holbein-26-dezember-1825>,
         <https://performance.musiconn.de/source/katalogisat-der-schiffskapitain-oder-die-unbefangenen-vaudeville-in-1-aufzug-frei-nach-dem-franzoesischen-des-theaulon-bearbeitet-von-c-blum-26-dezember-1825>,
         <https://performance.musiconn.de/source/katalogisat-die-beiden-tanten-komisches-ballet-in-2-abtheilungen-arrangirt-vom-koenigl-balletmeister-titus-musik-vom-kapellmeister-gyrowetz-26-dezember-1825>,
         <https://performance.musiconn.de/source/katalogisat-jery-und-baetely-komische-operette-in-1-aufzug-von-goethe-26-dezember-1825>,
@@ -24,7 +27,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/der-schiffskapitain-oder-die-unbefangenen-fassung-mozart-wolfgang-amadeus-mehul-etienne-nicolas-himmel-friedrich-heinrich-hiller-johann-adam-mueller-wenzel-dalayrac-nicolas-haibel-johann-jakob-verschiedene>,
         <https://performance.musiconn.de/work/die-beiden-tanten-fassung-gyrowetz-adalbert>,
         <https://performance.musiconn.de/work/jery-und-baetely-fassung-reichardt-johann-friedrich> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1089086296>,
-        <https://viaf.org/viaf/313145858154823022430> ;
-    cto:viaf <https://viaf.org/viaf/313145858154823022430> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/313145858154823022430> a nfdicore:NFDI_0001010 .
 

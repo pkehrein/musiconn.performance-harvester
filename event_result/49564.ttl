@@ -1,23 +1,31 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1034238876> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vstreca-leningradskich-kompozitorov-so-slusateljami-universiteta-kultury-dom-kompozitorov-sankt-petersburg-1963-04-13> ] .
 
-<https://performance.musiconn.de/event/vstreca-leningradskich-kompozitorov-so-slusateljami-universiteta-kultury-dom-kompozitorov-sankt-petersburg-1963-04-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vstreca-leningradskich-kompozitorov-so-slusateljami-universiteta-kultury-dom-kompozitorov-sankt-petersburg-1963-04-13> a cto:CTO_0001005 ;
     rdfs:label "Vstreča leningradskich kompozitorov so slušateljami Universiteta kul'tury, Dom kompozitorov (Sankt Petersburg), 13.4.1963" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1963-04-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1963-04-13" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1034238876>,
-        <https://d-nb.info/gnd/1200899989> ;
-    cto:relatedItem <https://d-nb.info/gnd/1034238876>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/299709952> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1034238876> ],
         <https://performance.musiconn.de/source/leningrader-komponistenhaus-1963-13-april>,
         <https://performance.musiconn.de/work/antifasistskaja-pesnja-zarickij-jurij-markovic>,
         <https://performance.musiconn.de/work/belye-noci-portnov-georgij-a>,
@@ -26,14 +34,13 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/pesni-muzestva-auswahl-cistjakov-vladlen-pavlovic>,
         <https://performance.musiconn.de/work/pesnja-norvezskogo-parnja-zarickij-jurij-markovic>,
         <https://performance.musiconn.de/work/pesnja-rybolovov-portnov-georgij-a>,
-        <https://performance.musiconn.de/work/pjat-veselych-pesen-petrov-andrej-p>,
         <https://performance.musiconn.de/work/romansy-na-stichi-m-lermontova-tolstoj-dmitrij-a>,
         <https://performance.musiconn.de/work/sonaten-klavier-cervinskij-nikolaj-pavlovic>,
         <https://performance.musiconn.de/work/studenceskaja-pesnja-portnov-georgij-a>,
-        <https://performance.musiconn.de/work/triptich-cytovic-vladimir-i>,
-        <https://viaf.org/viaf/299709952> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1200899989>,
-        <https://viaf.org/viaf/385157583849933970005> ;
-    cto:viaf <https://viaf.org/viaf/299709952>,
-        <https://viaf.org/viaf/385157583849933970005> .
+        <https://performance.musiconn.de/work/triptich-cytovic-vladimir-i> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/299709952> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
 

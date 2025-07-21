@@ -1,51 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300139241> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156359> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156790> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156979> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300485204> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300628293> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/12-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-01-27> ] .
 
-<https://performance.musiconn.de/event/12-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-01-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/12-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-01-27> a cto:CTO_0001005 ;
     rdfs:label "12. Symphonie-Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 27.1.1926" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1925-1926-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1926-01-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1926-01-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300139241>,
-        <https://d-nb.info/gnd/300156359>,
-        <https://d-nb.info/gnd/300156790>,
-        <https://d-nb.info/gnd/300156979>,
-        <https://d-nb.info/gnd/300485204>,
-        <https://d-nb.info/gnd/300628293> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1925-1926-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300139241>,
-        <https://d-nb.info/gnd/300156359>,
-        <https://d-nb.info/gnd/300156790>,
-        <https://d-nb.info/gnd/300156979>,
-        <https://d-nb.info/gnd/300485204>,
-        <https://d-nb.info/gnd/300628293>,
-        <https://performance.musiconn.de/source/gedruckte-konzertprogramme-symphonie-konzerte-1908-1933>,
-        <https://performance.musiconn.de/work/der-buerger-als-edelmann-suite-strauss-richard>,
-        <https://performance.musiconn.de/work/kleine-lieder-nach-gedichten-von-a-von-arnim-und-h-heine-schlechtes-wetter-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-op-48-freundliche-vision-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-op-48-winterweihe-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-von-af-von-schack-staendchen-strauss-richard>,
-        <https://performance.musiconn.de/work/pelleas-und-melisande-schoenberg-arnold>,
-        <https://viaf.org/viaf/175993323>,
-        <https://viaf.org/viaf/178648047>,
-        <https://viaf.org/viaf/183501047>,
-        <https://viaf.org/viaf/184278108>,
-        <https://viaf.org/viaf/235645951>,
-        <https://viaf.org/viaf/243835853> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/175993323>,
-        <https://viaf.org/viaf/178648047>,
-        <https://viaf.org/viaf/183501047>,
-        <https://viaf.org/viaf/184278108>,
-        <https://viaf.org/viaf/235645951>,
-        <https://viaf.org/viaf/243835853> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300485204> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178648047> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/235645951> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300139241> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184278108> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156790> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183501047> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300628293> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156359> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/243835853> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175993323> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156979> ],
+        <https://performance.musiconn.de/source/gedruckte-konzertprogramme-symphonie-konzerte-1908-1933> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175993323> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178648047> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183501047> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184278108> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/235645951> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/243835853> a nfdicore:NFDI_0001010 .
 

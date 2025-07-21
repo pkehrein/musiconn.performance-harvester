@@ -1,32 +1,39 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/141360410> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4799645-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/il-mondo-alla-roversa-opernhaus-im-reitstall-leipzig-1754-05-07> ] .
 
-<https://performance.musiconn.de/event/il-mondo-alla-roversa-opernhaus-im-reitstall-leipzig-1754-05-07> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/il-mondo-alla-roversa-opernhaus-im-reitstall-leipzig-1754-05-07> a cto:CTO_0001005 ;
     rdfs:label "Il mondo alla roversa, Opernhaus im Reitstall (Leipzig), 7.5.1754" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/il-mondo-alla-roversa> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1754-05-07" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1754-05-07" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/141360410>,
-        <https://d-nb.info/gnd/4799645-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/il-mondo-alla-roversa> ;
-    cto:relatedItem <https://d-nb.info/gnd/4799645-6>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/141360410> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/opernhaus-im-reitstall-leipzig> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193693110> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4799645-6> ],
         <https://performance.musiconn.de/source/baerwald-oper-vol-2>,
         <https://performance.musiconn.de/source/flechsig-prag>,
-        <https://performance.musiconn.de/source/il-mondo-alla-roversa-o-sia-le-donne-che-comandano-dramma-giocoso-per-musica-da-rappresentarsi-nel-nuovo-teatro-alla-cavallerizza-nella-fiera-di-pascha-dellanno-mdccliiii>,
-        <https://performance.musiconn.de/work/il-mondo-alla-roversa-ossia-le-donne-che-comandano-galuppi-baldassare>,
-        <https://viaf.org/viaf/193693110> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/opernhaus-im-reitstall-leipzig> ;
-    cto:relatedPerson <https://d-nb.info/gnd/141360410>,
-        <https://viaf.org/viaf/3657152988205912790007> ;
-    cto:viaf <https://viaf.org/viaf/193693110>,
-        <https://viaf.org/viaf/3657152988205912790007> .
+        <https://performance.musiconn.de/source/il-mondo-alla-roversa-o-sia-le-donne-che-comandano-dramma-giocoso-per-musica-da-rappresentarsi-nel-nuovo-teatro-alla-cavallerizza-nella-fiera-di-pascha-dellanno-mdccliiii> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3657152988205912790007> ] .
+
+<https://viaf.org/viaf/193693110> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3657152988205912790007> a nfdicore:NFDI_0001010 .
 

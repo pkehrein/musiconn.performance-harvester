@@ -1,47 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300079559> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102305> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146477> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300257058> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300299966> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/neuntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1878-02-08> ] .
 
-<https://performance.musiconn.de/event/neuntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1878-02-08> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/neuntes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1878-02-08> a cto:CTO_0001005 ;
     rdfs:label "Neuntes Museums-Concert, Großer Konzertsaal (Frankfurt a. M.), 8.2.1878" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1877-1878> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1878-02-08" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1878-02-08" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300079559>,
-        <https://d-nb.info/gnd/300102305>,
-        <https://d-nb.info/gnd/300146477>,
-        <https://d-nb.info/gnd/300257058>,
-        <https://d-nb.info/gnd/300299966> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1877-1878> ;
-    cto:relatedItem <https://d-nb.info/gnd/300079559>,
-        <https://d-nb.info/gnd/300102305>,
-        <https://d-nb.info/gnd/300146477>,
-        <https://d-nb.info/gnd/300257058>,
-        <https://d-nb.info/gnd/300299966>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174106505> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186512571> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300257058> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146477> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300079559> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102305> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189341326> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191502264> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215923599> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300299966> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/konzert-ouvertuere-zu-shakespeares-sommernachtstraum-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-7-op-38-e-moll-spohr-louis>,
-        <https://performance.musiconn.de/work/notturni-violine-orchester-op-12-a-dur-joachim-joseph>,
-        <https://performance.musiconn.de/work/ouvertueren-orchester-op-115-c-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-61-c-dur-schumann-robert>,
-        <https://performance.musiconn.de/work/ungarische-taenze-auswahl-fassung-violine-brahms-johannes>,
-        <https://viaf.org/viaf/174106505>,
-        <https://viaf.org/viaf/186512571>,
-        <https://viaf.org/viaf/189341326>,
-        <https://viaf.org/viaf/191502264>,
-        <https://viaf.org/viaf/215923599> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/174106505>,
-        <https://viaf.org/viaf/186512571>,
-        <https://viaf.org/viaf/189341326>,
-        <https://viaf.org/viaf/191502264>,
-        <https://viaf.org/viaf/215923599> .
+        <https://performance.musiconn.de/work/ungarische-taenze-auswahl-fassung-violine-brahms-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174106505> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186512571> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189341326> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191502264> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215923599> a nfdicore:NFDI_0001010 .
 

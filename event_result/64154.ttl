@@ -1,50 +1,67 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1052240550> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1222980223> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300017715> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30017036X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300553196> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-vereinskonzert-rathaus-muenster-westf-friedenssaal-1883-12-01> ] .
 
-<https://performance.musiconn.de/event/3-vereinskonzert-rathaus-muenster-westf-friedenssaal-1883-12-01> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-vereinskonzert-rathaus-muenster-westf-friedenssaal-1883-12-01> a cto:CTO_0001005 ;
     rdfs:label "3. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 1.12.1883" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1883-84> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1883-12-01" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1883-12-01" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1052240550>,
-        <https://d-nb.info/gnd/1222980223>,
-        <https://d-nb.info/gnd/300017715>,
-        <https://d-nb.info/gnd/30017036X>,
-        <https://d-nb.info/gnd/300553196>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1883-84> ;
-    cto:relatedItem <https://d-nb.info/gnd/1052240550>,
-        <https://d-nb.info/gnd/1222980223>,
-        <https://d-nb.info/gnd/300017715>,
-        <https://d-nb.info/gnd/30017036X>,
-        <https://d-nb.info/gnd/300553196>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177150905> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300553196> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300017715> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178051417> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30017036X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315091039> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1222980223> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184684908> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1052240550> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184389086> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1883-1884>,
-        <https://performance.musiconn.de/work/dem-unendlichen-schubert-franz>,
-        <https://performance.musiconn.de/work/gesaenge-op-72-alte-liebe-brahms-johannes>,
         <https://performance.musiconn.de/work/lieder-op-5-liebespredigt-kjerulf-halfdan>,
         <https://performance.musiconn.de/work/lieder-op-8-das-echo-schmidt-hans>,
-        <https://performance.musiconn.de/work/ouvertuere-zum-festspiel-die-weihe-des-hauses-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/siegfried-idyll-wagner-richard>,
-        <https://performance.musiconn.de/work/sinfonien-c-dur-schubert-franz>,
-        <https://performance.musiconn.de/work/sonett-weber-carl-maria-von>,
-        <https://viaf.org/viaf/177150905>,
-        <https://viaf.org/viaf/178051417>,
-        <https://viaf.org/viaf/184389086>,
-        <https://viaf.org/viaf/184684908>,
-        <https://viaf.org/viaf/315091039> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/177150905>,
-        <https://viaf.org/viaf/178051417>,
-        <https://viaf.org/viaf/184389086>,
-        <https://viaf.org/viaf/184684908>,
-        <https://viaf.org/viaf/315091039> .
+        <https://performance.musiconn.de/work/sinfonien-c-dur-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177150905> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178051417> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184389086> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184684908> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315091039> a nfdicore:NFDI_0001010 .
 

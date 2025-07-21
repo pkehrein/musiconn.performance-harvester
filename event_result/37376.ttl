@@ -1,61 +1,85 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30003752X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037813> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037864> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300038054> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300038089> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144660> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145306> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300401655> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/drittes-akademisches-konzert-volkshaus-jena-saal-1937-12-15-20-00> ] .
 
-<https://performance.musiconn.de/event/drittes-akademisches-konzert-volkshaus-jena-saal-1937-12-15-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/drittes-akademisches-konzert-volkshaus-jena-saal-1937-12-15-20-00> a cto:CTO_0001005 ;
     rdfs:label "Drittes Akademisches Konzert, Volkshaus (Jena) / Saal, 15.12.1937, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/akademische-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1937-12-15T22:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1937-12-15T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30003752X>,
-        <https://d-nb.info/gnd/300037813>,
-        <https://d-nb.info/gnd/300037864>,
-        <https://d-nb.info/gnd/300038054>,
-        <https://d-nb.info/gnd/300038089>,
-        <https://d-nb.info/gnd/300144660>,
-        <https://d-nb.info/gnd/300145306>,
-        <https://d-nb.info/gnd/300401655> ;
-    cto:itemOf <https://performance.musiconn.de/series/akademische-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/30003752X>,
-        <https://d-nb.info/gnd/300037813>,
-        <https://d-nb.info/gnd/300037864>,
-        <https://d-nb.info/gnd/300038054>,
-        <https://d-nb.info/gnd/300038089>,
-        <https://d-nb.info/gnd/300144660>,
-        <https://d-nb.info/gnd/300145306>,
-        <https://d-nb.info/gnd/300401655>,
-        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/kinderszenen-schumann-robert>,
-        <https://performance.musiconn.de/work/nocturnes-klavier-op-55-nr-2-es-dur-chopin-frederic>,
-        <https://performance.musiconn.de/work/scherzi-klavier-op-31-b-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/sonaten-klavier-op-35-b-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/symphonische-etueden-schumann-robert>,
-        <https://performance.musiconn.de/work/walzer-klavier-k-4b-11-a-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/walzer-klavier-op-42-as-dur-chopin-frederic>,
-        <https://performance.musiconn.de/work/walzer-klavier-op-64-nr-2-cis-moll-chopin-frederic>,
-        <https://viaf.org/viaf/174508163>,
-        <https://viaf.org/viaf/174865068>,
-        <https://viaf.org/viaf/190418447>,
-        <https://viaf.org/viaf/197658073>,
-        <https://viaf.org/viaf/201851748>,
-        <https://viaf.org/viaf/209861374>,
-        <https://viaf.org/viaf/211709410>,
-        <https://viaf.org/viaf/212878873> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/volkshaus-jena-saal> ;
-    cto:viaf <https://viaf.org/viaf/174508163>,
-        <https://viaf.org/viaf/174865068>,
-        <https://viaf.org/viaf/190418447>,
-        <https://viaf.org/viaf/197658073>,
-        <https://viaf.org/viaf/201851748>,
-        <https://viaf.org/viaf/209861374>,
-        <https://viaf.org/viaf/211709410>,
-        <https://viaf.org/viaf/212878873> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/volkshaus-jena-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212878873> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197658073> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174865068> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037813> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190418447> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300038054> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209861374> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037864> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201851748> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300038089> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300401655> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174508163> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144660> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211709410> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30003752X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145306> ],
+        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174508163> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174865068> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190418447> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197658073> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201851748> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209861374> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211709410> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212878873> a nfdicore:NFDI_0001010 .
 

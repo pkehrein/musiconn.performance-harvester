@@ -4,30 +4,41 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/118540505> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/120517981> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/142339474> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/madama-vezzosa-hoftheater-bonn-1764-00-00> ] .
 
-<https://performance.musiconn.de/event/madama-vezzosa-hoftheater-bonn-1764-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/madama-vezzosa-hoftheater-bonn-1764-00-00> a cto:CTO_0001005 ;
     rdfs:label "Madama vezzosa, Hoftheater (Bonn), 1764" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1764-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1764-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/118540505>,
-        <https://d-nb.info/gnd/120517981>,
-        <https://d-nb.info/gnd/142339474> ;
-    cto:relatedItem <https://performance.musiconn.de/source/theobald-opern-stagioni>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/142339474> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118540505> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/120517981> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hoftheater-bonn> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/theobald-opern-stagioni>,
         <https://performance.musiconn.de/work/la-favola-de-tre-gobbi-ciampi-vincenzo-legrenzio> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hoftheater-bonn> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118540505>,
-        <https://d-nb.info/gnd/120517981>,
-        <https://d-nb.info/gnd/142339474>,
-        <https://viaf.org/viaf/12497042>,
-        <https://viaf.org/viaf/44299511>,
-        <https://viaf.org/viaf/72226518> ;
-    cto:viaf <https://viaf.org/viaf/12497042>,
-        <https://viaf.org/viaf/44299511>,
-        <https://viaf.org/viaf/72226518> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/12497042> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/44299511> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/72226518> ] .
+
+<https://viaf.org/viaf/12497042> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/44299511> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/72226518> a nfdicore:NFDI_0001010 .
 

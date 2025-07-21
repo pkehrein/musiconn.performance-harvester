@@ -1,60 +1,81 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300077769> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300107897> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300129297> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300132298> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300165633> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170076> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170300> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/opernkonzert-1946-12-18> ] .
 
-<https://performance.musiconn.de/event/opernkonzert-1946-12-18> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/opernkonzert-1946-12-18> a cto:CTO_0001005 ;
     rdfs:label "Opernkonzert, 18.12.1946" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1946-1947> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1946-12-18" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1946-12-18" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300077769>,
-        <https://d-nb.info/gnd/300107897>,
-        <https://d-nb.info/gnd/300129297>,
-        <https://d-nb.info/gnd/300132298>,
-        <https://d-nb.info/gnd/300165633>,
-        <https://d-nb.info/gnd/300170076>,
-        <https://d-nb.info/gnd/300170300> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1946-1947> ;
-    cto:relatedItem <https://d-nb.info/gnd/300077769>,
-        <https://d-nb.info/gnd/300107897>,
-        <https://d-nb.info/gnd/300129297>,
-        <https://d-nb.info/gnd/300132298>,
-        <https://d-nb.info/gnd/300165633>,
-        <https://d-nb.info/gnd/300170076>,
-        <https://d-nb.info/gnd/300170300>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300107897> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170300> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300132298> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300077769> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175790959> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185500605> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175388476> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177824714> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177408894> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300165633> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186708409> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186706068> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300129297> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170076> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/carmen-vor-und-zwischenspiele-bizet-georges>,
         <https://performance.musiconn.de/work/don-carlos-arie-des-philipp-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/don-giovanni-madamina-il-catalogo-e-questo-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/donna-diana-ouvertuere-reznicek-emil-nikolaus-von>,
         <https://performance.musiconn.de/work/faust-rondo-vom-goldenen-kalb-gounod-charles>,
-        <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-vorspiel-humperdinck-engelbert>,
-        <https://performance.musiconn.de/work/il-barbiere-di-siviglia-la-calunnia-e-un-venticello-rossini-gioachino>,
-        <https://performance.musiconn.de/work/la-forza-del-destino-ouvertuere-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/lohengrin-einleitung-wagner-richard>,
-        <https://performance.musiconn.de/work/marsch-der-komoedianten-und-furiant-aus-der-oper-die-verkaufte-braut-smetana-bedrich>,
-        <https://performance.musiconn.de/work/rienzi-der-letzte-der-tribunen-ouvertuere-wagner-richard>,
-        <https://viaf.org/viaf/175388476>,
-        <https://viaf.org/viaf/175790959>,
-        <https://viaf.org/viaf/177408894>,
-        <https://viaf.org/viaf/177824714>,
-        <https://viaf.org/viaf/185500605>,
-        <https://viaf.org/viaf/186706068>,
-        <https://viaf.org/viaf/186708409> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/175388476>,
-        <https://viaf.org/viaf/175790959>,
-        <https://viaf.org/viaf/177408894>,
-        <https://viaf.org/viaf/177824714>,
-        <https://viaf.org/viaf/185500605>,
-        <https://viaf.org/viaf/186706068>,
-        <https://viaf.org/viaf/186708409> .
+        <https://performance.musiconn.de/work/marsch-der-komoedianten-und-furiant-aus-der-oper-die-verkaufte-braut-smetana-bedrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175388476> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175790959> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177408894> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177824714> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185500605> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186706068> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186708409> a nfdicore:NFDI_0001010 .
 

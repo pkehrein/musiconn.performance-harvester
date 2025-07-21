@@ -1,57 +1,74 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1257173642> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300024959> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300127928> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300137273> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300137346> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300666187> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-felsenkeller-leipzig-1946-03-26> ] .
 
-<https://performance.musiconn.de/event/konzert-felsenkeller-leipzig-1946-03-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-felsenkeller-leipzig-1946-03-26> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Felsenkeller (Leipzig), 26.3.1946" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1946-03-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1946-03-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1257173642>,
-        <https://d-nb.info/gnd/300024959>,
-        <https://d-nb.info/gnd/300127928>,
-        <https://d-nb.info/gnd/300137273>,
-        <https://d-nb.info/gnd/300137346>,
-        <https://d-nb.info/gnd/300666187> ;
-    cto:relatedItem <https://d-nb.info/gnd/1257173642>,
-        <https://d-nb.info/gnd/300024959>,
-        <https://d-nb.info/gnd/300127928>,
-        <https://d-nb.info/gnd/300137273>,
-        <https://d-nb.info/gnd/300137346>,
-        <https://d-nb.info/gnd/300666187>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/felsenkeller-leipzig> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300137346> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300024959> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1257173642> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217005968> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300137273> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194747469> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189340944> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300127928> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185550705> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300666187> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174110202> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211711899> ],
         <https://performance.musiconn.de/source/motettenbuch-1946>,
         <https://performance.musiconn.de/work/all-mein-gedanken-hassler-hans-leo>,
         <https://performance.musiconn.de/work/ausgewaehlte-volkslieder-liebesschmerz-reger-max>,
-        <https://performance.musiconn.de/work/ausgewaehlte-volkslieder-woo-610-liebchens-bote-reger-max>,
-        <https://performance.musiconn.de/work/deutsche-volkslieder-woo-34-in-stiller-nacht-brahms-johannes>,
         <https://performance.musiconn.de/work/die-bluemelein-sie-schlafen-berger-wilhelm>,
         <https://performance.musiconn.de/work/es-flog-ein-kleins-waldvoegelein-david-johann-nepomuk>,
         <https://performance.musiconn.de/work/il-primo-libro-di-canzon-villanesche-chi-la-gagliarda-donne-voimparare-donato-baldassare>,
-        <https://performance.musiconn.de/work/libro-de-villanelle-moresche-et-altre-canzoni-o-la-o-che-bon-eccho-lasso-orlando-di>,
-        <https://performance.musiconn.de/work/musica-boscareccia-teil-2-viel-schoener-bluemelein-schein-johann-hermann>,
-        <https://performance.musiconn.de/work/neue-und-lustige-weltliche-deutsche-liedlein-ein-hennlein-weiss-scandello-antonio>,
-        <https://performance.musiconn.de/work/studentenschmaus-holla-gut-gsell-schein-johann-hermann>,
-        <https://performance.musiconn.de/work/volkslieder-1913-die-wuerzburger-gloeckli-reger-max>,
-        <https://performance.musiconn.de/work/wach-auf-meins-herzens-schoene-reichardt-johann-friedrich>,
-        <https://viaf.org/viaf/174110202>,
-        <https://viaf.org/viaf/185550705>,
-        <https://viaf.org/viaf/189340944>,
-        <https://viaf.org/viaf/194747469>,
-        <https://viaf.org/viaf/211711899>,
-        <https://viaf.org/viaf/217005968> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/felsenkeller-leipzig> ;
-    cto:viaf <https://viaf.org/viaf/174110202>,
-        <https://viaf.org/viaf/185550705>,
-        <https://viaf.org/viaf/189340944>,
-        <https://viaf.org/viaf/194747469>,
-        <https://viaf.org/viaf/211711899>,
-        <https://viaf.org/viaf/217005968> .
+        <https://performance.musiconn.de/work/volkslieder-1913-die-wuerzburger-gloeckli-reger-max> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174110202> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185550705> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189340944> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194747469> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211711899> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217005968> a nfdicore:NFDI_0001010 .
 

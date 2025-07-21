@@ -1,40 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300109083> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110995> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111134> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7514308-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-zykluskonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1967-06-10-19-30> ] .
 
-<https://performance.musiconn.de/event/5-zykluskonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1967-06-10-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-zykluskonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1967-06-10-19-30> a cto:CTO_0001005 ;
     rdfs:label "5. Zykluskonzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 10.6.1967, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1967-06-10T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1967-06-10T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300109083>,
-        <https://d-nb.info/gnd/300110995>,
-        <https://d-nb.info/gnd/300111134>,
-        <https://d-nb.info/gnd/7514308-2> ;
-    cto:relatedItem <https://d-nb.info/gnd/300109083>,
-        <https://d-nb.info/gnd/300110995>,
-        <https://d-nb.info/gnd/300111134>,
-        <https://d-nb.info/gnd/7514308-2>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/kassationen-orchester-kv-63-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-klarinette-orchester-kv-622-a-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-kv-183-g-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-kv-543-es-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/202938719>,
-        <https://viaf.org/viaf/208684293>,
-        <https://viaf.org/viaf/208722170>,
-        <https://viaf.org/viaf/211711351> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/202938719>,
-        <https://viaf.org/viaf/208684293>,
-        <https://viaf.org/viaf/208722170>,
-        <https://viaf.org/viaf/211711351> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211711351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202938719> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110995> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7514308-2> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111134> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208684293> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109083> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208722170> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/202938719> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208684293> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208722170> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211711351> a nfdicore:NFDI_0001010 .
 

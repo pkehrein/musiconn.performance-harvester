@@ -4,19 +4,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-schloss-neu-augustusburg-weissenfels-schlosskapelle-1988-10-08> ] .
 
-<https://performance.musiconn.de/event/konzert-schloss-neu-augustusburg-weissenfels-schlosskapelle-1988-10-08> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-schloss-neu-augustusburg-weissenfels-schlosskapelle-1988-10-08> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Schloss Neu-Augustusburg (Weißenfels) / Schlosskapelle, 8.10.1988" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-10-08" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-10-08" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/schloss-neu-augustusburg-weissenfels-schlosskapelle> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/work/ani-hadal-fassung-saminsky-lasar>,
         <https://performance.musiconn.de/work/din-dan-fassung-engel-joel>,
         <https://performance.musiconn.de/work/du-sollst-nischt-gehn-mit-kejn-andere-mejedelach-fassung-gross-friedbert>,
@@ -32,8 +36,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/pischu-li-psalm-118-19-24-fassung-sander-werner>,
         <https://performance.musiconn.de/work/unter-dem-kinds-wiegele-fassung-gross-friedbert>,
         <https://performance.musiconn.de/work/wschomru-nowakowsky-david> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/schloss-neu-augustusburg-weissenfels-schlosskapelle> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

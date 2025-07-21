@@ -1,40 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171781> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300387970> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300868138> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/elftes-abonnement-concert-erstes-gewandhaus-leipzig-1876-12-21> ] .
 
-<https://performance.musiconn.de/event/elftes-abonnement-concert-erstes-gewandhaus-leipzig-1876-12-21> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/elftes-abonnement-concert-erstes-gewandhaus-leipzig-1876-12-21> a cto:CTO_0001005 ;
     rdfs:label "Elftes Abonnement-Concert, Erstes Gewandhaus (Leipzig), 21.12.1876" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1876-12-21" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1876-12-21" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/300387970>,
-        <https://d-nb.info/gnd/300868138> ;
-    cto:relatedItem <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/300387970>,
-        <https://d-nb.info/gnd/300868138>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207920854> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196899751> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300868138> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309560042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300387970> ],
         <https://performance.musiconn.de/source/programme-der-konzerte-im-gewandhaus-zu-leipzig-staedt-bibl-leipzig>,
         <https://performance.musiconn.de/source/programmzettel>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-141-g-moll-reinecke-carl>,
-        <https://performance.musiconn.de/work/oberon-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/paride-ed-elena-ballettmusik-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/sinfonien-op-9-f-dur-goetz-hermann>,
-        <https://viaf.org/viaf/196899751>,
-        <https://viaf.org/viaf/207920854>,
-        <https://viaf.org/viaf/309560042> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/196899751>,
-        <https://viaf.org/viaf/207920854>,
-        <https://viaf.org/viaf/309560042>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/work/paride-ed-elena-ballettmusik-gluck-christoph-willibald> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/196899751> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207920854> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309560042> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

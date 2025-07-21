@@ -1,50 +1,65 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015526> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140061> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300298757> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300553269> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7678105-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/11-museums-concert-grosser-konzertsaal-frankfurt-a-m-1867-03-01-18-30> ] .
 
-<https://performance.musiconn.de/event/11-museums-concert-grosser-konzertsaal-frankfurt-a-m-1867-03-01-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/11-museums-concert-grosser-konzertsaal-frankfurt-a-m-1867-03-01-18-30> a cto:CTO_0001005 ;
     rdfs:label "11. Museums-Concert, Großer Konzertsaal (Frankfurt a. M.), 1.3.1867, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1866-1867> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1867-03-01T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1867-03-01T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015526>,
-        <https://d-nb.info/gnd/300140061>,
-        <https://d-nb.info/gnd/300298757>,
-        <https://d-nb.info/gnd/300553269>,
-        <https://d-nb.info/gnd/7678105-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1866-1867> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015526>,
-        <https://d-nb.info/gnd/300140061>,
-        <https://d-nb.info/gnd/300298757>,
-        <https://d-nb.info/gnd/300553269>,
-        <https://d-nb.info/gnd/7678105-7>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186094675> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425016> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300553269> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186329322> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015526> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7678105-7> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300298757> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140061> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183715682> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185699454> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
         <https://performance.musiconn.de/work/allemande-und-sarabande-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/am-tage-aller-seelen-schubert-franz>,
-        <https://performance.musiconn.de/work/an-die-leier-schubert-franz>,
-        <https://performance.musiconn.de/work/fruehlingslied-mwv-k-101-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/konzert-ouvertuere-e-dur-gellert-ludwig>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-61-d-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/la-clemenza-di-tito-deh-per-questo-istante-solo-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/nocturnes-violine-ernst-heinrich-wilhelm>,
-        <https://performance.musiconn.de/work/sinfonien-d-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/179425016>,
-        <https://viaf.org/viaf/183715682>,
-        <https://viaf.org/viaf/185699454>,
-        <https://viaf.org/viaf/186094675>,
-        <https://viaf.org/viaf/186329322> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/179425016>,
-        <https://viaf.org/viaf/183715682>,
-        <https://viaf.org/viaf/185699454>,
-        <https://viaf.org/viaf/186094675>,
-        <https://viaf.org/viaf/186329322> .
+        <https://performance.musiconn.de/work/sinfonien-d-dur-mozart-wolfgang-amadeus> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179425016> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183715682> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185699454> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186094675> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186329322> a nfdicore:NFDI_0001010 .
 

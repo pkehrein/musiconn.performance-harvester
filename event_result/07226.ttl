@@ -1,33 +1,39 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026943> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144709> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/klavierabend-von-horst-gebhardi-rosensaal-jena-1939-03-22-20-15> ] .
 
-<https://performance.musiconn.de/event/klavierabend-von-horst-gebhardi-rosensaal-jena-1939-03-22-20-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/klavierabend-von-horst-gebhardi-rosensaal-jena-1939-03-22-20-15> a cto:CTO_0001005 ;
     rdfs:label "Klavierabend von Horst Gebhardi, Rosensaal (Jena), 22.3.1939, 20:15" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1939-03-22T21:45:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1939-03-22T20:15:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026943>,
-        <https://d-nb.info/gnd/300144709> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026943>,
-        <https://d-nb.info/gnd/300144709>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/rosensaal-jena> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026943> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211712082> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209861077> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144709> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
         <https://performance.musiconn.de/source/klavierabend-von-horst-gebhardi>,
-        <https://performance.musiconn.de/work/fantasien-klavier-op-17-c-dur-schumann-robert>,
-        <https://performance.musiconn.de/work/romantische-variationen-ueber-ein-eigenes-thema-wetz-richard>,
-        <https://performance.musiconn.de/work/sonaten-klavier-nr-3-op-5-f-moll-brahms-johannes>,
-        <https://viaf.org/viaf/209861077>,
-        <https://viaf.org/viaf/211712082> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/rosensaal-jena> ;
-    cto:viaf <https://viaf.org/viaf/209861077>,
-        <https://viaf.org/viaf/211712082> .
+        <https://performance.musiconn.de/work/romantische-variationen-ueber-ein-eigenes-thema-wetz-richard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/209861077> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211712082> a nfdicore:NFDI_0001010 .
 

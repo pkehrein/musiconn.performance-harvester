@@ -4,25 +4,32 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/100524907> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4023118-5> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/don-calascione-hamburg-1758-00-00> ] .
 
-<https://performance.musiconn.de/event/don-calascione-hamburg-1758-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/don-calascione-hamburg-1758-00-00> a cto:CTO_0001005 ;
     rdfs:label "Don Calascione, Hamburg, 1758" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1758-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1758-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/100524907>,
-        <https://d-nb.info/gnd/4023118-5> ;
-    cto:relatedItem <https://performance.musiconn.de/source/il-don-calascione-dramma-giocoso-per-musica-da-rappresentarsi-nella-nobilissima-citta-dhamburgo-nellanno-1758>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/100524907> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4023118-5> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/133067777> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/il-don-calascione-dramma-giocoso-per-musica-da-rappresentarsi-nella-nobilissima-citta-dhamburgo-nellanno-1758>,
         <https://performance.musiconn.de/work/il-gismondo-latilla-gaetano> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4023118-5>,
-        <https://viaf.org/viaf/133067777> ;
-    cto:relatedPerson <https://d-nb.info/gnd/100524907>,
-        <https://viaf.org/viaf/66656806> ;
-    cto:viaf <https://viaf.org/viaf/133067777>,
-        <https://viaf.org/viaf/66656806> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/66656806> ] .
+
+<https://viaf.org/viaf/133067777> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/66656806> a nfdicore:NFDI_0001010 .
 

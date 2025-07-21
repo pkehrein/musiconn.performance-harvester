@@ -1,32 +1,38 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300141726> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300220359> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1972-12-26-20-00> ] .
 
-<https://performance.musiconn.de/event/5-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1972-12-26-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1972-12-26-20-00> a cto:CTO_0001005 ;
     rdfs:label "5. Außerordentliches Konzert, Kulturpalast (Dresden) / Festsaal, 26.12.1972, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1972-12-26T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1972-12-26T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300141726>,
-        <https://d-nb.info/gnd/300220359> ;
-    cto:relatedItem <https://d-nb.info/gnd/300141726>,
-        <https://d-nb.info/gnd/300220359>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300220359> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208686940> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141726> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210938800> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/konzerte-orgel-orchester-f-dur-brixi-frantisek-xaver>,
-        <https://performance.musiconn.de/work/konzerte-orgel-orchester-w-2-a-f-1-f-dur-vanhal-jan-krtitel>,
-        <https://performance.musiconn.de/work/konzerte-trompete-orchester-nr-2-es-dur-hertel-johann-wilhelm>,
-        <https://performance.musiconn.de/work/sinfonien-d-125-b-dur-schubert-franz>,
-        <https://viaf.org/viaf/208686940>,
-        <https://viaf.org/viaf/210938800> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/208686940>,
-        <https://viaf.org/viaf/210938800> .
+        <https://performance.musiconn.de/work/konzerte-trompete-orchester-nr-2-es-dur-hertel-johann-wilhelm> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/208686940> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210938800> a nfdicore:NFDI_0001010 .
 

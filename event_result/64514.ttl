@@ -1,24 +1,28 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/4035206-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1878-03-22> ] .
 
-<https://performance.musiconn.de/event/abendunterhaltung-leipzig-1878-03-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/abendunterhaltung-leipzig-1878-03-22> a cto:CTO_0001005 ;
     rdfs:label "[Abendunterhaltung], Leipzig, 22.3.1878" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/abendunterhaltung> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1878-03-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1878-03-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4035206-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/abendunterhaltung> ;
-    cto:relatedItem <https://performance.musiconn.de/source/konservatorium-der-musik-hochschule-fuer-musik-konzertprogramme-1843-1948> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4035206-7>,
-        <https://viaf.org/viaf/154310911> ;
-    cto:viaf <https://viaf.org/viaf/154310911> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4035206-7> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154310911> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/konservatorium-der-musik-hochschule-fuer-musik-konzertprogramme-1843-1948> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154310911> a nfdicore:NFDI_0001010 .
 

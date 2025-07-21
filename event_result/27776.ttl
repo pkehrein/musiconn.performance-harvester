@@ -1,65 +1,89 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/115870156X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1190591057> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1191703398> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026226> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300120346> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30014492X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156790> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171404> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300200374> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/concert-belvedere-dresden-1901-10-29-20-00> ] .
 
-<https://performance.musiconn.de/event/concert-belvedere-dresden-1901-10-29-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/concert-belvedere-dresden-1901-10-29-20-00> a cto:CTO_0001005 ;
     rdfs:label "Concert, Belvedere (Dresden), 29.10.1901, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1901-1902> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1901-10-29T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1901-10-29T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/115870156X>,
-        <https://d-nb.info/gnd/1190591057>,
-        <https://d-nb.info/gnd/1191703398>,
-        <https://d-nb.info/gnd/300026226>,
-        <https://d-nb.info/gnd/300120346>,
-        <https://d-nb.info/gnd/30014492X>,
-        <https://d-nb.info/gnd/300156790>,
-        <https://d-nb.info/gnd/300171404>,
-        <https://d-nb.info/gnd/300200374> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1901-1902> ;
-    cto:relatedItem <https://d-nb.info/gnd/115870156X>,
-        <https://d-nb.info/gnd/1191703398>,
-        <https://d-nb.info/gnd/300026226>,
-        <https://d-nb.info/gnd/300120346>,
-        <https://d-nb.info/gnd/30014492X>,
-        <https://d-nb.info/gnd/300156790>,
-        <https://d-nb.info/gnd/300171404>,
-        <https://d-nb.info/gnd/300200374>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1190591057> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171404> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156790> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174585019> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2305152637760620220008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177005157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178648047> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300200374> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026226> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184896032> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190422559> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1191703398> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/232441134> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30014492X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300120346> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/115870156X> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1901-1902>,
-        <https://performance.musiconn.de/work/aufforderung-zum-tanze-weber-carl-maria-von-1>,
-        <https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-30-der-hidalgo-schumann-robert>,
-        <https://performance.musiconn.de/work/konzertstuecke-harfe-orchester-op-175-g-moll-oberthuer-charles>,
         <https://performance.musiconn.de/work/le-nozze-di-figaro-rezitativ-und-arie-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-63-junge-lieder-1-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-von-af-von-schack-staendchen-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-w-108-komm-wir-wandeln-zusammen-cornelius-peter>,
         <https://performance.musiconn.de/work/militaer-konzert-leonard-h>,
-        <https://performance.musiconn.de/work/ouvertueren-op-50-volkmann-robert>,
         <https://performance.musiconn.de/work/schoen-rothtraut-rabl-walter>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodie-popper-david>,
         <https://performance.musiconn.de/work/weiser-und-poet-pretzsch-karl-emil>,
-        <https://performance.musiconn.de/work/zigeunerballade-sachs-julius>,
-        <https://viaf.org/viaf/174585019>,
-        <https://viaf.org/viaf/177005157>,
-        <https://viaf.org/viaf/178648047>,
-        <https://viaf.org/viaf/184896032>,
-        <https://viaf.org/viaf/190422559>,
-        <https://viaf.org/viaf/2305152637760620220008>,
-        <https://viaf.org/viaf/232441134> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1190591057> ;
-    cto:viaf <https://viaf.org/viaf/174585019>,
-        <https://viaf.org/viaf/177005157>,
-        <https://viaf.org/viaf/178648047>,
-        <https://viaf.org/viaf/184896032>,
-        <https://viaf.org/viaf/190422559>,
-        <https://viaf.org/viaf/2305152637760620220008>,
-        <https://viaf.org/viaf/232441134> .
+        <https://performance.musiconn.de/work/zigeunerballade-sachs-julius> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174585019> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177005157> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178648047> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184896032> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190422559> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2305152637760620220008> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/232441134> a nfdicore:NFDI_0001010 .
 

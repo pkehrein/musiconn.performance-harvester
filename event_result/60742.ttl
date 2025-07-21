@@ -1,47 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1048169855> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1278278907> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1278280898> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/127828141X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30019028X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1867-05-17-18-00> ] .
 
-<https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1867-05-17-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1867-05-17-18-00> a cto:CTO_0001005 ;
     rdfs:label "Haupt-Prüfung am Conservatorium der Musik zu Leipzig, Erstes Gewandhaus (Leipzig), 17.5.1867, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/pruefung> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1867-05-17T20:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1867-05-17T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1048169855>,
-        <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/1278278907>,
-        <https://d-nb.info/gnd/1278280898>,
-        <https://d-nb.info/gnd/127828141X>,
-        <https://d-nb.info/gnd/30019028X> ;
-    cto:itemOf <https://performance.musiconn.de/series/pruefung> ;
-    cto:relatedItem <https://d-nb.info/gnd/1048169855>,
-        <https://d-nb.info/gnd/1278278907>,
-        <https://d-nb.info/gnd/1278280898>,
-        <https://d-nb.info/gnd/127828141X>,
-        <https://d-nb.info/gnd/30019028X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30019028X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/127828141X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1278280898> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1278278907> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217007300> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1048169855> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306374901> ],
         <https://performance.musiconn.de/source/konservatorium-der-musik-hochschule-fuer-musik-konzertprogramme-1843-1948>,
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-gegr-1834-von-robert-schumann>,
         <https://performance.musiconn.de/source/signale-fuer-die-musikalische-welt>,
-        <https://performance.musiconn.de/work/impromptu-ueber-ein-motiv-aus-schumanns-manfred-fassung-kl-4hdg-reinecke-carl>,
-        <https://performance.musiconn.de/work/quartette-streichinstrument-4-groenevelt-edward-friedrich>,
-        <https://performance.musiconn.de/work/quintette-violine-2-viola-2-violoncello-op-5-c-dur-svendsen-johan-severin>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-heap-charles-swinnerton>,
         <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-op-24-auswahl-henselt-adolf-von>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-op-70-nr-2-es-dur-allegro-ma-non-troppo-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/variationen-violoncello-klavier-mendelssohn-bartholdy-felix>,
-        <https://viaf.org/viaf/217007300>,
-        <https://viaf.org/viaf/306374901> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/217007300>,
-        <https://viaf.org/viaf/306374901>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/work/variationen-violoncello-klavier-mendelssohn-bartholdy-felix> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/217007300> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/306374901> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

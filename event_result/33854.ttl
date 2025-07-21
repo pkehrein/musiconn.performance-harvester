@@ -1,65 +1,90 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/112441133X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1290321981> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141785> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145756> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146140> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170211> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300342438> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30040350X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300977123> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zehntes-letztes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1901-03-03-17-30> ] .
 
-<https://performance.musiconn.de/event/zehntes-letztes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1901-03-03-17-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zehntes-letztes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1901-03-03-17-30> a cto:CTO_0001005 ;
     rdfs:label "Zehntes (letztes) Sonntags-Concert, Großer Konzertsaal (Frankfurt a. M.), 3.3.1901, 17:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1900-1901> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1901-03-03T17:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1901-03-03T17:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/112441133X>,
-        <https://d-nb.info/gnd/1290321981>,
-        <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300145756>,
-        <https://d-nb.info/gnd/300146140>,
-        <https://d-nb.info/gnd/300170211>,
-        <https://d-nb.info/gnd/300342438>,
-        <https://d-nb.info/gnd/30040350X>,
-        <https://d-nb.info/gnd/300977123> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1900-1901> ;
-    cto:relatedItem <https://d-nb.info/gnd/112441133X>,
-        <https://d-nb.info/gnd/1290321981>,
-        <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300145756>,
-        <https://d-nb.info/gnd/300146140>,
-        <https://d-nb.info/gnd/300170211>,
-        <https://d-nb.info/gnd/300342438>,
-        <https://d-nb.info/gnd/30040350X>,
-        <https://d-nb.info/gnd/300977123>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178622562> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1290321981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184316995> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145756> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170211> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174994351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/112441133X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182274863> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300342438> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30040350X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300977123> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146140> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1576168596715830450004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174214772> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315951885> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178819298> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/aus-dem-nachtlied-zarathustras-mendelssohn-arnold-ludwig>,
-        <https://performance.musiconn.de/work/lieder-des-harfners-an-die-thueren-will-ich-schleichen-mendelssohn-arnold-ludwig>,
-        <https://performance.musiconn.de/work/lieder-des-harfners-wer-nie-sein-brot-mit-traenen-ass-mendelssohn-arnold-ludwig>,
-        <https://performance.musiconn.de/work/liederkreis-nach-heinrich-heine-mit-myrthen-und-rosen-schumann-robert>,
-        <https://performance.musiconn.de/work/myrthen-freisinn-schumann-robert>,
-        <https://performance.musiconn.de/work/parsifal-vorspiel-wagner-richard>,
-        <https://performance.musiconn.de/work/romanzen-und-balladen-op-49-die-beiden-grenadiere-schumann-robert>,
-        <https://performance.musiconn.de/work/romanzen-und-balladen-singstimme-klavier-op-45-fruehlingsfahrt-schumann-robert>,
-        <https://performance.musiconn.de/work/sadko-tableau-musical-rimskij-korsakov-nikolaj>,
-        <https://performance.musiconn.de/work/sinfonien-d-944-c-dur-schubert-franz>,
-        <https://viaf.org/viaf/1576168596715830450004>,
-        <https://viaf.org/viaf/174214772>,
-        <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/178622562>,
-        <https://viaf.org/viaf/178819298>,
-        <https://viaf.org/viaf/182274863>,
-        <https://viaf.org/viaf/184316995>,
-        <https://viaf.org/viaf/315951885> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/1576168596715830450004>,
-        <https://viaf.org/viaf/174214772>,
-        <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/178622562>,
-        <https://viaf.org/viaf/178819298>,
-        <https://viaf.org/viaf/182274863>,
-        <https://viaf.org/viaf/184316995>,
-        <https://viaf.org/viaf/315951885> .
+        <https://performance.musiconn.de/work/lieder-des-harfners-an-die-thueren-will-ich-schleichen-mendelssohn-arnold-ludwig> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1576168596715830450004> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174214772> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174994351> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178622562> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178819298> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182274863> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184316995> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315951885> a nfdicore:NFDI_0001010 .
 

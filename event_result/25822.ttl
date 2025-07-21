@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111150> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300152108> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300251335> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300426399> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/fuenftes-abonnement-concert-erstes-gewandhaus-leipzig-1874-11-05> ] .
 
-<https://performance.musiconn.de/event/fuenftes-abonnement-concert-erstes-gewandhaus-leipzig-1874-11-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/fuenftes-abonnement-concert-erstes-gewandhaus-leipzig-1874-11-05> a cto:CTO_0001005 ;
     rdfs:label "Fünftes Abonnement-Concert, Erstes Gewandhaus (Leipzig), 5.11.1874" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1874-11-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1874-11-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/300111150>,
-        <https://d-nb.info/gnd/300152108>,
-        <https://d-nb.info/gnd/300251335>,
-        <https://d-nb.info/gnd/300426399> ;
-    cto:relatedItem <https://d-nb.info/gnd/300111150>,
-        <https://d-nb.info/gnd/300152108>,
-        <https://d-nb.info/gnd/300251335>,
-        <https://d-nb.info/gnd/300426399>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181451420> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300251335> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111150> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177664346> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300426399> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300152108> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211712302> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193655042> ],
         <https://performance.musiconn.de/source/programme-der-konzerte-im-gewandhaus-zu-leipzig-staedt-bibl-leipzig>,
-        <https://performance.musiconn.de/source/programmzettel>,
-        <https://performance.musiconn.de/work/musik-zu-athalia-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/musik-zu-athalia-ouvertuere-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/sinfonien-kv-550-g-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/zemire-und-azor-rose-wie-bist-du-reizend-und-mild-spohr-louis>,
-        <https://viaf.org/viaf/177664346>,
-        <https://viaf.org/viaf/181451420>,
-        <https://viaf.org/viaf/193655042>,
-        <https://viaf.org/viaf/211712302> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/177664346>,
-        <https://viaf.org/viaf/181451420>,
-        <https://viaf.org/viaf/193655042>,
-        <https://viaf.org/viaf/211712302>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/source/programmzettel> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177664346> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181451420> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193655042> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211712302> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

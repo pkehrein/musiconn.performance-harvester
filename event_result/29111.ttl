@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300027257> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300501110> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4264112-3> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4399716-8> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5074761-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/schulkonzert-stadtmuseum-dresden-1982-03-16-14-30> ] .
 
-<https://performance.musiconn.de/event/schulkonzert-stadtmuseum-dresden-1982-03-16-14-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/schulkonzert-stadtmuseum-dresden-1982-03-16-14-30> a cto:CTO_0001005 ;
     rdfs:label "Schulkonzert, Stadtmuseum Dresden, 16.3.1982, 14:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1981-1982> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1982-03-16T14:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1982-03-16T14:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300027257>,
-        <https://d-nb.info/gnd/300501110>,
-        <https://d-nb.info/gnd/4264112-3>,
-        <https://d-nb.info/gnd/4399716-8>,
-        <https://d-nb.info/gnd/5074761-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1981-1982> ;
-    cto:relatedItem <https://d-nb.info/gnd/300027257>,
-        <https://d-nb.info/gnd/300501110>,
-        <https://d-nb.info/gnd/4264112-3>,
-        <https://d-nb.info/gnd/4399716-8>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/an-der-schoenen-blauen-donau-strauss-johann>,
-        <https://performance.musiconn.de/work/slovanske-tance-b-83-nr-1-dvorak-antonin>,
-        <https://performance.musiconn.de/work/till-eulenspiegels-lustige-streiche-strauss-richard>,
-        <https://performance.musiconn.de/work/ungarische-taenze-nr-5-brahms-johannes>,
-        <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/181002798>,
-        <https://viaf.org/viaf/181446529>,
-        <https://viaf.org/viaf/209873989> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5074761-7>,
-        <https://viaf.org/viaf/126221316> ;
-    cto:viaf <https://viaf.org/viaf/126221316>,
-        <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/181002798>,
-        <https://viaf.org/viaf/181446529>,
-        <https://viaf.org/viaf/209873989> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/126221316> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5074761-7> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027257> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181446529> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4264112-3> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209873989> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4399716-8> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175221377> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300501110> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181002798> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/126221316> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175221377> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181002798> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181446529> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209873989> a nfdicore:NFDI_0001010 .
 

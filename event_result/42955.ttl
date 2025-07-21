@@ -1,47 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300013744> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144466> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300158432> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300185995> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300241313> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-kammermusik-abend-buchhaendler-haus-frankfurt-am-main-cantate-saal-1966-05-05-20-00> ] .
 
-<https://performance.musiconn.de/event/8-kammermusik-abend-buchhaendler-haus-frankfurt-am-main-cantate-saal-1966-05-05-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-kammermusik-abend-buchhaendler-haus-frankfurt-am-main-cantate-saal-1966-05-05-20-00> a cto:CTO_0001005 ;
     rdfs:label "8. Kammermusik-Abend, Buchhändler-Haus (Frankfurt am Main). Cantate-Saal, 5.5.1966, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1965-1966> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1966-05-05T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1966-05-05T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300013744>,
-        <https://d-nb.info/gnd/300144466>,
-        <https://d-nb.info/gnd/300158432>,
-        <https://d-nb.info/gnd/300185995>,
-        <https://d-nb.info/gnd/300241313> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1965-1966> ;
-    cto:relatedItem <https://d-nb.info/gnd/300013744>,
-        <https://d-nb.info/gnd/300144466>,
-        <https://d-nb.info/gnd/300158432>,
-        <https://d-nb.info/gnd/300185995>,
-        <https://d-nb.info/gnd/300241313>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/andante-und-variationen-klavier-2-op-46-b-dur-schumann-robert>,
-        <https://performance.musiconn.de/work/rondos-klavier-op-73-c-dur-chopin-frederic>,
-        <https://performance.musiconn.de/work/scaramouche-fassung-sax-kl-milhaud-darius>,
-        <https://performance.musiconn.de/work/sonaten-klavier-2-k-67-stravinsky-igor>,
-        <https://performance.musiconn.de/work/sonaten-klavier-2-schlagzeug-sz-110-bartok-bela>,
-        <https://viaf.org/viaf/189342277>,
-        <https://viaf.org/viaf/193652305>,
-        <https://viaf.org/viaf/193655976>,
-        <https://viaf.org/viaf/195808872>,
-        <https://viaf.org/viaf/219166409> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/buchhaendler-haus-frankfurt-am-main-cantate-saal> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/klavierduo-kurt-bauer-heidi-bung> ;
-    cto:viaf <https://viaf.org/viaf/189342277>,
-        <https://viaf.org/viaf/193652305>,
-        <https://viaf.org/viaf/193655976>,
-        <https://viaf.org/viaf/195808872>,
-        <https://viaf.org/viaf/219166409> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/klavierduo-kurt-bauer-heidi-bung> ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/buchhaendler-haus-frankfurt-am-main-cantate-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193655976> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300013744> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219166409> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300185995> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144466> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189342277> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195808872> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300241313> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193652305> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300158432> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/189342277> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193652305> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193655976> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195808872> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219166409> a nfdicore:NFDI_0001010 .
 

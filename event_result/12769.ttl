@@ -1,35 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/112212984X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300191545> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4035206-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/politischer-festakt-leipzig-1966-05-17> ] .
 
-<https://performance.musiconn.de/event/politischer-festakt-leipzig-1966-05-17> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/politischer-festakt-leipzig-1966-05-17> a cto:CTO_0001005 ;
     rdfs:label "politischer Festakt, Leipzig, 17.5.1966" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1966-05-17" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1966-05-17" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/112212984X>,
-        <https://d-nb.info/gnd/300191545>,
-        <https://d-nb.info/gnd/4035206-7> ;
-    cto:relatedItem <https://d-nb.info/gnd/112212984X>,
-        <https://d-nb.info/gnd/300191545>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154310911> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4035206-7> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1993148269842505230007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/112212984X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177438686> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300191545> ],
         <https://performance.musiconn.de/source/motettenbuch-1966>,
-        <https://performance.musiconn.de/work/auf-dem-see-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/ausfahrt-kuhn-siegfried>,
-        <https://performance.musiconn.de/work/es-tagt-der-sonne-morgenstrahl-gneist-werner>,
-        <https://performance.musiconn.de/work/lieder-maenner-chor-op-34-frisch-gesungen-silcher-friedrich>,
-        <https://viaf.org/viaf/177438686>,
-        <https://viaf.org/viaf/1993148269842505230007> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4035206-7>,
-        <https://viaf.org/viaf/154310911> ;
-    cto:viaf <https://viaf.org/viaf/154310911>,
-        <https://viaf.org/viaf/177438686>,
-        <https://viaf.org/viaf/1993148269842505230007> .
+        <https://performance.musiconn.de/work/es-tagt-der-sonne-morgenstrahl-gneist-werner> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154310911> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177438686> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/1993148269842505230007> a nfdicore:NFDI_0001010 .
 

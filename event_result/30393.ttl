@@ -1,68 +1,93 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1163671800> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009720> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300047312> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300112149> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300165005> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300167938> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7650986-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-kammerkonzert-schloss-albrechtsberg-dresden-1992-03-01-19-00> ] .
 
-<https://performance.musiconn.de/event/3-kammerkonzert-schloss-albrechtsberg-dresden-1992-03-01-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-kammerkonzert-schloss-albrechtsberg-dresden-1992-03-01-19-00> a cto:CTO_0001005 ;
     rdfs:label "3. Kammerkonzert, Schloss Albrechtsberg (Dresden), 1.3.1992, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1991-1992> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1992-03-01T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1992-03-01T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1163671800>,
-        <https://d-nb.info/gnd/300009720>,
-        <https://d-nb.info/gnd/300047312>,
-        <https://d-nb.info/gnd/300112149>,
-        <https://d-nb.info/gnd/300165005>,
-        <https://d-nb.info/gnd/300167938>,
-        <https://d-nb.info/gnd/4299852-9>,
-        <https://d-nb.info/gnd/7650986-2> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1991-1992> ;
-    cto:relatedItem <https://d-nb.info/gnd/1163671800>,
-        <https://d-nb.info/gnd/300009720>,
-        <https://d-nb.info/gnd/300047312>,
-        <https://d-nb.info/gnd/300112149>,
-        <https://d-nb.info/gnd/300165005>,
-        <https://d-nb.info/gnd/300167938>,
-        <https://d-nb.info/gnd/7650986-2>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198524517> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300167938> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177410363> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186300714> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215922672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1163671800> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185890743> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300047312> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7650986-2> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009720> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300165005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309479119> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300112149> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185993046> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/aida-gloria-allegitto-verdi-giuseppe>,
         <https://performance.musiconn.de/work/dead-man-blues-morton-jelly-roll>,
         <https://performance.musiconn.de/work/die-baenkelsaengerlieder-sonate-anonym>,
-        <https://performance.musiconn.de/work/die-kunst-der-fuge-contrapunctus-1-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/die-zauberfloete-o-isis-und-osiris-schenket-der-weisheit-geist-dem-neuen-paar-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/galliarda-scheidt-samuel>,
-        <https://performance.musiconn.de/work/humoresken-klavier-b-187-nr-7-dvorak-antonin>,
-        <https://performance.musiconn.de/work/il-cimento-dellarmonia-e-dellinventione-n-4-linverno-vivaldi-antonio>,
         <https://performance.musiconn.de/work/little-brown-jug-rosenthal-irving>,
         <https://performance.musiconn.de/work/paul-bunyan-suite-peek-ben-mc>,
         <https://performance.musiconn.de/work/porgy-and-bess-sinfonische-bilder-gershwin-george>,
         <https://performance.musiconn.de/work/praeludium-und-fuge-ueber-den-namen-bach-mills-frederic>,
-        <https://performance.musiconn.de/work/thats-a-plenty-pollack-lew>,
         <https://performance.musiconn.de/work/the-junk-man-rag-roberts-luckey>,
-        <https://performance.musiconn.de/work/two-ayres-adson-john>,
-        <https://performance.musiconn.de/work/yesterday-mccartney-paul>,
-        <https://viaf.org/viaf/177410363>,
-        <https://viaf.org/viaf/185890743>,
-        <https://viaf.org/viaf/185993046>,
-        <https://viaf.org/viaf/186300714>,
-        <https://viaf.org/viaf/198524517>,
-        <https://viaf.org/viaf/215922672>,
-        <https://viaf.org/viaf/309479119> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/177410363>,
-        <https://viaf.org/viaf/185890743>,
-        <https://viaf.org/viaf/185993046>,
-        <https://viaf.org/viaf/186300714>,
-        <https://viaf.org/viaf/198524517>,
-        <https://viaf.org/viaf/215922672>,
-        <https://viaf.org/viaf/237386709>,
-        <https://viaf.org/viaf/309479119> .
+        <https://performance.musiconn.de/work/two-ayres-adson-john> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177410363> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185890743> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185993046> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186300714> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198524517> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215922672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309479119> a nfdicore:NFDI_0001010 .
 

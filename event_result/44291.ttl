@@ -1,26 +1,38 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1063319641> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300017863> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/extra-konzert-alte-buchhaendlerboerse-leipzig-1849-01-13> ] .
 
-<https://performance.musiconn.de/event/extra-konzert-alte-buchhaendlerboerse-leipzig-1849-01-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/extra-konzert-alte-buchhaendlerboerse-leipzig-1849-01-13> a cto:CTO_0001005 ;
     rdfs:label "Extra-Konzert, Alte Buchhändlerbörse (Leipzig), 13.1.1849" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1848-1849> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1849-01-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1849-01-13" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1063319641>,
-        <https://d-nb.info/gnd/300017863>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1848-1849> ;
-    cto:relatedItem <https://d-nb.info/gnd/1063319641>,
-        <https://d-nb.info/gnd/300017863>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300017863> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180263900> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311741998> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1063319641> ],
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/source/stadtbibliothek-leipzig>,
@@ -28,18 +40,16 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/fantaisie-klavier-heller-stephen>,
         <https://performance.musiconn.de/work/intermezzi-orchester-gruss-aus-der-ferne-verhulst-johannes>,
         <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-7-es-dur-1-satz-boehner-johann-ludwig>,
-        <https://performance.musiconn.de/work/kriegerische-jubel-ouverture-lindpaintner-peter-joseph-von>,
         <https://performance.musiconn.de/work/leonoren-ouvertuere-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/lieder-getrennte-liebe-netzer-joseph>,
         <https://performance.musiconn.de/work/lieder-ist-es-wonne-ist-es-schmerz-netzer-joseph>,
         <https://performance.musiconn.de/work/mara-duett-netzer-joseph>,
-        <https://performance.musiconn.de/work/norma-casta-diva-bellini-vincenzo>,
-        <https://performance.musiconn.de/work/prolog-1>,
-        <https://viaf.org/viaf/180263900>,
-        <https://viaf.org/viaf/311741998> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/180263900>,
-        <https://viaf.org/viaf/242717024>,
-        <https://viaf.org/viaf/311741998> .
+        <https://performance.musiconn.de/work/prolog-1> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180263900> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311741998> a nfdicore:NFDI_0001010 .
 

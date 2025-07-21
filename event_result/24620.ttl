@@ -1,31 +1,38 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30038002X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4300889-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gottesdienst-nikolaikirche-leipzig-1898-01-16> ] .
 
-<https://performance.musiconn.de/event/gottesdienst-nikolaikirche-leipzig-1898-01-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gottesdienst-nikolaikirche-leipzig-1898-01-16> a cto:CTO_0001005 ;
     rdfs:label "Gottesdienst, Nikolaikirche (Leipzig), 16.1.1898" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1898-01-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1898-01-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30038002X>,
-        <https://d-nb.info/gnd/4300889-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/30038002X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173652475> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4300889-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30038002X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210944938> ],
         <https://performance.musiconn.de/source/motettenbuch-1897-98>,
-        <https://performance.musiconn.de/work/meinen-jesum-lass-ich-nicht-entziehe-dich-eilends-mein-herze-der-welt-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/meinen-jesum-lass-ich-nicht-jesum-lass-ich-nicht-von-mir-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/meinen-jesum-lass-ich-nicht-meinen-jesum-lass-ich-nicht-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/meinen-jesum-lass-ich-nicht-solange-sich-ein-tropfen-blut-in-herz-und-adern-reget-bach-johann-sebastian>,
-        <https://viaf.org/viaf/210944938> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4300889-6>,
-        <https://viaf.org/viaf/173652475> ;
-    cto:viaf <https://viaf.org/viaf/173652475>,
-        <https://viaf.org/viaf/210944938> .
+        <https://performance.musiconn.de/work/meinen-jesum-lass-ich-nicht-solange-sich-ein-tropfen-blut-in-herz-und-adern-reget-bach-johann-sebastian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/173652475> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210944938> a nfdicore:NFDI_0001010 .
 

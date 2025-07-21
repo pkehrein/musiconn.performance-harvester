@@ -1,38 +1,51 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1105424367> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300069243> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144253> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4103202-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/collegium-musicum-schloss-pommersfelden-32-internationale-sommerakademie-5-orchesterkonzert-schloss-weissenstein-pommersfelden-1989-08-05> ] .
 
-<https://performance.musiconn.de/event/collegium-musicum-schloss-pommersfelden-32-internationale-sommerakademie-5-orchesterkonzert-schloss-weissenstein-pommersfelden-1989-08-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/collegium-musicum-schloss-pommersfelden-32-internationale-sommerakademie-5-orchesterkonzert-schloss-weissenstein-pommersfelden-1989-08-05> a cto:CTO_0001005 ;
     rdfs:label "Collegium Musicum Schloss Pommersfelden - 32. Internationale Sommerakademie - 5. Orchesterkonzert, Schloss Weißenstein (Pommersfelden), 5.8.1989" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1989-08-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1989-08-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1105424367>,
-        <https://d-nb.info/gnd/300069243>,
-        <https://d-nb.info/gnd/300144253>,
-        <https://d-nb.info/gnd/4103202-0> ;
-    cto:relatedItem <https://d-nb.info/gnd/1105424367>,
-        <https://d-nb.info/gnd/300069243>,
-        <https://d-nb.info/gnd/300144253>,
-        <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-5-orchesterkonzert-32-internationale-sommerakademie-schloss-weissenstein-pommersfelden>,
-        <https://performance.musiconn.de/work/appalachian-spring-suite-copland-aaron>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-7-a-moll-schumann-clara>,
-        <https://performance.musiconn.de/work/sinfonia-concertante-oboe-fagott-violine-violoncello-orchester-hob-i-105-haydn-joseph>,
-        <https://viaf.org/viaf/176412468>,
-        <https://viaf.org/viaf/200778158>,
-        <https://viaf.org/viaf/213968750> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4103202-0>,
-        <https://viaf.org/viaf/172430063> ;
-    cto:viaf <https://viaf.org/viaf/172430063>,
-        <https://viaf.org/viaf/176412468>,
-        <https://viaf.org/viaf/200778158>,
-        <https://viaf.org/viaf/213968750> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4103202-0> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/172430063> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176412468> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213968750> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144253> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1105424367> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300069243> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200778158> ],
+        <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-5-orchesterkonzert-32-internationale-sommerakademie-schloss-weissenstein-pommersfelden> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/172430063> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176412468> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200778158> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213968750> a nfdicore:NFDI_0001010 .
 

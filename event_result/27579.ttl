@@ -1,43 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/104241842X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1135591830> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1264255144> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033834> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1912-10-31> ] .
 
-<https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1912-10-31> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1912-10-31> a cto:CTO_0001005 ;
     rdfs:label "1. Philharmonisches Konzert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 31.10.1912" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1912-1913> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1912-10-31" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1912-10-31" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/104241842X>,
-        <https://d-nb.info/gnd/1135591830>,
-        <https://d-nb.info/gnd/1264255144>,
-        <https://d-nb.info/gnd/300033834> ;
-    cto:itemOf <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1912-1913> ;
-    cto:relatedItem <https://d-nb.info/gnd/104241842X>,
-        <https://d-nb.info/gnd/1135591830>,
-        <https://d-nb.info/gnd/1264255144>,
-        <https://d-nb.info/gnd/300033834>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033834> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179476906> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1264255144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305262185> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206833489> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1135591830> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5154149844958502960001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/104241842X> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
-        <https://performance.musiconn.de/work/la-captive-berlioz-hector>,
-        <https://performance.musiconn.de/work/le-cid-suite-massenet-jules>,
         <https://performance.musiconn.de/work/le-prophete-arie-der-fides-meyerbeer-giacomo>,
-        <https://performance.musiconn.de/work/les-nuits-dete-le-spectre-de-la-rose-berlioz-hector>,
-        <https://performance.musiconn.de/work/phedre-ouvertuere-massenet-jules>,
-        <https://performance.musiconn.de/work/sinfonien-nr-5-op-64-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/179476906>,
-        <https://viaf.org/viaf/206833489>,
-        <https://viaf.org/viaf/305262185>,
-        <https://viaf.org/viaf/5154149844958502960001> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/179476906>,
-        <https://viaf.org/viaf/206833489>,
-        <https://viaf.org/viaf/305262185>,
-        <https://viaf.org/viaf/5154149844958502960001> .
+        <https://performance.musiconn.de/work/phedre-ouvertuere-massenet-jules> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179476906> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206833489> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305262185> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5154149844958502960001> a nfdicore:NFDI_0001010 .
 

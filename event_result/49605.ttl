@@ -1,49 +1,64 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300060769> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300062486> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300132549> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170475> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300893132> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/31-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1927-01-02-19-00> ] .
 
-<https://performance.musiconn.de/event/31-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1927-01-02-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/31-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1927-01-02-19-00> a cto:CTO_0001005 ;
     rdfs:label "31. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 2.1.1927, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1926-1927-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1927-01-02T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1927-01-02T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300060769>,
-        <https://d-nb.info/gnd/300062486>,
-        <https://d-nb.info/gnd/300132549>,
-        <https://d-nb.info/gnd/300170475>,
-        <https://d-nb.info/gnd/300893132> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1926-1927-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300060769>,
-        <https://d-nb.info/gnd/300062486>,
-        <https://d-nb.info/gnd/300132549>,
-        <https://d-nb.info/gnd/300170475>,
-        <https://d-nb.info/gnd/300893132>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300060769> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170475> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209861936> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2916150567609906370005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062486> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300893132> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201874207> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300132549> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/19145304723878610989> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/744144783054778562913> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
-        <https://performance.musiconn.de/work/guillaume-tell-oper-1829-ouvertuere-rossini-gioachino>,
         <https://performance.musiconn.de/work/konzerte-violine-orchester-op-28-a-moll-allegro-moderato-goldmark-karl>,
-        <https://performance.musiconn.de/work/konzerte-vl-orch-op-28-2-satz-goldmark-karl>,
         <https://performance.musiconn.de/work/melodien-aus-lortzings-opern-lortzing-albert>,
-        <https://performance.musiconn.de/work/mon-reve-fassung-orch-waldteufel-emil>,
-        <https://performance.musiconn.de/work/peer-gynt-suite-nr-1-op-46-grieg-edvard>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-80-nr-77-c-dur-2-satz-haydn-joseph>,
-        <https://performance.musiconn.de/work/tannhaeuser-und-der-saengerkrieg-auf-wartburg-ouvertuere-wagner-richard>,
-        <https://viaf.org/viaf/19145304723878610989>,
-        <https://viaf.org/viaf/201874207>,
-        <https://viaf.org/viaf/209861936>,
-        <https://viaf.org/viaf/2916150567609906370005>,
-        <https://viaf.org/viaf/744144783054778562913> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/19145304723878610989>,
-        <https://viaf.org/viaf/201874207>,
-        <https://viaf.org/viaf/209861936>,
-        <https://viaf.org/viaf/2916150567609906370005>,
-        <https://viaf.org/viaf/744144783054778562913> .
+        <https://performance.musiconn.de/work/mon-reve-fassung-orch-waldteufel-emil> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/19145304723878610989> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201874207> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209861936> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2916150567609906370005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/744144783054778562913> a nfdicore:NFDI_0001010 .
 

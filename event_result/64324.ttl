@@ -1,48 +1,63 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1212296923> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300016387> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300169949> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300184174> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300391374> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-vereinskonzert-rathaus-muenster-westf-friedenssaal-1896-01-17> ] .
 
-<https://performance.musiconn.de/event/5-vereinskonzert-rathaus-muenster-westf-friedenssaal-1896-01-17> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-vereinskonzert-rathaus-muenster-westf-friedenssaal-1896-01-17> a cto:CTO_0001005 ;
     rdfs:label "5. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 17.1.1896" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1895-96> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1896-01-17" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1896-01-17" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1212296923>,
-        <https://d-nb.info/gnd/300016387>,
-        <https://d-nb.info/gnd/300169949>,
-        <https://d-nb.info/gnd/300184174>,
-        <https://d-nb.info/gnd/300391374>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1895-96> ;
-    cto:relatedItem <https://d-nb.info/gnd/1212296923>,
-        <https://d-nb.info/gnd/300016387>,
-        <https://d-nb.info/gnd/300169949>,
-        <https://d-nb.info/gnd/300184174>,
-        <https://d-nb.info/gnd/300391374>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/295807811> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300184174> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1212296923> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300391374> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195814834> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206833017> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197652462> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016387> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300169949> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1895-1896>,
-        <https://performance.musiconn.de/work/charakterstuecke-klavier-mwv-u-62-e-dur-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/kaiserhymne-op-21-grimm-julius-otto>,
-        <https://performance.musiconn.de/work/kaisermarsch-wagner-richard>,
         <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-8-e-moll-straesser-ewald>,
         <https://performance.musiconn.de/work/siegesgesang-der-deutschen-becker-albert>,
-        <https://performance.musiconn.de/work/sinfonien-nr-5-op-67-c-moll-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sonaten-klavier-nr-1-op-11-fis-moll-2-satz-schumann-robert>,
-        <https://performance.musiconn.de/work/stuecke-klavier-op-118-nr-5-f-dur-brahms-johannes>,
-        <https://viaf.org/viaf/195814834>,
-        <https://viaf.org/viaf/197652462>,
-        <https://viaf.org/viaf/206833017>,
-        <https://viaf.org/viaf/295807811> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/195814834>,
-        <https://viaf.org/viaf/197652462>,
-        <https://viaf.org/viaf/206833017>,
-        <https://viaf.org/viaf/295807811> .
+        <https://performance.musiconn.de/work/sonaten-klavier-nr-1-op-11-fis-moll-2-satz-schumann-robert> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/195814834> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197652462> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206833017> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/295807811> a nfdicore:NFDI_0001010 .
 

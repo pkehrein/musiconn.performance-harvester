@@ -1,58 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1126275212> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1178740285> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300121113> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300926529> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7617741-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-1999-12-21> ] .
 
-<https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-1999-12-21> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-1999-12-21> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Thomaskirche (Leipzig), 21.12.1999" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1999-12-21" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1999-12-21" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1126275212>,
-        <https://d-nb.info/gnd/1178740285>,
-        <https://d-nb.info/gnd/300121113>,
-        <https://d-nb.info/gnd/300926529>,
-        <https://d-nb.info/gnd/4468631-6>,
-        <https://d-nb.info/gnd/7617741-5> ;
-    cto:relatedItem <https://d-nb.info/gnd/1126275212>,
-        <https://d-nb.info/gnd/1178740285>,
-        <https://d-nb.info/gnd/300121113>,
-        <https://d-nb.info/gnd/300926529>,
-        <https://d-nb.info/gnd/7617741-5>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197691204> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/161148876440349740006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185432006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1126275212> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1178740285> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300121113> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191519889> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300926529> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7617741-5> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181850865> ],
         <https://performance.musiconn.de/source/motettenbuch-1999-2000>,
         <https://performance.musiconn.de/work/altboehmische-gesaenge-teil-2-riedel-carl>,
-        <https://performance.musiconn.de/work/cymbalum-sionium-verbum-caro-factum-est-schein-johann-hermann>,
         <https://performance.musiconn.de/work/ihr-lieben-christen-freut-euch-nun-biller-georg-christoph>,
-        <https://performance.musiconn.de/work/improvisation-ueber-perotinus-braeutigam-volker>,
         <https://performance.musiconn.de/work/kantaten-bwv-36-nun-komm-der-heiden-heiland-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/lobt-gott-ihr-christen-alle-gleich>,
         <https://performance.musiconn.de/work/macht-hoch-die-tuer-mauersberger-erhard>,
         <https://performance.musiconn.de/work/maria-durch-ein-dornwald-ging-mauersberger-erhard>,
-        <https://performance.musiconn.de/work/musae-sioniae-theil-6-es-ist-ein-ros-entsprungen-praetorius-michael>,
         <https://performance.musiconn.de/work/nun-jauchzet-all-ihr-frommen-biller-georg-christoph>,
         <https://performance.musiconn.de/work/o-du-froehliche-chor-6-st-jung-helge>,
         <https://performance.musiconn.de/work/singet-frisch-und-wohlgemut-hellmann-diethard>,
         <https://performance.musiconn.de/work/stille-nacht-heilige-nacht-schreck-gustav-biller-georg-christoph>,
-        <https://performance.musiconn.de/work/veni-redemptor-gentium-ambrosius-mediolanensis>,
-        <https://performance.musiconn.de/work/viderunt-omnes-fines-terrae-anonym>,
-        <https://viaf.org/viaf/161148876440349740006>,
-        <https://viaf.org/viaf/181850865>,
-        <https://viaf.org/viaf/185432006>,
-        <https://viaf.org/viaf/191519889>,
-        <https://viaf.org/viaf/197691204> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/161148876440349740006>,
-        <https://viaf.org/viaf/181850865>,
-        <https://viaf.org/viaf/185432006>,
-        <https://viaf.org/viaf/191519889>,
-        <https://viaf.org/viaf/197691204> .
+        <https://performance.musiconn.de/work/viderunt-omnes-fines-terrae-anonym> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/161148876440349740006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181850865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185432006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191519889> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197691204> a nfdicore:NFDI_0001010 .
 

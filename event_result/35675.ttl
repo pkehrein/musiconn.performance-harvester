@@ -1,40 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300039131> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108133> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300130880> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300297696> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/9-ausserordentliches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1967-12-26-19-30> ] .
 
-<https://performance.musiconn.de/event/9-ausserordentliches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1967-12-26-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/9-ausserordentliches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1967-12-26-19-30> a cto:CTO_0001005 ;
     rdfs:label "9. Außerordentliches Konzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 26.12.1967, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1967-12-26T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1967-12-26T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300039131>,
-        <https://d-nb.info/gnd/300108133>,
-        <https://d-nb.info/gnd/300130880>,
-        <https://d-nb.info/gnd/300297696> ;
-    cto:relatedItem <https://d-nb.info/gnd/300039131>,
-        <https://d-nb.info/gnd/300108133>,
-        <https://d-nb.info/gnd/300130880>,
-        <https://d-nb.info/gnd/300297696>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/concerti-grossi-op-6-nr-8-corelli-arcangelo>,
-        <https://performance.musiconn.de/work/exsultate-jubilate-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-1619-se-i-languidi-miei-sguardi-monteverdi-claudio>,
-        <https://performance.musiconn.de/work/secherazada-rimskij-korsakov-nikolaj>,
-        <https://viaf.org/viaf/178050162>,
-        <https://viaf.org/viaf/180063206>,
-        <https://viaf.org/viaf/181076907>,
-        <https://viaf.org/viaf/184688381> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/178050162>,
-        <https://viaf.org/viaf/180063206>,
-        <https://viaf.org/viaf/181076907>,
-        <https://viaf.org/viaf/184688381> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181076907> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108133> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184688381> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300039131> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178050162> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300130880> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300297696> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180063206> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178050162> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180063206> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181076907> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184688381> a nfdicore:NFDI_0001010 .
 
