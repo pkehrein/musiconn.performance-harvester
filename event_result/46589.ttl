@@ -1,35 +1,41 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300005415> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111169> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/18-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-03-10> ] .
 
-<https://performance.musiconn.de/event/18-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-03-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/18-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-03-10> a cto:CTO_0001005 ;
     rdfs:label "18. Symphonie-Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 10.3.1926" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1925-1926-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1926-03-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1926-03-10" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300005415>,
-        <https://d-nb.info/gnd/300111169> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1925-1926-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300005415>,
-        <https://d-nb.info/gnd/300111169>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182681837> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300005415> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111169> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208681615> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-symphonie-konzerte-1908-1933>,
         <https://performance.musiconn.de/work/come-raggio-di-sol-bearbeitung-caldara-antonio>,
         <https://performance.musiconn.de/work/concerti-grossi-nr-22-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/die-brandenburgischen-konzerte-nr-5-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/gli-zingari-in-fiera-chi-vuol-la-zingarella-bearbeitung-paisiello-giovanni>,
-        <https://performance.musiconn.de/work/o-notte-piccinni-niccolo>,
-        <https://performance.musiconn.de/work/sinfonien-kv-551-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/182681837>,
-        <https://viaf.org/viaf/208681615> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/182681837>,
-        <https://viaf.org/viaf/208681615> .
+        <https://performance.musiconn.de/work/o-notte-piccinni-niccolo> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182681837> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208681615> a nfdicore:NFDI_0001010 .
 

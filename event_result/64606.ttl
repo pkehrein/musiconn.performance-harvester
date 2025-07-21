@@ -1,44 +1,58 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1070873586> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300074158> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4080439-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/komponisten-seminar-11-88-3-blonay-1988-12-01> ] .
 
-<https://performance.musiconn.de/event/komponisten-seminar-11-88-3-blonay-1988-12-01> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/komponisten-seminar-11-88-3-blonay-1988-12-01> a cto:CTO_0001005 ;
     rdfs:label "Komponisten-Seminar 11/88/3, Blonay, 1.12.1988" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-12-01" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-12-01" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1070873586>,
-        <https://d-nb.info/gnd/300074158>,
-        <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/4080439-2> ;
-    cto:relatedItem <https://d-nb.info/gnd/1070873586>,
-        <https://d-nb.info/gnd/300074158>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4080439-2> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/143059837> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300074158> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213967113> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315954917> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1070873586> ],
         <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
         <https://performance.musiconn.de/work/asinamali-nickerson-joe>,
         <https://performance.musiconn.de/work/et-lavare-silence-sotelo-mauricio>,
-        <https://performance.musiconn.de/work/l-obvio-hidalgo-manuel>,
-        <https://performance.musiconn.de/work/ma-quellanno-la-primavera-stentava-a-farsi-avanti-ospald-klaus>,
         <https://performance.musiconn.de/work/nocturnes-en-quatuor-pesson-gerard>,
         <https://performance.musiconn.de/work/sextett-fervers-andreas>,
         <https://performance.musiconn.de/work/silver-city-schwenk-fredrik>,
         <https://performance.musiconn.de/work/the-hinterstoisser-traverse-mason-benedict>,
-        <https://performance.musiconn.de/work/zustaende-friedrich-burkhard>,
-        <https://viaf.org/viaf/213967113>,
-        <https://viaf.org/viaf/315954917> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4080439-2>,
-        <https://viaf.org/viaf/143059837> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/143059837>,
-        <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/213967113>,
-        <https://viaf.org/viaf/315954917> .
+        <https://performance.musiconn.de/work/zustaende-friedrich-burkhard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/143059837> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213967113> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315954917> a nfdicore:NFDI_0001010 .
 

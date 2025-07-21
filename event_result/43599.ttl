@@ -1,35 +1,41 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300196873> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300823797> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncert-4-maja-sankt-petersburger-philharmonie-kleiner-saal-1974-05-04> ] .
 
-<https://performance.musiconn.de/event/koncert-4-maja-sankt-petersburger-philharmonie-kleiner-saal-1974-05-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncert-4-maja-sankt-petersburger-philharmonie-kleiner-saal-1974-05-04> a cto:CTO_0001005 ;
     rdfs:label "Koncert 4. maja, Sankt-Petersburger Philharmonie / Kleiner Saal, 4.5.1974" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1973-74> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1974-05-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1974-05-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300196873>,
-        <https://d-nb.info/gnd/300823797> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1973-74> ;
-    cto:relatedItem <https://d-nb.info/gnd/300196873>,
-        <https://d-nb.info/gnd/300823797>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217024138> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185540251> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300196873> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300823797> ],
         <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1974-4-mai>,
         <https://performance.musiconn.de/work/echinoctii-i-olah-tiberiu>,
-        <https://performance.musiconn.de/work/kammersymphonie-enescu-george>,
         <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-1-c-dur-dumitrescu-ion>,
         <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-2-op-52-jora-mihail>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-op-14-bentoiu-pascal>,
-        <https://performance.musiconn.de/work/sonaten-violoncello-vieru-anatol>,
-        <https://viaf.org/viaf/185540251>,
-        <https://viaf.org/viaf/217024138> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/185540251>,
-        <https://viaf.org/viaf/217024138> .
+        <https://performance.musiconn.de/work/sonaten-violoncello-vieru-anatol> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185540251> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217024138> a nfdicore:NFDI_0001010 .
 

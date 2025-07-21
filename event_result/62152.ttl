@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4037100-1> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/il-crispo-mailand-1663-12-20> ] .
 
-<https://performance.musiconn.de/event/il-crispo-mailand-1663-12-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/il-crispo-mailand-1663-12-20> a cto:CTO_0001005 ;
     rdfs:label "Il Crispo, Mailand, 20.12.1663" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1663-12-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1663-12-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4037100-1> ;
-    cto:relatedItem <https://performance.musiconn.de/source/corago-repertorio-e-archivio-di-libretti-del-melodramma-italiano-dal-1600-al-1900>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/157818740> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4037100-1> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/corago-repertorio-e-archivio-di-libretti-del-melodramma-italiano-dal-1600-al-1900>,
         <https://performance.musiconn.de/source/salvioli-giovanni-und-carlo-salvioli-bibliografia-universale-del-teatro-drammatico-italiano-venezia-ferrari-1903>,
         <https://performance.musiconn.de/source/sartori-claudio-i-libretti-italiani-a-stampa-dalle-origini-al-1800-6-bde-cuneo-bertola-locatelli-19901993>,
         <https://performance.musiconn.de/work/il-crispo-rossi-francesco> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4037100-1>,
-        <https://viaf.org/viaf/157818740> ;
-    cto:viaf <https://viaf.org/viaf/157818740> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/157818740> a nfdicore:NFDI_0001010 .
 

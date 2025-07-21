@@ -1,46 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/119435324X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1197654887> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029276> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300103239> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300299079> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1915-10-23-14-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1915-10-23-14-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1915-10-23-14-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 23.10.1915, 14:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1915-16> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1915-10-23T14:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1915-10-23T14:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/119435324X>,
-        <https://d-nb.info/gnd/1197654887>,
-        <https://d-nb.info/gnd/300029276>,
-        <https://d-nb.info/gnd/300103239>,
-        <https://d-nb.info/gnd/300299079>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1915-16> ;
-    cto:relatedItem <https://d-nb.info/gnd/119435324X>,
-        <https://d-nb.info/gnd/1197654887>,
-        <https://d-nb.info/gnd/300029276>,
-        <https://d-nb.info/gnd/300103239>,
-        <https://d-nb.info/gnd/300299079>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198524282> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/119435324X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1197654887> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029276> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200777053> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300299079> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300103239> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203713419> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/geistliche-lieder-op-137-lass-dich-nur-nichts-nicht-dauern-reger-max>,
-        <https://performance.musiconn.de/work/lieder-op-60-herr-schicke-was-du-willt-bruch-max>,
-        <https://performance.musiconn.de/work/motetten-op-106-wenn-ich-rufe-zu-dir-merkel-gustav>,
-        <https://performance.musiconn.de/work/o-trag-den-herrn-im-herzen-volkmann-robert>,
-        <https://performance.musiconn.de/work/sei-mir-gnaedig-gott-merkel-gustav>,
-        <https://performance.musiconn.de/work/sonaten-orgel-4-haendig-op-30-d-moll-merkel-gustav>,
-        <https://viaf.org/viaf/198524282>,
-        <https://viaf.org/viaf/200777053>,
-        <https://viaf.org/viaf/203713419> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/198524282>,
-        <https://viaf.org/viaf/200777053>,
-        <https://viaf.org/viaf/203713419>,
-        <https://viaf.org/viaf/248189528> .
+        <https://performance.musiconn.de/work/o-trag-den-herrn-im-herzen-volkmann-robert> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/198524282> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200777053> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203713419> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
 

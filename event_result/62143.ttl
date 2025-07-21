@@ -1,30 +1,33 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1031522328> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/il-giasone-teatro-san-cassiano-venedig-1649-01-05> ] .
 
-<https://performance.musiconn.de/event/il-giasone-teatro-san-cassiano-venedig-1649-01-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/il-giasone-teatro-san-cassiano-venedig-1649-01-05> a cto:CTO_0001005 ;
     rdfs:label "Il Giasone, Teatro San Cassiano (Venedig), 5.1.1649" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1649-01-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1649-01-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1031522328> ;
-    cto:relatedItem <https://d-nb.info/gnd/1031522328>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/teatro-san-cassiano-venedig> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174213687> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1031522328> ],
         <https://performance.musiconn.de/source/corago-repertorio-e-archivio-di-libretti-del-melodramma-italiano-dal-1600-al-1900>,
         <https://performance.musiconn.de/source/giasone-ristampa-1658>,
         <https://performance.musiconn.de/source/giasone-ristampa-1660>,
         <https://performance.musiconn.de/source/michelassi-nicola-balbis-febiarmonici-and-the-first-road-shows-of-giasone-1649-1653-in-readying-cavallis-operas-for-the-stage-manuscript-edition-production-edited-by-ellen-rosand-307-320-ashgate-interdisciplinary-studies-in-opera-farnham-ashgate-2013>,
         <https://performance.musiconn.de/source/sartori-claudio-i-libretti-italiani-a-stampa-dalle-origini-al-1800-6-bde-cuneo-bertola-locatelli-19901993>,
-        <https://performance.musiconn.de/source/sonneck-oscar-george-theodore-catalogue-of-opera-librettos-printed-before-1800-2-vol-washington-dc-government-printing-office-1914>,
-        <https://performance.musiconn.de/work/giasone-cavalli-francesco>,
-        <https://viaf.org/viaf/174213687> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/teatro-san-cassiano-venedig> ;
-    cto:viaf <https://viaf.org/viaf/174213687> .
+        <https://performance.musiconn.de/source/sonneck-oscar-george-theodore-catalogue-of-opera-librettos-printed-before-1800-2-vol-washington-dc-government-printing-office-1914> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174213687> a nfdicore:NFDI_0001010 .
 

@@ -1,51 +1,66 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1078006318> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300062559> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171528> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30052255X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300928521> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1910-09-04> ] .
 
-<https://performance.musiconn.de/event/1-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1910-09-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1910-09-04> a cto:CTO_0001005 ;
     rdfs:label "1. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 4.9.1910" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1910-1911-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1910-09-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1910-09-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1078006318>,
-        <https://d-nb.info/gnd/300062559>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/30052255X>,
-        <https://d-nb.info/gnd/300928521> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1910-1911-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/1078006318>,
-        <https://d-nb.info/gnd/300062559>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/30052255X>,
-        <https://d-nb.info/gnd/300928521>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213419989> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300928521> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177811557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1078006318> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062559> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211721609> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30052255X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/296887927> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/82144782941942425458> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
         <https://performance.musiconn.de/work/cavalleria-rusticana-vospiel-und-siciliana-mascagni-pietro>,
-        <https://performance.musiconn.de/work/der-freischuetz-ouvertuere-weber-carl-maria-von>,
         <https://performance.musiconn.de/work/der-graf-von-luxemburg-walzer-lehar-franz>,
         <https://performance.musiconn.de/work/fantasien-orchester-bekker-vasilij-fedorovic>,
-        <https://performance.musiconn.de/work/fest-ouvertuere-lassen-eduard>,
         <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-4-op-31-d-moll-introduktion-andante-und-finale-vieuxtemps-henri>,
-        <https://performance.musiconn.de/work/melodien-orch-op-53-kl-erstes-begegnen-grieg-edvard>,
-        <https://performance.musiconn.de/work/peer-gynt-suite-nr-2-op-55-solveigs-sang-grieg-edvard>,
-        <https://performance.musiconn.de/work/sicilietta-blon-franz-von>,
-        <https://performance.musiconn.de/work/sylvia-suite-delibes-leo>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/211721609>,
-        <https://viaf.org/viaf/213419989>,
-        <https://viaf.org/viaf/296887927>,
-        <https://viaf.org/viaf/82144782941942425458> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/211721609>,
-        <https://viaf.org/viaf/213419989>,
-        <https://viaf.org/viaf/296887927>,
-        <https://viaf.org/viaf/82144782941942425458> .
+        <https://performance.musiconn.de/work/sicilietta-blon-franz-von> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177811557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211721609> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213419989> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/296887927> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/82144782941942425458> a nfdicore:NFDI_0001010 .
 

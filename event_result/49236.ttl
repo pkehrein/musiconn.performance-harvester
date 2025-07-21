@@ -1,35 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300033761> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037651> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300149077> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/29th-abonnement-concert-nihon-seinenkan-hall-tokyo-1928-04-22> ] .
 
-<https://performance.musiconn.de/event/29th-abonnement-concert-nihon-seinenkan-hall-tokyo-1928-04-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/29th-abonnement-concert-nihon-seinenkan-hall-tokyo-1928-04-22> a cto:CTO_0001005 ;
     rdfs:label "29th Abonnement Concert, Nihon Seinenkan Hall (Tokyo), 22.4.1928" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1928-04-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1928-04-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300033761>,
-        <https://d-nb.info/gnd/300037651>,
-        <https://d-nb.info/gnd/300149077> ;
-    cto:relatedItem <https://d-nb.info/gnd/300033761>,
-        <https://d-nb.info/gnd/300037651>,
-        <https://d-nb.info/gnd/300149077>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/141981202> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037651> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033761> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205759282> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179025422> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300149077> ],
         <https://performance.musiconn.de/source/nhk-kokyo-gakudan-ed-nhk-1977-nhk-kokyo-gakudan-goju-nenshi-1926-1977-nhk-tokyo-nippon-hoso-shuppan-kyokai>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-des-dur-werkmeister-heinrich>,
-        <https://performance.musiconn.de/work/le-poeme-de-lextase-skrjabin-aleksandr-n>,
-        <https://performance.musiconn.de/work/polonaise-mit-vorangehendem-andante-spianato-chopin-frederic>,
-        <https://performance.musiconn.de/work/serenaden-streichorchester-cs-45-c-dur-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/179025422>,
-        <https://viaf.org/viaf/205759282> ;
-    cto:relatedLocation <https://viaf.org/viaf/141981202> ;
-    cto:viaf <https://viaf.org/viaf/141981202>,
-        <https://viaf.org/viaf/179025422>,
-        <https://viaf.org/viaf/205759282> .
+        <https://performance.musiconn.de/work/konzerte-klavier-orchester-des-dur-werkmeister-heinrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/141981202> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179025422> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205759282> a nfdicore:NFDI_0001010 .
 

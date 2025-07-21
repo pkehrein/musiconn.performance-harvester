@@ -1,32 +1,38 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300124090> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133782> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-philharmonisches-konzert-kulturpalast-dresden-festsaal-1987-03-28-19-30> ] .
 
-<https://performance.musiconn.de/event/8-philharmonisches-konzert-kulturpalast-dresden-festsaal-1987-03-28-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-philharmonisches-konzert-kulturpalast-dresden-festsaal-1987-03-28-19-30> a cto:CTO_0001005 ;
     rdfs:label "8. Philharmonisches Konzert, Kulturpalast (Dresden) / Festsaal, 28.3.1987, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1986-1987> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-03-28T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-03-28T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300124090>,
-        <https://d-nb.info/gnd/300133782> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1986-1987> ;
-    cto:relatedItem <https://d-nb.info/gnd/300124090>,
-        <https://d-nb.info/gnd/300133782>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203708908> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133782> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300124090> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192574771> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-r-193-a-moll-saint-saens-camille>,
-        <https://performance.musiconn.de/work/ouvertuere-zu-erinnerung-an-eine-sommernacht-in-madrid-glinka-michail-ivanovic>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-op-44-a-moll-rachmaninov-sergej-vasilevic>,
-        <https://viaf.org/viaf/192574771>,
-        <https://viaf.org/viaf/203708908> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/192574771>,
-        <https://viaf.org/viaf/203708908> .
+        <https://performance.musiconn.de/work/ouvertuere-zu-erinnerung-an-eine-sommernacht-in-madrid-glinka-michail-ivanovic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/192574771> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203708908> a nfdicore:NFDI_0001010 .
 

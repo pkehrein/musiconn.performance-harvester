@@ -1,38 +1,47 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300146388> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146418> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300180942> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-capitol-leipzig-1944-10-19> ] .
 
-<https://performance.musiconn.de/event/konzert-capitol-leipzig-1944-10-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-capitol-leipzig-1944-10-19> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Capitol (Leipzig), 19.10.1944" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1944-10-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1944-10-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300146388>,
-        <https://d-nb.info/gnd/300146418>,
-        <https://d-nb.info/gnd/300180942> ;
-    cto:relatedItem <https://d-nb.info/gnd/300146388>,
-        <https://d-nb.info/gnd/300146418>,
-        <https://d-nb.info/gnd/300180942>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/capitol-leipzig> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300180942> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146418> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186552780> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205762395> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146388> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219163822> ],
         <https://performance.musiconn.de/source/motettenbuch-1944>,
         <https://performance.musiconn.de/work/ach-gott-wie-weh-tut-scheiden-pepping-ernst>,
         <https://performance.musiconn.de/work/bei-tag-und-nacht-die-voeglein-in-dem-walde-pepping-ernst>,
-        <https://performance.musiconn.de/work/bei-tag-und-nacht-schwefelhelzle-pepping-ernst>,
-        <https://performance.musiconn.de/work/beim-abschied-zu-singen-schumann-robert>,
-        <https://performance.musiconn.de/work/romanzen-und-balladen-op-145-romanze-vom-gaensebuben-schumann-robert>,
-        <https://performance.musiconn.de/work/romanzen-und-balladen-op-146-das-schifflein-schumann-robert>,
-        <https://viaf.org/viaf/186552780>,
-        <https://viaf.org/viaf/205762395>,
-        <https://viaf.org/viaf/219163822> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/capitol-leipzig> ;
-    cto:viaf <https://viaf.org/viaf/186552780>,
-        <https://viaf.org/viaf/205762395>,
-        <https://viaf.org/viaf/219163822> .
+        <https://performance.musiconn.de/work/bei-tag-und-nacht-schwefelhelzle-pepping-ernst> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/186552780> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205762395> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219163822> a nfdicore:NFDI_0001010 .
 

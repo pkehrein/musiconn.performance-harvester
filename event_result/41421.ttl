@@ -1,39 +1,47 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015585> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109148> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1916-10-17-19-30> ] .
 
-<https://performance.musiconn.de/event/1-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1916-10-17-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1916-10-17-19-30> a cto:CTO_0001005 ;
     rdfs:label "1. Philharmonisches Konzert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 17.10.1916, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1916-1917> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1916-10-17T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1916-10-17T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300015585>,
-        <https://d-nb.info/gnd/300109148> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1916-1917> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015585>,
-        <https://d-nb.info/gnd/300109148>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109148> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181427594> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191497301> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015585> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-kv-218-d-dur-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/la-juive-szene-und-arie-des-eleazar-mit-finale-halevy-fromental>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-2-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/lieder-am-klavier-breit-ueber-mein-haupt-winterliebe-strauss-richard>,
         <https://performance.musiconn.de/work/lieder-am-klavier-loreley-es-muss-ein-wunderbares-sein-o-komm-im-traum-liszt-franz>,
         <https://performance.musiconn.de/work/melodie-fassung-gluck-christoph-willibald>,
         <https://performance.musiconn.de/work/menuett-fassung-porpora-nicola>,
         <https://performance.musiconn.de/work/oberon-arie-des-hueon-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/praeludium-und-allegro-fassung-paganini-niccolo>,
-        <https://viaf.org/viaf/181427594>,
-        <https://viaf.org/viaf/191497301> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/181427594>,
-        <https://viaf.org/viaf/191497301> .
+        <https://performance.musiconn.de/work/praeludium-und-allegro-fassung-paganini-niccolo> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181427594> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191497301> a nfdicore:NFDI_0001010 .
 

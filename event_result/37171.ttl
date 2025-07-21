@@ -1,66 +1,91 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1169230628> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1181242940> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109458> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140207> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146051> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300498691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300559585> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4754677-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-volkshaus-jena-1929-12-03-20-00> ] .
 
-<https://performance.musiconn.de/event/konzert-volkshaus-jena-1929-12-03-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-volkshaus-jena-1929-12-03-20-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Volkshaus (Jena), 3.12.1929, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1929-12-03T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1929-12-03T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1169230628>,
-        <https://d-nb.info/gnd/1181242940>,
-        <https://d-nb.info/gnd/300109458>,
-        <https://d-nb.info/gnd/300140207>,
-        <https://d-nb.info/gnd/300146051>,
-        <https://d-nb.info/gnd/300498691>,
-        <https://d-nb.info/gnd/300559585>,
-        <https://d-nb.info/gnd/4754677-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1169230628>,
-        <https://d-nb.info/gnd/1181242940>,
-        <https://d-nb.info/gnd/300109458>,
-        <https://d-nb.info/gnd/300140207>,
-        <https://d-nb.info/gnd/300146051>,
-        <https://d-nb.info/gnd/300498691>,
-        <https://d-nb.info/gnd/300559585>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/238142706> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4754677-3> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1169230628> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146051> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300559585> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191509516> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140207> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2077154015345909310008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1181242940> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181687151> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192575176> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300498691> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189341272> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177338171> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109458> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195817445> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/des-muellers-lust-und-leid-das-wandern-ist-des-muellers-lust-zoellner-carl-friedrich>,
-        <https://performance.musiconn.de/work/deutsche-messe-zum-sanctus-schubert-franz>,
-        <https://performance.musiconn.de/work/die-nacht-schubert-franz-1>,
-        <https://performance.musiconn.de/work/gedichte-im-volkston-aus-der-jugendzeit-radecke-robert>,
         <https://performance.musiconn.de/work/heute-ist-heut-weinzierl-max-von>,
         <https://performance.musiconn.de/work/hochamt-im-walde-becker-reinhold>,
         <https://performance.musiconn.de/work/horch-was-kommt-von-draussen-rein>,
-        <https://performance.musiconn.de/work/maurergesang-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/morgenlied-rietz-julius>,
         <https://performance.musiconn.de/work/o-wie-herbe-ist-das-scheiden-silcher-friedrich>,
-        <https://performance.musiconn.de/work/ritornelle-nach-friedrich-rueckert-in-kanonischen-weisen-schumann-robert>,
         <https://performance.musiconn.de/work/rosenfruehling-juengst-hugo>,
         <https://performance.musiconn.de/work/schwaebisches-tanzlied-fassung-anonym>,
-        <https://performance.musiconn.de/work/vom-rhein-bruch-max>,
-        <https://viaf.org/viaf/177338171>,
-        <https://viaf.org/viaf/181687151>,
-        <https://viaf.org/viaf/189341272>,
-        <https://viaf.org/viaf/191509516>,
-        <https://viaf.org/viaf/192575176>,
-        <https://viaf.org/viaf/195817445>,
-        <https://viaf.org/viaf/2077154015345909310008> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4754677-3>,
-        <https://viaf.org/viaf/238142706> ;
-    cto:viaf <https://viaf.org/viaf/177338171>,
-        <https://viaf.org/viaf/181687151>,
-        <https://viaf.org/viaf/189341272>,
-        <https://viaf.org/viaf/191509516>,
-        <https://viaf.org/viaf/192575176>,
-        <https://viaf.org/viaf/195817445>,
-        <https://viaf.org/viaf/2077154015345909310008>,
-        <https://viaf.org/viaf/238142706> .
+        <https://performance.musiconn.de/work/vom-rhein-bruch-max> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177338171> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181687151> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189341272> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191509516> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192575176> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195817445> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2077154015345909310008> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/238142706> a nfdicore:NFDI_0001010 .
 

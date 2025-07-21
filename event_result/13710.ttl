@@ -1,31 +1,39 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1192484592> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30012676X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30070027X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gottesdienst-frauenkirche-grimma-1945-03-18> ] .
 
-<https://performance.musiconn.de/event/gottesdienst-frauenkirche-grimma-1945-03-18> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gottesdienst-frauenkirche-grimma-1945-03-18> a cto:CTO_0001005 ;
     rdfs:label "Gottesdienst, Frauenkirche (Grimma), 18.3.1945" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1945-03-18" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1945-03-18" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1192484592>,
-        <https://d-nb.info/gnd/30012676X>,
-        <https://d-nb.info/gnd/30070027X> ;
-    cto:relatedItem <https://d-nb.info/gnd/30012676X>,
-        <https://d-nb.info/gnd/30070027X>,
-        <https://performance.musiconn.de/source/motettenbuch-1945>,
-        <https://performance.musiconn.de/work/die-geistlichen-lieder-und-arien-aus-schemellis-gesangbuch-kommt-seelen-dieser-tag-muss-heilig-sein-besungen-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-138-morgengesang-reger-max>,
-        <https://viaf.org/viaf/181790755>,
-        <https://viaf.org/viaf/182292233> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1192484592> ;
-    cto:viaf <https://viaf.org/viaf/181790755>,
-        <https://viaf.org/viaf/182292233> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1192484592> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30070027X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182292233> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181790755> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30012676X> ],
+        <https://performance.musiconn.de/source/motettenbuch-1945> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181790755> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182292233> a nfdicore:NFDI_0001010 .
 

@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300034172> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156456> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300290276> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/9-philharmonisches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1949-06-02-19-00> ] .
 
-<https://performance.musiconn.de/event/9-philharmonisches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1949-06-02-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/9-philharmonisches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1949-06-02-19-00> a cto:CTO_0001005 ;
     rdfs:label "9. Philharmonisches Konzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 2.6.1949, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1948-1949> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1949-06-02T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1949-06-02T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300034172>,
-        <https://d-nb.info/gnd/300156456>,
-        <https://d-nb.info/gnd/300290276> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1948-1949> ;
-    cto:relatedItem <https://d-nb.info/gnd/300034172>,
-        <https://d-nb.info/gnd/300156456>,
-        <https://d-nb.info/gnd/300290276>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/don-quixote-strauss-richard>,
-        <https://performance.musiconn.de/work/petite-symphonie-concertante-martin-frank>,
-        <https://performance.musiconn.de/work/variacii-na-temu-rokoko-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/176605857>,
-        <https://viaf.org/viaf/183353711>,
-        <https://viaf.org/viaf/184093395> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/176605857>,
-        <https://viaf.org/viaf/183353711>,
-        <https://viaf.org/viaf/184093395> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183353711> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184093395> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156456> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300290276> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300034172> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176605857> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176605857> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183353711> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184093395> a nfdicore:NFDI_0001010 .
 

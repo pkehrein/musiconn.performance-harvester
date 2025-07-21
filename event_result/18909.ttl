@@ -1,50 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1194011055> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009984> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001001X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300143737> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300556233> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300774273> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-auferstehungskirche-dueren-1938-10-23> ] .
 
-<https://performance.musiconn.de/event/konzert-auferstehungskirche-dueren-1938-10-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-auferstehungskirche-dueren-1938-10-23> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Auferstehungskirche (Düren), 23.10.1938" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1938-10-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1938-10-23" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1194011055>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/30001001X>,
-        <https://d-nb.info/gnd/300143737>,
-        <https://d-nb.info/gnd/300556233>,
-        <https://d-nb.info/gnd/300774273> ;
-    cto:relatedItem <https://d-nb.info/gnd/1194011055>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/30001001X>,
-        <https://d-nb.info/gnd/300143737>,
-        <https://d-nb.info/gnd/300556233>,
-        <https://d-nb.info/gnd/300774273>,
-        <https://performance.musiconn.de/source/motettenbuch-1938>,
-        <https://performance.musiconn.de/work/jesu-meine-freude-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/komm-jesu-komm-mein-leib-ist-muede-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/psalmen-davids-psalm-98-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/unser-leben-ist-ein-schatten-bach-johann-michael>,
-        <https://performance.musiconn.de/work/unsers-herzens-freude-hat-ein-ende-bach-johann-christoph>,
-        <https://performance.musiconn.de/work/valet-und-trost-lied-rosenmueller-johann>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/182469156>,
-        <https://viaf.org/viaf/182524451>,
-        <https://viaf.org/viaf/193655948>,
-        <https://viaf.org/viaf/251940032>,
-        <https://viaf.org/viaf/3915156811374745390009> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/auferstehungskirche-dueren> ;
-    cto:viaf <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/182469156>,
-        <https://viaf.org/viaf/182524451>,
-        <https://viaf.org/viaf/193655948>,
-        <https://viaf.org/viaf/251940032>,
-        <https://viaf.org/viaf/3915156811374745390009> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/auferstehungskirche-dueren> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193655948> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300143737> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009984> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1194011055> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182469156> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001001X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/251940032> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300556233> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300774273> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182524451> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3915156811374745390009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177379672> ],
+        <https://performance.musiconn.de/source/motettenbuch-1938> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177379672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182469156> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182524451> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193655948> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/251940032> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3915156811374745390009> a nfdicore:NFDI_0001010 .
 

@@ -1,43 +1,58 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1269873423> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/128896319X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300269994> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4704834-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/eoetvoes-9-86-bibliotheksbau-der-staatsbibliothek-zu-berlin-berlin-haus-2-1986-09-12> ] .
 
-<https://performance.musiconn.de/event/eoetvoes-9-86-bibliotheksbau-der-staatsbibliothek-zu-berlin-berlin-haus-2-1986-09-12> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/eoetvoes-9-86-bibliotheksbau-der-staatsbibliothek-zu-berlin-berlin-haus-2-1986-09-12> a cto:CTO_0001005 ;
     rdfs:label "Eötvös 9/86, Bibliotheksbau der Staatsbibliothek zu Berlin (Berlin) / Haus 2, 12.9.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-09-12" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-09-12" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1269873423>,
-        <https://d-nb.info/gnd/128896319X>,
-        <https://d-nb.info/gnd/300269994>,
-        <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/4704834-7> ;
-    cto:relatedItem <https://d-nb.info/gnd/1269873423>,
-        <https://d-nb.info/gnd/128896319X>,
-        <https://d-nb.info/gnd/300269994>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4704834-7> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/128896319X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7591168517317171980006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1269873423> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7616166600457618000008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300269994> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183617862> ],
         <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/concerto-misterioso-grabovskij-leonid-a>,
         <https://performance.musiconn.de/work/drei-bilder-nach-paul-klee-fuer-viola-u-ensemble-denisov-edison-vasilevic>,
-        <https://performance.musiconn.de/work/music-for-twelve-firsova-elena-olegovna>,
         <https://performance.musiconn.de/work/percussionata-dimitriev-georgij>,
-        <https://performance.musiconn.de/work/quasi-hoquetus-gubajdulina-sofija-asgatovna>,
-        <https://performance.musiconn.de/work/the-seasons-smirnov-dmitrij-valentinovic>,
-        <https://viaf.org/viaf/183617862>,
-        <https://viaf.org/viaf/7591168517317171980006>,
-        <https://viaf.org/viaf/7616166600457618000008> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4704834-7> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/183617862>,
-        <https://viaf.org/viaf/7591168517317171980006>,
-        <https://viaf.org/viaf/7616166600457618000008> .
+        <https://performance.musiconn.de/work/the-seasons-smirnov-dmitrij-valentinovic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183617862> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7591168517317171980006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7616166600457618000008> a nfdicore:NFDI_0001010 .
 

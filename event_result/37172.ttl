@@ -1,52 +1,67 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1121016251> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1139224247> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30012550X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300157347> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300409613> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/musik-abend-oberrealschule-jena-aula-1929-12-08-20-00> ] .
 
-<https://performance.musiconn.de/event/musik-abend-oberrealschule-jena-aula-1929-12-08-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/musik-abend-oberrealschule-jena-aula-1929-12-08-20-00> a cto:CTO_0001005 ;
     rdfs:label "Musik-Abend, Oberrealschule (Jena). Aula, 8.12.1929, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1929-12-08T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1929-12-08T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1121016251>,
-        <https://d-nb.info/gnd/1139224247>,
-        <https://d-nb.info/gnd/30012550X>,
-        <https://d-nb.info/gnd/300157347>,
-        <https://d-nb.info/gnd/300409613> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1121016251>,
-        <https://d-nb.info/gnd/1139224247>,
-        <https://d-nb.info/gnd/30012550X>,
-        <https://d-nb.info/gnd/300157347>,
-        <https://d-nb.info/gnd/300409613>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/lyzeum-mit-reformrealgymnasium-jena> ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/oberrealschule-jena-aula> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1121016251> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183547377> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4615148149520396930002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215925295> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157347> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305313510> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300409613> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1139224247> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30012550X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211718669> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
         <https://performance.musiconn.de/work/die-schleier-debussy-claude>,
         <https://performance.musiconn.de/work/frische-fahrt-koch-markus>,
-        <https://performance.musiconn.de/work/gesaenge-frauenchor-op-111b-abendgang-im-lenz-reger-max>,
-        <https://performance.musiconn.de/work/miroirs-noctuelles-ravel-maurice>,
         <https://performance.musiconn.de/work/saatengruen-liszt-franz>,
         <https://performance.musiconn.de/work/schoene-erde-wache-auf-kaun-hugo>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-op-18-strauss-richard>,
-        <https://performance.musiconn.de/work/sonatinen-klavier-op-89-nr-3-reger-max>,
-        <https://performance.musiconn.de/work/trios-klavier-op-174-f-dur-foerster-alban>,
-        <https://performance.musiconn.de/work/waldeinsamkeit-thuille-ludwig>,
-        <https://viaf.org/viaf/183547377>,
-        <https://viaf.org/viaf/211718669>,
-        <https://viaf.org/viaf/215925295>,
-        <https://viaf.org/viaf/305313510>,
-        <https://viaf.org/viaf/4615148149520396930002> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/oberrealschule-jena-aula> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/lyzeum-mit-reformrealgymnasium-jena> ;
-    cto:viaf <https://viaf.org/viaf/183547377>,
-        <https://viaf.org/viaf/211718669>,
-        <https://viaf.org/viaf/215925295>,
-        <https://viaf.org/viaf/305313510>,
-        <https://viaf.org/viaf/4615148149520396930002> .
+        <https://performance.musiconn.de/work/trios-klavier-op-174-f-dur-foerster-alban> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/183547377> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211718669> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215925295> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305313510> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4615148149520396930002> a nfdicore:NFDI_0001010 .
 

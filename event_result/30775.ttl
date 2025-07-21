@@ -1,31 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300120540> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300134010> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/asien-japan-europa-spanien-1995-gifuken-kennin-fureai-kaikan-1995-09-30-17-00> ] .
 
-<https://performance.musiconn.de/event/asien-japan-europa-spanien-1995-gifuken-kennin-fureai-kaikan-1995-09-30-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/asien-japan-europa-spanien-1995-gifuken-kennin-fureai-kaikan-1995-09-30-17-00> a cto:CTO_0001005 ;
     rdfs:label "Asien - Japan / Europa - Spanien 1995, Gifuken Kennin Fureai Kaikan, 30.9.1995, 17:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1995-1996> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1995-09-30T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1995-09-30T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300120540>,
-        <https://d-nb.info/gnd/300134010> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1995-1996> ;
-    cto:relatedItem <https://d-nb.info/gnd/300120540>,
-        <https://d-nb.info/gnd/300134010>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-klavier-2-orchester-fp-61-d-moll-poulenc-francis>,
-        <https://performance.musiconn.de/work/sinfonien-r-176-c-moll-saint-saens-camille>,
-        <https://viaf.org/viaf/212880798>,
-        <https://viaf.org/viaf/306409537> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/gifuken-kennin-fureai-kaikan> ;
-    cto:viaf <https://viaf.org/viaf/212880798>,
-        <https://viaf.org/viaf/306409537> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/gifuken-kennin-fureai-kaikan> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300120540> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306409537> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300134010> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212880798> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/212880798> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/306409537> a nfdicore:NFDI_0001010 .
 

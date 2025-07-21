@@ -1,52 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300086377> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300113064> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30014511X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300203942> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300904320> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30100093X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-kammermusik-abend-christlicher-verein-junger-menschen-saal-frankfurt-am-main-1947-11-27-18-00> ] .
 
-<https://performance.musiconn.de/event/4-kammermusik-abend-christlicher-verein-junger-menschen-saal-frankfurt-am-main-1947-11-27-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-kammermusik-abend-christlicher-verein-junger-menschen-saal-frankfurt-am-main-1947-11-27-18-00> a cto:CTO_0001005 ;
     rdfs:label "4. Kammermusik-Abend, Christlicher Verein Junger Menschen. Saal (Frankfurt am Main), 27.11.1947, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1947-1948> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1947-11-27T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1947-11-27T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300086377>,
-        <https://d-nb.info/gnd/300113064>,
-        <https://d-nb.info/gnd/30014511X>,
-        <https://d-nb.info/gnd/300203942>,
-        <https://d-nb.info/gnd/300904320>,
-        <https://d-nb.info/gnd/30100093X> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1947-1948> ;
-    cto:relatedItem <https://d-nb.info/gnd/300086377>,
-        <https://d-nb.info/gnd/300113064>,
-        <https://d-nb.info/gnd/30014511X>,
-        <https://d-nb.info/gnd/300203942>,
-        <https://d-nb.info/gnd/300904320>,
-        <https://d-nb.info/gnd/30100093X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/christlicher-verein-junger-menschen-saal-frankfurt-am-main> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179025904> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2584150085873515060003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300904320> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/232106268> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184352730> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/261268491> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30100093X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300086377> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30014511X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175192566> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300113064> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300203942> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/ariadne-auf-naxos-haydn-joseph>,
-        <https://performance.musiconn.de/work/gesaenge-nach-adelbert-von-chamissop-die-kartenlegerin-schumann-robert>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-96-ihre-stimme-schumann-robert>,
-        <https://performance.musiconn.de/work/nachtlied-nach-friedrich-hebbel-schumann-robert>,
-        <https://performance.musiconn.de/work/pesni-i-pljaski-smerti-musorgskij-modest-petrovic>,
-        <https://performance.musiconn.de/work/reisebuch-aus-den-oesterreichischen-alpen-krenek-ernst>,
-        <https://performance.musiconn.de/work/russische-lieder-op-68-reutter-hermann>,
-        <https://viaf.org/viaf/175192566>,
-        <https://viaf.org/viaf/179025904>,
-        <https://viaf.org/viaf/184352730>,
-        <https://viaf.org/viaf/232106268>,
-        <https://viaf.org/viaf/2584150085873515060003>,
-        <https://viaf.org/viaf/261268491> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/christlicher-verein-junger-menschen-saal-frankfurt-am-main> ;
-    cto:viaf <https://viaf.org/viaf/175192566>,
-        <https://viaf.org/viaf/179025904>,
-        <https://viaf.org/viaf/184352730>,
-        <https://viaf.org/viaf/232106268>,
-        <https://viaf.org/viaf/2584150085873515060003>,
-        <https://viaf.org/viaf/261268491> .
+        <https://performance.musiconn.de/work/russische-lieder-op-68-reutter-hermann> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175192566> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179025904> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184352730> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/232106268> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2584150085873515060003> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/261268491> a nfdicore:NFDI_0001010 .
 

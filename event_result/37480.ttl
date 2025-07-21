@@ -1,48 +1,63 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1048341941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1074115317> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1082394750> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300116853> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300668910> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-akadem-kammerkonzert-rosensaal-jena-1935-01-25-20-00> ] .
 
-<https://performance.musiconn.de/event/3-akadem-kammerkonzert-rosensaal-jena-1935-01-25-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-akadem-kammerkonzert-rosensaal-jena-1935-01-25-20-00> a cto:CTO_0001005 ;
     rdfs:label "3. Akadem. Kammerkonzert, Rosensaal (Jena), 25.1.1935, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/akademische-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1935-01-25T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1935-01-25T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1048341941>,
-        <https://d-nb.info/gnd/1074115317>,
-        <https://d-nb.info/gnd/1082394750>,
-        <https://d-nb.info/gnd/300116853>,
-        <https://d-nb.info/gnd/300668910> ;
-    cto:itemOf <https://performance.musiconn.de/series/akademische-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1048341941>,
-        <https://d-nb.info/gnd/1074115317>,
-        <https://d-nb.info/gnd/1082394750>,
-        <https://d-nb.info/gnd/300116853>,
-        <https://d-nb.info/gnd/300668910>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/rosensaal-jena> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/163145542435396640330> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300668910> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194733340> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316769038> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300116853> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184051694> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1074115317> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1048341941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1082394750> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196894292> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/adagios-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-ms-21-d-dur-paganini-niccolo>,
-        <https://performance.musiconn.de/work/la-capricciosa-ries-franz>,
         <https://performance.musiconn.de/work/melodie-fassung-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-bwv-1014-1019a-nr-6-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonaten-violine-op-42-nr-1-reger-max>,
-        <https://performance.musiconn.de/work/ungarische-taenze-auswahl-brahms-johannes>,
-        <https://viaf.org/viaf/163145542435396640330>,
-        <https://viaf.org/viaf/184051694>,
-        <https://viaf.org/viaf/194733340>,
-        <https://viaf.org/viaf/196894292>,
-        <https://viaf.org/viaf/316769038> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/rosensaal-jena> ;
-    cto:viaf <https://viaf.org/viaf/163145542435396640330>,
-        <https://viaf.org/viaf/184051694>,
-        <https://viaf.org/viaf/194733340>,
-        <https://viaf.org/viaf/196894292>,
-        <https://viaf.org/viaf/316769038> .
+        <https://performance.musiconn.de/work/ungarische-taenze-auswahl-brahms-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/163145542435396640330> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184051694> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194733340> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196894292> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316769038> a nfdicore:NFDI_0001010 .
 

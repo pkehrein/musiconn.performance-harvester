@@ -1,45 +1,57 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1066727457> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300159242> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300179278> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300184069> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/59-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1929-04-12-20-00> ] .
 
-<https://performance.musiconn.de/event/59-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1929-04-12-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/59-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1929-04-12-20-00> a cto:CTO_0001005 ;
     rdfs:label "59. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 12.4.1929, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1928-1929-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1929-04-12T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1929-04-12T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1066727457>,
-        <https://d-nb.info/gnd/300159242>,
-        <https://d-nb.info/gnd/300179278>,
-        <https://d-nb.info/gnd/300184069> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1928-1929-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/1066727457>,
-        <https://d-nb.info/gnd/300159242>,
-        <https://d-nb.info/gnd/300179278>,
-        <https://d-nb.info/gnd/300184069>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184897230> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300184069> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183231234> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300179278> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300159242> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/307165377> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207915542> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1066727457> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
-        <https://performance.musiconn.de/work/ballsirenen-lehar-franz>,
-        <https://performance.musiconn.de/work/die-csardasfuerstin-tanzen-moecht-ich-kalman-emmerich>,
-        <https://performance.musiconn.de/work/die-schoene-galathee-ouvertuere-suppe-franz-von>,
         <https://performance.musiconn.de/work/melodien-aus-das-dreimaederlhaus-berte-heinrich>,
         <https://performance.musiconn.de/work/melodien-aus-der-operette-schwarzwaldmaedel-jessel-leon>,
         <https://performance.musiconn.de/work/melodien-aus-die-geisha-jones-sidney>,
-        <https://performance.musiconn.de/work/melodien-aus-operetten-von-johann-strauss-schloegel-ludwig>,
-        <https://performance.musiconn.de/work/walzertraeume-straus-oscar>,
-        <https://viaf.org/viaf/183231234>,
-        <https://viaf.org/viaf/184897230>,
-        <https://viaf.org/viaf/207915542>,
-        <https://viaf.org/viaf/307165377> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/183231234>,
-        <https://viaf.org/viaf/184897230>,
-        <https://viaf.org/viaf/207915542>,
-        <https://viaf.org/viaf/307165377> .
+        <https://performance.musiconn.de/work/melodien-aus-operetten-von-johann-strauss-schloegel-ludwig> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/183231234> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184897230> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207915542> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/307165377> a nfdicore:NFDI_0001010 .
 

@@ -1,56 +1,76 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1060851253> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1105772357> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1259288064> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300016379> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300473974> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300647727> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1876-02-01> ] .
 
-<https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1876-02-01> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1876-02-01> a cto:CTO_0001005 ;
     rdfs:label "8. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 1.2.1876" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1875-1876> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1876-02-01" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1876-02-01" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1060851253>,
-        <https://d-nb.info/gnd/1105772357>,
-        <https://d-nb.info/gnd/1259288064>,
-        <https://d-nb.info/gnd/300016379>,
-        <https://d-nb.info/gnd/300473974>,
-        <https://d-nb.info/gnd/300647727>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1875-1876> ;
-    cto:relatedItem <https://d-nb.info/gnd/1060851253>,
-        <https://d-nb.info/gnd/1105772357>,
-        <https://d-nb.info/gnd/1259288064>,
-        <https://d-nb.info/gnd/300016379>,
-        <https://d-nb.info/gnd/300473974>,
-        <https://d-nb.info/gnd/300647727>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1060851253> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300647727> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1105772357> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1259288064> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212878467> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211725193> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300473974> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180880375> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016379> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184326371> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179454863> ],
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/work/du-bist-wie-eine-stille-sternennacht-kretschmer-edmund>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-193-d-moll-raff-joseph-joachim>,
         <https://performance.musiconn.de/work/liebes-lust-und-leid-op-30-seit-ich-dich-lieb-erkoren-zopff-hermann>,
         <https://performance.musiconn.de/work/lieder-ohne-worte-klengel-paul>,
-        <https://performance.musiconn.de/work/lieder-op-1-ach-es-sitzt-mein-lieb-und-weint-grimm-julius-otto>,
-        <https://performance.musiconn.de/work/mazurkas-violoncello-klavier-popper-david>,
-        <https://performance.musiconn.de/work/parisina-bennett-william-sterndale>,
-        <https://performance.musiconn.de/work/per-pieta-non-ricercate-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-60-b-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/stuecke-violoncello-klavier-op-20-am-springbrunnen-davydov-karl-ju>,
-        <https://viaf.org/viaf/179454863>,
-        <https://viaf.org/viaf/180880375>,
-        <https://viaf.org/viaf/184326371>,
-        <https://viaf.org/viaf/211725193>,
-        <https://viaf.org/viaf/212878467> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/179454863>,
-        <https://viaf.org/viaf/180880375>,
-        <https://viaf.org/viaf/184326371>,
-        <https://viaf.org/viaf/211725193>,
-        <https://viaf.org/viaf/212878467>,
-        <https://viaf.org/viaf/242717024> .
+        <https://performance.musiconn.de/work/mazurkas-violoncello-klavier-popper-david> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179454863> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180880375> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184326371> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211725193> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212878467> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
 

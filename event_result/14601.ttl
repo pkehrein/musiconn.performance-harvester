@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1834-10-30> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1834-10-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1834-10-30> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 30.10.1834" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1834-10-30" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1834-10-30" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://performance.musiconn.de/source/verzeichniss-der-motetten-1811-1905>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/verzeichniss-der-motetten-1811-1905>,
         <https://performance.musiconn.de/work/ein-feste-burg-motette-doles-johann-friedrich> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
 

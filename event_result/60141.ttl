@@ -4,19 +4,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4134276-8> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/meisterwerke-der-synagoge-dom-speyer-speyer-2021-11-14-16-00> ] .
 
-<https://performance.musiconn.de/event/meisterwerke-der-synagoge-dom-speyer-speyer-2021-11-14-16-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/meisterwerke-der-synagoge-dom-speyer-speyer-2021-11-14-16-00> a cto:CTO_0001005 ;
     rdfs:label "Meisterwerke der Synagoge, Dom Speyer (Speyer), 14.11.2021, 16:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2021-11-14T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2021-11-14T16:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4134276-8> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4134276-8> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/126718339> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/karl-georg-berg-beschwoerung-einer-grossartigen-musik>,
         <https://performance.musiconn.de/source/programm-konzert-14-november-2021>,
         <https://performance.musiconn.de/work/avodath-hakodesh-ma-tovu-bloch-ernest>,
@@ -33,7 +36,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/tow-lhodos-psalm-92-2-9-schubert-franz>,
         <https://performance.musiconn.de/work/veyn-nisht-franke-bernd-gebirtig-mordechai>,
         <https://performance.musiconn.de/work/wschomru-lampel-samuel> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4134276-8>,
-        <https://viaf.org/viaf/126718339> ;
-    cto:viaf <https://viaf.org/viaf/126718339> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/126718339> a nfdicore:NFDI_0001010 .
 

@@ -1,52 +1,67 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1071878328> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/107367195X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1192399773> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300112165> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300259425> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gesellschafts-konzert-gewerbehaus-dresden-gewerbehaus-saal-1907-01-17-19-30> ] .
 
-<https://performance.musiconn.de/event/gesellschafts-konzert-gewerbehaus-dresden-gewerbehaus-saal-1907-01-17-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gesellschafts-konzert-gewerbehaus-dresden-gewerbehaus-saal-1907-01-17-19-30> a cto:CTO_0001005 ;
     rdfs:label "Gesellschafts-Konzert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 17.1.1907, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1906-1907> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1907-01-17T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1907-01-17T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1071878328>,
-        <https://d-nb.info/gnd/107367195X>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/1192399773>,
-        <https://d-nb.info/gnd/300112165>,
-        <https://d-nb.info/gnd/300259425> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1906-1907> ;
-    cto:relatedItem <https://d-nb.info/gnd/1071878328>,
-        <https://d-nb.info/gnd/107367195X>,
-        <https://d-nb.info/gnd/1192399773>,
-        <https://d-nb.info/gnd/300112165>,
-        <https://d-nb.info/gnd/300259425>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300259425> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1192399773> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1071878328> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315972455> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/107367195X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300112165> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/295383942> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/308292403> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316534753> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1906-1907>,
         <https://performance.musiconn.de/work/carmen-marsch-trenkler-friedrich-august>,
         <https://performance.musiconn.de/work/cavalleria-rusticana-vospiel-und-siciliana-mascagni-pietro>,
         <https://performance.musiconn.de/work/der-ring-des-nibelungen-erster-tag-die-walkuere-tonbilder-wagner-richard>,
         <https://performance.musiconn.de/work/die-koenigin-von-saba-ballettmusik-goldmark-karl>,
-        <https://performance.musiconn.de/work/die-zauberfloete-ouvertuere-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/ehret-die-frauen-silber-j>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-mwv-o-14-e-moll-allegro-molto-vivace-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-mwv-o-14-e-moll-andante-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/l-etoile-du-nord-ouvertuere-meyerbeer-giacomo>,
-        <https://performance.musiconn.de/work/peer-gynt-op-23-kanske-vil-der-ga-bade-vinter-og-var-grieg-edvard>,
         <https://performance.musiconn.de/work/rondo-all-ongarese-haydn-joseph>,
-        <https://performance.musiconn.de/work/staendchen-swidersky>,
-        <https://viaf.org/viaf/295383942>,
-        <https://viaf.org/viaf/308292403>,
-        <https://viaf.org/viaf/315972455>,
-        <https://viaf.org/viaf/316534753> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/295383942>,
-        <https://viaf.org/viaf/308292403>,
-        <https://viaf.org/viaf/315972455>,
-        <https://viaf.org/viaf/316534753> .
+        <https://performance.musiconn.de/work/staendchen-swidersky> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/295383942> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/308292403> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315972455> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316534753> a nfdicore:NFDI_0001010 .
 

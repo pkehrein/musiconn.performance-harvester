@@ -1,52 +1,72 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1198286482> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1235234711> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300024975> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300025254> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027311> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300274262> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-vereinskonzert-rathaus-muenster-westf-friedenssaal-1875-03-14> ] .
 
-<https://performance.musiconn.de/event/8-vereinskonzert-rathaus-muenster-westf-friedenssaal-1875-03-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-vereinskonzert-rathaus-muenster-westf-friedenssaal-1875-03-14> a cto:CTO_0001005 ;
     rdfs:label "8. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 14.3.1875" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1874-75> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1875-03-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1875-03-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1198286482>,
-        <https://d-nb.info/gnd/1235234711>,
-        <https://d-nb.info/gnd/300024975>,
-        <https://d-nb.info/gnd/300025254>,
-        <https://d-nb.info/gnd/300027311>,
-        <https://d-nb.info/gnd/300274262>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1874-75> ;
-    cto:relatedItem <https://d-nb.info/gnd/1198286482>,
-        <https://d-nb.info/gnd/1235234711>,
-        <https://d-nb.info/gnd/300024975>,
-        <https://d-nb.info/gnd/300025254>,
-        <https://d-nb.info/gnd/300027311>,
-        <https://d-nb.info/gnd/300274262>,
-        <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1874-1875>,
-        <https://performance.musiconn.de/work/ein-deutsches-requiem-brahms-johannes>,
-        <https://performance.musiconn.de/work/gesaenge-op-3-liebestreu-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-63-heimweh-2-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-63-heimweh-3-brahms-johannes>,
-        <https://performance.musiconn.de/work/romanzen-singstimme-klavier-op-33-so-willst-du-des-armen-brahms-johannes>,
-        <https://performance.musiconn.de/work/variationen-ueber-ein-thema-von-joseph-haydn-brahms-johannes>,
-        <https://viaf.org/viaf/174290500>,
-        <https://viaf.org/viaf/180442773>,
-        <https://viaf.org/viaf/186307062>,
-        <https://viaf.org/viaf/215928383>,
-        <https://viaf.org/viaf/306402664>,
-        <https://viaf.org/viaf/311579680> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/174290500>,
-        <https://viaf.org/viaf/180442773>,
-        <https://viaf.org/viaf/186307062>,
-        <https://viaf.org/viaf/215928383>,
-        <https://viaf.org/viaf/306402664>,
-        <https://viaf.org/viaf/311579680> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306402664> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311579680> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215928383> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180442773> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174290500> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1235234711> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300024975> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1198286482> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025254> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300274262> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186307062> ],
+        <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1874-1875> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174290500> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180442773> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186307062> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215928383> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/306402664> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311579680> a nfdicore:NFDI_0001010 .
 

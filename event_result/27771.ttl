@@ -1,60 +1,80 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/117037171X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1191386589> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1191387836> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300112165> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30014072X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171439> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300200307> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300672977> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/grosses-concert-und-ball-neustaedter-casino-dresden-1901-03-13> ] .
 
-<https://performance.musiconn.de/event/grosses-concert-und-ball-neustaedter-casino-dresden-1901-03-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/grosses-concert-und-ball-neustaedter-casino-dresden-1901-03-13> a cto:CTO_0001005 ;
     rdfs:label "Grosses Concert und Ball, Neustädter Casino (Dresden), 13.3.1901" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1900-1901> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1901-03-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1901-03-13" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/117037171X>,
-        <https://d-nb.info/gnd/1191386589>,
-        <https://d-nb.info/gnd/1191387836>,
-        <https://d-nb.info/gnd/300112165>,
-        <https://d-nb.info/gnd/30014072X>,
-        <https://d-nb.info/gnd/300171439>,
-        <https://d-nb.info/gnd/300200307>,
-        <https://d-nb.info/gnd/300672977> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1900-1901> ;
-    cto:relatedItem <https://d-nb.info/gnd/117037171X>,
-        <https://d-nb.info/gnd/1191386589>,
-        <https://d-nb.info/gnd/1191387836>,
-        <https://d-nb.info/gnd/300112165>,
-        <https://d-nb.info/gnd/30014072X>,
-        <https://d-nb.info/gnd/300171439>,
-        <https://d-nb.info/gnd/300200307>,
-        <https://d-nb.info/gnd/300672977>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/neustaedter-casino-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1191387836> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/308292403> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201854341> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300112165> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202940254> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300200307> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/117037171X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30014072X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186531773> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171439> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300672977> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180232392> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185337299> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1191386589> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1900-1901>,
         <https://performance.musiconn.de/work/am-felsenborn-reinecke-carl>,
-        <https://performance.musiconn.de/work/concertinos-klarinette-orchester-j-109-es-dur-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/die-zauberfloete-ouvertuere-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/hamlet-szene-und-arie-thomas-ambroise>,
-        <https://performance.musiconn.de/work/hochzeitsmarsch-und-elfenreigen-aus-der-musik-zu-shakespeares-sommernachtstraum-liszt-franz>,
-        <https://performance.musiconn.de/work/impromptus-klavier-d-935-nr-3-schubert-franz>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/la-traviata-e-strano-e-strano-rezitativ-und-arie-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/lieder-op-49-am-sonntag-morgen-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-op-9-das-kraut-vergessenheit-hildach-eugen>,
-        <https://performance.musiconn.de/work/suiten-klavier-nr-3-op-72-e-moll-minuetto-raff-joseph-joachim>,
-        <https://viaf.org/viaf/180232392>,
-        <https://viaf.org/viaf/185337299>,
-        <https://viaf.org/viaf/186531773>,
-        <https://viaf.org/viaf/201854341>,
-        <https://viaf.org/viaf/202940254>,
-        <https://viaf.org/viaf/308292403> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/neustaedter-casino-dresden> ;
-    cto:viaf <https://viaf.org/viaf/180232392>,
-        <https://viaf.org/viaf/185337299>,
-        <https://viaf.org/viaf/186531773>,
-        <https://viaf.org/viaf/201854341>,
-        <https://viaf.org/viaf/202940254>,
-        <https://viaf.org/viaf/308292403> .
+        <https://performance.musiconn.de/work/konzerte-klavier-orchester-mozart-wolfgang-amadeus> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180232392> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185337299> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186531773> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201854341> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202940254> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/308292403> a nfdicore:NFDI_0001010 .
 

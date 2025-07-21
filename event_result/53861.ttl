@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1089086296> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/der-amerikaner-theaterbau-des-schauspielhauses-berlin-1826-11-04-18-00> ] .
 
-<https://performance.musiconn.de/event/der-amerikaner-theaterbau-des-schauspielhauses-berlin-1826-11-04-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/der-amerikaner-theaterbau-des-schauspielhauses-berlin-1826-11-04-18-00> a cto:CTO_0001005 ;
     rdfs:label "Der Amerikaner, Theaterbau des Schauspielhauses Berlin, 4.11.1826, 18:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1826-11-04T20:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1826-11-04T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1089086296> ;
-    cto:relatedItem <https://performance.musiconn.de/source/katalogisat-der-amerikaner-lustspiel-in-3-abtheilungen-nach-dem-italienischen-des-federici-frey-bearbeitet-von-herrn-vogel-4-november-1826>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/313145858154823022430> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1089086296> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/katalogisat-der-amerikaner-lustspiel-in-3-abtheilungen-nach-dem-italienischen-des-federici-frey-bearbeitet-von-herrn-vogel-4-november-1826>,
         <https://performance.musiconn.de/work/der-amerikaner-fassung-anonym> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1089086296>,
-        <https://viaf.org/viaf/313145858154823022430> ;
-    cto:viaf <https://viaf.org/viaf/313145858154823022430> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/313145858154823022430> a nfdicore:NFDI_0001010 .
 

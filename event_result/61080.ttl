@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4718077-8> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-2-bremer-kongress-2711-02121993-frauen-im-zeitalter-der-aufklaerung-unser-lieben-frauen-bremen-1993-12-01> ] .
 
-<https://performance.musiconn.de/event/konzert-2-bremer-kongress-2711-02121993-frauen-im-zeitalter-der-aufklaerung-unser-lieben-frauen-bremen-1993-12-01> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-2-bremer-kongress-2711-02121993-frauen-im-zeitalter-der-aufklaerung-unser-lieben-frauen-bremen-1993-12-01> a cto:CTO_0001005 ;
     rdfs:label "Konzert 2: Bremer Kongress 27.11.-02.12.1993 \"Frauen im Zeitalter der Aufklärung\", Unser Lieben Frauen (Bremen), 1.12.1993" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1993-12-01" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1993-12-01" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4718077-8> ;
-    cto:relatedItem <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-zum-kongress-frauen-im-zeitalter-der-aufklaerung-mit-konzerten-programm-konzert-2>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237020516> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4718077-8> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-zum-kongress-frauen-im-zeitalter-der-aufklaerung-mit-konzerten-programm-konzert-2>,
         <https://performance.musiconn.de/work/il-sacrifizio-di-abramo-oratorium-rossi-camilla-de> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4718077-8>,
-        <https://viaf.org/viaf/237020516> ;
-    cto:viaf <https://viaf.org/viaf/237020516> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/237020516> a nfdicore:NFDI_0001010 .
 

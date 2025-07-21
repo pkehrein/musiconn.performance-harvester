@@ -1,52 +1,74 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1172677352> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027311> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009440X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156871> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30028389X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zehntes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1918-03-01-19-00> ] .
 
-<https://performance.musiconn.de/event/zehntes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1918-03-01-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zehntes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1918-03-01-19-00> a cto:CTO_0001005 ;
     rdfs:label "Zehntes Freitags-Konzert, Großer Konzertsaal (Frankfurt a. M.), 1.3.1918, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1917-1918> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1918-03-01T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1918-03-01T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1172677352>,
-        <https://d-nb.info/gnd/1210455218>,
-        <https://d-nb.info/gnd/300027311>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300156871>,
-        <https://d-nb.info/gnd/30028389X> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1917-1918> ;
-    cto:relatedItem <https://d-nb.info/gnd/1172677352>,
-        <https://d-nb.info/gnd/1210455218>,
-        <https://d-nb.info/gnd/300027311>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300156871>,
-        <https://d-nb.info/gnd/30028389X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/247806668> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156871> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186733371> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30028389X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1172677352> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177435724> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311579680> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186733371> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1210455218> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176074675> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174184579> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1210455218> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009440X> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/internationale-volksweisen>,
-        <https://performance.musiconn.de/work/les-preludes-liszt-franz>,
-        <https://performance.musiconn.de/work/lieder-nach-gedichten-von-o-j-bierbaum-traum-durch-die-daemmerung-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-op-27-morgen-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-trv-186-hat-gesagt-bleibts-nicht-dabei-strauss-richard>,
-        <https://performance.musiconn.de/work/maedchenblumen-mohnblumen-strauss-richard>,
-        <https://performance.musiconn.de/work/variationen-ueber-ein-thema-von-joseph-haydn-brahms-johannes>,
-        <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/176074675>,
-        <https://viaf.org/viaf/177435724>,
-        <https://viaf.org/viaf/186733371>,
-        <https://viaf.org/viaf/247806668>,
-        <https://viaf.org/viaf/311579680> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/176074675>,
-        <https://viaf.org/viaf/177435724>,
-        <https://viaf.org/viaf/186733371>,
-        <https://viaf.org/viaf/247806668>,
-        <https://viaf.org/viaf/311579680> .
+        <https://performance.musiconn.de/work/internationale-volksweisen> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174184579> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176074675> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177435724> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/247806668> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311579680> a nfdicore:NFDI_0001010 .
+
+<https://d-nb.info/gnd/1210455218> a nfdicore:NFDI_0001009 .
+
+<https://viaf.org/viaf/186733371> a nfdicore:NFDI_0001010 .
 

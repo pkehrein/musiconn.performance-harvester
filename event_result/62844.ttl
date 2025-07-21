@@ -1,35 +1,50 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/118540505> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/121409163> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4127793-4> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4799651-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/il-signor-dottore-muenchen-1760-00-00> ] .
 
-<https://performance.musiconn.de/event/il-signor-dottore-muenchen-1760-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/il-signor-dottore-muenchen-1760-00-00> a cto:CTO_0001005 ;
     rdfs:label "Il signor dottore, München, 1760" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1760-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1760-00-00" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/121409163> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118540505> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/241492071> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4127793-4> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4799651-1> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196916651> ] ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/118540505>,
-        <https://d-nb.info/gnd/121409163>,
-        <https://d-nb.info/gnd/4127793-4>,
-        <https://d-nb.info/gnd/4799651-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/4799651-1>,
-        <https://performance.musiconn.de/work/il-signor-dottore-fischietti-domenico>,
-        <https://viaf.org/viaf/196916651> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4127793-4>,
-        <https://viaf.org/viaf/241492071> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118540505>,
-        <https://d-nb.info/gnd/121409163>,
-        <https://viaf.org/viaf/118496187>,
-        <https://viaf.org/viaf/44299511> ;
-    cto:viaf <https://viaf.org/viaf/118496187>,
-        <https://viaf.org/viaf/196916651>,
-        <https://viaf.org/viaf/241492071>,
-        <https://viaf.org/viaf/44299511> .
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/44299511> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/118496187> ] .
+
+<https://viaf.org/viaf/118496187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196916651> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/241492071> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/44299511> a nfdicore:NFDI_0001010 .
 

@@ -1,54 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/117709438X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011504> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111126> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141777> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171528> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300404581> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/viertes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1909-01-17-17-30> ] .
 
-<https://performance.musiconn.de/event/viertes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1909-01-17-17-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/viertes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1909-01-17-17-30> a cto:CTO_0001005 ;
     rdfs:label "Viertes Freitags-Konzert, Großer Konzertsaal (Frankfurt a. M.), 17.1.1909, 17:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1908-1909> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1909-01-17T17:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1909-01-17T17:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/117709438X>,
-        <https://d-nb.info/gnd/300011504>,
-        <https://d-nb.info/gnd/300015356>,
-        <https://d-nb.info/gnd/300111126>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/300404581> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1908-1909> ;
-    cto:relatedItem <https://d-nb.info/gnd/117709438X>,
-        <https://d-nb.info/gnd/300011504>,
-        <https://d-nb.info/gnd/300015356>,
-        <https://d-nb.info/gnd/300111126>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/300404581>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/der-freischuetz-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/musik-zum-ballett-die-geschoepfe-des-prometheus-marcia-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/musik-zum-ballett-die-geschoepfe-des-prometheus-ouvertuere-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/musik-zum-ballett-die-geschoepfe-des-prometheus-un-poco-adagio-allegro-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/ouvertueren-bwv-1068-d-dur-air-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sinfonien-d-759-h-moll-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-kv-504-d-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/175011143>,
-        <https://viaf.org/viaf/177407019>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/179877641>,
-        <https://viaf.org/viaf/184815717> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/175011143>,
-        <https://viaf.org/viaf/177407019>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/179877641>,
-        <https://viaf.org/viaf/184815717> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425978> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/117709438X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015356> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184815717> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175011143> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177407019> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011504> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111126> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179877641> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141777> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177811557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179877641> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015356> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300404581> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171528> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175011143> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177407019> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177811557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179425978> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184815717> a nfdicore:NFDI_0001010 .
+
+<https://d-nb.info/gnd/300015356> a nfdicore:NFDI_0001009 .
+
+<https://viaf.org/viaf/179877641> a nfdicore:NFDI_0001010 .
 

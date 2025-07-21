@@ -1,26 +1,38 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1067431276> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300445075> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/organno-vokalnyj-vecer-tamara-smorjakova-jurij-semenov-sankt-petersburger-philharmonie-1995-02-18> ] .
 
-<https://performance.musiconn.de/event/organno-vokalnyj-vecer-tamara-smorjakova-jurij-semenov-sankt-petersburger-philharmonie-1995-02-18> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/organno-vokalnyj-vecer-tamara-smorjakova-jurij-semenov-sankt-petersburger-philharmonie-1995-02-18> a cto:CTO_0001005 ;
     rdfs:label "Organno-vokal'nyj večer: Tamara Smorjakova - Jurij Semenov, Sankt-Petersburger Philharmonie, 18.2.1995" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1994-95> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1995-02-18" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1995-02-18" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1067431276>,
-        <https://d-nb.info/gnd/300445075>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1994-95> ;
-    cto:relatedItem <https://d-nb.info/gnd/1067431276>,
-        <https://d-nb.info/gnd/300445075>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197659219> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1067431276> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300445075> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174399555> ],
         <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1995-18-februar>,
         <https://performance.musiconn.de/work/ave-maria-merikanto-oskar>,
         <https://performance.musiconn.de/work/come-ye-sons-of-art-away-arie-purcell-henry>,
@@ -29,16 +41,14 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/fuenf-motetten-saint-saens-camille>,
         <https://performance.musiconn.de/work/jephte-arie-carissimi-giacomo>,
         <https://performance.musiconn.de/work/kantaten-buxwv-35-arie-buxtehude-dietrich>,
-        <https://performance.musiconn.de/work/kantaten-rv-675-vivaldi-antonio>,
         <https://performance.musiconn.de/work/laudate-pueri-dominum-hwv-237-arie-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/lecons-de-tenebres-lecon-no-1-couperin-francois>,
         <https://performance.musiconn.de/work/requiem-arie-lloyd-webber-andrew>,
-        <https://performance.musiconn.de/work/three-alleluias-pinkham-daniel>,
-        <https://viaf.org/viaf/174399555>,
-        <https://viaf.org/viaf/197659219> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/174399555>,
-        <https://viaf.org/viaf/197659219> .
+        <https://performance.musiconn.de/work/three-alleluias-pinkham-daniel> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174399555> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197659219> a nfdicore:NFDI_0001010 .
 

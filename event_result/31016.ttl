@@ -1,45 +1,57 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300057830> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300057954> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300264380> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4428204-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzerte-zum-jahreswechsel-kulturpalast-dresden-festsaal-1997-12-31-19-00> ] .
 
-<https://performance.musiconn.de/event/sonderkonzerte-zum-jahreswechsel-kulturpalast-dresden-festsaal-1997-12-31-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzerte-zum-jahreswechsel-kulturpalast-dresden-festsaal-1997-12-31-19-00> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzerte zum Jahreswechsel, Kulturpalast (Dresden) / Festsaal, 31.12.1997, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1997-1998> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1997-12-31T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1997-12-31T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300057830>,
-        <https://d-nb.info/gnd/300057954>,
-        <https://d-nb.info/gnd/300264380>,
-        <https://d-nb.info/gnd/4428204-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1997-1998> ;
-    cto:relatedItem <https://d-nb.info/gnd/300057830>,
-        <https://d-nb.info/gnd/300057954>,
-        <https://d-nb.info/gnd/300264380>,
-        <https://d-nb.info/gnd/4428204-7>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4428204-7> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300264380> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176398837> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300057830> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178821785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177809918> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179087251> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300057954> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/an-american-in-paris-gershwin-george>,
         <https://performance.musiconn.de/work/by-strauss-gershwin-george>,
         <https://performance.musiconn.de/work/it-aint-necessarily-so-gershwin-george>,
         <https://performance.musiconn.de/work/my-mans-gone-now-gershwin-george>,
-        <https://performance.musiconn.de/work/porgy-and-bess-bess-you-is-my-woman-gershwin-george>,
-        <https://performance.musiconn.de/work/porgy-and-bess-sinfonische-bilder-gershwin-george>,
-        <https://performance.musiconn.de/work/porgy-and-bess-summertime-gershwin-george>,
-        <https://performance.musiconn.de/work/rhapsody-in-blue-gershwin-george>,
-        <https://viaf.org/viaf/176398837>,
-        <https://viaf.org/viaf/177809918>,
-        <https://viaf.org/viaf/178821785>,
-        <https://viaf.org/viaf/179087251> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/176398837>,
-        <https://viaf.org/viaf/177809918>,
-        <https://viaf.org/viaf/178821785>,
-        <https://viaf.org/viaf/179087251> .
+        <https://performance.musiconn.de/work/porgy-and-bess-sinfonische-bilder-gershwin-george> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176398837> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177809918> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178821785> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179087251> a nfdicore:NFDI_0001010 .
 

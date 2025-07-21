@@ -1,42 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1132823188> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1149546204> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30044799X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300913745> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/9-musikauffuehrung-rosensaal-jena-1929-07-09-20-00> ] .
 
-<https://performance.musiconn.de/event/9-musikauffuehrung-rosensaal-jena-1929-07-09-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/9-musikauffuehrung-rosensaal-jena-1929-07-09-20-00> a cto:CTO_0001005 ;
     rdfs:label "9. Musikaufführung, Rosensaal (Jena), 9.7.1929, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1929-07-09T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1929-07-09T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1132823188>,
-        <https://d-nb.info/gnd/1149546204>,
-        <https://d-nb.info/gnd/30044799X>,
-        <https://d-nb.info/gnd/300913745> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1132823188>,
-        <https://d-nb.info/gnd/1149546204>,
-        <https://d-nb.info/gnd/30044799X>,
-        <https://d-nb.info/gnd/300913745>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/rosensaal-jena> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4288149619413404010007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1149546204> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300913745> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199725678> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/9219151474885900490000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210947088> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30044799X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1132823188> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/airs-cembalo-hwv-466-g-moll-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/konzerte-cembalo-h-moll-telemann-georg-philipp>,
-        <https://performance.musiconn.de/work/partiten-klavier-bwv-825-830-nr-1-giga-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonaten-cembalo-hwv-579-g-dur-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/sonaten-querfloete-cembalo-w-yb-40-f-dur>,
-        <https://viaf.org/viaf/199725678>,
-        <https://viaf.org/viaf/210947088>,
-        <https://viaf.org/viaf/4288149619413404010007>,
-        <https://viaf.org/viaf/9219151474885900490000> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/rosensaal-jena> ;
-    cto:viaf <https://viaf.org/viaf/199725678>,
-        <https://viaf.org/viaf/210947088>,
-        <https://viaf.org/viaf/4288149619413404010007>,
-        <https://viaf.org/viaf/9219151474885900490000> .
+        <https://performance.musiconn.de/work/konzerte-cembalo-h-moll-telemann-georg-philipp> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/199725678> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210947088> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4288149619413404010007> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/9219151474885900490000> a nfdicore:NFDI_0001010 .
 

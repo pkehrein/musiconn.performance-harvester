@@ -1,53 +1,72 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/105265326X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1213381355> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015585> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015844> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4493513-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1877-10-16> ] .
 
-<https://performance.musiconn.de/event/1-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1877-10-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1877-10-16> a cto:CTO_0001005 ;
     rdfs:label "1. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 16.10.1877" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1877-1878> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1877-10-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1877-10-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/105265326X>,
-        <https://d-nb.info/gnd/1213381355>,
-        <https://d-nb.info/gnd/300015585>,
-        <https://d-nb.info/gnd/300015844>,
-        <https://d-nb.info/gnd/4381134-6>,
-        <https://d-nb.info/gnd/4493513-4> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1877-1878> ;
-    cto:relatedItem <https://d-nb.info/gnd/105265326X>,
-        <https://d-nb.info/gnd/1213381355>,
-        <https://d-nb.info/gnd/300015585>,
-        <https://d-nb.info/gnd/300015844>,
-        <https://d-nb.info/gnd/4493513-4>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1406151474935700490005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/105265326X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3780159477641927990000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4493513-4> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1213381355> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309597646> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015844> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192572259> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181427594> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015585> ],
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-2-op-21-f-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-2-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/polonaisen-klavier-op-89-c-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-120-fassung-1851-schumann-robert>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-nr-4-liszt-franz>,
         <https://performance.musiconn.de/work/verschiedene-stuecke-op-93-miniatures-zwei-stuecke-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/wallenstein-wallensteins-lager-und-capuzinerpredigt-rheinberger-joseph>,
-        <https://viaf.org/viaf/1406151474935700490005>,
-        <https://viaf.org/viaf/181427594>,
-        <https://viaf.org/viaf/192572259>,
-        <https://viaf.org/viaf/309597646>,
-        <https://viaf.org/viaf/3780159477641927990000> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/1406151474935700490005>,
-        <https://viaf.org/viaf/181427594>,
-        <https://viaf.org/viaf/192572259>,
-        <https://viaf.org/viaf/242717024>,
-        <https://viaf.org/viaf/309597646>,
-        <https://viaf.org/viaf/3780159477641927990000> .
+        <https://performance.musiconn.de/work/wallenstein-wallensteins-lager-und-capuzinerpredigt-rheinberger-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1406151474935700490005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181427594> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192572259> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309597646> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3780159477641927990000> a nfdicore:NFDI_0001010 .
 

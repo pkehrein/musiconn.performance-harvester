@@ -4,19 +4,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vecer-kamernych-proizvedenij-leningradskich-kompozitorov-dom-kompozitorov-sankt-petersburg-1963-05-08> ] .
 
-<https://performance.musiconn.de/event/vecer-kamernych-proizvedenij-leningradskich-kompozitorov-dom-kompozitorov-sankt-petersburg-1963-05-08> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vecer-kamernych-proizvedenij-leningradskich-kompozitorov-dom-kompozitorov-sankt-petersburg-1963-05-08> a cto:CTO_0001005 ;
     rdfs:label "Večer kamernych proizvedenij leningradskich kompozitorov, Dom kompozitorov (Sankt Petersburg), 8.5.1963" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1963-05-08" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1963-05-08" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1200899989> ;
-    cto:relatedItem <https://performance.musiconn.de/source/leningrader-komponistenhaus-1963-8-mai>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/leningrader-komponistenhaus-1963-8-mai>,
         <https://performance.musiconn.de/work/melodija-kocurov-jurij-vladimirovic>,
         <https://performance.musiconn.de/work/pesni-na-stichi-m-svetlova-prigozin-ljucian-a>,
         <https://performance.musiconn.de/work/praeludium-klavier-okunev-german-g>,
@@ -25,7 +28,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/russkie-pesni-matveev-michail-a>,
         <https://performance.musiconn.de/work/suiten-violine-klavier-auswahl-lobkovskij-abram-michajlovic>,
         <https://performance.musiconn.de/work/zivee-vsech-zivych-admoni-iogann> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1200899989>,
-        <https://viaf.org/viaf/385157583849933970005> ;
-    cto:viaf <https://viaf.org/viaf/385157583849933970005> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
 

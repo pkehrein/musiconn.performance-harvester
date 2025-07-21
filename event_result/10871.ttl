@@ -1,38 +1,51 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1124811923> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300008244> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109660> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4433695-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-koelner-philharmonie-koeln-1999-05-18> ] .
 
-<https://performance.musiconn.de/event/konzert-koelner-philharmonie-koeln-1999-05-18> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-koelner-philharmonie-koeln-1999-05-18> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Kölner Philharmonie (Köln), 18.5.1999" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1999-05-18" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1999-05-18" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1124811923>,
-        <https://d-nb.info/gnd/300008244>,
-        <https://d-nb.info/gnd/300109660>,
-        <https://d-nb.info/gnd/4433695-0> ;
-    cto:relatedItem <https://d-nb.info/gnd/1124811923>,
-        <https://d-nb.info/gnd/300008244>,
-        <https://d-nb.info/gnd/300109660>,
-        <https://performance.musiconn.de/source/motettenbuch-1998-99>,
-        <https://performance.musiconn.de/work/aus-der-tiefen-rufe-ich-herr-zu-dir-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/du-wahrer-gott-und-davids-sohn-christe-du-lamm-gottes-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/messen-kv-427-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/178625404>,
-        <https://viaf.org/viaf/179154016>,
-        <https://viaf.org/viaf/182664767> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4433695-0>,
-        <https://viaf.org/viaf/239180838> ;
-    cto:viaf <https://viaf.org/viaf/178625404>,
-        <https://viaf.org/viaf/179154016>,
-        <https://viaf.org/viaf/182664767>,
-        <https://viaf.org/viaf/239180838> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4433695-0> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/239180838> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109660> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178625404> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179154016> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182664767> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1124811923> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300008244> ],
+        <https://performance.musiconn.de/source/motettenbuch-1998-99> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178625404> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179154016> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182664767> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/239180838> a nfdicore:NFDI_0001010 .
 

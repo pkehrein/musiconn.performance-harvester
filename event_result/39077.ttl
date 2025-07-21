@@ -1,34 +1,41 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300596448> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7508982-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-collum-konzert-die-kunst-der-fuge-kuenstlerhaus-dresden-1941-11-08-19-30> ] .
 
-<https://performance.musiconn.de/event/5-collum-konzert-die-kunst-der-fuge-kuenstlerhaus-dresden-1941-11-08-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-collum-konzert-die-kunst-der-fuge-kuenstlerhaus-dresden-1941-11-08-19-30> a cto:CTO_0001005 ;
     rdfs:label "5. Collum-Konzert: Die Kunst der Fuge, Künstlerhaus (Dresden), 8.11.1941, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1941-1942> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1941-11-08T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1941-11-08T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300596448>,
-        <https://d-nb.info/gnd/7508982-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1941-1942> ;
-    cto:relatedItem <https://d-nb.info/gnd/300596448>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7508982-8> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316036052> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300596448> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212893024> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/canonische-fugen-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/choraele-aus-der-sammlung-joh-seb-bachs-vierstimmige-choralgesaenge-fuer-deinen-thron-tret-ich-hiermit-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/einfache-fugen-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/gegenfugen-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/mehrthemige-fugen-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/spiegel-und-gegenfugen-bach-johann-sebastian>,
-        <https://viaf.org/viaf/212893024> ;
-    cto:relatedLocation <https://d-nb.info/gnd/7508982-8>,
-        <https://viaf.org/viaf/316036052> ;
-    cto:viaf <https://viaf.org/viaf/212893024>,
-        <https://viaf.org/viaf/316036052> .
+        <https://performance.musiconn.de/work/spiegel-und-gegenfugen-bach-johann-sebastian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/212893024> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316036052> a nfdicore:NFDI_0001010 .
 

@@ -1,55 +1,74 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1190117029> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/129878249X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300025726> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033850> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133626> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155662> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30015710X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/fuenftes-sonntags-konzert-grosser-konzertsaal-frankfurt-a-m-1909-02-21-17-30> ] .
 
-<https://performance.musiconn.de/event/fuenftes-sonntags-konzert-grosser-konzertsaal-frankfurt-a-m-1909-02-21-17-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/fuenftes-sonntags-konzert-grosser-konzertsaal-frankfurt-a-m-1909-02-21-17-30> a cto:CTO_0001005 ;
     rdfs:label "Fünftes Sonntags-Konzert, Großer Konzertsaal (Frankfurt a. M.), 21.2.1909, 17:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1908-1909> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1909-02-21T17:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1909-02-21T17:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1190117029>,
-        <https://d-nb.info/gnd/129878249X>,
-        <https://d-nb.info/gnd/300025726>,
-        <https://d-nb.info/gnd/300033850>,
-        <https://d-nb.info/gnd/300133626>,
-        <https://d-nb.info/gnd/300155662>,
-        <https://d-nb.info/gnd/30015710X> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1908-1909> ;
-    cto:relatedItem <https://d-nb.info/gnd/1190117029>,
-        <https://d-nb.info/gnd/129878249X>,
-        <https://d-nb.info/gnd/300025726>,
-        <https://d-nb.info/gnd/300033850>,
-        <https://d-nb.info/gnd/300133626>,
-        <https://d-nb.info/gnd/300155662>,
-        <https://d-nb.info/gnd/30015710X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/129878249X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305991533> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025726> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30015710X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033850> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3411156317458402350006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181445310> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201854829> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/151144782991582019009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1190117029> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/307169497> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155662> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133626> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/aufforderung-zum-tanze-arrangiert-berlioz-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/danse-macabre-saint-saens-camille>,
-        <https://performance.musiconn.de/work/der-nussknacker-suite-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/liebeslieder-op-52-brahms-johannes>,
-        <https://performance.musiconn.de/work/militaermaersche-op-57-1-strauss-richard>,
-        <https://performance.musiconn.de/work/militaermaersche-op-57-kriegsmarsch-strauss-richard>,
-        <https://performance.musiconn.de/work/ukrainische-liebeslieder-knorr-iwan>,
-        <https://performance.musiconn.de/work/wiener-blut-walzer-strauss-johann>,
-        <https://viaf.org/viaf/151144782991582019009>,
-        <https://viaf.org/viaf/181445310>,
-        <https://viaf.org/viaf/201854829>,
-        <https://viaf.org/viaf/305991533>,
-        <https://viaf.org/viaf/307169497>,
-        <https://viaf.org/viaf/3411156317458402350006> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/151144782991582019009>,
-        <https://viaf.org/viaf/181445310>,
-        <https://viaf.org/viaf/201854829>,
-        <https://viaf.org/viaf/305991533>,
-        <https://viaf.org/viaf/307169497>,
-        <https://viaf.org/viaf/3411156317458402350006> .
+        <https://performance.musiconn.de/work/aufforderung-zum-tanze-arrangiert-berlioz-weber-carl-maria-von> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/151144782991582019009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181445310> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201854829> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305991533> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/307169497> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3411156317458402350006> a nfdicore:NFDI_0001010 .
 

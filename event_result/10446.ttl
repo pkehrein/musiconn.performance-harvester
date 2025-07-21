@@ -1,63 +1,85 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1147670617> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300048866> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300121113> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300339852> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300431740> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300475802> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-1974-12-21> ] .
 
-<https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-1974-12-21> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-1974-12-21> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Thomaskirche (Leipzig), 21.12.1974" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1974-12-21" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1974-12-21" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1147670617>,
-        <https://d-nb.info/gnd/300048866>,
-        <https://d-nb.info/gnd/300121113>,
-        <https://d-nb.info/gnd/300339852>,
-        <https://d-nb.info/gnd/300431740>,
-        <https://d-nb.info/gnd/300475802>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1147670617>,
-        <https://d-nb.info/gnd/300048866>,
-        <https://d-nb.info/gnd/300121113>,
-        <https://d-nb.info/gnd/300339852>,
-        <https://d-nb.info/gnd/300431740>,
-        <https://d-nb.info/gnd/300475802>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212886293> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185090204> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300339852> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300048866> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1147670617> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316736830> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219172575> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300121113> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182639689> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300431740> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181850865> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300475802> ],
         <https://performance.musiconn.de/source/motettenbuch-1974>,
         <https://performance.musiconn.de/work/altboehmische-gesaenge-teil-2-riedel-carl>,
         <https://performance.musiconn.de/work/der-jahreskreis-o-heiland-reiss-die-himmel-auf-distler-hugo>,
-        <https://performance.musiconn.de/work/deutsches-magnificat-swv-494-schuetz-heinrich>,
         <https://performance.musiconn.de/work/es-kommt-ein-schiff-geladen-trexler-georg>,
-        <https://performance.musiconn.de/work/geistliche-lieder-teil-2-ich-steh-an-deiner-krippen-hier-eccard-johannes>,
-        <https://performance.musiconn.de/work/harmoniae-angelicae-cantionum-ecclesiasticarum-joseph-lieber-joseph-mein-bodenschatz-erhard>,
         <https://performance.musiconn.de/work/maria-durch-ein-dornwald-ging-weyrauch-johannes>,
-        <https://performance.musiconn.de/work/musae-sioniae-theil-2-in-dulci-jubilo-praetorius-michael>,
-        <https://performance.musiconn.de/work/musae-sioniae-theil-6-es-ist-ein-ros-entsprungen-praetorius-michael>,
         <https://performance.musiconn.de/work/nun-sei-willkommen-herre-christ-hirsch-karl>,
         <https://performance.musiconn.de/work/preussische-fest-lieder-teil-1-o-freude-ueber-freud-eccard-johannes>,
         <https://performance.musiconn.de/work/stille-nacht-heilige-nacht-chorsatz-schreck-gustav>,
-        <https://performance.musiconn.de/work/uebers-gebirg-maria-geht-eccard-johannes>,
         <https://performance.musiconn.de/work/vom-himmel-hoch-o-englein-kommt-mauersberger-erhard>,
         <https://performance.musiconn.de/work/weihnacht-mauersberger-erhard>,
-        <https://performance.musiconn.de/work/wohlauf-wohlauf-mit-hellem-ton-walter-johann>,
-        <https://viaf.org/viaf/181850865>,
-        <https://viaf.org/viaf/182639689>,
-        <https://viaf.org/viaf/185090204>,
-        <https://viaf.org/viaf/212886293>,
-        <https://viaf.org/viaf/219172575>,
-        <https://viaf.org/viaf/316736830> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/181850865>,
-        <https://viaf.org/viaf/182639689>,
-        <https://viaf.org/viaf/185090204>,
-        <https://viaf.org/viaf/212886293>,
-        <https://viaf.org/viaf/219172575>,
-        <https://viaf.org/viaf/316736830> .
+        <https://performance.musiconn.de/work/wohlauf-wohlauf-mit-hellem-ton-walter-johann> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181850865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182639689> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185090204> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212886293> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219172575> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316736830> a nfdicore:NFDI_0001010 .
 

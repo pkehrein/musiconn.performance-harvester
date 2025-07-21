@@ -1,58 +1,79 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1046436589> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175474746> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300019157> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033281> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300062486> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300148127> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170300> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/elite-konzert-1928-06-28-19-00> ] .
 
-<https://performance.musiconn.de/event/elite-konzert-1928-06-28-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/elite-konzert-1928-06-28-19-00> a cto:CTO_0001005 ;
     rdfs:label "Elite-Konzert, 28.6.1928, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1928-1929> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1928-06-28T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1928-06-28T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1046436589>,
-        <https://d-nb.info/gnd/1175474746>,
-        <https://d-nb.info/gnd/300019157>,
-        <https://d-nb.info/gnd/300033281>,
-        <https://d-nb.info/gnd/300062486>,
-        <https://d-nb.info/gnd/300148127>,
-        <https://d-nb.info/gnd/300170300> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1928-1929> ;
-    cto:relatedItem <https://d-nb.info/gnd/1046436589>,
-        <https://d-nb.info/gnd/1175474746>,
-        <https://d-nb.info/gnd/300019157>,
-        <https://d-nb.info/gnd/300033281>,
-        <https://d-nb.info/gnd/300062486>,
-        <https://d-nb.info/gnd/300148127>,
-        <https://d-nb.info/gnd/300170300>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/volksbuehne-chemnitz> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1046436589> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306266444> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/744144783054778562913> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300019157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176623462> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186708409> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033281> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175474746> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062486> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170300> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300148127> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2950154801941856310006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185089854> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/232106313> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/der-rosenkavalier-walzer-strauss-richard>,
-        <https://performance.musiconn.de/work/finlandia-sibelius-jean>,
-        <https://performance.musiconn.de/work/franceska-da-rimini-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/le-carnaval-romain-berlioz-hector>,
-        <https://performance.musiconn.de/work/peer-gynt-suite-nr-1-op-46-grieg-edvard>,
-        <https://performance.musiconn.de/work/rienzi-der-letzte-der-tribunen-ouvertuere-wagner-richard>,
-        <https://performance.musiconn.de/work/slovanske-tance-b-78-nr-1-dvorak-antonin>,
-        <https://performance.musiconn.de/work/slovanske-tance-b-78-nr-3-dvorak-antonin>,
-        <https://performance.musiconn.de/work/zevenzot-koeberg-frits-erhardt-adrian>,
-        <https://viaf.org/viaf/176623462>,
-        <https://viaf.org/viaf/185089854>,
-        <https://viaf.org/viaf/186708409>,
-        <https://viaf.org/viaf/232106313>,
-        <https://viaf.org/viaf/2950154801941856310006>,
-        <https://viaf.org/viaf/306266444>,
-        <https://viaf.org/viaf/744144783054778562913> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/volksbuehne-chemnitz> ;
-    cto:viaf <https://viaf.org/viaf/176623462>,
-        <https://viaf.org/viaf/185089854>,
-        <https://viaf.org/viaf/186708409>,
-        <https://viaf.org/viaf/232106313>,
-        <https://viaf.org/viaf/2950154801941856310006>,
-        <https://viaf.org/viaf/306266444>,
-        <https://viaf.org/viaf/744144783054778562913> .
+        <https://performance.musiconn.de/work/zevenzot-koeberg-frits-erhardt-adrian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176623462> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185089854> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186708409> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/232106313> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2950154801941856310006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/306266444> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/744144783054778562913> a nfdicore:NFDI_0001010 .
 

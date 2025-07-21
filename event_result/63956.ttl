@@ -1,42 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1129877574> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1294914502> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30030658X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300722036> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/301017735> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kompositionen-bedeutender-musiker-die-aber-als-sie-1933-deutschland-verlassen-mussten-zu-jung-waren-um-beruehmt-zu-sein-haus-schevenstrasse-dresden-1991-10-04-17-00> ] .
 
-<https://performance.musiconn.de/event/kompositionen-bedeutender-musiker-die-aber-als-sie-1933-deutschland-verlassen-mussten-zu-jung-waren-um-beruehmt-zu-sein-haus-schevenstrasse-dresden-1991-10-04-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kompositionen-bedeutender-musiker-die-aber-als-sie-1933-deutschland-verlassen-mussten-zu-jung-waren-um-beruehmt-zu-sein-haus-schevenstrasse-dresden-1991-10-04-17-00> a cto:CTO_0001005 ;
     rdfs:label "Kompositionen bedeutender Musiker, die aber, als sie 1933 Deutschland verlassen mußten, zu jung waren, um berühmt zu sein, Haus Schevenstraße (Dresden), 4.10.1991, 17:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/5-dresdner-tage-der-zeitgenoessischen-musik-1991> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1991-10-04T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1991-10-04T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1129877574>,
-        <https://d-nb.info/gnd/1294914502>,
-        <https://d-nb.info/gnd/30030658X>,
-        <https://d-nb.info/gnd/300722036>,
-        <https://d-nb.info/gnd/301017735> ;
-    cto:itemOf <https://performance.musiconn.de/series/5-dresdner-tage-der-zeitgenoessischen-musik-1991> ;
-    cto:relatedItem <https://d-nb.info/gnd/1129877574>,
-        <https://d-nb.info/gnd/1294914502>,
-        <https://d-nb.info/gnd/30030658X>,
-        <https://d-nb.info/gnd/300722036>,
-        <https://d-nb.info/gnd/301017735>,
-        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-45-dresdner-tage-fuer-zeitgenoessische-musik-1988-1989-1991>,
-        <https://performance.musiconn.de/work/bagatellen-klavier-kahn-erich-itor>,
-        <https://performance.musiconn.de/work/guernica-dessau-paul>,
-        <https://performance.musiconn.de/work/intermezzi-klavier-dessau-paul>,
-        <https://performance.musiconn.de/work/sonaten-kl-op-10-goldschmidt-berthold>,
-        <https://performance.musiconn.de/work/stuecke-klavier-op-33b-schoenberg-arnold>,
-        <https://viaf.org/viaf/209868307>,
-        <https://viaf.org/viaf/262302779>,
-        <https://viaf.org/viaf/4308149235098276690007> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/haus-schevenstrasse-dresden> ;
-    cto:viaf <https://viaf.org/viaf/209868307>,
-        <https://viaf.org/viaf/262302779>,
-        <https://viaf.org/viaf/4308149235098276690007> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/haus-schevenstrasse-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301017735> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/262302779> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4308149235098276690007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300722036> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1294914502> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209868307> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30030658X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1129877574> ],
+        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-45-dresdner-tage-fuer-zeitgenoessische-musik-1988-1989-1991> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/209868307> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/262302779> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4308149235098276690007> a nfdicore:NFDI_0001010 .
 

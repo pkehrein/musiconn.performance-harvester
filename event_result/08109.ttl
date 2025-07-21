@@ -1,57 +1,78 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1139137204> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1139137603> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300068646> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101414> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102461> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30010247X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300216572> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-hochschule-fuer-musik-und-theater-leipzig-2002-01-17> ] .
 
-<https://performance.musiconn.de/event/konzert-hochschule-fuer-musik-und-theater-leipzig-2002-01-17> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-hochschule-fuer-musik-und-theater-leipzig-2002-01-17> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Hochschule für Musik und Theater (Leipzig), 17.1.2002" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2002-01-17" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2002-01-17" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1139137204>,
-        <https://d-nb.info/gnd/1139137603>,
-        <https://d-nb.info/gnd/300068646>,
-        <https://d-nb.info/gnd/300101414>,
-        <https://d-nb.info/gnd/300102461>,
-        <https://d-nb.info/gnd/30010247X>,
-        <https://d-nb.info/gnd/300216572> ;
-    cto:relatedItem <https://d-nb.info/gnd/1139137204>,
-        <https://d-nb.info/gnd/1139137603>,
-        <https://d-nb.info/gnd/300068646>,
-        <https://d-nb.info/gnd/300101414>,
-        <https://d-nb.info/gnd/300102461>,
-        <https://d-nb.info/gnd/30010247X>,
-        <https://d-nb.info/gnd/300216572>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hochschule-fuer-musik-und-theater-leipzig> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1139137603> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102461> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182657321> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1139137204> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300216572> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300068646> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4174150470093304330000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183101747> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174588556> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192573485> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4240150470093404330000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30010247X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101414> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215924055> ],
         <https://performance.musiconn.de/source/motettenbuch-2001-02>,
-        <https://performance.musiconn.de/work/denn-er-hat-seinen-engeln-befohlen-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/kleine-geistliche-chormusik-herr-ich-habe-lieb-die-staette-thomas-kurt>,
-        <https://performance.musiconn.de/work/kleine-geistliche-chormusik-herr-sei-mir-gnaedig-thomas-kurt>,
-        <https://performance.musiconn.de/work/messen-op-109-es-dur-rheinberger-joseph>,
-        <https://performance.musiconn.de/work/nimm-von-uns-herr-gott-hauptmann-moritz>,
         <https://performance.musiconn.de/work/nun-bist-du-heiland-wirklich-da-richter-ernst-friedrich-eduard>,
-        <https://performance.musiconn.de/work/psalm-2-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/psalm-23-op-42-schreck-gustav>,
-        <https://performance.musiconn.de/work/psalm-43-mendelssohn-bartholdy-felix>,
-        <https://viaf.org/viaf/174588556>,
-        <https://viaf.org/viaf/182657321>,
-        <https://viaf.org/viaf/183101747>,
-        <https://viaf.org/viaf/192573485>,
-        <https://viaf.org/viaf/215924055>,
-        <https://viaf.org/viaf/4174150470093304330000>,
-        <https://viaf.org/viaf/4240150470093404330000> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hochschule-fuer-musik-und-theater-leipzig> ;
-    cto:viaf <https://viaf.org/viaf/174588556>,
-        <https://viaf.org/viaf/182657321>,
-        <https://viaf.org/viaf/183101747>,
-        <https://viaf.org/viaf/192573485>,
-        <https://viaf.org/viaf/215924055>,
-        <https://viaf.org/viaf/4174150470093304330000>,
-        <https://viaf.org/viaf/4240150470093404330000> .
+        <https://performance.musiconn.de/work/psalm-23-op-42-schreck-gustav> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174588556> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182657321> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183101747> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192573485> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215924055> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4174150470093304330000> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4240150470093404330000> a nfdicore:NFDI_0001010 .
 

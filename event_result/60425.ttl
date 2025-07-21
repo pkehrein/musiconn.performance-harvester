@@ -1,54 +1,71 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/127477098X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001063X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30010278X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102828> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300675453> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4300889-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-leipzig-nikolaikirche-leipzig-1866-05-12-16-00> ] .
 
-<https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-leipzig-nikolaikirche-leipzig-1866-05-12-16-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-leipzig-nikolaikirche-leipzig-1866-05-12-16-00> a cto:CTO_0001005 ;
     rdfs:label "Haupt-Prüfung am Conservatorium der Musik Leipzig, Nikolaikirche (Leipzig), 12.5.1866, 16:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/pruefung> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1866-05-12T16:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1866-05-12T16:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/127477098X>,
-        <https://d-nb.info/gnd/30001063X>,
-        <https://d-nb.info/gnd/30010278X>,
-        <https://d-nb.info/gnd/300102828>,
-        <https://d-nb.info/gnd/300675453>,
-        <https://d-nb.info/gnd/4300889-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/pruefung> ;
-    cto:relatedItem <https://d-nb.info/gnd/127477098X>,
-        <https://d-nb.info/gnd/30001063X>,
-        <https://d-nb.info/gnd/30010278X>,
-        <https://d-nb.info/gnd/300102828>,
-        <https://d-nb.info/gnd/300675453>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173652475> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4300889-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300675453> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001063X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102828> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219160443> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/127477098X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30010278X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201853470> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219177967> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193654814> ],
         <https://performance.musiconn.de/source/konservatorium-der-musik-hochschule-fuer-musik-konzertprogramme-1843-1948>,
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-gegr-1834-von-robert-schumann>,
         <https://performance.musiconn.de/source/signale-fuer-die-musikalische-welt>,
         <https://performance.musiconn.de/work/fugen-orgel-a-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/fugen-orgel-g-moll-wermann-oskar>,
         <https://performance.musiconn.de/work/fugen-ueber-den-namen-bach-b-dur-schumann-robert>,
         <https://performance.musiconn.de/work/konzerte-orgel-orchester-g-moll-haendel-georg-friedrich>,
         <https://performance.musiconn.de/work/praeludien-orgel-es-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/praeludium-und-fuge-e-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/praeludium-und-fuge-orgel-bwv-539-d-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonaten-orgel-mwv-w-56-f-moll-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/sonaten-orgel-mwv-w-61-d-moll-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/toccata-und-fuge-orgel-bwv-540-f-dur-toccata-bach-johann-sebastian>,
-        <https://viaf.org/viaf/193654814>,
-        <https://viaf.org/viaf/201853470>,
-        <https://viaf.org/viaf/219160443>,
-        <https://viaf.org/viaf/219177967> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4300889-6>,
-        <https://viaf.org/viaf/173652475> ;
-    cto:viaf <https://viaf.org/viaf/173652475>,
-        <https://viaf.org/viaf/193654814>,
-        <https://viaf.org/viaf/201853470>,
-        <https://viaf.org/viaf/219160443>,
-        <https://viaf.org/viaf/219177967> .
+        <https://performance.musiconn.de/work/praeludium-und-fuge-e-moll-bach-johann-sebastian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/173652475> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193654814> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201853470> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219160443> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219177967> a nfdicore:NFDI_0001010 .
 

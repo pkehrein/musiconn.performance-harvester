@@ -1,58 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1071676814> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1128335182> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300024940> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037651> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146418> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171781> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300788096> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-abonnementkonzert-central-halle-leipzig-1867-01-15> ] .
 
-<https://performance.musiconn.de/event/6-abonnementkonzert-central-halle-leipzig-1867-01-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-abonnementkonzert-central-halle-leipzig-1867-01-15> a cto:CTO_0001005 ;
     rdfs:label "6. Abonnementkonzert, Central-Halle (Leipzig), 15.1.1867" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1866-1867> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1867-01-15" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1867-01-15" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1071676814>,
-        <https://d-nb.info/gnd/1128335182>,
-        <https://d-nb.info/gnd/300024940>,
-        <https://d-nb.info/gnd/300037651>,
-        <https://d-nb.info/gnd/300146418>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/300788096> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1866-1867> ;
-    cto:relatedItem <https://d-nb.info/gnd/1071676814>,
-        <https://d-nb.info/gnd/1128335182>,
-        <https://d-nb.info/gnd/300024940>,
-        <https://d-nb.info/gnd/300037651>,
-        <https://d-nb.info/gnd/300146418>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/300788096>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/central-halle-leipzig> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309560042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037651> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205762395> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1128335182> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1071676814> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146418> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300788096> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300024940> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217023203> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179025422> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175405235> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181366843> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
-        <https://performance.musiconn.de/source/whistling-carl-wilhelm-der-musikverein-euterpe-zu-leipzig-1824-1874-leipzig-1874>,
-        <https://performance.musiconn.de/work/deutsche-volkslieder-woo-34-abschiedslied-brahms-johannes>,
-        <https://performance.musiconn.de/work/la-fuite-en-egypte-berlioz-hector>,
-        <https://performance.musiconn.de/work/oberon-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/polonaise-mit-vorangehendem-andante-spianato-chopin-frederic>,
-        <https://performance.musiconn.de/work/romanzen-und-balladen-op-146-das-schifflein-schumann-robert>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-44-d-moll-volkmann-robert>,
-        <https://performance.musiconn.de/work/sinfonische-konzerte-klavier-orchester-nr-3-op-45-es-dur-litolff-henry>,
-        <https://viaf.org/viaf/175405235>,
-        <https://viaf.org/viaf/179025422>,
-        <https://viaf.org/viaf/181366843>,
-        <https://viaf.org/viaf/205762395>,
-        <https://viaf.org/viaf/217023203>,
-        <https://viaf.org/viaf/309560042> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/central-halle-leipzig> ;
-    cto:viaf <https://viaf.org/viaf/175405235>,
-        <https://viaf.org/viaf/179025422>,
-        <https://viaf.org/viaf/181366843>,
-        <https://viaf.org/viaf/205762395>,
-        <https://viaf.org/viaf/217023203>,
-        <https://viaf.org/viaf/309560042> .
+        <https://performance.musiconn.de/source/whistling-carl-wilhelm-der-musikverein-euterpe-zu-leipzig-1824-1874-leipzig-1874> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175405235> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179025422> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181366843> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205762395> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217023203> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309560042> a nfdicore:NFDI_0001010 .
 

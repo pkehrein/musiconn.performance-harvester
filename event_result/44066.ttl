@@ -4,19 +4,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ausstellungseroeffnung-heben-sie-das-gut-auf-stadtbibliothek-leipzig-oberlichtsaal-2013-11-07-19-00> ] .
 
-<https://performance.musiconn.de/event/ausstellungseroeffnung-heben-sie-das-gut-auf-stadtbibliothek-leipzig-oberlichtsaal-2013-11-07-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ausstellungseroeffnung-heben-sie-das-gut-auf-stadtbibliothek-leipzig-oberlichtsaal-2013-11-07-19-00> a cto:CTO_0001005 ;
     rdfs:label "Ausstellungseröffnung 'Heben Sie das gut auf', Stadtbibliothek (Leipzig) / Oberlichtsaal, 7.11.2013, 19:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2013-11-07T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2013-11-07T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/stadtbibliothek-leipzig-oberlichtsaal> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/mathias-orbeck-reichspogromnacht-1938-ephraim-carlebach-stiftung-und-synagogalchor-erinnern-daran-gerettete-noten-erklingen>,
         <https://performance.musiconn.de/source/plakat-ausstellungseroeffnung-7-november-2013>,
         <https://performance.musiconn.de/source/programm-ausstellungseroeffnung-7-november-2013>,
@@ -33,8 +37,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/s-brennt-briderlech-s-brennt-fassung-gross-friedbert-gebirtig-mordechai>,
         <https://performance.musiconn.de/work/sis-gut-fassung-dorfman-joseph-gebirtig-mordechai>,
         <https://performance.musiconn.de/work/wohlan-preiset-den-ewigen-psalm-134-lewandowski-louis> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/stadtbibliothek-leipzig-oberlichtsaal> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

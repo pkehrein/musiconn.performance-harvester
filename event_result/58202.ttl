@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4070126-8> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-cottbus-1985-10-00> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-cottbus-1985-10-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-cottbus-1985-10-00> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Cottbus, 10/1985" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1985-10-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1985-10-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4070126-8> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1985-und-nachtrag-1976-1984-dresden-saechsische-landesbibliothek-dresden-1986>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4070126-8> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248536408> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1985-und-nachtrag-1976-1984-dresden-saechsische-landesbibliothek-dresden-1986>,
         <https://performance.musiconn.de/work/der-verhexte-walzer-fuer-blasorchester-grafe-manfred> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4070126-8>,
-        <https://viaf.org/viaf/248536408> ;
-    cto:viaf <https://viaf.org/viaf/248536408> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/248536408> a nfdicore:NFDI_0001010 .
 

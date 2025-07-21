@@ -1,54 +1,73 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1190924366> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300060823> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141785> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145071> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300796323> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1863-10-27> ] .
 
-<https://performance.musiconn.de/event/1-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1863-10-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1863-10-27> a cto:CTO_0001005 ;
     rdfs:label "1. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 27.10.1863" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1863-1864> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1863-10-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1863-10-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1190924366>,
-        <https://d-nb.info/gnd/300060823>,
-        <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300145071>,
-        <https://d-nb.info/gnd/300796323>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1863-1864> ;
-    cto:relatedItem <https://d-nb.info/gnd/1190924366>,
-        <https://d-nb.info/gnd/300060823>,
-        <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300145071>,
-        <https://d-nb.info/gnd/300796323>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174994351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4997156374135207710009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145071> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7208156565732723500004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300796323> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185197829> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206834030> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300060823> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1190924366> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
         <https://performance.musiconn.de/source/whistling-carl-wilhelm-der-musikverein-euterpe-zu-leipzig-1824-1874-leipzig-1874>,
         <https://performance.musiconn.de/work/andante-und-rondo-violoncello-e-moll-popper-david>,
-        <https://performance.musiconn.de/work/genoveva-ouvertuere-schumann-robert>,
-        <https://performance.musiconn.de/work/iphigenie-en-tauride-arie-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-nr-1-op-14-a-moll-goltermann-georg>,
-        <https://performance.musiconn.de/work/lieder-von-franz-schubert-s-558-die-junge-nonne-liszt-franz>,
-        <https://performance.musiconn.de/work/lieder-von-schubert-der-doppelgaenger-liszt-franz>,
-        <https://performance.musiconn.de/work/sinfonien-d-944-c-dur-schubert-franz>,
-        <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/185197829>,
-        <https://viaf.org/viaf/206834030>,
-        <https://viaf.org/viaf/4997156374135207710009>,
-        <https://viaf.org/viaf/7208156565732723500004> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/185197829>,
-        <https://viaf.org/viaf/206834030>,
-        <https://viaf.org/viaf/242717024>,
-        <https://viaf.org/viaf/4997156374135207710009>,
-        <https://viaf.org/viaf/7208156565732723500004> .
+        <https://performance.musiconn.de/work/iphigenie-en-tauride-arie-gluck-christoph-willibald> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174994351> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185197829> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206834030> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4997156374135207710009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7208156565732723500004> a nfdicore:NFDI_0001010 .
 

@@ -1,23 +1,25 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1211992489> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/chorovaja-muzyka-xx-veka-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1966-04-21> ] .
 
-<https://performance.musiconn.de/event/chorovaja-muzyka-xx-veka-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1966-04-21> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/chorovaja-muzyka-xx-veka-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1966-04-21> a cto:CTO_0001005 ;
     rdfs:label "Chorovaja muzyka XX veka, Gosudarstvennaja akademičeskaja kapella (Sankt Petersburg) / Koncertnyj zal, 21.4.1966" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1966-04-21" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1966-04-21" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1211992489> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
-    cto:relatedItem <https://performance.musiconn.de/source/2-leningrader-fruehling-1966-uebersicht>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1211992489> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/2-leningrader-fruehling-1966-uebersicht>,
         <https://performance.musiconn.de/source/2-leningrader-fruehling-1966-uebersicht-klein>,
         <https://performance.musiconn.de/work/desjat-poem-na-slova-revoljucionnych-poetov-majskaja-pesn-schostakowitsch-dmitri-d>,
         <https://performance.musiconn.de/work/desjat-poem-na-slova-revoljucionnych-poetov-oni-pobedili-schostakowitsch-dmitri-d>,
@@ -30,5 +32,5 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/skvorcy-prileteli-murov-askold-f>,
         <https://performance.musiconn.de/work/slovo-o-polku-igoreve-pochod-prigozin-ljucian-a>,
         <https://performance.musiconn.de/work/vo-doline-lugovne-murov-askold-f> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1211992489> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
 

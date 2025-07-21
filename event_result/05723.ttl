@@ -1,56 +1,74 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300123825> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30034984X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30041336X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300463375> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30047931X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/301025975> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/adventsfeier-grosser-sitzungssaal-neues-rathaus-dresden-grosser-sitzungssaal-1935-12-15-17-30> ] .
 
-<https://performance.musiconn.de/event/adventsfeier-grosser-sitzungssaal-neues-rathaus-dresden-grosser-sitzungssaal-1935-12-15-17-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/adventsfeier-grosser-sitzungssaal-neues-rathaus-dresden-grosser-sitzungssaal-1935-12-15-17-30> a cto:CTO_0001005 ;
     rdfs:label "Adventsfeier (Großer Sitzungssaal), Neues Rathaus (Dresden) / Großer Sitzungssaal, 15.12.1935, 17:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/adventsfeier-zum-besten-der-winterhilfe-in-den-festraeumen-des-rathauses> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1935-12-15T19:15:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1935-12-15T17:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300123825>,
-        <https://d-nb.info/gnd/30034984X>,
-        <https://d-nb.info/gnd/30041336X>,
-        <https://d-nb.info/gnd/300463375>,
-        <https://d-nb.info/gnd/30047931X>,
-        <https://d-nb.info/gnd/301025975> ;
-    cto:itemOf <https://performance.musiconn.de/series/adventsfeier-zum-besten-der-winterhilfe-in-den-festraeumen-des-rathauses> ;
-    cto:relatedItem <https://d-nb.info/gnd/300123825>,
-        <https://d-nb.info/gnd/30034984X>,
-        <https://d-nb.info/gnd/30041336X>,
-        <https://d-nb.info/gnd/300463375>,
-        <https://d-nb.info/gnd/30047931X>,
-        <https://d-nb.info/gnd/301025975>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/neues-rathaus-dresden-grosser-sitzungssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180233160> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30034984X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30047931X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300463375> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/246259183> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301025975> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30041336X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/246258934> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174651872> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300123825> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210938301> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/240062855> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
         <https://performance.musiconn.de/work/altboehmische-weihnachtslieder-riedel-carl>,
         <https://performance.musiconn.de/work/es-sitzen-zwei-englein-anonym>,
         <https://performance.musiconn.de/work/lasst-uns-froh-und-munter-sein-anonym>,
-        <https://performance.musiconn.de/work/lieder-op-27-caecilie-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-op-32-liebeshymnus-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-op-4-ne-poj-krasavica-pri-mne-rachmaninov-sergej-vasilevic>,
-        <https://performance.musiconn.de/work/lieder-op-52-weihnachtslied-berger-wilhelm>,
         <https://performance.musiconn.de/work/sextette-blaeser-klavier-variationen-striegler-kurt>,
-        <https://performance.musiconn.de/work/solovej-aljabev-aleksandr-aleksandrovic>,
-        <https://performance.musiconn.de/work/wenn-weihnachten-ist-anonym>,
-        <https://performance.musiconn.de/work/wie-schoen-singt-uns-der-engel-schar-freundt-cornelius>,
-        <https://viaf.org/viaf/174651872>,
-        <https://viaf.org/viaf/180233160>,
-        <https://viaf.org/viaf/210938301>,
-        <https://viaf.org/viaf/240062855>,
-        <https://viaf.org/viaf/246258934>,
-        <https://viaf.org/viaf/246259183> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/neues-rathaus-dresden-grosser-sitzungssaal> ;
-    cto:viaf <https://viaf.org/viaf/174651872>,
-        <https://viaf.org/viaf/180233160>,
-        <https://viaf.org/viaf/210938301>,
-        <https://viaf.org/viaf/240062855>,
-        <https://viaf.org/viaf/246258934>,
-        <https://viaf.org/viaf/246259183> .
+        <https://performance.musiconn.de/work/wenn-weihnachten-ist-anonym> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174651872> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180233160> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210938301> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/240062855> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/246258934> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/246259183> a nfdicore:NFDI_0001010 .
 

@@ -1,38 +1,47 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300157436> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170114> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300258992> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1906-11-22> ] .
 
-<https://performance.musiconn.de/event/4-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1906-11-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1906-11-22> a cto:CTO_0001005 ;
     rdfs:label "4. Philharmonisches Konzert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 22.11.1906" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1906-1907> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1906-11-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1906-11-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300157436>,
-        <https://d-nb.info/gnd/300170114>,
-        <https://d-nb.info/gnd/300258992> ;
-    cto:itemOf <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1906-1907> ;
-    cto:relatedItem <https://d-nb.info/gnd/300157436>,
-        <https://d-nb.info/gnd/300170114>,
-        <https://d-nb.info/gnd/300258992>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178619765> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300258992> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170114> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202942410> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157436> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186109452> ],
         <https://performance.musiconn.de/source/musikalisches-wochenblatt-mw>,
-        <https://performance.musiconn.de/work/beethovens-lieder-von-goethe-mignon-liszt-franz>,
-        <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-vorspiel-wagner-richard>,
         <https://performance.musiconn.de/work/mephisto-walzer-klavier-orchester-fassung-liszt-franz>,
-        <https://performance.musiconn.de/work/tod-und-verklaerung-strauss-richard>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-klavier-orchester-s-359-nr-5-bearbeitung-von-richard-burmeister-liszt-franz>,
-        <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/186109452>,
-        <https://viaf.org/viaf/202942410> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/186109452>,
-        <https://viaf.org/viaf/202942410> .
+        <https://performance.musiconn.de/work/ungarische-rhapsodien-klavier-orchester-s-359-nr-5-bearbeitung-von-richard-burmeister-liszt-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178619765> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186109452> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202942410> a nfdicore:NFDI_0001010 .
 

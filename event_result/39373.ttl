@@ -1,48 +1,64 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300111134> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145756> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145772> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145888> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4279519-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-serenade-im-schloss-zu-pillnitz-schloss-pillnitz-dresden-1947-08-02> ] .
 
-<https://performance.musiconn.de/event/7-serenade-im-schloss-zu-pillnitz-schloss-pillnitz-dresden-1947-08-02> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-serenade-im-schloss-zu-pillnitz-schloss-pillnitz-dresden-1947-08-02> a cto:CTO_0001005 ;
     rdfs:label "7. Serenade im Schloß zu Pillnitz, Schloss Pillnitz (Dresden), 2.8.1947" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1947-1948> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1947-08-02" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1947-08-02" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300111134>,
-        <https://d-nb.info/gnd/300145756>,
-        <https://d-nb.info/gnd/300145772>,
-        <https://d-nb.info/gnd/300145888>,
-        <https://d-nb.info/gnd/4279519-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1947-1948> ;
-    cto:relatedItem <https://d-nb.info/gnd/300111134>,
-        <https://d-nb.info/gnd/300145756>,
-        <https://d-nb.info/gnd/300145772>,
-        <https://d-nb.info/gnd/300145888>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173353325> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4279519-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182680957> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111134> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182274863> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208684293> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145888> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145756> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145772> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185114977> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/deutsche-taenze-orchester-schubert-franz>,
-        <https://performance.musiconn.de/work/liederkreis-nach-heinrich-heine-mit-myrthen-und-rosen-schumann-robert>,
-        <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-fruehlingsnacht-schumann-robert>,
         <https://performance.musiconn.de/work/meiner-allerliebsten-schoenen-bach-johann-christian>,
-        <https://performance.musiconn.de/work/myrthen-du-bist-wie-eine-blume-schumann-robert>,
         <https://performance.musiconn.de/work/sinfonie-b-dur-bach-johann-christian>,
-        <https://performance.musiconn.de/work/sinfonien-kv-543-es-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/wenn-nach-der-stuerme-toben-bach-johann-christian>,
-        <https://viaf.org/viaf/182274863>,
-        <https://viaf.org/viaf/182680957>,
-        <https://viaf.org/viaf/185114977>,
-        <https://viaf.org/viaf/208684293> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4279519-9>,
-        <https://viaf.org/viaf/173353325> ;
-    cto:viaf <https://viaf.org/viaf/173353325>,
-        <https://viaf.org/viaf/182274863>,
-        <https://viaf.org/viaf/182680957>,
-        <https://viaf.org/viaf/185114977>,
-        <https://viaf.org/viaf/208684293> .
+        <https://performance.musiconn.de/work/wenn-nach-der-stuerme-toben-bach-johann-christian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/173353325> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182274863> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182680957> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185114977> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208684293> a nfdicore:NFDI_0001010 .
 

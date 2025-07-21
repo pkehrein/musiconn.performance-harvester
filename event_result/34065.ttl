@@ -4,19 +4,20 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4222712-4> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/orontee-chateau-de-chantilly-chantilly-1688-08-23> ] .
 
-<https://performance.musiconn.de/event/orontee-chateau-de-chantilly-chantilly-1688-08-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/orontee-chateau-de-chantilly-chantilly-1688-08-23> a cto:CTO_0001005 ;
     rdfs:label "Orontée, Château de Chantilly (Chantilly), 23.8.1688" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1688-08-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1688-08-23" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4222712-4> ;
-    cto:relatedItem <https://performance.musiconn.de/source/beauchamps-1735-bd-3-86-1>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4222712-4> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/beauchamps-1735-bd-3-86-1>,
         <https://performance.musiconn.de/source/hourcade-2002-306>,
         <https://performance.musiconn.de/source/mercure-galant-1688-bd-11-322-323-bd-13-96-166>,
         <https://performance.musiconn.de/source/musikalie-digitalisat-52>,
@@ -24,5 +25,5 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/source/onlinequelle-194>,
         <https://performance.musiconn.de/source/textquelle-24>,
         <https://performance.musiconn.de/work/orontee-lully-jean-louis> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4222712-4> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
 

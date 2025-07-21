@@ -4,20 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1192325486> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/messekonzert-synagogenmusik-jiddische-und-hebraeische-folklore-in-freier-bearbeitung-altes-rathaus-leipzig-festsaal-1991-03-20-20-00> ] .
 
-<https://performance.musiconn.de/event/messekonzert-synagogenmusik-jiddische-und-hebraeische-folklore-in-freier-bearbeitung-altes-rathaus-leipzig-festsaal-1991-03-20-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/messekonzert-synagogenmusik-jiddische-und-hebraeische-folklore-in-freier-bearbeitung-altes-rathaus-leipzig-festsaal-1991-03-20-20-00> a cto:CTO_0001005 ;
     rdfs:label "Messekonzert / Synagogenmusik - Jiddische und hebräische Folklore in freier Bearbeitung, Altes Rathaus (Leipzig) / Festsaal, 20.3.1991, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1991-03-20T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1991-03-20T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1192325486>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1192325486> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/ovationen-fuer-synagogalchor-konzert-im-alten-rathaus>,
         <https://performance.musiconn.de/source/plakat-konzert-20-maerz-1991>,
         <https://performance.musiconn.de/work/de-mamme-is-gegangen-fassung-gross-friedbert>,
@@ -30,8 +36,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/schabbes-schabbes-fassung-knorrn-horst-dieter>,
         <https://performance.musiconn.de/work/tow-lhodos-psalm-92-lewandowski-louis>,
         <https://performance.musiconn.de/work/wschomru-alman-samuel> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1192325486> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

@@ -1,66 +1,91 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/113824094X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300036779> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037988> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300095147> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009728X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300206615> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300407092> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/junye-pianisty-sankt-peterburga-sankt-petersburger-philharmonie-2002-01-27> ] .
 
-<https://performance.musiconn.de/event/junye-pianisty-sankt-peterburga-sankt-petersburger-philharmonie-2002-01-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/junye-pianisty-sankt-peterburga-sankt-petersburger-philharmonie-2002-01-27> a cto:CTO_0001005 ;
     rdfs:label "Junye pianisty Sankt-Peterburga, Sankt-Petersburger Philharmonie, 27.1.2002" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-2001-2002> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2002-01-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2002-01-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/113824094X>,
-        <https://d-nb.info/gnd/300036779>,
-        <https://d-nb.info/gnd/300037988>,
-        <https://d-nb.info/gnd/300095147>,
-        <https://d-nb.info/gnd/30009728X>,
-        <https://d-nb.info/gnd/300206615>,
-        <https://d-nb.info/gnd/300407092>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-2001-2002> ;
-    cto:relatedItem <https://d-nb.info/gnd/113824094X>,
-        <https://d-nb.info/gnd/300036779>,
-        <https://d-nb.info/gnd/300037988>,
-        <https://d-nb.info/gnd/300095147>,
-        <https://d-nb.info/gnd/30009728X>,
-        <https://d-nb.info/gnd/300206615>,
-        <https://d-nb.info/gnd/300407092>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189338833> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037988> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009728X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182482238> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5180150325537910090009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217012859> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300036779> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194735350> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/113824094X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174189368> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300206615> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209861326> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300407092> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300095147> ],
         <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-2002-27-januar-nachmittags>,
-        <https://performance.musiconn.de/work/balladen-klavier-op-38-f-dur-chopin-frederic>,
         <https://performance.musiconn.de/work/der-nussknacker-suite-auswahl-fassung-klavier-tschaikowski-peter-i>,
         <https://performance.musiconn.de/work/kartinki-s-vystavki-auswahl-musorgskij-modest-petrovic>,
         <https://performance.musiconn.de/work/morceaux-klavier-4-haendig-op-11-scherzo-rachmaninov-sergej-vasilevic>,
         <https://performance.musiconn.de/work/morceaux-klavier-4-haendig-op-11-slava-rachmaninov-sergej-vasilevic>,
-        <https://performance.musiconn.de/work/morceaux-klavier-op-45-skrjabin-aleksandr-n>,
         <https://performance.musiconn.de/work/praeludien-klavier-op-23-tempo-di-minuetto-d-moll-rachmaninov-sergej-vasilevic>,
-        <https://performance.musiconn.de/work/praeludien-klavier-op-32-allegro-vivace-rachmaninov-sergej-vasilevic>,
         <https://performance.musiconn.de/work/skazka-o-care-saltane-polet-smelja-bearbeitung-fuer-klavier-rimskij-korsakov-nikolaj>,
-        <https://performance.musiconn.de/work/sonaten-klavier-nr-1-op-28-d-moll-rachmaninov-sergej-vasilevic>,
-        <https://performance.musiconn.de/work/valses-oubliees-no-1-liszt-franz>,
-        <https://performance.musiconn.de/work/variationen-aus-dem-forellenquintett-bearbeitung-fuer-klavier-schubert-franz>,
-        <https://performance.musiconn.de/work/variationen-ueber-das-thema-des-rondos-je-vends-des-scapulaires-aus-der-oper-ludovic-von-herold-und-halevy-chopin-frederic>,
-        <https://performance.musiconn.de/work/wariacje-na-temat-paganiniego-lutoslawski-witold>,
-        <https://viaf.org/viaf/174189368>,
-        <https://viaf.org/viaf/182482238>,
-        <https://viaf.org/viaf/189338833>,
-        <https://viaf.org/viaf/194735350>,
-        <https://viaf.org/viaf/209861326>,
-        <https://viaf.org/viaf/217012859>,
-        <https://viaf.org/viaf/5180150325537910090009> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/174189368>,
-        <https://viaf.org/viaf/182482238>,
-        <https://viaf.org/viaf/189338833>,
-        <https://viaf.org/viaf/194735350>,
-        <https://viaf.org/viaf/209861326>,
-        <https://viaf.org/viaf/217012859>,
-        <https://viaf.org/viaf/5180150325537910090009> .
+        <https://performance.musiconn.de/work/variationen-aus-dem-forellenquintett-bearbeitung-fuer-klavier-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174189368> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182482238> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189338833> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194735350> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209861326> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217012859> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5180150325537910090009> a nfdicore:NFDI_0001010 .
 

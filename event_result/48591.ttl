@@ -1,28 +1,35 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1089086296> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300554613> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-theaterbau-des-schauspielhauses-berlin-1987-09-20> ] .
 
-<https://performance.musiconn.de/event/konzert-theaterbau-des-schauspielhauses-berlin-1987-09-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-theaterbau-des-schauspielhauses-berlin-1987-09-20> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Theaterbau des Schauspielhauses Berlin, 20.9.1987" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-09-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-09-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1089086296>,
-        <https://d-nb.info/gnd/300554613> ;
-    cto:relatedItem <https://d-nb.info/gnd/300554613>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1987-dresden-saechsische-landesbibliothek-dresden-1988-1>,
-        <https://performance.musiconn.de/work/architektonischer-entwurf-rosenfeld-gerhard>,
-        <https://viaf.org/viaf/194744331> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1089086296>,
-        <https://viaf.org/viaf/313145858154823022430> ;
-    cto:viaf <https://viaf.org/viaf/194744331>,
-        <https://viaf.org/viaf/313145858154823022430> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1089086296> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/313145858154823022430> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194744331> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300554613> ],
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1987-dresden-saechsische-landesbibliothek-dresden-1988-1> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/194744331> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/313145858154823022430> a nfdicore:NFDI_0001010 .
 

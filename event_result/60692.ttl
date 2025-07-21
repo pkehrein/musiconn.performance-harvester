@@ -1,34 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300072724> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300197144> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4061849-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-des-musikvereins-unna-am-1-november-1987-unna-1987-11-01> ] .
 
-<https://performance.musiconn.de/event/konzert-des-musikvereins-unna-am-1-november-1987-unna-1987-11-01> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-des-musikvereins-unna-am-1-november-1987-unna-1987-11-01> a cto:CTO_0001005 ;
     rdfs:label "Konzert des Musikvereins Unna am 1. November 1987, Unna, 1.11.1987" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/internationales-komponistinnen-festival-unna> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-11-01" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-11-01" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300072724>,
-        <https://d-nb.info/gnd/300197144>,
-        <https://d-nb.info/gnd/4061849-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/internationales-komponistinnen-festival-unna> ;
-    cto:relatedItem <https://d-nb.info/gnd/300072724>,
-        <https://d-nb.info/gnd/300197144>,
-        <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-internationales-komponistinnen-festival>,
-        <https://performance.musiconn.de/work/oratorium-nach-bildern-der-bibel-satb-chor-orchester-hensel-fanny>,
-        <https://performance.musiconn.de/work/psalmus-hungaricus-kodaly-zoltan>,
-        <https://viaf.org/viaf/174800845>,
-        <https://viaf.org/viaf/182713728> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4061849-3>,
-        <https://viaf.org/viaf/312808229> ;
-    cto:viaf <https://viaf.org/viaf/174800845>,
-        <https://viaf.org/viaf/182713728>,
-        <https://viaf.org/viaf/312808229> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4061849-3> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/312808229> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300197144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182713728> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300072724> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174800845> ],
+        <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-internationales-komponistinnen-festival> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174800845> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182713728> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/312808229> a nfdicore:NFDI_0001010 .
 

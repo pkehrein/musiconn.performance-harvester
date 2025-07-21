@@ -1,54 +1,72 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1203826613> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1280456752> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1284114678> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110367> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146825> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300219474> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1868-05-16-18-00> ] .
 
-<https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1868-05-16-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/haupt-pruefung-am-conservatorium-der-musik-zu-leipzig-erstes-gewandhaus-leipzig-1868-05-16-18-00> a cto:CTO_0001005 ;
     rdfs:label "Haupt-Prüfung am Conservatorium der Musik zu Leipzig, Erstes Gewandhaus (Leipzig), 16.5.1868, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/pruefung> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1868-05-16T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1868-05-16T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/1203826613>,
-        <https://d-nb.info/gnd/1280456752>,
-        <https://d-nb.info/gnd/1284114678>,
-        <https://d-nb.info/gnd/300110367>,
-        <https://d-nb.info/gnd/300146825>,
-        <https://d-nb.info/gnd/300219474> ;
-    cto:itemOf <https://performance.musiconn.de/series/pruefung> ;
-    cto:relatedItem <https://d-nb.info/gnd/1203826613>,
-        <https://d-nb.info/gnd/1280456752>,
-        <https://d-nb.info/gnd/1284114678>,
-        <https://d-nb.info/gnd/300110367>,
-        <https://d-nb.info/gnd/300146825>,
-        <https://d-nb.info/gnd/300219474>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198524474> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205762400> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1284114678> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300219474> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1280456752> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178596139> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110367> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5499158070677608780008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1203826613> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146825> ],
         <https://performance.musiconn.de/source/konservatorium-der-musik-hochschule-fuer-musik-konzertprogramme-1843-1948>,
         <https://performance.musiconn.de/source/leipziger-allgemeine-musikalische-zeitung>,
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-gegr-1834-von-robert-schumann>,
         <https://performance.musiconn.de/source/signale-fuer-die-musikalische-welt>,
-        <https://performance.musiconn.de/work/praeludien-und-fugen-e-moll-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/praeludien-und-fugen-klavier-r-119-praeludium-und-fuge-nr-1-liszt-franz>,
-        <https://performance.musiconn.de/work/quintette-violine-2-viola-2-violoncello-kv-516-g-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/septette-klavier-querfloete-oboe-horn-viola-violoncello-kontrabass-op-74-d-moll-fassung-quintett-hummel-johann-nepomuk>,
-        <https://performance.musiconn.de/work/symphonische-sonate-moscheles-ignaz>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-nr-1-op-63-d-moll-schumann-robert>,
-        <https://performance.musiconn.de/work/variations-concertantes-mendelssohn-bartholdy-felix>,
-        <https://viaf.org/viaf/178596139>,
-        <https://viaf.org/viaf/198524474>,
-        <https://viaf.org/viaf/205762400>,
-        <https://viaf.org/viaf/5499158070677608780008> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/178596139>,
-        <https://viaf.org/viaf/198524474>,
-        <https://viaf.org/viaf/205762400>,
-        <https://viaf.org/viaf/5499158070677608780008>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/work/praeludien-und-fugen-e-moll-mendelssohn-bartholdy-felix> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178596139> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198524474> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205762400> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5499158070677608780008> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

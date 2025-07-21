@@ -1,40 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009690> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015488> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102658> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300114001> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/the-concert-hibiya-public-hall-tokyo-1945-11-19-17-00> ] .
 
-<https://performance.musiconn.de/event/the-concert-hibiya-public-hall-tokyo-1945-11-19-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/the-concert-hibiya-public-hall-tokyo-1945-11-19-17-00> a cto:CTO_0001005 ;
     rdfs:label "The concert, Hibiya Public Hall (Tokyo), 19.11.1945, 17:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1945-11-19T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1945-11-19T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009690>,
-        <https://d-nb.info/gnd/300015488>,
-        <https://d-nb.info/gnd/300102658>,
-        <https://d-nb.info/gnd/300114001> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009690>,
-        <https://d-nb.info/gnd/300015488>,
-        <https://d-nb.info/gnd/300102658>,
-        <https://d-nb.info/gnd/300114001>,
-        <https://performance.musiconn.de/source/tokyo-firuhamoni-kokyogakudan-80-nenshi-80-years-history-of-tokyo-philharmonic-orchestra-edited-by-tokyo-firuhamoni-koukyogakudan-published-by-tokyo-firuhamoni-koukyogakudan-1991>,
-        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-ouvertuere-nicolai-otto>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-3-op-37-c-moll-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/konzerte-violine-2-streichorchester-bwv-1043-d-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sinfonien-mwv-n-18-a-moll-mendelssohn-bartholdy-felix>,
-        <https://viaf.org/viaf/177421663>,
-        <https://viaf.org/viaf/185890974>,
-        <https://viaf.org/viaf/192572053>,
-        <https://viaf.org/viaf/205758904> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hibiya-public-hall-tokyo> ;
-    cto:viaf <https://viaf.org/viaf/177421663>,
-        <https://viaf.org/viaf/185890974>,
-        <https://viaf.org/viaf/192572053>,
-        <https://viaf.org/viaf/205758904> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hibiya-public-hall-tokyo> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205758904> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177421663> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102658> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009690> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300114001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015488> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192572053> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185890974> ],
+        <https://performance.musiconn.de/source/tokyo-firuhamoni-kokyogakudan-80-nenshi-80-years-history-of-tokyo-philharmonic-orchestra-edited-by-tokyo-firuhamoni-koukyogakudan-published-by-tokyo-firuhamoni-koukyogakudan-1991> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177421663> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185890974> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192572053> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205758904> a nfdicore:NFDI_0001010 .
 

@@ -1,50 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1054565813> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300062249> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141777> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156456> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300258151> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300654332> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-sinfonie-concert-der-generaldirektion-der-koenigl-musikalischen-kapelle-und-der-hoftheater-semperoper-dresden-1902-01-17-19-00> ] .
 
-<https://performance.musiconn.de/event/4-sinfonie-concert-der-generaldirektion-der-koenigl-musikalischen-kapelle-und-der-hoftheater-semperoper-dresden-1902-01-17-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-sinfonie-concert-der-generaldirektion-der-koenigl-musikalischen-kapelle-und-der-hoftheater-semperoper-dresden-1902-01-17-19-00> a cto:CTO_0001005 ;
     rdfs:label "4. Sinfonie-Concert der Generaldirektion der Königl. musikalischen Kapelle und der Hoftheater, Semperoper (Dresden), 17.1.1902, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/koenigliches-hoftheater-spielzeit-1901-1902> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1902-01-17T21:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1902-01-17T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1054565813>,
-        <https://d-nb.info/gnd/300062249>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300156456>,
-        <https://d-nb.info/gnd/300258151>,
-        <https://d-nb.info/gnd/300654332> ;
-    cto:itemOf <https://performance.musiconn.de/series/koenigliches-hoftheater-spielzeit-1901-1902> ;
-    cto:relatedItem <https://d-nb.info/gnd/300062249>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300156456>,
-        <https://d-nb.info/gnd/300258151>,
-        <https://d-nb.info/gnd/300654332>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309654002> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1054565813> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141777> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200782913> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300258151> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062249> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183353711> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202937502> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156456> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215937845> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425978> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300654332> ],
         <https://performance.musiconn.de/source/koenigliches-hoftheater-theaterzettel-dresden-1901-1902>,
-        <https://performance.musiconn.de/work/don-quixote-strauss-richard>,
-        <https://performance.musiconn.de/work/gavotten-kl-hwv-491-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-16-a-moll-grieg-edvard>,
-        <https://performance.musiconn.de/work/piece-in-a-scarlatti-alessandro>,
-        <https://performance.musiconn.de/work/sinfonien-d-759-h-moll-schubert-franz>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-nr-11-b-dur-liszt-franz>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/183353711>,
-        <https://viaf.org/viaf/200782913>,
-        <https://viaf.org/viaf/202937502>,
-        <https://viaf.org/viaf/215937845> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1054565813>,
-        <https://viaf.org/viaf/309654002> ;
-    cto:viaf <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/183353711>,
-        <https://viaf.org/viaf/200782913>,
-        <https://viaf.org/viaf/202937502>,
-        <https://viaf.org/viaf/215937845>,
-        <https://viaf.org/viaf/309654002> .
+        <https://performance.musiconn.de/work/piece-in-a-scarlatti-alessandro> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179425978> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183353711> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200782913> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202937502> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215937845> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309654002> a nfdicore:NFDI_0001010 .
 

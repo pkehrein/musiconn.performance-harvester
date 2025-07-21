@@ -1,31 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026811> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300192002> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/elfter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1928-02-24-19-30> ] .
 
-<https://performance.musiconn.de/event/elfter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1928-02-24-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/elfter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1928-02-24-19-30> a cto:CTO_0001005 ;
     rdfs:label "Elfter Kammermusik-Abend, Kleiner Konzertsaal (Frankfurt a. M.), 24.2.1928, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1927-1928> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1928-02-24T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1928-02-24T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026811>,
-        <https://d-nb.info/gnd/300192002> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1927-1928> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026811>,
-        <https://d-nb.info/gnd/300192002>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/sextette-violine-2-viola-2-violoncello-2-op-118-f-dur-reger-max>,
-        <https://performance.musiconn.de/work/sextette-violine-2-viola-2-violoncello-2-op-18-b-dur-brahms-johannes>,
-        <https://viaf.org/viaf/188262536>,
-        <https://viaf.org/viaf/209865070> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/188262536>,
-        <https://viaf.org/viaf/209865070> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026811> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188262536> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209865070> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300192002> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/188262536> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209865070> a nfdicore:NFDI_0001010 .
 

@@ -1,46 +1,57 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1099929466> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1263728820> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/126373183X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1263732992> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1263785522> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1263799019> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300060718> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/festliche-eroeffnung-haus-schevenstrasse-dresden-1989-10-01-16-00> ] .
 
-<https://performance.musiconn.de/event/festliche-eroeffnung-haus-schevenstrasse-dresden-1989-10-01-16-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/festliche-eroeffnung-haus-schevenstrasse-dresden-1989-10-01-16-00> a cto:CTO_0001005 ;
     rdfs:label "Festliche Eröffnung, Haus Schevenstraße (Dresden), 1.10.1989, 16:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/3-dresdner-tage-der-zeitgenoessischen-musik-1989> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1989-10-01T16:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1989-10-01T16:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1099929466>,
-        <https://d-nb.info/gnd/1263728820>,
-        <https://d-nb.info/gnd/126373183X>,
-        <https://d-nb.info/gnd/1263732992>,
-        <https://d-nb.info/gnd/1263785522>,
-        <https://d-nb.info/gnd/1263799019>,
-        <https://d-nb.info/gnd/300060718> ;
-    cto:itemOf <https://performance.musiconn.de/series/3-dresdner-tage-der-zeitgenoessischen-musik-1989> ;
-    cto:relatedItem <https://d-nb.info/gnd/1099929466>,
-        <https://d-nb.info/gnd/1263728820>,
-        <https://d-nb.info/gnd/126373183X>,
-        <https://d-nb.info/gnd/1263732992>,
-        <https://d-nb.info/gnd/1263785522>,
-        <https://d-nb.info/gnd/1263799019>,
-        <https://d-nb.info/gnd/300060718>,
-        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-45-dresdner-tage-fuer-zeitgenoessische-musik-1988-1989-1991>,
-        <https://performance.musiconn.de/work/kryptogram-1-malovec-jozef>,
-        <https://performance.musiconn.de/work/nocturnes-violine-klavier-parik-ivan>,
-        <https://performance.musiconn.de/work/sonaten-oboe-klavier-1980-goldmann-friedrich>,
-        <https://performance.musiconn.de/work/suiten-klavier-nr-2-balada-tadeas-salva-benes-juraj>,
-        <https://performance.musiconn.de/work/suiten-klavier-nr-2-canone-jozef-sixta-benes-juraj>,
-        <https://performance.musiconn.de/work/suiten-klavier-nr-2-pochod-ilja-zeljenka-benes-juraj>,
-        <https://performance.musiconn.de/work/wenn-ich-an-hiroshima-denke-zimmermann-udo>,
-        <https://viaf.org/viaf/181162220>,
-        <https://viaf.org/viaf/219161751> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/haus-schevenstrasse-dresden> ;
-    cto:viaf <https://viaf.org/viaf/181162220>,
-        <https://viaf.org/viaf/219161751> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/haus-schevenstrasse-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1263785522> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219161751> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300060718> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/126373183X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181162220> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1263728820> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1099929466> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1263799019> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1263732992> ],
+        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-45-dresdner-tage-fuer-zeitgenoessische-musik-1988-1989-1991> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181162220> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219161751> a nfdicore:NFDI_0001010 .
 

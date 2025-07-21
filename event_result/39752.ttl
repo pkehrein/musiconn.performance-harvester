@@ -1,27 +1,30 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015593> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/eroeffnungsfeier-der-vhs-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1950-09-29-19-30> ] .
 
-<https://performance.musiconn.de/event/eroeffnungsfeier-der-vhs-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1950-09-29-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/eroeffnungsfeier-der-vhs-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1950-09-29-19-30> a cto:CTO_0001005 ;
     rdfs:label "Eröffnungsfeier der VHS, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 29.9.1950, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1950-1951> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1950-09-29T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1950-09-29T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015593> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1950-1951> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015593>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015593> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181828440> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-orchester-d-dur-bach-carl-philipp-emanuel>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-3-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/181828440> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/181828440> .
+        <https://performance.musiconn.de/work/konzerte-orchester-d-dur-bach-carl-philipp-emanuel> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181828440> a nfdicore:NFDI_0001010 .
 

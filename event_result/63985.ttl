@@ -1,52 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1084656205> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1225736943> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1297870069> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015232> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30010183X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145071> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-vereinskonzert-rathaus-muenster-westf-friedenssaal-1875-02-13> ] .
 
-<https://performance.musiconn.de/event/7-vereinskonzert-rathaus-muenster-westf-friedenssaal-1875-02-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-vereinskonzert-rathaus-muenster-westf-friedenssaal-1875-02-13> a cto:CTO_0001005 ;
     rdfs:label "7. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 13.2.1875" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1874-75> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1875-02-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1875-02-13" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1084656205>,
-        <https://d-nb.info/gnd/1225736943>,
-        <https://d-nb.info/gnd/1297870069>,
-        <https://d-nb.info/gnd/300015232>,
-        <https://d-nb.info/gnd/30010183X>,
-        <https://d-nb.info/gnd/300145071>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1874-75> ;
-    cto:relatedItem <https://d-nb.info/gnd/1084656205>,
-        <https://d-nb.info/gnd/1225736943>,
-        <https://d-nb.info/gnd/1297870069>,
-        <https://d-nb.info/gnd/300015232>,
-        <https://d-nb.info/gnd/30010183X>,
-        <https://d-nb.info/gnd/300145071>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1084656205> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1026145857934823020061> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306432112> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199703722> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015232> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185197829> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225736943> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4084161212183240070007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145071> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1297870069> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30010183X> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1874-1875>,
         <https://performance.musiconn.de/work/die-zauberfloete-arie-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/fidelio-komm-hoffnung-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/genoveva-ouvertuere-schumann-robert>,
-        <https://performance.musiconn.de/work/gesaenge-op-14-weisst-du-noch-wie-ich-am-fels-kleffel-arno>,
-        <https://performance.musiconn.de/work/gesaenge-op-21-willkommen-mein-wald-franz-robert>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-mwv-o-11-d-moll-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/nocturnes-klavier-h-dur-chopin-frederic>,
-        <https://performance.musiconn.de/work/suite-in-canonform-nr-2-op-16-grimm-julius-otto>,
-        <https://viaf.org/viaf/1026145857934823020061>,
-        <https://viaf.org/viaf/185197829>,
-        <https://viaf.org/viaf/199703722>,
-        <https://viaf.org/viaf/306432112>,
-        <https://viaf.org/viaf/4084161212183240070007> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/1026145857934823020061>,
-        <https://viaf.org/viaf/185197829>,
-        <https://viaf.org/viaf/199703722>,
-        <https://viaf.org/viaf/306432112>,
-        <https://viaf.org/viaf/4084161212183240070007> .
+        <https://performance.musiconn.de/work/nocturnes-klavier-h-dur-chopin-frederic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1026145857934823020061> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185197829> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199703722> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/306432112> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4084161212183240070007> a nfdicore:NFDI_0001010 .
 

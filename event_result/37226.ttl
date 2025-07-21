@@ -1,42 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1066339449> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1147324751> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300518188> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300598629> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/geistliches-konzert-kollegienkirche-jena-1930-11-30-11-30> ] .
 
-<https://performance.musiconn.de/event/geistliches-konzert-kollegienkirche-jena-1930-11-30-11-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/geistliches-konzert-kollegienkirche-jena-1930-11-30-11-30> a cto:CTO_0001005 ;
     rdfs:label "Geistliches Konzert, Kollegienkirche (Jena), 30.11.1930, 11:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1930-11-30T12:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1930-11-30T11:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1066339449>,
-        <https://d-nb.info/gnd/1147324751>,
-        <https://d-nb.info/gnd/300518188>,
-        <https://d-nb.info/gnd/300598629> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1066339449>,
-        <https://d-nb.info/gnd/300518188>,
-        <https://d-nb.info/gnd/300598629>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/konservatorium-jena> ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1147324751> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5643151247953244270002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197661064> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215936263> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300598629> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/313472612> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1066339449> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300518188> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/duos-violine-2-op-131b-reger-max>,
         <https://performance.musiconn.de/work/kantaten-sopran-2-floete-2-bratsche-op-12-gerstberger-karl>,
-        <https://performance.musiconn.de/work/musik-fuer-sopran-duette-auswahl-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/sonaten-violine-2-basso-continuo-e-moll-rosenmueller-johann>,
-        <https://performance.musiconn.de/work/sonaten-violine-2-basso-continuo-twv-42-d-12-d-dur-telemann-georg-philipp>,
-        <https://viaf.org/viaf/197661064>,
-        <https://viaf.org/viaf/215936263>,
-        <https://viaf.org/viaf/313472612> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1147324751>,
-        <https://viaf.org/viaf/5643151247953244270002> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/konservatorium-jena> ;
-    cto:viaf <https://viaf.org/viaf/197661064>,
-        <https://viaf.org/viaf/215936263>,
-        <https://viaf.org/viaf/313472612>,
-        <https://viaf.org/viaf/5643151247953244270002> .
+        <https://performance.musiconn.de/work/musik-fuer-sopran-duette-auswahl-schuetz-heinrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/197661064> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215936263> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/313472612> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5643151247953244270002> a nfdicore:NFDI_0001010 .
 

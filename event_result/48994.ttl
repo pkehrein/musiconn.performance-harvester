@@ -1,24 +1,27 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30018087X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/the-5th-reserved-concert-nihon-seinenkan-hall-tokyo-1926-03-14> ] .
 
-<https://performance.musiconn.de/event/the-5th-reserved-concert-nihon-seinenkan-hall-tokyo-1926-03-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/the-5th-reserved-concert-nihon-seinenkan-hall-tokyo-1926-03-14> a cto:CTO_0001005 ;
     rdfs:label "The 5th reserved concert, Nihon Seinenkan Hall (Tokyo), 14.3.1926" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1926-03-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1926-03-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30018087X> ;
-    cto:relatedItem <https://d-nb.info/gnd/30018087X>,
-        <https://performance.musiconn.de/source/yokota-shoichiro-daiku-hajimete-monogatari-the-story-of-the-first-time-of-the-ninth-tokyo-sakuhokusha-2002>,
-        <https://performance.musiconn.de/work/sinfonien-nr-5-op-64-andante-tschaikowski-peter-i> ;
-    cto:relatedLocation <https://viaf.org/viaf/141981202> ;
-    cto:viaf <https://viaf.org/viaf/141981202> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/141981202> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30018087X> ],
+        <https://performance.musiconn.de/source/yokota-shoichiro-daiku-hajimete-monogatari-the-story-of-the-first-time-of-the-ninth-tokyo-sakuhokusha-2002> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/141981202> a nfdicore:NFDI_0001010 .
 

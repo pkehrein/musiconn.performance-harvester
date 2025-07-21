@@ -1,43 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300036183> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300177089> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300580894> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300715153> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-philharmonisches-konzert-kulturpalast-dresden-festsaal-1999-01-30-19-30> ] .
 
-<https://performance.musiconn.de/event/5-philharmonisches-konzert-kulturpalast-dresden-festsaal-1999-01-30-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-philharmonisches-konzert-kulturpalast-dresden-festsaal-1999-01-30-19-30> a cto:CTO_0001005 ;
     rdfs:label "5. Philharmonisches Konzert, Kulturpalast (Dresden) / Festsaal, 30.1.1999, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1998-1999> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1999-01-30T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1999-01-30T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300036183>,
-        <https://d-nb.info/gnd/300177089>,
-        <https://d-nb.info/gnd/300580894>,
-        <https://d-nb.info/gnd/300715153> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1998-1999> ;
-    cto:relatedItem <https://d-nb.info/gnd/300036183>,
-        <https://d-nb.info/gnd/300177089>,
-        <https://d-nb.info/gnd/300580894>,
-        <https://d-nb.info/gnd/300715153>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185105577> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300177089> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300580894> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300715153> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178221232> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196895548> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212892561> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300036183> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/canzon-quarti-toni-gabrieli-giovanni>,
-        <https://performance.musiconn.de/work/kompositionen-blechblaeserensemble-rentzsch-friedhelm>,
-        <https://performance.musiconn.de/work/lyrische-symphonie-in-7-gesaengen-nach-rabindranath-tagore-zemlinsky-alexander-von>,
-        <https://performance.musiconn.de/work/sinfonien-trompete-4-horn-posaune-4-tuba-op-80-koetsier-jan>,
-        <https://performance.musiconn.de/work/suiten-blechblaeser-14-schlagzeug-pauke-nr-3-danielsson-christer>,
-        <https://performance.musiconn.de/work/te-deum-h-146-prelude-charpentier-marc-antoine>,
-        <https://viaf.org/viaf/178221232>,
-        <https://viaf.org/viaf/185105577>,
-        <https://viaf.org/viaf/196895548>,
-        <https://viaf.org/viaf/212892561> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/178221232>,
-        <https://viaf.org/viaf/185105577>,
-        <https://viaf.org/viaf/196895548>,
-        <https://viaf.org/viaf/212892561> .
+        <https://performance.musiconn.de/work/suiten-blechblaeser-14-schlagzeug-pauke-nr-3-danielsson-christer> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178221232> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185105577> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196895548> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212892561> a nfdicore:NFDI_0001010 .
 

@@ -1,49 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300011563> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101597> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141785> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145411> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300263880> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/fuenfzehntes-abonnement-konzert-zweites-gewandhaus-leipzig-1907-01-31> ] .
 
-<https://performance.musiconn.de/event/fuenfzehntes-abonnement-konzert-zweites-gewandhaus-leipzig-1907-01-31> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/fuenfzehntes-abonnement-konzert-zweites-gewandhaus-leipzig-1907-01-31> a cto:CTO_0001005 ;
     rdfs:label "Fünfzehntes Abonnement-Konzert, Zweites Gewandhaus (Leipzig), 31.1.1907" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1907-01-31" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1907-01-31" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300011563>,
-        <https://d-nb.info/gnd/300101597>,
-        <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300145411>,
-        <https://d-nb.info/gnd/300263880>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/300011563>,
-        <https://d-nb.info/gnd/300101597>,
-        <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300145411>,
-        <https://d-nb.info/gnd/300263880>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209860738> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145411> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204586495> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174994351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101597> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300263880> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219163769> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011563> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191497132> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
-        <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
-        <https://performance.musiconn.de/work/alceste-w-37-ouvertuere-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/konzert-ouvertuere-zu-den-hebriden-op-26-mwv-p-7-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-129-a-moll-schumann-robert>,
-        <https://performance.musiconn.de/work/sinfonien-d-944-c-dur-schubert-franz>,
-        <https://performance.musiconn.de/work/suiten-violoncello-bwv-1007-1012-nr-3-bach-johann-sebastian>,
-        <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/191497132>,
-        <https://viaf.org/viaf/204586495>,
-        <https://viaf.org/viaf/209860738>,
-        <https://viaf.org/viaf/219163769> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/191497132>,
-        <https://viaf.org/viaf/204586495>,
-        <https://viaf.org/viaf/209860738>,
-        <https://viaf.org/viaf/219163769>,
-        <https://viaf.org/viaf/264523828> .
+        <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174994351> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191497132> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204586495> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209860738> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219163769> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
 

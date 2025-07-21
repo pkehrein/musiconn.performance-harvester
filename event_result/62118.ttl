@@ -1,53 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1079638156> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1169245889> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1268669563> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300030002> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300094817> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/v-concert-ehemaliger-krystallpalast-leipzig-alberthalle-1893-06-06> ] .
 
-<https://performance.musiconn.de/event/v-concert-ehemaliger-krystallpalast-leipzig-alberthalle-1893-06-06> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/v-concert-ehemaliger-krystallpalast-leipzig-alberthalle-1893-06-06> a cto:CTO_0001005 ;
     rdfs:label "V. Concert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 6.6.1893" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1893-06-06" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1893-06-06" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1079638156>,
-        <https://d-nb.info/gnd/1169245889>,
-        <https://d-nb.info/gnd/1268669563>,
-        <https://d-nb.info/gnd/300030002>,
-        <https://d-nb.info/gnd/300094817> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
-    cto:relatedItem <https://d-nb.info/gnd/1079638156>,
-        <https://d-nb.info/gnd/1169245889>,
-        <https://d-nb.info/gnd/1268669563>,
-        <https://d-nb.info/gnd/300030002>,
-        <https://d-nb.info/gnd/300094817>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1169245889> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176123806> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6199166414919602740000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300094817> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300030002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/293474415> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213965953> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/67144928686154440666> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1268669563> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1079638156> ],
         <https://performance.musiconn.de/source/liszt-verein-zum-zehnjaehrigen-jubilaeum-bericht-ueber-die-10jaehrige-thaetigkeit-des-vereins-1885-1895-leipzig-1895>,
         <https://performance.musiconn.de/work/der-gaertner-kahn-robert>,
         <https://performance.musiconn.de/work/hoffnung-grieg-edvard>,
         <https://performance.musiconn.de/work/ich-will-meine-seele-tauchen-dwelshauvers-victor-felix>,
-        <https://performance.musiconn.de/work/jugendglueck-liszt-franz>,
-        <https://performance.musiconn.de/work/konzert-in-ungarischer-weise-1-satz-joachim-joseph>,
         <https://performance.musiconn.de/work/liebesfruehling-pohl-richard>,
-        <https://performance.musiconn.de/work/lieder-op-7-in-lust-und-schmerzen-ritter-alexander>,
         <https://performance.musiconn.de/work/perpetuum-mobile-ries-ferdinand>,
         <https://performance.musiconn.de/work/romanzen-violine-svendsen-johan-severin>,
-        <https://performance.musiconn.de/work/sinfonien-wab-107-e-dur-bruckner-anton>,
-        <https://performance.musiconn.de/work/tasso-liszt-franz>,
-        <https://performance.musiconn.de/work/wie-schoen-der-lenz-winterberger-alexander>,
-        <https://viaf.org/viaf/176123806>,
-        <https://viaf.org/viaf/213965953>,
-        <https://viaf.org/viaf/293474415>,
-        <https://viaf.org/viaf/6199166414919602740000>,
-        <https://viaf.org/viaf/67144928686154440666> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/176123806>,
-        <https://viaf.org/viaf/213965953>,
-        <https://viaf.org/viaf/293474415>,
-        <https://viaf.org/viaf/6199166414919602740000>,
-        <https://viaf.org/viaf/67144928686154440666> .
+        <https://performance.musiconn.de/work/wie-schoen-der-lenz-winterberger-alexander> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176123806> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213965953> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/293474415> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6199166414919602740000> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/67144928686154440666> a nfdicore:NFDI_0001010 .
 

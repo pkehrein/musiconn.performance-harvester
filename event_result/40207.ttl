@@ -1,46 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300033702> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108508> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141777> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300169809> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300868588> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-stadttheater-luckenwalde-1953-05-30-20-00> ] .
 
-<https://performance.musiconn.de/event/konzert-stadttheater-luckenwalde-1953-05-30-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-stadttheater-luckenwalde-1953-05-30-20-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Stadttheater (Luckenwalde), 30.5.1953, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1952-1953> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1953-05-30T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1953-05-30T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300033702>,
-        <https://d-nb.info/gnd/300108508>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300169809>,
-        <https://d-nb.info/gnd/300868588> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1952-1953> ;
-    cto:relatedItem <https://d-nb.info/gnd/300033702>,
-        <https://d-nb.info/gnd/300108508>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300169809>,
-        <https://d-nb.info/gnd/300868588>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/der-fliegende-hollaender-ouvertuere-wagner-richard>,
-        <https://performance.musiconn.de/work/eine-kleine-nachtmusik-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/romeo-und-julia-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/sinfonien-d-759-h-moll-schubert-franz>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-rhapsodie-nr-2-r-4414-liszt-franz>,
-        <https://viaf.org/viaf/177348732>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/185890048>,
-        <https://viaf.org/viaf/189338688>,
-        <https://viaf.org/viaf/202958990> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/stadttheater-luckenwalde> ;
-    cto:viaf <https://viaf.org/viaf/177348732>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/185890048>,
-        <https://viaf.org/viaf/189338688>,
-        <https://viaf.org/viaf/202958990> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/stadttheater-luckenwalde> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300169809> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177348732> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185890048> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425978> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189338688> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033702> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141777> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300868588> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108508> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202958990> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177348732> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179425978> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185890048> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189338688> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202958990> a nfdicore:NFDI_0001010 .
 

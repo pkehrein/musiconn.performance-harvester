@@ -4,22 +4,25 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/134565002> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/komponistenportraet-karl-ottomar-treibmann-klub-der-intelligenz-delitzsch-1986-05-08> ] .
 
-<https://performance.musiconn.de/event/komponistenportraet-karl-ottomar-treibmann-klub-der-intelligenz-delitzsch-1986-05-08> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/komponistenportraet-karl-ottomar-treibmann-klub-der-intelligenz-delitzsch-1986-05-08> a cto:CTO_0001005 ;
     rdfs:label "Komponistenporträt Karl Ottomar Treibmann, Klub der Intelligenz (Delitzsch), 8.5.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-05-08" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-05-08" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/134565002> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/134565002> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/klub-der-intelligenz-delitzsch> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
         <https://performance.musiconn.de/work/sonate-fuer-gitarre-treibmann-karl-ottomar> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/klub-der-intelligenz-delitzsch> ;
-    cto:relatedPerson <https://d-nb.info/gnd/134565002>,
-        <https://viaf.org/viaf/9808702> ;
-    cto:viaf <https://viaf.org/viaf/9808702> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/9808702> ] .
+
+<https://viaf.org/viaf/9808702> a nfdicore:NFDI_0001010 .
 

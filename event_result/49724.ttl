@@ -1,24 +1,25 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1244195197> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ezop-leningradskaja-studija-televidenija-1976-04-09> ] .
 
-<https://performance.musiconn.de/event/ezop-leningradskaja-studija-televidenija-1976-04-09> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ezop-leningradskaja-studija-televidenija-1976-04-09> a cto:CTO_0001005 ;
     rdfs:label "Ėzop, Leningradskaja studija televidenija, 9.4.1976" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1976-04-09" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1976-04-09" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1244195197> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
-    cto:relatedItem <https://d-nb.info/gnd/1244195197>,
-        <https://performance.musiconn.de/source/12-leningrader-fruehling-1976-uebersicht>,
-        <https://performance.musiconn.de/work/lisa-i-vinograd-archimandritov-boris-ivanovic> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/leningradskaja-studija-televidenija> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/leningradskaja-studija-televidenija> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1244195197> ],
+        <https://performance.musiconn.de/source/12-leningrader-fruehling-1976-uebersicht> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
 

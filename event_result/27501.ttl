@@ -1,50 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1099322251> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300016360> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037511> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300042302> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300093926> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133626> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-philharmonisches-konzert-kongresshalle-leipzig-1905-10-16> ] .
 
-<https://performance.musiconn.de/event/1-philharmonisches-konzert-kongresshalle-leipzig-1905-10-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-philharmonisches-konzert-kongresshalle-leipzig-1905-10-16> a cto:CTO_0001005 ;
     rdfs:label "1. Philharmonisches Konzert, Kongresshalle (Leipzig), 16.10.1905" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1905-1906> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1905-10-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1905-10-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1099322251>,
-        <https://d-nb.info/gnd/300016360>,
-        <https://d-nb.info/gnd/300037511>,
-        <https://d-nb.info/gnd/300042302>,
-        <https://d-nb.info/gnd/300093926>,
-        <https://d-nb.info/gnd/300133626> ;
-    cto:itemOf <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1905-1906> ;
-    cto:relatedItem <https://d-nb.info/gnd/300016360>,
-        <https://d-nb.info/gnd/300037511>,
-        <https://d-nb.info/gnd/300042302>,
-        <https://d-nb.info/gnd/300093926>,
-        <https://d-nb.info/gnd/300133626>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1099322251> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/240146284233415330352> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199703437> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/307169497> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133626> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037511> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300042302> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/307491596> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179062815> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016360> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195806052> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093926> ],
         <https://performance.musiconn.de/source/musikalisches-wochenblatt-mw>,
-        <https://performance.musiconn.de/work/danse-macabre-saint-saens-camille>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-r-455-es-dur-liszt-franz>,
-        <https://performance.musiconn.de/work/nocturnes-klavier-op-55-nr-1-f-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/prelude-a-lapres-midi-dun-faune-debussy-claude>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-op-55-es-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/variationen-ueber-ein-eigenes-thema-rosenthal-moriz>,
-        <https://viaf.org/viaf/179062815>,
-        <https://viaf.org/viaf/195806052>,
-        <https://viaf.org/viaf/199703437>,
-        <https://viaf.org/viaf/307169497>,
-        <https://viaf.org/viaf/307491596> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1099322251>,
-        <https://viaf.org/viaf/240146284233415330352> ;
-    cto:viaf <https://viaf.org/viaf/179062815>,
-        <https://viaf.org/viaf/195806052>,
-        <https://viaf.org/viaf/199703437>,
-        <https://viaf.org/viaf/240146284233415330352>,
-        <https://viaf.org/viaf/307169497>,
-        <https://viaf.org/viaf/307491596> .
+        <https://performance.musiconn.de/work/variationen-ueber-ein-eigenes-thema-rosenthal-moriz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179062815> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195806052> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199703437> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/240146284233415330352> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/307169497> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/307491596> a nfdicore:NFDI_0001010 .
 

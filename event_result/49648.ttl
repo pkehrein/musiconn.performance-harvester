@@ -1,48 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1124704086> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155638> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171781> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30034189X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300713304> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/60-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1927-05-08-19-00> ] .
 
-<https://performance.musiconn.de/event/60-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1927-05-08-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/60-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1927-05-08-19-00> a cto:CTO_0001005 ;
     rdfs:label "60. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 8.5.1927, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1926-1927-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1927-05-08T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1927-05-08T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1124704086>,
-        <https://d-nb.info/gnd/300155638>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/30034189X>,
-        <https://d-nb.info/gnd/300713304> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1926-1927-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/1124704086>,
-        <https://d-nb.info/gnd/300155638>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/30034189X>,
-        <https://d-nb.info/gnd/300713304>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300713304> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1124704086> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184269321> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155638> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309560042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7272148632951230630003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30034189X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195813546> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171781> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
         <https://performance.musiconn.de/work/melodien-aus-der-oper-la-boheme-puccini-giacomo>,
-        <https://performance.musiconn.de/work/oberon-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/petite-berceuse-hasselmans-alphonse>,
         <https://performance.musiconn.de/work/polonaisen-e-dur-liszt-franz>,
-        <https://performance.musiconn.de/work/praeludien-orchester-jaernefelt-armas>,
         <https://performance.musiconn.de/work/scenes-napolitaines-massenet-jules>,
-        <https://performance.musiconn.de/work/une-tabatiere-a-musique-fassung-1897-ljadov-anatolij-k>,
-        <https://performance.musiconn.de/work/walzer-harfe-op-25-gillmann-kurt>,
-        <https://performance.musiconn.de/work/wein-weib-und-gesang-strauss-johann>,
-        <https://viaf.org/viaf/184269321>,
-        <https://viaf.org/viaf/195813546>,
-        <https://viaf.org/viaf/309560042>,
-        <https://viaf.org/viaf/7272148632951230630003> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/184269321>,
-        <https://viaf.org/viaf/195813546>,
-        <https://viaf.org/viaf/309560042>,
-        <https://viaf.org/viaf/7272148632951230630003> .
+        <https://performance.musiconn.de/work/walzer-harfe-op-25-gillmann-kurt> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/184269321> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195813546> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309560042> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7272148632951230630003> a nfdicore:NFDI_0001010 .
 

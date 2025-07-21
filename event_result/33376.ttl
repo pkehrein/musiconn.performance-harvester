@@ -1,52 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1178730344> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300122152> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300165641> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300165986> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300199635> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300253524> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/stadtfest-theaterplatz-dresden-2017-08-18-19-00> ] .
 
-<https://performance.musiconn.de/event/stadtfest-theaterplatz-dresden-2017-08-18-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/stadtfest-theaterplatz-dresden-2017-08-18-19-00> a cto:CTO_0001005 ;
     rdfs:label "Stadtfest, Theaterplatz (Dresden), 18.8.2017, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2017-2018> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2017-08-18T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2017-08-18T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1178730344>,
-        <https://d-nb.info/gnd/300122152>,
-        <https://d-nb.info/gnd/300165641>,
-        <https://d-nb.info/gnd/300165986>,
-        <https://d-nb.info/gnd/300199635>,
-        <https://d-nb.info/gnd/300253524> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2017-2018> ;
-    cto:relatedItem <https://d-nb.info/gnd/1178730344>,
-        <https://d-nb.info/gnd/300122152>,
-        <https://d-nb.info/gnd/300165641>,
-        <https://d-nb.info/gnd/300165986>,
-        <https://d-nb.info/gnd/300199635>,
-        <https://d-nb.info/gnd/300253524>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/theaterplatz-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300165986> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178025966> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300253524> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183131554> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300199635> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1178730344> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174989059> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208685499> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300122152> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182256444> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4447155105778076320008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300165641> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/in-the-south-elgar-edward>,
-        <https://performance.musiconn.de/work/knoxville-summer-of-1915-barber-samuel>,
-        <https://performance.musiconn.de/work/la-boheme-si-mi-chiamano-mimi-puccini-giacomo>,
-        <https://performance.musiconn.de/work/la-forza-del-destino-pace-pace-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/manon-lescaut-intermezzo-puccini-giacomo>,
-        <https://performance.musiconn.de/work/nabucco-ouvertuere-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-orchester-s-359-nr-2-liszt-franz>,
-        <https://viaf.org/viaf/174989059>,
-        <https://viaf.org/viaf/178025966>,
-        <https://viaf.org/viaf/182256444>,
-        <https://viaf.org/viaf/183131554>,
-        <https://viaf.org/viaf/208685499>,
-        <https://viaf.org/viaf/4447155105778076320008> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/theaterplatz-dresden> ;
-    cto:viaf <https://viaf.org/viaf/174989059>,
-        <https://viaf.org/viaf/178025966>,
-        <https://viaf.org/viaf/182256444>,
-        <https://viaf.org/viaf/183131554>,
-        <https://viaf.org/viaf/208685499>,
-        <https://viaf.org/viaf/4447155105778076320008> .
+        <https://performance.musiconn.de/work/manon-lescaut-intermezzo-puccini-giacomo> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174989059> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178025966> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182256444> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183131554> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208685499> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4447155105778076320008> a nfdicore:NFDI_0001010 .
 

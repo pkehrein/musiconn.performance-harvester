@@ -4,22 +4,25 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4461677-6> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/le-ballet-burlesque-de-badelory-et-de-bagueaude-rueil-malmaison-1653-06-30> ] .
 
-<https://performance.musiconn.de/event/le-ballet-burlesque-de-badelory-et-de-bagueaude-rueil-malmaison-1653-06-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/le-ballet-burlesque-de-badelory-et-de-bagueaude-rueil-malmaison-1653-06-30> a cto:CTO_0001005 ;
     rdfs:label "Le Ballet burlesque de Badelory et de Bagueaude, Rueil-Malmaison, 30.6.1653" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1653-06-30" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1653-06-30" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4461677-6> ;
-    cto:relatedItem <https://performance.musiconn.de/source/hourcade-2002-261>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4461677-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154461256> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/hourcade-2002-261>,
         <https://performance.musiconn.de/source/loret-1653-07-05>,
         <https://performance.musiconn.de/work/le-ballet-burlesque-de-badelory-et-de-bagueaude> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4461677-6>,
-        <https://viaf.org/viaf/154461256> ;
-    cto:viaf <https://viaf.org/viaf/154461256> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154461256> a nfdicore:NFDI_0001010 .
 

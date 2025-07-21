@@ -4,29 +4,32 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-european-jewish-choral-festival-west-london-synagogue-london-2015-06-14-20-00> ] .
 
-<https://performance.musiconn.de/event/4-european-jewish-choral-festival-west-london-synagogue-london-2015-06-14-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-european-jewish-choral-festival-west-london-synagogue-london-2015-06-14-20-00> a cto:CTO_0001005 ;
     rdfs:label "4. European Jewish Choral Festival, West London Synagogue (London), 14.6.2015, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2015-06-14T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2015-06-14T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        <https://performance.musiconn.de/corporation/coro-hakol-rom>,
+        <https://performance.musiconn.de/corporation/ensemble-choral-copernic-paris>,
+        <https://performance.musiconn.de/corporation/synagogal-ensemble-berlin>,
+        <https://performance.musiconn.de/corporation/varnitshkes-ensemble-lwiw> ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/west-london-synagogue-london> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/programm-konzert-14-juni-2015>,
         <https://performance.musiconn.de/work/ki-lo-naeh-boehme-ludwig-rittangel-johann-stephan>,
         <https://performance.musiconn.de/work/ma-tovu-schalit-heinrich>,
         <https://performance.musiconn.de/work/tauw-lhaudauss-psalm-92-lampel-samuel> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/west-london-synagogue-london> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://performance.musiconn.de/corporation/coro-hakol-rom>,
-        <https://performance.musiconn.de/corporation/ensemble-choral-copernic-paris>,
-        <https://performance.musiconn.de/corporation/synagogal-ensemble-berlin>,
-        <https://performance.musiconn.de/corporation/varnitshkes-ensemble-lwiw>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

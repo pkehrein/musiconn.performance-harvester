@@ -1,48 +1,63 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1225882834> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1225882869> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1225882931> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1225903580> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/122590370X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kammermusikabend-neues-gewandhaus-leipzig-kleiner-saal-1986-04-06> ] .
 
-<https://performance.musiconn.de/event/kammermusikabend-neues-gewandhaus-leipzig-kleiner-saal-1986-04-06> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kammermusikabend-neues-gewandhaus-leipzig-kleiner-saal-1986-04-06> a cto:CTO_0001005 ;
     rdfs:label "Kammermusikabend, Neues Gewandhaus (Leipzig) / Kleiner Saal, 6.4.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-04-06" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-04-06" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1225882834>,
-        <https://d-nb.info/gnd/1225882869>,
-        <https://d-nb.info/gnd/1225882931>,
-        <https://d-nb.info/gnd/1225903580>,
-        <https://d-nb.info/gnd/122590370X> ;
-    cto:relatedItem <https://d-nb.info/gnd/1225882834>,
-        <https://d-nb.info/gnd/1225882869>,
-        <https://d-nb.info/gnd/1225882931>,
-        <https://d-nb.info/gnd/1225903580>,
-        <https://d-nb.info/gnd/122590370X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/neues-gewandhaus-leipzig-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225903580> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7327161211806440070006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/122590370X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225882834> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6378161211443740070008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1348161211479340070009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6216161211827840070007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225882869> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225882931> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3011161211964340070007> ],
         <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
-        <https://performance.musiconn.de/work/die-silberne-schlange-ardo-damore-per-te-ich-verbrenne-vor-liebe-fuer-dich-boerner-hans>,
-        <https://performance.musiconn.de/work/die-silberne-schlange-cantare-ballare-singen-tanzen-boerner-hans>,
-        <https://performance.musiconn.de/work/die-silberne-schlange-viene-amico-baciami-komm-freund-kuesse-mich-boerner-hans>,
-        <https://performance.musiconn.de/work/gesaenge-fuer-altstimme-zwei-floeten-und-harfe-bumerang-jahn-raimund>,
-        <https://performance.musiconn.de/work/gesaenge-fuer-altstimme-zwei-floeten-und-harfe-kindergebetchen-jahn-raimund>,
         <https://performance.musiconn.de/work/juniabend-schramowski-herbert>,
         <https://performance.musiconn.de/work/rastlos-schramowski-herbert>,
-        <https://performance.musiconn.de/work/schweigend-schramowski-herbert>,
-        <https://viaf.org/viaf/1348161211479340070009>,
-        <https://viaf.org/viaf/3011161211964340070007>,
-        <https://viaf.org/viaf/6216161211827840070007>,
-        <https://viaf.org/viaf/6378161211443740070008>,
-        <https://viaf.org/viaf/7327161211806440070006> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/neues-gewandhaus-leipzig-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/1348161211479340070009>,
-        <https://viaf.org/viaf/3011161211964340070007>,
-        <https://viaf.org/viaf/6216161211827840070007>,
-        <https://viaf.org/viaf/6378161211443740070008>,
-        <https://viaf.org/viaf/7327161211806440070006> .
+        <https://performance.musiconn.de/work/schweigend-schramowski-herbert> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1348161211479340070009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3011161211964340070007> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6216161211827840070007> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6378161211443740070008> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7327161211806440070006> a nfdicore:NFDI_0001010 .
 

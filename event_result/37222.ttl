@@ -1,52 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1044998377> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1134985355> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1153036959> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300012160> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300178689> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300315228> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/xx-jugend-musik-rosensaal-jena-1930-11-04-20-00> ] .
 
-<https://performance.musiconn.de/event/xx-jugend-musik-rosensaal-jena-1930-11-04-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/xx-jugend-musik-rosensaal-jena-1930-11-04-20-00> a cto:CTO_0001005 ;
     rdfs:label "XX. Jugend-Musik, Rosensaal (Jena), 4.11.1930, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1930-11-04T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1930-11-04T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1044998377>,
-        <https://d-nb.info/gnd/1134985355>,
-        <https://d-nb.info/gnd/1153036959>,
-        <https://d-nb.info/gnd/300012160>,
-        <https://d-nb.info/gnd/300178689>,
-        <https://d-nb.info/gnd/300315228> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1044998377>,
-        <https://d-nb.info/gnd/1134985355>,
-        <https://d-nb.info/gnd/1153036959>,
-        <https://d-nb.info/gnd/300012160>,
-        <https://d-nb.info/gnd/300178689>,
-        <https://d-nb.info/gnd/300315228>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/rosensaal-jena> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5394149719114511130006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8656151965266700470003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215925945> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300012160> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1044998377> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300315228> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212878342> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305433859> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219939994> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300178689> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1153036959> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1134985355> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/ariosos-violine-cembalo-wq-79-a-dur-bach-carl-philipp-emanuel>,
-        <https://performance.musiconn.de/work/bouree-menuett-bach-wilhelm-friedemann>,
-        <https://performance.musiconn.de/work/sinfonien-w-c-17-b-b-dur-bach-johann-christian>,
-        <https://performance.musiconn.de/work/sinfonien-wfb-c-7-d-moll-bach-wilhelm-friedemann>,
-        <https://performance.musiconn.de/work/sinfonien-wq-176-d-dur-bach-carl-philipp-emanuel>,
-        <https://performance.musiconn.de/work/sonaten-klavier-4-haendig-jcfb-a-40-a-dur-bach-johann-christoph-friedrich>,
-        <https://performance.musiconn.de/work/sonaten-klavier-w-a-1-6-nr-6-allegretto-bach-johann-christian>,
-        <https://viaf.org/viaf/212878342>,
-        <https://viaf.org/viaf/215925945>,
-        <https://viaf.org/viaf/219939994>,
-        <https://viaf.org/viaf/305433859>,
-        <https://viaf.org/viaf/5394149719114511130006>,
-        <https://viaf.org/viaf/8656151965266700470003> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/rosensaal-jena> ;
-    cto:viaf <https://viaf.org/viaf/212878342>,
-        <https://viaf.org/viaf/215925945>,
-        <https://viaf.org/viaf/219939994>,
-        <https://viaf.org/viaf/305433859>,
-        <https://viaf.org/viaf/5394149719114511130006>,
-        <https://viaf.org/viaf/8656151965266700470003> .
+        <https://performance.musiconn.de/work/bouree-menuett-bach-wilhelm-friedemann> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/212878342> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215925945> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219939994> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305433859> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5394149719114511130006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8656151965266700470003> a nfdicore:NFDI_0001010 .
 

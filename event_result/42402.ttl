@@ -1,52 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300006160> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010095> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108176> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111304> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140320> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144725> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/fuenfte-kammermusik-grosser-konzertsaal-frankfurt-a-m-1940-01-12-19-30> ] .
 
-<https://performance.musiconn.de/event/fuenfte-kammermusik-grosser-konzertsaal-frankfurt-a-m-1940-01-12-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/fuenfte-kammermusik-grosser-konzertsaal-frankfurt-a-m-1940-01-12-19-30> a cto:CTO_0001005 ;
     rdfs:label "Fünfte Kammermusik, Großer Konzertsaal (Frankfurt a. M.), 12.1.1940, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1939-1940> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1940-01-12T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1940-01-12T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300006160>,
-        <https://d-nb.info/gnd/300010095>,
-        <https://d-nb.info/gnd/300108176>,
-        <https://d-nb.info/gnd/300111304>,
-        <https://d-nb.info/gnd/300140320>,
-        <https://d-nb.info/gnd/300144725> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1939-1940> ;
-    cto:relatedItem <https://d-nb.info/gnd/300006160>,
-        <https://d-nb.info/gnd/300010095>,
-        <https://d-nb.info/gnd/300108176>,
-        <https://d-nb.info/gnd/300111304>,
-        <https://d-nb.info/gnd/300140320>,
-        <https://d-nb.info/gnd/300144725>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174044234> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108176> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215924979> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213967885> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201853721> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010095> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/308180004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140320> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144725> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300006160> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111304> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183071093> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/chromatische-fantasie-und-fuge-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/fantasien-klavier-d-760-c-dur-schubert-franz>,
-        <https://performance.musiconn.de/work/fantasien-klavier-kv-475-c-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/fantasiestuecke-klavier-op-12-schumann-robert>,
-        <https://performance.musiconn.de/work/orgelbuechlein-ich-ruf-zu-dir-herr-jesu-christ-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/praeludien-orgel-es-dur-fassung-klavier-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonaten-klavier-kv-331-a-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/174044234>,
-        <https://viaf.org/viaf/183071093>,
-        <https://viaf.org/viaf/201853721>,
-        <https://viaf.org/viaf/213967885>,
-        <https://viaf.org/viaf/215924979>,
-        <https://viaf.org/viaf/308180004> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/174044234>,
-        <https://viaf.org/viaf/183071093>,
-        <https://viaf.org/viaf/201853721>,
-        <https://viaf.org/viaf/213967885>,
-        <https://viaf.org/viaf/215924979>,
-        <https://viaf.org/viaf/308180004> .
+        <https://performance.musiconn.de/work/praeludien-orgel-es-dur-fassung-klavier-bach-johann-sebastian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174044234> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183071093> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201853721> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213967885> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215924979> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/308180004> a nfdicore:NFDI_0001010 .
 

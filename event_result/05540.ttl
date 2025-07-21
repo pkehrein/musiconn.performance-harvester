@@ -1,46 +1,59 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/117718124X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/117718317X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1177187973> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011717> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300031343> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1935-10-19-18-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1935-10-19-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1935-10-19-18-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 19.10.1935, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1935-36> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1935-10-19T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1935-10-19T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/117718124X>,
-        <https://d-nb.info/gnd/117718317X>,
-        <https://d-nb.info/gnd/1177187973>,
-        <https://d-nb.info/gnd/300011717>,
-        <https://d-nb.info/gnd/300031343>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1935-36> ;
-    cto:relatedItem <https://d-nb.info/gnd/117718124X>,
-        <https://d-nb.info/gnd/117718317X>,
-        <https://d-nb.info/gnd/1177187973>,
-        <https://d-nb.info/gnd/300011717>,
-        <https://d-nb.info/gnd/300031343>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/117718124X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213965472> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/117718317X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300031343> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011717> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1177187973> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198522381> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/chaconnen-org-buxwv-160-buxtehude-dietrich>,
-        <https://performance.musiconn.de/work/der-evangelische-kirchenchor-nun-bricht-die-finstre-nacht-herein-reger-max>,
-        <https://performance.musiconn.de/work/deutsche-lieder-vergangener-jahrhunderte-teil-2-hinunter-ist-der-sonne-schein-rein-walter>,
-        <https://performance.musiconn.de/work/ich-wollt-dass-ich-daheime-waer-kaminski-heinrich>,
         <https://performance.musiconn.de/work/o-vo-omnes-obrecht-jacob>,
         <https://performance.musiconn.de/work/o-welt-ich-muss-dich-lassen-lechner-leonhard>,
-        <https://performance.musiconn.de/work/tokkaten-orgel-bwv-565-d-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/vigilate-et-orate-palestrina-giovanni-pierluigi-da>,
-        <https://viaf.org/viaf/198522381>,
-        <https://viaf.org/viaf/213965472> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/198522381>,
-        <https://viaf.org/viaf/213965472>,
-        <https://viaf.org/viaf/248189528> .
+        <https://performance.musiconn.de/work/vigilate-et-orate-palestrina-giovanni-pierluigi-da> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/198522381> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213965472> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
 

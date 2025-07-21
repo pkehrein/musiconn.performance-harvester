@@ -1,40 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1168295955> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30017151X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300648235> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7634310-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1833-10-27> ] .
 
-<https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1833-10-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1833-10-27> a cto:CTO_0001005 ;
     rdfs:label "Sonntagsmusik, Leipziger Straße 3 (Berlin), 27.10.1833" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sonntagsmusiken-1833> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1833-10-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1833-10-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1168295955>,
-        <https://d-nb.info/gnd/30017151X>,
-        <https://d-nb.info/gnd/300648235>,
-        <https://d-nb.info/gnd/7634310-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/sonntagsmusiken-1833> ;
-    cto:relatedItem <https://d-nb.info/gnd/1168295955>,
-        <https://d-nb.info/gnd/30017151X>,
-        <https://d-nb.info/gnd/300648235>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/243904650> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7634310-8> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30017151X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1168295955> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181066399> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300648235> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203723358> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179427451> ],
         <https://performance.musiconn.de/source/mit-obligater-nachtigallen-und-fliederbluetenbegleitung-fanny-hensels-sonntagsmusiken>,
-        <https://performance.musiconn.de/work/der-freischuetz-leise-leise-fromme-weise-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/iphigenie-en-tauride-o-toi-qui-prolongeas-mes-jours-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-g-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-op-84-c-moll-moscheles-ignaz>,
-        <https://viaf.org/viaf/179427451>,
-        <https://viaf.org/viaf/181066399>,
-        <https://viaf.org/viaf/203723358> ;
-    cto:relatedLocation <https://d-nb.info/gnd/7634310-8>,
-        <https://viaf.org/viaf/243904650> ;
-    cto:viaf <https://viaf.org/viaf/179427451>,
-        <https://viaf.org/viaf/181066399>,
-        <https://viaf.org/viaf/203723358>,
-        <https://viaf.org/viaf/243904650> .
+        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-g-dur-mozart-wolfgang-amadeus> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179427451> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181066399> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203723358> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/243904650> a nfdicore:NFDI_0001010 .
 

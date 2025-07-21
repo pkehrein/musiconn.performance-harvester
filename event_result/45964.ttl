@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30003329X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300085389> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300130880> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zkr-ak-simfoniceskij-orkestr-filarmonii-3-maerz-1996-sankt-petersburger-philharmonie-1996-03-03> ] .
 
-<https://performance.musiconn.de/event/zkr-ak-simfoniceskij-orkestr-filarmonii-3-maerz-1996-sankt-petersburger-philharmonie-1996-03-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zkr-ak-simfoniceskij-orkestr-filarmonii-3-maerz-1996-sankt-petersburger-philharmonie-1996-03-03> a cto:CTO_0001005 ;
     rdfs:label "ZKR ak. simfoničeskij orkestr filarmonii (3. März 1996), Sankt-Petersburger Philharmonie, 3.3.1996" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1995-96> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1996-03-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1996-03-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30003329X>,
-        <https://d-nb.info/gnd/300085389>,
-        <https://d-nb.info/gnd/300130880>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1995-96> ;
-    cto:relatedItem <https://d-nb.info/gnd/30003329X>,
-        <https://d-nb.info/gnd/300085389>,
-        <https://d-nb.info/gnd/300130880>,
-        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1996-3-maerz>,
-        <https://performance.musiconn.de/work/gamlet-cs-50-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/konzerte-kontrabass-orchester-op-3-koussevitzky-serge>,
-        <https://performance.musiconn.de/work/secherazada-rimskij-korsakov-nikolaj>,
-        <https://viaf.org/viaf/174380021>,
-        <https://viaf.org/viaf/178050162>,
-        <https://viaf.org/viaf/208683617> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/174380021>,
-        <https://viaf.org/viaf/178050162>,
-        <https://viaf.org/viaf/208683617> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178050162> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300130880> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174380021> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300085389> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208683617> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30003329X> ],
+        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1996-3-maerz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174380021> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178050162> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208683617> a nfdicore:NFDI_0001010 .
 

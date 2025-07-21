@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300008244> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300213670> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300447345> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-zweites-gewandhaus-leipzig-1998-11-20> ] .
 
-<https://performance.musiconn.de/event/konzert-zweites-gewandhaus-leipzig-1998-11-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-zweites-gewandhaus-leipzig-1998-11-20> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Zweites Gewandhaus (Leipzig), 20.11.1998" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1998-11-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1998-11-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300008244>,
-        <https://d-nb.info/gnd/300213670>,
-        <https://d-nb.info/gnd/300447345>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/300008244>,
-        <https://d-nb.info/gnd/300213670>,
-        <https://d-nb.info/gnd/300447345>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237535337> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300447345> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300213670> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300008244> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178625404> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175390068> ],
         <https://performance.musiconn.de/source/motettenbuch-1998-99>,
-        <https://performance.musiconn.de/work/aus-der-tiefen-rufe-ich-herr-zu-dir-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/motetten-op-74-warum-ist-das-licht-gegeben-dem-muehseligen-auswahl-brahms-johannes>,
-        <https://performance.musiconn.de/work/psalmy-dawida-penderecki-krzysztof>,
-        <https://performance.musiconn.de/work/requiem-woo-5-9-d-moll-reger-max>,
-        <https://viaf.org/viaf/175390068>,
-        <https://viaf.org/viaf/178625404>,
-        <https://viaf.org/viaf/237535337> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/175390068>,
-        <https://viaf.org/viaf/178625404>,
-        <https://viaf.org/viaf/237535337>,
-        <https://viaf.org/viaf/264523828> .
+        <https://performance.musiconn.de/work/motetten-op-74-warum-ist-das-licht-gegeben-dem-muehseligen-auswahl-brahms-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175390068> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178625404> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237535337> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
 

@@ -1,54 +1,73 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300025653> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30003704X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111150> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146809> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300296207> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1883-01-23> ] .
 
-<https://performance.musiconn.de/event/7-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1883-01-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1883-01-23> a cto:CTO_0001005 ;
     rdfs:label "7. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 23.1.1883" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1882-1883> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1883-01-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1883-01-23" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300025653>,
-        <https://d-nb.info/gnd/30003704X>,
-        <https://d-nb.info/gnd/300111150>,
-        <https://d-nb.info/gnd/300146809>,
-        <https://d-nb.info/gnd/300296207>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1882-1883> ;
-    cto:relatedItem <https://d-nb.info/gnd/300025653>,
-        <https://d-nb.info/gnd/30003704X>,
-        <https://d-nb.info/gnd/300111150>,
-        <https://d-nb.info/gnd/300146809>,
-        <https://d-nb.info/gnd/300296207>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186104867> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198525456> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214737144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30003704X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202936453> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193655042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146809> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300296207> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111150> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025653> ],
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
         <https://performance.musiconn.de/work/allegros-klavier-d-dur-scarlatti>,
         <https://performance.musiconn.de/work/drei-orchesterstuecke-nach-allotria-op-33-herzogenberg-heinrich-von>,
-        <https://performance.musiconn.de/work/impromptus-klavier-g-dur-schubert-franz>,
-        <https://performance.musiconn.de/work/impromptus-klavier-op-36-fis-dur-chopin-frederic>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-2-op-83-b-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/medee-ouvertuere-cherubini-luigi>,
-        <https://performance.musiconn.de/work/sinfonien-kv-550-g-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/tokkaten-klavier-op-7-c-dur-schumann-robert>,
-        <https://viaf.org/viaf/186104867>,
-        <https://viaf.org/viaf/193655042>,
-        <https://viaf.org/viaf/198525456>,
-        <https://viaf.org/viaf/202936453>,
-        <https://viaf.org/viaf/214737144> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/186104867>,
-        <https://viaf.org/viaf/193655042>,
-        <https://viaf.org/viaf/198525456>,
-        <https://viaf.org/viaf/202936453>,
-        <https://viaf.org/viaf/214737144>,
-        <https://viaf.org/viaf/242717024> .
+        <https://performance.musiconn.de/work/impromptus-klavier-g-dur-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/186104867> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193655042> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198525456> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202936453> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214737144> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
 

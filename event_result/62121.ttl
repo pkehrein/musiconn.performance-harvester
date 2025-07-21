@@ -1,58 +1,79 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1280954787> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300093543> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300093799> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170114> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300480377> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300548478> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300835604> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/iii-concert-zur-gedenkfeier-fuer-richard-wagner-und-hans-von-buelow-ehemaliger-krystallpalast-leipzig-alberthalle-1894-02-20> ] .
 
-<https://performance.musiconn.de/event/iii-concert-zur-gedenkfeier-fuer-richard-wagner-und-hans-von-buelow-ehemaliger-krystallpalast-leipzig-alberthalle-1894-02-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/iii-concert-zur-gedenkfeier-fuer-richard-wagner-und-hans-von-buelow-ehemaliger-krystallpalast-leipzig-alberthalle-1894-02-20> a cto:CTO_0001005 ;
     rdfs:label "III. Concert zur Gedenkfeier für Richard Wagner und Hans von Bülow, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 20.2.1894" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1894-02-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1894-02-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1280954787>,
-        <https://d-nb.info/gnd/300093543>,
-        <https://d-nb.info/gnd/300093799>,
-        <https://d-nb.info/gnd/300170114>,
-        <https://d-nb.info/gnd/300480377>,
-        <https://d-nb.info/gnd/300548478>,
-        <https://d-nb.info/gnd/300835604> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
-    cto:relatedItem <https://d-nb.info/gnd/1280954787>,
-        <https://d-nb.info/gnd/300093543>,
-        <https://d-nb.info/gnd/300093799>,
-        <https://d-nb.info/gnd/300170114>,
-        <https://d-nb.info/gnd/300480377>,
-        <https://d-nb.info/gnd/300548478>,
-        <https://d-nb.info/gnd/300835604>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300480377> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184131949> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178619765> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211720481> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4610167764343113890009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300835604> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214750127> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093543> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183472823> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170114> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093799> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185922014> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300548478> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1280954787> ],
         <https://performance.musiconn.de/source/liszt-verein-zum-zehnjaehrigen-jubilaeum-bericht-ueber-die-10jaehrige-thaetigkeit-des-vereins-1885-1895-leipzig-1895>,
-        <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-vorspiel-wagner-richard>,
-        <https://performance.musiconn.de/work/fantasie-ueber-ungarische-volksmelodien-liszt-franz>,
-        <https://performance.musiconn.de/work/gesaenge-aus-dem-spanischen-liederbuch-op-21-murmelndes-lueftchen-jensen-adolf>,
         <https://performance.musiconn.de/work/gesaenge-op-3-fruehling-und-liebe-franz-robert>,
-        <https://performance.musiconn.de/work/heroide-funebre-liszt-franz>,
-        <https://performance.musiconn.de/work/konzerte-kl-orch-op-4-stavenhagen-bernhard>,
-        <https://performance.musiconn.de/work/lieder-op-61-sommerabend-lassen-eduard>,
-        <https://performance.musiconn.de/work/nirwana-buelow-hans-von>,
-        <https://performance.musiconn.de/work/tristan-und-isolde-vorspiel-und-liebestod-fassung-wagner-richard>,
-        <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/183472823>,
-        <https://viaf.org/viaf/184131949>,
-        <https://viaf.org/viaf/185922014>,
-        <https://viaf.org/viaf/211720481>,
-        <https://viaf.org/viaf/214750127>,
-        <https://viaf.org/viaf/4610167764343113890009> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/183472823>,
-        <https://viaf.org/viaf/184131949>,
-        <https://viaf.org/viaf/185922014>,
-        <https://viaf.org/viaf/211720481>,
-        <https://viaf.org/viaf/214750127>,
-        <https://viaf.org/viaf/4610167764343113890009> .
+        <https://performance.musiconn.de/work/tristan-und-isolde-vorspiel-und-liebestod-fassung-wagner-richard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178619765> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183472823> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184131949> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185922014> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211720481> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214750127> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4610167764343113890009> a nfdicore:NFDI_0001010 .
 

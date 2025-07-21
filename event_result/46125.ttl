@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1050649729> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30012189X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300289715> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncert-24-dekabrja-sankt-petersburger-philharmonie-kleiner-saal-1997-12-24> ] .
 
-<https://performance.musiconn.de/event/koncert-24-dekabrja-sankt-petersburger-philharmonie-kleiner-saal-1997-12-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncert-24-dekabrja-sankt-petersburger-philharmonie-kleiner-saal-1997-12-24> a cto:CTO_0001005 ;
     rdfs:label "Koncert 24. dekabrja, Sankt-Petersburger Philharmonie / Kleiner Saal, 24.12.1997" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1997-98> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1997-12-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1997-12-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1050649729>,
-        <https://d-nb.info/gnd/30012189X>,
-        <https://d-nb.info/gnd/300289715> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1997-98> ;
-    cto:relatedItem <https://d-nb.info/gnd/1050649729>,
-        <https://d-nb.info/gnd/30012189X>,
-        <https://d-nb.info/gnd/300289715>,
-        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1997-24-dezember-kleiner-saal>,
-        <https://performance.musiconn.de/work/sonaten-violoncello-klavier-op-119-c-dur-prokofiev-sergei-sergeyevich>,
-        <https://performance.musiconn.de/work/sonaten-violoncello-klavier-r-135-f-dur-saint-saens-camille>,
-        <https://performance.musiconn.de/work/suiten-violoncello-op-72-britten-benjamin>,
-        <https://viaf.org/viaf/195808133>,
-        <https://viaf.org/viaf/217009841>,
-        <https://viaf.org/viaf/308211361> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/195808133>,
-        <https://viaf.org/viaf/217009841>,
-        <https://viaf.org/viaf/308211361> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217009841> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/308211361> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195808133> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30012189X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300289715> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1050649729> ],
+        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1997-24-dezember-kleiner-saal> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/195808133> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217009841> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/308211361> a nfdicore:NFDI_0001010 .
 

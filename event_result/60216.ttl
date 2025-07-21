@@ -1,42 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1033227595> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1065435622> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3072218-4> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4061849-3> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/6522650-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/internationaler-komponistinnen-wettbewerb-unna-unna-2008-11-15> ] .
 
-<https://performance.musiconn.de/event/internationaler-komponistinnen-wettbewerb-unna-unna-2008-11-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/internationaler-komponistinnen-wettbewerb-unna-unna-2008-11-15> a cto:CTO_0001005 ;
     rdfs:label "Internationaler Komponistinnen Wettbewerb Unna, Unna, 15.11.2008" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2008-11-15" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2008-11-15" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1033227595>,
-        <https://d-nb.info/gnd/1065435622>,
-        <https://d-nb.info/gnd/3072218-4>,
-        <https://d-nb.info/gnd/4061849-3>,
-        <https://d-nb.info/gnd/6522650-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/1033227595>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/313439895> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/6522650-1> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3072218-4> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/156985986> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/245877768> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1065435622> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/312808229> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4061849-3> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1033227595> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/298610974> ],
         <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-internationaler-komponistinnen-wettbewerb-unna>,
-        <https://performance.musiconn.de/work/dizzy-stelzenbach-susanne>,
         <https://performance.musiconn.de/work/tras-la-sombra-de-la-duda-perez-frutos-iluminada>,
-        <https://performance.musiconn.de/work/trios-violoncello-bassklarinette-klavier-maar-nahla>,
-        <https://viaf.org/viaf/298610974> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4061849-3>,
-        <https://viaf.org/viaf/312808229> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/1065435622>,
-        <https://d-nb.info/gnd/3072218-4>,
-        <https://d-nb.info/gnd/6522650-1>,
-        <https://viaf.org/viaf/156985986>,
-        <https://viaf.org/viaf/245877768>,
-        <https://viaf.org/viaf/313439895> ;
-    cto:viaf <https://viaf.org/viaf/156985986>,
-        <https://viaf.org/viaf/245877768>,
-        <https://viaf.org/viaf/298610974>,
-        <https://viaf.org/viaf/312808229>,
-        <https://viaf.org/viaf/313439895> .
+        <https://performance.musiconn.de/work/trios-violoncello-bassklarinette-klavier-maar-nahla> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/156985986> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/245877768> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/298610974> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/312808229> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/313439895> a nfdicore:NFDI_0001010 .
 

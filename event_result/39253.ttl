@@ -1,59 +1,80 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1147680159> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033311> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300047347> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300073925> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109946> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300112114> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300149700> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-kulturveranstaltung-der-zeiss-ikon-ag-dresden-ernemann-ausstellung-dresden-1946-05-22> ] .
 
-<https://performance.musiconn.de/event/1-kulturveranstaltung-der-zeiss-ikon-ag-dresden-ernemann-ausstellung-dresden-1946-05-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-kulturveranstaltung-der-zeiss-ikon-ag-dresden-ernemann-ausstellung-dresden-1946-05-22> a cto:CTO_0001005 ;
     rdfs:label "1. Kulturveranstaltung der Zeiss Ikon AG. Dresden, Ernemann-Ausstellung (Dresden), 22.5.1946" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1945-1946> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1946-05-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1946-05-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1147680159>,
-        <https://d-nb.info/gnd/300033311>,
-        <https://d-nb.info/gnd/300047347>,
-        <https://d-nb.info/gnd/300073925>,
-        <https://d-nb.info/gnd/300109946>,
-        <https://d-nb.info/gnd/300112114>,
-        <https://d-nb.info/gnd/300149700> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1945-1946> ;
-    cto:relatedItem <https://d-nb.info/gnd/1147680159>,
-        <https://d-nb.info/gnd/300033311>,
-        <https://d-nb.info/gnd/300047347>,
-        <https://d-nb.info/gnd/300073925>,
-        <https://d-nb.info/gnd/300109946>,
-        <https://d-nb.info/gnd/300112114>,
-        <https://d-nb.info/gnd/300149700>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ernemann-ausstellung-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202939775> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181054259> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177803942> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175194258> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175777382> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300047347> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109946> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6621148523912720970003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300112114> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305991582> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300073925> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300149700> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1147680159> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/carmen-suite-no-1-bizet-georges>,
-        <https://performance.musiconn.de/work/der-opernball-ouvertuere-heuberger-richard>,
-        <https://performance.musiconn.de/work/die-zauberfloete-in-diesen-heilgen-hallen-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/don-carlos-arie-des-philipp-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/italjanskoe-kapriccio-na-temy-narodnych-pesen-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/karneval-b-169-dvorak-antonin>,
-        <https://performance.musiconn.de/work/le-nozze-di-figaro-la-vendetta-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/prodana-nevesta-ouvertuere-smetana-bedrich>,
         <https://performance.musiconn.de/work/rosamunde-fuerstin-von-zypern-ballettmusik-schubert-franz>,
-        <https://performance.musiconn.de/work/tausend-und-eine-nacht-intermezzo-strauss-johann>,
-        <https://viaf.org/viaf/175194258>,
-        <https://viaf.org/viaf/175777382>,
-        <https://viaf.org/viaf/177803942>,
-        <https://viaf.org/viaf/181054259>,
-        <https://viaf.org/viaf/202939775>,
-        <https://viaf.org/viaf/305991582>,
-        <https://viaf.org/viaf/6621148523912720970003> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ernemann-ausstellung-dresden> ;
-    cto:viaf <https://viaf.org/viaf/175194258>,
-        <https://viaf.org/viaf/175777382>,
-        <https://viaf.org/viaf/177803942>,
-        <https://viaf.org/viaf/181054259>,
-        <https://viaf.org/viaf/202939775>,
-        <https://viaf.org/viaf/305991582>,
-        <https://viaf.org/viaf/6621148523912720970003> .
+        <https://performance.musiconn.de/work/tausend-und-eine-nacht-intermezzo-strauss-johann> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175194258> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175777382> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177803942> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181054259> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202939775> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305991582> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6621148523912720970003> a nfdicore:NFDI_0001010 .
 

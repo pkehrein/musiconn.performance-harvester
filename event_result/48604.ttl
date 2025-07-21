@@ -1,45 +1,58 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1217881670> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1217887458> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1217889507> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1295671492> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300404964> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/junge-komponisten-der-ddr-kreuzschule-dresden-aula-1987-10-02-20-00> ] .
 
-<https://performance.musiconn.de/event/junge-komponisten-der-ddr-kreuzschule-dresden-aula-1987-10-02-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/junge-komponisten-der-ddr-kreuzschule-dresden-aula-1987-10-02-20-00> a cto:CTO_0001005 ;
     rdfs:label "Junge Komponisten der DDR, Kreuzschule (Dresden) / Aula, 2.10.1987, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/1-dresdner-tage-der-zeitgenoessischen-musik-1987> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-10-02T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-10-02T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1217881670>,
-        <https://d-nb.info/gnd/1217887458>,
-        <https://d-nb.info/gnd/1217889507>,
-        <https://d-nb.info/gnd/1295671492>,
-        <https://d-nb.info/gnd/300404964> ;
-    cto:itemOf <https://performance.musiconn.de/series/1-dresdner-tage-der-zeitgenoessischen-musik-1987> ;
-    cto:relatedItem <https://d-nb.info/gnd/1217881670>,
-        <https://d-nb.info/gnd/1217887458>,
-        <https://d-nb.info/gnd/1217889507>,
-        <https://d-nb.info/gnd/1295671492>,
-        <https://d-nb.info/gnd/300404964>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kreuzschule-dresden-aula> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1217887458> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1217889507> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1217881670> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8208160062392635790007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300404964> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8100160062426635790009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1295671492> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219942351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1109160062368035790003> ],
         <https://performance.musiconn.de/source/1-dresdner-tage-der-zeitgenoessischen-musik>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1987-dresden-saechsische-landesbibliothek-dresden-1988-1>,
-        <https://performance.musiconn.de/work/kreon-schleiermacher-steffen>,
-        <https://performance.musiconn.de/work/reves-hirschfeld-caspar-rene>,
-        <https://performance.musiconn.de/work/wandlungen-nr-3-carow-stefan>,
-        <https://performance.musiconn.de/work/zeitzeichen-promnitz-rainer>,
-        <https://performance.musiconn.de/work/zusammenklaenge-harfe-kammerensemble-nr-1-zapf-helmut>,
-        <https://viaf.org/viaf/1109160062368035790003>,
-        <https://viaf.org/viaf/219942351>,
-        <https://viaf.org/viaf/8100160062426635790009>,
-        <https://viaf.org/viaf/8208160062392635790007> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kreuzschule-dresden-aula> ;
-    cto:viaf <https://viaf.org/viaf/1109160062368035790003>,
-        <https://viaf.org/viaf/219942351>,
-        <https://viaf.org/viaf/8100160062426635790009>,
-        <https://viaf.org/viaf/8208160062392635790007> .
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1987-dresden-saechsische-landesbibliothek-dresden-1988-1> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1109160062368035790003> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219942351> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8100160062426635790009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8208160062392635790007> a nfdicore:NFDI_0001010 .
 

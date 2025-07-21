@@ -4,19 +4,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4075873-4> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/le-ballet-des-plaisirs-louvre-paris-1655-02-04> ] .
 
-<https://performance.musiconn.de/event/le-ballet-des-plaisirs-louvre-paris-1655-02-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/le-ballet-des-plaisirs-louvre-paris-1655-02-04> a cto:CTO_0001005 ;
     rdfs:label "Le Ballet des Plaisirs, Louvre (Paris), 4.2.1655" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1655-02-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1655-02-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4075873-4> ;
-    cto:relatedItem <https://performance.musiconn.de/source/beauchamps-1735-bd-3-64>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/150130308> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4075873-4> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/beauchamps-1735-bd-3-64>,
         <https://performance.musiconn.de/source/gazette-1655-02-13>,
         <https://performance.musiconn.de/source/hourcade-2002-265>,
         <https://performance.musiconn.de/source/loret-1655-02-06-and-1655-02-13>,
@@ -25,7 +28,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/source/onlinequelle-20>,
         <https://performance.musiconn.de/source/textquelle-digitalisat-8>,
         <https://performance.musiconn.de/work/le-ballet-des-plaisirs-lully-jean-baptiste> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4075873-4>,
-        <https://viaf.org/viaf/150130308> ;
-    cto:viaf <https://viaf.org/viaf/150130308> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/150130308> a nfdicore:NFDI_0001010 .
 

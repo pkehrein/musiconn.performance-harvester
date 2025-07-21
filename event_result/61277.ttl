@@ -1,41 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/105982390X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300005393> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300235542> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300297823> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4618841-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kammerorchester-carl-philipp-emanuel-bach-brandenburgische-sommerkonzerte-1999-sankt-maria-magdalena-templin-1999-07-03-17-00> ] .
 
-<https://performance.musiconn.de/event/kammerorchester-carl-philipp-emanuel-bach-brandenburgische-sommerkonzerte-1999-sankt-maria-magdalena-templin-1999-07-03-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kammerorchester-carl-philipp-emanuel-bach-brandenburgische-sommerkonzerte-1999-sankt-maria-magdalena-templin-1999-07-03-17-00> a cto:CTO_0001005 ;
     rdfs:label "Kammerorchester Carl Philipp Emanuel Bach. Brandenburgische Sommerkonzerte 1999, Sankt Maria Magdalena (Templin), 3.7.1999, 17:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1999-07-03T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1999-07-03T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/105982390X>,
-        <https://d-nb.info/gnd/300005393>,
-        <https://d-nb.info/gnd/300235542>,
-        <https://d-nb.info/gnd/300297823>,
-        <https://d-nb.info/gnd/4618841-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/105982390X>,
-        <https://d-nb.info/gnd/300005393>,
-        <https://d-nb.info/gnd/300235542>,
-        <https://d-nb.info/gnd/300297823>,
-        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-8-programmhefte-kammerorchester-carl-philipp-emanuel-bach-1996-1999>,
-        <https://performance.musiconn.de/work/die-brandenburgischen-konzerte-nr-3-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/konzerte-oboe-violine-orchester-bwv-1060-r-d-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sinfonien-streichorchester-wq-182-h-moll-bach-carl-philipp-emanuel>,
-        <https://performance.musiconn.de/work/suiten-klavier-wfb-a-39-g-moll-bach-wilhelm-friedemann>,
-        <https://viaf.org/viaf/189345210>,
-        <https://viaf.org/viaf/190417753>,
-        <https://viaf.org/viaf/204585755> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4618841-1>,
-        <https://viaf.org/viaf/238128145> ;
-    cto:viaf <https://viaf.org/viaf/189345210>,
-        <https://viaf.org/viaf/190417753>,
-        <https://viaf.org/viaf/204585755>,
-        <https://viaf.org/viaf/238128145> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/238128145> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4618841-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204585755> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189345210> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190417753> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300235542> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/105982390X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300005393> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300297823> ],
+        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-8-programmhefte-kammerorchester-carl-philipp-emanuel-bach-1996-1999> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/189345210> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190417753> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204585755> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/238128145> a nfdicore:NFDI_0001010 .
 

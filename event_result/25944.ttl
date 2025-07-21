@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015542> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145403> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171463> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300499620> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/viertes-abonnement-concert-erstes-gewandhaus-leipzig-1880-10-28> ] .
 
-<https://performance.musiconn.de/event/viertes-abonnement-concert-erstes-gewandhaus-leipzig-1880-10-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/viertes-abonnement-concert-erstes-gewandhaus-leipzig-1880-10-28> a cto:CTO_0001005 ;
     rdfs:label "Viertes Abonnement-Concert, Erstes Gewandhaus (Leipzig), 28.10.1880" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1880-10-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1880-10-28" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/300015542>,
-        <https://d-nb.info/gnd/300145403>,
-        <https://d-nb.info/gnd/300171463>,
-        <https://d-nb.info/gnd/300499620> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015542>,
-        <https://d-nb.info/gnd/300145403>,
-        <https://d-nb.info/gnd/300171463>,
-        <https://d-nb.info/gnd/300499620>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300499620> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315209867> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177731394> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183523652> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219935426> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171463> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015542> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145403> ],
         <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
-        <https://performance.musiconn.de/source/programmzettel>,
-        <https://performance.musiconn.de/work/euryanthe-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-54-a-moll-schumann-robert>,
-        <https://performance.musiconn.de/work/konzerte-violine-violoncello-klavier-orchester-op-56-c-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sommerdag-paa-landet-gade-niels-wilhelm>,
-        <https://viaf.org/viaf/177731394>,
-        <https://viaf.org/viaf/183523652>,
-        <https://viaf.org/viaf/219935426>,
-        <https://viaf.org/viaf/315209867> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/177731394>,
-        <https://viaf.org/viaf/183523652>,
-        <https://viaf.org/viaf/219935426>,
-        <https://viaf.org/viaf/315209867>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/source/programmzettel> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177731394> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183523652> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219935426> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315209867> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

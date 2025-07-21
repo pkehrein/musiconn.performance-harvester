@@ -1,43 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300088663> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300139365> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4115211-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7596998-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/montepulciano-7-85-montepulciano-1985-08-08> ] .
 
-<https://performance.musiconn.de/event/montepulciano-7-85-montepulciano-1985-08-08> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/montepulciano-7-85-montepulciano-1985-08-08> a cto:CTO_0001005 ;
     rdfs:label "Montepulciano 7/85, Montepulciano, 8.8.1985" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/cantiere-internazionale-darte-1985> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1985-08-08" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1985-08-08" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300088663>,
-        <https://d-nb.info/gnd/300139365>,
-        <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/4115211-6>,
-        <https://d-nb.info/gnd/7596998-1> ;
-    cto:itemOf <https://performance.musiconn.de/series/cantiere-internazionale-darte-1985> ;
-    cto:relatedItem <https://d-nb.info/gnd/300088663>,
-        <https://d-nb.info/gnd/300139365>,
-        <https://d-nb.info/gnd/7596998-1>,
-        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/mouvement-vor-der-erstarrung-lachenmann-helmut>,
-        <https://performance.musiconn.de/work/sechs-bagatellen-huber-nicolaus-a>,
-        <https://performance.musiconn.de/work/suiten-klarinette-2-violine-viola-violoncello-klavier-op-29-schoenberg-arnold>,
-        <https://viaf.org/viaf/191539772>,
-        <https://viaf.org/viaf/202939493>,
-        <https://viaf.org/viaf/294974880> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4115211-6>,
-        <https://viaf.org/viaf/167530550> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/167530550>,
-        <https://viaf.org/viaf/191539772>,
-        <https://viaf.org/viaf/202939493>,
-        <https://viaf.org/viaf/294974880> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/167530550> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4115211-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300139365> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191539772> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/294974880> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202939493> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300088663> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7596998-1> ],
+        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/167530550> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191539772> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202939493> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/294974880> a nfdicore:NFDI_0001010 .
 

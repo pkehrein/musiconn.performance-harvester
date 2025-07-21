@@ -4,19 +4,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-zum-31-musikfestival-bydgoszcz-filharmonia-pomorska-bydgoszcz-konzertsaal-1993-09-15-19-00> ] .
 
-<https://performance.musiconn.de/event/konzert-zum-31-musikfestival-bydgoszcz-filharmonia-pomorska-bydgoszcz-konzertsaal-1993-09-15-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-zum-31-musikfestival-bydgoszcz-filharmonia-pomorska-bydgoszcz-konzertsaal-1993-09-15-19-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert zum 31. Musikfestival Bydgoszcz, Filharmonia Pomorska (Bydgoszcz) / Konzertsaal, 15.9.1993, 19:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1993-09-15T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1993-09-15T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/filharmonia-pomorska-bydgoszcz-konzertsaal> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/gewalttour-fuer-gesang-leipziger-synagogalchor-gastierte-in-bydgoszcz>,
         <https://performance.musiconn.de/source/plakat-konzert-15-september-1993>,
         <https://performance.musiconn.de/source/programmbuch-konzert-15-september-1993>,
@@ -38,8 +42,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/sisu-wsimchu-fassung-weintraub-hirsch>,
         <https://performance.musiconn.de/work/toras-adonoi-psalm-19-7-9-lewandowski-louis>,
         <https://performance.musiconn.de/work/wschomru-alman-samuel> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/filharmonia-pomorska-bydgoszcz-konzertsaal> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

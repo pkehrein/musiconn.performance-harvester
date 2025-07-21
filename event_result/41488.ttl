@@ -1,54 +1,74 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1080880771> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300019157> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300036930> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037643> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300062249> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300115407> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1916-11-14> ] .
 
-<https://performance.musiconn.de/event/2-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1916-11-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1916-11-14> a cto:CTO_0001005 ;
     rdfs:label "2. Philharmonisches Konzert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 14.11.1916" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1916-1917> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1916-11-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1916-11-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1080880771>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300019157>,
-        <https://d-nb.info/gnd/300036930>,
-        <https://d-nb.info/gnd/300037643>,
-        <https://d-nb.info/gnd/300062249>,
-        <https://d-nb.info/gnd/300115407> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1916-1917> ;
-    cto:relatedItem <https://d-nb.info/gnd/1080880771>,
-        <https://d-nb.info/gnd/300019157>,
-        <https://d-nb.info/gnd/300036930>,
-        <https://d-nb.info/gnd/300037643>,
-        <https://d-nb.info/gnd/300062249>,
-        <https://d-nb.info/gnd/300115407>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/25145244313874480361> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202937502> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300115407> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185089854> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1080880771> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062249> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300019157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179019389> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177235039> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191495401> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300036930> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037643> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/ein-maskenball-szene-und-arie-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/etueden-klavier-op-25-nr-1-chopin-frederic>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-16-a-moll-grieg-edvard>,
-        <https://performance.musiconn.de/work/le-carnaval-romain-berlioz-hector>,
-        <https://performance.musiconn.de/work/les-contes-dhoffmann-scintille-diamant-offenbach-jacques>,
-        <https://performance.musiconn.de/work/lieder-am-klavier-o-komm-im-traum-es-muss-ein-wunderbares-sein-liszt-franz>,
-        <https://performance.musiconn.de/work/mazurken-klavier-op-33-nr-2-chopin-frederic>,
-        <https://performance.musiconn.de/work/polonaisen-klavier-op-53-as-dur-chopin-frederic>,
-        <https://viaf.org/viaf/177235039>,
-        <https://viaf.org/viaf/179019389>,
-        <https://viaf.org/viaf/185089854>,
-        <https://viaf.org/viaf/191495401>,
-        <https://viaf.org/viaf/202937502>,
-        <https://viaf.org/viaf/25145244313874480361> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/177235039>,
-        <https://viaf.org/viaf/179019389>,
-        <https://viaf.org/viaf/185089854>,
-        <https://viaf.org/viaf/191495401>,
-        <https://viaf.org/viaf/202937502>,
-        <https://viaf.org/viaf/25145244313874480361> .
+        <https://performance.musiconn.de/work/lieder-am-klavier-o-komm-im-traum-es-muss-ein-wunderbares-sein-liszt-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177235039> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179019389> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185089854> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191495401> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202937502> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/25145244313874480361> a nfdicore:NFDI_0001010 .
 

@@ -4,25 +4,32 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/119255960> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4111358-5> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/le-pescatrici-logrono-1764-00-00> ] .
 
-<https://performance.musiconn.de/event/le-pescatrici-logrono-1764-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/le-pescatrici-logrono-1764-00-00> a cto:CTO_0001005 ;
     rdfs:label "Le pescatrici, Logroño, 1764" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1764-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1764-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/119255960>,
-        <https://d-nb.info/gnd/4111358-5> ;
-    cto:relatedItem <https://performance.musiconn.de/source/rodriguez-gomez-obras>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/119255960> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4111358-5> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/124321861> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/rodriguez-gomez-obras>,
         <https://performance.musiconn.de/work/le-pescatrici-bertoni-ferdinando-gasparo> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4111358-5>,
-        <https://viaf.org/viaf/124321861> ;
-    cto:relatedPerson <https://d-nb.info/gnd/119255960>,
-        <https://viaf.org/viaf/15036790> ;
-    cto:viaf <https://viaf.org/viaf/124321861>,
-        <https://viaf.org/viaf/15036790> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/15036790> ] .
+
+<https://viaf.org/viaf/124321861> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/15036790> a nfdicore:NFDI_0001010 .
 

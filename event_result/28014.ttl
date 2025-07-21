@@ -1,55 +1,73 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1052227465> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/115351379X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300034121> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133782> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300157037> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300271255> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/iii-konzert-vereinshaus-zinzendorfstrasse-17-dresden-1909-01-19-19-30> ] .
 
-<https://performance.musiconn.de/event/iii-konzert-vereinshaus-zinzendorfstrasse-17-dresden-1909-01-19-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/iii-konzert-vereinshaus-zinzendorfstrasse-17-dresden-1909-01-19-19-30> a cto:CTO_0001005 ;
     rdfs:label "III. Konzert, Vereinshaus Zinzendorfstraße 17 (Dresden), 19.1.1909, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1908-1909> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1909-01-19T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1909-01-19T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1052227465>,
-        <https://d-nb.info/gnd/115351379X>,
-        <https://d-nb.info/gnd/300034121>,
-        <https://d-nb.info/gnd/300133782>,
-        <https://d-nb.info/gnd/300157037>,
-        <https://d-nb.info/gnd/300271255> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1908-1909> ;
-    cto:relatedItem <https://d-nb.info/gnd/1052227465>,
-        <https://d-nb.info/gnd/115351379X>,
-        <https://d-nb.info/gnd/300034121>,
-        <https://d-nb.info/gnd/300133782>,
-        <https://d-nb.info/gnd/300157037>,
-        <https://d-nb.info/gnd/300271255>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/vereinshaus-zinzendorfstrasse-17-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300034121> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184714192> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1821152025919403600005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/243835732> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157037> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1052227465> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/115351379X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133782> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300271255> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180110901> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309582148> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203708908> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1908-1909>,
         <https://performance.musiconn.de/work/adagio-und-allegro-boccherini-luigi>,
         <https://performance.musiconn.de/work/airs-violoncello-klavier-pergolesi-giovanni-battista>,
-        <https://performance.musiconn.de/work/gedichte-von-eichendorff-der-freund-wolf-hugo>,
-        <https://performance.musiconn.de/work/kleopatra-vorspiel-enna-august>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-r-193-a-moll-saint-saens-camille>,
-        <https://performance.musiconn.de/work/lieder-op-19-fruehlingsgespenster-weingartner-felix>,
-        <https://performance.musiconn.de/work/lieder-op-56-die-heiligen-drei-koenige-aus-morgenland-strauss-richard>,
         <https://performance.musiconn.de/work/menuette-violoncello-klavier-bach-carl-philipp-emanuel>,
-        <https://performance.musiconn.de/work/mir-traeumte-von-einem-koenigskind-giehrl-joseph>,
-        <https://performance.musiconn.de/work/suiten-orchester-cs-31-g-dur-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/180110901>,
-        <https://viaf.org/viaf/1821152025919403600005>,
-        <https://viaf.org/viaf/184714192>,
-        <https://viaf.org/viaf/203708908>,
-        <https://viaf.org/viaf/243835732>,
-        <https://viaf.org/viaf/309582148> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/vereinshaus-zinzendorfstrasse-17-dresden> ;
-    cto:viaf <https://viaf.org/viaf/180110901>,
-        <https://viaf.org/viaf/1821152025919403600005>,
-        <https://viaf.org/viaf/184714192>,
-        <https://viaf.org/viaf/203708908>,
-        <https://viaf.org/viaf/243835732>,
-        <https://viaf.org/viaf/309582148> .
+        <https://performance.musiconn.de/work/mir-traeumte-von-einem-koenigskind-giehrl-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180110901> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/1821152025919403600005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184714192> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203708908> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/243835732> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309582148> a nfdicore:NFDI_0001010 .
 

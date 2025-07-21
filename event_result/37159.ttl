@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300025645> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026870> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027311> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/i-orchester-konzert-volkshaus-jena-grosser-saal-1929-05-31-20-00> ] .
 
-<https://performance.musiconn.de/event/i-orchester-konzert-volkshaus-jena-grosser-saal-1929-05-31-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/i-orchester-konzert-volkshaus-jena-grosser-saal-1929-05-31-20-00> a cto:CTO_0001005 ;
     rdfs:label "I. Orchester-Konzert, Volkshaus (Jena) / Großer Saal, 31.5.1929, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/siebentes-deutsches-brahmsfest-der-deutschen-brahms-gesellschaft> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1929-05-31T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1929-05-31T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300025645>,
-        <https://d-nb.info/gnd/300026870>,
-        <https://d-nb.info/gnd/300027311> ;
-    cto:itemOf <https://performance.musiconn.de/series/siebentes-deutsches-brahmsfest-der-deutschen-brahms-gesellschaft> ;
-    cto:relatedItem <https://d-nb.info/gnd/300025645>,
-        <https://d-nb.info/gnd/300026870>,
-        <https://d-nb.info/gnd/300027311>,
-        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-15-d-moll-brahms-johannes>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-73-d-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/variationen-ueber-ein-thema-von-joseph-haydn-brahms-johannes>,
-        <https://viaf.org/viaf/191495144>,
-        <https://viaf.org/viaf/196877702>,
-        <https://viaf.org/viaf/311579680> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/volkshaus-jena-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/191495144>,
-        <https://viaf.org/viaf/196877702>,
-        <https://viaf.org/viaf/311579680> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/volkshaus-jena-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191495144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025645> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196877702> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026870> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311579680> ],
+        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/191495144> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196877702> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311579680> a nfdicore:NFDI_0001010 .
 

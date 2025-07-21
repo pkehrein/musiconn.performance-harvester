@@ -4,24 +4,31 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4724039-8> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-thomaskirche-erfurt-2004-04-24> ] .
 
-<https://performance.musiconn.de/event/konzert-thomaskirche-erfurt-2004-04-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-thomaskirche-erfurt-2004-04-24> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Thomaskirche Erfurt, 24.4.2004" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2004-04-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2004-04-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4724039-8>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/klanggewalt-im-kirchenschiff-der-leipziger-synagogalchor-begeisterte-in-der-thomaskirche> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4724039-8>,
-        <https://viaf.org/viaf/241228432> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/241228432> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/241228432> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4724039-8> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/klanggewalt-im-kirchenschiff-der-leipziger-synagogalchor-begeisterte-in-der-thomaskirche> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/241228432> a nfdicore:NFDI_0001010 .
 

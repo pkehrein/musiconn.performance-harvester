@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1084609428> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ferdinand-cortez-gebaeude-der-koeniglichen-oper-berlin-berlin-1815-10-31> ] .
 
-<https://performance.musiconn.de/event/ferdinand-cortez-gebaeude-der-koeniglichen-oper-berlin-berlin-1815-10-31> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ferdinand-cortez-gebaeude-der-koeniglichen-oper-berlin-berlin-1815-10-31> a cto:CTO_0001005 ;
     rdfs:label "Ferdinand Cortez, Gebäude der Königlichen Oper Berlin (Berlin), 31.10.1815" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1815-10-31" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1815-10-31" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1084609428> ;
-    cto:relatedItem <https://performance.musiconn.de/source/berlinische-nachrichten-von-staats-und-gelehrten-sachen-31101815>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/533149662172407020006> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1084609428> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/berlinische-nachrichten-von-staats-und-gelehrten-sachen-31101815>,
         <https://performance.musiconn.de/work/ferdinand-cortez-oder-die-eroberung-von-mexiko-fassung-spontini-gaspare> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1084609428>,
-        <https://viaf.org/viaf/533149662172407020006> ;
-    cto:viaf <https://viaf.org/viaf/533149662172407020006> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/533149662172407020006> a nfdicore:NFDI_0001010 .
 

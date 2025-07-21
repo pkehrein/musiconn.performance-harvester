@@ -1,25 +1,33 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1208945599> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300924232> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/komponistinnen-rendezvous-mit-amy-beach-gasteig-muenchen-kleiner-konzertsaal-2010-11-27> ] .
 
-<https://performance.musiconn.de/event/komponistinnen-rendezvous-mit-amy-beach-gasteig-muenchen-kleiner-konzertsaal-2010-11-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/komponistinnen-rendezvous-mit-amy-beach-gasteig-muenchen-kleiner-konzertsaal-2010-11-27> a cto:CTO_0001005 ;
     rdfs:label "Komponistinnen : Rendezvous mit Amy Beach, Gasteig (München) / Kleiner Konzertsaal, 27.11.2010" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/komponistinnen-neue-konzertreihe-im-muenchner-kulturleben> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2010-11-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2010-11-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1208945599>,
-        <https://d-nb.info/gnd/300924232> ;
-    cto:itemOf <https://performance.musiconn.de/series/komponistinnen-neue-konzertreihe-im-muenchner-kulturleben> ;
-    cto:relatedItem <https://d-nb.info/gnd/1208945599>,
-        <https://d-nb.info/gnd/300924232>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/gasteig-muenchen-kleiner-konzertsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1208945599> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6563158261787302540001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181851429> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300924232> ],
         <https://performance.musiconn.de/source/programm-komponistinnenkonzert-35-durchgang>,
         <https://performance.musiconn.de/work/a-mirage-op-100-nr-1-beach-h-h-a-mrs>,
         <https://performance.musiconn.de/work/ah-love-but-a-day-op-44-nr-2-beach-h-h-a-mrs>,
@@ -29,15 +37,13 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/five-impressions-of-holiday-fuer-floete-violoncello-und-klavier-op-7-goossens-eugene>,
         <https://performance.musiconn.de/work/gacelas-de-amor-3-lieder-fuer-mezzosopran-floete-und-klavier-fabregas-elisanda>,
         <https://performance.musiconn.de/work/hymn-of-trust-beach-h-h-a-mrs>,
-        <https://performance.musiconn.de/work/ich-stand-in-dunklen-traeumen-lied-op-13-nr-1-schumann-clara>,
         <https://performance.musiconn.de/work/june-op-51-nr-3-beach-h-h-a-mrs>,
-        <https://performance.musiconn.de/work/lieder-op-13-der-mond-kommt-still-gegangen-schumann-clara>,
         <https://performance.musiconn.de/work/sie-liebten-sich-beide-schumann-clara>,
         <https://performance.musiconn.de/work/the-rainy-day-beach-h-h-a-mrs>,
-        <https://performance.musiconn.de/work/two-pieces-fuer-floete-violoncello-und-klavier-op-90-beach-h-h-a-mrs>,
-        <https://viaf.org/viaf/181851429>,
-        <https://viaf.org/viaf/6563158261787302540001> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/gasteig-muenchen-kleiner-konzertsaal> ;
-    cto:viaf <https://viaf.org/viaf/181851429>,
-        <https://viaf.org/viaf/6563158261787302540001> .
+        <https://performance.musiconn.de/work/two-pieces-fuer-floete-violoncello-und-klavier-op-90-beach-h-h-a-mrs> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181851429> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6563158261787302540001> a nfdicore:NFDI_0001010 .
 

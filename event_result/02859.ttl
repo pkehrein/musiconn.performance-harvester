@@ -1,43 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300110375> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300430337> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300707916> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/siebenter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1874-01-26-19-00> ] .
 
-<https://performance.musiconn.de/event/siebenter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1874-01-26-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/siebenter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1874-01-26-19-00> a cto:CTO_0001005 ;
     rdfs:label "Siebenter Kammermusik-Abend, Kleiner Konzertsaal (Frankfurt a. M.), 26.1.1874, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1873-1874> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1874-01-26T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1874-01-26T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196887738> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199703910> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300707916> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110375> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300430337> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203725018> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300110375>,
-        <https://d-nb.info/gnd/300430337>,
-        <https://d-nb.info/gnd/300707916> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1873-1874> ;
-    cto:relatedItem <https://d-nb.info/gnd/300110375>,
-        <https://d-nb.info/gnd/300430337>,
-        <https://d-nb.info/gnd/300707916>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/oktette-floete-oboe-klarinette-2-horn-2-fagott-2-op-156-b-dur-lachner-franz-paul>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-14-g-moll-volkmann-robert>,
-        <https://performance.musiconn.de/work/quintette-violine-2-viola-2-violoncello-kv-593-d-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/196887738>,
-        <https://viaf.org/viaf/199703910>,
-        <https://viaf.org/viaf/203725018> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
     cto:relatedPerson <https://performance.musiconn.de/person/apel-h>,
         <https://performance.musiconn.de/person/duering>,
         <https://performance.musiconn.de/person/grimm-fr>,
         <https://performance.musiconn.de/person/kohlbach>,
         <https://performance.musiconn.de/person/mehner>,
         <https://performance.musiconn.de/person/reuther>,
-        <https://performance.musiconn.de/person/siegel-w> ;
-    cto:viaf <https://viaf.org/viaf/196887738>,
-        <https://viaf.org/viaf/199703910>,
-        <https://viaf.org/viaf/203725018> .
+        <https://performance.musiconn.de/person/siegel-w> .
+
+<https://viaf.org/viaf/196887738> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199703910> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203725018> a nfdicore:NFDI_0001010 .
 

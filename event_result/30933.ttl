@@ -1,50 +1,65 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1127618946> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1185987975> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300125100> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300311699> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4347325-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1997-03-09-11-00> ] .
 
-<https://performance.musiconn.de/event/6-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1997-03-09-11-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1997-03-09-11-00> a cto:CTO_0001005 ;
     rdfs:label "6. Außerordentliches Konzert, Kulturpalast (Dresden) / Festsaal, 9.3.1997, 11:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1996-1997> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1997-03-09T11:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1997-03-09T11:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1127618946>,
-        <https://d-nb.info/gnd/1185987975>,
-        <https://d-nb.info/gnd/300125100>,
-        <https://d-nb.info/gnd/300311699>,
-        <https://d-nb.info/gnd/4347325-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1996-1997> ;
-    cto:relatedItem <https://d-nb.info/gnd/1127618946>,
-        <https://d-nb.info/gnd/1185987975>,
-        <https://d-nb.info/gnd/300125100>,
-        <https://d-nb.info/gnd/300311699>,
-        <https://d-nb.info/gnd/4347325-8>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4347325-8> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185886550> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189345559> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300311699> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1185987975> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/295291797> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174390347> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1127618946> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300125100> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185883348> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/alborada-del-gracioso-ravel-maurice>,
         <https://performance.musiconn.de/work/cuidardo-con-la-pintura-sorozabal-pablo>,
-        <https://performance.musiconn.de/work/el-barberillo-de-lavapies-barbieri-francisco-asenjo>,
         <https://performance.musiconn.de/work/el-nino-judio-luna-pablo>,
-        <https://performance.musiconn.de/work/el-sombrero-de-tres-picos-falla-manuel-de>,
         <https://performance.musiconn.de/work/la-cancion-del-olvido-serrano-jose>,
-        <https://performance.musiconn.de/work/la-gran-via-chueca-federico>,
-        <https://performance.musiconn.de/work/la-tempranica-gimenez-geronimo>,
-        <https://performance.musiconn.de/work/la-torre-del-oro-vorspiel-gimenez-geronimo>,
-        <https://viaf.org/viaf/174390347>,
-        <https://viaf.org/viaf/185883348>,
-        <https://viaf.org/viaf/185886550>,
-        <https://viaf.org/viaf/189345559>,
-        <https://viaf.org/viaf/295291797> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/174390347>,
-        <https://viaf.org/viaf/185883348>,
-        <https://viaf.org/viaf/185886550>,
-        <https://viaf.org/viaf/189345559>,
-        <https://viaf.org/viaf/295291797> .
+        <https://performance.musiconn.de/work/la-gran-via-chueca-federico> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174390347> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185883348> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185886550> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189345559> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/295291797> a nfdicore:NFDI_0001010 .
 

@@ -1,41 +1,51 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1292241543> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300034113> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102224> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300788037> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/achtes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1903-01-30-19-00> ] .
 
-<https://performance.musiconn.de/event/achtes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1903-01-30-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/achtes-freitags-konzert-grosser-konzertsaal-frankfurt-a-m-1903-01-30-19-00> a cto:CTO_0001005 ;
     rdfs:label "Achtes Freitags-Konzert, Großer Konzertsaal (Frankfurt a. M.), 30.1.1903, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1902-1903> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1903-01-30T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1903-01-30T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1292241543>,
-        <https://d-nb.info/gnd/300034113>,
-        <https://d-nb.info/gnd/300102224>,
-        <https://d-nb.info/gnd/300788037> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1902-1903> ;
-    cto:relatedItem <https://d-nb.info/gnd/1292241543>,
-        <https://d-nb.info/gnd/300034113>,
-        <https://d-nb.info/gnd/300102224>,
-        <https://d-nb.info/gnd/300788037>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102224> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3093168657974719520001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215941500> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300034113> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300788037> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1292241543> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183525396> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/konzert-ouvertuere-zum-maerchen-von-der-schoenen-melusine-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-7-d-dur-svendsen-johan-severin>,
         <https://performance.musiconn.de/work/sonaten-violine-kontrabass-nr-3-c-dur-adagio-arrangiert-haydn-joseph>,
-        <https://performance.musiconn.de/work/sonaten-violine-kontrabass-nr-3-c-dur-finale-arrangiert-haydn-joseph>,
-        <https://performance.musiconn.de/work/suiten-orchester-cs-30-g-dur-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/tragisches-tongedicht-lampe-walther>,
-        <https://viaf.org/viaf/183525396>,
-        <https://viaf.org/viaf/215941500>,
-        <https://viaf.org/viaf/3093168657974719520001> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/183525396>,
-        <https://viaf.org/viaf/215941500>,
-        <https://viaf.org/viaf/3093168657974719520001> .
+        <https://performance.musiconn.de/work/sonaten-violine-kontrabass-nr-3-c-dur-finale-arrangiert-haydn-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/183525396> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215941500> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3093168657974719520001> a nfdicore:NFDI_0001010 .
 

@@ -1,52 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300158572> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4535431-5> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5061214-1> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7674451-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/mdr-zauber-der-musik-marktkirche-sankt-johannes-magdeburg-2012-10-06-17-00> ] .
 
-<https://performance.musiconn.de/event/mdr-zauber-der-musik-marktkirche-sankt-johannes-magdeburg-2012-10-06-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/mdr-zauber-der-musik-marktkirche-sankt-johannes-magdeburg-2012-10-06-17-00> a cto:CTO_0001005 ;
     rdfs:label "MDR Zauber der Musik, Marktkirche Sankt Johannes (Magdeburg), 6.10.2012, 17:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2012-10-06T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2012-10-06T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300158572>,
-        <https://d-nb.info/gnd/4535431-5>,
-        <https://d-nb.info/gnd/5061214-1>,
-        <https://d-nb.info/gnd/5513287-X>,
-        <https://d-nb.info/gnd/7674451-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/300158572>,
-        <https://d-nb.info/gnd/7674451-6>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/263538429> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5061214-1> ],
+        <https://performance.musiconn.de/corporation/mdr-sinfonieorchester> ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/245830511> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4535431-5> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178827736> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182361144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300158572> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7674451-6> ],
         <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/peter-korfmacher-beide-seiten-wollten-das-beste-calmus-saenger-ludwig-boehme-leitet-den-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/peter-korfmacher-gottvertrauen-und-lebensfreude-kristjan-jaervi-dirigiert-bernstein-strawinsky-und-press-im-ausverkauften-zauber-der-musik>,
         <https://performance.musiconn.de/source/programmbuch-konzert-6-oktober-2012>,
         <https://performance.musiconn.de/work/adon-olom-fassung-sulzer-salomon-sulzer-joseph>,
-        <https://performance.musiconn.de/work/chichester-psalms-bernstein-leonard>,
         <https://performance.musiconn.de/work/halalujoh-psalm-150-lewandowski-louis>,
         <https://performance.musiconn.de/work/hasseneh-press-jacques>,
         <https://performance.musiconn.de/work/horra-banechar-fassung-gross-friedbert>,
         <https://performance.musiconn.de/work/hungerik-dein-ketzele-fassung-gross-friedbert-gebirtig-mordechai>,
         <https://performance.musiconn.de/work/ki-lo-naeh-boehme-ludwig-rittangel-johann-stephan>,
-        <https://performance.musiconn.de/work/ojfn-pripetschik-fassung-sander-werner-warschawski-mark>,
-        <https://performance.musiconn.de/work/symphonie-de-psaumes-stravinsky-igor>,
-        <https://viaf.org/viaf/178827736>,
-        <https://viaf.org/viaf/182361144> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4535431-5>,
-        <https://viaf.org/viaf/245830511> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5061214-1>,
-        <https://d-nb.info/gnd/5513287-X>,
-        <https://performance.musiconn.de/corporation/mdr-sinfonieorchester>,
-        <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/263538429> ;
-    cto:viaf <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/178827736>,
-        <https://viaf.org/viaf/182361144>,
-        <https://viaf.org/viaf/245830511>,
-        <https://viaf.org/viaf/263538429> .
+        <https://performance.musiconn.de/work/ojfn-pripetschik-fassung-sander-werner-warschawski-mark> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178827736> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182361144> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/245830511> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/263538429> a nfdicore:NFDI_0001010 .
 

@@ -1,31 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300029985> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111150> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/mozart-bruckner-zyklus-6-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1959-02-07-19-30> ] .
 
-<https://performance.musiconn.de/event/mozart-bruckner-zyklus-6-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1959-02-07-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/mozart-bruckner-zyklus-6-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1959-02-07-19-30> a cto:CTO_0001005 ;
     rdfs:label "Mozart-Bruckner-Zyklus (6. Konzert), Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 7.2.1959, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1958-1959> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1959-02-07T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1959-02-07T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300029985>,
-        <https://d-nb.info/gnd/300111150> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1958-1959> ;
-    cto:relatedItem <https://d-nb.info/gnd/300029985>,
-        <https://d-nb.info/gnd/300111150>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/sinfonien-kv-550-g-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-wab-105-b-dur-bruckner-anton>,
-        <https://viaf.org/viaf/193655042>,
-        <https://viaf.org/viaf/213965948> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/193655042>,
-        <https://viaf.org/viaf/213965948> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029985> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111150> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193655042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213965948> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/193655042> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213965948> a nfdicore:NFDI_0001010 .
 

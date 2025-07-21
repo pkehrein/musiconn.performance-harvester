@@ -1,53 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1188434705> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1225730481> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300016425> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145411> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145756> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vierzehntes-abonnement-concert-zweites-gewandhaus-leipzig-1888-01-19> ] .
 
-<https://performance.musiconn.de/event/vierzehntes-abonnement-concert-zweites-gewandhaus-leipzig-1888-01-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vierzehntes-abonnement-concert-zweites-gewandhaus-leipzig-1888-01-19> a cto:CTO_0001005 ;
     rdfs:label "Vierzehntes Abonnement-Concert, Zweites Gewandhaus (Leipzig), 19.1.1888" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1888-01-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1888-01-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1188434705>,
-        <https://d-nb.info/gnd/1225730481>,
-        <https://d-nb.info/gnd/300016425>,
-        <https://d-nb.info/gnd/300145411>,
-        <https://d-nb.info/gnd/300145756>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/1188434705>,
-        <https://d-nb.info/gnd/1225730481>,
-        <https://d-nb.info/gnd/300016425>,
-        <https://d-nb.info/gnd/300145411>,
-        <https://d-nb.info/gnd/300145756>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016425> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225730481> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219163769> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198521904> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145756> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3211156075620853980009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145411> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1188434705> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182274863> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
         <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
         <https://performance.musiconn.de/work/abendreihn-reinecke-carl>,
         <https://performance.musiconn.de/work/arioso-reinecke-carl>,
         <https://performance.musiconn.de/work/gavotten-violoncello-klavier-reinecke-carl>,
         <https://performance.musiconn.de/work/gesaenge-op-1-voeglein-wohin-so-schnell-franz-robert>,
-        <https://performance.musiconn.de/work/gesaenge-op-5-gute-nacht-franz-robert>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-129-a-moll-schumann-robert>,
-        <https://performance.musiconn.de/work/liederkreis-nach-heinrich-heine-mit-myrthen-und-rosen-schumann-robert>,
         <https://performance.musiconn.de/work/orfeo-ed-euridice-wehe-mir-es-ist-geschehen-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/ouvertuere-zu-schillers-turandot-thieriot-ferdinand>,
-        <https://performance.musiconn.de/work/scherzo-reinecke-carl>,
-        <https://performance.musiconn.de/work/sinfonien-nr-8-op-93-f-dur-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/182274863>,
-        <https://viaf.org/viaf/198521904>,
-        <https://viaf.org/viaf/219163769>,
-        <https://viaf.org/viaf/3211156075620853980009> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/182274863>,
-        <https://viaf.org/viaf/198521904>,
-        <https://viaf.org/viaf/219163769>,
-        <https://viaf.org/viaf/264523828>,
-        <https://viaf.org/viaf/3211156075620853980009> .
+        <https://performance.musiconn.de/work/scherzo-reinecke-carl> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182274863> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198521904> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219163769> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3211156075620853980009> a nfdicore:NFDI_0001010 .
 

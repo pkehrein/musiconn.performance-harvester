@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30002567X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033826> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170076> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/asien-2013-cultural-arts-centre-grand-auditorium-macau-2013-10-27-20-00> ] .
 
-<https://performance.musiconn.de/event/asien-2013-cultural-arts-centre-grand-auditorium-macau-2013-10-27-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/asien-2013-cultural-arts-centre-grand-auditorium-macau-2013-10-27-20-00> a cto:CTO_0001005 ;
     rdfs:label "Asien 2013, Cultural Arts Centre Grand Auditorium (Macau), 27.10.2013, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2013-2014> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2013-10-27T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2013-10-27T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30002567X>,
-        <https://d-nb.info/gnd/300033826>,
-        <https://d-nb.info/gnd/300170076> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2013-2014> ;
-    cto:relatedItem <https://d-nb.info/gnd/30002567X>,
-        <https://d-nb.info/gnd/300033826>,
-        <https://d-nb.info/gnd/300170076>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-77-d-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/lohengrin-einleitung-wagner-richard>,
-        <https://performance.musiconn.de/work/sinfonien-cs-24-f-moll-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/185500605>,
-        <https://viaf.org/viaf/205759295>,
-        <https://viaf.org/viaf/214736935> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/cultural-arts-centre-grand-auditorium-macau> ;
-    cto:viaf <https://viaf.org/viaf/185500605>,
-        <https://viaf.org/viaf/205759295>,
-        <https://viaf.org/viaf/214736935> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/cultural-arts-centre-grand-auditorium-macau> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185500605> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033826> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170076> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30002567X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214736935> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205759295> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185500605> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205759295> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214736935> a nfdicore:NFDI_0001010 .
 

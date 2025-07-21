@@ -1,33 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1226486878> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30002598X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026048> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111436> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300879415> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7648226-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-volkshaus-jena-grosser-saal-1931-12-07-20-00> ] .
 
-<https://performance.musiconn.de/event/konzert-volkshaus-jena-grosser-saal-1931-12-07-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-volkshaus-jena-grosser-saal-1931-12-07-20-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Volkshaus (Jena) / Großer Saal, 7.12.1931, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1931-12-07T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1931-12-07T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1226486878>,
-        <https://d-nb.info/gnd/30002598X>,
-        <https://d-nb.info/gnd/300026048>,
-        <https://d-nb.info/gnd/300111436>,
-        <https://d-nb.info/gnd/300879415>,
-        <https://d-nb.info/gnd/7648226-1> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1226486878>,
-        <https://d-nb.info/gnd/30002598X>,
-        <https://d-nb.info/gnd/300026048>,
-        <https://d-nb.info/gnd/300111436>,
-        <https://d-nb.info/gnd/300879415>,
-        <https://d-nb.info/gnd/7648226-1>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/volkshaus-jena-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/268759176> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7648226-1> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1226486878> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182061447> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176603975> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30002598X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181512100> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026048> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111436> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201853732> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300879415> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
         <https://performance.musiconn.de/work/ans-werk-haendel-johannes>,
         <https://performance.musiconn.de/work/ausklang-rinkens-wilhelm>,
@@ -35,24 +57,18 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/ganz-still-zuweilen-kloepfer-ernst>,
         <https://performance.musiconn.de/work/heimweh-hoffmann-rud>,
         <https://performance.musiconn.de/work/liebesgedanken-trunk-richard>,
-        <https://performance.musiconn.de/work/lieder-op-105-auf-dem-kirchhofe-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-op-85-in-waldeseinsamkeit-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-op-95-der-jaeger-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-op-95-maedchenlied-brahms-johannes>,
         <https://performance.musiconn.de/work/morgen-im-walde-hoffmann-fritz>,
-        <https://performance.musiconn.de/work/schlummerlied-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/sonaten-kl-4hdg-kv-381-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/suiten-klavier-2-op-62-rinkens-wilhelm>,
-        <https://performance.musiconn.de/work/zu-zwein-breu-simon>,
-        <https://viaf.org/viaf/176603975>,
-        <https://viaf.org/viaf/181512100>,
-        <https://viaf.org/viaf/182061447>,
-        <https://viaf.org/viaf/201853732>,
-        <https://viaf.org/viaf/268759176> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/volkshaus-jena-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/176603975>,
-        <https://viaf.org/viaf/181512100>,
-        <https://viaf.org/viaf/182061447>,
-        <https://viaf.org/viaf/201853732>,
-        <https://viaf.org/viaf/268759176> .
+        <https://performance.musiconn.de/work/zu-zwein-breu-simon> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176603975> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181512100> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182061447> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201853732> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/268759176> a nfdicore:NFDI_0001010 .
 

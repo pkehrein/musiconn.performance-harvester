@@ -1,39 +1,48 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015178> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300047584> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300722036> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/festkonzert-kulturpalast-dresden-studiotheater-1970-11-24-19-30> ] .
 
-<https://performance.musiconn.de/event/festkonzert-kulturpalast-dresden-studiotheater-1970-11-24-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/festkonzert-kulturpalast-dresden-studiotheater-1970-11-24-19-30> a cto:CTO_0001005 ;
     rdfs:label "Festkonzert, Kulturpalast (Dresden) / Studiotheater, 24.11.1970, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1970-11-24T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1970-11-24T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015178>,
-        <https://d-nb.info/gnd/300047584>,
-        <https://d-nb.info/gnd/300722036> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015178>,
-        <https://d-nb.info/gnd/300047584>,
-        <https://d-nb.info/gnd/300722036>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-studiotheater> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300047584> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219160616> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/262302779> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015178> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300722036> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182655048> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/fantasien-klavier-op-77-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/guernica-dessau-paul>,
         <https://performance.musiconn.de/work/im-herbst-liederzyklus-moyzes-alexander>,
-        <https://performance.musiconn.de/work/pisne-milostne-dvorak-antonin>,
         <https://performance.musiconn.de/work/sonaten-violine-klavier-thilman-johannes-paul>,
         <https://performance.musiconn.de/work/sonatinen-violine-burlas-l>,
-        <https://performance.musiconn.de/work/war-das-ein-fruehling-ocenas-andrej>,
-        <https://viaf.org/viaf/182655048>,
-        <https://viaf.org/viaf/219160616>,
-        <https://viaf.org/viaf/262302779> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-studiotheater> ;
-    cto:viaf <https://viaf.org/viaf/182655048>,
-        <https://viaf.org/viaf/219160616>,
-        <https://viaf.org/viaf/262302779> .
+        <https://performance.musiconn.de/work/war-das-ein-fruehling-ocenas-andrej> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182655048> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219160616> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/262302779> a nfdicore:NFDI_0001010 .
 

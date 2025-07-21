@@ -1,49 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300046316> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300202938> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300202946> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300318588> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300318596> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1935-11-16-18-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1935-11-16-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1935-11-16-18-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 16.11.1935, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1935-36> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1935-11-16T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1935-11-16T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300046316>,
-        <https://d-nb.info/gnd/300202938>,
-        <https://d-nb.info/gnd/300202946>,
-        <https://d-nb.info/gnd/300318588>,
-        <https://d-nb.info/gnd/300318596>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1935-36> ;
-    cto:relatedItem <https://d-nb.info/gnd/300046316>,
-        <https://d-nb.info/gnd/300202938>,
-        <https://d-nb.info/gnd/300202946>,
-        <https://d-nb.info/gnd/300318588>,
-        <https://d-nb.info/gnd/300318596>,
-        <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-57-beati-quorum-via-draeseke-felix>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-57-o-bone-jesu-draeseke-felix>,
-        <https://performance.musiconn.de/work/messen-op-85-a-moll-draeseke-felix>,
-        <https://performance.musiconn.de/work/monologe-introduktion-reger-max>,
-        <https://performance.musiconn.de/work/monologe-passacaglia-reger-max>,
-        <https://viaf.org/viaf/175462236>,
-        <https://viaf.org/viaf/178288113>,
-        <https://viaf.org/viaf/195812933>,
-        <https://viaf.org/viaf/203706847>,
-        <https://viaf.org/viaf/217010493> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/175462236>,
-        <https://viaf.org/viaf/178288113>,
-        <https://viaf.org/viaf/195812933>,
-        <https://viaf.org/viaf/203706847>,
-        <https://viaf.org/viaf/217010493>,
-        <https://viaf.org/viaf/248189528> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178288113> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300318588> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175462236> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217010493> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300318596> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300046316> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195812933> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300202938> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300202946> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203706847> ],
+        <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175462236> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178288113> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195812933> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203706847> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217010493> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
 

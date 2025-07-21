@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5023559-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-deutsch-sorbisches-volkstheater-bautzen-1990-01-09> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-deutsch-sorbisches-volkstheater-bautzen-1990-01-09> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-deutsch-sorbisches-volkstheater-bautzen-1990-01-09> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Deutsch-Sorbisches Volkstheater (Bautzen), 9.1.1990" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1990-01-09" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1990-01-09" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5023559-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1990-dresden-saechsische-landesbibliothek-dresden-1991>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5023559-X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/151979954> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1990-dresden-saechsische-landesbibliothek-dresden-1991>,
         <https://performance.musiconn.de/work/musik-zum-einakter-na-podlanskich-kolijach-metsk-juro>,
         <https://performance.musiconn.de/work/musik-zum-einakter-psenca-na-watodroze-metsk-juro>,
         <https://performance.musiconn.de/work/musik-zum-einakter-zlostnica-metsk-juro> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5023559-X>,
-        <https://viaf.org/viaf/151979954> ;
-    cto:viaf <https://viaf.org/viaf/151979954> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/151979954> a nfdicore:NFDI_0001010 .
 

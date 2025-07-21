@@ -4,27 +4,30 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/tvorceskij-vecer-jurija-n-tjulina-dom-kompozitorov-sankt-petersburg-1963-12-20> ] .
 
-<https://performance.musiconn.de/event/tvorceskij-vecer-jurija-n-tjulina-dom-kompozitorov-sankt-petersburg-1963-12-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/tvorceskij-vecer-jurija-n-tjulina-dom-kompozitorov-sankt-petersburg-1963-12-20> a cto:CTO_0001005 ;
     rdfs:label "Tvorčeskij večer Jurija N. Tjulina, Dom kompozitorov (Sankt Petersburg), 20.12.1963" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1963-12-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1963-12-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1200899989> ;
-    cto:relatedItem <https://performance.musiconn.de/source/leningrader-komponistenhaus-1963-20-dezember>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/leningrader-komponistenhaus-1963-20-dezember>,
         <https://performance.musiconn.de/work/cetyre-gazali-alisera-navoj-op-21-tjulin-jurij-nikolaevic>,
         <https://performance.musiconn.de/work/o-vojne-i-mire-op-31-tjulin-jurij-nikolaevic>,
         <https://performance.musiconn.de/work/simfoniceskie-variacii-op-26-arija-tjulin-jurij-nikolaevic>,
         <https://performance.musiconn.de/work/sonaten-klavier-nr-3-op-8-tjulin-jurij-nikolaevic>,
         <https://performance.musiconn.de/work/uzbekskaja-sjuita-op-17-tjulin-jurij-nikolaevic>,
         <https://performance.musiconn.de/work/variationen-klavier-2-op-27-tjulin-jurij-nikolaevic> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1200899989>,
-        <https://viaf.org/viaf/385157583849933970005> ;
-    cto:relatedPerson <https://performance.musiconn.de/person/rabinovic-e> ;
-    cto:viaf <https://viaf.org/viaf/385157583849933970005> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson <https://performance.musiconn.de/person/rabinovic-e> .
+
+<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
 

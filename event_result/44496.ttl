@@ -4,19 +4,20 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4536295-6> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-zum-evangelischen-deutschen-chorfest-taborkirche-leipzig-2014-06-28> ] .
 
-<https://performance.musiconn.de/event/konzert-zum-evangelischen-deutschen-chorfest-taborkirche-leipzig-2014-06-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-zum-evangelischen-deutschen-chorfest-taborkirche-leipzig-2014-06-28> a cto:CTO_0001005 ;
     rdfs:label "Konzert zum Evangelischen Deutschen Chorfest, Taborkirche (Leipzig), 28.6.2014" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2014-06-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2014-06-28" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4536295-6> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4536295-6> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/programm-konzert-28-juni-2014>,
         <https://performance.musiconn.de/work/der-herr-ist-mein-hirte-psalm-23-lewandowski-louis>,
         <https://performance.musiconn.de/work/halalujoh-psalm-150-lewandowski-louis>,
@@ -27,5 +28,5 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/margeritkelach-fassung-gross-friedbert>,
         <https://performance.musiconn.de/work/ono-towo-lfonecho-sulzer-salomon>,
         <https://performance.musiconn.de/work/wschomru-lampel-samuel> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4536295-6> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
 

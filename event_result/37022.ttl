@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300001851> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111096> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300120559> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300132999> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1978-12-26> ] .
 
-<https://performance.musiconn.de/event/3-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1978-12-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1978-12-26> a cto:CTO_0001005 ;
     rdfs:label "3. Außerordentliches Konzert, Kulturpalast (Dresden) / Festsaal, 26.12.1978" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1978-12-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1978-12-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300001851>,
-        <https://d-nb.info/gnd/300111096>,
-        <https://d-nb.info/gnd/300120559>,
-        <https://d-nb.info/gnd/300132999> ;
-    cto:relatedItem <https://d-nb.info/gnd/300001851>,
-        <https://d-nb.info/gnd/300111096>,
-        <https://d-nb.info/gnd/300120559>,
-        <https://d-nb.info/gnd/300132999>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300132999> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211708644> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300001851> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201853951> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218083022> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111096> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300120559> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/294918919> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-op-7-nr-3-albinoni-tomaso>,
-        <https://performance.musiconn.de/work/konzerte-pauke-orgel-streichorchester-g-moll-poulenc-francis>,
-        <https://performance.musiconn.de/work/le-festin-de-laraignee-roussel-albert>,
-        <https://performance.musiconn.de/work/sinfonien-kv-385-d-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sonaten-trompete-streichorchester-basso-continuo-nr-1-f-dur-baldassari-pietro>,
-        <https://viaf.org/viaf/201853951>,
-        <https://viaf.org/viaf/211708644>,
-        <https://viaf.org/viaf/218083022>,
-        <https://viaf.org/viaf/294918919> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/201853951>,
-        <https://viaf.org/viaf/211708644>,
-        <https://viaf.org/viaf/218083022>,
-        <https://viaf.org/viaf/294918919> .
+        <https://performance.musiconn.de/work/sonaten-trompete-streichorchester-basso-continuo-nr-1-f-dur-baldassari-pietro> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/201853951> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211708644> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218083022> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/294918919> a nfdicore:NFDI_0001010 .
 

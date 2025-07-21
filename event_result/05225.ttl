@@ -1,53 +1,73 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300016417> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101902> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145071> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300205414> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300236182> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300868588> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1879-02-22-19-30> ] .
 
-<https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1879-02-22-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sinfonie-concert-gewerbehaus-dresden-gewerbehaus-saal-1879-02-22-19-30> a cto:CTO_0001005 ;
     rdfs:label "Sinfonie-Concert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 22.2.1879, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1878-1879> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1879-02-22T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1879-02-22T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300016417>,
-        <https://d-nb.info/gnd/300101902>,
-        <https://d-nb.info/gnd/300145071>,
-        <https://d-nb.info/gnd/300205414>,
-        <https://d-nb.info/gnd/300236182>,
-        <https://d-nb.info/gnd/300868588> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1878-1879> ;
-    cto:relatedItem <https://d-nb.info/gnd/300016417>,
-        <https://d-nb.info/gnd/300101902>,
-        <https://d-nb.info/gnd/300145071>,
-        <https://d-nb.info/gnd/300205414>,
-        <https://d-nb.info/gnd/300236182>,
-        <https://d-nb.info/gnd/300868588>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202958990> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/303854706> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217008457> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300868588> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016417> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300205414> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101902> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185197829> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300236182> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/303009279> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145071> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215924093> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1878-1879>,
-        <https://performance.musiconn.de/work/aphorismen-nicode-jean-louis>,
-        <https://performance.musiconn.de/work/genoveva-ouvertuere-schumann-robert>,
-        <https://performance.musiconn.de/work/introduktion-und-rondo-vieuxtemps-henri>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-mwv-o-14-e-moll-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/mignon-ouvertuere-thomas-ambroise>,
-        <https://performance.musiconn.de/work/sinfonien-nr-7-op-92-a-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-rhapsodie-nr-2-r-4414-liszt-franz>,
-        <https://viaf.org/viaf/185197829>,
-        <https://viaf.org/viaf/202958990>,
-        <https://viaf.org/viaf/215924093>,
-        <https://viaf.org/viaf/217008457>,
-        <https://viaf.org/viaf/303009279>,
-        <https://viaf.org/viaf/303854706> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/185197829>,
-        <https://viaf.org/viaf/202958990>,
-        <https://viaf.org/viaf/215924093>,
-        <https://viaf.org/viaf/217008457>,
-        <https://viaf.org/viaf/303009279>,
-        <https://viaf.org/viaf/303854706> .
+        <https://performance.musiconn.de/work/introduktion-und-rondo-vieuxtemps-henri> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185197829> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202958990> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215924093> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217008457> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/303009279> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/303854706> a nfdicore:NFDI_0001010 .
 

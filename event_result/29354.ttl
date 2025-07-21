@@ -1,42 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026870> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300169892> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30017019X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30017053X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/italien-frankreich-1983-maison-des-congres-clermont-ferrand-1983-11-13-16-00> ] .
 
-<https://performance.musiconn.de/event/italien-frankreich-1983-maison-des-congres-clermont-ferrand-1983-11-13-16-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/italien-frankreich-1983-maison-des-congres-clermont-ferrand-1983-11-13-16-00> a cto:CTO_0001005 ;
     rdfs:label "Italien / Frankreich 1983, Maison des Congrés (Clermont-Ferrand), 13.11.1983, 16:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1983-1984> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1983-11-13T16:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1983-11-13T16:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026870>,
-        <https://d-nb.info/gnd/300169892>,
-        <https://d-nb.info/gnd/30017019X>,
-        <https://d-nb.info/gnd/30017053X> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1983-1984> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026870>,
-        <https://d-nb.info/gnd/300169892>,
-        <https://d-nb.info/gnd/30017019X>,
-        <https://d-nb.info/gnd/30017053X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/maison-des-congres-clermont-ferrand> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174588600> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300169892> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026870> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176605842> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176597945> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191495144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30017019X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30017053X> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/der-ring-des-nibelungen-dritter-tag-goetterdaemmerung-siegfrieds-rheinfahrt-wagner-richard>,
-        <https://performance.musiconn.de/work/parsifal-karfreitagszauber-wagner-richard>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-73-d-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/tristan-und-isolde-vorspiel-wagner-richard>,
-        <https://performance.musiconn.de/work/variationen-ueber-ein-thema-von-joseph-haydn-apostel-hans-erich>,
-        <https://viaf.org/viaf/174588600>,
-        <https://viaf.org/viaf/176597945>,
-        <https://viaf.org/viaf/176605842>,
-        <https://viaf.org/viaf/191495144> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/maison-des-congres-clermont-ferrand> ;
-    cto:viaf <https://viaf.org/viaf/174588600>,
-        <https://viaf.org/viaf/176597945>,
-        <https://viaf.org/viaf/176605842>,
-        <https://viaf.org/viaf/191495144> .
+        <https://performance.musiconn.de/work/variationen-ueber-ein-thema-von-joseph-haydn-apostel-hans-erich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174588600> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176597945> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176605842> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191495144> a nfdicore:NFDI_0001010 .
 

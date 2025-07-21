@@ -1,42 +1,59 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300245475> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300245491> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4452966-1> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4494853-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/eoetvoes-01-87-alte-oper-frankfurt-am-main-1987-01-25> ] .
 
-<https://performance.musiconn.de/event/eoetvoes-01-87-alte-oper-frankfurt-am-main-1987-01-25> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/eoetvoes-01-87-alte-oper-frankfurt-am-main-1987-01-25> a cto:CTO_0001005 ;
     rdfs:label "Eötvös 01/87, Alte Oper (Frankfurt am Main), 25.1.1987" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-01-25" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-01-25" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300245475>,
-        <https://d-nb.info/gnd/300245491>,
-        <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/4452966-1>,
-        <https://d-nb.info/gnd/4494853-0> ;
-    cto:relatedItem <https://d-nb.info/gnd/300245475>,
-        <https://d-nb.info/gnd/300245491>,
-        <https://d-nb.info/gnd/4452966-1>,
-        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/chinese-opera-eoetvoes-peter>,
-        <https://performance.musiconn.de/work/kammerkonzerte-1970-ligeti-gyoergy>,
-        <https://performance.musiconn.de/work/poslanija-pokojnoj-r-v-trusovoj-kurtag-gyoergy>,
-        <https://viaf.org/viaf/185092100>,
-        <https://viaf.org/viaf/257719300>,
-        <https://viaf.org/viaf/295276775> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4494853-0>,
-        <https://viaf.org/viaf/6146522327332390379> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/185092100>,
-        <https://viaf.org/viaf/257719300>,
-        <https://viaf.org/viaf/295276775>,
-        <https://viaf.org/viaf/6146522327332390379> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4494853-0> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6146522327332390379> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300245491> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/295276775> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4452966-1> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300245475> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/257719300> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185092100> ],
+        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185092100> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/257719300> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/295276775> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6146522327332390379> a nfdicore:NFDI_0001010 .
 

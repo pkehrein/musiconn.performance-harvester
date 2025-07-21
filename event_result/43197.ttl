@@ -1,38 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300104707> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300436386> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vecer-kamernogo-baleta-i-kamernoj-muzyki-sankt-petersburger-philharmonie-kleiner-saal-1968-05-07> ] .
 
-<https://performance.musiconn.de/event/vecer-kamernogo-baleta-i-kamernoj-muzyki-sankt-petersburger-philharmonie-kleiner-saal-1968-05-07> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vecer-kamernogo-baleta-i-kamernoj-muzyki-sankt-petersburger-philharmonie-kleiner-saal-1968-05-07> a cto:CTO_0001005 ;
     rdfs:label "Večer kamernogo baleta i kamernoj muzyki, Sankt-Petersburger Philharmonie / Kleiner Saal, 7.5.1968" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1967-68> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1968-05-07" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1968-05-07" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300104707>,
-        <https://d-nb.info/gnd/300436386> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1967-68> ;
-    cto:relatedItem <https://d-nb.info/gnd/300104707>,
-        <https://d-nb.info/gnd/300436386>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300104707> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177063371> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300436386> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194741145> ],
         <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1968-7-mai>,
         <https://performance.musiconn.de/work/acante-et-cephise-suite-fassung-blaeserquintett-rameau-jean-philippe>,
         <https://performance.musiconn.de/work/allegro-und-rondo-fassung-blaeserquintett-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/grosses-divertimento-aus-der-musik-des-16-jh-bujanovskij-vitalij-m>,
-        <https://performance.musiconn.de/work/la-cheminee-du-roi-rene-milhaud-darius>,
-        <https://performance.musiconn.de/work/madrigale-oboe-klarinette-fagott-h-266-martinu-bohuslav>,
         <https://performance.musiconn.de/work/monodija-knajfel-aleksandr-aronovic>,
         <https://performance.musiconn.de/work/pieces-cembalo-livre-4-ordre-20-les-tambourins-fassung-blaeserquintett-couperin-francois>,
         <https://performance.musiconn.de/work/sarabanden-cembalo-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/suite-aus-werken-englischer-komponisten-des-13-16-jh-bujanovskij-vitalij-m>,
-        <https://viaf.org/viaf/177063371>,
-        <https://viaf.org/viaf/194741145> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/177063371>,
-        <https://viaf.org/viaf/194741145> .
+        <https://performance.musiconn.de/work/suite-aus-werken-englischer-komponisten-des-13-16-jh-bujanovskij-vitalij-m> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177063371> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194741145> a nfdicore:NFDI_0001010 .
 

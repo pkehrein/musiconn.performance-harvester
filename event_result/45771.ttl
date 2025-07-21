@@ -1,54 +1,72 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1072709643> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101597> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300157282> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30027128X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300309317> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300488459> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1919-12-15-19-00> ] .
 
-<https://performance.musiconn.de/event/5-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1919-12-15-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1919-12-15-19-00> a cto:CTO_0001005 ;
     rdfs:label "5. Philharmonisches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 15.12.1919, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1919-1920-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1919-12-15T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1919-12-15T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1072709643>,
-        <https://d-nb.info/gnd/300101597>,
-        <https://d-nb.info/gnd/300157282>,
-        <https://d-nb.info/gnd/30027128X>,
-        <https://d-nb.info/gnd/300309317>,
-        <https://d-nb.info/gnd/300488459> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1919-1920-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/1072709643>,
-        <https://d-nb.info/gnd/300101597>,
-        <https://d-nb.info/gnd/300157282>,
-        <https://d-nb.info/gnd/30027128X>,
-        <https://d-nb.info/gnd/300309317>,
-        <https://d-nb.info/gnd/300488459>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30027128X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1072709643> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181037473> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157282> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203712634> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191497132> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176827557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300309317> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300488459> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176019652> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174504830> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101597> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1890-1924>,
         <https://performance.musiconn.de/work/der-widerspenstigen-zaehmung-arie-goetz-hermann>,
-        <https://performance.musiconn.de/work/gedichte-von-eduard-moerike-er-ists-wolf-hugo>,
-        <https://performance.musiconn.de/work/konzert-ouvertuere-zu-den-hebriden-op-26-mwv-p-7-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/les-nuits-dete-absence-berlioz-hector>,
-        <https://performance.musiconn.de/work/les-nuits-dete-h-81b-l-ile-inconnue-berlioz-hector>,
-        <https://performance.musiconn.de/work/les-nuits-dete-villanelle-berlioz-hector>,
         <https://performance.musiconn.de/work/mignon-wolf-hugo>,
-        <https://performance.musiconn.de/work/notturno-und-scherzo-op-30-andreae-volkmar>,
-        <https://performance.musiconn.de/work/symphonia-domestica-strauss-richard>,
-        <https://viaf.org/viaf/174504830>,
-        <https://viaf.org/viaf/176019652>,
-        <https://viaf.org/viaf/176827557>,
-        <https://viaf.org/viaf/181037473>,
-        <https://viaf.org/viaf/191497132>,
-        <https://viaf.org/viaf/203712634> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/174504830>,
-        <https://viaf.org/viaf/176019652>,
-        <https://viaf.org/viaf/176827557>,
-        <https://viaf.org/viaf/181037473>,
-        <https://viaf.org/viaf/191497132>,
-        <https://viaf.org/viaf/203712634> .
+        <https://performance.musiconn.de/work/notturno-und-scherzo-op-30-andreae-volkmar> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174504830> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176019652> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176827557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181037473> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191497132> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203712634> a nfdicore:NFDI_0001010 .
 

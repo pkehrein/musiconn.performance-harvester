@@ -1,45 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30001158X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300017588> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300151268> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300672764> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/mstislav-rostropovic-sankt-petersburger-philharmonie-1995-02-10> ] .
 
-<https://performance.musiconn.de/event/mstislav-rostropovic-sankt-petersburger-philharmonie-1995-02-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/mstislav-rostropovic-sankt-petersburger-philharmonie-1995-02-10> a cto:CTO_0001005 ;
     rdfs:label "Mstislav Rostropovič, Sankt-Petersburger Philharmonie, 10.2.1995" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1994-95> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1995-02-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1995-02-10" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30001158X>,
-        <https://d-nb.info/gnd/300017588>,
-        <https://d-nb.info/gnd/300151268>,
-        <https://d-nb.info/gnd/300672764>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1994-95> ;
-    cto:relatedItem <https://d-nb.info/gnd/30001158X>,
-        <https://d-nb.info/gnd/300017588>,
-        <https://d-nb.info/gnd/300151268>,
-        <https://d-nb.info/gnd/300672764>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300151268> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300017588> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300672764> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195808727> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210935698> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306061673> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178620227> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001158X> ],
         <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1995-10-februar>,
-        <https://performance.musiconn.de/work/adagio-fassung-von-alfred-moffat-marcello-alessandro-moffat-alfred>,
-        <https://performance.musiconn.de/work/epilog-zu-peer-gynt-fassung-1993-schnittke-alfred>,
-        <https://performance.musiconn.de/work/sonaten-violoncello-klavier-op-40-d-moll-schostakowitsch-dmitri-d>,
-        <https://performance.musiconn.de/work/suiten-violoncello-bwv-1007-1012-nr-5-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/variationen-ueber-ein-maedchen-oder-weibchen-aus-mozarts-zauberfloete-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/178620227>,
-        <https://viaf.org/viaf/195808727>,
-        <https://viaf.org/viaf/210935698>,
-        <https://viaf.org/viaf/306061673> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/178620227>,
-        <https://viaf.org/viaf/195808727>,
-        <https://viaf.org/viaf/210935698>,
-        <https://viaf.org/viaf/306061673> .
+        <https://performance.musiconn.de/work/adagio-fassung-von-alfred-moffat-marcello-alessandro-moffat-alfred> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178620227> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195808727> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210935698> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/306061673> a nfdicore:NFDI_0001010 .
 

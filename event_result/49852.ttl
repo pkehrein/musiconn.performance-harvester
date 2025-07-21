@@ -1,23 +1,25 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300219369> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-schuelerkonzert-allgemeine-berufsschule-am-steinsgraben-zeitz-aula-1956-04-22-10-00> ] .
 
-<https://performance.musiconn.de/event/8-schuelerkonzert-allgemeine-berufsschule-am-steinsgraben-zeitz-aula-1956-04-22-10-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-schuelerkonzert-allgemeine-berufsschule-am-steinsgraben-zeitz-aula-1956-04-22-10-00> a cto:CTO_0001005 ;
     rdfs:label "8. Schülerkonzert, Allgemeine Berufsschule am Steinsgraben (Zeitz) / Aula, 22.4.1956, 10:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/schuelerkonzerte-der-volksmusikschule-zeitz> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1956-04-22T10:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1956-04-22T10:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300219369> ;
-    cto:itemOf <https://performance.musiconn.de/series/schuelerkonzerte-der-volksmusikschule-zeitz> ;
-    cto:relatedItem <https://d-nb.info/gnd/300219369>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/allgemeine-berufsschule-am-steinsgraben-zeitz-aula> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300219369> ],
         <https://performance.musiconn.de/source/plakate-programmhefte-und-rezensionen-aus-dem-nachlass-hermann-keller-2-programmhefte-1955-1984>,
         <https://performance.musiconn.de/work/acht-kleine-tanzstuecke-klavier-4-haendig-boehmischer-tanz-anonym>,
         <https://performance.musiconn.de/work/acht-kleine-tanzstuecke-klavier-4-haendig-englischer-tanz-anonym>,
@@ -36,7 +38,6 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/laendlicher-tanz-mozart-leopold>,
         <https://performance.musiconn.de/work/nachtigall-ich-hoer-dich-singen>,
         <https://performance.musiconn.de/work/schwabentanz-mozart-leopold>,
-        <https://performance.musiconn.de/work/sonaten-kl-4hdg-op-37-diabelli-anton>,
         <https://performance.musiconn.de/work/tarantella-fuer-klavier-heller-stephen>,
         <https://performance.musiconn.de/work/trompeten-trio-andante-tempo-di-marcia-mueller-bernhard-eduard>,
         <https://performance.musiconn.de/work/undine-vater-mutter-schwestern-und-brueder-lortzing-albert>,
@@ -44,7 +45,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/vogtlaendischer-bauerntanz-kluge-k>,
         <https://performance.musiconn.de/work/walzer-aguado-y-garcia-dionisio>,
         <https://performance.musiconn.de/work/wenn-der-topp-aber-nu-e-loch-hat> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/allgemeine-berufsschule-am-steinsgraben-zeitz-aula> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
     cto:relatedPerson <https://performance.musiconn.de/person/erbe-ingeborg>,
         <https://performance.musiconn.de/person/pfeiffer-brigitte>,
         <https://performance.musiconn.de/person/schmeichel-gertr>,

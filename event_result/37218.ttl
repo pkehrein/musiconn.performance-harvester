@@ -1,59 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175921963> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1213906644> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30008627X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101902> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300214677> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300757085> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-volkshaus-jena-grosser-saal-1930-10-21-20-00> ] .
 
-<https://performance.musiconn.de/event/konzert-volkshaus-jena-grosser-saal-1930-10-21-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-volkshaus-jena-grosser-saal-1930-10-21-20-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Volkshaus (Jena) / Großer Saal, 21.10.1930, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1930-10-21T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1930-10-21T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175921963>,
-        <https://d-nb.info/gnd/1213906644>,
-        <https://d-nb.info/gnd/30008627X>,
-        <https://d-nb.info/gnd/300101902>,
-        <https://d-nb.info/gnd/300214677>,
-        <https://d-nb.info/gnd/300757085> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1175921963>,
-        <https://d-nb.info/gnd/1213906644>,
-        <https://d-nb.info/gnd/30008627X>,
-        <https://d-nb.info/gnd/300101902>,
-        <https://d-nb.info/gnd/300214677>,
-        <https://d-nb.info/gnd/300757085>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/volkshaus-jena-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175921963> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215924093> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203726560> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300757085> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300214677> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101902> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2922159521682433070001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6219154867612360100006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182875436> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219937507> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1213906644> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30008627X> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
         <https://performance.musiconn.de/work/ade>,
         <https://performance.musiconn.de/work/capriccios-violine-klavier-nr-8-fassung-paganini-niccolo>,
         <https://performance.musiconn.de/work/capricen-klavier-violine-reger-max>,
-        <https://performance.musiconn.de/work/choralmotetten-op-71-schumann-georg>,
         <https://performance.musiconn.de/work/das-muehlrad>,
         <https://performance.musiconn.de/work/geisterruf-baumann-ludwig>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-mwv-o-14-e-moll-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/lobpreisung-der-musik-op-21-nr-2-suter-hermann>,
         <https://performance.musiconn.de/work/nachtwandler-bezler-ernst>,
-        <https://performance.musiconn.de/work/o-strassburg-op-41-nr-3-moldenhauer-walter>,
-        <https://performance.musiconn.de/work/sicilienne-and-rigaudon-violine-klavier-kreisler-fritz>,
-        <https://performance.musiconn.de/work/soldatenlied-strauss-richard>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-kv-454-b-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/tambourin-chinois-kreisler-fritz>,
-        <https://viaf.org/viaf/182875436>,
-        <https://viaf.org/viaf/203726560>,
-        <https://viaf.org/viaf/215924093>,
-        <https://viaf.org/viaf/219937507>,
-        <https://viaf.org/viaf/2922159521682433070001>,
-        <https://viaf.org/viaf/6219154867612360100006> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/volkshaus-jena-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/182875436>,
-        <https://viaf.org/viaf/203726560>,
-        <https://viaf.org/viaf/215924093>,
-        <https://viaf.org/viaf/219937507>,
-        <https://viaf.org/viaf/2922159521682433070001>,
-        <https://viaf.org/viaf/6219154867612360100006> .
+        <https://performance.musiconn.de/work/o-strassburg-op-41-nr-3-moldenhauer-walter> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182875436> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203726560> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215924093> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219937507> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2922159521682433070001> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6219154867612360100006> a nfdicore:NFDI_0001010 .
 

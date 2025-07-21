@@ -1,38 +1,49 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/107566053X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300000170> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171668> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300856784> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/serenade-schlosspark-pillnitz-dresden-1968-07-14-18-00> ] .
 
-<https://performance.musiconn.de/event/serenade-schlosspark-pillnitz-dresden-1968-07-14-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/serenade-schlosspark-pillnitz-dresden-1968-07-14-18-00> a cto:CTO_0001005 ;
     rdfs:label "Serenade, Schlosspark Pillnitz (Dresden), 14.7.1968, 18:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1968-07-14T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1968-07-14T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/107566053X>,
-        <https://d-nb.info/gnd/300000170>,
-        <https://d-nb.info/gnd/300171668>,
-        <https://d-nb.info/gnd/300856784> ;
-    cto:relatedItem <https://d-nb.info/gnd/300000170>,
-        <https://d-nb.info/gnd/300171668>,
-        <https://d-nb.info/gnd/300856784>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/317070798> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/107566053X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300000170> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300856784> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190440398> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171668> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193656492> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/diana-auf-der-elbe-stueck-heinichen-johann-david>,
-        <https://performance.musiconn.de/work/konzerte-klarinette-orchester-j-118-es-dur-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/le-nozze-dercole-e-debe-sinfonia-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-82-87-nr-85-b-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/sinfonien-k-13-18-sinfonie-k-18-abel-carl-friedrich>,
-        <https://viaf.org/viaf/190440398>,
-        <https://viaf.org/viaf/193656492> ;
-    cto:relatedLocation <https://d-nb.info/gnd/107566053X>,
-        <https://viaf.org/viaf/317070798> ;
-    cto:viaf <https://viaf.org/viaf/190440398>,
-        <https://viaf.org/viaf/193656492>,
-        <https://viaf.org/viaf/317070798> .
+        <https://performance.musiconn.de/work/le-nozze-dercole-e-debe-sinfonia-gluck-christoph-willibald> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/190440398> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193656492> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/317070798> a nfdicore:NFDI_0001010 .
 

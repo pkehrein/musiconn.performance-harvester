@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1161956972> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300068867> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110065> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-landhaus-konzert-gemaeldegalerie-alte-meister-dresden-gobelinsaal-1976-04-11-19-00> ] .
 
-<https://performance.musiconn.de/event/5-landhaus-konzert-gemaeldegalerie-alte-meister-dresden-gobelinsaal-1976-04-11-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-landhaus-konzert-gemaeldegalerie-alte-meister-dresden-gobelinsaal-1976-04-11-19-00> a cto:CTO_0001005 ;
     rdfs:label "5. Landhaus - Konzert, Gemäldegalerie Alte Meister (Dresden) / Gobelinsaal, 11.4.1976, 19:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1976-04-11T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1976-04-11T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1161956972>,
-        <https://d-nb.info/gnd/300068867>,
-        <https://d-nb.info/gnd/300110065> ;
-    cto:relatedItem <https://d-nb.info/gnd/1161956972>,
-        <https://d-nb.info/gnd/300068867>,
-        <https://d-nb.info/gnd/300110065>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/gemaeldegalerie-alte-meister-dresden-gobelinsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1161956972> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2653153063240119320008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110065> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300068867> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195807906> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219933886> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/divertimenti-floete-oboe-violine-2-violoncello-kontrabass-hob-ii-11-haydn-joseph>,
-        <https://performance.musiconn.de/work/quartette-floete-violine-viola-violoncello-op-11-nr-1-g-dur-devienne-francois>,
-        <https://performance.musiconn.de/work/quartette-querfloete-violine-viola-violoncello-kv-anh-171-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/trios-violine-viola-violoncello-op-86-wellesz-egon>,
-        <https://viaf.org/viaf/195807906>,
-        <https://viaf.org/viaf/219933886>,
-        <https://viaf.org/viaf/2653153063240119320008> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/gemaeldegalerie-alte-meister-dresden-gobelinsaal> ;
-    cto:viaf <https://viaf.org/viaf/195807906>,
-        <https://viaf.org/viaf/219933886>,
-        <https://viaf.org/viaf/2653153063240119320008> .
+        <https://performance.musiconn.de/work/quartette-floete-violine-viola-violoncello-op-11-nr-1-g-dur-devienne-francois> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/195807906> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219933886> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2653153063240119320008> a nfdicore:NFDI_0001010 .
 

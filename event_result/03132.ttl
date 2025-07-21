@@ -1,55 +1,73 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1225434009> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001502X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300299931> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300300166> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300366264> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300760892> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sechstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1887-01-07-18-30> ] .
 
-<https://performance.musiconn.de/event/sechstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1887-01-07-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sechstes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1887-01-07-18-30> a cto:CTO_0001005 ;
     rdfs:label "Sechstes Museums-Concert, Großer Konzertsaal (Frankfurt a. M.), 7.1.1887, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1886-1887> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1887-01-07T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1887-01-07T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1225434009>,
-        <https://d-nb.info/gnd/30001502X>,
-        <https://d-nb.info/gnd/300299931>,
-        <https://d-nb.info/gnd/300300166>,
-        <https://d-nb.info/gnd/300366264>,
-        <https://d-nb.info/gnd/300760892> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1886-1887> ;
-    cto:relatedItem <https://d-nb.info/gnd/1225434009>,
-        <https://d-nb.info/gnd/30001502X>,
-        <https://d-nb.info/gnd/300299931>,
-        <https://d-nb.info/gnd/300300166>,
-        <https://d-nb.info/gnd/300366264>,
-        <https://d-nb.info/gnd/300760892>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300366264> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176205767> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176192457> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/977161152490635190004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001502X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300300166> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225434009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300760892> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208690478> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211715717> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300299931> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182059092> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
         <https://performance.musiconn.de/work/ali-baba-ballettmusik-cherubini-luigi>,
         <https://performance.musiconn.de/work/ali-baba-zwischenaktsmusik-cherubini-luigi>,
-        <https://performance.musiconn.de/work/iphigenie-en-aulide-o-toi-lobjet-le-plus-aimable-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-9-op-55-d-moll-spohr-louis>,
-        <https://performance.musiconn.de/work/ouvertuere-zum-trauerspiel-coriolan-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/praeludium-fugue-g-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/schwanengesang-d-957-der-doppelgaenger-schubert-franz>,
-        <https://performance.musiconn.de/work/sei-mir-gegruesst-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-op-12-f-moll-strauss-richard>,
-        <https://performance.musiconn.de/work/staendchen-schubert-franz>,
-        <https://viaf.org/viaf/176192457>,
-        <https://viaf.org/viaf/176205767>,
-        <https://viaf.org/viaf/182059092>,
-        <https://viaf.org/viaf/208690478>,
-        <https://viaf.org/viaf/211715717>,
-        <https://viaf.org/viaf/977161152490635190004> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/176192457>,
-        <https://viaf.org/viaf/176205767>,
-        <https://viaf.org/viaf/182059092>,
-        <https://viaf.org/viaf/208690478>,
-        <https://viaf.org/viaf/211715717>,
-        <https://viaf.org/viaf/977161152490635190004> .
+        <https://performance.musiconn.de/work/staendchen-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176192457> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176205767> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182059092> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208690478> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211715717> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/977161152490635190004> a nfdicore:NFDI_0001010 .
 

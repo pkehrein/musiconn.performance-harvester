@@ -1,45 +1,57 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300005733> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300006322> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010141> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300048866> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-12-05-18-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-12-05-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-12-05-18-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 5.12.1936, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1936-37> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1936-12-05T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1936-12-05T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300005733>,
-        <https://d-nb.info/gnd/300006322>,
-        <https://d-nb.info/gnd/300010141>,
-        <https://d-nb.info/gnd/300048866>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1936-37> ;
-    cto:relatedItem <https://d-nb.info/gnd/300005733>,
-        <https://d-nb.info/gnd/300006322>,
-        <https://d-nb.info/gnd/300010141>,
-        <https://d-nb.info/gnd/300048866>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010141> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184142083> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300048866> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300006322> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300005733> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185090204> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
         <https://performance.musiconn.de/work/altboehmische-weihnachtslieder-riedel-carl>,
-        <https://performance.musiconn.de/work/choralbearbeitungen-verschiedener-art-trio-super-allein-gott-in-der-hoeh-sei-ehr-bwv-664-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/es-flog-ein-taeublein-weisse>,
-        <https://performance.musiconn.de/work/fantasien-orgel-bwv-572-g-dur-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/in-dulce-nubilo-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/kindelwiegen>,
-        <https://performance.musiconn.de/work/nun-komm-der-heiden-heiland-orgel-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/nun-sei-willkommen-herre-christ>,
-        <https://performance.musiconn.de/work/uebers-gebirg-maria-geht-eccard-johannes>,
-        <https://viaf.org/viaf/184142083>,
-        <https://viaf.org/viaf/185090204> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/184142083>,
-        <https://viaf.org/viaf/185090204>,
-        <https://viaf.org/viaf/248189528> .
+        <https://performance.musiconn.de/work/nun-sei-willkommen-herre-christ> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/184142083> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185090204> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
 

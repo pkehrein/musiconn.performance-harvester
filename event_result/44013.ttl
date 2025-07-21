@@ -4,19 +4,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-anlaesslich-des-tages-des-gedenkens-an-die-opfer-des-nationalsozialismus-vertretung-des-freistaates-sachsen-beim-bund-berlin-2010-01-27-19-00> ] .
 
-<https://performance.musiconn.de/event/konzert-anlaesslich-des-tages-des-gedenkens-an-die-opfer-des-nationalsozialismus-vertretung-des-freistaates-sachsen-beim-bund-berlin-2010-01-27-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-anlaesslich-des-tages-des-gedenkens-an-die-opfer-des-nationalsozialismus-vertretung-des-freistaates-sachsen-beim-bund-berlin-2010-01-27-19-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert anlässlich des Tages des Gedenkens an die Opfer des Nationalsozialismus, Vertretung des Freistaates Sachsen beim Bund (Berlin), 27.1.2010, 19:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2010-01-27T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2010-01-27T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/vertretung-des-freistaates-sachsen-beim-bund-berlin> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/einladung-konzert-27-januar-2010>,
         <https://performance.musiconn.de/source/programm-konzert-27-januar-2010>,
         <https://performance.musiconn.de/work/die-nacht-fassung-dorfman-joseph-gelbart-michl>,
@@ -31,8 +35,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/shtiler-shtiler-fassung-shur-bonia-volkoviski-alek>,
         <https://performance.musiconn.de/work/toras-adonoi-psalm-19-7-9-lewandowski-louis>,
         <https://performance.musiconn.de/work/wschomru-alman-samuel> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/vertretung-des-freistaates-sachsen-beim-bund-berlin> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

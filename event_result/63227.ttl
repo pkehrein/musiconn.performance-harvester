@@ -1,39 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/100421326> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1153580241> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118722700> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/133112586> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/il-filosofo-di-campagna-kings-theatre-in-the-haymarket-london-1761-03-24> ] .
 
-<https://performance.musiconn.de/event/il-filosofo-di-campagna-kings-theatre-in-the-haymarket-london-1761-03-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/il-filosofo-di-campagna-kings-theatre-in-the-haymarket-london-1761-03-24> a cto:CTO_0001005 ;
     rdfs:label "Il filosofo di campagna, King's Theatre in the Haymarket (London), 24.3.1761" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/il-filosofo-di-campagna-2> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1761-03-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1761-03-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/100421326>,
-        <https://d-nb.info/gnd/1153580241>,
-        <https://d-nb.info/gnd/118722700>,
-        <https://d-nb.info/gnd/133112586> ;
-    cto:itemOf <https://performance.musiconn.de/series/il-filosofo-di-campagna-2> ;
-    cto:relatedItem <https://d-nb.info/gnd/1153580241>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/133112586> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/100421326> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118722700> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kings-theatre-in-the-haymarket-london> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/294720043> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1153580241> ],
         <https://performance.musiconn.de/source/the-favourite-songs-in-the-opera-calld-il-filosofo-di-campagna>,
-        <https://performance.musiconn.de/source/willaert-opera>,
-        <https://performance.musiconn.de/work/il-filosofo-di-campagna-galuppi-baldassare>,
-        <https://viaf.org/viaf/294720043> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kings-theatre-in-the-haymarket-london> ;
-    cto:relatedPerson <https://d-nb.info/gnd/100421326>,
-        <https://d-nb.info/gnd/118722700>,
-        <https://d-nb.info/gnd/133112586>,
-        <https://viaf.org/viaf/217598437>,
-        <https://viaf.org/viaf/22327261>,
-        <https://viaf.org/viaf/34719940> ;
-    cto:viaf <https://viaf.org/viaf/217598437>,
-        <https://viaf.org/viaf/22327261>,
-        <https://viaf.org/viaf/294720043>,
-        <https://viaf.org/viaf/34719940> .
+        <https://performance.musiconn.de/source/willaert-opera> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/34719940> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217598437> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/22327261> ] .
+
+<https://viaf.org/viaf/217598437> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/22327261> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/294720043> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/34719940> a nfdicore:NFDI_0001010 .
 

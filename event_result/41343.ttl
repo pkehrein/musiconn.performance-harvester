@@ -1,48 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1181143764> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1182457738> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300055315> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170114> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/stiftungsfest-hotel-zum-stern-riesa-1924-06-10-17-00> ] .
 
-<https://performance.musiconn.de/event/stiftungsfest-hotel-zum-stern-riesa-1924-06-10-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/stiftungsfest-hotel-zum-stern-riesa-1924-06-10-17-00> a cto:CTO_0001005 ;
     rdfs:label "Stiftungsfest, Hotel zum Stern (Riesa), 10.6.1924, 17:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1923-1924> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1924-06-10T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1924-06-10T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1181143764>,
-        <https://d-nb.info/gnd/1182457738>,
-        <https://d-nb.info/gnd/300055315>,
-        <https://d-nb.info/gnd/300170114> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1923-1924> ;
-    cto:relatedItem <https://d-nb.info/gnd/1181143764>,
-        <https://d-nb.info/gnd/1182457738>,
-        <https://d-nb.info/gnd/300055315>,
-        <https://d-nb.info/gnd/300170114>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hotel-zum-stern-riesa> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2137155466467302160003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178044445> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300055315> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1181143764> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178619765> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1380155345590906430000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1182457738> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170114> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/ballade-und-polonaise-vieuxtemps-henri>,
-        <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-vorspiel-wagner-richard>,
-        <https://performance.musiconn.de/work/dunajske-pohadky-fucik-julius>,
         <https://performance.musiconn.de/work/fantasie-ueber-das-wunder-humperdinck-engelbert>,
         <https://performance.musiconn.de/work/gute-nacht-du-mein-herziges-kind-popp-wilhelm-1>,
-        <https://performance.musiconn.de/work/jubilaeumsfanfare-bilse-benjamin>,
         <https://performance.musiconn.de/work/lass-o-herr-das-vaterland-erbluehen-mehring-m>,
         <https://performance.musiconn.de/work/serenade-kuehl-und-stille-schramm-o>,
         <https://performance.musiconn.de/work/ungarische-rhapsodie-hauser>,
-        <https://performance.musiconn.de/work/waldkoenig-doehring-g-h>,
-        <https://performance.musiconn.de/work/zigeunerstaendchen-orchester-nehl-wilhelm>,
-        <https://viaf.org/viaf/1380155345590906430000>,
-        <https://viaf.org/viaf/178044445>,
-        <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/2137155466467302160003> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hotel-zum-stern-riesa> ;
-    cto:viaf <https://viaf.org/viaf/1380155345590906430000>,
-        <https://viaf.org/viaf/178044445>,
-        <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/2137155466467302160003> .
+        <https://performance.musiconn.de/work/waldkoenig-doehring-g-h> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1380155345590906430000> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178044445> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178619765> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2137155466467302160003> a nfdicore:NFDI_0001010 .
 

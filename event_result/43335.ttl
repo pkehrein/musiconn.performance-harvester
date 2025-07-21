@@ -1,49 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300095465> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300095503> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300095570> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300121768> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30012404X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/simfoniceskij-orkestr-filarmonii-29-sept-1970-sankt-petersburger-philharmonie-1970-09-29> ] .
 
-<https://performance.musiconn.de/event/simfoniceskij-orkestr-filarmonii-29-sept-1970-sankt-petersburger-philharmonie-1970-09-29> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/simfoniceskij-orkestr-filarmonii-29-sept-1970-sankt-petersburger-philharmonie-1970-09-29> a cto:CTO_0001005 ;
     rdfs:label "Simfoničeskij orkestr filarmonii (29. Sept. 1970), Sankt-Petersburger Philharmonie, 29.9.1970" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1970-71> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1970-09-29" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1970-09-29" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300095465>,
-        <https://d-nb.info/gnd/300095503>,
-        <https://d-nb.info/gnd/300095570>,
-        <https://d-nb.info/gnd/300121768>,
-        <https://d-nb.info/gnd/30012404X>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1970-71> ;
-    cto:relatedItem <https://d-nb.info/gnd/300095465>,
-        <https://d-nb.info/gnd/300095503>,
-        <https://d-nb.info/gnd/300095570>,
-        <https://d-nb.info/gnd/300121768>,
-        <https://d-nb.info/gnd/30012404X>,
-        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1970-28-september>,
-        <https://performance.musiconn.de/work/baba-jaga-ljadov-anatolij-k>,
-        <https://performance.musiconn.de/work/kikimora-ljadov-anatolij-k>,
-        <https://performance.musiconn.de/work/le-lac-enchante-ljadov-anatolij-k>,
-        <https://performance.musiconn.de/work/rapsodie-sur-un-theme-de-paganini-rachmaninov-sergej-vasilevic>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-op-44-c-moll-prokofiev-sergei-sergeyevich>,
-        <https://viaf.org/viaf/180024420>,
-        <https://viaf.org/viaf/180430461>,
-        <https://viaf.org/viaf/182676170>,
-        <https://viaf.org/viaf/183487411>,
-        <https://viaf.org/viaf/215924594> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/180024420>,
-        <https://viaf.org/viaf/180430461>,
-        <https://viaf.org/viaf/182676170>,
-        <https://viaf.org/viaf/183487411>,
-        <https://viaf.org/viaf/215924594> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300095503> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183487411> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180430461> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215924594> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300095465> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300095570> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182676170> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300121768> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180024420> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30012404X> ],
+        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1970-28-september> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180024420> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180430461> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182676170> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183487411> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215924594> a nfdicore:NFDI_0001010 .
 

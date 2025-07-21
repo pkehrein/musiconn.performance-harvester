@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1084609428> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-gebaeude-der-koeniglichen-oper-berlin-berlin-1820-06-02> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-gebaeude-der-koeniglichen-oper-berlin-berlin-1820-06-02> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-gebaeude-der-koeniglichen-oper-berlin-berlin-1820-06-02> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Gebäude der Königlichen Oper Berlin (Berlin), 2.6.1820" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1820-06-02" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1820-06-02" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1084609428> ;
-    cto:relatedItem <https://performance.musiconn.de/source/katalogisat-der-dorfbarbier-komisches-singspiel-in-1-aufzug-musik-von-schenck-2-july-1820>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1084609428> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/533149662172407020006> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/katalogisat-der-dorfbarbier-komisches-singspiel-in-1-aufzug-musik-von-schenck-2-july-1820>,
         <https://performance.musiconn.de/source/katalogisat-die-schweizerfamilie-die-schweizer-familie-singspiel-in-3-abtheilungen-frey-nach-dem-franzoesischen-bearbeitet-von-castelli-die-musik-ist-vom-kapellmeister-weigl-2-juny-1820>,
         <https://performance.musiconn.de/work/der-dorfbarbier-fassung-b-schenk-johann>,
         <https://performance.musiconn.de/work/die-schweizer-familie-fassung-weigl-joseph> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1084609428>,
-        <https://viaf.org/viaf/533149662172407020006> ;
-    cto:viaf <https://viaf.org/viaf/533149662172407020006> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/533149662172407020006> a nfdicore:NFDI_0001010 .
 

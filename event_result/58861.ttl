@@ -1,45 +1,63 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/10306111-3> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1060085488> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1278731237> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1279013664> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/815129-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/dresdner-musikfestspiele-1987-klanghaus-zeitzeichen-iv-kulturpalast-dresden-1987-06-01> ] .
 
-<https://performance.musiconn.de/event/dresdner-musikfestspiele-1987-klanghaus-zeitzeichen-iv-kulturpalast-dresden-1987-06-01> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/dresdner-musikfestspiele-1987-klanghaus-zeitzeichen-iv-kulturpalast-dresden-1987-06-01> a cto:CTO_0001005 ;
     rdfs:label "Dresdner Musikfestspiele 1987, Klanghaus-Zeitzeichen IV, Kulturpalast (Dresden), 1.6.1987" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-06-01" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-06-01" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/10306111-3>,
-        <https://d-nb.info/gnd/1060085488>,
-        <https://d-nb.info/gnd/1278731237>,
-        <https://d-nb.info/gnd/1279013664>,
-        <https://d-nb.info/gnd/815129-5> ;
-    cto:relatedItem <https://d-nb.info/gnd/1278731237>,
-        <https://d-nb.info/gnd/1279013664>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1987-dresden-saechsische-landesbibliothek-dresden-1988-1>,
-        <https://performance.musiconn.de/work/kleine-geschichte-hahn-volker>,
-        <https://performance.musiconn.de/work/lumpengesindel-schluenz-annette>,
-        <https://performance.musiconn.de/work/moment-maximal-minimal-music-schwarze-guenter>,
-        <https://performance.musiconn.de/work/raeuber-tritonus-heisig-wolfgang>,
-        <https://viaf.org/viaf/154167445359788860003>,
-        <https://viaf.org/viaf/991167504507593090005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1060085488>,
-        <https://viaf.org/viaf/311438221> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/10306111-3>,
-        <https://d-nb.info/gnd/815129-5>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/133022259> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/10306111-3> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/815129-5> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/135030051> ],
         <https://performance.musiconn.de/corporation/hochschule-fuer-musik-carl-maria-von-weber-dresden-komponistenklasse-kinder>,
-        <https://performance.musiconn.de/corporation/hochschule-fuer-musik-carl-maria-von-weber-dresden-studierende>,
-        <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/135030051> ;
-    cto:viaf <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/135030051>,
-        <https://viaf.org/viaf/154167445359788860003>,
-        <https://viaf.org/viaf/311438221>,
-        <https://viaf.org/viaf/991167504507593090005> .
+        <https://performance.musiconn.de/corporation/hochschule-fuer-musik-carl-maria-von-weber-dresden-studierende> ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311438221> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1060085488> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1278731237> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/991167504507593090005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154167445359788860003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1279013664> ],
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1987-dresden-saechsische-landesbibliothek-dresden-1988-1>,
+        <https://performance.musiconn.de/work/lumpengesindel-schluenz-annette>,
+        <https://performance.musiconn.de/work/moment-maximal-minimal-music-schwarze-guenter> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/133022259> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/135030051> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/154167445359788860003> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311438221> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/991167504507593090005> a nfdicore:NFDI_0001010 .
 

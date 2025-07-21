@@ -1,105 +1,154 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1043833730> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1053640706> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1054962618> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1058578979> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1063007216> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1198287004> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1298788617> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141173> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300259638> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300259654> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300260377> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300297947> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300352530> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300411502> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300414803> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300472943> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30053759X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-volkshaus-jena-grosser-saal-1930-02-05-20-00> ] .
 
-<https://performance.musiconn.de/event/konzert-volkshaus-jena-grosser-saal-1930-02-05-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-volkshaus-jena-grosser-saal-1930-02-05-20-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Volkshaus (Jena) / Großer Saal, 5.2.1930, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1930-02-05T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1930-02-05T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1043833730>,
-        <https://d-nb.info/gnd/1053640706>,
-        <https://d-nb.info/gnd/1054962618>,
-        <https://d-nb.info/gnd/1058578979>,
-        <https://d-nb.info/gnd/1063007216>,
-        <https://d-nb.info/gnd/1198287004>,
-        <https://d-nb.info/gnd/1298788617>,
-        <https://d-nb.info/gnd/300141173>,
-        <https://d-nb.info/gnd/300259638>,
-        <https://d-nb.info/gnd/300259654>,
-        <https://d-nb.info/gnd/300260377>,
-        <https://d-nb.info/gnd/300297947>,
-        <https://d-nb.info/gnd/300352530>,
-        <https://d-nb.info/gnd/300411502>,
-        <https://d-nb.info/gnd/300414803>,
-        <https://d-nb.info/gnd/300472943>,
-        <https://d-nb.info/gnd/30053759X> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1043833730>,
-        <https://d-nb.info/gnd/1053640706>,
-        <https://d-nb.info/gnd/1054962618>,
-        <https://d-nb.info/gnd/1058578979>,
-        <https://d-nb.info/gnd/1063007216>,
-        <https://d-nb.info/gnd/1198287004>,
-        <https://d-nb.info/gnd/1298788617>,
-        <https://d-nb.info/gnd/300141173>,
-        <https://d-nb.info/gnd/300259638>,
-        <https://d-nb.info/gnd/300259654>,
-        <https://d-nb.info/gnd/300260377>,
-        <https://d-nb.info/gnd/300297947>,
-        <https://d-nb.info/gnd/300352530>,
-        <https://d-nb.info/gnd/300411502>,
-        <https://d-nb.info/gnd/300414803>,
-        <https://d-nb.info/gnd/300472943>,
-        <https://d-nb.info/gnd/30053759X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/volkshaus-jena-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180168973> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300472943> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1063007216> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174683119> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1198287004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300260377> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179634975> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1053640706> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175106659> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185339895> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180060671> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30053759X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185302640> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300352530> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176807768> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183543822> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1298788617> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176680539> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1043833730> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176855639> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300411502> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175635613> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300259654> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300297947> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1058578979> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184882472> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174683126> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1054962618> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300259638> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300414803> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141173> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181683837> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305340447> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/ariette-der-claudine-schubert-franz>,
-        <https://performance.musiconn.de/work/der-musensohn-schubert-franz>,
-        <https://performance.musiconn.de/work/deutsche-volkslieder-woo-33-in-stiller-nacht-brahms-johannes>,
-        <https://performance.musiconn.de/work/gedichte-von-eduard-moerike-auf-einer-wanderung-wolf-hugo>,
-        <https://performance.musiconn.de/work/gedichte-von-eduard-moerike-gesang-weylas-wolf-hugo>,
-        <https://performance.musiconn.de/work/gesaenge-op-69-des-liebsten-schwur-brahms-johannes>,
-        <https://performance.musiconn.de/work/gesaenge-op-71-willst-du-dass-ich-geh-brahms-johannes>,
-        <https://performance.musiconn.de/work/italienisches-liederbuch-wenn-du-mich-mit-den-augen-streifst-wolf-hugo>,
-        <https://performance.musiconn.de/work/lieder-op-86-therese-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-op-86-ueber-die-heide-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-op-95-das-maedchen-brahms-johannes>,
-        <https://performance.musiconn.de/work/naehe-des-geliebten-schubert-franz>,
-        <https://performance.musiconn.de/work/spanisches-liederbuch-auf-dem-gruenen-balkon-mein-maedchen-wolf-hugo>,
-        <https://performance.musiconn.de/work/spanisches-liederbuch-herr-was-traegt-der-boden-hier-wolf-hugo>,
-        <https://performance.musiconn.de/work/spanisches-liederbuch-wenn-du-zu-den-blumen-gehst-wolf-hugo>,
-        <https://performance.musiconn.de/work/suleika-d-717-schubert-franz>,
-        <https://performance.musiconn.de/work/suleika-d-720-schubert-franz>,
-        <https://performance.musiconn.de/work/wandrers-nachtlied-d-224-schubert-franz>,
-        <https://viaf.org/viaf/174683119>,
-        <https://viaf.org/viaf/174683126>,
-        <https://viaf.org/viaf/175106659>,
-        <https://viaf.org/viaf/175635613>,
-        <https://viaf.org/viaf/176680539>,
-        <https://viaf.org/viaf/176807768>,
-        <https://viaf.org/viaf/176855639>,
-        <https://viaf.org/viaf/179634975>,
-        <https://viaf.org/viaf/180060671>,
-        <https://viaf.org/viaf/180168973>,
-        <https://viaf.org/viaf/181683837>,
-        <https://viaf.org/viaf/183543822>,
-        <https://viaf.org/viaf/184882472>,
-        <https://viaf.org/viaf/185302640>,
-        <https://viaf.org/viaf/185339895>,
-        <https://viaf.org/viaf/305340447> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/volkshaus-jena-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/174683119>,
-        <https://viaf.org/viaf/174683126>,
-        <https://viaf.org/viaf/175106659>,
-        <https://viaf.org/viaf/175635613>,
-        <https://viaf.org/viaf/176680539>,
-        <https://viaf.org/viaf/176807768>,
-        <https://viaf.org/viaf/176855639>,
-        <https://viaf.org/viaf/179634975>,
-        <https://viaf.org/viaf/180060671>,
-        <https://viaf.org/viaf/180168973>,
-        <https://viaf.org/viaf/181683837>,
-        <https://viaf.org/viaf/183543822>,
-        <https://viaf.org/viaf/184882472>,
-        <https://viaf.org/viaf/185302640>,
-        <https://viaf.org/viaf/185339895>,
-        <https://viaf.org/viaf/305340447> .
+        <https://performance.musiconn.de/work/ariette-der-claudine-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174683119> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174683126> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175106659> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175635613> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176680539> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176807768> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176855639> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179634975> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180060671> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180168973> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181683837> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183543822> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184882472> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185302640> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185339895> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305340447> a nfdicore:NFDI_0001010 .
 

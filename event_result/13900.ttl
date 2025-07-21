@@ -1,58 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1143168569> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015143> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300633610> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300695446> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-staedtischer-schiessstattgarten-littau-1892-06-19> ] .
 
-<https://performance.musiconn.de/event/konzert-staedtischer-schiessstattgarten-littau-1892-06-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-staedtischer-schiessstattgarten-littau-1892-06-19> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Städtischer Schießstattgarten (Littau), 19.6.1892" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1892-06-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1892-06-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1143168569>,
-        <https://d-nb.info/gnd/300015143>,
-        <https://d-nb.info/gnd/300633610>,
-        <https://d-nb.info/gnd/300695446> ;
-    cto:relatedItem <https://d-nb.info/gnd/1143168569>,
-        <https://d-nb.info/gnd/300015143>,
-        <https://d-nb.info/gnd/300633610>,
-        <https://d-nb.info/gnd/300695446>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/staedtischer-schiessstattgarten-littau> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300633610> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186560525> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204596644> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5559151002116930280003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300695446> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015143> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174573522> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1143168569> ],
         <https://performance.musiconn.de/source/programmzettel-einladung-deutscher-musik-geselligkeitsverein-litovel-littau-littau-19071892>,
         <https://performance.musiconn.de/work/das-deutsche-land-metzger-johann-carl>,
         <https://performance.musiconn.de/work/das-deutsche-lied-kalivoda-jan-krtitel-vaclav>,
         <https://performance.musiconn.de/work/eine-maiennacht-abt-franz>,
-        <https://performance.musiconn.de/work/ernani-evviva-beviam-verdi-giuseppe>,
         <https://performance.musiconn.de/work/ernani-preludio-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/gesaenge-op-175-waldandacht-abt-franz>,
         <https://performance.musiconn.de/work/gesaenge-op-34-huete-dich-girschner-karl-friedrich-johann>,
         <https://performance.musiconn.de/work/herzenslust-kretschmer-paul>,
         <https://performance.musiconn.de/work/hoch-oesterreich-tauwitz-eduard>,
         <https://performance.musiconn.de/work/lied-der-deutschen-in-oesterreich-weinwurm-rudolf>,
-        <https://performance.musiconn.de/work/musik-zum-trauerspiel-egmont-von-johann-wolfgang-von-goethe-ouvertuere-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/nachtzauber-storch-anton-maria>,
         <https://performance.musiconn.de/work/oesterreichischer-schuetzenfestmarsch-doecker-johann>,
         <https://performance.musiconn.de/work/ossian-beschnitt-johannes>,
         <https://performance.musiconn.de/work/roth-roeselein-schultz-edwin>,
         <https://performance.musiconn.de/work/roth-und-weisse-apfelbluete-debois-ferdinand>,
         <https://performance.musiconn.de/work/staendchen-abt-franz>,
-        <https://performance.musiconn.de/work/volkslied-aus-oberoesterreich-kremser-eduard>,
         <https://performance.musiconn.de/work/waldabendschein-schmoelzer-jakob-eduard>,
         <https://performance.musiconn.de/work/waldesweise-schoen-eduard>,
         <https://performance.musiconn.de/work/weisst-du-noch-schoen-eduard>,
-        <https://performance.musiconn.de/work/wie-die-wilde-ros-im-walde-mair-franz>,
-        <https://viaf.org/viaf/174573522>,
-        <https://viaf.org/viaf/186560525>,
-        <https://viaf.org/viaf/204596644>,
-        <https://viaf.org/viaf/5559151002116930280003> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/staedtischer-schiessstattgarten-littau> ;
-    cto:viaf <https://viaf.org/viaf/174573522>,
-        <https://viaf.org/viaf/186560525>,
-        <https://viaf.org/viaf/204596644>,
-        <https://viaf.org/viaf/5559151002116930280003> .
+        <https://performance.musiconn.de/work/wie-die-wilde-ros-im-walde-mair-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174573522> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186560525> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204596644> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5559151002116930280003> a nfdicore:NFDI_0001010 .
 

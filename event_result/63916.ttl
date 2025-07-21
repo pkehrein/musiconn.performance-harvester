@@ -1,46 +1,64 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1031960422> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/10347155-8> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30053115X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300610327> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4709660-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ensemble-modern-1-83-kopenhagen-kunsthallen-nikolaj-1983-01-19> ] .
 
-<https://performance.musiconn.de/event/ensemble-modern-1-83-kopenhagen-kunsthallen-nikolaj-1983-01-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ensemble-modern-1-83-kopenhagen-kunsthallen-nikolaj-1983-01-19> a cto:CTO_0001005 ;
     rdfs:label "Ensemble Modern 1/83 Kopenhagen, Kunsthallen Nikolaj, 19.1.1983" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1983-01-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1983-01-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1031960422>,
-        <https://d-nb.info/gnd/10347155-8>,
-        <https://d-nb.info/gnd/30053115X>,
-        <https://d-nb.info/gnd/300610327>,
-        <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/4709660-3> ;
-    cto:relatedItem <https://d-nb.info/gnd/1031960422>,
-        <https://d-nb.info/gnd/30053115X>,
-        <https://d-nb.info/gnd/300610327>,
-        <https://d-nb.info/gnd/4709660-3>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/10347155-8> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183767033> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/296389875> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1031960422> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184522991> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30053115X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300610327> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186109294> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4709660-3> ],
         <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/differences-berio-luciano>,
-        <https://performance.musiconn.de/work/kontakte>,
-        <https://performance.musiconn.de/work/kreuzspiel>,
-        <https://performance.musiconn.de/work/polifonica-monodia-ritmica-nono-luigi>,
-        <https://performance.musiconn.de/work/serenaden-ensemble-nr-2-maderna-bruno>,
-        <https://viaf.org/viaf/183767033>,
-        <https://viaf.org/viaf/184522991>,
-        <https://viaf.org/viaf/186109294>,
-        <https://viaf.org/viaf/296389875> ;
-    cto:relatedLocation <https://d-nb.info/gnd/10347155-8> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/183767033>,
-        <https://viaf.org/viaf/184522991>,
-        <https://viaf.org/viaf/186109294>,
-        <https://viaf.org/viaf/296389875> .
+        <https://performance.musiconn.de/work/kreuzspiel> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183767033> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184522991> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186109294> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/296389875> a nfdicore:NFDI_0001010 .
 

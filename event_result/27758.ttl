@@ -1,71 +1,93 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1044561602> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118983720X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1190844508> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015720> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170300> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300217943> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300304110> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300801653> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/feier-des-geburtstages-sr-majestaet-des-koenigs-gewerbehaus-dresden-gewerbehaus-saal-1899-04-22-19-00> ] .
 
-<https://performance.musiconn.de/event/feier-des-geburtstages-sr-majestaet-des-koenigs-gewerbehaus-dresden-gewerbehaus-saal-1899-04-22-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/feier-des-geburtstages-sr-majestaet-des-koenigs-gewerbehaus-dresden-gewerbehaus-saal-1899-04-22-19-00> a cto:CTO_0001005 ;
     rdfs:label "Feier des Geburtstages Sr. Majestät des Königs, Gewerbehaus (Dresden). Gewerbehaus-Saal, 22.4.1899, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1898-1899> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1899-04-22T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1899-04-22T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1044561602>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/118983720X>,
-        <https://d-nb.info/gnd/1190844508>,
-        <https://d-nb.info/gnd/300015720>,
-        <https://d-nb.info/gnd/300170300>,
-        <https://d-nb.info/gnd/300217943>,
-        <https://d-nb.info/gnd/300304110>,
-        <https://d-nb.info/gnd/300801653> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1898-1899> ;
-    cto:relatedItem <https://d-nb.info/gnd/1044561602>,
-        <https://d-nb.info/gnd/118983720X>,
-        <https://d-nb.info/gnd/1190844508>,
-        <https://d-nb.info/gnd/300015720>,
-        <https://d-nb.info/gnd/300170300>,
-        <https://d-nb.info/gnd/300217943>,
-        <https://d-nb.info/gnd/300304110>,
-        <https://d-nb.info/gnd/300801653>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015720> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182317676> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/35145304791978611353> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1190844508> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170300> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118983720X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179431041> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305424667> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186708409> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1044561602> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300217943> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300801653> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300304110> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174749174> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1898-1899>,
         <https://performance.musiconn.de/work/auf-brueder-auf-mit-hellem-klang-anonym>,
         <https://performance.musiconn.de/work/auf-der-wacht-dierig-paul>,
         <https://performance.musiconn.de/work/braun-meidelein-fassung-anonym>,
         <https://performance.musiconn.de/work/der-evangelimann-volksszene-kienzl-wilhelm>,
-        <https://performance.musiconn.de/work/der-hohenfriedberger-marsch-anonym>,
         <https://performance.musiconn.de/work/dort-liegt-die-heimat-mir-am-rhein-attenhofer-karl>,
         <https://performance.musiconn.de/work/gebet-fuer-den-koenig-kremser-eduard>,
         <https://performance.musiconn.de/work/gott-sei-mit-dir-mein-sachsenland-anonym>,
         <https://performance.musiconn.de/work/heil-dir-o-vaterland-koellner-eduard>,
-        <https://performance.musiconn.de/work/jubel-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/koenig-albert-marsch-blumer-theodor>,
-        <https://performance.musiconn.de/work/maersche-blasorchester-nr-1-woo-18-f-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/meditation-sur-le-1er-prelude-de-j-s-bach-gounod-charles>,
         <https://performance.musiconn.de/work/oberoesterreichisches-alpenlied-fassung-anonym>,
         <https://performance.musiconn.de/work/oberschwaebisches-tanzliedchen-fassung-anonym>,
-        <https://performance.musiconn.de/work/rienzi-der-letzte-der-tribunen-ouvertuere-wagner-richard>,
         <https://performance.musiconn.de/work/s-nesterl-fassung-anonym>,
-        <https://performance.musiconn.de/work/soldateska-1870-71-seidenglanz-karl-hermann>,
         <https://performance.musiconn.de/work/torgauer-marsch-anonym>,
-        <https://performance.musiconn.de/work/trot-de-cavalerie-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/wettin-marsch-trenkler-friedrich-august>,
-        <https://viaf.org/viaf/174749174>,
-        <https://viaf.org/viaf/179431041>,
-        <https://viaf.org/viaf/182317676>,
-        <https://viaf.org/viaf/186708409>,
-        <https://viaf.org/viaf/305424667>,
-        <https://viaf.org/viaf/35145304791978611353> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/174749174>,
-        <https://viaf.org/viaf/179431041>,
-        <https://viaf.org/viaf/182317676>,
-        <https://viaf.org/viaf/186708409>,
-        <https://viaf.org/viaf/305424667>,
-        <https://viaf.org/viaf/35145304791978611353> .
+        <https://performance.musiconn.de/work/wettin-marsch-trenkler-friedrich-august> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174749174> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179431041> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182317676> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186708409> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305424667> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/35145304791978611353> a nfdicore:NFDI_0001010 .
 

@@ -1,48 +1,63 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300029160> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170556> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300205414> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300556578> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300953933> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1925-10-04-19-00> ] .
 
-<https://performance.musiconn.de/event/8-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1925-10-04-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1925-10-04-19-00> a cto:CTO_0001005 ;
     rdfs:label "8. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 4.10.1925, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1925-1926-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1925-10-04T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1925-10-04T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300029160>,
-        <https://d-nb.info/gnd/300170556>,
-        <https://d-nb.info/gnd/300205414>,
-        <https://d-nb.info/gnd/300556578>,
-        <https://d-nb.info/gnd/300953933> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1925-1926-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300029160>,
-        <https://d-nb.info/gnd/300170556>,
-        <https://d-nb.info/gnd/300205414>,
-        <https://d-nb.info/gnd/300556578>,
-        <https://d-nb.info/gnd/300953933>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175844082> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207915115> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300556578> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300205414> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217016861> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179502661> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300953933> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170556> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029160> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/303009279> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
-        <https://performance.musiconn.de/work/bojarernes-intogsmarsch-halvorsen-johan>,
-        <https://performance.musiconn.de/work/der-ring-des-nibelungen-erster-tag-die-walkuere-leb-wohl-du-kuehnes-herrliches-kind-wagner-richard>,
-        <https://performance.musiconn.de/work/kol-nidrei-bruch-max>,
         <https://performance.musiconn.de/work/konzertwalzer-glazunov-aleksandr-konstantinovic>,
-        <https://performance.musiconn.de/work/korsholma-jaernefelt-armas>,
-        <https://performance.musiconn.de/work/melodien-aus-der-oper-faust-gounod-charles>,
-        <https://performance.musiconn.de/work/mignon-ouvertuere-thomas-ambroise>,
-        <https://viaf.org/viaf/175844082>,
-        <https://viaf.org/viaf/179502661>,
-        <https://viaf.org/viaf/207915115>,
-        <https://viaf.org/viaf/217016861>,
-        <https://viaf.org/viaf/303009279> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/175844082>,
-        <https://viaf.org/viaf/179502661>,
-        <https://viaf.org/viaf/207915115>,
-        <https://viaf.org/viaf/217016861>,
-        <https://viaf.org/viaf/303009279> .
+        <https://performance.musiconn.de/work/melodien-aus-der-oper-faust-gounod-charles> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175844082> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179502661> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207915115> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217016861> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/303009279> a nfdicore:NFDI_0001010 .
 

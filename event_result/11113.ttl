@@ -1,24 +1,32 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1209086700> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300413262> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-buergerliche-schiessstaette-littau-1881-04-03> ] .
 
-<https://performance.musiconn.de/event/konzert-buergerliche-schiessstaette-littau-1881-04-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-buergerliche-schiessstaette-littau-1881-04-03> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Bürgerliche Schießstätte (Littau), 3.4.1881" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1881-04-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1881-04-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1209086700>,
-        <https://d-nb.info/gnd/300413262> ;
-    cto:relatedItem <https://d-nb.info/gnd/1209086700>,
-        <https://d-nb.info/gnd/300413262>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/buergerliche-schiessstaette-littau> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/298182285> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1209086700> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178015993> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300413262> ],
         <https://performance.musiconn.de/source/programmzettel-littauer-maennergesang-musik-verein-litovel-littau-littau-03041881>,
         <https://performance.musiconn.de/work/abendfeier-in-venedig-op-14-billeter-agathon>,
         <https://performance.musiconn.de/work/ballscenen-schoen-eduard>,
@@ -28,12 +36,10 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/horch-glockenklang-abt-franz>,
         <https://performance.musiconn.de/work/landsknecht-katechismus-op-41-schachner-rudolf-joseph>,
         <https://performance.musiconn.de/work/largo-fassung-1877-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/liederalbum-fuer-die-jugend-der-abendstern-schumann-robert>,
-        <https://performance.musiconn.de/work/meine-muttersprache-schoen-eduard>,
-        <https://performance.musiconn.de/work/tancredi-sinfonia-rossini-gioachino>,
-        <https://viaf.org/viaf/178015993>,
-        <https://viaf.org/viaf/298182285> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/buergerliche-schiessstaette-littau> ;
-    cto:viaf <https://viaf.org/viaf/178015993>,
-        <https://viaf.org/viaf/298182285> .
+        <https://performance.musiconn.de/work/meine-muttersprache-schoen-eduard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178015993> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/298182285> a nfdicore:NFDI_0001010 .
 

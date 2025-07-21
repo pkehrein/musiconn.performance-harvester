@@ -4,26 +4,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4670625-2> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/les-elements-palais-des-tuileries-paris-1721-12-22> ] .
 
-<https://performance.musiconn.de/event/les-elements-palais-des-tuileries-paris-1721-12-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/les-elements-palais-des-tuileries-paris-1721-12-22> a cto:CTO_0001005 ;
     rdfs:label "Les Éléments, Palais des Tuileries (Paris), 22.12.1721" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1721-12-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1721-12-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4670625-2> ;
-    cto:relatedItem <https://performance.musiconn.de/source/beauchamps-1735-bd-3-91-111>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316732528> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4670625-2> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/beauchamps-1735-bd-3-91-111>,
         <https://performance.musiconn.de/source/musikalie-digitalisat-150>,
         <https://performance.musiconn.de/source/onlinequelle-454>,
         <https://performance.musiconn.de/source/onlinequelle-455>,
         <https://performance.musiconn.de/source/textquelle-digitalisat-194>,
         <https://performance.musiconn.de/source/textquelle-digitalisat-195>,
         <https://performance.musiconn.de/work/les-elements-lalande-michel-richard-de> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4670625-2>,
-        <https://viaf.org/viaf/316732528> ;
-    cto:viaf <https://viaf.org/viaf/316732528> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/316732528> a nfdicore:NFDI_0001010 .
 

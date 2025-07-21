@@ -1,36 +1,46 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1162086750> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300189575> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7634310-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1834-03-02> ] .
 
-<https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1834-03-02> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1834-03-02> a cto:CTO_0001005 ;
     rdfs:label "Sonntagsmusik, Leipziger Straße 3 (Berlin), 2.3.1834" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sonntagsmusiken-1834> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1834-03-02" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1834-03-02" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1162086750>,
-        <https://d-nb.info/gnd/300189575>,
-        <https://d-nb.info/gnd/7634310-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/sonntagsmusiken-1834> ;
-    cto:relatedItem <https://d-nb.info/gnd/1162086750>,
-        <https://d-nb.info/gnd/300189575>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/243904650> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7634310-8> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300189575> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175464864> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3882153126235024750007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1162086750> ],
         <https://performance.musiconn.de/source/mit-obligater-nachtigallen-und-fliederbluetenbegleitung-fanny-hensels-sonntagsmusiken>,
-        <https://performance.musiconn.de/work/die-spinnerin-hensel-fanny>,
         <https://performance.musiconn.de/work/duette-hensel-fanny>,
-        <https://performance.musiconn.de/work/elegischer-gesang-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sonaten-klavier-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/175464864>,
-        <https://viaf.org/viaf/3882153126235024750007> ;
-    cto:relatedLocation <https://d-nb.info/gnd/7634310-8>,
-        <https://viaf.org/viaf/243904650> ;
-    cto:viaf <https://viaf.org/viaf/175464864>,
-        <https://viaf.org/viaf/243904650>,
-        <https://viaf.org/viaf/3882153126235024750007> .
+        <https://performance.musiconn.de/work/sonaten-klavier-beethoven-ludwig-van> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175464864> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/243904650> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3882153126235024750007> a nfdicore:NFDI_0001010 .
 

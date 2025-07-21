@@ -1,24 +1,35 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1191129330> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300150695> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/musikalisch-literarische-veranstaltung-zum-gedenken-an-die-opfer-des-holocaust-mendelssohn-haus-leipzig-1999-01-27> ] .
 
-<https://performance.musiconn.de/event/musikalisch-literarische-veranstaltung-zum-gedenken-an-die-opfer-des-holocaust-mendelssohn-haus-leipzig-1999-01-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/musikalisch-literarische-veranstaltung-zum-gedenken-an-die-opfer-des-holocaust-mendelssohn-haus-leipzig-1999-01-27> a cto:CTO_0001005 ;
     rdfs:label "Musikalisch-literarische Veranstaltung zum Gedenken an die Opfer des Holocaust, Mendelssohn-Haus (Leipzig), 27.1.1999" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1999-01-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1999-01-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1191129330>,
-        <https://d-nb.info/gnd/300150695>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://d-nb.info/gnd/300150695>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1191129330> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300150695> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184734877> ],
         <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/leipziger-synagogalchor-im-mendelssohn-haus>,
         <https://performance.musiconn.de/source/programm-musikalisch-literarische-veranstaltung-27-januar-1999>,
@@ -26,17 +37,15 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/enosch-psalm-103-7-9-lewandowski-louis>,
         <https://performance.musiconn.de/work/erbaue-zion-wieder-gross-friedbert>,
         <https://performance.musiconn.de/work/ghetto-warscha-fassung-weiner-leo-dorfman-joseph>,
-        <https://performance.musiconn.de/work/iz-evrejskoj-narodnoj-poezii-schostakowitsch-dmitri-d>,
         <https://performance.musiconn.de/work/ono-towo-lfonecho-sulzer-salomon>,
         <https://performance.musiconn.de/work/s-brennt-briderlech-s-brennt-fassung-gross-friedbert-gebirtig-mordechai>,
         <https://performance.musiconn.de/work/schiwisi-adonoi-psalm-16-8-9-lewandowski-louis>,
         <https://performance.musiconn.de/work/shtiler-shtiler-fassung-shur-bonia-volkoviski-alek>,
         <https://performance.musiconn.de/work/tikanto-schabbos-weintraub-hirsch>,
-        <https://performance.musiconn.de/work/toras-adonoi-psalm-19-7-9-lewandowski-louis>,
-        <https://viaf.org/viaf/184734877> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1191129330> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/184734877> .
+        <https://performance.musiconn.de/work/toras-adonoi-psalm-19-7-9-lewandowski-louis> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184734877> a nfdicore:NFDI_0001010 .
 

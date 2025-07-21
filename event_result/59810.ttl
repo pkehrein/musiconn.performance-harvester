@@ -1,32 +1,43 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/122570863X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/124952240> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4762374-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/veranstaltung-im-rahmen-der-3-tage-sorbischer-musik-abend-des-sorbischen-liedes-wurschen-1986-04-28> ] .
 
-<https://performance.musiconn.de/event/veranstaltung-im-rahmen-der-3-tage-sorbischer-musik-abend-des-sorbischen-liedes-wurschen-1986-04-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/veranstaltung-im-rahmen-der-3-tage-sorbischer-musik-abend-des-sorbischen-liedes-wurschen-1986-04-28> a cto:CTO_0001005 ;
     rdfs:label "[Veranstaltung im Rahmen der] 3. Tage sorbischer Musik, Abend des sorbischen Liedes, Wurschen, 28.4.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-04-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-04-28" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/124952240> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4762374-3> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/236579907> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/122570863X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1075161212223740070009> ],
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/122570863X>,
-        <https://d-nb.info/gnd/124952240>,
-        <https://d-nb.info/gnd/4762374-3> ;
-    cto:relatedItem <https://d-nb.info/gnd/122570863X>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
-        <https://performance.musiconn.de/work/kinderlied-raupp-jan>,
-        <https://viaf.org/viaf/1075161212223740070009> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4762374-3>,
-        <https://viaf.org/viaf/236579907> ;
-    cto:relatedPerson <https://d-nb.info/gnd/124952240>,
-        <https://viaf.org/viaf/57559326> ;
-    cto:viaf <https://viaf.org/viaf/1075161212223740070009>,
-        <https://viaf.org/viaf/236579907>,
-        <https://viaf.org/viaf/57559326> .
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/57559326> ] .
+
+<https://viaf.org/viaf/1075161212223740070009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/236579907> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/57559326> a nfdicore:NFDI_0001010 .
 

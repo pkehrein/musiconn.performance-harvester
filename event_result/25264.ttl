@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4294583-5> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gottesdienst-universitaetskirche-st-pauli-leipzig-1902-09-14> ] .
 
-<https://performance.musiconn.de/event/gottesdienst-universitaetskirche-st-pauli-leipzig-1902-09-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gottesdienst-universitaetskirche-st-pauli-leipzig-1902-09-14> a cto:CTO_0001005 ;
     rdfs:label "Gottesdienst, Universitätskirche St. Pauli (Leipzig), 14.9.1902" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1902-09-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1902-09-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4294583-5> ;
-    cto:relatedItem <https://performance.musiconn.de/source/motettenbuch-1901-02>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4294583-5> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/124489937> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/motettenbuch-1901-02>,
         <https://performance.musiconn.de/work/wohl-dem-der-sich-auf-seinen-gott-auswahl-bach-johann-sebastian> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4294583-5>,
-        <https://viaf.org/viaf/124489937> ;
-    cto:viaf <https://viaf.org/viaf/124489937> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/124489937> a nfdicore:NFDI_0001010 .
 

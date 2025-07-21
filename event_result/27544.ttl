@@ -1,45 +1,58 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009682> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011695> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30002567X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30017036X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300173881> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1909-01-03> ] .
 
-<https://performance.musiconn.de/event/7-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1909-01-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1909-01-03> a cto:CTO_0001005 ;
     rdfs:label "7. Philharmonisches Konzert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 3.1.1909" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1908-1909> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1909-01-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1909-01-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009682>,
-        <https://d-nb.info/gnd/300011695>,
-        <https://d-nb.info/gnd/30002567X>,
-        <https://d-nb.info/gnd/30017036X>,
-        <https://d-nb.info/gnd/300173881> ;
-    cto:itemOf <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1908-1909> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009682>,
-        <https://d-nb.info/gnd/300011695>,
-        <https://d-nb.info/gnd/30002567X>,
-        <https://d-nb.info/gnd/30017036X>,
-        <https://d-nb.info/gnd/300173881>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011695> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009682> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182774864> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197648368> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184684908> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30002567X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214736935> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300173881> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30017036X> ],
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-77-d-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/konzerte-violine-streichorchester-bwv-1042-e-dur-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/riccio-sandberger-adolf>,
-        <https://performance.musiconn.de/work/siegfried-idyll-wagner-richard>,
-        <https://performance.musiconn.de/work/souvenir-de-moscou-wieniawski-henri>,
-        <https://performance.musiconn.de/work/tokkaten-orgel-bwv-564-c-dur-bach-johann-sebastian>,
-        <https://viaf.org/viaf/182774864>,
-        <https://viaf.org/viaf/184684908>,
-        <https://viaf.org/viaf/197648368>,
-        <https://viaf.org/viaf/214736935> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/182774864>,
-        <https://viaf.org/viaf/184684908>,
-        <https://viaf.org/viaf/197648368>,
-        <https://viaf.org/viaf/214736935> .
+        <https://performance.musiconn.de/work/riccio-sandberger-adolf> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182774864> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184684908> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197648368> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214736935> a nfdicore:NFDI_0001010 .
 

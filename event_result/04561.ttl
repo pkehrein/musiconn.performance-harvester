@@ -1,30 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300072775> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7634310-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1847-04-11> ] .
 
-<https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1847-04-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1847-04-11> a cto:CTO_0001005 ;
     rdfs:label "Sonntagsmusik, Leipziger Straße 3 (Berlin), 11.4.1847" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sonntagsmusiken-1847> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1847-04-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1847-04-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300072775>,
-        <https://d-nb.info/gnd/7634310-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/sonntagsmusiken-1847> ;
-    cto:relatedItem <https://d-nb.info/gnd/300072775>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7634310-8> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/243904650> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300072775> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205760235> ],
         <https://performance.musiconn.de/source/mit-obligater-nachtigallen-und-fliederbluetenbegleitung-fanny-hensels-sonntagsmusiken>,
-        <https://performance.musiconn.de/work/te-deum-auswahl-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-h-465-d-moll-hensel-fanny>,
-        <https://viaf.org/viaf/205760235> ;
-    cto:relatedLocation <https://d-nb.info/gnd/7634310-8>,
-        <https://viaf.org/viaf/243904650> ;
-    cto:viaf <https://viaf.org/viaf/205760235>,
-        <https://viaf.org/viaf/243904650> .
+        <https://performance.musiconn.de/work/te-deum-auswahl-haendel-georg-friedrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/205760235> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/243904650> a nfdicore:NFDI_0001010 .
 

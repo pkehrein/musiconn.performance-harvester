@@ -4,21 +4,34 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1048459276> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5135549-8> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/juedische-kostbarkeiten-michaeliskirche-hannover-2021-09-25-19-30> ] .
 
-<https://performance.musiconn.de/event/juedische-kostbarkeiten-michaeliskirche-hannover-2021-09-25-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/juedische-kostbarkeiten-michaeliskirche-hannover-2021-09-25-19-30> a cto:CTO_0001005 ;
     rdfs:label "Jüdische Kostbarkeiten, Michaeliskirche (Hannover), 25.9.2021, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2021-09-25T20:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2021-09-25T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1048459276>,
-        <https://d-nb.info/gnd/5135549-8>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5135549-8> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/135683334> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/307292905> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1048459276> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/flyer-konzert-25-september-2021>,
         <https://performance.musiconn.de/source/plakat-konzert-25-september-2021>,
         <https://performance.musiconn.de/source/programm-konzert-25-september-2021>,
@@ -35,13 +48,11 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/veyn-nisht-franke-bernd-gebirtig-mordechai>,
         <https://performance.musiconn.de/work/vos-dergeystu-mir-di-yorn-jung-fredo>,
         <https://performance.musiconn.de/work/wschomru-lampel-samuel> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1048459276>,
-        <https://viaf.org/viaf/307292905> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5135549-8>,
-        <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/135683334>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/135683334>,
-        <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/307292905> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/135683334> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/307292905> a nfdicore:NFDI_0001010 .
 

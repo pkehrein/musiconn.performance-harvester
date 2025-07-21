@@ -1,64 +1,86 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015593> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140606> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144989> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145772> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300213263> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300983271> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1863-02-03> ] .
 
-<https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1863-02-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1863-02-03> a cto:CTO_0001005 ;
     rdfs:label "8. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 3.2.1863" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1862-1863> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1863-02-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1863-02-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300140606>,
-        <https://d-nb.info/gnd/300144989>,
-        <https://d-nb.info/gnd/300145772>,
-        <https://d-nb.info/gnd/300213263>,
-        <https://d-nb.info/gnd/300983271>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1862-1863> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300140606>,
-        <https://d-nb.info/gnd/300144989>,
-        <https://d-nb.info/gnd/300145772>,
-        <https://d-nb.info/gnd/300213263>,
-        <https://d-nb.info/gnd/300983271>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178699268> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144989> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184306227> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219935398> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145772> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300213263> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140606> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015593> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185114977> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179830238> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181828440> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300983271> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
         <https://performance.musiconn.de/source/whistling-carl-wilhelm-der-musikverein-euterpe-zu-leipzig-1824-1874-leipzig-1874>,
         <https://performance.musiconn.de/work/also-hat-gott-die-welt-geliebt-mein-glaeubiges-herze-arrangement-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/aus-der-jugendzeit-hauptmann-moritz>,
-        <https://performance.musiconn.de/work/benvenuto-cellini-ouvertuere-berlioz-hector>,
         <https://performance.musiconn.de/work/ein-geistlich-abendlied-seifriz-max>,
-        <https://performance.musiconn.de/work/gedichte-aus-robert-reinicks-lieder-eines-malers-an-den-sonnenschein-schumann-robert>,
-        <https://performance.musiconn.de/work/gesaenge-op-86-der-mond-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/harold-en-italie-2-und-3-satz-berlioz-hector>,
-        <https://performance.musiconn.de/work/hymnus-an-den-heiligen-geist-fuer-maennerchor-schubert-franz>,
         <https://performance.musiconn.de/work/konzerte-oboe-orchester-stein-eduard>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-3-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-fruehlingsnacht-schumann-robert>,
         <https://performance.musiconn.de/work/maennergesang-vereinslied-liszt-franz>,
-        <https://performance.musiconn.de/work/schottisches-nationallied-if-a-body-meets-a-body-anonym>,
-        <https://viaf.org/viaf/178699268>,
-        <https://viaf.org/viaf/179830238>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/184306227>,
-        <https://viaf.org/viaf/185114977>,
-        <https://viaf.org/viaf/219935398> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/178699268>,
-        <https://viaf.org/viaf/179830238>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/184306227>,
-        <https://viaf.org/viaf/185114977>,
-        <https://viaf.org/viaf/219935398>,
-        <https://viaf.org/viaf/242717024> .
+        <https://performance.musiconn.de/work/schottisches-nationallied-if-a-body-meets-a-body-anonym> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178699268> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179830238> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181828440> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184306227> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185114977> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219935398> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
 

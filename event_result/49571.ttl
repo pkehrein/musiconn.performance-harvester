@@ -1,28 +1,32 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1211992489> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1239596901> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1239597207> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vecer-pamjati-vladimira-v-scerbaceva-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1964-01-23> ] .
 
-<https://performance.musiconn.de/event/vecer-pamjati-vladimira-v-scerbaceva-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1964-01-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vecer-pamjati-vladimira-v-scerbaceva-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1964-01-23> a cto:CTO_0001005 ;
     rdfs:label "Večer pamjati Vladimira V. Ščerbačeva, Gosudarstvennaja akademičeskaja kapella (Sankt Petersburg) / Koncertnyj zal, 23.1.1964" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1964-01-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1964-01-23" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1211992489>,
-        <https://d-nb.info/gnd/1239596901>,
-        <https://d-nb.info/gnd/1239597207> ;
-    cto:relatedItem <https://d-nb.info/gnd/1239596901>,
-        <https://d-nb.info/gnd/1239597207>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1211992489> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1239597207> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1239596901> ],
         <https://performance.musiconn.de/source/leningrader-komponistenhaus-1964-23-januar>,
-        <https://performance.musiconn.de/work/anna-kolosova-arie-scerbacev-vladimir-v>,
-        <https://performance.musiconn.de/work/groza-scerbacev-vladimir-v>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-scerbacev-vladimir-v> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1211992489> .
+        <https://performance.musiconn.de/work/anna-kolosova-arie-scerbacev-vladimir-v> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
 

@@ -1,41 +1,50 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300033745> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300093055> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009440X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1911-10-27> ] .
 
-<https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1911-10-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1911-10-27> a cto:CTO_0001005 ;
     rdfs:label "1. Philharmonisches Konzert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 27.10.1911" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1911-1912> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1911-10-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1911-10-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300033745>,
-        <https://d-nb.info/gnd/300093055>,
-        <https://d-nb.info/gnd/30009440X> ;
-    cto:itemOf <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1911-1912> ;
-    cto:relatedItem <https://d-nb.info/gnd/300033745>,
-        <https://d-nb.info/gnd/300093055>,
-        <https://d-nb.info/gnd/30009440X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175183325> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174184579> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033745> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093055> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009440X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198522462> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
         <https://performance.musiconn.de/work/balladen-op-129-der-noeck-bearbeitung-von-arnold-schoenberg-loewe-carl>,
-        <https://performance.musiconn.de/work/ce-quon-entend-sur-la-montagne-liszt-franz>,
         <https://performance.musiconn.de/work/konzerte-violine-orchester-op-10-c-dur-bleyle-karl>,
-        <https://performance.musiconn.de/work/les-preludes-liszt-franz>,
         <https://performance.musiconn.de/work/lied-im-april-horn-kamillo>,
         <https://performance.musiconn.de/work/lied-mein-trost-in-allem-weh-ludwig-ernst>,
-        <https://performance.musiconn.de/work/melancholiceskaja-serenada-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/perpetuum-mobile-violine-sitt-hans>,
-        <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/175183325>,
-        <https://viaf.org/viaf/198522462> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/175183325>,
-        <https://viaf.org/viaf/198522462> .
+        <https://performance.musiconn.de/work/perpetuum-mobile-violine-sitt-hans> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174184579> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175183325> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198522462> a nfdicore:NFDI_0001010 .
 

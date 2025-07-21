@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300109873> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110731> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300259468> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300817274> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4138108-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/serenade-albrechtsburg-meissen-1960-06-04-20-00> ] .
 
-<https://performance.musiconn.de/event/serenade-albrechtsburg-meissen-1960-06-04-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/serenade-albrechtsburg-meissen-1960-06-04-20-00> a cto:CTO_0001005 ;
     rdfs:label "Serenade, Albrechtsburg (Meißen), 4.6.1960, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1960-06-04T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1960-06-04T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300109873>,
-        <https://d-nb.info/gnd/300110731>,
-        <https://d-nb.info/gnd/300259468>,
-        <https://d-nb.info/gnd/300817274>,
-        <https://d-nb.info/gnd/4138108-7> ;
-    cto:relatedItem <https://d-nb.info/gnd/300109873>,
-        <https://d-nb.info/gnd/300110731>,
-        <https://d-nb.info/gnd/300259468>,
-        <https://d-nb.info/gnd/300817274>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4138108-7> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/263690853> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300817274> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178619457> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109873> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184684776> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180859988> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/302327909> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110731> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300259468> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/drei-alte-lieder-bongartz-heinz>,
-        <https://performance.musiconn.de/work/le-nozze-di-figaro-giunse-alfin-il-momento-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/no-no-che-non-sei-capace-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/serenaden-orchester-kv-239-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-2-haydn-joseph>,
-        <https://viaf.org/viaf/178619457>,
-        <https://viaf.org/viaf/180859988>,
-        <https://viaf.org/viaf/184684776>,
-        <https://viaf.org/viaf/302327909> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4138108-7>,
-        <https://viaf.org/viaf/263690853> ;
-    cto:viaf <https://viaf.org/viaf/178619457>,
-        <https://viaf.org/viaf/180859988>,
-        <https://viaf.org/viaf/184684776>,
-        <https://viaf.org/viaf/263690853>,
-        <https://viaf.org/viaf/302327909> .
+        <https://performance.musiconn.de/work/drei-alte-lieder-bongartz-heinz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178619457> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180859988> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184684776> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/263690853> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/302327909> a nfdicore:NFDI_0001010 .
 

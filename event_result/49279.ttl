@@ -4,19 +4,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/tvorceskaja-vstreca-leningradskich-kompozitorov-s-dzaz-orkestrom-leningradskogo-otdelenija-vgko-dom-kompozitorov-sankt-petersburg-1960-12-13> ] .
 
-<https://performance.musiconn.de/event/tvorceskaja-vstreca-leningradskich-kompozitorov-s-dzaz-orkestrom-leningradskogo-otdelenija-vgko-dom-kompozitorov-sankt-petersburg-1960-12-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/tvorceskaja-vstreca-leningradskich-kompozitorov-s-dzaz-orkestrom-leningradskogo-otdelenija-vgko-dom-kompozitorov-sankt-petersburg-1960-12-13> a cto:CTO_0001005 ;
     rdfs:label "Tvorčeskaja vstreča leningradskich kompozitorov s džaz-orkestrom Leningradskogo otdelenija VGKO, Dom kompozitorov (Sankt Petersburg), 13.12.1960" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1960-12-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1960-12-13" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1200899989> ;
-    cto:relatedItem <https://performance.musiconn.de/source/leningrader-komponistenhaus-1960-13-dezember>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/leningrader-komponistenhaus-1960-13-dezember>,
         <https://performance.musiconn.de/work/american-patrol-miller-glenn>,
         <https://performance.musiconn.de/work/come-to-the-moon-gershwin-george>,
         <https://performance.musiconn.de/work/cto-z-ty-grustis-petrov-andrej-p>,
@@ -39,7 +42,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/udobno-tancevat-waller-fats>,
         <https://performance.musiconn.de/work/vecernjaja-pesnja-solovev-sedoj-vasilij-p>,
         <https://performance.musiconn.de/work/work-song-adderley-cannonball> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1200899989>,
-        <https://viaf.org/viaf/385157583849933970005> ;
-    cto:viaf <https://viaf.org/viaf/385157583849933970005> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
 

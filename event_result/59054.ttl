@@ -1,32 +1,39 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/127924447X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/134509692> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-anl-d-werkstatt-tagung-d-fachbereichs-blasmusik-d-verband-der-komponisten-und-musikwissenschaftler-der-ddr-volkshaus-berlin-bohnsdorf-1985-12-18> ] .
 
-<https://performance.musiconn.de/event/konzert-anl-d-werkstatt-tagung-d-fachbereichs-blasmusik-d-verband-der-komponisten-und-musikwissenschaftler-der-ddr-volkshaus-berlin-bohnsdorf-1985-12-18> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-anl-d-werkstatt-tagung-d-fachbereichs-blasmusik-d-verband-der-komponisten-und-musikwissenschaftler-der-ddr-volkshaus-berlin-bohnsdorf-1985-12-18> a cto:CTO_0001005 ;
     rdfs:label "Konzert anl. d. Werkstatt-Tagung d. Fachbereichs Blasmusik d. Verband der Komponisten und Musikwissenschaftler der DDR, Volkshaus (Berlin-Bohnsdorf), 18.12.1985" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1985-12-18" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1985-12-18" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/127924447X>,
-        <https://d-nb.info/gnd/134509692> ;
-    cto:relatedItem <https://d-nb.info/gnd/127924447X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/134509692> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/volkshaus-berlin-bohnsdorf> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/127924447X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3288167504516293090003> ],
         <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1985-und-nachtrag-1976-1984-dresden-saechsische-landesbibliothek-dresden-1986>,
-        <https://performance.musiconn.de/work/baba-roga-hunger-hans-helmut>,
         <https://performance.musiconn.de/work/konzertante-burleske-fuer-violoncello-und-blasorchester-arenz-heinz>,
         <https://performance.musiconn.de/work/memento-all-denen-die-ihr-leben-fuer-den-frieden-gaben-fuer-blasorchester-huetten-hans>,
-        <https://performance.musiconn.de/work/wirbeltanz-fuer-grosses-blasorchester-schumann-wolfgang>,
-        <https://viaf.org/viaf/3288167504516293090003> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/volkshaus-berlin-bohnsdorf> ;
-    cto:relatedPerson <https://d-nb.info/gnd/134509692>,
-        <https://viaf.org/viaf/65278918> ;
-    cto:viaf <https://viaf.org/viaf/3288167504516293090003>,
-        <https://viaf.org/viaf/65278918> .
+        <https://performance.musiconn.de/work/wirbeltanz-fuer-grosses-blasorchester-schumann-wolfgang> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/65278918> ] .
+
+<https://viaf.org/viaf/3288167504516293090003> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/65278918> a nfdicore:NFDI_0001010 .
 

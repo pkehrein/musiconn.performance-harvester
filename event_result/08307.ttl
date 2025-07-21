@@ -1,67 +1,90 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1187290459> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1187356484> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300005628> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300251262> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300304501> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30030451X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/301027390> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-2007-12-20> ] .
 
-<https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-2007-12-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-thomaskirche-leipzig-2007-12-20> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Thomaskirche (Leipzig), 20.12.2007" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2007-12-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2007-12-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1187290459>,
-        <https://d-nb.info/gnd/1187356484>,
-        <https://d-nb.info/gnd/300005628>,
-        <https://d-nb.info/gnd/300251262>,
-        <https://d-nb.info/gnd/300304501>,
-        <https://d-nb.info/gnd/30030451X>,
-        <https://d-nb.info/gnd/301027390>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1187290459>,
-        <https://d-nb.info/gnd/1187356484>,
-        <https://d-nb.info/gnd/300005628>,
-        <https://d-nb.info/gnd/300251262>,
-        <https://d-nb.info/gnd/300304501>,
-        <https://d-nb.info/gnd/30030451X>,
-        <https://d-nb.info/gnd/301027390>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219939828> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300304501> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300251262> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1187290459> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301027390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1187356484> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/9449155953613242630003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/240063127> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178942294> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211715890> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8971148705729237080008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30030451X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300005628> ],
         <https://performance.musiconn.de/source/motettenbuch-2007-08-1>,
         <https://performance.musiconn.de/work/advent-mauersberger-erhard>,
         <https://performance.musiconn.de/work/altboehmische-gesaenge-teil-2-die-engel-und-die-hirten-riedel-carl>,
         <https://performance.musiconn.de/work/altboehmische-gesaenge-teil-2-freu-dich-erd-und-sternenzelt-riedel-carl>,
-        <https://performance.musiconn.de/work/choraele-bwv-253-438-uns-ist-ein-kindlein-heut-geborn-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/das-volk-das-im-finstern-wandelt-hofmann-wolfgang>,
-        <https://performance.musiconn.de/work/die-weihnachtsgeschichte-es-ist-ein-ros-entsprungen-distler-hugo>,
-        <https://performance.musiconn.de/work/im-advent-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/in-dulci-jubilo-thiel-carl>,
-        <https://performance.musiconn.de/work/koenig-der-koenige-brand-gustav>,
         <https://performance.musiconn.de/work/o-du-froehliche-biller-georg-christoph>,
         <https://performance.musiconn.de/work/o-heiland-reiss-die-himmel-auf-mauersberger-erhard>,
         <https://performance.musiconn.de/work/stille-nacht-heilige-nacht-schreck-gustav-biller-georg-christoph>,
         <https://performance.musiconn.de/work/und-unser-lieben-frauen-mauersberger-erhard>,
         <https://performance.musiconn.de/work/vom-himmel-hoch-o-englein-kommt-mauersberger-erhard>,
         <https://performance.musiconn.de/work/wach-nachtigall-wach-auf-mauersberger-erhard>,
-        <https://performance.musiconn.de/work/weihnacht-mauersberger-erhard>,
-        <https://performance.musiconn.de/work/weihnachten-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/weihnachtslieder-ich-weiss-ein-lieblich-engelsspiel-weismann-wilhelm-1>,
-        <https://viaf.org/viaf/178942294>,
-        <https://viaf.org/viaf/211715890>,
-        <https://viaf.org/viaf/219939828>,
-        <https://viaf.org/viaf/240063127>,
-        <https://viaf.org/viaf/8971148705729237080008>,
-        <https://viaf.org/viaf/9449155953613242630003> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/178942294>,
-        <https://viaf.org/viaf/211715890>,
-        <https://viaf.org/viaf/219939828>,
-        <https://viaf.org/viaf/240063127>,
-        <https://viaf.org/viaf/8971148705729237080008>,
-        <https://viaf.org/viaf/9449155953613242630003> .
+        <https://performance.musiconn.de/work/weihnacht-mauersberger-erhard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178942294> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211715890> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219939828> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/240063127> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8971148705729237080008> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/9449155953613242630003> a nfdicore:NFDI_0001010 .
 

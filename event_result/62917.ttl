@@ -4,24 +4,31 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/100421326> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4011446-6> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/li-matti-per-amore-den-haag-1759-00-00> ] .
 
-<https://performance.musiconn.de/event/li-matti-per-amore-den-haag-1759-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/li-matti-per-amore-den-haag-1759-00-00> a cto:CTO_0001005 ;
     rdfs:label "Li matti per amore, Den Haag, 1759" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1759-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1759-00-00" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/100421326> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4011446-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/151996116> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/li-matti-per-amore-cocchi-gioacchino> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/100421326>,
-        <https://d-nb.info/gnd/4011446-6> ;
-    cto:relatedItem <https://performance.musiconn.de/work/li-matti-per-amore-cocchi-gioacchino> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4011446-6>,
-        <https://viaf.org/viaf/151996116> ;
-    cto:relatedPerson <https://d-nb.info/gnd/100421326>,
-        <https://viaf.org/viaf/217598437> ;
-    cto:viaf <https://viaf.org/viaf/151996116>,
-        <https://viaf.org/viaf/217598437> .
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217598437> ] .
+
+<https://viaf.org/viaf/151996116> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217598437> a nfdicore:NFDI_0001010 .
 

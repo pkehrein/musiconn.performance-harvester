@@ -1,51 +1,83 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1047767686> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1154404293> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300016212> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300312962> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300427271> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300459092> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4248013-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4413098-3> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7612348-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-orchesterkonzert-1932-01-31-20-00> ] .
 
-<https://performance.musiconn.de/event/1-orchesterkonzert-1932-01-31-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-orchesterkonzert-1932-01-31-20-00> a cto:CTO_0001005 ;
     rdfs:label "1. Orchesterkonzert, 31.1.1932, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1931-1932> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1932-01-31T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1932-01-31T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1047767686>,
-        <https://d-nb.info/gnd/1154404293>,
-        <https://d-nb.info/gnd/300016212>,
-        <https://d-nb.info/gnd/300312962>,
-        <https://d-nb.info/gnd/300427271>,
-        <https://d-nb.info/gnd/300459092>,
-        <https://d-nb.info/gnd/4248013-9>,
-        <https://d-nb.info/gnd/4413098-3>,
-        <https://d-nb.info/gnd/7612348-0> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1931-1932> ;
-    cto:relatedItem <https://d-nb.info/gnd/1047767686>,
-        <https://d-nb.info/gnd/1154404293>,
-        <https://d-nb.info/gnd/300016212>,
-        <https://d-nb.info/gnd/300312962>,
-        <https://d-nb.info/gnd/300427271>,
-        <https://d-nb.info/gnd/300459092>,
-        <https://d-nb.info/gnd/4248013-9>,
-        <https://d-nb.info/gnd/4413098-3>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/235262526> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7612348-0> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178236846> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186306744> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177575130> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4413098-3> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7152138518810981329> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210965657> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1047767686> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189718809> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4248013-9> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300459092> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1154404293> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016212> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206840351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300427271> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177044304> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300312962> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/aegyptische-hymne-anonym>,
-        <https://performance.musiconn.de/work/alfred-rule-britannia-arne-thomas-augustine>,
         <https://performance.musiconn.de/work/boze-carja-chrani-lvov-aleksej-f>,
-        <https://performance.musiconn.de/work/bulgarische-volkshymne>,
         <https://performance.musiconn.de/work/constitutionshymne-pedro-don>,
-        <https://performance.musiconn.de/work/das-kaiserlied-haydn-joseph>,
         <https://performance.musiconn.de/work/die-internationale-degeyter-pierre>,
         <https://performance.musiconn.de/work/du-gamla-du-friska-anonym>,
         <https://performance.musiconn.de/work/faschistenhymne-blanc-giuseppe>,
         <https://performance.musiconn.de/work/god-save-the-king-carey-henry>,
         <https://performance.musiconn.de/work/griechische-nationalhymne-mantzaros-nikolaos>,
-        <https://performance.musiconn.de/work/het-wilhelmus>,
         <https://performance.musiconn.de/work/hussittenhymne-anonym>,
         <https://performance.musiconn.de/work/hymne-aus-afghanistan-anonym>,
         <https://performance.musiconn.de/work/hymne-aus-australien-anonym>,
@@ -55,36 +87,32 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/hymnul-national-huebsch>,
         <https://performance.musiconn.de/work/jeszcze-polska-oginski-michel>,
         <https://performance.musiconn.de/work/kaiserliche-hymne-beauharnais>,
-        <https://performance.musiconn.de/work/kde-domov-muj>,
         <https://performance.musiconn.de/work/kong-christian-hartmann-emil>,
-        <https://performance.musiconn.de/work/la-brabanconne-campenhout-francois-van>,
         <https://performance.musiconn.de/work/magyar-hymnus-erkel-ferenc>,
         <https://performance.musiconn.de/work/marcia-reale-anonym>,
         <https://performance.musiconn.de/work/marseillaise-rouget-de-lisle-claude-joseph>,
-        <https://performance.musiconn.de/work/musik-zum-fest-nachspiel-die-ruinen-von-athen-marcia-alla-turca-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/nationalmarsch-aus-persien-anonym>,
         <https://performance.musiconn.de/work/rakoczy-marsch-barna>,
         <https://performance.musiconn.de/work/serbische-nationalhymne-jenko-darovin>,
         <https://performance.musiconn.de/work/sonner-av-norge-blom-christian>,
-        <https://performance.musiconn.de/work/sultan-marsch-pascha-nedjib>,
-        <https://performance.musiconn.de/work/the-star-spangled-banner-smith-john-s>,
-        <https://viaf.org/viaf/177044304>,
-        <https://viaf.org/viaf/177575130>,
-        <https://viaf.org/viaf/178236846>,
-        <https://viaf.org/viaf/186306744>,
-        <https://viaf.org/viaf/189718809>,
-        <https://viaf.org/viaf/206840351>,
-        <https://viaf.org/viaf/210965657>,
-        <https://viaf.org/viaf/7152138518810981329> ;
-    cto:relatedLocation <https://d-nb.info/gnd/7612348-0>,
-        <https://viaf.org/viaf/235262526> ;
-    cto:viaf <https://viaf.org/viaf/177044304>,
-        <https://viaf.org/viaf/177575130>,
-        <https://viaf.org/viaf/178236846>,
-        <https://viaf.org/viaf/186306744>,
-        <https://viaf.org/viaf/189718809>,
-        <https://viaf.org/viaf/206840351>,
-        <https://viaf.org/viaf/210965657>,
-        <https://viaf.org/viaf/235262526>,
-        <https://viaf.org/viaf/7152138518810981329> .
+        <https://performance.musiconn.de/work/sultan-marsch-pascha-nedjib> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177044304> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177575130> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178236846> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186306744> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189718809> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206840351> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210965657> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/235262526> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7152138518810981329> a nfdicore:NFDI_0001010 .
 

@@ -4,19 +4,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/tvorceskij-vecer-sofja-n-cicerinoj-i-evgenija-i-ovcinnikova-dom-kompozitorov-sankt-petersburg-1961-05-19> ] .
 
-<https://performance.musiconn.de/event/tvorceskij-vecer-sofja-n-cicerinoj-i-evgenija-i-ovcinnikova-dom-kompozitorov-sankt-petersburg-1961-05-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/tvorceskij-vecer-sofja-n-cicerinoj-i-evgenija-i-ovcinnikova-dom-kompozitorov-sankt-petersburg-1961-05-19> a cto:CTO_0001005 ;
     rdfs:label "Tvorčeskij večer Sof'ja N. Čičerinoj i Evgenija I. Ovčinnikova, Dom kompozitorov (Sankt Petersburg), 19.5.1961" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1961-05-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1961-05-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1200899989> ;
-    cto:relatedItem <https://performance.musiconn.de/source/leningrader-komponistenhaus-1961-19-mai>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/leningrader-komponistenhaus-1961-19-mai>,
         <https://performance.musiconn.de/work/ballada-o-marsovom-pole-ovcinnikov-evgenij-ivanovic>,
         <https://performance.musiconn.de/work/deti-spjat-cicerina-sofja-nikolaevna>,
         <https://performance.musiconn.de/work/etueden-klavier-ovcinnikov-evgenij-ivanovic>,
@@ -31,7 +34,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/vremena-goda-cicerina-sofja-nikolaevna>,
         <https://performance.musiconn.de/work/za-selom-sinel-dalekij-les-ovcinnikov-evgenij-ivanovic>,
         <https://performance.musiconn.de/work/zarubeznye-zarisovki-ovcinnikov-evgenij-ivanovic> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1200899989>,
-        <https://viaf.org/viaf/385157583849933970005> ;
-    cto:viaf <https://viaf.org/viaf/385157583849933970005> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
 

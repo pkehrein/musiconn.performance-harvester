@@ -4,19 +4,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/samuel-lampel-abendgebet-zum-schabbat-leipzig-1928-thomaskirche-leipzig-2023-06-28-19-30> ] .
 
-<https://performance.musiconn.de/event/samuel-lampel-abendgebet-zum-schabbat-leipzig-1928-thomaskirche-leipzig-2023-06-28-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/samuel-lampel-abendgebet-zum-schabbat-leipzig-1928-thomaskirche-leipzig-2023-06-28-19-30> a cto:CTO_0001005 ;
     rdfs:label "Samuel Lampel: Abendgebet zum Schabbat (Leipzig 1928), Thomaskirche (Leipzig), 28.6.2023, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2023-06-28T21:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2023-06-28T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/werner-kopfmueller-ueber-konfessionsgrenzen-hinweg-der-leipziger-synagogalchor-praesentiert-kompositionen-von-samuel-lampel>,
         <https://performance.musiconn.de/work/adaun-aulom-lampel-samuel>,
         <https://performance.musiconn.de/work/adaunoj-moloch-psalm-93-lampel-samuel>,
@@ -38,7 +41,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/uwzel-lampel-samuel>,
         <https://performance.musiconn.de/work/wajchullu-lampel-samuel>,
         <https://performance.musiconn.de/work/wschomru-lampel-samuel> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
 

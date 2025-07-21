@@ -1,65 +1,90 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1209152525> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1209152754> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033753> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30014461X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300271697> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300348304> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300787987> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1883-02-13> ] .
 
-<https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1883-02-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1883-02-13> a cto:CTO_0001005 ;
     rdfs:label "8. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 13.2.1883" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1882-1883> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1883-02-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1883-02-13" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1209152525>,
-        <https://d-nb.info/gnd/1209152754>,
-        <https://d-nb.info/gnd/300033753>,
-        <https://d-nb.info/gnd/30014461X>,
-        <https://d-nb.info/gnd/300271697>,
-        <https://d-nb.info/gnd/300348304>,
-        <https://d-nb.info/gnd/300787987>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1882-1883> ;
-    cto:relatedItem <https://d-nb.info/gnd/1209152525>,
-        <https://d-nb.info/gnd/1209152754>,
-        <https://d-nb.info/gnd/300033753>,
-        <https://d-nb.info/gnd/30014461X>,
-        <https://d-nb.info/gnd/300271697>,
-        <https://d-nb.info/gnd/300348304>,
-        <https://d-nb.info/gnd/300787987>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219169322> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194737105> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174897774> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1209152754> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214739868> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033753> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175678845> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300271697> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181643116> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30014461X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176511810> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1209152525> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300348304> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300787987> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
-        <https://performance.musiconn.de/work/dichterliebe-aus-meinen-traenen-spriessen-schumann-robert>,
-        <https://performance.musiconn.de/work/dichterliebe-die-rose-die-lilie-die-taube-die-sonne-schumann-robert>,
-        <https://performance.musiconn.de/work/dichterliebe-im-wunderschoenen-monat-mai-schumann-robert>,
-        <https://performance.musiconn.de/work/koenig-manfred-ouvertuere-reinecke-carl>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-4-op-31-d-moll-vieuxtemps-henri>,
         <https://performance.musiconn.de/work/le-nozze-di-figaro-canzone-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/melancholiceskaja-serenada-fassung-vl-kl-tschaikowski-peter-i>,
         <https://performance.musiconn.de/work/moto-perpetuo-raff-joseph-joachim>,
         <https://performance.musiconn.de/work/neig-schoene-knospe-dich-zu-mir-klengel-paul>,
-        <https://performance.musiconn.de/work/seh-ich-deine-zarten-fuesschen-an-klengel-paul>,
-        <https://performance.musiconn.de/work/sinfonien-op-34-hartmann-emil>,
-        <https://viaf.org/viaf/174897774>,
-        <https://viaf.org/viaf/175678845>,
-        <https://viaf.org/viaf/176511810>,
-        <https://viaf.org/viaf/181643116>,
-        <https://viaf.org/viaf/194737105>,
-        <https://viaf.org/viaf/214739868>,
-        <https://viaf.org/viaf/219169322> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/174897774>,
-        <https://viaf.org/viaf/175678845>,
-        <https://viaf.org/viaf/176511810>,
-        <https://viaf.org/viaf/181643116>,
-        <https://viaf.org/viaf/194737105>,
-        <https://viaf.org/viaf/214739868>,
-        <https://viaf.org/viaf/219169322>,
-        <https://viaf.org/viaf/242717024> .
+        <https://performance.musiconn.de/work/seh-ich-deine-zarten-fuesschen-an-klengel-paul> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174897774> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175678845> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176511810> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181643116> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194737105> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214739868> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219169322> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
 

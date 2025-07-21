@@ -1,37 +1,48 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1165068214> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300107641> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109040> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111037> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/mozart-abend-gebaeude-des-konzerthauses-berlin-berlin-grosser-saal-2013-05-10> ] .
 
-<https://performance.musiconn.de/event/mozart-abend-gebaeude-des-konzerthauses-berlin-berlin-grosser-saal-2013-05-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/mozart-abend-gebaeude-des-konzerthauses-berlin-berlin-grosser-saal-2013-05-10> a cto:CTO_0001005 ;
     rdfs:label "Mozart-Abend, Gebäude des Konzerthauses Berlin (Berlin) / Großer Saal, 10.5.2013" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2013-05-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2013-05-10" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1165068214>,
-        <https://d-nb.info/gnd/300107641>,
-        <https://d-nb.info/gnd/300109040>,
-        <https://d-nb.info/gnd/300111037> ;
-    cto:relatedItem <https://d-nb.info/gnd/300107641>,
-        <https://d-nb.info/gnd/300109040>,
-        <https://d-nb.info/gnd/300111037>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1165068214> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219934692> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111037> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200779112> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109040> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300107641> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191497258> ],
         <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-10-programmhefte-kammerorchester-carl-philipp-emanuel-bach-2008-2014>,
-        <https://performance.musiconn.de/work/divertimenti-hr-1-2-v-va-fg-bass-instr-kv-205-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-kv-595-b-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonie-f-dur-wq-1833-bach-carl-philipp-emanuel>,
-        <https://performance.musiconn.de/work/sinfonien-kv-201-a-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/191497258>,
-        <https://viaf.org/viaf/200779112>,
-        <https://viaf.org/viaf/219934692> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1165068214> ;
-    cto:viaf <https://viaf.org/viaf/191497258>,
-        <https://viaf.org/viaf/200779112>,
-        <https://viaf.org/viaf/219934692> .
+        <https://performance.musiconn.de/work/sinfonie-f-dur-wq-1833-bach-carl-philipp-emanuel> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/191497258> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200779112> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219934692> a nfdicore:NFDI_0001010 .
 

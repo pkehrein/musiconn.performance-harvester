@@ -1,47 +1,64 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175500941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033850> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009440X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300114001> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300159242> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4399716-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-ballsaal-constantia-dresden-1945-08-18-18-00> ] .
 
-<https://performance.musiconn.de/event/konzert-ballsaal-constantia-dresden-1945-08-18-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-ballsaal-constantia-dresden-1945-08-18-18-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Ballsaal Constantia (Dresden), 18.8.1945, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1945-1946> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1945-08-18T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1945-08-18T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175500941>,
-        <https://d-nb.info/gnd/300033850>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300114001>,
-        <https://d-nb.info/gnd/300159242>,
-        <https://d-nb.info/gnd/4399716-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1945-1946> ;
-    cto:relatedItem <https://d-nb.info/gnd/300033850>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300114001>,
-        <https://d-nb.info/gnd/300159242>,
-        <https://d-nb.info/gnd/4399716-8>,
-        <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1945-1946>,
-        <https://performance.musiconn.de/work/an-der-schoenen-blauen-donau-strauss-johann>,
-        <https://performance.musiconn.de/work/der-nussknacker-suite-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-ouvertuere-nicolai-otto>,
-        <https://performance.musiconn.de/work/die-schoene-galathee-ouvertuere-suppe-franz-von>,
-        <https://performance.musiconn.de/work/les-preludes-liszt-franz>,
-        <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/177421663>,
-        <https://viaf.org/viaf/181002798>,
-        <https://viaf.org/viaf/184897230>,
-        <https://viaf.org/viaf/305991533> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175500941> ;
-    cto:viaf <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/177421663>,
-        <https://viaf.org/viaf/181002798>,
-        <https://viaf.org/viaf/184897230>,
-        <https://viaf.org/viaf/305991533> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175500941> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181002798> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4399716-8> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184897230> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300114001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009440X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177421663> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305991533> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300159242> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174184579> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033850> ],
+        <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1945-1946> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174184579> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177421663> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181002798> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184897230> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305991533> a nfdicore:NFDI_0001010 .
 

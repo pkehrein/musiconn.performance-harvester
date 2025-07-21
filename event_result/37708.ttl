@@ -1,58 +1,79 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1184333866> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1198319569> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141203> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144814> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300271263> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300314159> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4526431-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zehnter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1907-02-08-19-00> ] .
 
-<https://performance.musiconn.de/event/zehnter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1907-02-08-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zehnter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1907-02-08-19-00> a cto:CTO_0001005 ;
     rdfs:label "Zehnter Kammermusik-Abend, Kleiner Konzertsaal (Frankfurt a. M.), 8.2.1907, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1906-1907> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1907-02-08T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1907-02-08T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1184333866>,
-        <https://d-nb.info/gnd/1198319569>,
-        <https://d-nb.info/gnd/300141203>,
-        <https://d-nb.info/gnd/300144814>,
-        <https://d-nb.info/gnd/300271263>,
-        <https://d-nb.info/gnd/300314159>,
-        <https://d-nb.info/gnd/4526431-4> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1906-1907> ;
-    cto:relatedItem <https://d-nb.info/gnd/1184333866>,
-        <https://d-nb.info/gnd/1198319569>,
-        <https://d-nb.info/gnd/300141203>,
-        <https://d-nb.info/gnd/300144814>,
-        <https://d-nb.info/gnd/300271263>,
-        <https://d-nb.info/gnd/300314159>,
-        <https://d-nb.info/gnd/4526431-4>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177040984> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176843148> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211741930> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1184333866> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/295824259> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1198319569> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186384860> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300271263> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300314159> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193660252> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144814> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141203> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181323349> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4526431-4> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/faschingsschwank-aus-wien-schumann-robert>,
-        <https://performance.musiconn.de/work/gedichte-von-eichendorff-verschwiegene-liebe-wolf-hugo>,
-        <https://performance.musiconn.de/work/lieder-op-106-ein-wanderer-brahms-johannes>,
-        <https://performance.musiconn.de/work/nacht-und-traeume-schubert-franz>,
-        <https://performance.musiconn.de/work/quintette-violine-2-viola-violoncello-klavier-fwv-7-f-moll-franck-cesar>,
         <https://performance.musiconn.de/work/romanzen-singstimme-klavier-cs-211-216-warum-sind-denn-die-rosen-so-blass-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/romanzen-singstimme-klavier-op-63-fahrt-hin-ihr-traeume-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/romanzen-singstimme-klavier-op-73-as-dur-v-etu-lunnuju-noc-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/romanzen-und-lieder-op-27-ne-otchodi-ot-menja-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/176843148>,
-        <https://viaf.org/viaf/177040984>,
-        <https://viaf.org/viaf/181323349>,
-        <https://viaf.org/viaf/186384860>,
-        <https://viaf.org/viaf/193660252>,
-        <https://viaf.org/viaf/211741930>,
-        <https://viaf.org/viaf/295824259> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/176843148>,
-        <https://viaf.org/viaf/177040984>,
-        <https://viaf.org/viaf/181323349>,
-        <https://viaf.org/viaf/186384860>,
-        <https://viaf.org/viaf/193660252>,
-        <https://viaf.org/viaf/211741930>,
-        <https://viaf.org/viaf/295824259> .
+        <https://performance.musiconn.de/work/romanzen-singstimme-klavier-op-63-fahrt-hin-ihr-traeume-tschaikowski-peter-i> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176843148> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177040984> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181323349> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186384860> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193660252> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211741930> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/295824259> a nfdicore:NFDI_0001010 .
 

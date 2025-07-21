@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300116853> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300148461> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300221142> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-ausserordentliches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1955-11-04-19-30> ] .
 
-<https://performance.musiconn.de/event/1-ausserordentliches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1955-11-04-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-ausserordentliches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1955-11-04-19-30> a cto:CTO_0001005 ;
     rdfs:label "1. Außerordentliches Konzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 4.11.1955, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1955-1956> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1955-11-04T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1955-11-04T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300116853>,
-        <https://d-nb.info/gnd/300148461>,
-        <https://d-nb.info/gnd/300221142> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1955-1956> ;
-    cto:relatedItem <https://d-nb.info/gnd/300116853>,
-        <https://d-nb.info/gnd/300148461>,
-        <https://d-nb.info/gnd/300221142>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/concerto-fuer-holzblaeser-harfe-und-orchester-hindemith-paul>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-ms-21-d-dur-paganini-niccolo>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-43-d-dur-sibelius-jean>,
-        <https://viaf.org/viaf/190423225>,
-        <https://viaf.org/viaf/194733340>,
-        <https://viaf.org/viaf/217006283> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/190423225>,
-        <https://viaf.org/viaf/194733340>,
-        <https://viaf.org/viaf/217006283> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300116853> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194733340> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300221142> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217006283> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190423225> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300148461> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/190423225> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194733340> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217006283> a nfdicore:NFDI_0001010 .
 

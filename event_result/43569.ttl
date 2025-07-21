@@ -1,63 +1,84 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1097294714> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300123825> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300422415> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300470479> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300492588> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300492596> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300727844> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncert-28-aprelja-sankt-petersburger-philharmonie-kleiner-saal-1973-04-28> ] .
 
-<https://performance.musiconn.de/event/koncert-28-aprelja-sankt-petersburger-philharmonie-kleiner-saal-1973-04-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncert-28-aprelja-sankt-petersburger-philharmonie-kleiner-saal-1973-04-28> a cto:CTO_0001005 ;
     rdfs:label "Koncert 28. aprelja, Sankt-Petersburger Philharmonie / Kleiner Saal, 28.4.1973" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1972-73> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1973-04-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1973-04-28" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1097294714>,
-        <https://d-nb.info/gnd/300123825>,
-        <https://d-nb.info/gnd/300422415>,
-        <https://d-nb.info/gnd/300470479>,
-        <https://d-nb.info/gnd/300492588>,
-        <https://d-nb.info/gnd/300492596>,
-        <https://d-nb.info/gnd/300727844> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1972-73> ;
-    cto:relatedItem <https://d-nb.info/gnd/1097294714>,
-        <https://d-nb.info/gnd/300123825>,
-        <https://d-nb.info/gnd/300422415>,
-        <https://d-nb.info/gnd/300470479>,
-        <https://d-nb.info/gnd/300492588>,
-        <https://d-nb.info/gnd/300492596>,
-        <https://d-nb.info/gnd/300727844>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1097294714> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300123825> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180309860> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180430490> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300470479> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179226876> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175476791> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300727844> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/294073325> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300422415> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210947768> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210938301> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300492596> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300492588> ],
         <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1973-28-april>,
         <https://performance.musiconn.de/work/golos-iz-chora-sviridov-georgij-vasilevic>,
         <https://performance.musiconn.de/work/junym-sviridov-georgij-vasilevic>,
-        <https://performance.musiconn.de/work/lieder-op-14-vesennie-vody-rachmaninov-sergej-vasilevic>,
-        <https://performance.musiconn.de/work/lieder-op-21-zdes-choroso-rachmaninov-sergej-vasilevic>,
-        <https://performance.musiconn.de/work/lieder-op-4-ne-poj-krasavica-pri-mne-rachmaninov-sergej-vasilevic>,
-        <https://performance.musiconn.de/work/lieder-op-4-utro-rachmaninov-sergej-vasilevic>,
-        <https://performance.musiconn.de/work/lieder-op-8-son-rachmaninov-sergej-vasilevic>,
         <https://performance.musiconn.de/work/obrocnik-rachmaninov-sergej-vasilevic>,
         <https://performance.musiconn.de/work/pesnja-melnika-calaev-sirvani-r>,
-        <https://performance.musiconn.de/work/romansy-na-slova-e-a-dolmatovskogo-schostakowitsch-dmitri-d>,
         <https://performance.musiconn.de/work/serenada-calaev-sirvani-r>,
-        <https://performance.musiconn.de/work/u-vrat-obiteli-svjatoj-rachmaninov-sergej-vasilevic>,
         <https://performance.musiconn.de/work/v-niznem-novgorode-sviridov-georgij-vasilevic>,
-        <https://performance.musiconn.de/work/vse-otnjal-u-menja-rachmaninov-sergej-vasilevic>,
-        <https://viaf.org/viaf/175476791>,
-        <https://viaf.org/viaf/179226876>,
-        <https://viaf.org/viaf/180309860>,
-        <https://viaf.org/viaf/180430490>,
-        <https://viaf.org/viaf/210938301>,
-        <https://viaf.org/viaf/210947768>,
-        <https://viaf.org/viaf/294073325> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/175476791>,
-        <https://viaf.org/viaf/179226876>,
-        <https://viaf.org/viaf/180309860>,
-        <https://viaf.org/viaf/180430490>,
-        <https://viaf.org/viaf/210938301>,
-        <https://viaf.org/viaf/210947768>,
-        <https://viaf.org/viaf/294073325> .
+        <https://performance.musiconn.de/work/vse-otnjal-u-menja-rachmaninov-sergej-vasilevic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175476791> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179226876> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180309860> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180430490> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210938301> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210947768> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/294073325> a nfdicore:NFDI_0001010 .
 

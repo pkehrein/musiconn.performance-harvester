@@ -1,31 +1,38 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300061838> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4260885-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/passionskantate-auffuehrung-bei-einem-wohltaetigkeitskonzert-der-koeniglichen-kapelle-zu-potsdam-hof-und-garnisonkirche-potsdam-1773-04-05-13-30> ] .
 
-<https://performance.musiconn.de/event/passionskantate-auffuehrung-bei-einem-wohltaetigkeitskonzert-der-koeniglichen-kapelle-zu-potsdam-hof-und-garnisonkirche-potsdam-1773-04-05-13-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/passionskantate-auffuehrung-bei-einem-wohltaetigkeitskonzert-der-koeniglichen-kapelle-zu-potsdam-hof-und-garnisonkirche-potsdam-1773-04-05-13-30> a cto:CTO_0001005 ;
     rdfs:label "Passionskantate - Aufführung bei einem Wohltätigkeitskonzert der Königlichen Kapelle zu Potsdam, Hof- und Garnisonkirche (Potsdam), 5.4.1773, 13:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/passionskantaten-auffuehrungen-bei-wohltaetigkeitskonzerten-der-koeniglichen-kapelle-zu-potsdam> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1773-04-05T13:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1773-04-05T13:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300061838>,
-        <https://d-nb.info/gnd/4260885-5> ;
-    cto:itemOf <https://performance.musiconn.de/series/passionskantaten-auffuehrungen-bei-wohltaetigkeitskonzerten-der-koeniglichen-kapelle-zu-potsdam> ;
-    cto:relatedItem <https://d-nb.info/gnd/300061838>,
-        <https://performance.musiconn.de/source/carl-philipp-emanuel-bach-dokumente-zu-leben-und-wirken-aus-der-zeitgenoessischen-hamburgischen-presse-1767-1790-leipziger-beitraege-zur-bach-forschung-4-hildesheim-u-a>,
-        <https://performance.musiconn.de/work/der-tod-jesu-graun-carl-heinrich>,
-        <https://viaf.org/viaf/178654817> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4260885-5>,
-        <https://viaf.org/viaf/310659424> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/unbekannter-chor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/unbekannter-chor>,
         <https://performance.musiconn.de/corporation/unbekanntes-orchester> ;
-    cto:viaf <https://viaf.org/viaf/178654817>,
-        <https://viaf.org/viaf/310659424> .
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/310659424> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4260885-5> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300061838> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178654817> ],
+        <https://performance.musiconn.de/source/carl-philipp-emanuel-bach-dokumente-zu-leben-und-wirken-aus-der-zeitgenoessischen-hamburgischen-presse-1767-1790-leipziger-beitraege-zur-bach-forschung-4-hildesheim-u-a> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178654817> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/310659424> a nfdicore:NFDI_0001010 .
 

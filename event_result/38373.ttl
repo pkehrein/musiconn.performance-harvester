@@ -1,62 +1,85 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1135987467> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300055323> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300090838> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155271> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156073> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300177461> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300304277> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-gewerbehaus-dresden-gewerbehaus-saal-1930-03-04-20-00> ] .
 
-<https://performance.musiconn.de/event/konzert-gewerbehaus-dresden-gewerbehaus-saal-1930-03-04-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-gewerbehaus-dresden-gewerbehaus-saal-1930-03-04-20-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 4.3.1930, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1929-1930> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1930-03-04T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1930-03-04T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1135987467>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300055323>,
-        <https://d-nb.info/gnd/300090838>,
-        <https://d-nb.info/gnd/300155271>,
-        <https://d-nb.info/gnd/300156073>,
-        <https://d-nb.info/gnd/300177461>,
-        <https://d-nb.info/gnd/300304277> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1929-1930> ;
-    cto:relatedItem <https://d-nb.info/gnd/1135987467>,
-        <https://d-nb.info/gnd/300055323>,
-        <https://d-nb.info/gnd/300090838>,
-        <https://d-nb.info/gnd/300155271>,
-        <https://d-nb.info/gnd/300156073>,
-        <https://d-nb.info/gnd/300177461>,
-        <https://d-nb.info/gnd/300304277>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1135987467> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300090838> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178442395> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176131149> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155271> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300304277> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183583292> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300177461> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195812491> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300055323> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156073> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179251314> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183696617> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177404005> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/das-dreimaederlhaus-fragmente-schubert-franz>,
         <https://performance.musiconn.de/work/der-bettelstudent-auswahl-milloecker-carl>,
         <https://performance.musiconn.de/work/die-czardasfuerstin-fantasie-kalman-emmerich>,
         <https://performance.musiconn.de/work/fantasie-aus-der-vogelhaendler-zeller-carl>,
-        <https://performance.musiconn.de/work/florentiner-marsch-fucik-julius>,
-        <https://performance.musiconn.de/work/flotte-bursche-ouvertuere-suppe-franz-von>,
-        <https://performance.musiconn.de/work/im-prater-bluehn-wieder-die-baeume-stolz-robert>,
-        <https://performance.musiconn.de/work/kaiser-walzer-strauss-johann>,
-        <https://performance.musiconn.de/work/mein-lebenslauf-ist-lieb-und-lust-strauss-josef>,
-        <https://performance.musiconn.de/work/paganini-gern-hab-ich-die-fraun-gekuesst-lehar-franz>,
-        <https://performance.musiconn.de/work/weaner-madln-ziehrer-carl-michael>,
-        <https://performance.musiconn.de/work/wien-du-stadt-meiner-traeume-sieczynski-rudolf>,
-        <https://viaf.org/viaf/176131149>,
-        <https://viaf.org/viaf/177404005>,
-        <https://viaf.org/viaf/178442395>,
-        <https://viaf.org/viaf/179251314>,
-        <https://viaf.org/viaf/183583292>,
-        <https://viaf.org/viaf/183696617>,
-        <https://viaf.org/viaf/195812491> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/176131149>,
-        <https://viaf.org/viaf/177404005>,
-        <https://viaf.org/viaf/178442395>,
-        <https://viaf.org/viaf/179251314>,
-        <https://viaf.org/viaf/183583292>,
-        <https://viaf.org/viaf/183696617>,
-        <https://viaf.org/viaf/195812491> .
+        <https://performance.musiconn.de/work/wien-du-stadt-meiner-traeume-sieczynski-rudolf> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176131149> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177404005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178442395> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179251314> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183583292> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183696617> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195812491> a nfdicore:NFDI_0001010 .
 

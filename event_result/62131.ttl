@@ -1,54 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1058565311> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1189859572> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300093810> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144474> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300537646> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7670520-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/iii-concert-ehemaliger-krystallpalast-leipzig-alberthalle-1895-01-29> ] .
 
-<https://performance.musiconn.de/event/iii-concert-ehemaliger-krystallpalast-leipzig-alberthalle-1895-01-29> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/iii-concert-ehemaliger-krystallpalast-leipzig-alberthalle-1895-01-29> a cto:CTO_0001005 ;
     rdfs:label "III. Concert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 29.1.1895" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1895-01-29" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1895-01-29" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1058565311>,
-        <https://d-nb.info/gnd/1189859572>,
-        <https://d-nb.info/gnd/300093810>,
-        <https://d-nb.info/gnd/300144474>,
-        <https://d-nb.info/gnd/300537646>,
-        <https://d-nb.info/gnd/7670520-1> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
-    cto:relatedItem <https://d-nb.info/gnd/1058565311>,
-        <https://d-nb.info/gnd/1189859572>,
-        <https://d-nb.info/gnd/300093810>,
-        <https://d-nb.info/gnd/300144474>,
-        <https://d-nb.info/gnd/300537646>,
-        <https://d-nb.info/gnd/7670520-1>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1189859572> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1058565311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183265799> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144474> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300537646> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213979788> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184287600> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7670520-1> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093810> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180961626> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185193289> ],
         <https://performance.musiconn.de/source/liszt-verein-zum-zehnjaehrigen-jubilaeum-bericht-ueber-die-10jaehrige-thaetigkeit-des-vereins-1885-1895-leipzig-1895>,
-        <https://performance.musiconn.de/work/arabesken-klavier-op-18-c-dur-schumann-robert>,
         <https://performance.musiconn.de/work/auf-dem-wasser-zu-singen-fassung-schubert-franz>,
         <https://performance.musiconn.de/work/du-bist-die-ruh-fassung-klavier-schubert-franz>,
-        <https://performance.musiconn.de/work/gesaenge-op-43-die-mainacht-brahms-johannes>,
-        <https://performance.musiconn.de/work/hungaria-liszt-franz>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-4-op-70-d-moll-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/lenzklaenge-maienklaenge-taubert-ernst-eduard>,
-        <https://performance.musiconn.de/work/romanzen-singstimme-klavier-op-33-wie-froh-und-frisch-brahms-johannes>,
         <https://performance.musiconn.de/work/sinfonien-op-16-d-dur-sgambati-giovanni>,
         <https://performance.musiconn.de/work/thusnelda-seiffhardt-wilhelm>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodie-gruenfeld-alfred>,
-        <https://viaf.org/viaf/180961626>,
-        <https://viaf.org/viaf/183265799>,
-        <https://viaf.org/viaf/184287600>,
-        <https://viaf.org/viaf/185193289>,
-        <https://viaf.org/viaf/213979788> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/180961626>,
-        <https://viaf.org/viaf/183265799>,
-        <https://viaf.org/viaf/184287600>,
-        <https://viaf.org/viaf/185193289>,
-        <https://viaf.org/viaf/213979788> .
+        <https://performance.musiconn.de/work/ungarische-rhapsodie-gruenfeld-alfred> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180961626> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183265799> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184287600> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185193289> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213979788> a nfdicore:NFDI_0001010 .
 

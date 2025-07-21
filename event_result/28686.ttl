@@ -1,52 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1189385082> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1195813449> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300076053> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300271301> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300906811> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30092951X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1913-12-31-14-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1913-12-31-14-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1913-12-31-14-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 31.12.1913, 14:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1913-14> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1913-12-31T14:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1913-12-31T14:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1189385082>,
-        <https://d-nb.info/gnd/1195813449>,
-        <https://d-nb.info/gnd/300076053>,
-        <https://d-nb.info/gnd/300271301>,
-        <https://d-nb.info/gnd/300906811>,
-        <https://d-nb.info/gnd/30092951X>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1913-14> ;
-    cto:relatedItem <https://d-nb.info/gnd/1189385082>,
-        <https://d-nb.info/gnd/1195813449>,
-        <https://d-nb.info/gnd/300076053>,
-        <https://d-nb.info/gnd/300271301>,
-        <https://d-nb.info/gnd/300906811>,
-        <https://d-nb.info/gnd/30092951X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1189385082> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300271301> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176817650> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300906811> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177035894> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194737082> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1195813449> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181031602> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30092951X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300076053> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
         <https://performance.musiconn.de/work/andantes-violoncello-orgel-haertel-gustav-adolf>,
-        <https://performance.musiconn.de/work/domine-ad-adiuvandum-me-homilius-gottfried-august>,
-        <https://performance.musiconn.de/work/ehre-sei-dem-vater-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/gedichte-von-eduard-moerike-gebet-wolf-hugo>,
-        <https://performance.musiconn.de/work/geistliche-lieder-op-71-reiselied-becker-albert>,
-        <https://performance.musiconn.de/work/praeludium-und-fuge-orgel-bwv-552-fuga-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/suiten-violoncello-bwv-1007-1012-sarabande-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/weihnachtslieder-die-koenige-cornelius-peter>,
-        <https://viaf.org/viaf/176817650>,
-        <https://viaf.org/viaf/177035894>,
-        <https://viaf.org/viaf/181031602>,
-        <https://viaf.org/viaf/194737082> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/176817650>,
-        <https://viaf.org/viaf/177035894>,
-        <https://viaf.org/viaf/181031602>,
-        <https://viaf.org/viaf/194737082>,
-        <https://viaf.org/viaf/248189528> .
+        <https://performance.musiconn.de/work/suiten-violoncello-bwv-1007-1012-sarabande-bach-johann-sebastian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176817650> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177035894> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181031602> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194737082> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
 

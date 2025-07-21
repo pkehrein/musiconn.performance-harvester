@@ -1,64 +1,89 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1070884154> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1070884758> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026374> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300127928> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300281935> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300733070> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4122665-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-wartburg-eisenach-2002-09-28> ] .
 
-<https://performance.musiconn.de/event/konzert-wartburg-eisenach-2002-09-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-wartburg-eisenach-2002-09-28> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Wartburg (Eisenach), 28.9.2002" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2002-09-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2002-09-28" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1070884154>,
-        <https://d-nb.info/gnd/1070884758>,
-        <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300026374>,
-        <https://d-nb.info/gnd/300127928>,
-        <https://d-nb.info/gnd/300281935>,
-        <https://d-nb.info/gnd/300733070>,
-        <https://d-nb.info/gnd/4122665-3> ;
-    cto:relatedItem <https://d-nb.info/gnd/1070884154>,
-        <https://d-nb.info/gnd/1070884758>,
-        <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300026374>,
-        <https://d-nb.info/gnd/300127928>,
-        <https://d-nb.info/gnd/300281935>,
-        <https://d-nb.info/gnd/300733070>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/243482353> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4122665-3> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1070884758> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181241390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300127928> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189340944> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1070884154> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198528865> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026374> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179822990> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300733070> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300281935> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/294012203> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315955205> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196877718> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009941> ],
         <https://performance.musiconn.de/source/motettenbuch-2002-03>,
-        <https://performance.musiconn.de/work/ausgewaehlte-volkslieder-woo-610-liebchens-bote-reger-max>,
         <https://performance.musiconn.de/work/es-flog-ein-kleins-waldvoegelein-david-johann-nepomuk>,
-        <https://performance.musiconn.de/work/kume-kum-geselle-min-david-johann-nepomuk>,
-        <https://performance.musiconn.de/work/lieder-chor-herzlieblich-lieb-durch-scheiden-schoenberg-arnold>,
-        <https://performance.musiconn.de/work/lieder-chor-schein-uns-du-liebe-sonne-schoenberg-arnold>,
-        <https://performance.musiconn.de/work/moerike-chorliederbuch-teil-1-vorspruch-distler-hugo>,
-        <https://performance.musiconn.de/work/motetten-op-110-brahms-johannes>,
         <https://performance.musiconn.de/work/motetten-op-23-troeste-uns-gott-unser-heiland-auswahl-schreck-gustav>,
         <https://performance.musiconn.de/work/psalm-130-auswahl-rust-friedrich-wilhelm>,
         <https://performance.musiconn.de/work/psalm-22-richter-ernst-friedrich-eduard>,
         <https://performance.musiconn.de/work/psalm-23-op-42-schreck-gustav>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/volkslieder-1913-die-wuerzburger-gloeckli-reger-max>,
-        <https://viaf.org/viaf/179822990>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/189340944>,
-        <https://viaf.org/viaf/196877718>,
-        <https://viaf.org/viaf/198528865>,
-        <https://viaf.org/viaf/294012203>,
-        <https://viaf.org/viaf/315955205> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4122665-3>,
-        <https://viaf.org/viaf/243482353> ;
-    cto:viaf <https://viaf.org/viaf/179822990>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/189340944>,
-        <https://viaf.org/viaf/196877718>,
-        <https://viaf.org/viaf/198528865>,
-        <https://viaf.org/viaf/243482353>,
-        <https://viaf.org/viaf/294012203>,
-        <https://viaf.org/viaf/315955205> .
+        <https://performance.musiconn.de/work/volkslieder-1913-die-wuerzburger-gloeckli-reger-max> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179822990> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181241390> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189340944> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196877718> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198528865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/243482353> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/294012203> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315955205> a nfdicore:NFDI_0001010 .
 

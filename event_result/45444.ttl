@@ -1,47 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1077849710> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/121816865X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300019408> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300157606> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300235038> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300245262> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-montags-konzert-staedtische-buehnen-frankfurt-am-main-oper-1979-03-12> ] .
 
-<https://performance.musiconn.de/event/4-montags-konzert-staedtische-buehnen-frankfurt-am-main-oper-1979-03-12> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-montags-konzert-staedtische-buehnen-frankfurt-am-main-oper-1979-03-12> a cto:CTO_0001005 ;
     rdfs:label "4. Montags-Konzert, Städtische Bühnen (Frankfurt am Main) / Oper, 12.3.1979" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1978-1979> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1979-03-12" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1979-03-12" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1077849710>,
-        <https://d-nb.info/gnd/121816865X>,
-        <https://d-nb.info/gnd/300019408>,
-        <https://d-nb.info/gnd/300157606>,
-        <https://d-nb.info/gnd/300235038>,
-        <https://d-nb.info/gnd/300245262> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1978-1979> ;
-    cto:relatedItem <https://d-nb.info/gnd/1077849710>,
-        <https://d-nb.info/gnd/121816865X>,
-        <https://d-nb.info/gnd/300019408>,
-        <https://d-nb.info/gnd/300157606>,
-        <https://d-nb.info/gnd/300235038>,
-        <https://d-nb.info/gnd/300245262>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/capriccio-klavier-orchester-k-50-stravinsky-igor>,
-        <https://performance.musiconn.de/work/fantasien-klavier-orchester-l-73-debussy-claude>,
-        <https://performance.musiconn.de/work/romeo-et-juliette-grande-fete-chez-capulet-berlioz-hector>,
-        <https://performance.musiconn.de/work/romeo-et-juliette-scene-damour-berlioz-hector>,
-        <https://performance.musiconn.de/work/romeo-und-julia-scherzo-berlioz-hector>,
-        <https://performance.musiconn.de/work/sinfonien-nr-10-fis-dur-satz-1-mahler-gustav>,
-        <https://viaf.org/viaf/149144782956076846255>,
-        <https://viaf.org/viaf/176215405>,
-        <https://viaf.org/viaf/202939982>,
-        <https://viaf.org/viaf/215927498> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-oper> ;
-    cto:viaf <https://viaf.org/viaf/149144782956076846255>,
-        <https://viaf.org/viaf/176215405>,
-        <https://viaf.org/viaf/202939982>,
-        <https://viaf.org/viaf/215927498> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-oper> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157606> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/149144782956076846255> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300019408> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176215405> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215927498> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/121816865X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300235038> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1077849710> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202939982> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300245262> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/149144782956076846255> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176215405> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202939982> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215927498> a nfdicore:NFDI_0001010 .
 

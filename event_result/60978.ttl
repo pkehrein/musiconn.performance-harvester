@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300141440> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300150946> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300652240> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-kammerkonzert-alte-oper-frankfurt-a-main-grosser-saal-2017-09-28-20-00> ] .
 
-<https://performance.musiconn.de/event/1-kammerkonzert-alte-oper-frankfurt-a-main-grosser-saal-2017-09-28-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-kammerkonzert-alte-oper-frankfurt-a-main-grosser-saal-2017-09-28-20-00> a cto:CTO_0001005 ;
     rdfs:label "1. Kammerkonzert, Alte Oper (Frankfurt a. Main). Großer Saal, 28.9.2017, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2018-2019> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2017-09-28T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2017-09-28T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300141440>,
-        <https://d-nb.info/gnd/300150946>,
-        <https://d-nb.info/gnd/300652240> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2018-2019> ;
-    cto:relatedItem <https://d-nb.info/gnd/300141440>,
-        <https://d-nb.info/gnd/300150946>,
-        <https://d-nb.info/gnd/300652240>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/die-kunst-der-fuge-contrapunctus-4-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-d-810-d-moll-schubert-franz>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-110-c-moll-schostakowitsch-dmitri-d>,
-        <https://viaf.org/viaf/175439013>,
-        <https://viaf.org/viaf/207914472>,
-        <https://viaf.org/viaf/3066151172697439210009> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/175439013>,
-        <https://viaf.org/viaf/207914472>,
-        <https://viaf.org/viaf/3066151172697439210009> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175439013> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3066151172697439210009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207914472> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300652240> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300150946> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141440> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175439013> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207914472> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3066151172697439210009> a nfdicore:NFDI_0001010 .
 

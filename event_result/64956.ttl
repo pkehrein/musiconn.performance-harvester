@@ -1,47 +1,63 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1046243470> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1046352474> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108613> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4530309-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/abokonzert-15-zweites-gewandhaus-leipzig-1920-01-29> ] .
 
-<https://performance.musiconn.de/event/abokonzert-15-zweites-gewandhaus-leipzig-1920-01-29> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/abokonzert-15-zweites-gewandhaus-leipzig-1920-01-29> a cto:CTO_0001005 ;
     rdfs:label "Abokonzert 15, Zweites Gewandhaus (Leipzig), 29.1.1920" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1920-01-29" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1920-01-29" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1046243470>,
-        <https://d-nb.info/gnd/1046352474>,
-        <https://d-nb.info/gnd/300108613>,
-        <https://d-nb.info/gnd/4439652-1>,
-        <https://d-nb.info/gnd/4530309-5> ;
-    cto:relatedItem <https://d-nb.info/gnd/1046243470>,
-        <https://d-nb.info/gnd/1046352474>,
-        <https://d-nb.info/gnd/300108613>,
-        <https://d-nb.info/gnd/4530309-5>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4530309-5> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176675972> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174590426> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1046243470> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108613> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195807854> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306263950> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1046352474> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
         <https://performance.musiconn.de/work/am-bach-lehnt-unterm-schattenbaum-bach-johann-christian>,
         <https://performance.musiconn.de/work/caecilienode-wie-hebt-und-senkt-musik-der-seele-flug-haendel-georg-friedrich>,
         <https://performance.musiconn.de/work/concerto-grosso-f-moll-bearb-a-schering-locatelli-pietro-antonio>,
-        <https://performance.musiconn.de/work/il-trionfo-di-clelia-aus-die-lang-verwaiste-erde-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/konzertante-sinfonien-violine-viola-orchester-kv-364-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/la-vergine-del-sole-ah-tornar-la-bella-aurora-cimarosa-domenico>,
-        <https://performance.musiconn.de/work/sedecia-re-di-gerusalemme-caldo-sangue-scarlatti-alessandro>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-82-87-nr-82-c-dur-haydn-joseph>,
-        <https://viaf.org/viaf/174590426>,
-        <https://viaf.org/viaf/176675972>,
-        <https://viaf.org/viaf/195807854>,
-        <https://viaf.org/viaf/306263950> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/174590426>,
-        <https://viaf.org/viaf/176675972>,
-        <https://viaf.org/viaf/195807854>,
-        <https://viaf.org/viaf/264523828>,
-        <https://viaf.org/viaf/306263950> .
+        <https://performance.musiconn.de/work/il-trionfo-di-clelia-aus-die-lang-verwaiste-erde-gluck-christoph-willibald> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174590426> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176675972> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195807854> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/306263950> a nfdicore:NFDI_0001010 .
 

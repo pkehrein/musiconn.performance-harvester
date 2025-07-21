@@ -1,32 +1,38 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300150954> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300195249> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncert-4-nojabrja-sankt-petersburger-philharmonie-kleiner-saal-1968-11-04> ] .
 
-<https://performance.musiconn.de/event/koncert-4-nojabrja-sankt-petersburger-philharmonie-kleiner-saal-1968-11-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncert-4-nojabrja-sankt-petersburger-philharmonie-kleiner-saal-1968-11-04> a cto:CTO_0001005 ;
     rdfs:label "Koncert 4. nojabrja, Sankt-Petersburger Philharmonie / Kleiner Saal, 4.11.1968" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1968-69> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1968-11-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1968-11-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300150954>,
-        <https://d-nb.info/gnd/300195249> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1968-69> ;
-    cto:relatedItem <https://d-nb.info/gnd/300150954>,
-        <https://d-nb.info/gnd/300195249>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300195249> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/300366192> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200779993> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300150954> ],
         <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1968-4-november>,
-        <https://performance.musiconn.de/work/gran-sestetto-originale-glinka-michail-ivanovic>,
-        <https://performance.musiconn.de/work/praeludien-und-fugen-op-87-ausschnitte-schostakowitsch-dmitri-d>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-12-op-133-des-dur-schostakowitsch-dmitri-d>,
-        <https://viaf.org/viaf/200779993>,
-        <https://viaf.org/viaf/300366192> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/200779993>,
-        <https://viaf.org/viaf/300366192> .
+        <https://performance.musiconn.de/work/praeludien-und-fugen-op-87-ausschnitte-schostakowitsch-dmitri-d> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/200779993> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/300366192> a nfdicore:NFDI_0001010 .
 

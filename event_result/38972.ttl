@@ -1,48 +1,65 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1183328915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300068875> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300107315> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300167644> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300202555> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4113353-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zwinger-serenade-zwinger-dresden-1939-07-22-20-30> ] .
 
-<https://performance.musiconn.de/event/zwinger-serenade-zwinger-dresden-1939-07-22-20-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zwinger-serenade-zwinger-dresden-1939-07-22-20-30> a cto:CTO_0001005 ;
     rdfs:label "Zwinger-Serenade, Zwinger (Dresden), 22.7.1939, 20:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1938-1939> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1939-07-22T20:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1939-07-22T20:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1183328915>,
-        <https://d-nb.info/gnd/300068875>,
-        <https://d-nb.info/gnd/300107315>,
-        <https://d-nb.info/gnd/300167644>,
-        <https://d-nb.info/gnd/300202555>,
-        <https://d-nb.info/gnd/4113353-5> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1938-1939> ;
-    cto:relatedItem <https://d-nb.info/gnd/1183328915>,
-        <https://d-nb.info/gnd/300068875>,
-        <https://d-nb.info/gnd/300107315>,
-        <https://d-nb.info/gnd/300167644>,
-        <https://d-nb.info/gnd/300202555>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4113353-5> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300167644> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201855123> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300107315> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183161811> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202940905> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300068875> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300202555> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1183328915> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2708155566481613380003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/295317092> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/chaconne-violine-basso-continuo-g-moll>,
-        <https://performance.musiconn.de/work/concertonen-violine-2-orchester-kv-190-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/divertimenti-kv-131-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/divertimenti-violine-4-bassinstrument-2-hob-2-39-haydn-joseph>,
-        <https://performance.musiconn.de/work/marsch-d-dur-kv-335-nr2-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/ouvertueren-kv-311-a-b-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/183161811>,
-        <https://viaf.org/viaf/201855123>,
-        <https://viaf.org/viaf/202940905>,
-        <https://viaf.org/viaf/2708155566481613380003>,
-        <https://viaf.org/viaf/295317092> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4113353-5> ;
-    cto:viaf <https://viaf.org/viaf/183161811>,
-        <https://viaf.org/viaf/201855123>,
-        <https://viaf.org/viaf/202940905>,
-        <https://viaf.org/viaf/2708155566481613380003>,
-        <https://viaf.org/viaf/295317092> .
+        <https://performance.musiconn.de/work/marsch-d-dur-kv-335-nr2-mozart-wolfgang-amadeus> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/183161811> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201855123> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202940905> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2708155566481613380003> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/295317092> a nfdicore:NFDI_0001010 .
 

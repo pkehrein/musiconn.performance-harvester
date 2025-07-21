@@ -1,42 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300007078> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300142811> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300289588> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1997-09-13> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1997-09-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1997-09-13> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 13.9.1997" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1997-09-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1997-09-13" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300007078>,
-        <https://d-nb.info/gnd/300142811>,
-        <https://d-nb.info/gnd/300289588>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/300007078>,
-        <https://d-nb.info/gnd/300142811>,
-        <https://d-nb.info/gnd/300289588>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184518768> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300142811> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300289588> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300007078> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212884960> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175409851> ],
         <https://performance.musiconn.de/source/motettenbuch-1997-98>,
         <https://performance.musiconn.de/work/deutsche-messe-op-42-gloria-david-johann-nepomuk>,
         <https://performance.musiconn.de/work/deutsche-messe-op-42-kyrie-david-johann-nepomuk>,
-        <https://performance.musiconn.de/work/geistliche-chor-music-herzlich-lieb-hab-ich-dich-o-herr-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/geistliche-chormusik-das-ist-je-gewisslich-wahr-und-ein-teuer-wertes-wort-schuetz-heinrich>,
         <https://performance.musiconn.de/work/o-grosser-unbegreiflicher-gott-thiele-siegfried>,
-        <https://performance.musiconn.de/work/seligpreisungen-braeutigam-volker>,
-        <https://performance.musiconn.de/work/wer-weiss-wie-nahe-mir-mein-ende-bach-johann-sebastian>,
-        <https://viaf.org/viaf/175409851>,
-        <https://viaf.org/viaf/184518768>,
-        <https://viaf.org/viaf/212884960> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/175409851>,
-        <https://viaf.org/viaf/184518768>,
-        <https://viaf.org/viaf/212884960> .
+        <https://performance.musiconn.de/work/seligpreisungen-braeutigam-volker> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175409851> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184518768> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212884960> a nfdicore:NFDI_0001010 .
 

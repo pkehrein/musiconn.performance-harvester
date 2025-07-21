@@ -1,41 +1,50 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015143> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146469> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300463154> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-des-kreuzchores-und-der-philharmonie-kirche-zu-gittersee-1945-08-24> ] .
 
-<https://performance.musiconn.de/event/konzert-des-kreuzchores-und-der-philharmonie-kirche-zu-gittersee-1945-08-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-des-kreuzchores-und-der-philharmonie-kirche-zu-gittersee-1945-08-24> a cto:CTO_0001005 ;
     rdfs:label "Konzert des Kreuzchores und der Philharmonie, Kirche zu Gittersee, 24.8.1945" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1945-46> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1945-08-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1945-08-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015143>,
-        <https://d-nb.info/gnd/300146469>,
-        <https://d-nb.info/gnd/300463154> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1945-46> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015143>,
-        <https://d-nb.info/gnd/300146469>,
-        <https://d-nb.info/gnd/300463154>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kirche-zu-gittersee> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306409869> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211719995> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174573522> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146469> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300463154> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015143> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
         <https://performance.musiconn.de/work/alltag-muss-sein-mauersberger-rudolf>,
         <https://performance.musiconn.de/work/jagdchor-im-wald-und-auf-der-heide-mauersberger-rudolf>,
         <https://performance.musiconn.de/work/jagdchor-waldhorn-mauersberger-rudolf>,
-        <https://performance.musiconn.de/work/jagdlieder-der-weisse-hirsch-mauersberger-rudolf>,
         <https://performance.musiconn.de/work/musik-melodien-heilen-unsre-schmerzen-mauersberger-rudolf>,
-        <https://performance.musiconn.de/work/musik-zum-trauerspiel-egmont-von-johann-wolfgang-von-goethe-ouvertuere-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-38-b-dur-schumann-robert>,
-        <https://performance.musiconn.de/work/unruh-der-zeit-mauersberger-rudolf>,
-        <https://viaf.org/viaf/174573522>,
-        <https://viaf.org/viaf/211719995>,
-        <https://viaf.org/viaf/306409869> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kirche-zu-gittersee> ;
-    cto:viaf <https://viaf.org/viaf/174573522>,
-        <https://viaf.org/viaf/211719995>,
-        <https://viaf.org/viaf/306409869> .
+        <https://performance.musiconn.de/work/unruh-der-zeit-mauersberger-rudolf> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174573522> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211719995> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/306409869> a nfdicore:NFDI_0001010 .
 

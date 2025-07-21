@@ -1,49 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/2100286-1> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108508> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109911> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141777> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171528> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300817274> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/einmaliges-gastspiel-der-dresdner-philharmonie-antonsthal-1950-07-11-20-00> ] .
 
-<https://performance.musiconn.de/event/einmaliges-gastspiel-der-dresdner-philharmonie-antonsthal-1950-07-11-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/einmaliges-gastspiel-der-dresdner-philharmonie-antonsthal-1950-07-11-20-00> a cto:CTO_0001005 ;
     rdfs:label "Einmaliges Gastspiel der Dresdner Philharmonie, Antonsthal, 11.7.1950, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1949-1950> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1950-07-11T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1950-07-11T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/2100286-1>,
-        <https://d-nb.info/gnd/300108508>,
-        <https://d-nb.info/gnd/300109911>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/300817274> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1949-1950> ;
-    cto:relatedItem <https://d-nb.info/gnd/300108508>,
-        <https://d-nb.info/gnd/300109911>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/300817274>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/der-freischuetz-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/eine-kleine-nachtmusik-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/le-nozze-di-figaro-ouvertuere-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-d-759-h-moll-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-2-haydn-joseph>,
-        <https://viaf.org/viaf/177348732>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/183911740>,
-        <https://viaf.org/viaf/184684776> ;
-    cto:relatedLocation <https://d-nb.info/gnd/2100286-1>,
-        <https://viaf.org/viaf/136714869> ;
-    cto:viaf <https://viaf.org/viaf/136714869>,
-        <https://viaf.org/viaf/177348732>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/183911740>,
-        <https://viaf.org/viaf/184684776> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/2100286-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/136714869> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425978> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177348732> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300817274> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141777> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108508> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183911740> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184684776> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109911> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177811557> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/136714869> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177348732> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177811557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179425978> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183911740> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184684776> a nfdicore:NFDI_0001010 .
 

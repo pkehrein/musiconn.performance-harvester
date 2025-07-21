@@ -1,61 +1,85 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1081048301> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015194> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30002567X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027257> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029349> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300062486> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146485> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/301022283> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/siebentes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1892-01-22-18-30> ] .
 
-<https://performance.musiconn.de/event/siebentes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1892-01-22-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/siebentes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1892-01-22-18-30> a cto:CTO_0001005 ;
     rdfs:label "Siebentes Museums-Concert, Großer Konzertsaal (Frankfurt a. M.), 22.1.1892, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1891-1892> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1892-01-22T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1892-01-22T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1081048301>,
-        <https://d-nb.info/gnd/300015194>,
-        <https://d-nb.info/gnd/30002567X>,
-        <https://d-nb.info/gnd/300027257>,
-        <https://d-nb.info/gnd/300029349>,
-        <https://d-nb.info/gnd/300062486>,
-        <https://d-nb.info/gnd/300146485>,
-        <https://d-nb.info/gnd/301022283> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1891-1892> ;
-    cto:relatedItem <https://d-nb.info/gnd/1081048301>,
-        <https://d-nb.info/gnd/300015194>,
-        <https://d-nb.info/gnd/30002567X>,
-        <https://d-nb.info/gnd/300027257>,
-        <https://d-nb.info/gnd/300029349>,
-        <https://d-nb.info/gnd/300062486>,
-        <https://d-nb.info/gnd/300146485>,
-        <https://d-nb.info/gnd/301022283>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/fidelio-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-77-d-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/merlin-vorspiel-goldmark-karl>,
-        <https://performance.musiconn.de/work/peer-gynt-suite-nr-1-op-46-grieg-edvard>,
-        <https://performance.musiconn.de/work/romanzen-violine-orchester-op-42-a-moll-bruch-max>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-op-97-es-dur-schumann-robert>,
-        <https://performance.musiconn.de/work/ungarische-taenze-nr-5-brahms-johannes>,
-        <https://performance.musiconn.de/work/ungarische-taenze-tanz-nr-2-brahms-johannes>,
-        <https://viaf.org/viaf/177579813>,
-        <https://viaf.org/viaf/179822789>,
-        <https://viaf.org/viaf/181446529>,
-        <https://viaf.org/viaf/193652749>,
-        <https://viaf.org/viaf/214736935>,
-        <https://viaf.org/viaf/234753095>,
-        <https://viaf.org/viaf/49145304863278611179>,
-        <https://viaf.org/viaf/744144783054778562913> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/177579813>,
-        <https://viaf.org/viaf/179822789>,
-        <https://viaf.org/viaf/181446529>,
-        <https://viaf.org/viaf/193652749>,
-        <https://viaf.org/viaf/214736935>,
-        <https://viaf.org/viaf/234753095>,
-        <https://viaf.org/viaf/49145304863278611179>,
-        <https://viaf.org/viaf/744144783054778562913> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181446529> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027257> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/234753095> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1081048301> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30002567X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146485> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177579813> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214736935> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179822789> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301022283> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015194> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029349> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193652749> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062486> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/49145304863278611179> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/744144783054778562913> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177579813> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179822789> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181446529> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193652749> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214736935> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/234753095> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/49145304863278611179> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/744144783054778562913> a nfdicore:NFDI_0001010 .
 

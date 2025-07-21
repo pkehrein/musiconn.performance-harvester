@@ -1,61 +1,86 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1056883510> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1056884452> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1176460765> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300142714> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300431740> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300705697> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4196596-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-muenster-bern-1935-10-24> ] .
 
-<https://performance.musiconn.de/event/konzert-muenster-bern-1935-10-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-muenster-bern-1935-10-24> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Münster Bern, 24.10.1935" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1935-10-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1935-10-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1056883510>,
-        <https://d-nb.info/gnd/1056884452>,
-        <https://d-nb.info/gnd/1176460765>,
-        <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300142714>,
-        <https://d-nb.info/gnd/300431740>,
-        <https://d-nb.info/gnd/300705697>,
-        <https://d-nb.info/gnd/4196596-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1056883510>,
-        <https://d-nb.info/gnd/1056884452>,
-        <https://d-nb.info/gnd/1176460765>,
-        <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300142714>,
-        <https://d-nb.info/gnd/300431740>,
-        <https://d-nb.info/gnd/300705697>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/233745826> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4196596-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5502154923709263780009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184525448> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1056884452> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174086108> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181241390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300431740> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1176460765> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300142714> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300705697> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316736830> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175477440> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177608230> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1056883510> ],
         <https://performance.musiconn.de/source/motettenbuch-1935>,
         <https://performance.musiconn.de/work/ach-herre-wie-sind-meiner-feinde-so-viel-koeler-david>,
-        <https://performance.musiconn.de/work/cantiones-sacrae-cantate-domino-canticum-novum-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/cantiones-sacrae-de-festis-praecipuis-totius-anni-pater-noster-qui-es-in-coelis-hassler-hans-leo>,
-        <https://performance.musiconn.de/work/cantiones-sacrae-in-te-domine-speravi-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/cantiones-sacrae-veni-rogo-in-cor-meum-schuetz-heinrich>,
         <https://performance.musiconn.de/work/centuria-pars-1-exultate-justi-dulichius-philipp>,
-        <https://performance.musiconn.de/work/deutsches-magnificat-swv-494-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/newe-deudsche-gesenge-da-jakob-nu-das-kleid-ansah-senfl-ludwig>,
-        <https://performance.musiconn.de/work/psalmen-davids-psalm-6-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-bach-johann-sebastian>,
-        <https://viaf.org/viaf/174086108>,
-        <https://viaf.org/viaf/175477440>,
-        <https://viaf.org/viaf/177608230>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/184525448>,
-        <https://viaf.org/viaf/316736830>,
-        <https://viaf.org/viaf/5502154923709263780009> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4196596-6>,
-        <https://viaf.org/viaf/233745826> ;
-    cto:viaf <https://viaf.org/viaf/174086108>,
-        <https://viaf.org/viaf/175477440>,
-        <https://viaf.org/viaf/177608230>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/184525448>,
-        <https://viaf.org/viaf/233745826>,
-        <https://viaf.org/viaf/316736830>,
-        <https://viaf.org/viaf/5502154923709263780009> .
+        <https://performance.musiconn.de/work/newe-deudsche-gesenge-da-jakob-nu-das-kleid-ansah-senfl-ludwig> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174086108> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175477440> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177608230> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181241390> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184525448> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/233745826> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316736830> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5502154923709263780009> a nfdicore:NFDI_0001010 .
 

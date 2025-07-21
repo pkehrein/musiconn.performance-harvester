@@ -4,32 +4,43 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1024150917> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1032056800> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/tvorceskij-vecer-vladimira-k-sorokina-dom-kompozitorov-sankt-petersburg-1964-11-13> ] .
 
-<https://performance.musiconn.de/event/tvorceskij-vecer-vladimira-k-sorokina-dom-kompozitorov-sankt-petersburg-1964-11-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/tvorceskij-vecer-vladimira-k-sorokina-dom-kompozitorov-sankt-petersburg-1964-11-13> a cto:CTO_0001005 ;
     rdfs:label "Tvorčeskij večer Vladimira K. Sorokina, Dom kompozitorov (Sankt Petersburg), 13.11.1964" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1964-11-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1964-11-13" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1032056800> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1024150917> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/leningrader-komponistenhaus-1964-13-november> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1024150917>,
-        <https://d-nb.info/gnd/1032056800>,
-        <https://d-nb.info/gnd/1200899989> ;
-    cto:relatedItem <https://performance.musiconn.de/source/leningrader-komponistenhaus-1964-13-november> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1200899989>,
-        <https://viaf.org/viaf/385157583849933970005> ;
-    cto:relatedPerson <https://d-nb.info/gnd/1024150917>,
-        <https://d-nb.info/gnd/1032056800>,
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/46553200> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/15177727> ],
         <https://performance.musiconn.de/person/dobrjanskij-jakov>,
         <https://performance.musiconn.de/person/fradkova-marina>,
         <https://performance.musiconn.de/person/novikova-nina>,
-        <https://performance.musiconn.de/person/potapov-viktor>,
-        <https://viaf.org/viaf/15177727>,
-        <https://viaf.org/viaf/46553200> ;
-    cto:viaf <https://viaf.org/viaf/15177727>,
-        <https://viaf.org/viaf/385157583849933970005>,
-        <https://viaf.org/viaf/46553200> .
+        <https://performance.musiconn.de/person/potapov-viktor> .
+
+<https://viaf.org/viaf/15177727> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/46553200> a nfdicore:NFDI_0001010 .
 

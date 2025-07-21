@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1056884452> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009976> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009984> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300056478> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4518820-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-weimarhalle-weimar-1948-03-14> ] .
 
-<https://performance.musiconn.de/event/konzert-weimarhalle-weimar-1948-03-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-weimarhalle-weimar-1948-03-14> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Weimarhalle (Weimar), 14.3.1948" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1948-03-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1948-03-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1056884452>,
-        <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300056478>,
-        <https://d-nb.info/gnd/4518820-8> ;
-    cto:relatedItem <https://d-nb.info/gnd/1056884452>,
-        <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300056478>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/135312955> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4518820-8> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177902951> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174651654> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009984> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009976> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1056884452> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184525448> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300056478> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177379672> ],
         <https://performance.musiconn.de/source/motettenbuch-1948>,
-        <https://performance.musiconn.de/work/alta-trinita-beata-anonym>,
-        <https://performance.musiconn.de/work/cantiones-sacrae-veni-rogo-in-cor-meum-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/der-geist-hilft-unser-schwachheit-auf-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/jesu-meine-freude-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/opus-musicum-tomus-1-pater-noster-qui-es-in-coelis-gallus-jacobus>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/177902951>,
-        <https://viaf.org/viaf/184525448> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4518820-8>,
-        <https://viaf.org/viaf/135312955> ;
-    cto:viaf <https://viaf.org/viaf/135312955>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/177902951>,
-        <https://viaf.org/viaf/184525448> .
+        <https://performance.musiconn.de/work/alta-trinita-beata-anonym> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/135312955> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174651654> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177379672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177902951> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184525448> a nfdicore:NFDI_0001010 .
 

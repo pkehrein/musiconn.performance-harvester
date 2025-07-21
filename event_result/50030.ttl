@@ -1,32 +1,38 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300011148> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027052> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kammermusikabend-club-der-kulturschaffenden-johannes-r-becher-1969-12-03-19-30> ] .
 
-<https://performance.musiconn.de/event/kammermusikabend-club-der-kulturschaffenden-johannes-r-becher-1969-12-03-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kammermusikabend-club-der-kulturschaffenden-johannes-r-becher-1969-12-03-19-30> a cto:CTO_0001005 ;
     rdfs:label "Kammermusikabend, Club der Kulturschaffenden \"Johannes R. Becher\", 3.12.1969, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1969-12-03T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1969-12-03T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300011148>,
-        <https://d-nb.info/gnd/300027052> ;
-    cto:relatedItem <https://d-nb.info/gnd/300011148>,
-        <https://d-nb.info/gnd/300027052>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/club-der-kulturschaffenden-johannes-r-becher> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210935680> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209861083> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011148> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027052> ],
         <https://performance.musiconn.de/source/plakate-programmhefte-und-rezensionen-aus-dem-nachlass-hermann-keller-2-programmhefte-1955-1984>,
         <https://performance.musiconn.de/work/polonaise-a-dur-wieniawski-adam>,
-        <https://performance.musiconn.de/work/sonaten-klavier-henze-hans-werner>,
-        <https://performance.musiconn.de/work/sonaten-und-partiten-violine-bwv-1001-1006-partita-nr-2-chaconne-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-nr-2-op-100-a-dur-brahms-johannes>,
-        <https://viaf.org/viaf/209861083>,
-        <https://viaf.org/viaf/210935680> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/club-der-kulturschaffenden-johannes-r-becher> ;
-    cto:viaf <https://viaf.org/viaf/209861083>,
-        <https://viaf.org/viaf/210935680> .
+        <https://performance.musiconn.de/work/sonaten-klavier-henze-hans-werner> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/209861083> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210935680> a nfdicore:NFDI_0001010 .
 

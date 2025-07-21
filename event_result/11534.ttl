@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300007981> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029535> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029705> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1975-05-31> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1975-05-31> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1975-05-31> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 31.5.1975" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1975-05-31" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1975-05-31" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300007981>,
-        <https://d-nb.info/gnd/300029535>,
-        <https://d-nb.info/gnd/300029705>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/300007981>,
-        <https://d-nb.info/gnd/300029535>,
-        <https://d-nb.info/gnd/300029705>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178022968> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300007981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029535> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194731077> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185108215> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029705> ],
         <https://performance.musiconn.de/source/motettenbuch-1975>,
-        <https://performance.musiconn.de/work/ave-maria-wab-6-f-dur-bruckner-anton>,
-        <https://performance.musiconn.de/work/gottes-zeit-ist-die-allerbeste-zeit-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/locus-iste-bruckner-anton>,
-        <https://performance.musiconn.de/work/motetten-op-74-warum-ist-das-licht-gegeben-dem-muehseligen-auswahl-brahms-johannes>,
-        <https://viaf.org/viaf/178022968>,
-        <https://viaf.org/viaf/185108215>,
-        <https://viaf.org/viaf/194731077> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/178022968>,
-        <https://viaf.org/viaf/185108215>,
-        <https://viaf.org/viaf/194731077> .
+        <https://performance.musiconn.de/work/motetten-op-74-warum-ist-das-licht-gegeben-dem-muehseligen-auswahl-brahms-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178022968> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185108215> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194731077> a nfdicore:NFDI_0001010 .
 

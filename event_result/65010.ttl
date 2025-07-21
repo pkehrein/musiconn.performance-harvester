@@ -1,47 +1,64 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300036566> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300036787> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101821> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140924> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4838708-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/concert-zum-besten-des-evangelischen-frauen-vereins-rathaus-muenster-westf-friedenssaal-1865-01-28> ] .
 
-<https://performance.musiconn.de/event/concert-zum-besten-des-evangelischen-frauen-vereins-rathaus-muenster-westf-friedenssaal-1865-01-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/concert-zum-besten-des-evangelischen-frauen-vereins-rathaus-muenster-westf-friedenssaal-1865-01-28> a cto:CTO_0001005 ;
     rdfs:label "Concert zum Besten des evangelischen Frauen-Vereins, Rathaus Münster (Westf) / Friedenssaal, 28.1.1865" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sonderkonzerte-des-musikvereins-muenster-saison-1864-65> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1865-01-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1865-01-28" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300036566>,
-        <https://d-nb.info/gnd/300036787>,
-        <https://d-nb.info/gnd/300101821>,
-        <https://d-nb.info/gnd/300140924>,
-        <https://d-nb.info/gnd/4453573-9>,
-        <https://d-nb.info/gnd/4838708-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/sonderkonzerte-des-musikvereins-muenster-saison-1864-65> ;
-    cto:relatedItem <https://d-nb.info/gnd/300036566>,
-        <https://d-nb.info/gnd/300036787>,
-        <https://d-nb.info/gnd/300101821>,
-        <https://d-nb.info/gnd/300140924>,
-        <https://d-nb.info/gnd/4838708-3>,
-        <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1864-1865>,
-        <https://performance.musiconn.de/work/anacreon-ouvertuere-cherubini-luigi>,
-        <https://performance.musiconn.de/work/balladen-klavier-nr-3-op-47-as-dur-chopin-frederic>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-mwv-o-7-g-moll-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/lieder-schubert-franz>,
-        <https://performance.musiconn.de/work/preciosa-weber-carl-maria-von>,
-        <https://viaf.org/viaf/180233295>,
-        <https://viaf.org/viaf/182296322>,
-        <https://viaf.org/viaf/202938551>,
-        <https://viaf.org/viaf/213966094>,
-        <https://viaf.org/viaf/231822588> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/180233295>,
-        <https://viaf.org/viaf/182296322>,
-        <https://viaf.org/viaf/202938551>,
-        <https://viaf.org/viaf/213966094>,
-        <https://viaf.org/viaf/231822588> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180233295> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182296322> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213966094> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/231822588> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202938551> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4838708-3> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300036566> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101821> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140924> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300036787> ],
+        <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1864-1865> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180233295> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182296322> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202938551> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213966094> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/231822588> a nfdicore:NFDI_0001010 .
 

@@ -1,45 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1193152992> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/16334214-3> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111037> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300595115> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4066009-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-konzert-wien-1986-03-13> ] .
 
-<https://performance.musiconn.de/event/3-konzert-wien-1986-03-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-konzert-wien-1986-03-13> a cto:CTO_0001005 ;
     rdfs:label "3. Konzert, Wien, 13.3.1986" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/1-frauen-kammerorchester-von-oesterreich> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-03-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-03-13" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1193152992>,
-        <https://d-nb.info/gnd/16334214-3>,
-        <https://d-nb.info/gnd/300111037>,
-        <https://d-nb.info/gnd/300595115>,
-        <https://d-nb.info/gnd/4066009-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/1-frauen-kammerorchester-von-oesterreich> ;
-    cto:relatedItem <https://d-nb.info/gnd/1193152992>,
-        <https://d-nb.info/gnd/300111037>,
-        <https://d-nb.info/gnd/300595115>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/220914825> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/16334214-3> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/137212727> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4066009-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300595115> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219934692> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175895680> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183692731> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111037> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1193152992> ],
         <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-1-frauen-kammerorchester-von-oesterreich-saison-1985-1986>,
-        <https://performance.musiconn.de/work/aria-in-classic-style-grandjany-marcel>,
         <https://performance.musiconn.de/work/danses-debussy-claude>,
-        <https://performance.musiconn.de/work/divertimento-streichorchester-bacewicz-grazyna>,
-        <https://performance.musiconn.de/work/molto-sostenuto-eckhardt-gramatte-sophie-carmen>,
-        <https://performance.musiconn.de/work/sinfonien-kv-201-a-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/175895680>,
-        <https://viaf.org/viaf/183692731>,
-        <https://viaf.org/viaf/219934692> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4066009-6>,
-        <https://viaf.org/viaf/137212727> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/16334214-3>,
-        <https://viaf.org/viaf/220914825> ;
-    cto:viaf <https://viaf.org/viaf/137212727>,
-        <https://viaf.org/viaf/175895680>,
-        <https://viaf.org/viaf/183692731>,
-        <https://viaf.org/viaf/219934692>,
-        <https://viaf.org/viaf/220914825> .
+        <https://performance.musiconn.de/work/divertimento-streichorchester-bacewicz-grazyna> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/137212727> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175895680> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183692731> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219934692> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/220914825> a nfdicore:NFDI_0001010 .
 

@@ -1,36 +1,43 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1159531625> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1188834975> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300540930> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vokal-und-instrumentalmusik-im-konzertsaal-auf-dem-kamp-konzertsaal-auf-dem-valentinskamp-hamburg-1774-12-12> ] .
 
-<https://performance.musiconn.de/event/vokal-und-instrumentalmusik-im-konzertsaal-auf-dem-kamp-konzertsaal-auf-dem-valentinskamp-hamburg-1774-12-12> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vokal-und-instrumentalmusik-im-konzertsaal-auf-dem-kamp-konzertsaal-auf-dem-valentinskamp-hamburg-1774-12-12> a cto:CTO_0001005 ;
     rdfs:label "Vokal- und Instrumentalmusik im Konzertsaal auf dem Kamp, Konzertsaal auf dem Valentinskamp (Hamburg), 12.12.1774" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1774-12-12" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1774-12-12" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1159531625>,
-        <https://d-nb.info/gnd/1188834975>,
-        <https://d-nb.info/gnd/300540930> ;
-    cto:relatedItem <https://d-nb.info/gnd/1159531625>,
-        <https://d-nb.info/gnd/1188834975>,
-        <https://d-nb.info/gnd/300540930>,
-        <https://performance.musiconn.de/source/carl-philipp-emanuel-bach-dokumente-zu-leben-und-wirken-aus-der-zeitgenoessischen-hamburgischen-presse-1767-1790-leipziger-beitraege-zur-bach-forschung-4-hildesheim-u-a>,
-        <https://performance.musiconn.de/work/die-hirten-bei-der-krippe-zu-bethlehem-holland-johann-david>,
-        <https://performance.musiconn.de/work/konzerte-cembalo-orchester-anonym>,
-        <https://performance.musiconn.de/work/te-deum-graunwv-b-6-2-graun-carl-heinrich>,
-        <https://performance.musiconn.de/work/wer-ist-so-wuerdig-als-du-bach-carl-philipp-emanuel>,
-        <https://viaf.org/viaf/176025900>,
-        <https://viaf.org/viaf/210949615> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/konzertsaal-auf-dem-valentinskamp-hamburg> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/unbekannter-chor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/unbekannter-chor>,
         <https://performance.musiconn.de/corporation/unbekanntes-orchester> ;
-    cto:viaf <https://viaf.org/viaf/176025900>,
-        <https://viaf.org/viaf/210949615> .
+    cto:CTO_0001011 <https://performance.musiconn.de/location/konzertsaal-auf-dem-valentinskamp-hamburg> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176025900> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300540930> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210949615> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1188834975> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1159531625> ],
+        <https://performance.musiconn.de/source/carl-philipp-emanuel-bach-dokumente-zu-leben-und-wirken-aus-der-zeitgenoessischen-hamburgischen-presse-1767-1790-leipziger-beitraege-zur-bach-forschung-4-hildesheim-u-a>,
+        <https://performance.musiconn.de/work/konzerte-cembalo-orchester-anonym> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176025900> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210949615> a nfdicore:NFDI_0001010 .
 

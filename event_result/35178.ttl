@@ -1,35 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300121547> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300193866> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30023158X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-ausserordentliches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1964-09-05-19-30> ] .
 
-<https://performance.musiconn.de/event/1-ausserordentliches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1964-09-05-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-ausserordentliches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1964-09-05-19-30> a cto:CTO_0001005 ;
     rdfs:label "1. Außerordentliches Konzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 5.9.1964, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1964-09-05T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1964-09-05T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300121547>,
-        <https://d-nb.info/gnd/300193866>,
-        <https://d-nb.info/gnd/30023158X> ;
-    cto:relatedItem <https://d-nb.info/gnd/300121547>,
-        <https://d-nb.info/gnd/300193866>,
-        <https://d-nb.info/gnd/30023158X>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/concerti-grossi-hwv-319-330-konzert-hwv-320-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-ms-48-h-moll-paganini-niccolo>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-2-op-63-g-moll-prokofiev-sergei-sergeyevich>,
-        <https://viaf.org/viaf/202941561>,
-        <https://viaf.org/viaf/217005590>,
-        <https://viaf.org/viaf/219936833> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/202941561>,
-        <https://viaf.org/viaf/217005590>,
-        <https://viaf.org/viaf/219936833> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217005590> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300193866> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30023158X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219936833> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202941561> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300121547> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/202941561> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217005590> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219936833> a nfdicore:NFDI_0001010 .
 

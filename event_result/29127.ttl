@@ -1,32 +1,39 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300417160> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5074761-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-kammerkonzert-stadtmuseum-dresden-1982-04-18-19-00> ] .
 
-<https://performance.musiconn.de/event/7-kammerkonzert-stadtmuseum-dresden-1982-04-18-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-kammerkonzert-stadtmuseum-dresden-1982-04-18-19-00> a cto:CTO_0001005 ;
     rdfs:label "7. Kammerkonzert, Stadtmuseum Dresden, 18.4.1982, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1981-1982> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1982-04-18T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1982-04-18T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300417160>,
-        <https://d-nb.info/gnd/5074761-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1981-1982> ;
-    cto:relatedItem <https://d-nb.info/gnd/300417160>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/126221316> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5074761-7> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175017850> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300417160> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/fantasien-oboe-violine-viola-violoncello-op-2-britten-benjamin>,
         <https://performance.musiconn.de/work/quartette-floete-violine-viola-violoncello-op-93-nr-3-g-dur-reicha-anton>,
         <https://performance.musiconn.de/work/serenaden-floete-oboe-klarinette-fagott-horn-trompete-nr-2-sutermeister-heinrich>,
-        <https://performance.musiconn.de/work/suiten-floete-oboe-klarinette-fagott-violine-viola-violoncello-op-31b-borris-siegfried>,
-        <https://viaf.org/viaf/175017850> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5074761-7>,
-        <https://viaf.org/viaf/126221316> ;
-    cto:viaf <https://viaf.org/viaf/126221316>,
-        <https://viaf.org/viaf/175017850> .
+        <https://performance.musiconn.de/work/suiten-floete-oboe-klarinette-fagott-violine-viola-violoncello-op-31b-borris-siegfried> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/126221316> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175017850> a nfdicore:NFDI_0001010 .
 

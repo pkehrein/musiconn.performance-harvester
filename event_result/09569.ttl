@@ -1,55 +1,75 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300025157> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30014279X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300142803> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300142870> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300601158> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4392610-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-dorfkirche-pomssen-1997-06-01> ] .
 
-<https://performance.musiconn.de/event/konzert-dorfkirche-pomssen-1997-06-01> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-dorfkirche-pomssen-1997-06-01> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Dorfkirche Pomßen, 1.6.1997" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1997-06-01" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1997-06-01" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300025157>,
-        <https://d-nb.info/gnd/30014279X>,
-        <https://d-nb.info/gnd/300142803>,
-        <https://d-nb.info/gnd/300142870>,
-        <https://d-nb.info/gnd/300601158>,
-        <https://d-nb.info/gnd/4392610-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/300025157>,
-        <https://d-nb.info/gnd/30014279X>,
-        <https://d-nb.info/gnd/300142803>,
-        <https://d-nb.info/gnd/300142870>,
-        <https://d-nb.info/gnd/300601158>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/241194153> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4392610-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300142803> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180037857> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2382148523895920970007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/314816729> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177133464> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300601158> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30014279X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213968685> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300142870> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3763151595772405470007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025157> ],
         <https://performance.musiconn.de/source/motettenbuch-1996-97>,
-        <https://performance.musiconn.de/work/fest-und-gedenksprueche-brahms-johannes>,
-        <https://performance.musiconn.de/work/geistliche-chor-music-gib-unsern-fuersten-und-aller-obrigkeit-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/geistliche-chor-music-herr-auf-dich-traue-ich-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/geistliche-chor-music-verleih-uns-frieden-genaediglich-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/gott-hat-uns-nicht-gesetzt-zum-zorn-kuhnau-johann>,
-        <https://performance.musiconn.de/work/jauchzet-dem-herrn-alle-welt>,
         <https://performance.musiconn.de/work/messe-in-c-weywv-37-sanctus-weyrauch-johannes>,
         <https://performance.musiconn.de/work/messen-1947-agnus-dei-weyrauch-johannes>,
         <https://performance.musiconn.de/work/messen-c-moll-gloria-weyrauch-johannes>,
-        <https://performance.musiconn.de/work/messen-c-moll-kyrie-weyrauch-johannes>,
-        <https://viaf.org/viaf/177133464>,
-        <https://viaf.org/viaf/180037857>,
-        <https://viaf.org/viaf/213968685>,
-        <https://viaf.org/viaf/2382148523895920970007>,
-        <https://viaf.org/viaf/314816729>,
-        <https://viaf.org/viaf/3763151595772405470007> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4392610-1>,
-        <https://viaf.org/viaf/241194153> ;
-    cto:viaf <https://viaf.org/viaf/177133464>,
-        <https://viaf.org/viaf/180037857>,
-        <https://viaf.org/viaf/213968685>,
-        <https://viaf.org/viaf/2382148523895920970007>,
-        <https://viaf.org/viaf/241194153>,
-        <https://viaf.org/viaf/314816729>,
-        <https://viaf.org/viaf/3763151595772405470007> .
+        <https://performance.musiconn.de/work/messen-c-moll-kyrie-weyrauch-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177133464> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180037857> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213968685> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2382148523895920970007> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/241194153> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/314816729> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3763151595772405470007> a nfdicore:NFDI_0001010 .
 

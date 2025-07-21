@@ -1,54 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1116036975> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300086539> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300127782> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300346522> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300916779> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-deutsches-haus-bruenn-1930-12-14> ] .
 
-<https://performance.musiconn.de/event/konzert-deutsches-haus-bruenn-1930-12-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-deutsches-haus-bruenn-1930-12-14> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Deutsches Haus (Brünn), 14.12.1930" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1930-12-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1930-12-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1116036975>,
-        <https://d-nb.info/gnd/300086539>,
-        <https://d-nb.info/gnd/300127782>,
-        <https://d-nb.info/gnd/300346522>,
-        <https://d-nb.info/gnd/300916779> ;
-    cto:relatedItem <https://d-nb.info/gnd/300086539>,
-        <https://d-nb.info/gnd/300127782>,
-        <https://d-nb.info/gnd/300346522>,
-        <https://d-nb.info/gnd/300916779>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/408151172689639210002> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1116036975> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205767357> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300346522> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300086539> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199704303> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300127782> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181706363> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189362327> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300916779> ],
         <https://performance.musiconn.de/source/programmzettel-bruenner-maennergesangverein-bruenn-bruenn-14121930>,
-        <https://performance.musiconn.de/work/das-nachtlager-in-granada-schon-die-abendglocken-klangen-kreutzer-conradin>,
         <https://performance.musiconn.de/work/das-nachtlager-von-granada-arie-kreutzer-conradin>,
         <https://performance.musiconn.de/work/das-nachtlager-von-granada-romanze-kreutzer-conradin>,
         <https://performance.musiconn.de/work/das-treue-deutsche-herz-gumbert-friedrich>,
         <https://performance.musiconn.de/work/fantasie-in-f-moll-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/festfanfare-foerster-anton>,
         <https://performance.musiconn.de/work/geistliche-lieder-op-48-die-ehre-gottes-aus-der-natur-arrangiert-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-4-op-31-d-moll-adagio-religioso-vieuxtemps-henri>,
         <https://performance.musiconn.de/work/meine-muttersprache-schoen-eduard>,
-        <https://performance.musiconn.de/work/stuecke-orgel-op-145-weihnachten-reger-max>,
         <https://performance.musiconn.de/work/volkslieder-o-unbezwinglich-starkter-held-anonym>,
         <https://performance.musiconn.de/work/wanderschaft-zoellner-carl-friedrich>,
         <https://performance.musiconn.de/work/weihelied-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/weihnachtliche-liedsaetze-maria-durch-ein-dornwald-ging-kaminski-heinrich>,
-        <https://performance.musiconn.de/work/weihnachtslieder-auf-dem-berge-da-geht-der-wind-anonym>,
-        <https://viaf.org/viaf/181706363>,
-        <https://viaf.org/viaf/189362327>,
-        <https://viaf.org/viaf/199704303>,
-        <https://viaf.org/viaf/205767357> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1116036975>,
-        <https://viaf.org/viaf/408151172689639210002> ;
-    cto:viaf <https://viaf.org/viaf/181706363>,
-        <https://viaf.org/viaf/189362327>,
-        <https://viaf.org/viaf/199704303>,
-        <https://viaf.org/viaf/205767357>,
-        <https://viaf.org/viaf/408151172689639210002> .
+        <https://performance.musiconn.de/work/weihnachtslieder-auf-dem-berge-da-geht-der-wind-anonym> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181706363> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189362327> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199704303> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205767357> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/408151172689639210002> a nfdicore:NFDI_0001010 .
 

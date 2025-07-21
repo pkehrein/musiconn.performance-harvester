@@ -4,25 +4,32 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/141360410> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4074987-3> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/il-pazzo-glorioso-moskau-1759-12-03> ] .
 
-<https://performance.musiconn.de/event/il-pazzo-glorioso-moskau-1759-12-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/il-pazzo-glorioso-moskau-1759-12-03> a cto:CTO_0001005 ;
     rdfs:label "Il pazzo glorioso, Moskau, 3.12.1759" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1759-12-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1759-12-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/141360410>,
-        <https://d-nb.info/gnd/4074987-3> ;
-    cto:relatedItem <https://performance.musiconn.de/source/mooser-annales>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/141360410> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/247644603> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4074987-3> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/mooser-annales>,
         <https://performance.musiconn.de/work/il-pazzo-glorioso-cocchi-gioacchino> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4074987-3>,
-        <https://viaf.org/viaf/247644603> ;
-    cto:relatedPerson <https://d-nb.info/gnd/141360410>,
-        <https://viaf.org/viaf/3657152988205912790007> ;
-    cto:viaf <https://viaf.org/viaf/247644603>,
-        <https://viaf.org/viaf/3657152988205912790007> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3657152988205912790007> ] .
+
+<https://viaf.org/viaf/247644603> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3657152988205912790007> a nfdicore:NFDI_0001010 .
 

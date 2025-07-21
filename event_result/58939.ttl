@@ -4,24 +4,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/108479294X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/11856952X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-deutsches-theater-berlin-1987-04-10> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-deutsches-theater-berlin-1987-04-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-deutsches-theater-berlin-1987-04-10> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Deutsches Theater (Berlin), 10.4.1987" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-04-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-04-10" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/108479294X>,
-        <https://d-nb.info/gnd/11856952X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1987-dresden-saechsische-landesbibliothek-dresden-1988-1>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/11856952X> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/108479294X> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1987-dresden-saechsische-landesbibliothek-dresden-1988-1>,
         <https://performance.musiconn.de/work/ein-monat-auf-dem-lande-hilprecht-uwe-turgenev-ivan-sergeevic> ;
-    cto:relatedLocation <https://d-nb.info/gnd/108479294X> ;
-    cto:relatedPerson <https://d-nb.info/gnd/11856952X>,
-        <https://performance.musiconn.de/person/beckert-peter>,
-        <https://viaf.org/viaf/84256234> ;
-    cto:viaf <https://viaf.org/viaf/84256234> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/84256234> ],
+        <https://performance.musiconn.de/person/beckert-peter> .
+
+<https://viaf.org/viaf/84256234> a nfdicore:NFDI_0001010 .
 

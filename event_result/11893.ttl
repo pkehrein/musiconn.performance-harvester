@@ -1,43 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1060922754> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1116036975> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300851413> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-deutsches-haus-bruenn-1927-12-16> ] .
 
-<https://performance.musiconn.de/event/konzert-deutsches-haus-bruenn-1927-12-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-deutsches-haus-bruenn-1927-12-16> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Deutsches Haus (Brünn), 16.12.1927" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1927-12-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1927-12-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1060922754>,
-        <https://d-nb.info/gnd/1116036975>,
-        <https://d-nb.info/gnd/300851413> ;
-    cto:relatedItem <https://d-nb.info/gnd/1060922754>,
-        <https://d-nb.info/gnd/300851413>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/408151172689639210002> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1116036975> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1060922754> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300851413> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311596224> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174438291> ],
         <https://performance.musiconn.de/source/programmheft-bruenner-maennergesangverein-bruenn-vom-16121927>,
         <https://performance.musiconn.de/work/choral-motetten-op-71-wachet-auf-ruft-uns-die-stimme-schumann-georg>,
         <https://performance.musiconn.de/work/der-schatzgraeber-wiegenlied-der-els-schreker-franz>,
         <https://performance.musiconn.de/work/drei-madrigale-lang-hans>,
         <https://performance.musiconn.de/work/fruehling-rinaldini-joseph>,
-        <https://performance.musiconn.de/work/gesaenge-nch-richard-smekal-maiwanderung-kornauth-egon>,
         <https://performance.musiconn.de/work/ich-hoere-hoerner-blasen-rettich-wilhelm>,
         <https://performance.musiconn.de/work/lieder-auf-den-tod-eines-kindes-dass-er-ganz-ein-engel-werde-schreker-franz>,
         <https://performance.musiconn.de/work/lieder-auf-den-tod-eines-kindes-glocken-boese-glocken-schreker-franz>,
         <https://performance.musiconn.de/work/lieder-op-7-rosengruss-schreker-franz>,
         <https://performance.musiconn.de/work/marienlied-rinaldini-joseph>,
-        <https://performance.musiconn.de/work/schwanensang-schreker-franz>,
-        <https://performance.musiconn.de/work/sonnenaufgang-hausegger-siegmund-von>,
-        <https://viaf.org/viaf/174438291>,
-        <https://viaf.org/viaf/311596224> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1116036975>,
-        <https://viaf.org/viaf/408151172689639210002> ;
-    cto:viaf <https://viaf.org/viaf/174438291>,
-        <https://viaf.org/viaf/311596224>,
-        <https://viaf.org/viaf/408151172689639210002> .
+        <https://performance.musiconn.de/work/sonnenaufgang-hausegger-siegmund-von> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174438291> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311596224> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/408151172689639210002> a nfdicore:NFDI_0001010 .
 

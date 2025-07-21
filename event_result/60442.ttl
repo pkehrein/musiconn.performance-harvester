@@ -1,49 +1,65 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1260001202> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300019653> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300019661> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300057865> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300157711> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4428204-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-sonntags-konzert-alte-oper-frankfurt-a-main-grosser-saal-2002-01-27-11-00> ] .
 
-<https://performance.musiconn.de/event/5-sonntags-konzert-alte-oper-frankfurt-a-main-grosser-saal-2002-01-27-11-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-sonntags-konzert-alte-oper-frankfurt-a-main-grosser-saal-2002-01-27-11-00> a cto:CTO_0001005 ;
     rdfs:label "5. Sonntags-Konzert, Alte Oper (Frankfurt a. Main). Großer Saal, 27.1.2002, 11:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2001-2002> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2002-01-27T11:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2002-01-27T11:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1260001202>,
-        <https://d-nb.info/gnd/300019653>,
-        <https://d-nb.info/gnd/300019661>,
-        <https://d-nb.info/gnd/300057865>,
-        <https://d-nb.info/gnd/300157711>,
-        <https://d-nb.info/gnd/4428204-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2001-2002> ;
-    cto:relatedItem <https://d-nb.info/gnd/1260001202>,
-        <https://d-nb.info/gnd/300019653>,
-        <https://d-nb.info/gnd/300019661>,
-        <https://d-nb.info/gnd/300057865>,
-        <https://d-nb.info/gnd/300157711>,
-        <https://d-nb.info/gnd/4428204-7>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/cuban-overture-gershwin-george>,
-        <https://performance.musiconn.de/work/dance-episodes-from-on-the-town-bernstein-leonard>,
-        <https://performance.musiconn.de/work/ebony-concerto-stravinsky-igor>,
-        <https://performance.musiconn.de/work/night-creature-ellington-duke>,
-        <https://performance.musiconn.de/work/prelude-fugue-and-riffs-bernstein-leonard>,
-        <https://performance.musiconn.de/work/rhapsody-in-blue-gershwin-george>,
-        <https://viaf.org/viaf/174254987>,
-        <https://viaf.org/viaf/177072557>,
-        <https://viaf.org/viaf/177809918>,
-        <https://viaf.org/viaf/179680380>,
-        <https://viaf.org/viaf/6741165573964437800009> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/174254987>,
-        <https://viaf.org/viaf/177072557>,
-        <https://viaf.org/viaf/177809918>,
-        <https://viaf.org/viaf/179680380>,
-        <https://viaf.org/viaf/6741165573964437800009> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1260001202> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300019661> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177809918> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177072557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174254987> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300019653> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157711> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300057865> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179680380> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4428204-7> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6741165573964437800009> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174254987> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177072557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177809918> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179680380> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6741165573964437800009> a nfdicore:NFDI_0001010 .
 

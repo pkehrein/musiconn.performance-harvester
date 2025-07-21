@@ -1,40 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300057075> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171846> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300242980> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5074761-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/landhaus-konzert-stadtmuseum-dresden-1980-04-13-19-00> ] .
 
-<https://performance.musiconn.de/event/landhaus-konzert-stadtmuseum-dresden-1980-04-13-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/landhaus-konzert-stadtmuseum-dresden-1980-04-13-19-00> a cto:CTO_0001005 ;
     rdfs:label "Landhaus-Konzert, Stadtmuseum Dresden, 13.4.1980, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1979-1980> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1980-04-13T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1980-04-13T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300057075>,
-        <https://d-nb.info/gnd/300171846>,
-        <https://d-nb.info/gnd/300242980>,
-        <https://d-nb.info/gnd/5074761-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1979-1980> ;
-    cto:relatedItem <https://d-nb.info/gnd/300057075>,
-        <https://d-nb.info/gnd/300171846>,
-        <https://d-nb.info/gnd/300242980>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5074761-7> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/126221316> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199707277> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300242980> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171846> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203707107> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300057075> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199705531> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/prosvetleni-slavicky-milan>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-2-geissler-fritz>,
-        <https://performance.musiconn.de/work/quintette-klarinette-violine-2-viola-violoncello-j-182-b-dur-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-kv-564-g-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/199705531>,
-        <https://viaf.org/viaf/199707277>,
-        <https://viaf.org/viaf/203707107> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5074761-7>,
-        <https://viaf.org/viaf/126221316> ;
-    cto:viaf <https://viaf.org/viaf/126221316>,
-        <https://viaf.org/viaf/199705531>,
-        <https://viaf.org/viaf/199707277>,
-        <https://viaf.org/viaf/203707107> .
+        <https://performance.musiconn.de/work/prosvetleni-slavicky-milan> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/126221316> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199705531> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199707277> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203707107> a nfdicore:NFDI_0001010 .
 

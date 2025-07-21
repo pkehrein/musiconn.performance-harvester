@@ -4,19 +4,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/tvorceskij-vecer-nikolaja-k-gana-i-izrailja-b-finkelstejna-dom-kompozitorov-sankt-petersburg-1961-03-09> ] .
 
-<https://performance.musiconn.de/event/tvorceskij-vecer-nikolaja-k-gana-i-izrailja-b-finkelstejna-dom-kompozitorov-sankt-petersburg-1961-03-09> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/tvorceskij-vecer-nikolaja-k-gana-i-izrailja-b-finkelstejna-dom-kompozitorov-sankt-petersburg-1961-03-09> a cto:CTO_0001005 ;
     rdfs:label "Tvorčeskij večer Nikolaja K. Gana i Izrailja B. Finkel'štejna, Dom kompozitorov (Sankt Petersburg), 9.3.1961" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1961-03-09" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1961-03-09" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1200899989> ;
-    cto:relatedItem <https://performance.musiconn.de/source/leningrader-komponistenhaus-1961-9-maerz>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/leningrader-komponistenhaus-1961-9-maerz>,
         <https://performance.musiconn.de/work/cikl-romansov-na-stichi-f-tjutceva-finkelstejn-izrail-b>,
         <https://performance.musiconn.de/work/i-otcego-ja-ne-pojmu-gan-nikolaj-karlovic>,
         <https://performance.musiconn.de/work/ja-zdes-inezilja-gan-nikolaj-karlovic>,
@@ -26,7 +29,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/tri-kljuca-gan-nikolaj-karlovic>,
         <https://performance.musiconn.de/work/vesennie-stroki-gan-nikolaj-karlovic>,
         <https://performance.musiconn.de/work/vstreca-gan-nikolaj-karlovic> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1200899989>,
-        <https://viaf.org/viaf/385157583849933970005> ;
-    cto:viaf <https://viaf.org/viaf/385157583849933970005> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
 

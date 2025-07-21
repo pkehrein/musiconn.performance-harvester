@@ -1,43 +1,58 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/10338252-5> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/16340800-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300311664> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/des-menschen-tage-sind-wie-gras-juedische-geistliche-musik-im-ndr-landesfunkhaus-hannover-grosser-sendesaal-2015-04-29-20-00> ] .
 
-<https://performance.musiconn.de/event/des-menschen-tage-sind-wie-gras-juedische-geistliche-musik-im-ndr-landesfunkhaus-hannover-grosser-sendesaal-2015-04-29-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/des-menschen-tage-sind-wie-gras-juedische-geistliche-musik-im-ndr-landesfunkhaus-hannover-grosser-sendesaal-2015-04-29-20-00> a cto:CTO_0001005 ;
     rdfs:label "Des Menschen Tage sind wie Gras. Jüdische geistliche Musik im NDR, Landesfunkhaus (Hannover) / Großer Sendesaal, 29.4.2015, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2015-04-29T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2015-04-29T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/10338252-5>,
-        <https://d-nb.info/gnd/16340800-2>,
-        <https://d-nb.info/gnd/300311664>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://d-nb.info/gnd/300311664>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/16340800-2> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/10338252-5> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/232011932> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/295637361> ],
+        <https://performance.musiconn.de/corporation/neuer-kammerchor-potsdam> ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/landesfunkhaus-hannover-grosser-sendesaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189345544> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300311664> ],
         <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/programm-konzert-29-april-2015>,
         <https://performance.musiconn.de/work/ad-heno-rosenblatt-josef>,
-        <https://performance.musiconn.de/work/avodath-hakodesh-bloch-ernest>,
         <https://performance.musiconn.de/work/preise-meine-seele-den-ewigen-psalm-103-lewandowski-louis>,
         <https://performance.musiconn.de/work/wie-ein-hirsch-lechzet-nach-frischem-wasser-psalm-42-und-43-lewandowski-louis>,
-        <https://performance.musiconn.de/work/wie-lieblich-sind-deine-wohnungen-psalm-84-lewandowski-louis>,
-        <https://viaf.org/viaf/189345544> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/landesfunkhaus-hannover-grosser-sendesaal> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/10338252-5>,
-        <https://d-nb.info/gnd/16340800-2>,
-        <https://d-nb.info/gnd/5513287-X>,
-        <https://performance.musiconn.de/corporation/neuer-kammerchor-potsdam>,
-        <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/232011932>,
-        <https://viaf.org/viaf/295637361> ;
-    cto:viaf <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/189345544>,
-        <https://viaf.org/viaf/232011932>,
-        <https://viaf.org/viaf/295637361> .
+        <https://performance.musiconn.de/work/wie-lieblich-sind-deine-wohnungen-psalm-84-lewandowski-louis> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189345544> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/232011932> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/295637361> a nfdicore:NFDI_0001010 .
 

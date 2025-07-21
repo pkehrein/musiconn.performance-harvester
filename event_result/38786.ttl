@@ -1,48 +1,65 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1032828536> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300301367> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300412762> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300702299> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300997221> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sinfoniekonzert-beim-internationalen-musikfest-dresden-gewerbehaus-dresden-gewerbehaus-saal-1937-05-25-20-00> ] .
 
-<https://performance.musiconn.de/event/sinfoniekonzert-beim-internationalen-musikfest-dresden-gewerbehaus-dresden-gewerbehaus-saal-1937-05-25-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sinfoniekonzert-beim-internationalen-musikfest-dresden-gewerbehaus-dresden-gewerbehaus-saal-1937-05-25-20-00> a cto:CTO_0001005 ;
     rdfs:label "Sinfoniekonzert beim Internationalen Musikfest Dresden, Gewerbehaus (Dresden). Gewerbehaus-Saal, 25.5.1937, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1936-1937> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1937-05-25T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1937-05-25T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1032828536>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300301367>,
-        <https://d-nb.info/gnd/300412762>,
-        <https://d-nb.info/gnd/300702299>,
-        <https://d-nb.info/gnd/300997221> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1936-1937> ;
-    cto:relatedItem <https://d-nb.info/gnd/1032828536>,
-        <https://d-nb.info/gnd/300301367>,
-        <https://d-nb.info/gnd/300412762>,
-        <https://d-nb.info/gnd/300702299>,
-        <https://d-nb.info/gnd/300997221>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184456586> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300997221> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181648146> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300412762> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/298217234> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200784015> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179863188> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1032828536> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300702299> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300301367> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/maskerade-ouvertuere-nielsen-carl>,
-        <https://performance.musiconn.de/work/passacaglien-orch-1928-irgens-jensen-ludvig>,
-        <https://performance.musiconn.de/work/saga-drom-nielsen-carl>,
-        <https://performance.musiconn.de/work/vardar-vladigerov-panco>,
-        <https://performance.musiconn.de/work/variationen-suite-ueber-ein-rokoko-thema-fuer-kleines-orchester-op-64-haas-joseph>,
-        <https://performance.musiconn.de/work/verklaertes-jahr-fassung-singst-kl-marx-joseph>,
-        <https://viaf.org/viaf/179863188>,
-        <https://viaf.org/viaf/181648146>,
-        <https://viaf.org/viaf/184456586>,
-        <https://viaf.org/viaf/200784015>,
-        <https://viaf.org/viaf/298217234> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/179863188>,
-        <https://viaf.org/viaf/181648146>,
-        <https://viaf.org/viaf/184456586>,
-        <https://viaf.org/viaf/200784015>,
-        <https://viaf.org/viaf/298217234> .
+        <https://performance.musiconn.de/work/variationen-suite-ueber-ein-rokoko-thema-fuer-kleines-orchester-op-64-haas-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179863188> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181648146> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184456586> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200784015> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/298217234> a nfdicore:NFDI_0001010 .
 

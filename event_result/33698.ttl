@@ -1,30 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300025645> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4433695-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gastspiel-2019-04-12-20-00> ] .
 
-<https://performance.musiconn.de/event/gastspiel-2019-04-12-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gastspiel-2019-04-12-20-00> a cto:CTO_0001005 ;
     rdfs:label "Gastspiel, 12.4.2019, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2018-2019> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2019-04-12T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2019-04-12T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300025645>,
-        <https://d-nb.info/gnd/4433695-0> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2018-2019> ;
-    cto:relatedItem <https://d-nb.info/gnd/300025645>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4433695-0> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/239180838> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196877702> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025645> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/klavierquartett-nr-1-g-moll-op-25-orchesterfassung-von-arnold-schoenberg-brahms-johannes>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-15-d-moll-brahms-johannes>,
-        <https://viaf.org/viaf/196877702> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4433695-0>,
-        <https://viaf.org/viaf/239180838> ;
-    cto:viaf <https://viaf.org/viaf/196877702>,
-        <https://viaf.org/viaf/239180838> .
+        <https://performance.musiconn.de/work/klavierquartett-nr-1-g-moll-op-25-orchesterfassung-von-arnold-schoenberg-brahms-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/196877702> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/239180838> a nfdicore:NFDI_0001010 .
 

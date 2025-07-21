@@ -1,46 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1139127748> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300006993> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300142846> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300142862> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1998-03-14> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1998-03-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1998-03-14> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 14.3.1998" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1998-03-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1998-03-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1139127748>,
-        <https://d-nb.info/gnd/300006993>,
-        <https://d-nb.info/gnd/300142846>,
-        <https://d-nb.info/gnd/300142862>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1139127748>,
-        <https://d-nb.info/gnd/300006993>,
-        <https://d-nb.info/gnd/300142846>,
-        <https://d-nb.info/gnd/300142862>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174570294> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300142846> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300142862> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1139127748> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213968692> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4162150470093304330001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300006993> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186398720> ],
         <https://performance.musiconn.de/source/motettenbuch-1997-98>,
         <https://performance.musiconn.de/work/der-apostolische-segen-biller-georg-christoph>,
         <https://performance.musiconn.de/work/deutsche-messe-op-42-agnus-dei-david-johann-nepomuk>,
-        <https://performance.musiconn.de/work/deutsche-messe-op-42-kyrie-david-johann-nepomuk>,
-        <https://performance.musiconn.de/work/geistliche-chor-music-die-mit-traenen-saeen-werden-mit-freuden-ernten-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/geistliche-chor-music-unser-keiner-lebet-ihm-selber-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/jesus-nahm-zu-sich-die-zwoelfe-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/kleine-geistliche-chormusik-fuerwahr-er-trug-unsre-krankheit-thomas-kurt>,
-        <https://viaf.org/viaf/174570294>,
-        <https://viaf.org/viaf/186398720>,
-        <https://viaf.org/viaf/213968692>,
-        <https://viaf.org/viaf/4162150470093304330001> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/174570294>,
-        <https://viaf.org/viaf/186398720>,
-        <https://viaf.org/viaf/213968692>,
-        <https://viaf.org/viaf/4162150470093304330001> .
+        <https://performance.musiconn.de/work/deutsche-messe-op-42-kyrie-david-johann-nepomuk> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174570294> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186398720> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213968692> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4162150470093304330001> a nfdicore:NFDI_0001010 .
 

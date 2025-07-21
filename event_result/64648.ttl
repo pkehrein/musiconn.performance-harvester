@@ -1,43 +1,59 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300322445> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300322542> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300322593> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300407963> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4358966-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/rom-6-89-2-casino-massimo-rom-1989-06-25> ] .
 
-<https://performance.musiconn.de/event/rom-6-89-2-casino-massimo-rom-1989-06-25> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/rom-6-89-2-casino-massimo-rom-1989-06-25> a cto:CTO_0001005 ;
     rdfs:label "Rom 6/89/2, Casino Massimo (Rom), 25.6.1989" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1989-06-25" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1989-06-25" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300322445>,
-        <https://d-nb.info/gnd/300322542>,
-        <https://d-nb.info/gnd/300322593>,
-        <https://d-nb.info/gnd/300407963>,
-        <https://d-nb.info/gnd/4358966-2> ;
-    cto:relatedItem <https://d-nb.info/gnd/300322445>,
-        <https://d-nb.info/gnd/300322542>,
-        <https://d-nb.info/gnd/300322593>,
-        <https://d-nb.info/gnd/300407963>,
-        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/harlekin-stockhausen-karlheinz>,
-        <https://performance.musiconn.de/work/in-freundschaft-ob-stockhausen-karlheinz>,
-        <https://performance.musiconn.de/work/mantra-stockhausen-karlheinz>,
-        <https://performance.musiconn.de/work/zeitmasse-stockhausen-karlheinz>,
-        <https://viaf.org/viaf/177103972>,
-        <https://viaf.org/viaf/178061634>,
-        <https://viaf.org/viaf/186156263>,
-        <https://viaf.org/viaf/204590244> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4358966-2>,
-        <https://viaf.org/viaf/236093846> ;
-    cto:viaf <https://viaf.org/viaf/177103972>,
-        <https://viaf.org/viaf/178061634>,
-        <https://viaf.org/viaf/186156263>,
-        <https://viaf.org/viaf/204590244>,
-        <https://viaf.org/viaf/236093846> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/236093846> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4358966-2> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300407963> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300322445> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300322593> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178061634> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300322542> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204590244> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177103972> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186156263> ],
+        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177103972> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178061634> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186156263> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204590244> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/236093846> a nfdicore:NFDI_0001010 .
 

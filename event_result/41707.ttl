@@ -1,50 +1,67 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1054159211> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1171495803> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300259581> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30027128X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4471647-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-sinfoniekonzert-gewerbehaus-dresden-gewerbehaus-saal-1927-11-30-20-00> ] .
 
-<https://performance.musiconn.de/event/5-sinfoniekonzert-gewerbehaus-dresden-gewerbehaus-saal-1927-11-30-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-sinfoniekonzert-gewerbehaus-dresden-gewerbehaus-saal-1927-11-30-20-00> a cto:CTO_0001005 ;
     rdfs:label "5. Sinfoniekonzert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 30.11.1927, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1927-1928> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1927-11-30T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1927-11-30T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1054159211>,
-        <https://d-nb.info/gnd/1171495803>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300259581>,
-        <https://d-nb.info/gnd/30027128X>,
-        <https://d-nb.info/gnd/4471647-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1927-1928> ;
-    cto:relatedItem <https://d-nb.info/gnd/1054159211>,
-        <https://d-nb.info/gnd/1171495803>,
-        <https://d-nb.info/gnd/300259581>,
-        <https://d-nb.info/gnd/30027128X>,
-        <https://d-nb.info/gnd/4471647-3>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1054159211> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1171495803> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300259581> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30027128X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8744154260539524480007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309646467> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203712634> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175983841> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186315323> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4471647-3> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/gedichte-von-eduard-moerike-agnes-wolf-hugo>,
-        <https://performance.musiconn.de/work/gedichte-von-eduard-moerike-er-ists-wolf-hugo>,
-        <https://performance.musiconn.de/work/gedichte-von-eduard-moerike-verborgenheit-wolf-hugo>,
         <https://performance.musiconn.de/work/lieder-am-klavier-fruehlingsmaerchen-graener-paul>,
         <https://performance.musiconn.de/work/lieder-am-klavier-stilles-lied-i-trunk-richard>,
-        <https://performance.musiconn.de/work/lieder-am-klavier-stilles-lied-ii-trunk-richard>,
-        <https://performance.musiconn.de/work/sinfonien-op-24-mjaskovskij-nikolaj-ja>,
-        <https://performance.musiconn.de/work/spiel-toch-ernst>,
-        <https://viaf.org/viaf/175983841>,
-        <https://viaf.org/viaf/186315323>,
-        <https://viaf.org/viaf/203712634>,
-        <https://viaf.org/viaf/309646467>,
-        <https://viaf.org/viaf/8744154260539524480007> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/175983841>,
-        <https://viaf.org/viaf/186315323>,
-        <https://viaf.org/viaf/203712634>,
-        <https://viaf.org/viaf/309646467>,
-        <https://viaf.org/viaf/8744154260539524480007> .
+        <https://performance.musiconn.de/work/lieder-am-klavier-stilles-lied-ii-trunk-richard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175983841> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186315323> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203712634> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309646467> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8744154260539524480007> a nfdicore:NFDI_0001010 .
 

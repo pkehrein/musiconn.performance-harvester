@@ -1,45 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300025157> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300025726> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141440> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146035> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4754677-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ii-konzert-volkshaus-jena-1940-05-05-19-30> ] .
 
-<https://performance.musiconn.de/event/ii-konzert-volkshaus-jena-1940-05-05-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ii-konzert-volkshaus-jena-1940-05-05-19-30> a cto:CTO_0001005 ;
     rdfs:label "II. Konzert, Volkshaus (Jena), 5.5.1940, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1940-05-05T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1940-05-05T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300025157>,
-        <https://d-nb.info/gnd/300025726>,
-        <https://d-nb.info/gnd/300141440>,
-        <https://d-nb.info/gnd/300146035>,
-        <https://d-nb.info/gnd/4754677-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/300025157>,
-        <https://d-nb.info/gnd/300025726>,
-        <https://d-nb.info/gnd/300141440>,
-        <https://d-nb.info/gnd/300146035>,
-        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/fest-und-gedenksprueche-brahms-johannes>,
-        <https://performance.musiconn.de/work/liebeslieder-op-52-brahms-johannes>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-d-810-d-moll-schubert-franz>,
-        <https://performance.musiconn.de/work/quintette-violine-2-viola-violoncello-klavier-op-44-es-dur-schumann-robert>,
-        <https://viaf.org/viaf/180037857>,
-        <https://viaf.org/viaf/181445310>,
-        <https://viaf.org/viaf/199704860>,
-        <https://viaf.org/viaf/207914472> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4754677-3>,
-        <https://viaf.org/viaf/238142706> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/vokal-quartett-jena> ;
-    cto:viaf <https://viaf.org/viaf/180037857>,
-        <https://viaf.org/viaf/181445310>,
-        <https://viaf.org/viaf/199704860>,
-        <https://viaf.org/viaf/207914472>,
-        <https://viaf.org/viaf/238142706> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/vokal-quartett-jena> ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/238142706> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4754677-3> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025726> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181445310> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199704860> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207914472> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146035> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141440> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180037857> ],
+        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180037857> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181445310> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199704860> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207914472> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/238142706> a nfdicore:NFDI_0001010 .
 

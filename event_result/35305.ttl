@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300033702> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141777> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300149611> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170114> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4046147-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzert-pirna-1965-06-13-19-00> ] .
 
-<https://performance.musiconn.de/event/sonderkonzert-pirna-1965-06-13-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzert-pirna-1965-06-13-19-00> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert, Pirna, 13.6.1965, 19:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1965-06-13T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1965-06-13T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300033702>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300149611>,
-        <https://d-nb.info/gnd/300170114>,
-        <https://d-nb.info/gnd/4046147-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/300033702>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300149611>,
-        <https://d-nb.info/gnd/300170114>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/159518522> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4046147-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189338688> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178619765> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213996466> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141777> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170114> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425978> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033702> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300149611> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-vorspiel-wagner-richard>,
-        <https://performance.musiconn.de/work/festliche-musik-gerster-ottmar>,
-        <https://performance.musiconn.de/work/ma-vlast-vltava-smetana-bedrich>,
-        <https://performance.musiconn.de/work/romeo-und-julia-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/sinfonien-d-759-h-moll-schubert-franz>,
-        <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/189338688>,
-        <https://viaf.org/viaf/213996466> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4046147-6>,
-        <https://viaf.org/viaf/159518522> ;
-    cto:viaf <https://viaf.org/viaf/159518522>,
-        <https://viaf.org/viaf/178619765>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/189338688>,
-        <https://viaf.org/viaf/213996466> .
+        <https://performance.musiconn.de/work/festliche-musik-gerster-ottmar> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/159518522> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178619765> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179425978> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189338688> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213996466> a nfdicore:NFDI_0001010 .
 

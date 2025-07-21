@@ -1,34 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300102658> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141742> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zkr-ak-simfoniceskij-orkestr-filarmonii-21-feb-1996-sankt-petersburger-philharmonie-1996-02-21> ] .
 
-<https://performance.musiconn.de/event/zkr-ak-simfoniceskij-orkestr-filarmonii-21-feb-1996-sankt-petersburger-philharmonie-1996-02-21> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zkr-ak-simfoniceskij-orkestr-filarmonii-21-feb-1996-sankt-petersburger-philharmonie-1996-02-21> a cto:CTO_0001005 ;
     rdfs:label "ZKR ak. simfoničeskij orkestr filarmonii (21. Feb. 1996), Sankt-Petersburger Philharmonie, 21.2.1996" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1995-96> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1996-02-21" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1996-02-21" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300102658>,
-        <https://d-nb.info/gnd/300141742>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1995-96> ;
-    cto:relatedItem <https://d-nb.info/gnd/300102658>,
-        <https://d-nb.info/gnd/300141742>,
-        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1996-21-februar>,
-        <https://performance.musiconn.de/work/sinfonien-d-417-c-moll-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-mwv-n-18-a-moll-mendelssohn-bartholdy-felix>,
-        <https://viaf.org/viaf/181068322>,
-        <https://viaf.org/viaf/185890974> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/181068322>,
-        <https://viaf.org/viaf/185890974> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185890974> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102658> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181068322> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141742> ],
+        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1996-21-februar> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181068322> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185890974> a nfdicore:NFDI_0001010 .
 

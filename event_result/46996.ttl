@@ -1,46 +1,63 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1220952877> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/122109548X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1221095943> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1221096184> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1221096648> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-kunsthalle-rostock-1990-02-11> ] .
 
-<https://performance.musiconn.de/event/konzert-kunsthalle-rostock-1990-02-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-kunsthalle-rostock-1990-02-11> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Kunsthalle (Rostock), 11.2.1990" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1990-02-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1990-02-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1220952877>,
-        <https://d-nb.info/gnd/122109548X>,
-        <https://d-nb.info/gnd/1221095943>,
-        <https://d-nb.info/gnd/1221096184>,
-        <https://d-nb.info/gnd/1221096648> ;
-    cto:relatedItem <https://d-nb.info/gnd/1220952877>,
-        <https://d-nb.info/gnd/122109548X>,
-        <https://d-nb.info/gnd/1221095943>,
-        <https://d-nb.info/gnd/1221096184>,
-        <https://d-nb.info/gnd/1221096648>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1990-dresden-saechsische-landesbibliothek-dresden-1991>,
-        <https://performance.musiconn.de/work/atem-meier-burkhard>,
-        <https://performance.musiconn.de/work/aus-einem-juni-meier-burkhard>,
-        <https://performance.musiconn.de/work/der-weinstock-ehricht-thomas>,
-        <https://performance.musiconn.de/work/die-eine-rose-ueberwaeltigt-alles-meier-burkhard>,
-        <https://performance.musiconn.de/work/kalenderspruch-meier-burkhard>,
-        <https://viaf.org/viaf/1544160486140205180002>,
-        <https://viaf.org/viaf/2173160546915910240003>,
-        <https://viaf.org/viaf/4888160546924310240007>,
-        <https://viaf.org/viaf/6951160546930810240007>,
-        <https://viaf.org/viaf/7337160546931910240008> ;
-    cto:relatedLocation <https://viaf.org/viaf/138286073> ;
-    cto:viaf <https://viaf.org/viaf/138286073>,
-        <https://viaf.org/viaf/1544160486140205180002>,
-        <https://viaf.org/viaf/2173160546915910240003>,
-        <https://viaf.org/viaf/4888160546924310240007>,
-        <https://viaf.org/viaf/6951160546930810240007>,
-        <https://viaf.org/viaf/7337160546931910240008> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/138286073> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1221095943> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7337160546931910240008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1220952877> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1221096184> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6951160546930810240007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/122109548X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2173160546915910240003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1221096648> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4888160546924310240007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1544160486140205180002> ],
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1990-dresden-saechsische-landesbibliothek-dresden-1991> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/138286073> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/1544160486140205180002> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2173160546915910240003> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4888160546924310240007> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6951160546930810240007> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7337160546931910240008> a nfdicore:NFDI_0001010 .
 

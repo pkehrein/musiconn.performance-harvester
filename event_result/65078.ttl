@@ -1,47 +1,63 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1280300612> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300047983> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300437099> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300780745> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/abokonzert-14-zweites-gewandhaus-leipzig-1921-01-20> ] .
 
-<https://performance.musiconn.de/event/abokonzert-14-zweites-gewandhaus-leipzig-1921-01-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/abokonzert-14-zweites-gewandhaus-leipzig-1921-01-20> a cto:CTO_0001005 ;
     rdfs:label "Abokonzert 14, Zweites Gewandhaus (Leipzig), 20.1.1921" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1921-01-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1921-01-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1280300612>,
-        <https://d-nb.info/gnd/300047983>,
-        <https://d-nb.info/gnd/300437099>,
-        <https://d-nb.info/gnd/300780745>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/1280300612>,
-        <https://d-nb.info/gnd/300047983>,
-        <https://d-nb.info/gnd/300437099>,
-        <https://d-nb.info/gnd/300780745>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174932674> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7021167625780003660003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300437099> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300780745> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200787412> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1280300612> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300047983> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183880981> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
-        <https://performance.musiconn.de/work/achilleus-aus-der-tiefe-des-grames-bruch-max>,
         <https://performance.musiconn.de/work/ave-maria-onegin-eugen-b>,
-        <https://performance.musiconn.de/work/der-schmied-von-marienburg-ouvertuere-wagner-siegfried>,
         <https://performance.musiconn.de/work/durchs-leben-onegin-eugen-b>,
         <https://performance.musiconn.de/work/mariengarn-onegin-eugen-b>,
-        <https://performance.musiconn.de/work/mein-herz-onegin-eugen-b>,
-        <https://performance.musiconn.de/work/phantastische-erscheinungen-eines-themas-von-hector-berlioz-braunfels-walter>,
-        <https://performance.musiconn.de/work/scherzo-capriccioso-b-131-dvorak-antonin>,
-        <https://viaf.org/viaf/174932674>,
-        <https://viaf.org/viaf/183880981>,
-        <https://viaf.org/viaf/200787412>,
-        <https://viaf.org/viaf/7021167625780003660003> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/174932674>,
-        <https://viaf.org/viaf/183880981>,
-        <https://viaf.org/viaf/200787412>,
-        <https://viaf.org/viaf/264523828>,
-        <https://viaf.org/viaf/7021167625780003660003> .
+        <https://performance.musiconn.de/work/mein-herz-onegin-eugen-b> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174932674> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183880981> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200787412> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7021167625780003660003> a nfdicore:NFDI_0001010 .
 

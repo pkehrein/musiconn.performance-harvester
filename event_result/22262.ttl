@@ -1,61 +1,82 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1165258897> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1190593432> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1259849325> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300187793> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300187874> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300191553> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300687389> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300817339> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-turnhalle-deutscher-turnverein-as-1884-06-04> ] .
 
-<https://performance.musiconn.de/event/konzert-turnhalle-deutscher-turnverein-as-1884-06-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-turnhalle-deutscher-turnverein-as-1884-06-04> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Turnhalle Deutscher Turnverein (Aš), 4.6.1884" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1884-06-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1884-06-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1165258897>,
-        <https://d-nb.info/gnd/1190593432>,
-        <https://d-nb.info/gnd/1259849325>,
-        <https://d-nb.info/gnd/300187793>,
-        <https://d-nb.info/gnd/300187874>,
-        <https://d-nb.info/gnd/300191553>,
-        <https://d-nb.info/gnd/300687389>,
-        <https://d-nb.info/gnd/300817339> ;
-    cto:relatedItem <https://d-nb.info/gnd/1165258897>,
-        <https://d-nb.info/gnd/1259849325>,
-        <https://d-nb.info/gnd/300187793>,
-        <https://d-nb.info/gnd/300187874>,
-        <https://d-nb.info/gnd/300191553>,
-        <https://d-nb.info/gnd/300687389>,
-        <https://d-nb.info/gnd/300817339>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1190593432> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300191553> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1259849325> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300187874> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8359151595791205470006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300687389> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300817339> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305244907> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191499176> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198526504> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300187793> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202957655> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1165258897> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197652587> ],
         <https://performance.musiconn.de/source/verzeichniss-der-motetten-1811-1905>,
         <https://performance.musiconn.de/work/gesaenge-op-110-hund-und-katzen-lachner-franz-paul>,
         <https://performance.musiconn.de/work/gesaenge-op-13-die-wasserrose-gade-niels-wilhelm>,
         <https://performance.musiconn.de/work/gesaenge-op-8-mueller-hab-acht-riedel-august>,
-        <https://performance.musiconn.de/work/herbstlied-mwv-f-17-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/lieder-gemischter-chor-mwv-sd-51-andenken-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/lieder-op-12-das-abendlaeuten-richter-ernst-friedrich-eduard>,
         <https://performance.musiconn.de/work/lieder-op-18-die-lotosblume-richter-ernst-friedrich-eduard>,
-        <https://performance.musiconn.de/work/lieder-op-25-wandrers-nachtlied-hauptmann-moritz>,
         <https://performance.musiconn.de/work/lieder-op-26-im-fruehling-holstein-franz-von>,
-        <https://performance.musiconn.de/work/lieder-op-32-zigeunerlied-hauptmann-moritz>,
         <https://performance.musiconn.de/work/lieder-op-47-wenn-zweie-sich-gut-sind-hauptmann-moritz>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-2-waldesgruss-rheinberger-joseph>,
-        <https://performance.musiconn.de/work/lockung-rheinberger-joseph>,
-        <https://performance.musiconn.de/work/quartette-op-41-fruehlingsglaube-rust-wilhelm>,
-        <https://viaf.org/viaf/191499176>,
-        <https://viaf.org/viaf/197652587>,
-        <https://viaf.org/viaf/198526504>,
-        <https://viaf.org/viaf/202957655>,
-        <https://viaf.org/viaf/305244907>,
-        <https://viaf.org/viaf/8359151595791205470006> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1190593432> ;
-    cto:viaf <https://viaf.org/viaf/191499176>,
-        <https://viaf.org/viaf/197652587>,
-        <https://viaf.org/viaf/198526504>,
-        <https://viaf.org/viaf/202957655>,
-        <https://viaf.org/viaf/305244907>,
-        <https://viaf.org/viaf/8359151595791205470006> .
+        <https://performance.musiconn.de/work/quartette-op-41-fruehlingsglaube-rust-wilhelm> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/191499176> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197652587> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198526504> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202957655> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305244907> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8359151595791205470006> a nfdicore:NFDI_0001010 .
 

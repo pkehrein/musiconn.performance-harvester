@@ -1,56 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300102704> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102720> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102739> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141769> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145411> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171781> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300646909> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/musik-fuer-alle-2-abend-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1949-11-16-19-00> ] .
 
-<https://performance.musiconn.de/event/musik-fuer-alle-2-abend-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1949-11-16-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/musik-fuer-alle-2-abend-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1949-11-16-19-00> a cto:CTO_0001005 ;
     rdfs:label "Musik für alle (2. Abend), Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 16.11.1949, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1949-1950> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1949-11-16T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1949-11-16T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300102704>,
-        <https://d-nb.info/gnd/300102720>,
-        <https://d-nb.info/gnd/300102739>,
-        <https://d-nb.info/gnd/300141769>,
-        <https://d-nb.info/gnd/300145411>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/300646909> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1949-1950> ;
-    cto:relatedItem <https://d-nb.info/gnd/300102704>,
-        <https://d-nb.info/gnd/300102720>,
-        <https://d-nb.info/gnd/300102739>,
-        <https://d-nb.info/gnd/300141769>,
-        <https://d-nb.info/gnd/300145411>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/300646909>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/der-widerspenstigen-zaehmung-goetz-hermann>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-129-a-moll-schumann-robert>,
-        <https://performance.musiconn.de/work/musik-zu-ein-sommernachtstraum-hochzeitsmarsch-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/musik-zu-ein-sommernachtstraum-notturno-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/musik-zu-ein-sommernachtstraum-scherzo-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/oberon-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/sinfonien-d-589-c-dur-schubert-franz>,
-        <https://viaf.org/viaf/179427106>,
-        <https://viaf.org/viaf/181853615>,
-        <https://viaf.org/viaf/181883169>,
-        <https://viaf.org/viaf/185693341>,
-        <https://viaf.org/viaf/217006126>,
-        <https://viaf.org/viaf/219163769>,
-        <https://viaf.org/viaf/309560042> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/179427106>,
-        <https://viaf.org/viaf/181853615>,
-        <https://viaf.org/viaf/181883169>,
-        <https://viaf.org/viaf/185693341>,
-        <https://viaf.org/viaf/217006126>,
-        <https://viaf.org/viaf/219163769>,
-        <https://viaf.org/viaf/309560042> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300646909> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179427106> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181853615> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145411> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185693341> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102739> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309560042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181883169> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102720> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217006126> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219163769> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102704> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141769> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171781> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179427106> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181853615> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181883169> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185693341> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217006126> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219163769> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309560042> a nfdicore:NFDI_0001010 .
 

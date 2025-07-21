@@ -1,27 +1,30 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300659997> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/le-triomphe-de-lamour-theatre-du-palais-royal-paris-1705-09-11> ] .
 
-<https://performance.musiconn.de/event/le-triomphe-de-lamour-theatre-du-palais-royal-paris-1705-09-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/le-triomphe-de-lamour-theatre-du-palais-royal-paris-1705-09-11> a cto:CTO_0001005 ;
     rdfs:label "Le Triomphe de l'Amour, Théâtre du Palais-Royal (Paris), 11.9.1705" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1705-09-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1705-09-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300659997> ;
-    cto:relatedItem <https://d-nb.info/gnd/300659997>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/theatre-du-palais-royal-paris-1> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300659997> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180845810> ],
         <https://performance.musiconn.de/source/onlinequelle-338>,
         <https://performance.musiconn.de/source/onlinequelle-339>,
-        <https://performance.musiconn.de/source/textquelle-digitalisat-141>,
-        <https://performance.musiconn.de/work/le-triomphe-de-lamour-lully-jean-baptiste>,
-        <https://viaf.org/viaf/180845810> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/theatre-du-palais-royal-paris-1> ;
-    cto:viaf <https://viaf.org/viaf/180845810> .
+        <https://performance.musiconn.de/source/textquelle-digitalisat-141> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180845810> a nfdicore:NFDI_0001010 .
 

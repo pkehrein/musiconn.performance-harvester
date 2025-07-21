@@ -1,41 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1239452918> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4329977-5> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5075084-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ensemble-modern-9-83-webern-iii-berliner-philharmonie-berlin-kammermusiksaal-1983-09-11> ] .
 
-<https://performance.musiconn.de/event/ensemble-modern-9-83-webern-iii-berliner-philharmonie-berlin-kammermusiksaal-1983-09-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ensemble-modern-9-83-webern-iii-berliner-philharmonie-berlin-kammermusiksaal-1983-09-11> a cto:CTO_0001005 ;
     rdfs:label "Ensemble Modern 9/83 Webern (III), Berliner Philharmonie (Berlin) / Kammermusiksaal, 11.9.1983" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1983-09-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1983-09-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1239452918>,
-        <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/4329977-5>,
-        <https://d-nb.info/gnd/5075084-7> ;
-    cto:relatedItem <https://d-nb.info/gnd/1239452918>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5075084-7> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132661925> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4329977-5> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1239452918> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1303162985500986300000> ],
         <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
         <https://performance.musiconn.de/work/berceuse-elegiaque-bearbeitung-busoni-ferruccio>,
         <https://performance.musiconn.de/work/deutsche-taenze-fassung-schubert-franz>,
-        <https://performance.musiconn.de/work/johann-sebastian-bach-fuga-ricercata-a-6-voci-webern-anton>,
         <https://performance.musiconn.de/work/kaiserwalzer-bearbeitung-strauss-johann>,
         <https://performance.musiconn.de/work/lieder-eines-fahrenden-gesellen-bearbeitung-mahler-gustav>,
         <https://performance.musiconn.de/work/rosen-aus-dem-sueden-bearbeitung-strauss-johann>,
         <https://performance.musiconn.de/work/schatz-walzer-bearbeitung-strauss-johann>,
-        <https://performance.musiconn.de/work/wein-weib-und-gesang-bearbeitung-strauss-johann>,
-        <https://viaf.org/viaf/1303162985500986300000> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4329977-5> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/5075084-7>,
-        <https://viaf.org/viaf/132661925>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/1303162985500986300000>,
-        <https://viaf.org/viaf/132661925>,
-        <https://viaf.org/viaf/158825187> .
+        <https://performance.musiconn.de/work/wein-weib-und-gesang-bearbeitung-strauss-johann> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1303162985500986300000> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/132661925> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
 

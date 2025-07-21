@@ -1,38 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1024958272> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118722700> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/120517981> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1276247990> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/l-amante-di-tutte-hoftheater-muenster-westf-1765-00-00> ] .
 
-<https://performance.musiconn.de/event/l-amante-di-tutte-hoftheater-muenster-westf-1765-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/l-amante-di-tutte-hoftheater-muenster-westf-1765-00-00> a cto:CTO_0001005 ;
     rdfs:label "L' amante di tutte, Hoftheater (Münster (Westf)), 1765" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1765-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1765-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1024958272>,
-        <https://d-nb.info/gnd/118722700>,
-        <https://d-nb.info/gnd/120517981>,
-        <https://d-nb.info/gnd/1276247990> ;
-    cto:relatedItem <https://d-nb.info/gnd/1276247990>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1024958272> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/120517981> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118722700> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hoftheater-muenster-westf> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309378277> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1276247990> ],
         <https://performance.musiconn.de/source/lamante-di-tutte-dramma-giocoso-per-musica-dageo-liteo-da-rappresentarsi-nel-teatro-di-questa-elettorale-corte-1765-per-commando-di-sua-altezza-eminentissima-elettorale-massimiliano-frederico-arcivescovo-di-colonia-principe-ed-elettore-per-la-direttione-del-signor-angelo-mingotti-direttore-dellopere-italiane>,
-        <https://performance.musiconn.de/source/theobald-opern-stagioni>,
-        <https://performance.musiconn.de/work/lamante-di-tutte-galuppi-baldassare>,
-        <https://viaf.org/viaf/309378277> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hoftheater-muenster-westf> ;
-    cto:relatedPerson <https://d-nb.info/gnd/1024958272>,
-        <https://d-nb.info/gnd/118722700>,
-        <https://d-nb.info/gnd/120517981>,
-        <https://viaf.org/viaf/17491958>,
-        <https://viaf.org/viaf/22327261>,
-        <https://viaf.org/viaf/72226518> ;
-    cto:viaf <https://viaf.org/viaf/17491958>,
-        <https://viaf.org/viaf/22327261>,
-        <https://viaf.org/viaf/309378277>,
-        <https://viaf.org/viaf/72226518> .
+        <https://performance.musiconn.de/source/theobald-opern-stagioni> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/22327261> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/72226518> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/17491958> ] .
+
+<https://viaf.org/viaf/17491958> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/22327261> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309378277> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/72226518> a nfdicore:NFDI_0001010 .
 

@@ -1,41 +1,50 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1231959053> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300516657> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300756844> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kamernyj-koncert-26-april-1972-sankt-petersburger-philharmonie-kleiner-saal-1972-04-26> ] .
 
-<https://performance.musiconn.de/event/kamernyj-koncert-26-april-1972-sankt-petersburger-philharmonie-kleiner-saal-1972-04-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kamernyj-koncert-26-april-1972-sankt-petersburger-philharmonie-kleiner-saal-1972-04-26> a cto:CTO_0001005 ;
     rdfs:label "Kamernyj koncert (26. April 1972), Sankt-Petersburger Philharmonie / Kleiner Saal, 26.4.1972" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1972-04-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1972-04-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1231959053>,
-        <https://d-nb.info/gnd/300516657>,
-        <https://d-nb.info/gnd/300756844> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
-    cto:relatedItem <https://d-nb.info/gnd/1231959053>,
-        <https://d-nb.info/gnd/300516657>,
-        <https://d-nb.info/gnd/300756844>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192591394> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1231959053> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/9008161938140439870002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300756844> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300516657> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175088072> ],
         <https://performance.musiconn.de/source/8-leningrader-fruehling-1972-26-april>,
         <https://performance.musiconn.de/source/8-leningrader-fruehling-1972-uebersicht>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-nr-4-banscikov-gennadij-i>,
         <https://performance.musiconn.de/work/posvjascenie-kavkazu-archimandritov-boris-ivanovic>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-1-prigozin-ljucian-a>,
         <https://performance.musiconn.de/work/sonaten-klavier-nr-2-laul-rein>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-nr-1-op-51-tolstoj-dmitrij-a>,
         <https://performance.musiconn.de/work/tri-romansa-na-stichi-s-esenina-trambickij-viktor-n>,
-        <https://performance.musiconn.de/work/tri-russkie-pesni-voronina-tatjana-aleksandrovna>,
-        <https://viaf.org/viaf/175088072>,
-        <https://viaf.org/viaf/192591394>,
-        <https://viaf.org/viaf/9008161938140439870002> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/175088072>,
-        <https://viaf.org/viaf/192591394>,
-        <https://viaf.org/viaf/9008161938140439870002> .
+        <https://performance.musiconn.de/work/tri-russkie-pesni-voronina-tatjana-aleksandrovna> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175088072> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192591394> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/9008161938140439870002> a nfdicore:NFDI_0001010 .
 

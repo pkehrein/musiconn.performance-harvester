@@ -1,37 +1,46 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300062249> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300336942> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300556578> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/musik-fuer-alle-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1948-01-29-18-30> ] .
 
-<https://performance.musiconn.de/event/musik-fuer-alle-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1948-01-29-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/musik-fuer-alle-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1948-01-29-18-30> a cto:CTO_0001005 ;
     rdfs:label "Musik für alle, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 29.1.1948, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1947-1948> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1948-01-29T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1948-01-29T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300062249>,
-        <https://d-nb.info/gnd/300336942>,
-        <https://d-nb.info/gnd/300556578> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1947-1948> ;
-    cto:relatedItem <https://d-nb.info/gnd/300062249>,
-        <https://d-nb.info/gnd/300336942>,
-        <https://d-nb.info/gnd/300556578>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182320331> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202937502> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300556578> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062249> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300336942> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217016861> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/aus-der-musik-zu-h-ibsens-dramatischer-dichtung-peer-gynt-op-46-grieg-edvard>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-16-a-moll-grieg-edvard>,
-        <https://performance.musiconn.de/work/korsholma-jaernefelt-armas>,
-        <https://performance.musiconn.de/work/norsk-kunstnerkarneval-svendsen-johan-severin>,
-        <https://viaf.org/viaf/182320331>,
-        <https://viaf.org/viaf/202937502>,
-        <https://viaf.org/viaf/217016861> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/182320331>,
-        <https://viaf.org/viaf/202937502>,
-        <https://viaf.org/viaf/217016861> .
+        <https://performance.musiconn.de/work/aus-der-musik-zu-h-ibsens-dramatischer-dichtung-peer-gynt-op-46-grieg-edvard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182320331> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202937502> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217016861> a nfdicore:NFDI_0001010 .
 

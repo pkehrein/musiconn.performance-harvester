@@ -1,38 +1,47 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30002357X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300157282> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7569680-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/drittes-sonntags-konzert-grosser-konzertsaal-frankfurt-a-m-1905-11-05-17-30> ] .
 
-<https://performance.musiconn.de/event/drittes-sonntags-konzert-grosser-konzertsaal-frankfurt-a-m-1905-11-05-17-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/drittes-sonntags-konzert-grosser-konzertsaal-frankfurt-a-m-1905-11-05-17-30> a cto:CTO_0001005 ;
     rdfs:label "Drittes Sonntags-Konzert, Großer Konzertsaal (Frankfurt a. M.), 5.11.1905, 17:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1905-1906> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1905-11-05T17:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1905-11-05T17:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30002357X>,
-        <https://d-nb.info/gnd/300157282>,
-        <https://d-nb.info/gnd/7569680-0> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1905-1906> ;
-    cto:relatedItem <https://d-nb.info/gnd/30002357X>,
-        <https://d-nb.info/gnd/300157282>,
-        <https://d-nb.info/gnd/7569680-0>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183178901> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185878407> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157282> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7569680-0> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30002357X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174504830> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/bergliot-grieg-edvard>,
         <https://performance.musiconn.de/work/das-schloss-der-herzen-gnomentanz-sommer-hans>,
-        <https://performance.musiconn.de/work/riquet-mit-dem-schopf-waldfrieden-sommer-hans>,
-        <https://performance.musiconn.de/work/symphonia-domestica-strauss-richard>,
-        <https://performance.musiconn.de/work/v-srednej-azii-borodin-aleksandr-porfirevic>,
-        <https://viaf.org/viaf/174504830>,
-        <https://viaf.org/viaf/183178901>,
-        <https://viaf.org/viaf/185878407> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/174504830>,
-        <https://viaf.org/viaf/183178901>,
-        <https://viaf.org/viaf/185878407> .
+        <https://performance.musiconn.de/work/riquet-mit-dem-schopf-waldfrieden-sommer-hans> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174504830> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183178901> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185878407> a nfdicore:NFDI_0001010 .
 

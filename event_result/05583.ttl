@@ -1,46 +1,59 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/114194345X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146280> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30035259X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4012995-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-dresden-1935-11-02> ] .
 
-<https://performance.musiconn.de/event/konzert-dresden-1935-11-02> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-dresden-1935-11-02> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Dresden, 2.11.1935" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1935-36> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1935-11-02" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1935-11-02" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/114194345X>,
-        <https://d-nb.info/gnd/300146280>,
-        <https://d-nb.info/gnd/30035259X>,
-        <https://d-nb.info/gnd/4012995-0> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1935-36> ;
-    cto:relatedItem <https://d-nb.info/gnd/114194345X>,
-        <https://d-nb.info/gnd/300146280>,
-        <https://d-nb.info/gnd/30035259X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/146756224> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4012995-0> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179102699> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146280> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179427272> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30035259X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178483592> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/114194345X> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
         <https://performance.musiconn.de/work/ausfahrt-kuhn-siegfried>,
         <https://performance.musiconn.de/work/bin-durch-die-alpen-gezogen-dost-walter>,
         <https://performance.musiconn.de/work/ein-jaeger-aus-kurpfalz-anonym>,
         <https://performance.musiconn.de/work/ein-straeusschen-am-hute-anonym>,
-        <https://performance.musiconn.de/work/insprugk-ich-muss-dich-lassen-isaac-heinrich>,
         <https://performance.musiconn.de/work/muss-i-denn-zum-staedtele-hinaus-anonym>,
-        <https://performance.musiconn.de/work/romanzen-und-balladen-op-75-im-walde-schumann-robert>,
         <https://performance.musiconn.de/work/schoener-fruehling-komm-doch-wieder-anonym>,
-        <https://performance.musiconn.de/work/schweizerlied-schubert-franz>,
-        <https://performance.musiconn.de/work/seht-wie-die-sonne-dort-sinket-anonym>,
-        <https://viaf.org/viaf/178483592>,
-        <https://viaf.org/viaf/179102699>,
-        <https://viaf.org/viaf/179427272> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4012995-0>,
-        <https://viaf.org/viaf/146756224> ;
-    cto:viaf <https://viaf.org/viaf/146756224>,
-        <https://viaf.org/viaf/178483592>,
-        <https://viaf.org/viaf/179102699>,
-        <https://viaf.org/viaf/179427272> .
+        <https://performance.musiconn.de/work/seht-wie-die-sonne-dort-sinket-anonym> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/146756224> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178483592> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179102699> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179427272> a nfdicore:NFDI_0001010 .
 

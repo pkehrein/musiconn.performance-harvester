@@ -1,43 +1,59 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009984> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300090250> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300430728> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300872542> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4419018-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-heiliggeistkirche-heidelberg-1957-11-02> ] .
 
-<https://performance.musiconn.de/event/konzert-heiliggeistkirche-heidelberg-1957-11-02> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-heiliggeistkirche-heidelberg-1957-11-02> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Heiliggeistkirche (Heidelberg), 2.11.1957" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1957-11-02" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1957-11-02" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300090250>,
-        <https://d-nb.info/gnd/300430728>,
-        <https://d-nb.info/gnd/300872542>,
-        <https://d-nb.info/gnd/4419018-9> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300090250>,
-        <https://d-nb.info/gnd/300430728>,
-        <https://d-nb.info/gnd/300872542>,
-        <https://performance.musiconn.de/source/motettenbuch-1957>,
-        <https://performance.musiconn.de/work/geistliche-chormusik-wachet-auf-ruft-uns-die-stimme-distler-hugo>,
-        <https://performance.musiconn.de/work/jesu-meine-freude-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/newe-gaistliche-und-welltliche-teutsche-gesanng-sampt-zwayen-lateinischen-deutsche-sprueche-von-leben-und-tod-lechner-leonhard>,
-        <https://performance.musiconn.de/work/psalm-137-thomas-kurt>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/180032976>,
-        <https://viaf.org/viaf/182880702>,
-        <https://viaf.org/viaf/192594635> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4419018-9>,
-        <https://viaf.org/viaf/86145542403596640264> ;
-    cto:viaf <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/180032976>,
-        <https://viaf.org/viaf/182880702>,
-        <https://viaf.org/viaf/192594635>,
-        <https://viaf.org/viaf/86145542403596640264> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4419018-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/86145542403596640264> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180032976> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300872542> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182880702> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177379672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300430728> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300090250> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009984> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192594635> ],
+        <https://performance.musiconn.de/source/motettenbuch-1957> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177379672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180032976> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182880702> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192594635> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/86145542403596640264> a nfdicore:NFDI_0001010 .
 

@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/103915559> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/il-negligente-french-theatre-den-haag-1752-12-07> ] .
 
-<https://performance.musiconn.de/event/il-negligente-french-theatre-den-haag-1752-12-07> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/il-negligente-french-theatre-den-haag-1752-12-07> a cto:CTO_0001005 ;
     rdfs:label "Il negligente, French Theatre (Den Haag), 7.12.1752" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1752-12-07" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1752-12-07" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/103915559> ;
-    cto:relatedItem <https://performance.musiconn.de/source/haas-repertoire>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/103915559> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/french-theatre-den-haag> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/haas-repertoire>,
         <https://performance.musiconn.de/source/rasch-opera>,
         <https://performance.musiconn.de/work/il-negligente-ciampi-vincenzo-legrenzio> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/french-theatre-den-haag> ;
-    cto:relatedPerson <https://d-nb.info/gnd/103915559>,
-        <https://viaf.org/viaf/15037284> ;
-    cto:viaf <https://viaf.org/viaf/15037284> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/15037284> ] .
+
+<https://viaf.org/viaf/15037284> a nfdicore:NFDI_0001010 .
 

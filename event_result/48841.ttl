@@ -1,41 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026692> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300097948> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146485> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171528> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/95th-abonnement-concert-nihon-seinenkan-hall-tokyo-1931-10-11> ] .
 
-<https://performance.musiconn.de/event/95th-abonnement-concert-nihon-seinenkan-hall-tokyo-1931-10-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/95th-abonnement-concert-nihon-seinenkan-hall-tokyo-1931-10-11> a cto:CTO_0001005 ;
     rdfs:label "95th Abonnement Concert, Nihon Seinenkan Hall (Tokyo), 11.10.1931" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1931-10-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1931-10-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026692>,
-        <https://d-nb.info/gnd/300097948>,
-        <https://d-nb.info/gnd/300146485>,
-        <https://d-nb.info/gnd/300171528> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026692>,
-        <https://d-nb.info/gnd/300097948>,
-        <https://d-nb.info/gnd/300146485>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://performance.musiconn.de/source/nhk-kokyo-gakudan-ed-nhk-1977-nhk-kokyo-gakudan-goju-nenshi-1926-1977-nhk-tokyo-nippon-hoso-shuppan-kyokai>,
-        <https://performance.musiconn.de/work/der-freischuetz-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/lieder-eines-fahrenden-gesellen-mahler-gustav>,
-        <https://performance.musiconn.de/work/rhapsodien-alt-maennerchor-orchester-op-53-brahms-johannes>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-op-97-es-dur-schumann-robert>,
-        <https://viaf.org/viaf/174587567>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/179822789>,
-        <https://viaf.org/viaf/182661476> ;
-    cto:relatedLocation <https://viaf.org/viaf/141981202> ;
-    cto:viaf <https://viaf.org/viaf/141981202>,
-        <https://viaf.org/viaf/174587567>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/179822789>,
-        <https://viaf.org/viaf/182661476> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/141981202> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179822789> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177811557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146485> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300097948> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182661476> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174587567> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026692> ],
+        <https://performance.musiconn.de/source/nhk-kokyo-gakudan-ed-nhk-1977-nhk-kokyo-gakudan-goju-nenshi-1926-1977-nhk-tokyo-nippon-hoso-shuppan-kyokai> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/141981202> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174587567> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177811557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179822789> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182661476> a nfdicore:NFDI_0001010 .
 

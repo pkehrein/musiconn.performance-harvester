@@ -1,59 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1208948806> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033338> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300093616> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009440X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300311753> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300808054> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/fest-concert-des-geburtstages-ihrer-majestaet-der-kaiserin-augusta-viktoria-von-deutschland-und-des-meisters-franz-liszt-ehemaliger-krystallpalast-leipzig-alberthalle-1894-10-22> ] .
 
-<https://performance.musiconn.de/event/fest-concert-des-geburtstages-ihrer-majestaet-der-kaiserin-augusta-viktoria-von-deutschland-und-des-meisters-franz-liszt-ehemaliger-krystallpalast-leipzig-alberthalle-1894-10-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/fest-concert-des-geburtstages-ihrer-majestaet-der-kaiserin-augusta-viktoria-von-deutschland-und-des-meisters-franz-liszt-ehemaliger-krystallpalast-leipzig-alberthalle-1894-10-22> a cto:CTO_0001005 ;
     rdfs:label "Fest-Concert des Geburtstages ihrer Majestät der Kaiserin Augusta Viktoria von Deutschland und des Meisters Franz Liszt, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 22.10.1894" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1894-10-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1894-10-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1208948806>,
-        <https://d-nb.info/gnd/300033338>,
-        <https://d-nb.info/gnd/300093616>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300311753>,
-        <https://d-nb.info/gnd/300808054> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
-    cto:relatedItem <https://d-nb.info/gnd/1208948806>,
-        <https://d-nb.info/gnd/300033338>,
-        <https://d-nb.info/gnd/300093616>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300311753>,
-        <https://d-nb.info/gnd/300808054>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009440X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174184579> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186496501> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033338> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181040439> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1208948806> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185280994> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300311753> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093616> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300808054> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182690690> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200777095> ],
         <https://performance.musiconn.de/source/liszt-verein-zum-zehnjaehrigen-jubilaeum-bericht-ueber-die-10jaehrige-thaetigkeit-des-vereins-1885-1895-leipzig-1895>,
         <https://performance.musiconn.de/work/an-den-linden-jensen-adolf>,
         <https://performance.musiconn.de/work/die-erscheinung-der-venus-steinbach-emil>,
         <https://performance.musiconn.de/work/die-scheuerfrau-am-christabend-bungert-august>,
         <https://performance.musiconn.de/work/eine-melodie-chopin-frederic>,
-        <https://performance.musiconn.de/work/festklaenge-liszt-franz>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-cs-53-b-moll-tschaikowski-peter-i>,
         <https://performance.musiconn.de/work/kuessen-ist-suesse-bungert-august>,
-        <https://performance.musiconn.de/work/les-preludes-liszt-franz>,
         <https://performance.musiconn.de/work/liebestraum-liszt-franz>,
         <https://performance.musiconn.de/work/militaer-marsch-arrangiert-schubert-franz>,
-        <https://performance.musiconn.de/work/neue-liebe-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/nonnenwerth-singstimme-klavier-liszt-franz>,
-        <https://performance.musiconn.de/work/romanzen-und-balladen-op-53-blondels-lied-schumann-robert>,
-        <https://performance.musiconn.de/work/sommernachmittag-bungert-august>,
-        <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/181040439>,
-        <https://viaf.org/viaf/182690690>,
-        <https://viaf.org/viaf/185280994>,
-        <https://viaf.org/viaf/186496501>,
-        <https://viaf.org/viaf/200777095> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/181040439>,
-        <https://viaf.org/viaf/182690690>,
-        <https://viaf.org/viaf/185280994>,
-        <https://viaf.org/viaf/186496501>,
-        <https://viaf.org/viaf/200777095> .
+        <https://performance.musiconn.de/work/sommernachmittag-bungert-august> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174184579> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181040439> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182690690> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185280994> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186496501> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200777095> a nfdicore:NFDI_0001010 .
 

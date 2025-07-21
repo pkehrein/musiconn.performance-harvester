@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300101058> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170092> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300279426> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300449755> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/abokonzert-20-zweites-gewandhaus-leipzig-1897-03-11> ] .
 
-<https://performance.musiconn.de/event/abokonzert-20-zweites-gewandhaus-leipzig-1897-03-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/abokonzert-20-zweites-gewandhaus-leipzig-1897-03-11> a cto:CTO_0001005 ;
     rdfs:label "Abokonzert 20, Zweites Gewandhaus (Leipzig), 11.3.1897" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1897-03-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1897-03-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300101058>,
-        <https://d-nb.info/gnd/300170092>,
-        <https://d-nb.info/gnd/300279426>,
-        <https://d-nb.info/gnd/300449755>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/300101058>,
-        <https://d-nb.info/gnd/300170092>,
-        <https://d-nb.info/gnd/300279426>,
-        <https://d-nb.info/gnd/300449755>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196888268> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170092> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182086643> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/302725682> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101058> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300449755> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300279426> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211712631> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
-        <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-morgenlich-leuchtend-im-rosigen-schein-wagner-richard>,
-        <https://performance.musiconn.de/work/joseph-champs-paternels-mehul-etienne-nicolas>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-roentgen-julius>,
-        <https://performance.musiconn.de/work/musik-zu-ruy-blas-ouvertuere-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-op-28-e-moll-heinrich-xxiv-reuss-koestritz-fuerst>,
-        <https://viaf.org/viaf/182086643>,
-        <https://viaf.org/viaf/196888268>,
-        <https://viaf.org/viaf/211712631>,
-        <https://viaf.org/viaf/302725682> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/182086643>,
-        <https://viaf.org/viaf/196888268>,
-        <https://viaf.org/viaf/211712631>,
-        <https://viaf.org/viaf/264523828>,
-        <https://viaf.org/viaf/302725682> .
+        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-roentgen-julius> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182086643> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196888268> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211712631> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/302725682> a nfdicore:NFDI_0001010 .
 

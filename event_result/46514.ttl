@@ -1,53 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1180417089> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1235354806> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30004108X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300266529> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300336780> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300903111> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/isaj-braudo-i-ego-ucenikov-cikl-organnych-koncertov-konzert-33-st-petersburger-konservatorium-kleiner-saal-1967-00-00> ] .
 
-<https://performance.musiconn.de/event/isaj-braudo-i-ego-ucenikov-cikl-organnych-koncertov-konzert-33-st-petersburger-konservatorium-kleiner-saal-1967-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/isaj-braudo-i-ego-ucenikov-cikl-organnych-koncertov-konzert-33-st-petersburger-konservatorium-kleiner-saal-1967-00-00> a cto:CTO_0001005 ;
     rdfs:label "Isaj Braudo i ego učenikov - Cikl organnych koncertov (Konzert 3.3), St. Petersburger Konservatorium. Kleiner Saal, 1967" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/isaj-braudo-i-ego-ucenikov-cikl-organnych-koncertov> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1967-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1967-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1180417089>,
-        <https://d-nb.info/gnd/1235354806>,
-        <https://d-nb.info/gnd/30004108X>,
-        <https://d-nb.info/gnd/300266529>,
-        <https://d-nb.info/gnd/300336780>,
-        <https://d-nb.info/gnd/300903111> ;
-    cto:itemOf <https://performance.musiconn.de/series/isaj-braudo-i-ego-ucenikov-cikl-organnych-koncertov> ;
-    cto:relatedItem <https://d-nb.info/gnd/1180417089>,
-        <https://d-nb.info/gnd/30004108X>,
-        <https://d-nb.info/gnd/300266529>,
-        <https://d-nb.info/gnd/300336780>,
-        <https://d-nb.info/gnd/300903111>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1235354806> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177287349> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300903111> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1180417089> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179246669> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300266529> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300336780> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175032005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/553155286636287180003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183365028> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30004108X> ],
         <https://performance.musiconn.de/source/leningrader-philharmonie-festival-1967-isaj-braudo>,
         <https://performance.musiconn.de/work/arien-stimme-basso-continuo-purcell-henry>,
         <https://performance.musiconn.de/work/fantasien-orgel-eben-petr>,
-        <https://performance.musiconn.de/work/galliarda-dulenti-scheidt-samuel>,
         <https://performance.musiconn.de/work/gigue-orgel-clerambault-louis-nicolas>,
-        <https://performance.musiconn.de/work/hymne-a-lunivers-jolivet-andre>,
-        <https://performance.musiconn.de/work/nouveau-livre-de-noels-daquin-louis-claude>,
         <https://performance.musiconn.de/work/postludium-orgel-janacek-leos>,
         <https://performance.musiconn.de/work/praeludien-und-fugen-orgel-cernohorsky-bohuslav-matej>,
-        <https://performance.musiconn.de/work/prelude-and-fugue-on-a-theme-of-vittoria-britten-benjamin>,
-        <https://performance.musiconn.de/work/tabulatura-organowa-trzy-tance-jan-z-lublina>,
-        <https://performance.musiconn.de/work/tokkaten-orgel-c-dur-cernohorsky-bohuslav-matej>,
-        <https://viaf.org/viaf/175032005>,
-        <https://viaf.org/viaf/177287349>,
-        <https://viaf.org/viaf/179246669>,
-        <https://viaf.org/viaf/183365028>,
-        <https://viaf.org/viaf/553155286636287180003> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1235354806> ;
-    cto:viaf <https://viaf.org/viaf/175032005>,
-        <https://viaf.org/viaf/177287349>,
-        <https://viaf.org/viaf/179246669>,
-        <https://viaf.org/viaf/183365028>,
-        <https://viaf.org/viaf/553155286636287180003> .
+        <https://performance.musiconn.de/work/tabulatura-organowa-trzy-tance-jan-z-lublina> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175032005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177287349> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179246669> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183365028> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/553155286636287180003> a nfdicore:NFDI_0001010 .
 

@@ -1,54 +1,71 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1112496890> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1161433279> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011865> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300479018> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300479026> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-thomaskirche-leipzig-2005-12-24> ] .
 
-<https://performance.musiconn.de/event/vesper-thomaskirche-leipzig-2005-12-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-thomaskirche-leipzig-2005-12-24> a cto:CTO_0001005 ;
     rdfs:label "Vesper, Thomaskirche (Leipzig), 24.12.2005" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2005-12-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2005-12-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1112496890>,
-        <https://d-nb.info/gnd/1161433279>,
-        <https://d-nb.info/gnd/300011865>,
-        <https://d-nb.info/gnd/300479018>,
-        <https://d-nb.info/gnd/300479026>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1112496890>,
-        <https://d-nb.info/gnd/1161433279>,
-        <https://d-nb.info/gnd/300011865>,
-        <https://d-nb.info/gnd/300479018>,
-        <https://d-nb.info/gnd/300479026>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300479018> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011865> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1161433279> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1112496890> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1802147312817137970005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179510515> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190429818> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300479026> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6034152988212612790004> ],
         <https://performance.musiconn.de/source/motettenbuch-2005-06-1>,
         <https://performance.musiconn.de/work/cantional-lob-sei-gott-schein-johann-hermann>,
         <https://performance.musiconn.de/work/conditor-alme-siderum-anonym>,
         <https://performance.musiconn.de/work/florilegium-portense-1603-joseph-lieber-joseph-mein-calvisius-sethus>,
-        <https://performance.musiconn.de/work/florilegium-selectissimarum-cantionum-praestantissimorum-aetatis-nostri-autorum-gloria-in-excelsis-deo-calvisius-sethus>,
         <https://performance.musiconn.de/work/opella-nova-theil-1-gelobet-seist-du-jesu-christ-schein-johann-hermann>,
-        <https://performance.musiconn.de/work/opella-nova-theil-1-nun-komm-der-heiden-heiland-schein-johann-hermann>,
         <https://performance.musiconn.de/work/opella-nova-theil-1-vom-himmel-hoch-da-komm-ich-her-schein-johann-hermann>,
         <https://performance.musiconn.de/work/stille-nacht-heilige-nacht-schreck-gustav-biller-georg-christoph>,
         <https://performance.musiconn.de/work/weihnacht-1958-fuerchtet-euch-nicht-zimmermann-heinz-werner>,
-        <https://performance.musiconn.de/work/weihnacht-1958-mache-dich-auf-werde-licht-zimmermann-heinz-werner>,
-        <https://performance.musiconn.de/work/weihnachts-oratorium-dies-hat-er-alles-uns-getan-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/weihnachts-oratorium-schaut-hin-dort-liegt-im-finstern-stall-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/weihnachts-oratorium-wie-soll-ich-dich-empfangen-bach-johann-sebastian>,
-        <https://viaf.org/viaf/179510515>,
-        <https://viaf.org/viaf/1802147312817137970005>,
-        <https://viaf.org/viaf/190429818>,
-        <https://viaf.org/viaf/6034152988212612790004> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/179510515>,
-        <https://viaf.org/viaf/1802147312817137970005>,
-        <https://viaf.org/viaf/190429818>,
-        <https://viaf.org/viaf/6034152988212612790004> .
+        <https://performance.musiconn.de/work/weihnacht-1958-mache-dich-auf-werde-licht-zimmermann-heinz-werner> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179510515> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/1802147312817137970005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190429818> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6034152988212612790004> a nfdicore:NFDI_0001010 .
 

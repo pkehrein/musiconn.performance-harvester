@@ -1,33 +1,43 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300061803> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300069065> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1843-08-05> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1843-08-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1843-08-05> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 5.8.1843" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1843-08-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1843-08-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300061803>,
-        <https://d-nb.info/gnd/300069065>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/300061803>,
-        <https://d-nb.info/gnd/300069065>,
-        <https://performance.musiconn.de/source/verzeichniss-der-motetten-1811-1905>,
-        <https://performance.musiconn.de/work/gesaenge-hob-25c1-9-aus-dem-danklied-zu-gott-haydn-joseph>,
-        <https://performance.musiconn.de/work/herr-ich-habe-lieb-die-staette-graun-carl-heinrich>,
-        <https://viaf.org/viaf/183981058>,
-        <https://viaf.org/viaf/192573307> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/183981058>,
-        <https://viaf.org/viaf/192573307> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192573307> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300061803> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183981058> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300069065> ],
+        <https://performance.musiconn.de/source/verzeichniss-der-motetten-1811-1905> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183981058> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192573307> a nfdicore:NFDI_0001010 .
 

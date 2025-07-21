@@ -1,45 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1206702214> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110782> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300142439> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300348053> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300481233> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-vereinskonzert-rathaus-muenster-westf-friedenssaal-1878-11-09> ] .
 
-<https://performance.musiconn.de/event/3-vereinskonzert-rathaus-muenster-westf-friedenssaal-1878-11-09> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-vereinskonzert-rathaus-muenster-westf-friedenssaal-1878-11-09> a cto:CTO_0001005 ;
     rdfs:label "3. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 9.11.1878" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1878-79> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1878-11-09" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1878-11-09" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1206702214>,
-        <https://d-nb.info/gnd/300110782>,
-        <https://d-nb.info/gnd/300142439>,
-        <https://d-nb.info/gnd/300348053>,
-        <https://d-nb.info/gnd/300481233>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1878-79> ;
-    cto:relatedItem <https://d-nb.info/gnd/1206702214>,
-        <https://d-nb.info/gnd/300110782>,
-        <https://d-nb.info/gnd/300142439>,
-        <https://d-nb.info/gnd/300348053>,
-        <https://d-nb.info/gnd/300481233>,
-        <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1878-1879>,
-        <https://performance.musiconn.de/work/die-flucht-der-heiligen-familie-wuellner-franz>,
-        <https://performance.musiconn.de/work/die-schoepfung-von-deiner-guet-haydn-joseph>,
-        <https://performance.musiconn.de/work/die-zauberharfe-ouvertuere-schubert-franz>,
-        <https://performance.musiconn.de/work/serenaden-oboe-2-klarinette-2-horn-2-fagott-2-kv-388-c-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-5-c-moll-gade-niels-wilhelm>,
-        <https://viaf.org/viaf/176634768>,
-        <https://viaf.org/viaf/186484339>,
-        <https://viaf.org/viaf/195813735>,
-        <https://viaf.org/viaf/971158491028311920000> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/176634768>,
-        <https://viaf.org/viaf/186484339>,
-        <https://viaf.org/viaf/195813735>,
-        <https://viaf.org/viaf/971158491028311920000> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/971158491028311920000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195813735> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300348053> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110782> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300142439> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300481233> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1206702214> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186484339> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176634768> ],
+        <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1878-1879> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176634768> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186484339> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195813735> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/971158491028311920000> a nfdicore:NFDI_0001010 .
 

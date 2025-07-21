@@ -1,47 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300037864> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300054122> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300066201> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300200307> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300281943> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zwoelfter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1922-04-19-19-00> ] .
 
-<https://performance.musiconn.de/event/zwoelfter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1922-04-19-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zwoelfter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1922-04-19-19-00> a cto:CTO_0001005 ;
     rdfs:label "Zwölfter Kammermusik-Abend, Kleiner Konzertsaal (Frankfurt a. M.), 19.4.1922, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1921-1922> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1922-04-19T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1922-04-19T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300037864>,
-        <https://d-nb.info/gnd/300054122>,
-        <https://d-nb.info/gnd/300066201>,
-        <https://d-nb.info/gnd/300200307>,
-        <https://d-nb.info/gnd/300281943> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1921-1922> ;
-    cto:relatedItem <https://d-nb.info/gnd/300037864>,
-        <https://d-nb.info/gnd/300054122>,
-        <https://d-nb.info/gnd/300066201>,
-        <https://d-nb.info/gnd/300200307>,
-        <https://d-nb.info/gnd/300281943>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185337299> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212879224> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300054122> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300066201> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300281943> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190418447> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037864> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215928527> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210936917> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300200307> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/capriccio-c-dur-scarlatti-alessandro>,
-        <https://performance.musiconn.de/work/hochzeitsmarsch-und-elfenreigen-aus-der-musik-zu-shakespeares-sommernachtstraum-liszt-franz>,
-        <https://performance.musiconn.de/work/prelude-aria-et-final-franck-cesar>,
-        <https://performance.musiconn.de/work/rondos-klavier-op-11-es-dur-hummel-johann-nepomuk>,
-        <https://performance.musiconn.de/work/sonaten-klavier-op-35-b-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/suites-de-pieces-hwv-434-442-nr-2-haendel-georg-friedrich>,
-        <https://viaf.org/viaf/185337299>,
-        <https://viaf.org/viaf/190418447>,
-        <https://viaf.org/viaf/210936917>,
-        <https://viaf.org/viaf/212879224>,
-        <https://viaf.org/viaf/215928527> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/185337299>,
-        <https://viaf.org/viaf/190418447>,
-        <https://viaf.org/viaf/210936917>,
-        <https://viaf.org/viaf/212879224>,
-        <https://viaf.org/viaf/215928527> .
+        <https://performance.musiconn.de/work/capriccio-c-dur-scarlatti-alessandro> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185337299> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190418447> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210936917> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212879224> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215928527> a nfdicore:NFDI_0001010 .
 

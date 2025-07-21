@@ -1,61 +1,83 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1049859146> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300071299> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300249632> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300414536> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300479328> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4179049-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4297030-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-stadtkirche-jena-1929-10-20-20-00> ] .
 
-<https://performance.musiconn.de/event/konzert-stadtkirche-jena-1929-10-20-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-stadtkirche-jena-1929-10-20-20-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Stadtkirche (Jena), 20.10.1929, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1929-10-20T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1929-10-20T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1049859146>,
-        <https://d-nb.info/gnd/300071299>,
-        <https://d-nb.info/gnd/300249632>,
-        <https://d-nb.info/gnd/300414536>,
-        <https://d-nb.info/gnd/300479328>,
-        <https://d-nb.info/gnd/4179049-2>,
-        <https://d-nb.info/gnd/4297030-1> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1049859146>,
-        <https://d-nb.info/gnd/300071299>,
-        <https://d-nb.info/gnd/300249632>,
-        <https://d-nb.info/gnd/300414536>,
-        <https://d-nb.info/gnd/300479328>,
-        <https://d-nb.info/gnd/4179049-2>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/233824553> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4297030-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300414536> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211720468> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217004320> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4179049-2> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174638087> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173959444> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175668375> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300479328> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300249632> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185555855> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300071299> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1049859146> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/adoramus-te-christe-palestrina-giovanni-pierluigi-da>,
         <https://performance.musiconn.de/work/betrachtung-des-leidens-krueger-j-h>,
         <https://performance.musiconn.de/work/drei-sprueche-aus-dem-cherubinischen-wandersmann-boettcher-georg>,
         <https://performance.musiconn.de/work/glockenlied-lendvai-erwin>,
-        <https://performance.musiconn.de/work/kirchengesaeng-christ-ist-erstanden-hassler-hans-leo>,
         <https://performance.musiconn.de/work/maria-und-das-jesuskind-grabner-hermann>,
         <https://performance.musiconn.de/work/mariae-geburt-knab-armin>,
-        <https://performance.musiconn.de/work/missa-lhomme-arme-kyrie-dufay-guillaume>,
-        <https://performance.musiconn.de/work/o-bone-jesu-miserere-palestrina-giovanni-pierluigi-da>,
         <https://performance.musiconn.de/work/saeerspruch-lendvai-erwin>,
-        <https://performance.musiconn.de/work/sanctus>,
-        <https://performance.musiconn.de/work/tenebrae-factae-sunt-s-162-haydn-michael>,
-        <https://performance.musiconn.de/work/trost-der-nacht-boettcher-georg>,
-        <https://viaf.org/viaf/173959444>,
-        <https://viaf.org/viaf/174638087>,
-        <https://viaf.org/viaf/175668375>,
-        <https://viaf.org/viaf/185555855>,
-        <https://viaf.org/viaf/211720468>,
-        <https://viaf.org/viaf/217004320> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4297030-1>,
-        <https://viaf.org/viaf/233824553> ;
-    cto:viaf <https://viaf.org/viaf/173959444>,
-        <https://viaf.org/viaf/174638087>,
-        <https://viaf.org/viaf/175668375>,
-        <https://viaf.org/viaf/185555855>,
-        <https://viaf.org/viaf/211720468>,
-        <https://viaf.org/viaf/217004320>,
-        <https://viaf.org/viaf/233824553> .
+        <https://performance.musiconn.de/work/trost-der-nacht-boettcher-georg> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/173959444> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174638087> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175668375> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185555855> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211720468> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217004320> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/233824553> a nfdicore:NFDI_0001010 .
 

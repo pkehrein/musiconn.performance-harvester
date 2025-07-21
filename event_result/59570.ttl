@@ -1,29 +1,36 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1225698669> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4066043-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-wiesbaden-1986-05-12-5> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-wiesbaden-1986-05-12-5> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-wiesbaden-1986-05-12-5> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Wiesbaden, 12.5.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-05-12" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-05-12" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4066043-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/150068172> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6900161212237940070006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225698669> ],
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1225698669>,
-        <https://d-nb.info/gnd/4066043-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1225698669>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
-        <https://performance.musiconn.de/work/bevor-sie-zerbricht-liebscher-fritz>,
-        <https://viaf.org/viaf/6900161212237940070006> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4066043-6>,
-        <https://viaf.org/viaf/150068172> ;
-    cto:relatedPerson <https://performance.musiconn.de/person/walther-ursula> ;
-    cto:viaf <https://viaf.org/viaf/150068172>,
-        <https://viaf.org/viaf/6900161212237940070006> .
+    cto:relatedPerson <https://performance.musiconn.de/person/walther-ursula> .
+
+<https://viaf.org/viaf/150068172> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6900161212237940070006> a nfdicore:NFDI_0001010 .
 

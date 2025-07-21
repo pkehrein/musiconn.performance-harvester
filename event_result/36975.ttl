@@ -1,36 +1,46 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1266119329> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300048408> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5074761-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/landhaus-konzert-stadtmuseum-dresden-1978-09-23-19-00> ] .
 
-<https://performance.musiconn.de/event/landhaus-konzert-stadtmuseum-dresden-1978-09-23-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/landhaus-konzert-stadtmuseum-dresden-1978-09-23-19-00> a cto:CTO_0001005 ;
     rdfs:label "Landhaus-Konzert, Stadtmuseum Dresden, 23.9.1978, 19:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1978-09-23T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1978-09-23T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1266119329>,
-        <https://d-nb.info/gnd/300048408>,
-        <https://d-nb.info/gnd/5074761-7> ;
-    cto:relatedItem <https://d-nb.info/gnd/1266119329>,
-        <https://d-nb.info/gnd/300048408>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5074761-7> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/126221316> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1266119329> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6286166172284390800009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212879085> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300048408> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/kassationen-oboe-fagott-horn-2-violine-viola-kontrabass-haydn-joseph>,
         <https://performance.musiconn.de/work/kompositionen-viola-oboe-herchet-joerg>,
-        <https://performance.musiconn.de/work/miniaturen-fuer-oboe>,
-        <https://performance.musiconn.de/work/sonaten-oboe-fagott-cembalo-kontrabass-f-dur-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/trios-violine-2-viola-b-148-c-dur-dvorak-antonin>,
-        <https://viaf.org/viaf/212879085>,
-        <https://viaf.org/viaf/6286166172284390800009> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5074761-7>,
-        <https://viaf.org/viaf/126221316> ;
-    cto:viaf <https://viaf.org/viaf/126221316>,
-        <https://viaf.org/viaf/212879085>,
-        <https://viaf.org/viaf/6286166172284390800009> .
+        <https://performance.musiconn.de/work/sonaten-oboe-fagott-cembalo-kontrabass-f-dur-haendel-georg-friedrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/126221316> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212879085> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6286166172284390800009> a nfdicore:NFDI_0001010 .
 

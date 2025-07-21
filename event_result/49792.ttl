@@ -1,56 +1,74 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/106954521X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1167963512> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300107943> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300122101> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300132549> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170025> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/28-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1929-12-06-20-00> ] .
 
-<https://performance.musiconn.de/event/28-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1929-12-06-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/28-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1929-12-06-20-00> a cto:CTO_0001005 ;
     rdfs:label "28. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 6.12.1929, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1929-1930-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1929-12-06T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1929-12-06T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/106954521X>,
-        <https://d-nb.info/gnd/1167963512>,
-        <https://d-nb.info/gnd/300107943>,
-        <https://d-nb.info/gnd/300122101>,
-        <https://d-nb.info/gnd/300132549>,
-        <https://d-nb.info/gnd/300170025> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1929-1930-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/106954521X>,
-        <https://d-nb.info/gnd/1167963512>,
-        <https://d-nb.info/gnd/300107943>,
-        <https://d-nb.info/gnd/300122101>,
-        <https://d-nb.info/gnd/300132549>,
-        <https://d-nb.info/gnd/300170025>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300132549> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1167963512> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180026894> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300122101> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170025> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4463151112576837180000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181036650> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300107943> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/19145304723878610989> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6928153834764164450003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185094981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/106954521X> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
         <https://performance.musiconn.de/work/cavalleria-rusticana-duett-mascagni-pietro>,
-        <https://performance.musiconn.de/work/der-freischuetz-einst-traeumte-meiner-selgen-base-romanze-und-arie-weber-carl-maria-von>,
         <https://performance.musiconn.de/work/don-carlos-arie-der-eboli-warum-hat-gott-mich-verdi-giuseppe>,
-        <https://performance.musiconn.de/work/don-giovanni-ouvertuere-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/fidelio-duett-der-marcelline-und-des-jaquino-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/guillaume-tell-oper-1829-ouvertuere-rossini-gioachino>,
-        <https://performance.musiconn.de/work/la-boheme-che-gelida-manina-puccini-giacomo>,
-        <https://performance.musiconn.de/work/lohengrin-in-fernem-land-wagner-richard>,
         <https://performance.musiconn.de/work/pagliacci-prolog-leoncavallo-ruggiero>,
-        <https://performance.musiconn.de/work/salome-fantasie-strauss-richard>,
-        <https://performance.musiconn.de/work/tannhaeuser-und-der-saengerkrieg-auf-wartburg-o-du-mein-holder-abendstern-wagner-richard>,
-        <https://viaf.org/viaf/180026894>,
-        <https://viaf.org/viaf/181036650>,
-        <https://viaf.org/viaf/185094981>,
-        <https://viaf.org/viaf/19145304723878610989>,
-        <https://viaf.org/viaf/4463151112576837180000>,
-        <https://viaf.org/viaf/6928153834764164450003> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/180026894>,
-        <https://viaf.org/viaf/181036650>,
-        <https://viaf.org/viaf/185094981>,
-        <https://viaf.org/viaf/19145304723878610989>,
-        <https://viaf.org/viaf/4463151112576837180000>,
-        <https://viaf.org/viaf/6928153834764164450003> .
+        <https://performance.musiconn.de/work/salome-fantasie-strauss-richard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180026894> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181036650> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185094981> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/19145304723878610989> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4463151112576837180000> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6928153834764164450003> a nfdicore:NFDI_0001010 .
 

@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300027044> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300054246> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300125690> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-kammerkonzert-schloss-albrechtsberg-dresden-2010-06-16-20-00> ] .
 
-<https://performance.musiconn.de/event/6-kammerkonzert-schloss-albrechtsberg-dresden-2010-06-16-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-kammerkonzert-schloss-albrechtsberg-dresden-2010-06-16-20-00> a cto:CTO_0001005 ;
     rdfs:label "6. Kammerkonzert, Schloss Albrechtsberg (Dresden), 16.6.2010, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2009-2010> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2010-06-16T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2010-06-16T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300027044>,
-        <https://d-nb.info/gnd/300054246>,
-        <https://d-nb.info/gnd/300125690>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2009-2010> ;
-    cto:relatedItem <https://d-nb.info/gnd/300027044>,
-        <https://d-nb.info/gnd/300054246>,
-        <https://d-nb.info/gnd/300125690>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-1897-ravel-maurice>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-fwv-8-a-dur-franck-cesar>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-nr-1-op-78-g-dur-brahms-johannes>,
-        <https://viaf.org/viaf/176804891>,
-        <https://viaf.org/viaf/1882145424632886831035>,
-        <https://viaf.org/viaf/206833296> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/176804891>,
-        <https://viaf.org/viaf/1882145424632886831035>,
-        <https://viaf.org/viaf/206833296>,
-        <https://viaf.org/viaf/237386709> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1882145424632886831035> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300125690> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176804891> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300054246> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206833296> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027044> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176804891> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/1882145424632886831035> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206833296> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
 

@@ -4,22 +4,25 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/133943984> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/orgelkonzert-maria-und-martha-kirche-bautzen-1986-05-04> ] .
 
-<https://performance.musiconn.de/event/orgelkonzert-maria-und-martha-kirche-bautzen-1986-05-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/orgelkonzert-maria-und-martha-kirche-bautzen-1986-05-04> a cto:CTO_0001005 ;
     rdfs:label "Orgelkonzert, Maria- und Martha-Kirche (Bautzen), 4.5.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-05-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-05-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/133943984> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/133943984> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/maria-und-martha-kirche-bautzen> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
         <https://performance.musiconn.de/work/fantasie-orgelwerk-egermann-eberhard> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/maria-und-martha-kirche-bautzen> ;
-    cto:relatedPerson <https://d-nb.info/gnd/133943984>,
-        <https://viaf.org/viaf/13515135> ;
-    cto:viaf <https://viaf.org/viaf/13515135> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/13515135> ] .
+
+<https://viaf.org/viaf/13515135> a nfdicore:NFDI_0001010 .
 

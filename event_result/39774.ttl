@@ -1,47 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300107544> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108133> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109709> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110863> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300297254> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/mozart-zyklus-2-abend-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1950-11-04-19-00> ] .
 
-<https://performance.musiconn.de/event/mozart-zyklus-2-abend-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1950-11-04-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/mozart-zyklus-2-abend-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1950-11-04-19-00> a cto:CTO_0001005 ;
     rdfs:label "Mozart-Zyklus (2. Abend), Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 4.11.1950, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1950-1951> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1950-11-04T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1950-11-04T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300107544>,
-        <https://d-nb.info/gnd/300108133>,
-        <https://d-nb.info/gnd/300109709>,
-        <https://d-nb.info/gnd/300110863>,
-        <https://d-nb.info/gnd/300297254> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1950-1951> ;
-    cto:relatedItem <https://d-nb.info/gnd/300107544>,
-        <https://d-nb.info/gnd/300108133>,
-        <https://d-nb.info/gnd/300109709>,
-        <https://d-nb.info/gnd/300110863>,
-        <https://d-nb.info/gnd/300297254>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300297254> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180063206> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215924220> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108133> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110863> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197650944> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109709> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181309806> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206839968> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300107544> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/2-arien-fuer-sopran-und-orchester-a-per-pieta-bell-isol-mio-kv-78-b-sol-nascente-kv-70-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/exsultate-jubilate-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-es-dur-kv-113-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/misero-pargoletto-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-kv-112-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-kv-97-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/180063206>,
-        <https://viaf.org/viaf/181309806>,
-        <https://viaf.org/viaf/197650944>,
-        <https://viaf.org/viaf/206839968>,
-        <https://viaf.org/viaf/215924220> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/180063206>,
-        <https://viaf.org/viaf/181309806>,
-        <https://viaf.org/viaf/197650944>,
-        <https://viaf.org/viaf/206839968>,
-        <https://viaf.org/viaf/215924220> .
+        <https://performance.musiconn.de/work/2-arien-fuer-sopran-und-orchester-a-per-pieta-bell-isol-mio-kv-78-b-sol-nascente-kv-70-mozart-wolfgang-amadeus> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180063206> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181309806> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197650944> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206839968> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215924220> a nfdicore:NFDI_0001010 .
 

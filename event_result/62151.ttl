@@ -1,30 +1,33 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1043803637> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/artemisia-teatro-santi-giovanni-e-paolo-venedig-1657-01-10> ] .
 
-<https://performance.musiconn.de/event/artemisia-teatro-santi-giovanni-e-paolo-venedig-1657-01-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/artemisia-teatro-santi-giovanni-e-paolo-venedig-1657-01-10> a cto:CTO_0001005 ;
     rdfs:label "Artemisia, Teatro Santi Giovanni e Paolo (Venedig), 10.1.1657" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1657-01-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1657-01-10" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1043803637> ;
-    cto:relatedItem <https://d-nb.info/gnd/1043803637>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/teatro-santi-giovanni-e-paolo-venedig> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1043803637> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/293755891> ],
         <https://performance.musiconn.de/source/allacci-lione-dramaturgia-di-lione-allacci-accresciuta-e-continuata-fino-allanno-mdcclv-venezia-giambattista-pasquali-1755>,
         <https://performance.musiconn.de/source/clubb-louise-george-italian-plays-15001700-in-the-folger-library-firenze-olschki-1968>,
         <https://performance.musiconn.de/source/corago-repertorio-e-archivio-di-libretti-del-melodramma-italiano-dal-1600-al-1900>,
         <https://performance.musiconn.de/source/ritzu-franca-bibliografia-della-collana-palatina-di-drammi-studi-secenteschi-2-1961-293320>,
         <https://performance.musiconn.de/source/salvioli-giovanni-und-carlo-salvioli-bibliografia-universale-del-teatro-drammatico-italiano-venezia-ferrari-1903>,
-        <https://performance.musiconn.de/source/sartori-claudio-i-libretti-italiani-a-stampa-dalle-origini-al-1800-6-bde-cuneo-bertola-locatelli-19901993>,
-        <https://performance.musiconn.de/work/artemisia-cavalli-francesco>,
-        <https://viaf.org/viaf/293755891> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/teatro-santi-giovanni-e-paolo-venedig> ;
-    cto:viaf <https://viaf.org/viaf/293755891> .
+        <https://performance.musiconn.de/source/sartori-claudio-i-libretti-italiani-a-stampa-dalle-origini-al-1800-6-bde-cuneo-bertola-locatelli-19901993> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/293755891> a nfdicore:NFDI_0001010 .
 

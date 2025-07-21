@@ -1,48 +1,65 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/117718155X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1179948319> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30000995X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029535> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029780> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4454316-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/feierstunde-in-der-bergkirche-zu-schleiz-bergkirche-schleiz-1936-06-02-17-00> ] .
 
-<https://performance.musiconn.de/event/feierstunde-in-der-bergkirche-zu-schleiz-bergkirche-schleiz-1936-06-02-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/feierstunde-in-der-bergkirche-zu-schleiz-bergkirche-schleiz-1936-06-02-17-00> a cto:CTO_0001005 ;
     rdfs:label "Feierstunde in der Bergkirche zu Schleiz, Bergkirche Schleiz, 2.6.1936, 17:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1935-36> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1936-06-02T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1936-06-02T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/117718155X>,
-        <https://d-nb.info/gnd/1179948319>,
-        <https://d-nb.info/gnd/30000995X>,
-        <https://d-nb.info/gnd/300029535>,
-        <https://d-nb.info/gnd/300029780>,
-        <https://d-nb.info/gnd/4454316-5> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1935-36> ;
-    cto:relatedItem <https://d-nb.info/gnd/117718155X>,
-        <https://d-nb.info/gnd/1179948319>,
-        <https://d-nb.info/gnd/30000995X>,
-        <https://d-nb.info/gnd/300029535>,
-        <https://d-nb.info/gnd/300029780>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4454316-5> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237438009> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185711418> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1179948319> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194731077> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029780> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174185373> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30000995X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029535> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2975155226705784490007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/117718155X> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/ave-maria-wab-6-f-dur-bruckner-anton>,
-        <https://performance.musiconn.de/work/herzlich-tut-mich-erfreuen-die-froehlich-sommerzeit-lechner-leonhard>,
-        <https://performance.musiconn.de/work/lieder-gemischter-chor-op-38-waldpsalm-bruch-max>,
-        <https://performance.musiconn.de/work/luthers-lob-der-musica-unger-walter>,
-        <https://performance.musiconn.de/work/os-justi-bruckner-anton>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-alles-was-odem-hat-lobe-den-herrn-bach-johann-sebastian>,
-        <https://viaf.org/viaf/174185373>,
-        <https://viaf.org/viaf/185711418>,
-        <https://viaf.org/viaf/194731077>,
-        <https://viaf.org/viaf/2975155226705784490007> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4454316-5>,
-        <https://viaf.org/viaf/237438009> ;
-    cto:viaf <https://viaf.org/viaf/174185373>,
-        <https://viaf.org/viaf/185711418>,
-        <https://viaf.org/viaf/194731077>,
-        <https://viaf.org/viaf/237438009>,
-        <https://viaf.org/viaf/2975155226705784490007> .
+        <https://performance.musiconn.de/work/herzlich-tut-mich-erfreuen-die-froehlich-sommerzeit-lechner-leonhard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174185373> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185711418> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194731077> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237438009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2975155226705784490007> a nfdicore:NFDI_0001010 .
 

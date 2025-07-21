@@ -1,58 +1,79 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300062249> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009440X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300094817> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140754> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300169809> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300303610> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30063871X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ii-concert-ehemaliger-krystallpalast-leipzig-alberthalle-1893-12-05> ] .
 
-<https://performance.musiconn.de/event/ii-concert-ehemaliger-krystallpalast-leipzig-alberthalle-1893-12-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ii-concert-ehemaliger-krystallpalast-leipzig-alberthalle-1893-12-05> a cto:CTO_0001005 ;
     rdfs:label "II. Concert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 5.12.1893" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1893-12-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1893-12-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300062249>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300094817>,
-        <https://d-nb.info/gnd/300140754>,
-        <https://d-nb.info/gnd/300169809>,
-        <https://d-nb.info/gnd/300303610>,
-        <https://d-nb.info/gnd/30063871X> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
-    cto:relatedItem <https://d-nb.info/gnd/300062249>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300094817>,
-        <https://d-nb.info/gnd/300140754>,
-        <https://d-nb.info/gnd/300169809>,
-        <https://d-nb.info/gnd/300303610>,
-        <https://d-nb.info/gnd/30063871X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300094817> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30063871X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062249> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191511737> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218087567> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140754> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185890048> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181844547> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176123806> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174184579> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300303610> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300169809> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009440X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202937502> ],
         <https://performance.musiconn.de/source/liszt-verein-zum-zehnjaehrigen-jubilaeum-bericht-ueber-die-10jaehrige-thaetigkeit-des-vereins-1885-1895-leipzig-1895>,
-        <https://performance.musiconn.de/work/der-fliegende-hollaender-ouvertuere-wagner-richard>,
-        <https://performance.musiconn.de/work/die-junge-nonne-schubert-franz>,
         <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-die-vierzehn-engel-humperdinck-engelbert>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-16-a-moll-grieg-edvard>,
-        <https://performance.musiconn.de/work/les-preludes-liszt-franz>,
-        <https://performance.musiconn.de/work/lieder-r-591-liszt-franz>,
-        <https://performance.musiconn.de/work/nocturnes-klavier-k-4b-8-c-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/polonaisen-klavier-e-dur-liszt-franz>,
-        <https://performance.musiconn.de/work/tasso-liszt-franz>,
-        <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/176123806>,
-        <https://viaf.org/viaf/181844547>,
-        <https://viaf.org/viaf/185890048>,
-        <https://viaf.org/viaf/191511737>,
-        <https://viaf.org/viaf/202937502>,
-        <https://viaf.org/viaf/218087567> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/176123806>,
-        <https://viaf.org/viaf/181844547>,
-        <https://viaf.org/viaf/185890048>,
-        <https://viaf.org/viaf/191511737>,
-        <https://viaf.org/viaf/202937502>,
-        <https://viaf.org/viaf/218087567> .
+        <https://performance.musiconn.de/work/polonaisen-klavier-e-dur-liszt-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174184579> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176123806> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181844547> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185890048> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191511737> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202937502> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218087567> a nfdicore:NFDI_0001010 .
 

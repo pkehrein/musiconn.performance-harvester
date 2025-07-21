@@ -1,47 +1,59 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1069851221> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1155879031> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171781> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300647735> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-museums-concert-grosser-konzertsaal-frankfurt-a-m-1876-12-22-18-30> ] .
 
-<https://performance.musiconn.de/event/6-museums-concert-grosser-konzertsaal-frankfurt-a-m-1876-12-22-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-museums-concert-grosser-konzertsaal-frankfurt-a-m-1876-12-22-18-30> a cto:CTO_0001005 ;
     rdfs:label "6. Museums-Concert, Großer Konzertsaal (Frankfurt a. M.), 22.12.1876, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1876-1877> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1876-12-22T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1876-12-22T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1069851221>,
-        <https://d-nb.info/gnd/1155879031>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/300647735> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1876-1877> ;
-    cto:relatedItem <https://d-nb.info/gnd/1069851221>,
-        <https://d-nb.info/gnd/1155879031>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/300647735>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300647735> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194747005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1069851221> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1155879031> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179909346> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309560042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3777152381773401950005> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
         <https://performance.musiconn.de/work/duette-sang-das-voegelein-rubinstejn-anton-g>,
         <https://performance.musiconn.de/work/duette-tanzliedchen-winterberger-alexander>,
         <https://performance.musiconn.de/work/duette-wiegenlied-winterberger-alexander>,
         <https://performance.musiconn.de/work/fruehlingslied-lassen-eduard>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-82-d-moll-reinecke-carl>,
-        <https://performance.musiconn.de/work/lieder-singst-1-2-kl-op-48-wanderers-nachtlied-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/oberon-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/suiten-orchester-nr-1-op-113-d-moll-lachner-franz-paul>,
         <https://performance.musiconn.de/work/tarantelle-lindner-a>,
-        <https://performance.musiconn.de/work/waldlied-seidel-christian>,
-        <https://viaf.org/viaf/179909346>,
-        <https://viaf.org/viaf/194747005>,
-        <https://viaf.org/viaf/309560042>,
-        <https://viaf.org/viaf/3777152381773401950005> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/179909346>,
-        <https://viaf.org/viaf/194747005>,
-        <https://viaf.org/viaf/309560042>,
-        <https://viaf.org/viaf/3777152381773401950005> .
+        <https://performance.musiconn.de/work/waldlied-seidel-christian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179909346> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194747005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309560042> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3777152381773401950005> a nfdicore:NFDI_0001010 .
 

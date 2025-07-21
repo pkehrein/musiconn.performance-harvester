@@ -4,19 +4,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-zum-gedenktag-fuer-die-opfer-des-nationalsozialismus-brodyer-synagoge-leipzig-2004-01-27> ] .
 
-<https://performance.musiconn.de/event/konzert-zum-gedenktag-fuer-die-opfer-des-nationalsozialismus-brodyer-synagoge-leipzig-2004-01-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-zum-gedenktag-fuer-die-opfer-des-nationalsozialismus-brodyer-synagoge-leipzig-2004-01-27> a cto:CTO_0001005 ;
     rdfs:label "Konzert zum Gedenktag für die Opfer des Nationalsozialismus, Brodyer Synagoge (Leipzig), 27.1.2004" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2004-01-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2004-01-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/brodyer-synagoge-leipzig> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/programm-konzert-27-januar-2004>,
         <https://performance.musiconn.de/source/synagogalchor-gibt-heute-abend-konzert>,
         <https://performance.musiconn.de/work/de-mamme-is-gegangen-fassung-gross-friedbert>,
@@ -33,8 +37,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/schuwoh-adonoi-lewandowski-louis>,
         <https://performance.musiconn.de/work/toras-adonoi-psalm-19-7-9-lewandowski-louis>,
         <https://performance.musiconn.de/work/towo-lfonecho-lewandowski-louis> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/brodyer-synagoge-leipzig> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

@@ -1,26 +1,29 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1081846283> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gli-uccellatori-teatro-giustinian-di-s-moise-venedig-1759-00-00> ] .
 
-<https://performance.musiconn.de/event/gli-uccellatori-teatro-giustinian-di-s-moise-venedig-1759-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gli-uccellatori-teatro-giustinian-di-s-moise-venedig-1759-00-00> a cto:CTO_0001005 ;
     rdfs:label "Gli uccellatori, Teatro Giustinian di S. Moisè (Venedig), 1759" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1759-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1759-00-00" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/teatro-giustinian-di-s-moise-venedig> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180124182> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1081846283> ],
+        <https://performance.musiconn.de/source/li-uccellatori-dramma-giocoso-per-musica-di-polisseno-fegejo-pastor-arcade-da-rappresentarsi-nel-teatro-giustinian-di-s-moise-il-carnovale-dellanno-1759-dedicato-a-se-il-sig-gioanni-del-sri-conte-di-clary-daldrigen-sig-di-petersbergo-in-tyrolo> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1081846283> ;
-    cto:relatedItem <https://d-nb.info/gnd/1081846283>,
-        <https://performance.musiconn.de/source/li-uccellatori-dramma-giocoso-per-musica-di-polisseno-fegejo-pastor-arcade-da-rappresentarsi-nel-teatro-giustinian-di-s-moise-il-carnovale-dellanno-1759-dedicato-a-se-il-sig-gioanni-del-sri-conte-di-clary-daldrigen-sig-di-petersbergo-in-tyrolo>,
-        <https://performance.musiconn.de/work/gli-uccellatori-gassmann-florian-leopold>,
-        <https://viaf.org/viaf/180124182> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/teatro-giustinian-di-s-moise-venedig> ;
-    cto:relatedPerson <https://performance.musiconn.de/person/olivieri-prospero> ;
-    cto:viaf <https://viaf.org/viaf/180124182> .
+    cto:relatedPerson <https://performance.musiconn.de/person/olivieri-prospero> .
+
+<https://viaf.org/viaf/180124182> a nfdicore:NFDI_0001010 .
 

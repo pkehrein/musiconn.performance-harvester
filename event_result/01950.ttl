@@ -1,26 +1,29 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30010782X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/don-juan-oder-der-steinerne-gast-koenigliches-hoftheater-dresden-1860-06-10-18-30> ] .
 
-<https://performance.musiconn.de/event/don-juan-oder-der-steinerne-gast-koenigliches-hoftheater-dresden-1860-06-10-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/don-juan-oder-der-steinerne-gast-koenigliches-hoftheater-dresden-1860-06-10-18-30> a cto:CTO_0001005 ;
     rdfs:label "Don Juan, oder: der steinerne Gast, Königliches Hoftheater (Dresden), 10.6.1860, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/koenigliches-hoftheater-spielzeit-1860> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1860-06-10T21:15:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1860-06-10T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30010782X> ;
-    cto:itemOf <https://performance.musiconn.de/series/koenigliches-hoftheater-spielzeit-1860> ;
-    cto:relatedItem <https://d-nb.info/gnd/30010782X>,
-        <https://performance.musiconn.de/source/koenigliches-hoftheater-theaterzettel-dresden>,
-        <https://performance.musiconn.de/work/don-giovanni-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/301866059> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/koenigliches-hoftheater-dresden> ;
-    cto:viaf <https://viaf.org/viaf/301866059> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/koenigliches-hoftheater-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/301866059> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30010782X> ],
+        <https://performance.musiconn.de/source/koenigliches-hoftheater-theaterzettel-dresden> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/301866059> a nfdicore:NFDI_0001010 .
 

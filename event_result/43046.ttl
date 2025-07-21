@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300019416> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300042302> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111096> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/nachgeholtes-5-montags-konzert-staedtische-buehnen-frankfurt-am-main-oper-1969-06-02> ] .
 
-<https://performance.musiconn.de/event/nachgeholtes-5-montags-konzert-staedtische-buehnen-frankfurt-am-main-oper-1969-06-02> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/nachgeholtes-5-montags-konzert-staedtische-buehnen-frankfurt-am-main-oper-1969-06-02> a cto:CTO_0001005 ;
     rdfs:label "Nachgeholtes 5. Montags-Konzert, Städtische Bühnen (Frankfurt am Main) / Oper, 2.6.1969" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1968-1969> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1969-06-02" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1969-06-02" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300019416>,
-        <https://d-nb.info/gnd/300042302>,
-        <https://d-nb.info/gnd/300111096> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1968-1969> ;
-    cto:relatedItem <https://d-nb.info/gnd/300019416>,
-        <https://d-nb.info/gnd/300042302>,
-        <https://d-nb.info/gnd/300111096>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/prelude-a-lapres-midi-dun-faune-debussy-claude>,
-        <https://performance.musiconn.de/work/sinfonien-kv-385-d-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/symphonie-fantastique-berlioz-hector>,
-        <https://viaf.org/viaf/22145304740878610345>,
-        <https://viaf.org/viaf/294918919>,
-        <https://viaf.org/viaf/307491596> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-oper> ;
-    cto:viaf <https://viaf.org/viaf/22145304740878610345>,
-        <https://viaf.org/viaf/294918919>,
-        <https://viaf.org/viaf/307491596> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-oper> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/307491596> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111096> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300042302> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300019416> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/22145304740878610345> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/294918919> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/22145304740878610345> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/294918919> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/307491596> a nfdicore:NFDI_0001010 .
 

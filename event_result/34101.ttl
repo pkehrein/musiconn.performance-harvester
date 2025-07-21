@@ -4,24 +4,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4277998-4> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/pastorale-1697-08-30> ] .
 
-<https://performance.musiconn.de/event/pastorale-1697-08-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/pastorale-1697-08-30> a cto:CTO_0001005 ;
     rdfs:label "Pastorale, 30.8.1697" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1697-08-30" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1697-08-30" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4277998-4> ;
-    cto:relatedItem <https://performance.musiconn.de/source/musikalie-14>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4277998-4> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237368299> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/musikalie-14>,
         <https://performance.musiconn.de/source/musikalie-15>,
         <https://performance.musiconn.de/source/onlinequelle-251>,
         <https://performance.musiconn.de/source/warris-warrick-marsh-1994-20>,
         <https://performance.musiconn.de/work/pastorale-philidor-pierre-danican> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4277998-4>,
-        <https://viaf.org/viaf/237368299> ;
-    cto:viaf <https://viaf.org/viaf/237368299> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/237368299> a nfdicore:NFDI_0001010 .
 

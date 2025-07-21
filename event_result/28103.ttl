@@ -1,40 +1,48 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1190591057> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170254> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170815> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-der-koeniglichen-belvedere-kapelle-belvedere-dresden-1909-09-10> ] .
 
-<https://performance.musiconn.de/event/konzert-der-koeniglichen-belvedere-kapelle-belvedere-dresden-1909-09-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-der-koeniglichen-belvedere-kapelle-belvedere-dresden-1909-09-10> a cto:CTO_0001005 ;
     rdfs:label "Konzert der Königlichen Belvedere-Kapelle, Belvedere (Dresden), 10.9.1909" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1909-09-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1909-09-10" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1190591057>,
-        <https://d-nb.info/gnd/300170254>,
-        <https://d-nb.info/gnd/300170815> ;
-    cto:relatedItem <https://d-nb.info/gnd/300170254>,
-        <https://d-nb.info/gnd/300170815>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1190591057> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170815> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170254> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182064142> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175737773> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1908-1909>,
         <https://performance.musiconn.de/work/balltraeume-mello-alfred>,
         <https://performance.musiconn.de/work/das-fest-der-jugend-entzauberung-kempter-lothar>,
-        <https://performance.musiconn.de/work/der-ring-des-nibelungen-vorabend-das-rheingold-einzug-der-goetter-in-walhall-wagner-richard>,
-        <https://performance.musiconn.de/work/estudiantina-waldteufel-emil>,
         <https://performance.musiconn.de/work/giralda-ouvertuere-balfe-michael-w>,
         <https://performance.musiconn.de/work/im-bunten-dress-fetras-oscar>,
         <https://performance.musiconn.de/work/les-contes-dhoffmann-barcarole-offenbach-jacques>,
         <https://performance.musiconn.de/work/made-in-germany-rost-e>,
         <https://performance.musiconn.de/work/pagliacci-tonbilder-leoncavallo-ruggiero>,
         <https://performance.musiconn.de/work/serenaden-streichorchester-jambor-eugene>,
-        <https://performance.musiconn.de/work/verlass-uns-nicht-kuecken-friedrich-wilhelm>,
-        <https://viaf.org/viaf/175737773>,
-        <https://viaf.org/viaf/182064142> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1190591057> ;
-    cto:viaf <https://viaf.org/viaf/175737773>,
-        <https://viaf.org/viaf/182064142> .
+        <https://performance.musiconn.de/work/verlass-uns-nicht-kuecken-friedrich-wilhelm> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175737773> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182064142> a nfdicore:NFDI_0001010 .
 

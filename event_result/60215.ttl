@@ -1,42 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30062784X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300627858> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300754647> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4007666-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ruth-schonthal-spielt-eigene-klavierkompositionen-bonn-1986-07-16> ] .
 
-<https://performance.musiconn.de/event/ruth-schonthal-spielt-eigene-klavierkompositionen-bonn-1986-07-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ruth-schonthal-spielt-eigene-klavierkompositionen-bonn-1986-07-16> a cto:CTO_0001005 ;
     rdfs:label "Ruth Schonthal spielt eigene Klavierkompositionen, Bonn, 16.7.1986" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-aus-dem-frauenmuseum> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-07-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-07-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30062784X>,
-        <https://d-nb.info/gnd/300627858>,
-        <https://d-nb.info/gnd/300754647>,
-        <https://d-nb.info/gnd/4007666-0> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-aus-dem-frauenmuseum> ;
-    cto:relatedItem <https://d-nb.info/gnd/30062784X>,
-        <https://d-nb.info/gnd/300627858>,
-        <https://d-nb.info/gnd/300754647>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/frauenmuseum-bonn> ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4007666-0> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242429635> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30062784X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/257719344> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176200704> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186512206> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300627858> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300754647> ],
         <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-konzerte-aus-dem-frauenmuseum-bonner-sommer-1986>,
         <https://performance.musiconn.de/work/fragments-from-a-womans-diary-schonthal-ruth>,
-        <https://performance.musiconn.de/work/improvisation-schonthal-ruth>,
-        <https://performance.musiconn.de/work/nachklaenge-schonthal-ruth>,
-        <https://performance.musiconn.de/work/sonata-breve-schonthal-ruth>,
-        <https://performance.musiconn.de/work/variations-in-search-of-a-theme-schonthal-ruth>,
-        <https://viaf.org/viaf/176200704>,
-        <https://viaf.org/viaf/186512206>,
-        <https://viaf.org/viaf/257719344> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4007666-0>,
-        <https://viaf.org/viaf/242429635> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/frauenmuseum-bonn> ;
-    cto:viaf <https://viaf.org/viaf/176200704>,
-        <https://viaf.org/viaf/186512206>,
-        <https://viaf.org/viaf/242429635>,
-        <https://viaf.org/viaf/257719344> .
+        <https://performance.musiconn.de/work/improvisation-schonthal-ruth> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176200704> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186512206> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242429635> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/257719344> a nfdicore:NFDI_0001010 .
 

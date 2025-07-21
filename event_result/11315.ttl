@@ -1,36 +1,40 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1225730481> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1239847262> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-koeniglich-staedtischer-redouten-saal-olmuetz-1878-12-01> ] .
 
-<https://performance.musiconn.de/event/konzert-koeniglich-staedtischer-redouten-saal-olmuetz-1878-12-01> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-koeniglich-staedtischer-redouten-saal-olmuetz-1878-12-01> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Königlich Städtischer Redouten-Saal (Olmütz), 1.12.1878" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1878-12-01" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1878-12-01" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1225730481>,
-        <https://d-nb.info/gnd/1239847262> ;
-    cto:relatedItem <https://d-nb.info/gnd/1225730481>,
-        <https://d-nb.info/gnd/1239847262>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/koeniglich-staedtischer-redouten-saal-olmuetz> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6398151304669249460004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1239847262> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225730481> ],
         <https://performance.musiconn.de/source/programmzettel-maenner-gesang-verein-olmuetz-vom-01121878>,
-        <https://performance.musiconn.de/work/brudefaerden-i-hardanger-kjerulf-halfdan>,
         <https://performance.musiconn.de/work/das-macht-das-dunkelgruene-laub-eyrich-f>,
         <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-auswahl-wagner-richard>,
         <https://performance.musiconn.de/work/felice-notte-marietta-reissiger-carl-gottlieb>,
-        <https://performance.musiconn.de/work/gesaenge-op-5-gute-nacht-franz-robert>,
         <https://performance.musiconn.de/work/im-dunkeln-schoen-eduard>,
         <https://performance.musiconn.de/work/im-eichenhain-loewenstamm-franz-j>,
         <https://performance.musiconn.de/work/lieder-op-11-am-leuchtenden-sommermorgen-franz-robert>,
         <https://performance.musiconn.de/work/schatzerl-klein-loewenstamm-franz-j>,
-        <https://performance.musiconn.de/work/vom-rhein-bruch-max>,
-        <https://viaf.org/viaf/6398151304669249460004> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/koeniglich-staedtischer-redouten-saal-olmuetz> ;
-    cto:viaf <https://viaf.org/viaf/6398151304669249460004> .
+        <https://performance.musiconn.de/work/vom-rhein-bruch-max> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/6398151304669249460004> a nfdicore:NFDI_0001010 .
 

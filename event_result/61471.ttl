@@ -1,45 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1156749026> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1285057090> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1285071301> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109768> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300338031> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300850808> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kammerkonzert-blockhaus-dresden-1991-10-06-11-00> ] .
 
-<https://performance.musiconn.de/event/kammerkonzert-blockhaus-dresden-1991-10-06-11-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kammerkonzert-blockhaus-dresden-1991-10-06-11-00> a cto:CTO_0001005 ;
     rdfs:label "Kammerkonzert, Blockhaus (Dresden), 6.10.1991, 11:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/5-dresdner-tage-der-zeitgenoessischen-musik-1991> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1991-10-06T11:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1991-10-06T11:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1156749026>,
-        <https://d-nb.info/gnd/1285057090>,
-        <https://d-nb.info/gnd/1285071301>,
-        <https://d-nb.info/gnd/300109768>,
-        <https://d-nb.info/gnd/300338031>,
-        <https://d-nb.info/gnd/300850808> ;
-    cto:itemOf <https://performance.musiconn.de/series/5-dresdner-tage-der-zeitgenoessischen-musik-1991> ;
-    cto:relatedItem <https://d-nb.info/gnd/1285057090>,
-        <https://d-nb.info/gnd/1285071301>,
-        <https://d-nb.info/gnd/300109768>,
-        <https://d-nb.info/gnd/300338031>,
-        <https://d-nb.info/gnd/300850808>,
-        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-45-dresdner-tage-fuer-zeitgenoessische-musik-1988-1989-1991>,
-        <https://performance.musiconn.de/work/divertimenti-kammerorchester-1991-schenker-friedrich>,
-        <https://performance.musiconn.de/work/ein-musikalischer-spass-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/invitation-a-six-conversations-strauss-wolfgang>,
-        <https://performance.musiconn.de/work/moz-art-1975-schnittke-alfred>,
-        <https://performance.musiconn.de/work/vorwahl-522-bredemeyer-reiner>,
-        <https://viaf.org/viaf/174184580>,
-        <https://viaf.org/viaf/185438610>,
-        <https://viaf.org/viaf/219168958> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1156749026>,
-        <https://viaf.org/viaf/7980152502945210800008> ;
-    cto:viaf <https://viaf.org/viaf/174184580>,
-        <https://viaf.org/viaf/185438610>,
-        <https://viaf.org/viaf/219168958>,
-        <https://viaf.org/viaf/7980152502945210800008> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7980152502945210800008> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1156749026> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109768> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174184580> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219168958> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1285071301> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300338031> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300850808> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185438610> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1285057090> ],
+        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-45-dresdner-tage-fuer-zeitgenoessische-musik-1988-1989-1991> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174184580> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185438610> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219168958> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7980152502945210800008> a nfdicore:NFDI_0001010 .
 

@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026897> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108745> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300148321> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171781> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zkr-simfoniceskij-orkestr-filarmonii-14-mai-1961-sankt-petersburger-philharmonie-1961-05-14> ] .
 
-<https://performance.musiconn.de/event/zkr-simfoniceskij-orkestr-filarmonii-14-mai-1961-sankt-petersburger-philharmonie-1961-05-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zkr-simfoniceskij-orkestr-filarmonii-14-mai-1961-sankt-petersburger-philharmonie-1961-05-14> a cto:CTO_0001005 ;
     rdfs:label "ZKR Simfoničeskij orkestr filarmonii (14. Mai 1961), Sankt-Petersburger Philharmonie, 14.5.1961" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1960-61> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1961-05-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1961-05-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026897>,
-        <https://d-nb.info/gnd/300108745>,
-        <https://d-nb.info/gnd/300148321>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1960-61> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026897>,
-        <https://d-nb.info/gnd/300108745>,
-        <https://d-nb.info/gnd/300148321>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1961-13-mai>,
-        <https://performance.musiconn.de/work/konzerte-horn-orchester-kv-447-es-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/lemminkaeinen-suite-tuonelan-joutsen-sibelius-jean>,
-        <https://performance.musiconn.de/work/oberon-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-98-e-moll-brahms-johannes>,
-        <https://viaf.org/viaf/194731012>,
-        <https://viaf.org/viaf/199703865>,
-        <https://viaf.org/viaf/231992113>,
-        <https://viaf.org/viaf/309560042> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/194731012>,
-        <https://viaf.org/viaf/199703865>,
-        <https://viaf.org/viaf/231992113>,
-        <https://viaf.org/viaf/309560042> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199703865> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194731012> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300148321> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026897> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309560042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108745> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/231992113> ],
+        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1961-13-mai> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194731012> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199703865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/231992113> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309560042> a nfdicore:NFDI_0001010 .
 

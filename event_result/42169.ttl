@@ -1,40 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300016034> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30014220X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300930615> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5153343-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1932-10-19-20-00> ] .
 
-<https://performance.musiconn.de/event/1-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1932-10-19-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1932-10-19-20-00> a cto:CTO_0001005 ;
     rdfs:label "1. Kammermusik-Abend, Kleiner Konzertsaal (Frankfurt a. M.), 19.10.1932, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1932-1933> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1932-10-19T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1932-10-19T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300016034>,
-        <https://d-nb.info/gnd/30014220X>,
-        <https://d-nb.info/gnd/300930615>,
-        <https://d-nb.info/gnd/5153343-1> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1932-1933> ;
-    cto:relatedItem <https://d-nb.info/gnd/300016034>,
-        <https://d-nb.info/gnd/30014220X>,
-        <https://d-nb.info/gnd/300930615>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-79-d-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-131-cis-moll-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/trios-violine-viola-violoncello-d-581-b-dur-schubert-franz>,
-        <https://viaf.org/viaf/196877430>,
-        <https://viaf.org/viaf/200801142>,
-        <https://viaf.org/viaf/210938844> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5153343-1>,
-        <https://viaf.org/viaf/129526398> ;
-    cto:viaf <https://viaf.org/viaf/129526398>,
-        <https://viaf.org/viaf/196877430>,
-        <https://viaf.org/viaf/200801142>,
-        <https://viaf.org/viaf/210938844> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/129526398> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5153343-1> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210938844> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196877430> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200801142> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300930615> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30014220X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016034> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/129526398> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196877430> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200801142> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210938844> a nfdicore:NFDI_0001010 .
 

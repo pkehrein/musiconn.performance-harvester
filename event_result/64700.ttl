@@ -1,52 +1,75 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300092156> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300436955> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300436963> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300729162> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4317974-5> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7701682-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/linz-3-90-3-brucknerhaus-linz-1990-04-04> ] .
 
-<https://performance.musiconn.de/event/linz-3-90-3-brucknerhaus-linz-1990-04-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/linz-3-90-3-brucknerhaus-linz-1990-04-04> a cto:CTO_0001005 ;
     rdfs:label "Linz 3/90/3, Brucknerhaus (Linz), 4.4.1990" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1990-04-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1990-04-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300092156>,
-        <https://d-nb.info/gnd/300436955>,
-        <https://d-nb.info/gnd/300436963>,
-        <https://d-nb.info/gnd/300729162>,
-        <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/4317974-5>,
-        <https://d-nb.info/gnd/7701682-8> ;
-    cto:relatedItem <https://d-nb.info/gnd/300092156>,
-        <https://d-nb.info/gnd/300436955>,
-        <https://d-nb.info/gnd/300436963>,
-        <https://d-nb.info/gnd/300729162>,
-        <https://d-nb.info/gnd/7701682-8>,
-        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/furin-no-kyo-zender-hans>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-35-toch-ernst>,
-        <https://performance.musiconn.de/work/lieder-nach-gedichten-von-rainer-maria-rilke-webern-anton-1>,
-        <https://performance.musiconn.de/work/lieder-singstimme-orchester-op-13-webern-anton>,
-        <https://performance.musiconn.de/work/stuecke-querfloete-oboe-klarinette-horn-fagott-ligeti-gyoergy>,
-        <https://viaf.org/viaf/177151232>,
-        <https://viaf.org/viaf/202938317>,
-        <https://viaf.org/viaf/204599272>,
-        <https://viaf.org/viaf/213976585>,
-        <https://viaf.org/viaf/231782410> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4317974-5>,
-        <https://viaf.org/viaf/312816608> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/177151232>,
-        <https://viaf.org/viaf/202938317>,
-        <https://viaf.org/viaf/204599272>,
-        <https://viaf.org/viaf/213976585>,
-        <https://viaf.org/viaf/231782410>,
-        <https://viaf.org/viaf/312816608> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4317974-5> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/312816608> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213976585> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7701682-8> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300436955> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202938317> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300729162> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300436963> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300092156> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177151232> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/231782410> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204599272> ],
+        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177151232> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202938317> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204599272> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213976585> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/231782410> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/312816608> a nfdicore:NFDI_0001010 .
 

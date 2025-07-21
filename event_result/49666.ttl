@@ -1,60 +1,81 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1178700380> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033311> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300062540> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300112165> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133634> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30014962X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300304110> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/16-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1928-10-26-20-00> ] .
 
-<https://performance.musiconn.de/event/16-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1928-10-26-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/16-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1928-10-26-20-00> a cto:CTO_0001005 ;
     rdfs:label "16. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 26.10.1928, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1928-1929-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1928-10-26T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1928-10-26T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1178700380>,
-        <https://d-nb.info/gnd/300033311>,
-        <https://d-nb.info/gnd/300062540>,
-        <https://d-nb.info/gnd/300112165>,
-        <https://d-nb.info/gnd/300133634>,
-        <https://d-nb.info/gnd/30014962X>,
-        <https://d-nb.info/gnd/300304110> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1928-1929-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/1178700380>,
-        <https://d-nb.info/gnd/300033311>,
-        <https://d-nb.info/gnd/300062540>,
-        <https://d-nb.info/gnd/300112165>,
-        <https://d-nb.info/gnd/300133634>,
-        <https://d-nb.info/gnd/30014962X>,
-        <https://d-nb.info/gnd/300304110>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300112165> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/35145304791978611353> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30014962X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1178700380> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305991582> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7854155105792976320001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186514878> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062540> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133634> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208682942> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/308292403> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300304110> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173976878> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
-        <https://performance.musiconn.de/work/die-zauberfloete-ouvertuere-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/italjanskoe-kapriccio-na-temy-narodnych-pesen-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/jubel-ouvertuere-weber-carl-maria-von>,
         <https://performance.musiconn.de/work/konzertwalzer-glazunov-aleksandr-konstantinovic>,
-        <https://performance.musiconn.de/work/le-deluge-prelude-saint-saens-camille>,
-        <https://performance.musiconn.de/work/ma-vlast-vysehrad-smetana-bedrich>,
         <https://performance.musiconn.de/work/pagliacci-auswahl-leoncavallo-ruggiero-1>,
-        <https://performance.musiconn.de/work/peer-gynt-suite-nr-2-op-55-grieg-edvard>,
         <https://performance.musiconn.de/work/serenade-fuer-violine-andante-cantabile-allegro-con-spirito-haydn-joseph>,
-        <https://performance.musiconn.de/work/sinfonien-nr-13-andante-g-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-orchester-s-359-nr-1-liszt-franz>,
-        <https://viaf.org/viaf/173976878>,
-        <https://viaf.org/viaf/186514878>,
-        <https://viaf.org/viaf/208682942>,
-        <https://viaf.org/viaf/305991582>,
-        <https://viaf.org/viaf/308292403>,
-        <https://viaf.org/viaf/35145304791978611353>,
-        <https://viaf.org/viaf/7854155105792976320001> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/173976878>,
-        <https://viaf.org/viaf/186514878>,
-        <https://viaf.org/viaf/208682942>,
-        <https://viaf.org/viaf/305991582>,
-        <https://viaf.org/viaf/308292403>,
-        <https://viaf.org/viaf/35145304791978611353>,
-        <https://viaf.org/viaf/7854155105792976320001> .
+        <https://performance.musiconn.de/work/sinfonien-nr-13-andante-g-dur-haydn-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/173976878> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186514878> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208682942> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305991582> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/308292403> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/35145304791978611353> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7854155105792976320001> a nfdicore:NFDI_0001010 .
 

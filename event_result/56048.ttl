@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1091076286> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/schueler-schwaenke-theaterbau-des-koenigsstaedtischen-theaters-berlin-1825-10-17> ] .
 
-<https://performance.musiconn.de/event/schueler-schwaenke-theaterbau-des-koenigsstaedtischen-theaters-berlin-1825-10-17> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/schueler-schwaenke-theaterbau-des-koenigsstaedtischen-theaters-berlin-1825-10-17> a cto:CTO_0001005 ;
     rdfs:label "Schüler-Schwänke, Theaterbau des Königsstädtischen Theaters (Berlin), 17.10.1825" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1825-10-17" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1825-10-17" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1091076286> ;
-    cto:relatedItem <https://performance.musiconn.de/source/katalogisat-schueler-schwaenke-oder-die-kleinen-wilddiebe-vaudeville-posse-in-1-akt-nach-dem-franzoesischen-frei-bearbeitet-und-mit-bekannten-melodieen-versehen-17-oktober-1825>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1091076286> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/235553194> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/katalogisat-schueler-schwaenke-oder-die-kleinen-wilddiebe-vaudeville-posse-in-1-akt-nach-dem-franzoesischen-frei-bearbeitet-und-mit-bekannten-melodieen-versehen-17-oktober-1825>,
         <https://performance.musiconn.de/work/schuelerschwaenke-oder-die-kleinen-wilddiebe-fassung-mozart-wolfgang-amadeus-haydn-joseph-spontini-gaspare-mehul-etienne-nicolas-himmel-friedrich-heinrich-winter-peter-von-weigl-joseph-dalayrac-nicolas-paer-ferdinando-carafa-michele-gaveaux-pierre-glaeser-franz-antonollini-ferdinando-verschiedene> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1091076286>,
-        <https://viaf.org/viaf/235553194> ;
-    cto:viaf <https://viaf.org/viaf/235553194> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/235553194> a nfdicore:NFDI_0001010 .
 

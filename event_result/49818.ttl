@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300070217> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30007915X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300157959> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-sonntags-konzert-alte-oper-frankfurt-a-main-grosser-saal-1994-01-16-11-00> ] .
 
-<https://performance.musiconn.de/event/6-sonntags-konzert-alte-oper-frankfurt-a-main-grosser-saal-1994-01-16-11-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-sonntags-konzert-alte-oper-frankfurt-a-main-grosser-saal-1994-01-16-11-00> a cto:CTO_0001005 ;
     rdfs:label "6. Sonntags-Konzert, Alte Oper (Frankfurt a. Main). Großer Saal, 16.1.1994, 11:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1993-1994> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1994-01-16T11:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1994-01-16T11:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300070217>,
-        <https://d-nb.info/gnd/30007915X>,
-        <https://d-nb.info/gnd/300157959> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1993-1994> ;
-    cto:relatedItem <https://d-nb.info/gnd/300070217>,
-        <https://d-nb.info/gnd/30007915X>,
-        <https://d-nb.info/gnd/300157959>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-k-53-d-dur-stravinsky-igor>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-44-e-moll-haydn-joseph>,
-        <https://performance.musiconn.de/work/sinfonietten-jw-6-18-janacek-leos>,
-        <https://viaf.org/viaf/176818832>,
-        <https://viaf.org/viaf/186054031>,
-        <https://viaf.org/viaf/203709581> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/176818832>,
-        <https://viaf.org/viaf/186054031>,
-        <https://viaf.org/viaf/203709581> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300070217> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176818832> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157959> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203709581> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186054031> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30007915X> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176818832> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186054031> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203709581> a nfdicore:NFDI_0001010 .
 

@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1048364550> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300502052> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300874243> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncert-14-aprelja-sankt-petersburger-philharmonie-kleiner-saal-1971-04-14> ] .
 
-<https://performance.musiconn.de/event/koncert-14-aprelja-sankt-petersburger-philharmonie-kleiner-saal-1971-04-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncert-14-aprelja-sankt-petersburger-philharmonie-kleiner-saal-1971-04-14> a cto:CTO_0001005 ;
     rdfs:label "Koncert 14. aprelja, Sankt-Petersburger Philharmonie / Kleiner Saal, 14.4.1971" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1970-71> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1971-04-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1971-04-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1048364550>,
-        <https://d-nb.info/gnd/300502052>,
-        <https://d-nb.info/gnd/300874243> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1970-71> ;
-    cto:relatedItem <https://d-nb.info/gnd/1048364550>,
-        <https://d-nb.info/gnd/300502052>,
-        <https://d-nb.info/gnd/300874243>,
-        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1971-14-april>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-75-80-nr-76-d-moll-haydn-joseph>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-2-fis-moll-tippett-michael>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-25-britten-benjamin>,
-        <https://viaf.org/viaf/175389353>,
-        <https://viaf.org/viaf/217015357>,
-        <https://viaf.org/viaf/307289838> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/175389353>,
-        <https://viaf.org/viaf/217015357>,
-        <https://viaf.org/viaf/307289838> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/307289838> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217015357> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300502052> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300874243> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175389353> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1048364550> ],
+        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1971-14-april> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175389353> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217015357> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/307289838> a nfdicore:NFDI_0001010 .
 

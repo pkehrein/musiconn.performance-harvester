@@ -1,42 +1,57 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1066813035> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1207555266> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300638809> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5209677-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/avtorskij-vecer-mecislav-vajnberg-sankt-petersburger-philharmonie-1993-02-17> ] .
 
-<https://performance.musiconn.de/event/avtorskij-vecer-mecislav-vajnberg-sankt-petersburger-philharmonie-1993-02-17> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/avtorskij-vecer-mecislav-vajnberg-sankt-petersburger-philharmonie-1993-02-17> a cto:CTO_0001005 ;
     rdfs:label "Avtorskij večer Mečislav Vajnberg, Sankt-Petersburger Philharmonie, 17.2.1993" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1992-93> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1993-02-17" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1993-02-17" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1066813035>,
-        <https://d-nb.info/gnd/1207555266>,
-        <https://d-nb.info/gnd/300638809>,
-        <https://d-nb.info/gnd/5204449-X>,
-        <https://d-nb.info/gnd/5209677-4> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1992-93> ;
-    cto:relatedItem <https://d-nb.info/gnd/1066813035>,
-        <https://d-nb.info/gnd/1207555266>,
-        <https://d-nb.info/gnd/300638809>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311114716> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5209677-4> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1207555266> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198538791> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181330857> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300638809> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1066813035> ],
         <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1993-17-februar>,
-        <https://performance.musiconn.de/work/evrejskie-pesni-op-13-weinberg-mieczyslaw>,
-        <https://performance.musiconn.de/work/kammersinfonien-nr-3-op-151-b-dur-weinberg-mieczyslaw>,
-        <https://performance.musiconn.de/work/mazl-tov-ausschnitte-weinberg-mieczyslaw>,
-        <https://performance.musiconn.de/work/sinfonien-cembalo-streichorchester-nr-7-op-81-weinberg-mieczyslaw>,
-        <https://viaf.org/viaf/181330857>,
-        <https://viaf.org/viaf/198538791> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5209677-4>,
-        <https://viaf.org/viaf/311114716> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/181330857>,
-        <https://viaf.org/viaf/198538791>,
-        <https://viaf.org/viaf/311114716> .
+        <https://performance.musiconn.de/work/mazl-tov-ausschnitte-weinberg-mieczyslaw> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181330857> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198538791> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311114716> a nfdicore:NFDI_0001010 .
 

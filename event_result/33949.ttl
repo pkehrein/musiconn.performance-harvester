@@ -4,19 +4,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4194431-8> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/les-plaisirs-de-lile-enchantee-ballet-sur-le-theme-des-saisons-schloss-versailles-1664-05-07> ] .
 
-<https://performance.musiconn.de/event/les-plaisirs-de-lile-enchantee-ballet-sur-le-theme-des-saisons-schloss-versailles-1664-05-07> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/les-plaisirs-de-lile-enchantee-ballet-sur-le-theme-des-saisons-schloss-versailles-1664-05-07> a cto:CTO_0001005 ;
     rdfs:label "Les Plaisirs de l'Île enchantée - ballet sur le thème des saisons, Schloss Versailles, 7.5.1664" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1664-05-07" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1664-05-07" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4194431-8> ;
-    cto:relatedItem <https://performance.musiconn.de/source/beauchamps-1735-bd-3-71>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/233744168> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4194431-8> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/beauchamps-1735-bd-3-71>,
         <https://performance.musiconn.de/source/gazette-1664-05-10-1664-05-17-1664-05-21>,
         <https://performance.musiconn.de/source/loret-1664-05-10>,
         <https://performance.musiconn.de/source/musikalie-digitalisat-16>,
@@ -24,7 +27,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/source/textquelle-5>,
         <https://performance.musiconn.de/source/textquelle-digitalisat-32>,
         <https://performance.musiconn.de/work/les-plaisirs-de-lile-enchantee-ballet-sur-le-theme-des-saisons> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4194431-8>,
-        <https://viaf.org/viaf/233744168> ;
-    cto:viaf <https://viaf.org/viaf/233744168> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/233744168> a nfdicore:NFDI_0001010 .
 

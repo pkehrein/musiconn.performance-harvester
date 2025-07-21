@@ -1,22 +1,22 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vortragsabend-lesehalle-jena-1903-08-15-17-30> ] .
 
-<https://performance.musiconn.de/event/vortragsabend-lesehalle-jena-1903-08-15-17-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vortragsabend-lesehalle-jena-1903-08-15-17-30> a cto:CTO_0001005 ;
     rdfs:label "Vortragsabend, Lesehalle (Jena), 15.8.1903, 17:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vortragsabend> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1903-08-15T17:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1903-08-15T17:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:itemOf <https://performance.musiconn.de/series/vortragsabend> ;
-    cto:relatedItem <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/lesehalle-jena> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
         <https://performance.musiconn.de/work/divertimenti-oboe-2-horn-2-fagott-2-kv-252-es-dur-bearbeitung-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/duett-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/lied-levi-hermann>,
@@ -27,5 +27,5 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/sonaten-nr-2-op-5-g-moll-allegro-molto-piu-tosto-presto-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/terzett-abt-franz>,
         <https://performance.musiconn.de/work/terzett-kuhlau-friedrich> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/lesehalle-jena> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
 

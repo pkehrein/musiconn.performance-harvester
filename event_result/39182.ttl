@@ -1,47 +1,64 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300108745> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111169> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300179804> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300331355> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300954212> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4113353-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zwinger-serenade-zwinger-dresden-1943-06-05-19-30> ] .
 
-<https://performance.musiconn.de/event/zwinger-serenade-zwinger-dresden-1943-06-05-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zwinger-serenade-zwinger-dresden-1943-06-05-19-30> a cto:CTO_0001005 ;
     rdfs:label "Zwinger-Serenade, Zwinger (Dresden), 5.6.1943, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1942-1943> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1943-06-05T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1943-06-05T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300108745>,
-        <https://d-nb.info/gnd/300111169>,
-        <https://d-nb.info/gnd/300179804>,
-        <https://d-nb.info/gnd/300331355>,
-        <https://d-nb.info/gnd/300954212>,
-        <https://d-nb.info/gnd/4113353-5> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1942-1943> ;
-    cto:relatedItem <https://d-nb.info/gnd/300108745>,
-        <https://d-nb.info/gnd/300111169>,
-        <https://d-nb.info/gnd/300179804>,
-        <https://d-nb.info/gnd/300331355>,
-        <https://d-nb.info/gnd/300954212>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/der-liebe-himmlisches-gefuehl-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/der-schauspieldirektor-sinfonia-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-horn-orchester-kv-447-es-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/non-so-donde-viene-kv-294-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-kv-551-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/174318888>,
-        <https://viaf.org/viaf/182681837>,
-        <https://viaf.org/viaf/183539298>,
-        <https://viaf.org/viaf/195829486>,
-        <https://viaf.org/viaf/199703865> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4113353-5> ;
-    cto:viaf <https://viaf.org/viaf/174318888>,
-        <https://viaf.org/viaf/182681837>,
-        <https://viaf.org/viaf/183539298>,
-        <https://viaf.org/viaf/195829486>,
-        <https://viaf.org/viaf/199703865> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4113353-5> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183539298> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195829486> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111169> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182681837> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300179804> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199703865> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300331355> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300954212> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108745> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174318888> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174318888> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182681837> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183539298> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195829486> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199703865> a nfdicore:NFDI_0001010 .
 

@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300016425> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300157282> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171781> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4044095-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/raabboehm-reise-ostrava-2008-05-25-19-30> ] .
 
-<https://performance.musiconn.de/event/raabboehm-reise-ostrava-2008-05-25-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/raabboehm-reise-ostrava-2008-05-25-19-30> a cto:CTO_0001005 ;
     rdfs:label "Raab&Böhm Reise, Ostrava, 25.5.2008, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2007-2008> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2008-05-25T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2008-05-25T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300016425>,
-        <https://d-nb.info/gnd/300157282>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/4044095-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2007-2008> ;
-    cto:relatedItem <https://d-nb.info/gnd/300016425>,
-        <https://d-nb.info/gnd/300157282>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/oberon-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/sinfonien-nr-8-op-93-f-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/symphonia-domestica-strauss-richard>,
-        <https://viaf.org/viaf/174504830>,
-        <https://viaf.org/viaf/198521904>,
-        <https://viaf.org/viaf/309560042> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4044095-3>,
-        <https://viaf.org/viaf/244975487> ;
-    cto:viaf <https://viaf.org/viaf/174504830>,
-        <https://viaf.org/viaf/198521904>,
-        <https://viaf.org/viaf/244975487>,
-        <https://viaf.org/viaf/309560042> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4044095-3> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/244975487> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309560042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174504830> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016425> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157282> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198521904> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174504830> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198521904> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/244975487> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309560042> a nfdicore:NFDI_0001010 .
 

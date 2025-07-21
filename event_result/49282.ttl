@@ -1,40 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/121690037X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300205430> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30057293X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/varsavskaja-osen-1960-14-feb-1961-dom-kompozitorov-sankt-petersburg-1961-02-14> ] .
 
-<https://performance.musiconn.de/event/varsavskaja-osen-1960-14-feb-1961-dom-kompozitorov-sankt-petersburg-1961-02-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/varsavskaja-osen-1960-14-feb-1961-dom-kompozitorov-sankt-petersburg-1961-02-14> a cto:CTO_0001005 ;
     rdfs:label "Varšavskaja osen' 1960 (14. Feb. 1961), Dom kompozitorov (Sankt Petersburg), 14.2.1961" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1961-02-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1961-02-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1200899989>,
-        <https://d-nb.info/gnd/121690037X>,
-        <https://d-nb.info/gnd/300205430>,
-        <https://d-nb.info/gnd/30057293X> ;
-    cto:relatedItem <https://d-nb.info/gnd/121690037X>,
-        <https://d-nb.info/gnd/300205430>,
-        <https://d-nb.info/gnd/30057293X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300205430> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209876071> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203710798> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/121690037X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176296904> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30057293X> ],
         <https://performance.musiconn.de/source/leningrader-komponistenhaus-1961-25-januar-14-25-februar>,
         <https://performance.musiconn.de/work/exhortation-baird-tadeusz>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-sz-95-bartok-bela>,
-        <https://performance.musiconn.de/work/mandala-symphony-mayuzumi-toshiro>,
-        <https://performance.musiconn.de/work/piec-piesni-fassung-singst-orch-lutoslawski-witold>,
-        <https://performance.musiconn.de/work/przygoda-krola-artura-bacewicz-grazyna>,
-        <https://viaf.org/viaf/176296904>,
-        <https://viaf.org/viaf/203710798>,
-        <https://viaf.org/viaf/209876071> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1200899989>,
-        <https://viaf.org/viaf/385157583849933970005> ;
-    cto:viaf <https://viaf.org/viaf/176296904>,
-        <https://viaf.org/viaf/203710798>,
-        <https://viaf.org/viaf/209876071>,
-        <https://viaf.org/viaf/385157583849933970005> .
+        <https://performance.musiconn.de/work/przygoda-krola-artura-bacewicz-grazyna> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176296904> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203710798> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209876071> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
 

@@ -4,25 +4,32 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/134476433> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4041445-0> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/veranstaltung-im-rahmen-des-4-orgelkonzertes-im-dom-zu-naumburg-naumburg-saale-1986-09-19> ] .
 
-<https://performance.musiconn.de/event/veranstaltung-im-rahmen-des-4-orgelkonzertes-im-dom-zu-naumburg-naumburg-saale-1986-09-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/veranstaltung-im-rahmen-des-4-orgelkonzertes-im-dom-zu-naumburg-naumburg-saale-1986-09-19> a cto:CTO_0001005 ;
     rdfs:label "[Veranstaltung im Rahmen des] 4. Orgelkonzertes im Dom zu Naumburg, Naumburg (Saale), 19.9.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-09-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-09-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/134476433>,
-        <https://d-nb.info/gnd/4041445-0> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/134476433> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/126700985> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4041445-0> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
         <https://performance.musiconn.de/work/pianoforte-fuer-orgel-in-3-saetzen-ohse-reinhard> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4041445-0>,
-        <https://viaf.org/viaf/126700985> ;
-    cto:relatedPerson <https://d-nb.info/gnd/134476433>,
-        <https://viaf.org/viaf/85664839> ;
-    cto:viaf <https://viaf.org/viaf/126700985>,
-        <https://viaf.org/viaf/85664839> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/85664839> ] .
+
+<https://viaf.org/viaf/126700985> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/85664839> a nfdicore:NFDI_0001010 .
 

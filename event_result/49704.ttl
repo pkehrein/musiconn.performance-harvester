@@ -1,40 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/120110436X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300108613> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110766> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111126> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/10-volks-symphonie-konzert-1923-11-14> ] .
 
-<https://performance.musiconn.de/event/10-volks-symphonie-konzert-1923-11-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/10-volks-symphonie-konzert-1923-11-14> a cto:CTO_0001005 ;
     rdfs:label "10. Volks-Symphonie-Konzert, 14.11.1923" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1923-1924-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1923-11-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1923-11-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/120110436X>,
-        <https://d-nb.info/gnd/300108613>,
-        <https://d-nb.info/gnd/300110766>,
-        <https://d-nb.info/gnd/300111126> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1923-1924-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300108613>,
-        <https://d-nb.info/gnd/300110766>,
-        <https://d-nb.info/gnd/300111126>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/120110436X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5450157583884933970009> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195807854> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111126> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110766> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181448748> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175011143> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108613> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-symphonie-konzerte-1908-1933>,
-        <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
-        <https://performance.musiconn.de/work/konzertante-sinfonien-violine-viola-orchester-kv-364-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/serenaden-oboe-2-klarinette-2-bassetthorn-2-horn-4-fagott-2-kontrabass-kv-361-b-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-kv-504-d-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/175011143>,
-        <https://viaf.org/viaf/181448748>,
-        <https://viaf.org/viaf/195807854> ;
-    cto:relatedLocation <https://d-nb.info/gnd/120110436X>,
-        <https://viaf.org/viaf/5450157583884933970009> ;
-    cto:viaf <https://viaf.org/viaf/175011143>,
-        <https://viaf.org/viaf/181448748>,
-        <https://viaf.org/viaf/195807854>,
-        <https://viaf.org/viaf/5450157583884933970009> .
+        <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175011143> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181448748> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195807854> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5450157583884933970009> a nfdicore:NFDI_0001010 .
 

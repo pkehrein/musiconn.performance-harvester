@@ -1,70 +1,99 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1179198115> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1179198794> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1179199804> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1179234308> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1179234650> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1179235134> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155948> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170467> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300279426> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1885-10-04-19-30> ] .
 
-<https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1885-10-04-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/concert-gewerbehaus-dresden-gewerbehaus-saal-1885-10-04-19-30> a cto:CTO_0001005 ;
     rdfs:label "Concert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 4.10.1885, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1885-1886> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1885-10-04T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1885-10-04T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/1179198115>,
-        <https://d-nb.info/gnd/1179198794>,
-        <https://d-nb.info/gnd/1179199804>,
-        <https://d-nb.info/gnd/1179234308>,
-        <https://d-nb.info/gnd/1179234650>,
-        <https://d-nb.info/gnd/1179235134>,
-        <https://d-nb.info/gnd/300155948>,
-        <https://d-nb.info/gnd/300170467>,
-        <https://d-nb.info/gnd/300279426> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1885-1886> ;
-    cto:relatedItem <https://d-nb.info/gnd/1179198115>,
-        <https://d-nb.info/gnd/1179198794>,
-        <https://d-nb.info/gnd/1179199804>,
-        <https://d-nb.info/gnd/1179234308>,
-        <https://d-nb.info/gnd/1179234650>,
-        <https://d-nb.info/gnd/1179235134>,
-        <https://d-nb.info/gnd/300155948>,
-        <https://d-nb.info/gnd/300170467>,
-        <https://d-nb.info/gnd/300279426>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6635155191949482440007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1179234308> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1179198115> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170467> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5667155191944082440000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5611155191943782440004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155948> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180532227> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1179234650> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1179198794> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6156155191946682440002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300279426> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185486930> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1314155191921082440001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1179235134> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183302442> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1179199804> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/302725682> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1885-1886>,
         <https://performance.musiconn.de/work/abendgedanken-skuhersky-franz-zdenko>,
-        <https://performance.musiconn.de/work/aus-der-ferne-strauss-josef>,
         <https://performance.musiconn.de/work/fantasie-aus-meyerbeers-oper-robert-le-diable-zimmermann-michael>,
-        <https://performance.musiconn.de/work/heimkehr-der-soldaten-kuecken-friedrich-wilhelm>,
-        <https://performance.musiconn.de/work/heinrich-der-loewe-huldigungschor-und-quartett-kretschmer-edmund>,
-        <https://performance.musiconn.de/work/hoch-dem-kuenstler-hoch-theodore>,
-        <https://performance.musiconn.de/work/le-roi-de-lahore-ouvertuere-massenet-jules>,
-        <https://performance.musiconn.de/work/musik-zu-ruy-blas-ouvertuere-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/romanzen-horn-harfe-schulhoff-julius>,
-        <https://performance.musiconn.de/work/saison-marsch-zimmermann-michael>,
-        <https://performance.musiconn.de/work/tannhaeuser-und-der-saengerkrieg-auf-wartburg-wie-todesahnung-daemmrung-deckt-die-lande-wagner-richard>,
-        <https://performance.musiconn.de/work/traum-walzer-milloecker-carl>,
-        <https://viaf.org/viaf/1314155191921082440001>,
-        <https://viaf.org/viaf/180532227>,
-        <https://viaf.org/viaf/183302442>,
-        <https://viaf.org/viaf/185486930>,
-        <https://viaf.org/viaf/302725682>,
-        <https://viaf.org/viaf/5611155191943782440004>,
-        <https://viaf.org/viaf/5667155191944082440000>,
-        <https://viaf.org/viaf/6156155191946682440002>,
-        <https://viaf.org/viaf/6635155191949482440007> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/1314155191921082440001>,
-        <https://viaf.org/viaf/180532227>,
-        <https://viaf.org/viaf/183302442>,
-        <https://viaf.org/viaf/185486930>,
-        <https://viaf.org/viaf/302725682>,
-        <https://viaf.org/viaf/5611155191943782440004>,
-        <https://viaf.org/viaf/5667155191944082440000>,
-        <https://viaf.org/viaf/6156155191946682440002>,
-        <https://viaf.org/viaf/6635155191949482440007> .
+        <https://performance.musiconn.de/work/romanzen-horn-harfe-schulhoff-julius> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1314155191921082440001> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180532227> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183302442> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185486930> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/302725682> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5611155191943782440004> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5667155191944082440000> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6156155191946682440002> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6635155191949482440007> a nfdicore:NFDI_0001010 .
 

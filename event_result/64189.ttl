@@ -1,38 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300142110> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300264313> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4115211-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/montepulciano-7-85-montepulciano-1985-08-06> ] .
 
-<https://performance.musiconn.de/event/montepulciano-7-85-montepulciano-1985-08-06> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/montepulciano-7-85-montepulciano-1985-08-06> a cto:CTO_0001005 ;
     rdfs:label "Montepulciano 7/85, Montepulciano, 6.8.1985" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/cantiere-internazionale-darte-1985> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1985-08-06" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1985-08-06" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300142110>,
-        <https://d-nb.info/gnd/300264313>,
-        <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/4115211-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/cantiere-internazionale-darte-1985> ;
-    cto:relatedItem <https://d-nb.info/gnd/300142110>,
-        <https://d-nb.info/gnd/300264313>,
-        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/black-angels-crumb-george>,
-        <https://performance.musiconn.de/work/der-tod-und-das-maedchen-schubert-franz>,
-        <https://viaf.org/viaf/182876978>,
-        <https://viaf.org/viaf/186710468> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4115211-6>,
-        <https://viaf.org/viaf/167530550> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/167530550>,
-        <https://viaf.org/viaf/182876978>,
-        <https://viaf.org/viaf/186710468> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/167530550> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4115211-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300264313> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182876978> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186710468> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300142110> ],
+        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/167530550> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182876978> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186710468> a nfdicore:NFDI_0001010 .
 

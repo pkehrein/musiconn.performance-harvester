@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300025653> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30003380X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300119194> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-kultursaal-des-stahl-und-walzwerkes-brandenburg-brandenburg-1955-03-27-19-00> ] .
 
-<https://performance.musiconn.de/event/konzert-kultursaal-des-stahl-und-walzwerkes-brandenburg-brandenburg-1955-03-27-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-kultursaal-des-stahl-und-walzwerkes-brandenburg-brandenburg-1955-03-27-19-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Kultursaal des Stahl- und Walzwerkes Brandenburg (Brandenburg), 27.3.1955, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1954-1955> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1955-03-27T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1955-03-27T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300025653>,
-        <https://d-nb.info/gnd/30003380X>,
-        <https://d-nb.info/gnd/300119194> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1954-1955> ;
-    cto:relatedItem <https://d-nb.info/gnd/300025653>,
-        <https://d-nb.info/gnd/30003380X>,
-        <https://d-nb.info/gnd/300119194>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-2-op-83-b-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/musik-zu-heinrich-v-kleists-kaethchen-von-heilbronn-ouvertuere-pfitzner-hans>,
-        <https://performance.musiconn.de/work/sinfonien-cs-22-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/183880018>,
-        <https://viaf.org/viaf/202936453>,
-        <https://viaf.org/viaf/215924539> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kultursaal-des-stahl-und-walzwerkes-brandenburg-brandenburg> ;
-    cto:viaf <https://viaf.org/viaf/183880018>,
-        <https://viaf.org/viaf/202936453>,
-        <https://viaf.org/viaf/215924539> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kultursaal-des-stahl-und-walzwerkes-brandenburg-brandenburg> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183880018> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202936453> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025653> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30003380X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300119194> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215924539> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/183880018> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202936453> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215924539> a nfdicore:NFDI_0001010 .
 

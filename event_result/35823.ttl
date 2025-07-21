@@ -1,35 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300016409> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300125208> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300354835> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-zykluskonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1969-03-01-19-30> ] .
 
-<https://performance.musiconn.de/event/5-zykluskonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1969-03-01-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-zykluskonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1969-03-01-19-30> a cto:CTO_0001005 ;
     rdfs:label "5. Zykluskonzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 1.3.1969, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1969-03-01T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1969-03-01T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300016409>,
-        <https://d-nb.info/gnd/300125208>,
-        <https://d-nb.info/gnd/300354835> ;
-    cto:relatedItem <https://d-nb.info/gnd/300016409>,
-        <https://d-nb.info/gnd/300125208>,
-        <https://d-nb.info/gnd/300354835>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/daphnis-et-chloe-serie-2-ravel-maurice>,
-        <https://performance.musiconn.de/work/sinfonien-nr-6-op-68-f-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/taenzerische-suite-reinhold-otto>,
-        <https://viaf.org/viaf/181867195>,
-        <https://viaf.org/viaf/183880191>,
-        <https://viaf.org/viaf/198530708> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/181867195>,
-        <https://viaf.org/viaf/183880191>,
-        <https://viaf.org/viaf/198530708> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198530708> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183880191> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181867195> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300354835> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300125208> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016409> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181867195> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183880191> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198530708> a nfdicore:NFDI_0001010 .
 

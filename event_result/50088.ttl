@@ -1,40 +1,49 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300096720> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300369549> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300439806> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/der-streunende-hund-hochschule-fuer-musik-carl-maria-von-weber-dresden-gebaeude-blochmannstrasse-aula-1988-10-01-22-00> ] .
 
-<https://performance.musiconn.de/event/der-streunende-hund-hochschule-fuer-musik-carl-maria-von-weber-dresden-gebaeude-blochmannstrasse-aula-1988-10-01-22-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/der-streunende-hund-hochschule-fuer-musik-carl-maria-von-weber-dresden-gebaeude-blochmannstrasse-aula-1988-10-01-22-00> a cto:CTO_0001005 ;
     rdfs:label "Der streunende Hund, Hochschule für Musik Carl Maria von Weber (Dresden) / Gebäude Blochmannstraße / Aula, 1.10.1988, 22:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/2-dresdner-tage-der-zeitgenoessischen-musik-1988> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-10-01T22:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-10-01T22:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300096720>,
-        <https://d-nb.info/gnd/300369549>,
-        <https://d-nb.info/gnd/300439806> ;
-    cto:itemOf <https://performance.musiconn.de/series/2-dresdner-tage-der-zeitgenoessischen-musik-1988> ;
-    cto:relatedItem <https://d-nb.info/gnd/300096720>,
-        <https://d-nb.info/gnd/300369549>,
-        <https://d-nb.info/gnd/300439806>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hochschule-fuer-musik-carl-maria-von-weber-dresden-gebaeude-blochmannstrasse-aula> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194739532> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/220652409> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300096720> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300369549> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300439806> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209872251> ],
         <https://performance.musiconn.de/source/dresdner-zentrum-fuer-zeitgenoessische-musik-programmhefte-1987-1988>,
         <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-45-dresdner-tage-fuer-zeitgenoessische-musik-1988-1989-1991>,
-        <https://performance.musiconn.de/work/formy-v-vozduche-lourie-arthur-vincent>,
         <https://performance.musiconn.de/work/lieder-vom-jahre-1905-verstummte-salven-roslavec-nikolaj-andreevic>,
-        <https://performance.musiconn.de/work/nocturnes-klavier-op-15-mosolov-aleksandr-v>,
         <https://performance.musiconn.de/work/revolutionslieder-zum-ersten-mai-roslavec-nikolaj-andreevic>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-nr-4-roslavec-nikolaj-andreevic>,
-        <https://performance.musiconn.de/work/verlaine-lourie-arthur-vincent>,
-        <https://viaf.org/viaf/194739532>,
-        <https://viaf.org/viaf/209872251>,
-        <https://viaf.org/viaf/220652409> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hochschule-fuer-musik-carl-maria-von-weber-dresden-gebaeude-blochmannstrasse-aula> ;
-    cto:viaf <https://viaf.org/viaf/194739532>,
-        <https://viaf.org/viaf/209872251>,
-        <https://viaf.org/viaf/220652409> .
+        <https://performance.musiconn.de/work/verlaine-lourie-arthur-vincent> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/194739532> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209872251> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/220652409> a nfdicore:NFDI_0001010 .
 

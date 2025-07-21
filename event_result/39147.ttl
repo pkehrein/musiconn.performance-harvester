@@ -1,43 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015593> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029209> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155956> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300422369> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/grosses-konzert-dresdner-kaufmannschaft-dresden-grosser-saal-1942-11-28-17-30> ] .
 
-<https://performance.musiconn.de/event/grosses-konzert-dresdner-kaufmannschaft-dresden-grosser-saal-1942-11-28-17-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/grosses-konzert-dresdner-kaufmannschaft-dresden-grosser-saal-1942-11-28-17-30> a cto:CTO_0001005 ;
     rdfs:label "Großes Konzert, Dresdner Kaufmannschaft (Dresden) / Großer Saal, 28.11.1942, 17:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1942-1943> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1942-11-28T17:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1942-11-28T17:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300029209>,
-        <https://d-nb.info/gnd/300155956>,
-        <https://d-nb.info/gnd/300422369> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1942-1943> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015593>,
-        <https://d-nb.info/gnd/300029209>,
-        <https://d-nb.info/gnd/300155956>,
-        <https://d-nb.info/gnd/300422369>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/dresdner-kaufmannschaft-dresden-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015593> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155956> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300422369> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219160905> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181828440> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176201994> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029209> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/boccaccio-ouvertuere-suppe-franz-von>,
-        <https://performance.musiconn.de/work/delirien-strauss-josef>,
         <https://performance.musiconn.de/work/ein-kuenstlerfest-ouvertuere-czernik-willy>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-1-op-26-g-moll-bruch-max>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-3-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/manon-lescaut-intermezzo-puccini-giacomo>,
         <https://performance.musiconn.de/work/slawischer-tanz-nr-8-dvorak-antonin>,
-        <https://performance.musiconn.de/work/vorspiel-zu-einer-komoedie-czernik-willy>,
-        <https://viaf.org/viaf/176201994>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/219160905> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/dresdner-kaufmannschaft-dresden-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/176201994>,
-        <https://viaf.org/viaf/181828440>,
-        <https://viaf.org/viaf/219160905> .
+        <https://performance.musiconn.de/work/vorspiel-zu-einer-komoedie-czernik-willy> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176201994> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181828440> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219160905> a nfdicore:NFDI_0001010 .
 

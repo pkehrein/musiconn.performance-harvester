@@ -1,31 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300047398> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300150741> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-sinfoniekonzert-staatstheater-dresden-grosses-haus-1966-09-16-20-00> ] .
 
-<https://performance.musiconn.de/event/2-sinfoniekonzert-staatstheater-dresden-grosses-haus-1966-09-16-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-sinfoniekonzert-staatstheater-dresden-grosses-haus-1966-09-16-20-00> a cto:CTO_0001005 ;
     rdfs:label "2. Sinfoniekonzert, Staatstheater (Dresden) / Großes Haus, 16.9.1966, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/reihe-a-sinfoniekonzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1966-09-16T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1966-09-16T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300047398>,
-        <https://d-nb.info/gnd/300150741> ;
-    cto:itemOf <https://performance.musiconn.de/series/reihe-a-sinfoniekonzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/300047398>,
-        <https://d-nb.info/gnd/300150741>,
-        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-1-staatskapelle-dresden-1955-1976>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-b-191-h-moll-dvorak-antonin>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-107-es-dur-schostakowitsch-dmitri-d>,
-        <https://viaf.org/viaf/198525544>,
-        <https://viaf.org/viaf/204581071> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/staatstheater-dresden-grosses-haus> ;
-    cto:viaf <https://viaf.org/viaf/198525544>,
-        <https://viaf.org/viaf/204581071> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/staatstheater-dresden-grosses-haus> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300150741> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198525544> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300047398> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204581071> ],
+        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-1-staatskapelle-dresden-1955-1976> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/198525544> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204581071> a nfdicore:NFDI_0001010 .
 

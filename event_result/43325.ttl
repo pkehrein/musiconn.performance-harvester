@@ -1,28 +1,32 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/muzyka-detjam-sankt-petersburger-philharmonie-1970-03-01> ] .
 
-<https://performance.musiconn.de/event/muzyka-detjam-sankt-petersburger-philharmonie-1970-03-01> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/muzyka-detjam-sankt-petersburger-philharmonie-1970-03-01> a cto:CTO_0001005 ;
     rdfs:label "Muzyka - detjam, Sankt-Petersburger Philharmonie, 1.3.1970" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1969-70> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1970-03-01" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1970-03-01" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1969-70> ;
-    cto:relatedItem <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1970-1-maerz>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1970-1-maerz>,
         <https://performance.musiconn.de/work/detskaja-simfonija-c-dur-salmanov-vadim-n>,
         <https://performance.musiconn.de/work/imenem-ilica-vitlin-viktor-lvovic>,
         <https://performance.musiconn.de/work/poema-tokkata-preslenev-albert-aleksandrovic>,
         <https://performance.musiconn.de/work/skolnye-gody-agafonnikov-nikolaj-nikolaevic> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
 

@@ -1,40 +1,49 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300130759> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300169523> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300199880> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1924-09-21-19-00> ] .
 
-<https://performance.musiconn.de/event/7-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1924-09-21-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1924-09-21-19-00> a cto:CTO_0001005 ;
     rdfs:label "7. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 21.9.1924, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1924-1925-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1924-09-21T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1924-09-21T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300130759>,
-        <https://d-nb.info/gnd/300169523>,
-        <https://d-nb.info/gnd/300199880> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1924-1925-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300130759>,
-        <https://d-nb.info/gnd/300169523>,
-        <https://d-nb.info/gnd/300199880>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300199880> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300169523> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177073409> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300130759> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214740527> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186171630> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
         <https://performance.musiconn.de/work/die-koenigin-von-saba-ballettmusik-goldmark-karl>,
         <https://performance.musiconn.de/work/die-maer-vom-tapferen-scheiderlein-zimmer-karl>,
-        <https://performance.musiconn.de/work/im-herbst-grieg-edvard>,
-        <https://performance.musiconn.de/work/ispanskoe-kapriccio-rimskij-korsakov-nikolaj>,
         <https://performance.musiconn.de/work/lohengrin-fantasie-wagner-richard>,
-        <https://performance.musiconn.de/work/russische-weisen-violine-orchester-wieniawski-henri>,
-        <https://performance.musiconn.de/work/serenaden-streichorchester-nr-2-op-63-f-dur-walzer-volkmann-robert>,
-        <https://viaf.org/viaf/177073409>,
-        <https://viaf.org/viaf/186171630>,
-        <https://viaf.org/viaf/214740527> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/177073409>,
-        <https://viaf.org/viaf/186171630>,
-        <https://viaf.org/viaf/214740527> .
+        <https://performance.musiconn.de/work/russische-weisen-violine-orchester-wieniawski-henri> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177073409> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186171630> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214740527> a nfdicore:NFDI_0001010 .
 

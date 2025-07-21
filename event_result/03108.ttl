@@ -1,44 +1,56 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009690> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015526> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300047320> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102666> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/viertes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1885-11-20-18-30> ] .
 
-<https://performance.musiconn.de/event/viertes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1885-11-20-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/viertes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1885-11-20-18-30> a cto:CTO_0001005 ;
     rdfs:label "Viertes Museums-Concert, Großer Konzertsaal (Frankfurt a. M.), 20.11.1885, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1885-1886> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1885-11-20T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1885-11-20T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009690>,
-        <https://d-nb.info/gnd/300015526>,
-        <https://d-nb.info/gnd/300047320>,
-        <https://d-nb.info/gnd/300102666> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1885-1886> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009690>,
-        <https://d-nb.info/gnd/300015526>,
-        <https://d-nb.info/gnd/300047320>,
-        <https://d-nb.info/gnd/300102666>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009690> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192572053> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175005823> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425016> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300047320> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181431167> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102666> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015526> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
         <https://performance.musiconn.de/work/am-springbrunnen-schubert-franz>,
         <https://performance.musiconn.de/work/gartenmelodie-schumann-robert>,
-        <https://performance.musiconn.de/work/husitska-dvorak-antonin>,
-        <https://performance.musiconn.de/work/konzerte-violine-2-streichorchester-bwv-1043-d-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-61-d-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-mwv-n-16-a-dur-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/variationen-klavier-4-haendig-bearbeitung-von-gouvy-schubert-franz>,
-        <https://viaf.org/viaf/175005823>,
-        <https://viaf.org/viaf/179425016>,
-        <https://viaf.org/viaf/181431167>,
-        <https://viaf.org/viaf/192572053> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/175005823>,
-        <https://viaf.org/viaf/179425016>,
-        <https://viaf.org/viaf/181431167>,
-        <https://viaf.org/viaf/192572053> .
+        <https://performance.musiconn.de/work/variationen-klavier-4-haendig-bearbeitung-von-gouvy-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175005823> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179425016> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181431167> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192572053> a nfdicore:NFDI_0001010 .
 

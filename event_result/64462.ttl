@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1104145960> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300245823> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300540507> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/bour-4-87-grande-auditorio-gulbenkian-lissabon-1987-04-30> ] .
 
-<https://performance.musiconn.de/event/bour-4-87-grande-auditorio-gulbenkian-lissabon-1987-04-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/bour-4-87-grande-auditorio-gulbenkian-lissabon-1987-04-30> a cto:CTO_0001005 ;
     rdfs:label "Bour 4/87, Grande Auditório Gulbenkian (Lissabon), 30.4.1987" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-04-30" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-04-30" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1104145960>,
-        <https://d-nb.info/gnd/300245823>,
-        <https://d-nb.info/gnd/300540507>,
-        <https://d-nb.info/gnd/3008405-2> ;
-    cto:relatedItem <https://d-nb.info/gnd/1104145960>,
-        <https://d-nb.info/gnd/300245823>,
-        <https://d-nb.info/gnd/300540507>,
-        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/juilliard-serenade-maderna-bruno>,
-        <https://performance.musiconn.de/work/kya-scelsi-giacinto>,
-        <https://performance.musiconn.de/work/musik-der-fruehe-nunes-emmanuel>,
-        <https://viaf.org/viaf/178027286>,
-        <https://viaf.org/viaf/185284002>,
-        <https://viaf.org/viaf/217008670> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grande-auditorio-gulbenkian-lissabon> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/178027286>,
-        <https://viaf.org/viaf/185284002>,
-        <https://viaf.org/viaf/217008670> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grande-auditorio-gulbenkian-lissabon> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1104145960> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178027286> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185284002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300245823> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300540507> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217008670> ],
+        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178027286> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185284002> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217008670> a nfdicore:NFDI_0001010 .
 

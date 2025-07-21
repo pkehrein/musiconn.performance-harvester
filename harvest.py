@@ -26,6 +26,7 @@ CTO = Namespace("https://nfdi4culture.de/ontology#")
 NFDICORE = Namespace("https://nfdi.fiz-karlsruhe.de/ontology#")
 SCHEMA = Namespace("http://schema.org/")
 RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
+OBO = Namespace("http://purl.obolibrary.org/obo/")
 
 
 def concat_files():
@@ -70,6 +71,7 @@ def init_graph():
     graph.bind("nfdicore", NFDICORE)
     graph.bind("n4c", N4C)
     graph.bind("schema", SCHEMA)
+    graph.bind("obo", OBO)
     return graph
 
 
@@ -81,11 +83,10 @@ def add_events(events, file_path, start_index):
         graph.add((N4C.E5320, SCHEMA.dataFeedElement, bn))
         graph.add((bn, RDF.type, SCHEMA.DataFeedItem))
         graph.add((bn, SCHEMA.item, event_id))
-        graph.add((event_id, RDF.type, CTO.DataFeedElement))
-        graph.add((event_id, RDF.type, NFDICORE.Event))
+        graph.add((event_id, RDF.type, CTO.CTO_0001005))
         graph.add((event_id, CTO.elementType, URIRef("http://vocab.getty.edu/aat/300069451")))
-        graph.add((event_id, NFDICORE.publisher, URIRef("https://nfdi4culture.de/id/E1841")))
-        graph.add((event_id, CTO.elementOf, URIRef("https://nfdi4culture.de/id/E5320")))
+        graph.add((event_id, NFDICORE.NFDI_0000192, URIRef("https://nfdi4culture.de/id/E1841")))
+        graph.add((event_id, CTO.CTO_0001006, URIRef("https://nfdi4culture.de/id/E5320")))
         graph.add((event_id, RDFS.label, Literal(event['schema:event']['schema:name'])))
         if event['schema:event']['schema:temporalCoverage']['@value'] is not None:
             eventdate = event['schema:event']['schema:temporalCoverage']['@value']
@@ -98,74 +99,109 @@ def add_events(events, file_path, start_index):
             location = event['schema:event']['schema:location']
             for loc in location:
                 if location[loc]['gnd'] is not None:
-                    graph.add((event_id, CTO.relatedLocation, URIRef(location[loc]['gnd'])))
-                    graph.add((event_id, CTO.gnd, URIRef(location[loc]['gnd'])))
+                    bn = BNode()
+                    graph.add((event_id, CTO.CTO_0001011, bn))
+                    graph.add((bn, RDF.type, NFDICORE.NFDI_0000005))
+                    graph.add((bn, NFDICORE.NFDI_0001006, URIRef(location[loc]['gnd'])))
+                    graph.add((URIRef(location[loc]['gnd']), RDF.type, NFDICORE.NFDI_0001009))
                 if location[loc]['viaf'] is not None:
-                    graph.add((event_id, CTO.relatedLocation, URIRef(location[loc]['viaf'])))
-                    graph.add((event_id, CTO.viaf, URIRef(location[loc]['viaf'])))
+                    bn0 = BNode()
+                    graph.add((event_id, CTO.CTO_0001011, bn0))
+                    graph.add((bn0, RDF.type, NFDICORE.NFDI_0000005))
+                    graph.add((bn0, NFDICORE.NFDI_0001006, URIRef(location[loc]['viaf'])))
+                    graph.add((URIRef(location[loc]['viaf']), RDF.type, NFDICORE.NFDI_0001010))
                 if location[loc]['gnd'] is None and location[loc]['viaf'] is None:
-                    graph.add((event_id, CTO.relatedLocation, URIRef(loc)))
+                    graph.add((event_id, CTO.CTO_0001011, URIRef(loc)))
 
         if event['schema:event']['schema:superEvent'] is not None:
             for superEvent in event['schema:event']['schema:superEvent']:
                 series = superEvent['@id']
                 for ser in series:
                     if series[ser]['gnd'] is not None:
-                        graph.add((event_id, CTO.itemOf, URIRef(series[ser]['gnd'])))
-                        graph.add((event_id, CTO.gnd, URIRef(series[ser]['gnd'])))
+                        bn1 = BNode()
+                        graph.add((event_id, OBO.BFO_0000050, bn1))
+                        graph.add((bn1, RDF.type, CTO.NFDI_0000131))
+                        graph.add((bn1, NFDICORE.NFDI_0001006, URIRef(series[ser]['gnd'])))
+                        graph.add((URIRef(series[ser]['gnd']), RDF.type, NFDICORE.NFDI_0001009))
                     if series[ser]['viaf'] is not None:
-                        graph.add((event_id, CTO.itemOf, URIRef(series[ser]['viaf'])))
-                        graph.add((event_id, CTO.viaf, URIRef(series[ser]['viaf'])))
+                        bn2 = BNode()
+                        graph.add((event_id, OBO.BFO_0000050, bn2))
+                        graph.add((bn2, RDF.type, CTO.NFDI_0000131))
+                        graph.add((bn2, NFDICORE.NFDI_0001006, URIRef(series[ser]['viaf'])))
+                        graph.add((URIRef(series[ser]['viaf']), RDF.type, NFDICORE.NFDI_0001010))
                     if series[ser]['gnd'] is None and series[ser]['viaf'] is None:
-                        graph.add((event_id, CTO.itemOf, URIRef(ser)))
+                        graph.add((event_id, OBO.BFO_0000050, URIRef(ser)))
 
         if event['schema:event']['schema:recordedIn'] is not None:
             for record in event['schema:event']['schema:recordedIn']:
                 source = record['@id']
                 for sou in source:
                     if source[sou]['gnd'] is not None:
-                        graph.add((event_id, CTO.relatedItem, URIRef(source[sou]['gnd'])))
-                        graph.add((event_id, CTO.gnd, URIRef(source[sou]['gnd'])))
+                        bn3 = BNode()
+                        graph.add((event_id, CTO.CTO_0001019, bn3))
+                        graph.add((bn3, RDF.type, OBO.BFO_0000001))
+                        graph.add((bn3, NFDICORE.NFDI_0001006, URIRef(source[sou]['gnd'])))
+                        graph.add((URIRef(source[sou]['gnd']), RDF.type, NFDICORE.NFDI_0001009))
                     if source[sou]['viaf'] is not None:
-                        graph.add((event_id, CTO.relatedItem, URIRef(source[sou]['viaf'])))
-                        graph.add((event_id, CTO.viaf, URIRef(source[sou]['viaf'])))
+                        bn4 = BNode()
+                        graph.add((event_id, CTO.CTO_0001019 , bn4))
+                        graph.add((bn4, RDF.type, OBO.BFO_0000001))
+                        graph.add((bn4, NFDICORE.NFDI_0001006, URIRef(source[sou]['viaf'])))
+                        graph.add((URIRef(source[sou]['viaf']), RDF.type, NFDICORE.NFDI_0001010))
                     if source[sou]['gnd'] is None and source[sou]['viaf'] is None:
-                        graph.add((event_id, CTO.relatedItem, URIRef(sou)))
+                        graph.add((event_id, CTO.CTO_0001019, URIRef(sou)))
 
         if event['schema:event']['schema:performer'] is not None:
             for performer in event['schema:event']['schema:performer']:
                 if performer['@type'] == 'schema:Person':
                     for person in performer['@id']:
                         if performer['@id'][person]['gnd'] is not None:
-                            graph.add((event_id, CTO.relatedPerson, URIRef(performer['@id'][person]['gnd'])))
-                            graph.add((event_id, CTO.gnd, URIRef(performer['@id'][person]['gnd'])))
+                            bn5 = BNode()
+                            graph.add((event_id, CTO.CTO_0001009, bn5))
+                            graph.add((bn5, RDF.type, NFDICORE.NFDI_0000004))
+                            graph.add((bn5, NFDICORE.NFDI_0001006, URIRef(performer['@id'][person]['gnd'])))
+                            graph.add((URIRef(performer['@id'][person]['gnd']), RDF.type, NFDICORE.NFDI_0001009))
                         if performer['@id'][person]['viaf'] is not None:
-                            graph.add((event_id, CTO.relatedPerson, URIRef(performer['@id'][person]['viaf'])))
-                            graph.add((event_id, CTO.viaf, URIRef(performer['@id'][person]['viaf'])))
+                            bn6 = BNode()
+                            graph.add((event_id, CTO.relatedPerson, bn6))
+                            graph.add((bn6, RDF.type, NFDICORE.NFDI_0000004))
+                            graph.add((bn6, NFDICORE.NFDI_0001006, URIRef(performer['@id'][person]['viaf'])))
+                            graph.add((URIRef(performer['@id'][person]['viaf']), RDF.type, NFDICORE.NFDI_0001010))
                         if performer['@id'][person]['gnd'] is None and performer['@id'][person]['viaf'] is None:
                             graph.add((event_id, CTO.relatedPerson, URIRef(person)))
                 if performer['@type'] == 'schema:PerformingGroup':
                     for group in performer['@id']:
                         if performer['@id'][group]['gnd'] is not None:
-                            graph.add((event_id, CTO.relatedOrganization, URIRef(performer['@id'][group]['gnd'])))
-                            graph.add((event_id, CTO.gnd, URIRef(performer['@id'][group]['gnd'])))
+                            bn7 = BNode()
+                            graph.add((event_id, CTO.CTO_0001010, bn7))
+                            graph.add((bn7, RDF.type, NFDICORE.NFDI_0000003))
+                            graph.add((bn7, NFDICORE.NFDI_0001006, URIRef(performer['@id'][group]['gnd'])))
+                            graph.add((URIRef(performer['@id'][group]['gnd']), RDF.type, NFDICORE.NFDI_0001009))
                         if performer['@id'][group]['viaf'] is not None:
-                            graph.add((event_id, CTO.relatedOrganization, URIRef(performer['@id'][group]['viaf'])))
-                            graph.add((event_id, CTO.viaf, URIRef(performer['@id'][group]['viaf'])))
+                            bn8 = BNode()
+                            graph.add((event_id, CTO.CTO_0001010, bn8))
+                            graph.add((bn8, RDF.type, NFDICORE.NFDI_0000003))
+                            graph.add((bn8, NFDICORE.NFDI_0001006, URIRef(performer['@id'][group]['viaf'])))
+                            graph.add((URIRef(performer['@id'][group]['viaf']), RDF.type, NFDICORE.NFDI_0001010))
                         if performer['@id'][group]['gnd'] is None and performer['@id'][group]['viaf'] is None:
-                            graph.add((event_id, CTO.relatedOrganization, URIRef(group)))
+                            graph.add((event_id, CTO.CTO_0001010, URIRef(group)))
         if event['schema:event']['schema:workPerformed'] is not None:
             for works in event['schema:event']['schema:workPerformed']:
                 for work in works['@id']:
-                    graph.add((event_id, CTO.relatedItem, URIRef(work)))
                     if works['@id'][work]['gnd'] is not None:
-                        graph.add((event_id, CTO.relatedItem, URIRef(works['@id'][work]['gnd'])))
-                        graph.add((event_id, CTO.gnd, URIRef(works['@id'][work]['gnd'])))
+                        bn9 = BNode()
+                        graph.add((event_id, CTO.CTO_0001019, bn9))
+                        graph.add((bn9, RDF.type, OBO.BFO_0000001))
+                        graph.add((bn9, NFDICORE.NFDI_0001006, URIRef(works['@id'][work]['gnd'])))
+                        graph.add((URIRef(works['@id'][work]['gnd']), RDF.type, NFDICORE.NFDI_0001009))
                     if works['@id'][work]['viaf'] is not None:
-                        graph.add((event_id, CTO.relatedItem, URIRef(works['@id'][work]['viaf'])))
-                        graph.add((event_id, CTO.viaf, URIRef(works['@id'][work]['viaf'])))
+                        bn10 = BNode()
+                        graph.add((event_id, CTO.CTO_0001019, bn10))
+                        graph.add((bn10, RDF.type, OBO.BFO_0000001))
+                        graph.add((bn10, NFDICORE.NFDI_0001006, URIRef(works['@id'][work]['viaf'])))
+                        graph.add((URIRef(works['@id'][work]['viaf']), RDF.type, NFDICORE.NFDI_0001010))
                     if works['@id'][work]['gnd'] is None and works['@id'][work]['viaf'] is None:
-                        graph.add((event_id, CTO.relatedItem, URIRef(work)))
+                        graph.add((event_id, CTO.CTO_0001019, URIRef(work)))
         turtle_data = graph.serialize(format='turtle')
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(f"{file_path}{str(start_index + 1).zfill(5)}.ttl", 'w', encoding='utf-8') as file:

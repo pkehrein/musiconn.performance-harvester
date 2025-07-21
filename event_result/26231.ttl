@@ -1,46 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1130804887> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300121121> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300339852> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300467281> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4548608-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/aufnahme-versoehnungskirche-leipzig-1971-03-01> ] .
 
-<https://performance.musiconn.de/event/aufnahme-versoehnungskirche-leipzig-1971-03-01> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/aufnahme-versoehnungskirche-leipzig-1971-03-01> a cto:CTO_0001005 ;
     rdfs:label "Aufnahme, Versöhnungskirche (Leipzig), 1.3.1971" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1971-03-01" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1971-03-01" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1130804887>,
-        <https://d-nb.info/gnd/300121121>,
-        <https://d-nb.info/gnd/300339852>,
-        <https://d-nb.info/gnd/300467281>,
-        <https://d-nb.info/gnd/4548608-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1130804887>,
-        <https://d-nb.info/gnd/300121121>,
-        <https://d-nb.info/gnd/300339852>,
-        <https://d-nb.info/gnd/300467281>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4548608-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/239193485> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300121121> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175858009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175986754> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300339852> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212886293> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200788135> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1130804887> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300467281> ],
         <https://performance.musiconn.de/source/motettenbuch-1970-71>,
         <https://performance.musiconn.de/work/der-quempas-praetorius-michael>,
         <https://performance.musiconn.de/work/joseph-lieber-joseph-mein-chor-3-st-praetorius-michael>,
-        <https://performance.musiconn.de/work/musae-sioniae-teil-6-en-natus-est-emanuel-1-praetorius-michael>,
-        <https://performance.musiconn.de/work/musae-sioniae-theil-2-in-dulci-jubilo-praetorius-michael>,
-        <https://performance.musiconn.de/work/musae-sioniae-theil-4-vom-himmel-hoch-praetorius-michael>,
-        <https://performance.musiconn.de/work/polyhymnia-caduceatrix-et-panegyrica-meine-seel-erhebt-den-herren-praetorius-michael>,
-        <https://performance.musiconn.de/work/polyhymnia-caduceatrix-et-panegyrica-wie-schoen-leuchtet-der-morgenstern-praetorius-michael>,
-        <https://viaf.org/viaf/175858009>,
-        <https://viaf.org/viaf/175986754>,
-        <https://viaf.org/viaf/200788135>,
-        <https://viaf.org/viaf/212886293> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4548608-6>,
-        <https://viaf.org/viaf/239193485> ;
-    cto:viaf <https://viaf.org/viaf/175858009>,
-        <https://viaf.org/viaf/175986754>,
-        <https://viaf.org/viaf/200788135>,
-        <https://viaf.org/viaf/212886293>,
-        <https://viaf.org/viaf/239193485> .
+        <https://performance.musiconn.de/work/musae-sioniae-theil-4-vom-himmel-hoch-praetorius-michael> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175858009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175986754> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200788135> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212886293> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/239193485> a nfdicore:NFDI_0001010 .
 

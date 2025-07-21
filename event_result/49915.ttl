@@ -1,33 +1,41 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300041799> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300183291> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300954271> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/19-schuelerkonzert-allgemeine-berufsschule-am-steinsgraben-zeitz-aula-1959-02-15-10-00> ] .
 
-<https://performance.musiconn.de/event/19-schuelerkonzert-allgemeine-berufsschule-am-steinsgraben-zeitz-aula-1959-02-15-10-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/19-schuelerkonzert-allgemeine-berufsschule-am-steinsgraben-zeitz-aula-1959-02-15-10-00> a cto:CTO_0001005 ;
     rdfs:label "19. Schülerkonzert, Allgemeine Berufsschule am Steinsgraben (Zeitz) / Aula, 15.2.1959, 10:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/schuelerkonzerte-der-volksmusikschule-zeitz> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1959-02-15T10:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1959-02-15T10:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300041799>,
-        <https://d-nb.info/gnd/300183291>,
-        <https://d-nb.info/gnd/300954271> ;
-    cto:itemOf <https://performance.musiconn.de/series/schuelerkonzerte-der-volksmusikschule-zeitz> ;
-    cto:relatedItem <https://d-nb.info/gnd/300041799>,
-        <https://d-nb.info/gnd/300183291>,
-        <https://d-nb.info/gnd/300954271>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/volksmusikschule-zeitz-kinderchor> ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/allgemeine-berufsschule-am-steinsgraben-zeitz-aula> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179829878> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300954271> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300183291> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300041799> ],
         <https://performance.musiconn.de/source/plakate-programmhefte-und-rezensionen-aus-dem-nachlass-hermann-keller-2-programmhefte-1955-1984>,
         <https://performance.musiconn.de/work/2-duette-fuer-2-mandolinen-mazas-jacques-fereol>,
         <https://performance.musiconn.de/work/allerlei-spielstuecke-und-spaesse-auswahl-burghardt-hans-georg>,
         <https://performance.musiconn.de/work/ausgewaehlte-klavierstuecke-fuer-kinder-novelle-kabalevskij-dmitrij-borisovic>,
         <https://performance.musiconn.de/work/ausgewaehlte-klavierstuecke-fuer-kinder-scherzo-kabalevskij-dmitrij-borisovic>,
-        <https://performance.musiconn.de/work/childrens-corner-golliwogs-cake-walk-debussy-claude>,
         <https://performance.musiconn.de/work/der-gegenplan-der-zukunft-entgegen-bearbeitung-schostakowitsch-dmitri-d>,
         <https://performance.musiconn.de/work/duos-2-violinen-allegro-pleyel-ignaz>,
         <https://performance.musiconn.de/work/duos-2-violinen-rondo-allegretto-pleyel-ignaz>,
@@ -43,15 +51,12 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/lied-wir-sind-jung-die-welt-ist-offen-englert-michael>,
         <https://performance.musiconn.de/work/marsch-fuer-klarinetten-hohn-wilhelm>,
         <https://performance.musiconn.de/work/marsch-luck-hans>,
-        <https://performance.musiconn.de/work/nationalgarde-marsch-smetana-bedrich>,
-        <https://performance.musiconn.de/work/praeludien-klavier-op-13-skrjabin-aleksandr-n>,
         <https://performance.musiconn.de/work/rhapsodische-szene-breuer-franz-josef>,
         <https://performance.musiconn.de/work/spielmusiken-2-kl-suite-fuer-3-instrumente-laendler-kranz-albert>,
         <https://performance.musiconn.de/work/suite-fuer-klavier-nr-1-praeludium-kochan-guenter>,
         <https://performance.musiconn.de/work/suite-fuer-klavier-nr-2-scherzo-kochan-guenter>,
-        <https://performance.musiconn.de/work/suite-fuer-klavier-nr-3-finale-kochan-guenter>,
-        <https://viaf.org/viaf/179829878> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/allgemeine-berufsschule-am-steinsgraben-zeitz-aula> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/volksmusikschule-zeitz-kinderchor> ;
-    cto:viaf <https://viaf.org/viaf/179829878> .
+        <https://performance.musiconn.de/work/suite-fuer-klavier-nr-3-finale-kochan-guenter> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179829878> a nfdicore:NFDI_0001010 .
 

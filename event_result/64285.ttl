@@ -1,33 +1,41 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30002648X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146493> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-vereinskonzert-rathaus-muenster-westf-friedenssaal-1892-02-20> ] .
 
-<https://performance.musiconn.de/event/6-vereinskonzert-rathaus-muenster-westf-friedenssaal-1892-02-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-vereinskonzert-rathaus-muenster-westf-friedenssaal-1892-02-20> a cto:CTO_0001005 ;
     rdfs:label "6. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 20.2.1892" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1891-92> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1892-02-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1892-02-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30002648X>,
-        <https://d-nb.info/gnd/300146493>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1891-92> ;
-    cto:relatedItem <https://d-nb.info/gnd/30002648X>,
-        <https://d-nb.info/gnd/300146493>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30002648X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146493> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191498119> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194730992> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1891-1892>,
-        <https://performance.musiconn.de/work/messen-c-moll-heinrich-xxiv-reuss-koestritz-fuerst>,
-        <https://performance.musiconn.de/work/quartette-sopran-alt-tenor-bass-klavier-op-112-brahms-johannes>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-120-d-moll-schumann-robert>,
-        <https://viaf.org/viaf/191498119>,
-        <https://viaf.org/viaf/194730992> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/191498119>,
-        <https://viaf.org/viaf/194730992> .
+        <https://performance.musiconn.de/work/messen-c-moll-heinrich-xxiv-reuss-koestritz-fuerst> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/191498119> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194730992> a nfdicore:NFDI_0001010 .
 

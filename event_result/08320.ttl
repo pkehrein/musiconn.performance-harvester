@@ -1,55 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009976> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300116543> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300211503> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300552858> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300872542> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4362112-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-sankt-mariae-himmelfahrt-moenchengladbach-2004-07-05> ] .
 
-<https://performance.musiconn.de/event/konzert-sankt-mariae-himmelfahrt-moenchengladbach-2004-07-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-sankt-mariae-himmelfahrt-moenchengladbach-2004-07-05> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Sankt Mariä Himmelfahrt (Mönchengladbach), 5.7.2004" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2004-07-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2004-07-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300116543>,
-        <https://d-nb.info/gnd/300211503>,
-        <https://d-nb.info/gnd/300552858>,
-        <https://d-nb.info/gnd/300872542>,
-        <https://d-nb.info/gnd/4362112-0> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300116543>,
-        <https://d-nb.info/gnd/300211503>,
-        <https://d-nb.info/gnd/300552858>,
-        <https://d-nb.info/gnd/300872542>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/247361894> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4362112-0> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186509189> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009976> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300116543> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300211503> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174651654> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181241390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178462955> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192594635> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300552858> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175196168> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300872542> ],
         <https://performance.musiconn.de/source/motettenbuch-2003-04>,
-        <https://performance.musiconn.de/work/der-geist-hilft-unser-schwachheit-auf-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/fontana-disrael-nu-danket-alle-gott-schein-johann-hermann>,
-        <https://performance.musiconn.de/work/geistliche-chor-music-also-hat-gott-die-welt-geliebt-schuetz-heinrich>,
         <https://performance.musiconn.de/work/o-grosser-unbegreiflicher-gott-thiele-siegfried>,
-        <https://performance.musiconn.de/work/pfingst-halleluja-braeutigam-volker>,
-        <https://performance.musiconn.de/work/psalm-137-thomas-kurt>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/troeste-uns-gott-unser-heiland-pachelbel-johann>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/175196168>,
-        <https://viaf.org/viaf/178462955>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/186509189>,
-        <https://viaf.org/viaf/192594635> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4362112-0>,
-        <https://viaf.org/viaf/247361894> ;
-    cto:viaf <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/175196168>,
-        <https://viaf.org/viaf/178462955>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/186509189>,
-        <https://viaf.org/viaf/192594635>,
-        <https://viaf.org/viaf/247361894> .
+        <https://performance.musiconn.de/work/pfingst-halleluja-braeutigam-volker> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174651654> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175196168> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178462955> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181241390> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186509189> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192594635> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/247361894> a nfdicore:NFDI_0001010 .
 

@@ -1,31 +1,34 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300233698> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kamernyj-koncert-27-april-1966-sankt-petersburger-philharmonie-kleiner-saal-1966-04-27> ] .
 
-<https://performance.musiconn.de/event/kamernyj-koncert-27-april-1966-sankt-petersburger-philharmonie-kleiner-saal-1966-04-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kamernyj-koncert-27-april-1966-sankt-petersburger-philharmonie-kleiner-saal-1966-04-27> a cto:CTO_0001005 ;
     rdfs:label "Kamernyj koncert (27. April 1966), Sankt-Petersburger Philharmonie / Kleiner Saal, 27.4.1966" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1966-04-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1966-04-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300233698> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
-    cto:relatedItem <https://d-nb.info/gnd/300233698>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300233698> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208687212> ],
         <https://performance.musiconn.de/source/2-leningrader-fruehling-1966-uebersicht>,
         <https://performance.musiconn.de/source/2-leningrader-fruehling-1966-uebersicht-klein>,
         <https://performance.musiconn.de/work/ballady-serdca-moego-fljarkovskij-aleksandr-g>,
         <https://performance.musiconn.de/work/ivanovskie-pesni-elceva-irina-m>,
         <https://performance.musiconn.de/work/muzyka-dlja-strunnych-i-flejty-prigozin-ljucian-a>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-3-vlasov-vladimir-aleksandrovic>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-nr-1-schnittke-alfred>,
-        <https://viaf.org/viaf/208687212> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/208687212> .
+        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-3-vlasov-vladimir-aleksandrovic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/208687212> a nfdicore:NFDI_0001010 .
 

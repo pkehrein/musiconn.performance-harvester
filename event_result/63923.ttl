@@ -1,56 +1,80 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1073291405> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1213850703> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1239452918> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300172346> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300436963> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300753225> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4600766-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ensemble-modern-5-83-bonn-evian-evian-les-bains-region-1983-05-07> ] .
 
-<https://performance.musiconn.de/event/ensemble-modern-5-83-bonn-evian-evian-les-bains-region-1983-05-07> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ensemble-modern-5-83-bonn-evian-evian-les-bains-region-1983-05-07> a cto:CTO_0001005 ;
     rdfs:label "Ensemble Modern 5/83 Bonn/Evian, Evian-les-Bains (Region), 7.5.1983" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1983-05-07" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1983-05-07" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1073291405>,
-        <https://d-nb.info/gnd/1213850703>,
-        <https://d-nb.info/gnd/1239452918>,
-        <https://d-nb.info/gnd/300172346>,
-        <https://d-nb.info/gnd/300436963>,
-        <https://d-nb.info/gnd/300753225>,
-        <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/4600766-0> ;
-    cto:relatedItem <https://d-nb.info/gnd/1073291405>,
-        <https://d-nb.info/gnd/1213850703>,
-        <https://d-nb.info/gnd/1239452918>,
-        <https://d-nb.info/gnd/300172346>,
-        <https://d-nb.info/gnd/300436963>,
-        <https://d-nb.info/gnd/300753225>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4600766-0> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1303162985500986300000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300753225> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1239452918> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300436963> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1073291405> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213976585> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316510918> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300172346> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194750168> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1213850703> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3678159521638033070002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200811970> ],
         <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/ensemblekonzerte-nr-1-1982-goldmann-friedrich>,
-        <https://performance.musiconn.de/work/interrelationen-ii-diederichs-yann>,
-        <https://performance.musiconn.de/work/johann-sebastian-bach-fuga-ricercata-a-6-voci-webern-anton>,
-        <https://performance.musiconn.de/work/lieder-nach-gedichten-von-rainer-maria-rilke-webern-anton>,
-        <https://performance.musiconn.de/work/lieder-singstimme-orchester-op-13-webern-anton>,
-        <https://performance.musiconn.de/work/stuecke-orch-op-6-fassung-1920-webern-anton>,
-        <https://performance.musiconn.de/work/trios-violine-viola-violoncello-op-20-webern-anton>,
-        <https://viaf.org/viaf/1303162985500986300000>,
-        <https://viaf.org/viaf/194750168>,
-        <https://viaf.org/viaf/200811970>,
-        <https://viaf.org/viaf/213976585>,
-        <https://viaf.org/viaf/316510918>,
-        <https://viaf.org/viaf/3678159521638033070002> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4600766-0> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/1303162985500986300000>,
-        <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/194750168>,
-        <https://viaf.org/viaf/200811970>,
-        <https://viaf.org/viaf/213976585>,
-        <https://viaf.org/viaf/316510918>,
-        <https://viaf.org/viaf/3678159521638033070002> .
+        <https://performance.musiconn.de/work/interrelationen-ii-diederichs-yann> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1303162985500986300000> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194750168> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200811970> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213976585> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316510918> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3678159521638033070002> a nfdicore:NFDI_0001010 .
 

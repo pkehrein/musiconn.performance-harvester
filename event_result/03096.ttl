@@ -1,47 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/105160561X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1280558253> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015976> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300283873> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300297734> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zweiter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1884-10-31-19-00> ] .
 
-<https://performance.musiconn.de/event/zweiter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1884-10-31-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zweiter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1884-10-31-19-00> a cto:CTO_0001005 ;
     rdfs:label "Zweiter Kammermusik-Abend, Kleiner Konzertsaal (Frankfurt a. M.), 31.10.1884, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1884-1885> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1884-10-31T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1884-10-31T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/105160561X>,
-        <https://d-nb.info/gnd/1280558253>,
-        <https://d-nb.info/gnd/300015976>,
-        <https://d-nb.info/gnd/300283873>,
-        <https://d-nb.info/gnd/300297734> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1884-1885> ;
-    cto:relatedItem <https://d-nb.info/gnd/105160561X>,
-        <https://d-nb.info/gnd/1280558253>,
-        <https://d-nb.info/gnd/300015976>,
-        <https://d-nb.info/gnd/300283873>,
-        <https://d-nb.info/gnd/300297734>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211715362> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194730633> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015976> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300297734> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175412721> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217009989> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300283873> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/105160561X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1280558253> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5634167625773703660006> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/canzonetta-con-variazioni-fesch-willem-de>,
-        <https://performance.musiconn.de/work/lieder-nach-gedichten-von-rellstab-und-heine-liebesbotschaft-schubert-franz>,
-        <https://performance.musiconn.de/work/lieder-und-romanzen-op-19-o-aennelein-wie-seid-ihr-schoen-krug-arnold>,
-        <https://performance.musiconn.de/work/liederalbum-fuer-die-jugend-er-ists-schumann-robert>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-kv-80-g-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-59-nr-2-e-moll-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/175412721>,
-        <https://viaf.org/viaf/194730633>,
-        <https://viaf.org/viaf/211715362>,
-        <https://viaf.org/viaf/217009989>,
-        <https://viaf.org/viaf/5634167625773703660006> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/175412721>,
-        <https://viaf.org/viaf/194730633>,
-        <https://viaf.org/viaf/211715362>,
-        <https://viaf.org/viaf/217009989>,
-        <https://viaf.org/viaf/5634167625773703660006> .
+        <https://performance.musiconn.de/work/canzonetta-con-variazioni-fesch-willem-de> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175412721> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194730633> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211715362> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217009989> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5634167625773703660006> a nfdicore:NFDI_0001010 .
 

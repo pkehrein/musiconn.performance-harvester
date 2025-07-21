@@ -1,46 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300000170> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30006022X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102305> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102682> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1855-11-13> ] .
 
-<https://performance.musiconn.de/event/2-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1855-11-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1855-11-13> a cto:CTO_0001005 ;
     rdfs:label "2. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 13.11.1855" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1855-1856> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1855-11-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1855-11-13" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300000170>,
-        <https://d-nb.info/gnd/30006022X>,
-        <https://d-nb.info/gnd/300102305>,
-        <https://d-nb.info/gnd/300102682>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1855-1856> ;
-    cto:relatedItem <https://d-nb.info/gnd/300000170>,
-        <https://d-nb.info/gnd/30006022X>,
-        <https://d-nb.info/gnd/300102305>,
-        <https://d-nb.info/gnd/300102682>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30006022X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102305> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178143280> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102682> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186512571> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174381785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300000170> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
         <https://performance.musiconn.de/source/whistling-carl-wilhelm-der-musikverein-euterpe-zu-leipzig-1824-1874-leipzig-1874>,
-        <https://performance.musiconn.de/work/iphigenie-en-aulide-arie-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/iphigenie-en-aulide-ouvertuere-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/konzert-ouvertuere-zu-shakespeares-sommernachtstraum-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/musik-zu-ein-sommernachtstraum-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/sinfonien-k-13-18-sinfonie-k-18-abel-carl-friedrich>,
-        <https://viaf.org/viaf/174381785>,
-        <https://viaf.org/viaf/178143280>,
-        <https://viaf.org/viaf/186512571> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/174381785>,
-        <https://viaf.org/viaf/178143280>,
-        <https://viaf.org/viaf/186512571>,
-        <https://viaf.org/viaf/242717024> .
+        <https://performance.musiconn.de/work/iphigenie-en-aulide-arie-gluck-christoph-willibald> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174381785> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178143280> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186512571> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
 

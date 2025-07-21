@@ -1,51 +1,67 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1198958200> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1268031461> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30003699X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30047296X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/iii-concert-erstes-gewandhaus-leipzig-1891-01-21> ] .
 
-<https://performance.musiconn.de/event/iii-concert-erstes-gewandhaus-leipzig-1891-01-21> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/iii-concert-erstes-gewandhaus-leipzig-1891-01-21> a cto:CTO_0001005 ;
     rdfs:label "III. Concert, Erstes Gewandhaus (Leipzig), 21.1.1891" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1891-01-21" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1891-01-21" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/1198958200>,
-        <https://d-nb.info/gnd/1268031461>,
-        <https://d-nb.info/gnd/30003699X>,
-        <https://d-nb.info/gnd/30047296X> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
-    cto:relatedItem <https://d-nb.info/gnd/1198958200>,
-        <https://d-nb.info/gnd/1268031461>,
-        <https://d-nb.info/gnd/30003699X>,
-        <https://d-nb.info/gnd/30047296X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/9305157342857510100005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1268031461> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30003699X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3965166360574107070008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1198958200> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30047296X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2352147270593935700003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210936257> ],
         <https://performance.musiconn.de/source/liszt-verein-zum-zehnjaehrigen-jubilaeum-bericht-ueber-die-10jaehrige-thaetigkeit-des-vereins-1885-1895-leipzig-1895>,
-        <https://performance.musiconn.de/work/alceste-de-gluck-caprice-sur-les-airs-de-ballet-saint-saens-camille>,
         <https://performance.musiconn.de/work/brautlieder-der-liebe-lohn-cornelius-peter>,
-        <https://performance.musiconn.de/work/dolorosa-ich-hab-ihn-im-schlafe-zu-sehen-gemeint-jensen-adolf>,
-        <https://performance.musiconn.de/work/fantasien-klavier-op-49-f-moll-chopin-frederic>,
         <https://performance.musiconn.de/work/mignon-liszt-franz>,
-        <https://performance.musiconn.de/work/myrthen-nr-1-widmung-schumann-robert>,
         <https://performance.musiconn.de/work/orgelkonzert-uebertragung-fuer-klavier-bach-wilhelm-friedemann>,
         <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-1-e-moll-novacek-ottokar>,
         <https://performance.musiconn.de/work/seliges-vergessen-sommer-hans>,
         <https://performance.musiconn.de/work/sonate-fuer-klavier-und-violoncello-d-dur-weiss-josef>,
-        <https://performance.musiconn.de/work/weil-auf-mir-du-dunkles-auge-pohl-richard>,
-        <https://viaf.org/viaf/210936257>,
-        <https://viaf.org/viaf/2352147270593935700003>,
-        <https://viaf.org/viaf/3965166360574107070008>,
-        <https://viaf.org/viaf/9305157342857510100005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/210936257>,
-        <https://viaf.org/viaf/2352147270593935700003>,
-        <https://viaf.org/viaf/3965166360574107070008>,
-        <https://viaf.org/viaf/8198154198335520230002>,
-        <https://viaf.org/viaf/9305157342857510100005> .
+        <https://performance.musiconn.de/work/weil-auf-mir-du-dunkles-auge-pohl-richard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/210936257> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2352147270593935700003> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3965166360574107070008> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/9305157342857510100005> a nfdicore:NFDI_0001010 .
 

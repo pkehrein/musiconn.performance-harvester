@@ -1,45 +1,57 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300094329> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145616> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145624> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300446799> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/10-abonnementkonzert-central-halle-leipzig-1868-03-09> ] .
 
-<https://performance.musiconn.de/event/10-abonnementkonzert-central-halle-leipzig-1868-03-09> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/10-abonnementkonzert-central-halle-leipzig-1868-03-09> a cto:CTO_0001005 ;
     rdfs:label "10. Abonnementkonzert, Central-Halle (Leipzig), 9.3.1868" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1867-1868> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1868-03-09" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1868-03-09" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300094329>,
-        <https://d-nb.info/gnd/300145616>,
-        <https://d-nb.info/gnd/300145624>,
-        <https://d-nb.info/gnd/300446799> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1867-1868> ;
-    cto:relatedItem <https://d-nb.info/gnd/300094329>,
-        <https://d-nb.info/gnd/300145616>,
-        <https://d-nb.info/gnd/300145624>,
-        <https://d-nb.info/gnd/300446799>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/central-halle-leipzig> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145616> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217006208> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300446799> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145624> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206836294> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178210010> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300094329> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219943424> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/work/beatrice-et-benedict-warum-der-tiefe-seufzer-berlioz-hector>,
-        <https://performance.musiconn.de/work/lieder-op-43-herbstlied-schumann-robert>,
-        <https://performance.musiconn.de/work/lieder-op-43-schoen-bluemelein-schumann-robert>,
-        <https://performance.musiconn.de/work/lieder-op-43-wenn-ich-ein-voeglein-waer-schumann-robert>,
         <https://performance.musiconn.de/work/lohengrin-entracte-wagner-richard>,
-        <https://performance.musiconn.de/work/orpheus-liszt-franz>,
-        <https://performance.musiconn.de/work/sinfonien-c-dur-schubert-franz>,
-        <https://viaf.org/viaf/178210010>,
-        <https://viaf.org/viaf/206836294>,
-        <https://viaf.org/viaf/217006208>,
-        <https://viaf.org/viaf/219943424> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/central-halle-leipzig> ;
-    cto:viaf <https://viaf.org/viaf/178210010>,
-        <https://viaf.org/viaf/206836294>,
-        <https://viaf.org/viaf/217006208>,
-        <https://viaf.org/viaf/219943424> .
+        <https://performance.musiconn.de/work/sinfonien-c-dur-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178210010> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206836294> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217006208> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219943424> a nfdicore:NFDI_0001010 .
 

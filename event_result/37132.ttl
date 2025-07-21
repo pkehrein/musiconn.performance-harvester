@@ -1,54 +1,72 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1200643429> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1259351459> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300058780> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144598> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144989> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300368941> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/i-vortragsabend-volkshaus-jena-kleiner-saal-1904-11-07-18-00> ] .
 
-<https://performance.musiconn.de/event/i-vortragsabend-volkshaus-jena-kleiner-saal-1904-11-07-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/i-vortragsabend-volkshaus-jena-kleiner-saal-1904-11-07-18-00> a cto:CTO_0001005 ;
     rdfs:label "I. Vortragsabend, Volkshaus (Jena) / Kleiner Saal, 7.11.1904, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1904-11-07T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1904-11-07T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1200643429>,
-        <https://d-nb.info/gnd/1259351459>,
-        <https://d-nb.info/gnd/300058780>,
-        <https://d-nb.info/gnd/300144598>,
-        <https://d-nb.info/gnd/300144989>,
-        <https://d-nb.info/gnd/300368941> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1200643429>,
-        <https://d-nb.info/gnd/1259351459>,
-        <https://d-nb.info/gnd/300058780>,
-        <https://d-nb.info/gnd/300144598>,
-        <https://d-nb.info/gnd/300144989>,
-        <https://d-nb.info/gnd/300368941>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/volkshaus-jena-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184306227> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144598> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200643429> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1259351459> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177886655> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306336480> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300058780> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144989> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3296164913190418980003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/257165271662810690004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300368941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/897157527284727300006> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
         <https://performance.musiconn.de/work/adagios-allegros-schwedisches-floetenkonzert-op-266-popp-wilhelm>,
-        <https://performance.musiconn.de/work/caro-mio-ben-giordani-tommaso>,
-        <https://performance.musiconn.de/work/dichterliebe-ich-grolle-nicht-schumann-robert>,
-        <https://performance.musiconn.de/work/gedichte-aus-robert-reinicks-lieder-eines-malers-an-den-sonnenschein-schumann-robert>,
-        <https://performance.musiconn.de/work/lieder-op-33-die-lotusblume-schumann-robert>,
-        <https://performance.musiconn.de/work/lieder-op6-ein-obdach-gegen-sturm-kahn-robert>,
-        <https://performance.musiconn.de/work/nocturnes-querfloete-violine-horn-klavier-op-19-doppler-franz>,
         <https://performance.musiconn.de/work/ouvre-tes-yeux-bleues-massenet-jules>,
-        <https://performance.musiconn.de/work/quartette-floete-streichinstrumente-nr-25-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/177886655>,
-        <https://viaf.org/viaf/184306227>,
-        <https://viaf.org/viaf/257165271662810690004>,
-        <https://viaf.org/viaf/306336480>,
-        <https://viaf.org/viaf/3296164913190418980003>,
-        <https://viaf.org/viaf/897157527284727300006> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/volkshaus-jena-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/177886655>,
-        <https://viaf.org/viaf/184306227>,
-        <https://viaf.org/viaf/257165271662810690004>,
-        <https://viaf.org/viaf/306336480>,
-        <https://viaf.org/viaf/3296164913190418980003>,
-        <https://viaf.org/viaf/897157527284727300006> .
+        <https://performance.musiconn.de/work/quartette-floete-streichinstrumente-nr-25-mozart-wolfgang-amadeus> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177886655> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184306227> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/257165271662810690004> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/306336480> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3296164913190418980003> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/897157527284727300006> a nfdicore:NFDI_0001010 .
 

@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1050916271> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1126767654> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300584245> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/dmitrij-dmitrievic-sostakovic-sankt-petersburger-philharmonie-1989-10-19> ] .
 
-<https://performance.musiconn.de/event/dmitrij-dmitrievic-sostakovic-sankt-petersburger-philharmonie-1989-10-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/dmitrij-dmitrievic-sostakovic-sankt-petersburger-philharmonie-1989-10-19> a cto:CTO_0001005 ;
     rdfs:label "Dmitrij Dmitrievič Šostakovič, Sankt-Petersburger Philharmonie, 19.10.1989" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1989-90> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1989-10-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1989-10-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1050916271>,
-        <https://d-nb.info/gnd/1126767654>,
-        <https://d-nb.info/gnd/300584245>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1989-90> ;
-    cto:relatedItem <https://d-nb.info/gnd/1050916271>,
-        <https://d-nb.info/gnd/1126767654>,
-        <https://d-nb.info/gnd/300584245>,
-        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1989-19-oktober>,
-        <https://performance.musiconn.de/work/antiformalisticeskij-raek-schostakowitsch-dmitri-d>,
-        <https://performance.musiconn.de/work/russkie-narodnye-pesni-op-104-schostakowitsch-dmitri-d>,
-        <https://performance.musiconn.de/work/russkie-narodnye-pesni-woo-q-schostakowitsch-dmitri-d>,
-        <https://viaf.org/viaf/217017538>,
-        <https://viaf.org/viaf/308219349>,
-        <https://viaf.org/viaf/46148876439749740007> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/217017538>,
-        <https://viaf.org/viaf/308219349>,
-        <https://viaf.org/viaf/46148876439749740007> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1126767654> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217017538> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1050916271> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/46148876439749740007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300584245> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/308219349> ],
+        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1989-19-oktober> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217017538> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/308219349> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/46148876439749740007> a nfdicore:NFDI_0001010 .
 

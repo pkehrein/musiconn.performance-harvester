@@ -1,42 +1,56 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009976> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009984> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300126719> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300126727> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4363430-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-martinskirche-kassel-1996-05-16> ] .
 
-<https://performance.musiconn.de/event/konzert-martinskirche-kassel-1996-05-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-martinskirche-kassel-1996-05-16> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Martinskirche Kassel, 16.5.1996" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1996-05-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1996-05-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300126719>,
-        <https://d-nb.info/gnd/300126727>,
-        <https://d-nb.info/gnd/4363430-8> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300126719>,
-        <https://d-nb.info/gnd/300126727>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4363430-8> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132886875> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300126727> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300126719> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183464975> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177379672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174651654> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009984> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009976> ],
         <https://performance.musiconn.de/source/motettenbuch-1995-96>,
-        <https://performance.musiconn.de/work/der-geist-hilft-unser-schwachheit-auf-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-110-o-tod-wie-bitter-bist-du-reger-max>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-138-reger-max>,
-        <https://performance.musiconn.de/work/jesu-meine-freude-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/psalm-84-wenzel-eberhard>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/183464975> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4363430-8>,
-        <https://viaf.org/viaf/132886875> ;
-    cto:viaf <https://viaf.org/viaf/132886875>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/183464975> .
+        <https://performance.musiconn.de/work/psalm-84-wenzel-eberhard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132886875> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174651654> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177379672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183464975> a nfdicore:NFDI_0001010 .
 

@@ -1,43 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1192479815> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1205030832> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300174756> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/301008698> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1918-06-29-14-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1918-06-29-14-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1918-06-29-14-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 29.6.1918, 14:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1917-18> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1918-06-29T14:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1918-06-29T14:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1192479815>,
-        <https://d-nb.info/gnd/1205030832>,
-        <https://d-nb.info/gnd/300174756>,
-        <https://d-nb.info/gnd/301008698>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1917-18> ;
-    cto:relatedItem <https://d-nb.info/gnd/1192479815>,
-        <https://d-nb.info/gnd/1205030832>,
-        <https://d-nb.info/gnd/300174756>,
-        <https://d-nb.info/gnd/301008698>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1192479815> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190445080> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1205030832> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300174756> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196881290> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301008698> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
         <https://performance.musiconn.de/work/das-ferne-grab-schreck-gustav>,
         <https://performance.musiconn.de/work/du-deutsches-volk-steh-fest-glaeser-paul>,
-        <https://performance.musiconn.de/work/geistliche-lieder-nach-gedichten-von-eichendorff-letzte-bitte-wolf-hugo>,
-        <https://performance.musiconn.de/work/geistliche-lieder-und-gesaenge-op-85-friedensgebet-reinecke-carl>,
-        <https://performance.musiconn.de/work/konzerte-orgel-orchester-hwv-306-311-nr-5-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/mahnung-haenig-albert>,
-        <https://performance.musiconn.de/work/schlichte-fromme-weisen-frieden-kann-nur-gott-dir-geben-glaeser-paul>,
-        <https://viaf.org/viaf/190445080>,
-        <https://viaf.org/viaf/196881290> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/190445080>,
-        <https://viaf.org/viaf/196881290>,
-        <https://viaf.org/viaf/248189528> .
+        <https://performance.musiconn.de/work/mahnung-haenig-albert> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/190445080> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196881290> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
 

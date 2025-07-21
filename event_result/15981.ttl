@@ -1,57 +1,79 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1213381355> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001550X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300036787> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300036817> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300073895> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146485> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1883-10-23> ] .
 
-<https://performance.musiconn.de/event/1-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1883-10-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1883-10-23> a cto:CTO_0001005 ;
     rdfs:label "1. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 23.10.1883" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1883-1884> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1883-10-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1883-10-23" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1213381355>,
-        <https://d-nb.info/gnd/30001550X>,
-        <https://d-nb.info/gnd/300036787>,
-        <https://d-nb.info/gnd/300036817>,
-        <https://d-nb.info/gnd/300073895>,
-        <https://d-nb.info/gnd/300146485>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1883-1884> ;
-    cto:relatedItem <https://d-nb.info/gnd/1213381355>,
-        <https://d-nb.info/gnd/30001550X>,
-        <https://d-nb.info/gnd/300036787>,
-        <https://d-nb.info/gnd/300036817>,
-        <https://d-nb.info/gnd/300073895>,
-        <https://d-nb.info/gnd/300146485>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/77145857801623020659> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1213381355> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300073895> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179822789> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179831076> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001550X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3780159477641927990000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213966094> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300036787> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300036817> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204580833> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146485> ],
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
-        <https://performance.musiconn.de/work/balladen-klavier-nr-3-op-47-as-dur-chopin-frederic>,
-        <https://performance.musiconn.de/work/berceusen-klavier-op-57-des-dur-chopin-frederic>,
-        <https://performance.musiconn.de/work/fest-ouverture-op-148-reinecke-carl>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-5-op-73-es-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/nachtmusik-heuberger-richard>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-op-97-es-dur-schumann-robert>,
-        <https://performance.musiconn.de/work/ungarische-rhapsodien-nr-4-liszt-franz>,
-        <https://viaf.org/viaf/179822789>,
-        <https://viaf.org/viaf/179831076>,
-        <https://viaf.org/viaf/204580833>,
-        <https://viaf.org/viaf/213966094>,
-        <https://viaf.org/viaf/3780159477641927990000>,
-        <https://viaf.org/viaf/77145857801623020659> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/179822789>,
-        <https://viaf.org/viaf/179831076>,
-        <https://viaf.org/viaf/204580833>,
-        <https://viaf.org/viaf/213966094>,
-        <https://viaf.org/viaf/242717024>,
-        <https://viaf.org/viaf/3780159477641927990000>,
-        <https://viaf.org/viaf/77145857801623020659> .
+        <https://performance.musiconn.de/work/fest-ouverture-op-148-reinecke-carl> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179822789> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179831076> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204580833> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213966094> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3780159477641927990000> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/77145857801623020659> a nfdicore:NFDI_0001010 .
 

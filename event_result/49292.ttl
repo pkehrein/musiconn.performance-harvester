@@ -1,33 +1,36 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/123501391X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kamernyj-koncert-17-april-1969-kazanskaja-gosudarstvennaja-konservatorija-aktovyj-zal-1969-04-17> ] .
 
-<https://performance.musiconn.de/event/kamernyj-koncert-17-april-1969-kazanskaja-gosudarstvennaja-konservatorija-aktovyj-zal-1969-04-17> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kamernyj-koncert-17-april-1969-kazanskaja-gosudarstvennaja-konservatorija-aktovyj-zal-1969-04-17> a cto:CTO_0001005 ;
     rdfs:label "Kamernyj koncert (17. April 1969), Kazanskaja Gosudarstvennaja Konservatorija. Aktovyj zal, 17.4.1969" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1969-04-17" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1969-04-17" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/123501391X> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
-    cto:relatedItem <https://d-nb.info/gnd/123501391X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kazanskaja-gosudarstvennaja-konservatorija-aktovyj-zal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7676162368013725790001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/123501391X> ],
         <https://performance.musiconn.de/source/5-leningrader-fruehling-1969-17-april-werkbeschreibung>,
         <https://performance.musiconn.de/source/5-leningrader-fruehling-1969-in-kasan-uljanowsk-uebersicht>,
         <https://performance.musiconn.de/work/choreograficeskie-miniatjury-slonimskij-sergej-michajlovic>,
         <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-1-a-dur-cernov-aleksandr-a>,
         <https://performance.musiconn.de/work/russkie-pesni-matveev-michail-a>,
-        <https://performance.musiconn.de/work/severnaja-poema-solovev-sedoj-vasilij-p>,
         <https://performance.musiconn.de/work/stranicy-dnevnika-auswahl-belov-gennadij-g>,
         <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-evlachov-orest-aleksandrovic>,
-        <https://performance.musiconn.de/work/zivee-vsech-zivych-admoni-iogann>,
-        <https://viaf.org/viaf/7676162368013725790001> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kazanskaja-gosudarstvennaja-konservatorija-aktovyj-zal> ;
-    cto:viaf <https://viaf.org/viaf/7676162368013725790001> .
+        <https://performance.musiconn.de/work/zivee-vsech-zivych-admoni-iogann> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/7676162368013725790001> a nfdicore:NFDI_0001010 .
 

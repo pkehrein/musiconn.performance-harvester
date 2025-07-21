@@ -1,35 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/107701032X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300086563> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110340> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-kammerkonzert-museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal-1965-10-26> ] .
 
-<https://performance.musiconn.de/event/2-kammerkonzert-museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal-1965-10-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-kammerkonzert-museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal-1965-10-26> a cto:CTO_0001005 ;
     rdfs:label "2. Kammerkonzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Steinsaal, 26.10.1965" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1965-10-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1965-10-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/107701032X>,
-        <https://d-nb.info/gnd/300086563>,
-        <https://d-nb.info/gnd/300110340> ;
-    cto:relatedItem <https://d-nb.info/gnd/107701032X>,
-        <https://d-nb.info/gnd/300086563>,
-        <https://d-nb.info/gnd/300110340>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/baletti-a-9-novak-jan>,
-        <https://performance.musiconn.de/work/quintette-violine-2-viola-2-violoncello-kv-406-c-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/septette-klarinette-fagott-horn-violine-viola-violoncello-kontabass-kwv-5201-es-dur-kreutzer-conradin>,
-        <https://viaf.org/viaf/185683253>,
-        <https://viaf.org/viaf/199703906>,
-        <https://viaf.org/viaf/209862556> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal> ;
-    cto:viaf <https://viaf.org/viaf/185683253>,
-        <https://viaf.org/viaf/199703906>,
-        <https://viaf.org/viaf/209862556> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199703906> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209862556> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/107701032X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110340> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185683253> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300086563> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185683253> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199703906> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209862556> a nfdicore:NFDI_0001010 .
 

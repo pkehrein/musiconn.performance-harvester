@@ -1,36 +1,46 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1047176475> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300057830> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/simfoniceskij-orkestr-filarmonii-5-jan-1975-sankt-petersburger-philharmonie-1975-01-05> ] .
 
-<https://performance.musiconn.de/event/simfoniceskij-orkestr-filarmonii-5-jan-1975-sankt-petersburger-philharmonie-1975-01-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/simfoniceskij-orkestr-filarmonii-5-jan-1975-sankt-petersburger-philharmonie-1975-01-05> a cto:CTO_0001005 ;
     rdfs:label "Simfoničeskij orkestr filarmonii (5. Jan. 1975), Sankt-Petersburger Philharmonie, 5.1.1975" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1974-75> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1975-01-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1975-01-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1047176475>,
-        <https://d-nb.info/gnd/300057830>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1974-75> ;
-    cto:relatedItem <https://d-nb.info/gnd/1047176475>,
-        <https://d-nb.info/gnd/300057830>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175532170> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176398837> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1047176475> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300057830> ],
         <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1975-5-januar>,
-        <https://performance.musiconn.de/work/an-american-in-paris-gershwin-george>,
         <https://performance.musiconn.de/work/bohdan-chmelnyckyj-arie-dankevyc-kostjantyn-fedorovic>,
-        <https://performance.musiconn.de/work/boris-godunov-arie-musorgskij-modest-petrovic>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-kalnins-imants>,
-        <https://viaf.org/viaf/175532170>,
-        <https://viaf.org/viaf/176398837> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/175532170>,
-        <https://viaf.org/viaf/176398837> .
+        <https://performance.musiconn.de/work/boris-godunov-arie-musorgskij-modest-petrovic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175532170> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176398837> a nfdicore:NFDI_0001010 .
 

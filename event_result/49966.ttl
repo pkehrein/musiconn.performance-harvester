@@ -4,26 +4,29 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vecer-novinki-kamernoj-muzyki-dom-kompozitorov-sankt-petersburg-1969-11-26> ] .
 
-<https://performance.musiconn.de/event/vecer-novinki-kamernoj-muzyki-dom-kompozitorov-sankt-petersburg-1969-11-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vecer-novinki-kamernoj-muzyki-dom-kompozitorov-sankt-petersburg-1969-11-26> a cto:CTO_0001005 ;
     rdfs:label "Večer novinki kamernoj muzyki, Dom kompozitorov (Sankt Petersburg), 26.11.1969" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1969-11-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1969-11-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1200899989> ;
-    cto:relatedItem <https://performance.musiconn.de/source/leningrader-komponistenhaus-1969-20-november>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/leningrader-komponistenhaus-1969-20-november>,
         <https://performance.musiconn.de/work/monolog-arapov-boris-a>,
         <https://performance.musiconn.de/work/praeludien-und-fugen-klavier-elceva-irina-m>,
         <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-4-basner-veniamin-e>,
         <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-5-salmanov-vadim-n>,
         <https://performance.musiconn.de/work/romansy-na-stichi-a-prokofeva-puskov-venedikt-v>,
         <https://performance.musiconn.de/work/sonaten-klavier-banscikov-gennadij-i> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1200899989>,
-        <https://viaf.org/viaf/385157583849933970005> ;
-    cto:viaf <https://viaf.org/viaf/385157583849933970005> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
 

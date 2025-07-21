@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300102828> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30023712X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300864612> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300885296> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4595098-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-petrikirche-sankt-petersburg-1905-02-23> ] .
 
-<https://performance.musiconn.de/event/konzert-petrikirche-sankt-petersburg-1905-02-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-petrikirche-sankt-petersburg-1905-02-23> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Petrikirche (Sankt Petersburg), 23.2.1905" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1905-02-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1905-02-23" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300102828>,
-        <https://d-nb.info/gnd/30023712X>,
-        <https://d-nb.info/gnd/300864612>,
-        <https://d-nb.info/gnd/300885296>,
-        <https://d-nb.info/gnd/4595098-2> ;
-    cto:relatedItem <https://d-nb.info/gnd/300102828>,
-        <https://d-nb.info/gnd/30023712X>,
-        <https://d-nb.info/gnd/300864612>,
-        <https://d-nb.info/gnd/300885296>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4595098-2> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/240540486> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30023712X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300885296> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300864612> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102828> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177679484> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193654814> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181123363> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207933841> ],
         <https://performance.musiconn.de/source/mitteilung-nach-recherche-janna-kniazeva-st-petersburg>,
-        <https://performance.musiconn.de/work/franciscus-tinel-edgar>,
-        <https://performance.musiconn.de/work/messen-d-950-es-dur-auswahl-schubert-franz>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-172-c-moll-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/sonaten-orgel-mwv-w-61-d-moll-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/stabat-mater-f-moll-stabat-mater-pergolesi-giovanni-battista>,
-        <https://viaf.org/viaf/177679484>,
-        <https://viaf.org/viaf/181123363>,
-        <https://viaf.org/viaf/193654814>,
-        <https://viaf.org/viaf/207933841> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4595098-2>,
-        <https://viaf.org/viaf/240540486> ;
-    cto:viaf <https://viaf.org/viaf/177679484>,
-        <https://viaf.org/viaf/181123363>,
-        <https://viaf.org/viaf/193654814>,
-        <https://viaf.org/viaf/207933841>,
-        <https://viaf.org/viaf/240540486> .
+        <https://performance.musiconn.de/work/messen-d-950-es-dur-auswahl-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177679484> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181123363> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193654814> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207933841> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/240540486> a nfdicore:NFDI_0001010 .
 

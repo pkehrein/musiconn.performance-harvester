@@ -4,19 +4,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4576451-7> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-in-der-schwarzenberger-kirche-sankt-georg-schwarzenberg-erzgebirge-1937-12-06-18-00> ] .
 
-<https://performance.musiconn.de/event/konzert-in-der-schwarzenberger-kirche-sankt-georg-schwarzenberg-erzgebirge-1937-12-06-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-in-der-schwarzenberger-kirche-sankt-georg-schwarzenberg-erzgebirge-1937-12-06-18-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert in der Schwarzenberger Kirche, Sankt Georg (Schwarzenberg, Erzgebirge), 6.12.1937, 18:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1937-12-06T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1937-12-06T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4576451-7> ;
-    cto:relatedItem <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4576451-7> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/244736383> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
         <https://performance.musiconn.de/work/es-flog-ein-taeublein-weisse>,
         <https://performance.musiconn.de/work/geistliche-lieder-op-51-huldigung-beim-jesukinde-schumann-georg>,
         <https://performance.musiconn.de/work/ich-freue-mich-in-dir>,
@@ -29,7 +32,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/weihnachtslied-haendel-georg-friedrich>,
         <https://performance.musiconn.de/work/weihnachtsnachtigall-hirsch-karl>,
         <https://performance.musiconn.de/work/wiegenlied-der-hirten-an-der-krippe-zu-bethlehem-reimann-heinrich> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4576451-7>,
-        <https://viaf.org/viaf/244736383> ;
-    cto:viaf <https://viaf.org/viaf/244736383> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/244736383> a nfdicore:NFDI_0001010 .
 

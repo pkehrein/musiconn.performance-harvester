@@ -1,51 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1170607616> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009984> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300087896> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300135491> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300143737> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300664532> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-evangelisches-vereinshaus-weiden-1958-03-10> ] .
 
-<https://performance.musiconn.de/event/konzert-evangelisches-vereinshaus-weiden-1958-03-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-evangelisches-vereinshaus-weiden-1958-03-10> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Evangelisches Vereinshaus (Weiden), 10.3.1958" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1958-03-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1958-03-10" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170607616>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300087896>,
-        <https://d-nb.info/gnd/300135491>,
-        <https://d-nb.info/gnd/300143737>,
-        <https://d-nb.info/gnd/300664532> ;
-    cto:relatedItem <https://d-nb.info/gnd/1170607616>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300087896>,
-        <https://d-nb.info/gnd/300135491>,
-        <https://d-nb.info/gnd/300143737>,
-        <https://d-nb.info/gnd/300664532>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/evangelisches-vereinshaus-weiden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182306787> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300135491> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300664532> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183220988> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193655948> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300087896> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180852813> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300143737> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177379672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170607616> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185210418> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009984> ],
         <https://performance.musiconn.de/source/motettenbuch-1958>,
-        <https://performance.musiconn.de/work/cymbalum-sionium-o-domine-jesu-christe-schein-johann-hermann>,
-        <https://performance.musiconn.de/work/exultate-deo-adjutori-scarlatti-alessandro>,
-        <https://performance.musiconn.de/work/jesu-meine-freude-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/o-herr-mache-mich-zum-werkzeug-deines-friedens-hessenberg-kurt>,
-        <https://performance.musiconn.de/work/preussische-fest-lieder-teil-1-im-garten-leidet-christus-not-eccard-johannes>,
-        <https://performance.musiconn.de/work/psalmen-davids-psalm-98-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/tristis-est-anima-mea-kuhnau-johann>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/180852813>,
-        <https://viaf.org/viaf/182306787>,
-        <https://viaf.org/viaf/183220988>,
-        <https://viaf.org/viaf/185210418>,
-        <https://viaf.org/viaf/193655948> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/evangelisches-vereinshaus-weiden> ;
-    cto:viaf <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/180852813>,
-        <https://viaf.org/viaf/182306787>,
-        <https://viaf.org/viaf/183220988>,
-        <https://viaf.org/viaf/185210418>,
-        <https://viaf.org/viaf/193655948> .
+        <https://performance.musiconn.de/work/preussische-fest-lieder-teil-1-im-garten-leidet-christus-not-eccard-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177379672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180852813> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182306787> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183220988> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185210418> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193655948> a nfdicore:NFDI_0001010 .
 

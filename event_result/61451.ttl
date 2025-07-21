@@ -1,47 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30002567X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30006022X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009440X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300368917> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4207320-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/orchester-concert-neues-leipziger-stadttheater-1887-11-15> ] .
 
-<https://performance.musiconn.de/event/orchester-concert-neues-leipziger-stadttheater-1887-11-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/orchester-concert-neues-leipziger-stadttheater-1887-11-15> a cto:CTO_0001005 ;
     rdfs:label "Orchester-Concert, Neues Leipziger Stadttheater, 15.11.1887" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1887-11-15" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1887-11-15" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30002567X>,
-        <https://d-nb.info/gnd/30006022X>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300368917>,
-        <https://d-nb.info/gnd/4207320-0> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
-    cto:relatedItem <https://d-nb.info/gnd/30002567X>,
-        <https://d-nb.info/gnd/30006022X>,
-        <https://d-nb.info/gnd/30009440X>,
-        <https://d-nb.info/gnd/300368917>,
-        <https://d-nb.info/gnd/4207320-0>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/neues-leipziger-stadttheater> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30002567X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184540263> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4207320-0> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192580909> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30006022X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009440X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174381785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214736935> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174184579> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300368917> ],
         <https://performance.musiconn.de/source/liszt-verein-zum-zehnjaehrigen-jubilaeum-bericht-ueber-die-10jaehrige-thaetigkeit-des-vereins-1885-1895-leipzig-1895>,
-        <https://performance.musiconn.de/work/die-allmacht-liszt-franz>,
-        <https://performance.musiconn.de/work/die-drei-zigeuner-fassung-singst-orch-liszt-franz>,
-        <https://performance.musiconn.de/work/eine-faust-symphonie-liszt-franz>,
-        <https://performance.musiconn.de/work/iphigenie-en-aulide-ouvertuere-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-77-d-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/les-preludes-liszt-franz>,
-        <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/174381785>,
-        <https://viaf.org/viaf/184540263>,
-        <https://viaf.org/viaf/192580909>,
-        <https://viaf.org/viaf/214736935> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/neues-leipziger-stadttheater> ;
-    cto:viaf <https://viaf.org/viaf/174184579>,
-        <https://viaf.org/viaf/174381785>,
-        <https://viaf.org/viaf/184540263>,
-        <https://viaf.org/viaf/192580909>,
-        <https://viaf.org/viaf/214736935> .
+        <https://performance.musiconn.de/work/die-drei-zigeuner-fassung-singst-orch-liszt-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174184579> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174381785> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184540263> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192580909> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214736935> a nfdicore:NFDI_0001010 .
 

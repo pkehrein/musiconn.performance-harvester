@@ -4,19 +4,25 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/solidaritaetskonzert-1961-2022-61-jahre-staedtepartnerschaft-leipzig-kiew-zwei-jugendchoere-aus-kiew-zu-gast-beim-leipziger-synagogalchor-pavillon-der-hoffnung-leipzig-2022-05-22-18-00> ] .
 
-<https://performance.musiconn.de/event/solidaritaetskonzert-1961-2022-61-jahre-staedtepartnerschaft-leipzig-kiew-zwei-jugendchoere-aus-kiew-zu-gast-beim-leipziger-synagogalchor-pavillon-der-hoffnung-leipzig-2022-05-22-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/solidaritaetskonzert-1961-2022-61-jahre-staedtepartnerschaft-leipzig-kiew-zwei-jugendchoere-aus-kiew-zu-gast-beim-leipziger-synagogalchor-pavillon-der-hoffnung-leipzig-2022-05-22-18-00> a cto:CTO_0001005 ;
     rdfs:label "Solidaritätskonzert - 1961-2022 / 61 Jahre Städtepartnerschaft Leipzig-Kiew / Zwei Jugendchöre aus Kiew zu Gast beim Leipziger Synagogalchor, Pavillon der Hoffnung (Leipzig), 22.5.2022, 18:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2022-05-22T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2022-05-22T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        <https://performance.musiconn.de/corporation/knaben-und-jugendchor-dzvinochok>,
+        <https://performance.musiconn.de/corporation/maedchenchor-vognyk> ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/pavillon-der-hoffnung-leipzig> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/auch-wenn-krieg-ist-wir-wollen-singen>,
         <https://performance.musiconn.de/source/leipziger-synagogalchor-laedt-zum-benefizkonzert>,
         <https://performance.musiconn.de/work/al-naharos-bowel-psalm-137-fassung-nowakowsky-david>,
@@ -38,10 +44,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/susidka-nachbar>,
         <https://performance.musiconn.de/work/vier-bulgarische-lieder>,
         <https://performance.musiconn.de/work/vos-dergeystu-mir-di-yorn-jung-fredo> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/pavillon-der-hoffnung-leipzig> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://performance.musiconn.de/corporation/knaben-und-jugendchor-dzvinochok>,
-        <https://performance.musiconn.de/corporation/maedchenchor-vognyk>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

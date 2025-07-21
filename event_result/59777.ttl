@@ -4,26 +4,33 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/124823114> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/124950698> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/szenarische-musik-im-jugendklub-staatsschauspiel-theater-im-hof-julian-grimau-allee-27-dresden-1986-09-14> ] .
 
-<https://performance.musiconn.de/event/szenarische-musik-im-jugendklub-staatsschauspiel-theater-im-hof-julian-grimau-allee-27-dresden-1986-09-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/szenarische-musik-im-jugendklub-staatsschauspiel-theater-im-hof-julian-grimau-allee-27-dresden-1986-09-14> a cto:CTO_0001005 ;
     rdfs:label "Szenarische Musik im Jugendklub Staatsschauspiel, Theater im Hof (Julian-Grimau-Allee 27, Dresden), 14.9.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-09-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-09-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/124823114>,
-        <https://d-nb.info/gnd/124950698> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/124950698> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/124823114> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/theater-im-hof-julian-grimau-allee-27-dresden> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
         <https://performance.musiconn.de/work/klang-des-krieges-mayer-eckehard> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/theater-im-hof-julian-grimau-allee-27-dresden> ;
-    cto:relatedPerson <https://d-nb.info/gnd/124823114>,
-        <https://d-nb.info/gnd/124950698>,
-        <https://viaf.org/viaf/101586048>,
-        <https://viaf.org/viaf/47704693> ;
-    cto:viaf <https://viaf.org/viaf/101586048>,
-        <https://viaf.org/viaf/47704693> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/101586048> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/47704693> ] .
+
+<https://viaf.org/viaf/101586048> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/47704693> a nfdicore:NFDI_0001010 .
 

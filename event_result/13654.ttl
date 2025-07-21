@@ -1,38 +1,44 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300309848> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30087099X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-zur-goldenen-sonne-kronstadt-1859-04-07> ] .
 
-<https://performance.musiconn.de/event/konzert-zur-goldenen-sonne-kronstadt-1859-04-07> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-zur-goldenen-sonne-kronstadt-1859-04-07> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Zur goldenen Sonne (Kronstadt), 7.4.1859" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1859-04-07" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1859-04-07" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300309848>,
-        <https://d-nb.info/gnd/30087099X> ;
-    cto:relatedItem <https://d-nb.info/gnd/300309848>,
-        <https://d-nb.info/gnd/30087099X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/zur-goldenen-sonne-kronstadt> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30087099X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184529473> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205766350> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300309848> ],
         <https://performance.musiconn.de/source/programmzettel-kronstaedter-maennergesangverein-kronstadt-kronstadt-07041859>,
         <https://performance.musiconn.de/work/die-heimat-storch-anton-maria>,
         <https://performance.musiconn.de/work/gebet-vor-der-schlacht-storch-anton-maria>,
         <https://performance.musiconn.de/work/heiratgesuch-schaeffer-heinrich>,
         <https://performance.musiconn.de/work/immer-mehr-seifert-rich>,
-        <https://performance.musiconn.de/work/liebe-und-wein-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/lieder-und-choere-kwv-7110-auf-den-wellen-kreutzer-conradin>,
         <https://performance.musiconn.de/work/soldatenabschied-mueller-wilhelm-adolf>,
         <https://performance.musiconn.de/work/trinklied-richter-c>,
-        <https://performance.musiconn.de/work/wasserfahrt-mwv-g-17-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/weingalopp-op-7-kuntze-carl>,
-        <https://viaf.org/viaf/184529473>,
-        <https://viaf.org/viaf/205766350> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/zur-goldenen-sonne-kronstadt> ;
-    cto:viaf <https://viaf.org/viaf/184529473>,
-        <https://viaf.org/viaf/205766350> .
+        <https://performance.musiconn.de/work/weingalopp-op-7-kuntze-carl> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/184529473> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205766350> a nfdicore:NFDI_0001010 .
 

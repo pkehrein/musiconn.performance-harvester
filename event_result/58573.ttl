@@ -1,27 +1,32 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/129359726> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300741634> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ausstellungseroeffnung-wolfgang-bruchwitz-kulturhaus-august-bebel-dresden-1985-01-10> ] .
 
-<https://performance.musiconn.de/event/ausstellungseroeffnung-wolfgang-bruchwitz-kulturhaus-august-bebel-dresden-1985-01-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ausstellungseroeffnung-wolfgang-bruchwitz-kulturhaus-august-bebel-dresden-1985-01-10> a cto:CTO_0001005 ;
     rdfs:label "Ausstellungseröffnung Wolfgang Bruchwitz, Kulturhaus \"August Bebel\" (Dresden), 10.1.1985" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1985-01-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1985-01-10" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/129359726> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturhaus-august-bebel-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300741634> ],
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1985-und-nachtrag-1976-1984-dresden-saechsische-landesbibliothek-dresden-1986> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/129359726>,
-        <https://d-nb.info/gnd/300741634> ;
-    cto:relatedItem <https://d-nb.info/gnd/300741634>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1985-und-nachtrag-1976-1984-dresden-saechsische-landesbibliothek-dresden-1986>,
-        <https://performance.musiconn.de/work/solitude-hirschfeld-caspar-rene> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturhaus-august-bebel-dresden> ;
-    cto:relatedPerson <https://d-nb.info/gnd/129359726>,
-        <https://viaf.org/viaf/10922324> ;
-    cto:viaf <https://viaf.org/viaf/10922324> .
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/10922324> ] .
+
+<https://viaf.org/viaf/10922324> a nfdicore:NFDI_0001010 .
 

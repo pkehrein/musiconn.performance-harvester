@@ -1,48 +1,65 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1225889731> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300019157> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300061315> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300083858> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111029> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300129297> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ostseewoche-1963-theaterbau-des-stadttheaters-wismar-wismar-1963-07-09> ] .
 
-<https://performance.musiconn.de/event/ostseewoche-1963-theaterbau-des-stadttheaters-wismar-wismar-1963-07-09> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ostseewoche-1963-theaterbau-des-stadttheaters-wismar-wismar-1963-07-09> a cto:CTO_0001005 ;
     rdfs:label "Ostseewoche 1963, Theaterbau des Stadttheaters Wismar (Wismar), 9.7.1963" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1963-07-09" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1963-07-09" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1225889731>,
-        <https://d-nb.info/gnd/300019157>,
-        <https://d-nb.info/gnd/300061315>,
-        <https://d-nb.info/gnd/300083858>,
-        <https://d-nb.info/gnd/300111029>,
-        <https://d-nb.info/gnd/300129297> ;
-    cto:relatedItem <https://d-nb.info/gnd/300019157>,
-        <https://d-nb.info/gnd/300061315>,
-        <https://d-nb.info/gnd/300083858>,
-        <https://d-nb.info/gnd/300111029>,
-        <https://d-nb.info/gnd/300129297>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1225889731> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177824714> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300061315> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111029> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300129297> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185089854> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300019157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300083858> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186377796> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214739156> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186687666> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/donna-diana-ouvertuere-reznicek-emil-nikolaus-von>,
-        <https://performance.musiconn.de/work/galantai-tancok-kodaly-zoltan>,
         <https://performance.musiconn.de/work/karneval-aus-venedig-benedict-julius>,
-        <https://performance.musiconn.de/work/le-carnaval-romain-berlioz-hector>,
-        <https://performance.musiconn.de/work/romeo-et-juliette-ah-je-veux-vivre-gounod-charles>,
-        <https://performance.musiconn.de/work/sinfonien-kv-200-c-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonietta-1960-kochan-guenter>,
-        <https://viaf.org/viaf/177824714>,
-        <https://viaf.org/viaf/185089854>,
-        <https://viaf.org/viaf/186377796>,
-        <https://viaf.org/viaf/186687666>,
-        <https://viaf.org/viaf/214739156> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1225889731> ;
-    cto:viaf <https://viaf.org/viaf/177824714>,
-        <https://viaf.org/viaf/185089854>,
-        <https://viaf.org/viaf/186377796>,
-        <https://viaf.org/viaf/186687666>,
-        <https://viaf.org/viaf/214739156> .
+        <https://performance.musiconn.de/work/sinfonietta-1960-kochan-guenter> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177824714> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185089854> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186377796> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186687666> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214739156> a nfdicore:NFDI_0001010 .
 

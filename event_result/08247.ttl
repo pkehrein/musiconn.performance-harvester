@@ -1,51 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1187356484> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009984> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300048866> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300244924> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4317679-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-stiftsbasilika-waldsassen-2002-12-01> ] .
 
-<https://performance.musiconn.de/event/konzert-stiftsbasilika-waldsassen-2002-12-01> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-stiftsbasilika-waldsassen-2002-12-01> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Stiftsbasilika (Waldsassen), 1.12.2002" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2002-12-01" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2002-12-01" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1187356484>,
-        <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300048866>,
-        <https://d-nb.info/gnd/300244924>,
-        <https://d-nb.info/gnd/4317679-3> ;
-    cto:relatedItem <https://d-nb.info/gnd/1187356484>,
-        <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300048866>,
-        <https://d-nb.info/gnd/300244924>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/233841634> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4317679-3> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300244924> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1187356484> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300048866> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185090204> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177379672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009984> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181241390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213971327> ],
         <https://performance.musiconn.de/source/motettenbuch-2002-03>,
         <https://performance.musiconn.de/work/cantional-nun-komm-der-heiden-heiland-schein-johann-hermann>,
         <https://performance.musiconn.de/work/die-nacht-ist-vorgedrungen-schlenker-manfred>,
         <https://performance.musiconn.de/work/es-kommt-ein-schiff-geladen-thomas-kurt>,
-        <https://performance.musiconn.de/work/jesu-meine-freude-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/koenig-der-koenige-brand-gustav>,
         <https://performance.musiconn.de/work/macht-hoch-die-tuer-mauersberger-erhard>,
-        <https://performance.musiconn.de/work/maria-durch-ein-dornwald-ging-mauersberger-erhard>,
-        <https://performance.musiconn.de/work/musae-sioniae-theil-6-der-morgenstern-ist-aufgedrungen-praetorius-michael>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/uebers-gebirg-maria-geht-eccard-johannes>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/185090204>,
-        <https://viaf.org/viaf/213971327> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4317679-3>,
-        <https://viaf.org/viaf/233841634> ;
-    cto:viaf <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/185090204>,
-        <https://viaf.org/viaf/213971327>,
-        <https://viaf.org/viaf/233841634> .
+        <https://performance.musiconn.de/work/maria-durch-ein-dornwald-ging-mauersberger-erhard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177379672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181241390> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185090204> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213971327> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/233841634> a nfdicore:NFDI_0001010 .
 

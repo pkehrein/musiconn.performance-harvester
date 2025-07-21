@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4300889-6> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gottesdienst-nikolaikirche-leipzig-1928-06-17> ] .
 
-<https://performance.musiconn.de/event/gottesdienst-nikolaikirche-leipzig-1928-06-17> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gottesdienst-nikolaikirche-leipzig-1928-06-17> a cto:CTO_0001005 ;
     rdfs:label "Gottesdienst, Nikolaikirche (Leipzig), 17.6.1928" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1928-06-17" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1928-06-17" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4300889-6> ;
-    cto:relatedItem <https://performance.musiconn.de/source/motettenbuch-1928>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4300889-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173652475> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/motettenbuch-1928>,
         <https://performance.musiconn.de/work/die-himmel-erzaehlen-die-ehre-gottes-1-teil-auswahl-bach-johann-sebastian> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4300889-6>,
-        <https://viaf.org/viaf/173652475> ;
-    cto:viaf <https://viaf.org/viaf/173652475> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/173652475> a nfdicore:NFDI_0001010 .
 

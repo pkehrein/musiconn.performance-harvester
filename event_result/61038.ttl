@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30002701X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144407> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300157339> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300301863> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-kammerkonzert-alte-oper-frankfurt-a-main-grosser-saal-2019-12-12-20-00> ] .
 
-<https://performance.musiconn.de/event/3-kammerkonzert-alte-oper-frankfurt-a-main-grosser-saal-2019-12-12-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-kammerkonzert-alte-oper-frankfurt-a-main-grosser-saal-2019-12-12-20-00> a cto:CTO_0001005 ;
     rdfs:label "3. Kammerkonzert, Alte Oper (Frankfurt a. Main). Großer Saal, 12.12.2019, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2019-2020> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2019-12-12T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2019-12-12T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30002701X>,
-        <https://d-nb.info/gnd/300144407>,
-        <https://d-nb.info/gnd/300157339>,
-        <https://d-nb.info/gnd/300301863> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2019-2020> ;
-    cto:relatedItem <https://d-nb.info/gnd/30002701X>,
-        <https://d-nb.info/gnd/300144407>,
-        <https://d-nb.info/gnd/300157339>,
-        <https://d-nb.info/gnd/300301863>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/adagio-und-allegro-horn-klavier-op-70-as-dur-schumann-robert>,
-        <https://performance.musiconn.de/work/kleine-stuecke-webern-anton>,
-        <https://performance.musiconn.de/work/sonaten-violoncello-klavier-op-6-f-dur-strauss-richard>,
-        <https://performance.musiconn.de/work/sonaten-violoncello-klavier-op-99-f-dur-brahms-johannes>,
-        <https://viaf.org/viaf/177073957>,
-        <https://viaf.org/viaf/200780147>,
-        <https://viaf.org/viaf/207911918>,
-        <https://viaf.org/viaf/4062147270601935700002> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/177073957>,
-        <https://viaf.org/viaf/200780147>,
-        <https://viaf.org/viaf/207911918>,
-        <https://viaf.org/viaf/4062147270601935700002> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177073957> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207911918> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144407> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200780147> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4062147270601935700002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157339> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300301863> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30002701X> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177073957> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200780147> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207911918> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4062147270601935700002> a nfdicore:NFDI_0001010 .
 

@@ -1,54 +1,73 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1129725219> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1169805396> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1185451145> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1185451218> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300006322> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009984> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300025157> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300096917> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-dresdner-kreuzchor-salvatorkirche-breslau-1933-09-08-20-00> ] .
 
-<https://performance.musiconn.de/event/konzert-dresdner-kreuzchor-salvatorkirche-breslau-1933-09-08-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-dresdner-kreuzchor-salvatorkirche-breslau-1933-09-08-20-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert Dresdner Kreuzchor, Salvatorkirche (Breslau), 8.9.1933, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1933-34> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1933-09-08T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1933-09-08T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1129725219>,
-        <https://d-nb.info/gnd/1169805396>,
-        <https://d-nb.info/gnd/1185451145>,
-        <https://d-nb.info/gnd/1185451218>,
-        <https://d-nb.info/gnd/300006322>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300025157>,
-        <https://d-nb.info/gnd/300096917> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1933-34> ;
-    cto:relatedItem <https://d-nb.info/gnd/1169805396>,
-        <https://d-nb.info/gnd/1185451145>,
-        <https://d-nb.info/gnd/1185451218>,
-        <https://d-nb.info/gnd/300006322>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300025157>,
-        <https://d-nb.info/gnd/300096917>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1490149235086176690002> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1129725219> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1169805396> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1185451145> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009984> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025157> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300006322> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177379672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300096917> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180037857> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1185451218> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4583154076036111860006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209862848> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/assumpta-est-maria-messe-kyrie-palestrina-giovanni-pierluigi-da>,
-        <https://performance.musiconn.de/work/assumpta-est-maria-messe-sanctus-palestrina-giovanni-pierluigi-da>,
-        <https://performance.musiconn.de/work/fantasien-orgel-bwv-572-g-dur-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/fest-und-gedenksprueche-brahms-johannes>,
-        <https://performance.musiconn.de/work/jesu-meine-freude-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/kanzone-drischner-max>,
-        <https://performance.musiconn.de/work/praeambulum-orgel-luebwv-7-e-dur-luebeck-vincent>,
-        <https://performance.musiconn.de/work/von-der-ewigen-liebe-thomas-kurt>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/180037857>,
-        <https://viaf.org/viaf/209862848>,
-        <https://viaf.org/viaf/4583154076036111860006> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1129725219>,
-        <https://viaf.org/viaf/1490149235086176690002> ;
-    cto:viaf <https://viaf.org/viaf/1490149235086176690002>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/180037857>,
-        <https://viaf.org/viaf/209862848>,
-        <https://viaf.org/viaf/4583154076036111860006> .
+        <https://performance.musiconn.de/work/kanzone-drischner-max> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1490149235086176690002> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177379672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180037857> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209862848> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4583154076036111860006> a nfdicore:NFDI_0001010 .
 

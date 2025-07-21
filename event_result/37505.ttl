@@ -1,46 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1060934116> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300006438> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011199> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011202> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300607717> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/jenaer-bach-tage-1950-universitaet-jena-aula-1950-06-25-19-30> ] .
 
-<https://performance.musiconn.de/event/jenaer-bach-tage-1950-universitaet-jena-aula-1950-06-25-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/jenaer-bach-tage-1950-universitaet-jena-aula-1950-06-25-19-30> a cto:CTO_0001005 ;
     rdfs:label "Jenaer Bach-Tage 1950, Universität (Jena) / Aula, 25.6.1950, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/akademische-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1950-06-25T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1950-06-25T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1060934116>,
-        <https://d-nb.info/gnd/300006438>,
-        <https://d-nb.info/gnd/300011199>,
-        <https://d-nb.info/gnd/300011202>,
-        <https://d-nb.info/gnd/300607717> ;
-    cto:itemOf <https://performance.musiconn.de/series/akademische-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1060934116>,
-        <https://d-nb.info/gnd/300006438>,
-        <https://d-nb.info/gnd/300011199>,
-        <https://d-nb.info/gnd/300011202>,
-        <https://d-nb.info/gnd/300607717>,
-        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/franzoesische-suiten-nr-6-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonaten-viola-da-gamba-cembalo-bwv-1027-1029-nr-2-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonaten-viola-da-gamba-cembalo-bwv-1027-g-dur-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonaten-violine-cembalo-bwv-1014-1019-sonate-g-dur-bwv-10191-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-bwv-1014-1019a-nr-1-bach-johann-sebastian>,
-        <https://viaf.org/viaf/179926262>,
-        <https://viaf.org/viaf/191494730>,
-        <https://viaf.org/viaf/196877316>,
-        <https://viaf.org/viaf/212893318>,
-        <https://viaf.org/viaf/311596747> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/universitaet-jena-aula> ;
-    cto:viaf <https://viaf.org/viaf/179926262>,
-        <https://viaf.org/viaf/191494730>,
-        <https://viaf.org/viaf/196877316>,
-        <https://viaf.org/viaf/212893318>,
-        <https://viaf.org/viaf/311596747> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/universitaet-jena-aula> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011202> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212893318> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011199> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196877316> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300006438> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300607717> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311596747> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1060934116> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179926262> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191494730> ],
+        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179926262> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191494730> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196877316> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212893318> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311596747> a nfdicore:NFDI_0001010 .
 

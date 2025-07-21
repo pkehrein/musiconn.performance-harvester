@@ -1,52 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1060704447> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1269065823> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300016409> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300130368> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171781> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300173849> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/viertes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1889-11-22-18-30> ] .
 
-<https://performance.musiconn.de/event/viertes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1889-11-22-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/viertes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1889-11-22-18-30> a cto:CTO_0001005 ;
     rdfs:label "Viertes Museums-Concert, Großer Konzertsaal (Frankfurt a. M.), 22.11.1889, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1889-1890> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1889-11-22T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1889-11-22T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1060704447>,
-        <https://d-nb.info/gnd/1269065823>,
-        <https://d-nb.info/gnd/300016409>,
-        <https://d-nb.info/gnd/300130368>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/300173849> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1889-1890> ;
-    cto:relatedItem <https://d-nb.info/gnd/1060704447>,
-        <https://d-nb.info/gnd/1269065823>,
-        <https://d-nb.info/gnd/300016409>,
-        <https://d-nb.info/gnd/300130368>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/300173849>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1269065823> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309560042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5566166479526107840008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1060704447> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177077326> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300130368> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181867195> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311453454> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300173849> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016409> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207915232> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/faust-die-stille-nacht-entweicht-spohr-louis>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-2-op-22-d-moll-wieniawski-henri>,
-        <https://performance.musiconn.de/work/oberon-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/sinfonien-nr-6-op-68-f-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/suiten-violine-klavier-op-34-adagio-ries-franz>,
-        <https://performance.musiconn.de/work/suiten-violine-klavier-op-34-perpetuum-mobile-ries-franz>,
-        <https://performance.musiconn.de/work/variationen-ueber-ein-eigenes-thema-rudorff-ernst>,
-        <https://viaf.org/viaf/177077326>,
-        <https://viaf.org/viaf/181867195>,
-        <https://viaf.org/viaf/207915232>,
-        <https://viaf.org/viaf/309560042>,
-        <https://viaf.org/viaf/311453454>,
-        <https://viaf.org/viaf/5566166479526107840008> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/177077326>,
-        <https://viaf.org/viaf/181867195>,
-        <https://viaf.org/viaf/207915232>,
-        <https://viaf.org/viaf/309560042>,
-        <https://viaf.org/viaf/311453454>,
-        <https://viaf.org/viaf/5566166479526107840008> .
+        <https://performance.musiconn.de/work/faust-die-stille-nacht-entweicht-spohr-louis> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177077326> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181867195> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207915232> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309560042> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311453454> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5566166479526107840008> a nfdicore:NFDI_0001010 .
 

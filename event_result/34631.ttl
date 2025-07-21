@@ -1,40 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300018703> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026609> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300172257> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300417160> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-kammerkonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1961-01-10> ] .
 
-<https://performance.musiconn.de/event/2-kammerkonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1961-01-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-kammerkonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1961-01-10> a cto:CTO_0001005 ;
     rdfs:label "2. Kammerkonzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 10.1.1961" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1961-01-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1961-01-10" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300018703>,
-        <https://d-nb.info/gnd/300026609>,
-        <https://d-nb.info/gnd/300172257>,
-        <https://d-nb.info/gnd/300417160> ;
-    cto:relatedItem <https://d-nb.info/gnd/300018703>,
-        <https://d-nb.info/gnd/300026609>,
-        <https://d-nb.info/gnd/300172257>,
-        <https://d-nb.info/gnd/300417160>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/fantasien-oboe-violine-viola-violoncello-op-2-britten-benjamin>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-3-berg-alban>,
-        <https://performance.musiconn.de/work/quintette-klarinette-violine-2-viola-violoncello-op-115-h-moll-brahms-johannes>,
-        <https://performance.musiconn.de/work/saetze-violine-2-viola-violoncello-op-5-webern-anton>,
-        <https://viaf.org/viaf/175017850>,
-        <https://viaf.org/viaf/191494931>,
-        <https://viaf.org/viaf/215922297>,
-        <https://viaf.org/viaf/234752923> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/175017850>,
-        <https://viaf.org/viaf/191494931>,
-        <https://viaf.org/viaf/215922297>,
-        <https://viaf.org/viaf/234752923> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300172257> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191494931> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215922297> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175017850> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300018703> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026609> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300417160> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/234752923> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175017850> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191494931> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215922297> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/234752923> a nfdicore:NFDI_0001010 .
 

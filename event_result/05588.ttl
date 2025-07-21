@@ -1,39 +1,50 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175533483> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1177742772> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/117994643X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267117-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/trauung-des-herrn-oberbuergermeister-ernst-zoerner-mit-fraeulein-hildegart-schack-frauenkirche-dresden-1935-11-14-14-00> ] .
 
-<https://performance.musiconn.de/event/trauung-des-herrn-oberbuergermeister-ernst-zoerner-mit-fraeulein-hildegart-schack-frauenkirche-dresden-1935-11-14-14-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/trauung-des-herrn-oberbuergermeister-ernst-zoerner-mit-fraeulein-hildegart-schack-frauenkirche-dresden-1935-11-14-14-00> a cto:CTO_0001005 ;
     rdfs:label "Trauung des Herrn Oberbürgermeister Ernst Zörner mit Fräulein Hildegart Schack, Frauenkirche (Dresden), 14.11.1935, 14:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1935-36> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1935-11-14T14:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1935-11-14T14:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175533483>,
-        <https://d-nb.info/gnd/1177742772>,
-        <https://d-nb.info/gnd/117994643X>,
-        <https://d-nb.info/gnd/4267117-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1935-36> ;
-    cto:relatedItem <https://d-nb.info/gnd/1175533483>,
-        <https://d-nb.info/gnd/1177742772>,
-        <https://d-nb.info/gnd/117994643X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267117-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/292514672> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175533483> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1062154801933756310006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1177742772> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3133155226750484490001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/117994643X> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-33-trauungslied-hauptmann-moritz>,
-        <https://performance.musiconn.de/work/messe-sanctus-thomas-kurt>,
         <https://performance.musiconn.de/work/orgelnachspiele-anonym>,
-        <https://performance.musiconn.de/work/orgelvorspiele-anonym>,
-        <https://performance.musiconn.de/work/parsifal-der-glaube-lebt-wagner-richard>,
-        <https://viaf.org/viaf/1062154801933756310006>,
-        <https://viaf.org/viaf/3133155226750484490001> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267117-6>,
-        <https://viaf.org/viaf/292514672> ;
-    cto:viaf <https://viaf.org/viaf/1062154801933756310006>,
-        <https://viaf.org/viaf/292514672>,
-        <https://viaf.org/viaf/3133155226750484490001> .
+        <https://performance.musiconn.de/work/orgelvorspiele-anonym> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1062154801933756310006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/292514672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3133155226750484490001> a nfdicore:NFDI_0001010 .
 

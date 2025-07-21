@@ -4,19 +4,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-anrechtszyklus-dienstags-in-der-19-universitaet-leipzig-1982-02-02-19-30> ] .
 
-<https://performance.musiconn.de/event/konzert-anrechtszyklus-dienstags-in-der-19-universitaet-leipzig-1982-02-02-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-anrechtszyklus-dienstags-in-der-19-universitaet-leipzig-1982-02-02-19-30> a cto:CTO_0001005 ;
     rdfs:label "Konzert Anrechtszyklus 'Dienstags in der 19', Universität Leipzig, 2.2.1982, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1982-02-02T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1982-02-02T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/universitaet-leipzig> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/flyer-konzert-2-februar-1982>,
         <https://performance.musiconn.de/source/klaus-engelhardt-synagogenmusik-und-folklore-erklang-im-hoersaal-19-leipziger-synagogalchor-bot-eindrucksvolles-programm>,
         <https://performance.musiconn.de/source/plakat-konzert-2-februar-1982>,
@@ -35,8 +39,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/towo-lfonecho-lewandowski-louis>,
         <https://performance.musiconn.de/work/wollt-ich-weren-a-ruw>,
         <https://performance.musiconn.de/work/wschomru-alman-samuel> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/universitaet-leipzig> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

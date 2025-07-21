@@ -1,48 +1,67 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30000723X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300007337> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300117353> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300172915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4609326-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1980-09-27> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1980-09-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1980-09-27> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 27.9.1980" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1980-09-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1980-09-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30000723X>,
-        <https://d-nb.info/gnd/300007337>,
-        <https://d-nb.info/gnd/300117353>,
-        <https://d-nb.info/gnd/300172915>,
-        <https://d-nb.info/gnd/4468631-6>,
-        <https://d-nb.info/gnd/4609326-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/30000723X>,
-        <https://d-nb.info/gnd/300007337>,
-        <https://d-nb.info/gnd/300117353>,
-        <https://d-nb.info/gnd/300172915>,
-        <https://d-nb.info/gnd/4609326-6>,
-        <https://performance.musiconn.de/source/motettenbuch-1980>,
-        <https://performance.musiconn.de/work/darzu-ist-erschienen-der-sohn-gottes-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/missa-papae-marcelli-gloria-palestrina-giovanni-pierluigi-da>,
-        <https://performance.musiconn.de/work/missa-papae-marcelli-kyrie-palestrina-giovanni-pierluigi-da>,
-        <https://performance.musiconn.de/work/nun-ist-das-heil-und-die-kraft-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/psalm-23-weismann-wilhelm>,
-        <https://viaf.org/viaf/181424839>,
-        <https://viaf.org/viaf/185109656>,
-        <https://viaf.org/viaf/199737741>,
-        <https://viaf.org/viaf/204584152>,
-        <https://viaf.org/viaf/217005471> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/181424839>,
-        <https://viaf.org/viaf/185109656>,
-        <https://viaf.org/viaf/199737741>,
-        <https://viaf.org/viaf/204584152>,
-        <https://viaf.org/viaf/217005471> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181424839> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217005471> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300172915> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300117353> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199737741> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300007337> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204584152> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30000723X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4609326-6> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185109656> ],
+        <https://performance.musiconn.de/source/motettenbuch-1980> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181424839> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185109656> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199737741> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204584152> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217005471> a nfdicore:NFDI_0001010 .
 

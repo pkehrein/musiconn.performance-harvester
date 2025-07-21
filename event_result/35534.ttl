@@ -1,43 +1,59 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300016387> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300088256> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171528> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300808267> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4005348-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/libanon-aegypten-1967-beirut-1967-01-06-21-00> ] .
 
-<https://performance.musiconn.de/event/libanon-aegypten-1967-beirut-1967-01-06-21-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/libanon-aegypten-1967-beirut-1967-01-06-21-00> a cto:CTO_0001005 ;
     rdfs:label "Libanon / Ägypten 1967, Beirut, 6.1.1967, 21:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1967-01-06T21:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1967-01-06T21:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300016387>,
-        <https://d-nb.info/gnd/300088256>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/300808267>,
-        <https://d-nb.info/gnd/4005348-9> ;
-    cto:relatedItem <https://d-nb.info/gnd/300016387>,
-        <https://d-nb.info/gnd/300088256>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/300808267>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/der-freischuetz-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/konzerte-trompete-orchester-op-23-kurz-siegfried>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-88-89-nr-1-haydn-joseph>,
-        <https://performance.musiconn.de/work/sinfonien-nr-5-op-67-c-moll-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/193673346>,
-        <https://viaf.org/viaf/197650475>,
-        <https://viaf.org/viaf/206833017> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4005348-9>,
-        <https://viaf.org/viaf/316421395> ;
-    cto:viaf <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/193673346>,
-        <https://viaf.org/viaf/197650475>,
-        <https://viaf.org/viaf/206833017>,
-        <https://viaf.org/viaf/316421395> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316421395> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4005348-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016387> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300088256> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197650475> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177811557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206833017> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300808267> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193673346> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177811557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193673346> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197650475> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206833017> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316421395> a nfdicore:NFDI_0001010 .
 

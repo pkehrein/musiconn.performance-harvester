@@ -1,33 +1,41 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300106807> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110774> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4113353-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zwinger-serenade-zwinger-dresden-1937-08-05-20-30> ] .
 
-<https://performance.musiconn.de/event/zwinger-serenade-zwinger-dresden-1937-08-05-20-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zwinger-serenade-zwinger-dresden-1937-08-05-20-30> a cto:CTO_0001005 ;
     rdfs:label "Zwinger-Serenade, Zwinger (Dresden), 5.8.1937, 20:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1936-1937> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1937-08-05T20:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1937-08-05T20:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300106807>,
-        <https://d-nb.info/gnd/300110774>,
-        <https://d-nb.info/gnd/4113353-5> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1936-1937> ;
-    cto:relatedItem <https://d-nb.info/gnd/300106807>,
-        <https://d-nb.info/gnd/300110774>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4113353-5> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110774> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212880590> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176626786> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300106807> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/1-violoncellokonzert-d-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/serenaden-oboe-2-klarinette-2-horn-2-fagott-2-kv-375-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-lmv-7g-9-mozart-leopold>,
-        <https://viaf.org/viaf/176626786>,
-        <https://viaf.org/viaf/212880590> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4113353-5> ;
-    cto:viaf <https://viaf.org/viaf/176626786>,
-        <https://viaf.org/viaf/212880590> .
+        <https://performance.musiconn.de/work/1-violoncellokonzert-d-dur-haydn-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176626786> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212880590> a nfdicore:NFDI_0001010 .
 

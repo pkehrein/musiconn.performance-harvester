@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015453> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300130880> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300226071> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-sinfoniekonzert-alte-oper-frankfurt-a-main-grosser-saal-2017-11-20-20-00> ] .
 
-<https://performance.musiconn.de/event/3-sinfoniekonzert-alte-oper-frankfurt-a-main-grosser-saal-2017-11-20-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-sinfoniekonzert-alte-oper-frankfurt-a-main-grosser-saal-2017-11-20-20-00> a cto:CTO_0001005 ;
     rdfs:label "3. Sinfoniekonzert, Alte Oper (Frankfurt a. Main). Großer Saal, 20.11.2017, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2018-2019> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2017-11-20T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2017-11-20T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015453>,
-        <https://d-nb.info/gnd/300130880>,
-        <https://d-nb.info/gnd/300226071> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2018-2019> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015453>,
-        <https://d-nb.info/gnd/300130880>,
-        <https://d-nb.info/gnd/300226071>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/a-flock-descends-into-the-pentagonal-garden-takemitsu-toru>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-15-c-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/secherazada-rimskij-korsakov-nikolaj>,
-        <https://viaf.org/viaf/175790410>,
-        <https://viaf.org/viaf/178050162>,
-        <https://viaf.org/viaf/205758894> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/175790410>,
-        <https://viaf.org/viaf/178050162>,
-        <https://viaf.org/viaf/205758894> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178050162> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015453> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175790410> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300130880> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300226071> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205758894> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175790410> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178050162> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205758894> a nfdicore:NFDI_0001010 .
 

@@ -1,37 +1,46 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300151268> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300151357> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300151365> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncert-15-aprelja-sankt-petersburger-philharmonie-kleiner-saal-1981-04-15> ] .
 
-<https://performance.musiconn.de/event/koncert-15-aprelja-sankt-petersburger-philharmonie-kleiner-saal-1981-04-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncert-15-aprelja-sankt-petersburger-philharmonie-kleiner-saal-1981-04-15> a cto:CTO_0001005 ;
     rdfs:label "Koncert 15. aprelja, Sankt-Petersburger Philharmonie / Kleiner Saal, 15.4.1981" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1980-81> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1981-04-15" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1981-04-15" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300151268>,
-        <https://d-nb.info/gnd/300151357>,
-        <https://d-nb.info/gnd/300151365> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1980-81> ;
-    cto:relatedItem <https://d-nb.info/gnd/300151268>,
-        <https://d-nb.info/gnd/300151357>,
-        <https://d-nb.info/gnd/300151365>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300151268> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195808736> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300151357> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300151365> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188265404> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195808727> ],
         <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1981-15-april-kleiner-saal>,
-        <https://performance.musiconn.de/work/praeludien-und-fugen-op-87-ausschnitte-schostakowitsch-dmitri-d>,
-        <https://performance.musiconn.de/work/sonaten-violoncello-klavier-op-40-d-moll-schostakowitsch-dmitri-d>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-nr-1-op-8-c-moll-schostakowitsch-dmitri-d>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-nr-2-op-67-e-moll-schostakowitsch-dmitri-d>,
-        <https://viaf.org/viaf/188265404>,
-        <https://viaf.org/viaf/195808727>,
-        <https://viaf.org/viaf/195808736> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/188265404>,
-        <https://viaf.org/viaf/195808727>,
-        <https://viaf.org/viaf/195808736> .
+        <https://performance.musiconn.de/work/praeludien-und-fugen-op-87-ausschnitte-schostakowitsch-dmitri-d> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/188265404> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195808727> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195808736> a nfdicore:NFDI_0001010 .
 

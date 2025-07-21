@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026870> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300028792> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300076169> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncerty-zkr-simfoniceskogo-orkestra-filarmonii-19-maerz-1959-sankt-petersburger-philharmonie-1959-03-19> ] .
 
-<https://performance.musiconn.de/event/koncerty-zkr-simfoniceskogo-orkestra-filarmonii-19-maerz-1959-sankt-petersburger-philharmonie-1959-03-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncerty-zkr-simfoniceskogo-orkestra-filarmonii-19-maerz-1959-sankt-petersburger-philharmonie-1959-03-19> a cto:CTO_0001005 ;
     rdfs:label "Koncerty ZKR simfoničeskogo orkestra filarmonii (19. März 1959), Sankt-Petersburger Philharmonie, 19.3.1959" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1958-1959> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1959-03-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1959-03-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026870>,
-        <https://d-nb.info/gnd/300028792>,
-        <https://d-nb.info/gnd/300076169>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1958-1959> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026870>,
-        <https://d-nb.info/gnd/300028792>,
-        <https://d-nb.info/gnd/300076169>,
-        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1959-18-maerz>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-h-72-c-dur-honegger-arthur>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-73-d-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/the-young-persons-guide-to-the-orchestra-britten-benjamin>,
-        <https://viaf.org/viaf/183881845>,
-        <https://viaf.org/viaf/191495144>,
-        <https://viaf.org/viaf/215923478> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/183881845>,
-        <https://viaf.org/viaf/191495144>,
-        <https://viaf.org/viaf/215923478> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191495144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215923478> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300076169> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183881845> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026870> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300028792> ],
+        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1959-18-maerz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183881845> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191495144> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215923478> a nfdicore:NFDI_0001010 .
 

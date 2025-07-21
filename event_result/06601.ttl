@@ -1,52 +1,67 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300016360> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170475> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171781> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300177461> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300296428> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/concert-hotel-zur-sonne-doebeln-1889-11-05> ] .
 
-<https://performance.musiconn.de/event/concert-hotel-zur-sonne-doebeln-1889-11-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/concert-hotel-zur-sonne-doebeln-1889-11-05> a cto:CTO_0001005 ;
     rdfs:label "Concert, Hotel zur Sonne (Döbeln), 5.11.1889" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1889-1890> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1889-11-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1889-11-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300016360>,
-        <https://d-nb.info/gnd/300170475>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/300177461>,
-        <https://d-nb.info/gnd/300296428> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1889-1890> ;
-    cto:relatedItem <https://d-nb.info/gnd/300016360>,
-        <https://d-nb.info/gnd/300170475>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/300177461>,
-        <https://d-nb.info/gnd/300296428>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hotel-zur-sonne-doebeln> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309560042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300296428> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177404005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016360> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179828551> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300177461> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2916150567609906370005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170475> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179062815> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1889-1890>,
         <https://performance.musiconn.de/work/coppelia-ballade-thema-und-variationen-delibes-leo>,
-        <https://performance.musiconn.de/work/fantaisie-brillante-sur-faust-de-gounod-wieniawski-henri>,
         <https://performance.musiconn.de/work/legende-oberthuer-charles>,
         <https://performance.musiconn.de/work/merlin-geistereigen-goldmark-karl>,
         <https://performance.musiconn.de/work/merlin-wir-spotten-dein-wir-lachen-dein-goldmark-karl>,
-        <https://performance.musiconn.de/work/oberon-ouvertuere-weber-carl-maria-von>,
         <https://performance.musiconn.de/work/serenaden-streichorchester-walzer-volkmann-robert>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-op-55-es-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/tannhaeuser-und-der-saengerkrieg-auf-wartburg-ouvertuere-wagner-richard>,
-        <https://performance.musiconn.de/work/weaner-madln-ziehrer-carl-michael>,
-        <https://performance.musiconn.de/work/wiegenlied-schubert-franz>,
-        <https://viaf.org/viaf/177404005>,
-        <https://viaf.org/viaf/179062815>,
-        <https://viaf.org/viaf/179828551>,
-        <https://viaf.org/viaf/2916150567609906370005>,
-        <https://viaf.org/viaf/309560042> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hotel-zur-sonne-doebeln> ;
-    cto:viaf <https://viaf.org/viaf/177404005>,
-        <https://viaf.org/viaf/179062815>,
-        <https://viaf.org/viaf/179828551>,
-        <https://viaf.org/viaf/2916150567609906370005>,
-        <https://viaf.org/viaf/309560042> .
+        <https://performance.musiconn.de/work/wiegenlied-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177404005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179062815> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179828551> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2916150567609906370005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309560042> a nfdicore:NFDI_0001010 .
 

@@ -4,19 +4,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-zur-1-biennale-musik-der-synagoge-im-ruhrgebiet-thuermer-saal-bochum-2008-11-01-19-30> ] .
 
-<https://performance.musiconn.de/event/konzert-zur-1-biennale-musik-der-synagoge-im-ruhrgebiet-thuermer-saal-bochum-2008-11-01-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-zur-1-biennale-musik-der-synagoge-im-ruhrgebiet-thuermer-saal-bochum-2008-11-01-19-30> a cto:CTO_0001005 ;
     rdfs:label "Konzert zur 1. Biennale Musik der Synagoge im Ruhrgebiet, Thürmer-Saal (Bochum), 1.11.2008, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2008-11-01T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2008-11-01T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/thuermer-saal-bochum> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/programmbuch-konzert-1-november-2008>,
         <https://performance.musiconn.de/work/as-der-rebbe-elimelech-fassung-gross-friedbert>,
         <https://performance.musiconn.de/work/avodath-hakodesh-yiyu-leratzon-bloch-ernest>,
@@ -34,8 +38,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/shtiler-shtiler-fassung-shur-bonia-volkoviski-alek>,
         <https://performance.musiconn.de/work/toras-adonoi-psalm-19-7-9-lewandowski-louis>,
         <https://performance.musiconn.de/work/wschomru-alman-samuel> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/thuermer-saal-bochum> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

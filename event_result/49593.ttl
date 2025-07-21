@@ -1,57 +1,78 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1079132007> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118295278X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001502X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133626> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300169914> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300665121> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300908628> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/19-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-11-21-19-00> ] .
 
-<https://performance.musiconn.de/event/19-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-11-21-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/19-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1926-11-21-19-00> a cto:CTO_0001005 ;
     rdfs:label "19. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 21.11.1926, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1926-1927-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1926-11-21T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1926-11-21T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1079132007>,
-        <https://d-nb.info/gnd/118295278X>,
-        <https://d-nb.info/gnd/30001502X>,
-        <https://d-nb.info/gnd/300133626>,
-        <https://d-nb.info/gnd/300169914>,
-        <https://d-nb.info/gnd/300665121>,
-        <https://d-nb.info/gnd/300908628> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1926-1927-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/1079132007>,
-        <https://d-nb.info/gnd/118295278X>,
-        <https://d-nb.info/gnd/30001502X>,
-        <https://d-nb.info/gnd/300133626>,
-        <https://d-nb.info/gnd/300169914>,
-        <https://d-nb.info/gnd/300665121>,
-        <https://d-nb.info/gnd/300908628>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133626> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300908628> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191512436> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/307169505> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001502X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1079132007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300169914> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118295278X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/307169497> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300665121> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182059092> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/166144898916350291362> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1665155566454813380009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183261770> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
-        <https://performance.musiconn.de/work/danse-macabre-saint-saens-camille>,
-        <https://performance.musiconn.de/work/der-ring-des-nibelungen-dritter-tag-goetterdaemmerung-trauermarsch-wagner-richard>,
-        <https://performance.musiconn.de/work/elegiske-melodier-hjertesar-grieg-edvard>,
-        <https://performance.musiconn.de/work/improvisationen-posse-wilhelm>,
-        <https://performance.musiconn.de/work/largo-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/ouvertuere-zum-trauerspiel-coriolan-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-d-759-h-moll-allegro-moderato-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-d-759-h-moll-andante-con-moto-schubert-franz>,
-        <https://viaf.org/viaf/166144898916350291362>,
-        <https://viaf.org/viaf/1665155566454813380009>,
-        <https://viaf.org/viaf/182059092>,
-        <https://viaf.org/viaf/183261770>,
-        <https://viaf.org/viaf/191512436>,
-        <https://viaf.org/viaf/307169497>,
-        <https://viaf.org/viaf/307169505> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/166144898916350291362>,
-        <https://viaf.org/viaf/1665155566454813380009>,
-        <https://viaf.org/viaf/182059092>,
-        <https://viaf.org/viaf/183261770>,
-        <https://viaf.org/viaf/191512436>,
-        <https://viaf.org/viaf/307169497>,
-        <https://viaf.org/viaf/307169505> .
+        <https://performance.musiconn.de/work/largo-haendel-georg-friedrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/166144898916350291362> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/1665155566454813380009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182059092> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183261770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191512436> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/307169497> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/307169505> a nfdicore:NFDI_0001010 .
 

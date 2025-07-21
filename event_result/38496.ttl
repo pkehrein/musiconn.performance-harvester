@@ -1,29 +1,32 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1068343516> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/musikfest-konzerthaus-grosser-saal-bad-pyrmont-1931-07-02-20-30> ] .
 
-<https://performance.musiconn.de/event/musikfest-konzerthaus-grosser-saal-bad-pyrmont-1931-07-02-20-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/musikfest-konzerthaus-grosser-saal-bad-pyrmont-1931-07-02-20-30> a cto:CTO_0001005 ;
     rdfs:label "Musikfest, Konzerthaus / Großer Saal (Bad Pyrmont), 2.7.1931, 20:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1931-1932> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1931-07-02T20:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1931-07-02T20:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1068343516> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1931-1932> ;
-    cto:relatedItem <https://d-nb.info/gnd/1068343516>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/konzerthaus-grosser-saal-bad-pyrmont> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1068343516> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315097273> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/gebete-der-maedchen-zur-maria-marx-karl>,
         <https://performance.musiconn.de/work/kleine-musik-fuer-sechs-blaeser-mueller-johannes>,
         <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-protze-kurt>,
-        <https://performance.musiconn.de/work/quintette-violine-2-viola-violoncello-2-leyden-rolf-van>,
-        <https://viaf.org/viaf/315097273> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/konzerthaus-grosser-saal-bad-pyrmont> ;
-    cto:viaf <https://viaf.org/viaf/315097273> .
+        <https://performance.musiconn.de/work/quintette-violine-2-viola-violoncello-2-leyden-rolf-van> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/315097273> a nfdicore:NFDI_0001010 .
 

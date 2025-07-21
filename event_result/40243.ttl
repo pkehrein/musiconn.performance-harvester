@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30011107X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141777> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4215065-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4264112-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/symphonie-konzert-schuetzengesellschaft-plettenberg-festhalle-1953-09-18-20-15> ] .
 
-<https://performance.musiconn.de/event/symphonie-konzert-schuetzengesellschaft-plettenberg-festhalle-1953-09-18-20-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/symphonie-konzert-schuetzengesellschaft-plettenberg-festhalle-1953-09-18-20-15> a cto:CTO_0001005 ;
     rdfs:label "Symphonie-Konzert, Schützengesellschaft (Plettenberg). Festhalle, 18.9.1953, 20:15" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1953-1954> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1953-09-18T20:15:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1953-09-18T20:15:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30011107X>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/4215065-6>,
-        <https://d-nb.info/gnd/4264112-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1953-1954> ;
-    cto:relatedItem <https://d-nb.info/gnd/30011107X>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/4215065-6>,
-        <https://d-nb.info/gnd/4264112-3>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/sinfonien-d-759-h-moll-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-kv-319-b-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/till-eulenspiegels-lustige-streiche-strauss-richard>,
-        <https://performance.musiconn.de/work/variationen-und-fuge-ueber-ein-thema-von-mozart-op-132-reger-max>,
-        <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/189665501>,
-        <https://viaf.org/viaf/190420394> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/schuetzengesellschaft-plettenberg-festhalle> ;
-    cto:viaf <https://viaf.org/viaf/175221377>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/189665501>,
-        <https://viaf.org/viaf/190420394> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/schuetzengesellschaft-plettenberg-festhalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190420394> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141777> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175221377> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4264112-3> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189665501> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30011107X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425978> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4215065-6> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175221377> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179425978> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189665501> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190420394> a nfdicore:NFDI_0001010 .
 

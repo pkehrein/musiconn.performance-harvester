@@ -1,32 +1,40 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/100421326> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1089645007> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/la-maestra-di-scuola-hoftheater-berlin-1764-01-27> ] .
 
-<https://performance.musiconn.de/event/la-maestra-di-scuola-hoftheater-berlin-1764-01-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/la-maestra-di-scuola-hoftheater-berlin-1764-01-27> a cto:CTO_0001005 ;
     rdfs:label "La maestra di scuola, Hoftheater (Berlin), 27.1.1764" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/la-maestra-di-scuola-1> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1764-01-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1764-01-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/100421326>,
-        <https://d-nb.info/gnd/1089645007> ;
-    cto:itemOf <https://performance.musiconn.de/series/la-maestra-di-scuola-1> ;
-    cto:relatedItem <https://performance.musiconn.de/source/henze-doehring-friedrich-der-grosse>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1089645007> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/100421326> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hoftheater-berlin> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/henze-doehring-friedrich-der-grosse>,
         <https://performance.musiconn.de/source/la-maestra-di-scuola-dramma-giocoso-per-musica-da-rappresentarsi-nel-regio-theatro-di-berlino-per-ordine-di-sua-maesta-prussiana>,
         <https://performance.musiconn.de/source/mangum-apollo>,
         <https://performance.musiconn.de/work/la-maestra-cocchi-gioacchino-1> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hoftheater-berlin> ;
-    cto:relatedPerson <https://d-nb.info/gnd/100421326>,
-        <https://d-nb.info/gnd/1089645007>,
-        <https://viaf.org/viaf/1204145857091522921973>,
-        <https://viaf.org/viaf/217598437> ;
-    cto:viaf <https://viaf.org/viaf/1204145857091522921973>,
-        <https://viaf.org/viaf/217598437> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217598437> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1204145857091522921973> ] .
+
+<https://viaf.org/viaf/1204145857091522921973> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217598437> a nfdicore:NFDI_0001010 .
 

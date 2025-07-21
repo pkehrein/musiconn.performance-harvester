@@ -1,24 +1,28 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1060085488> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/schuleinsatz-2019-05-06-09-30> ] .
 
-<https://performance.musiconn.de/event/schuleinsatz-2019-05-06-09-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/schuleinsatz-2019-05-06-09-30> a cto:CTO_0001005 ;
     rdfs:label "Schuleinsatz, 6.5.2019, 09:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2018-2019> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2019-05-06T09:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2019-05-06T09:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1060085488> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2018-2019> ;
-    cto:relatedItem <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1060085488>,
-        <https://viaf.org/viaf/311438221> ;
-    cto:viaf <https://viaf.org/viaf/311438221> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1060085488> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311438221> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/311438221> a nfdicore:NFDI_0001010 .
 

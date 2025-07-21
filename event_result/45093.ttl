@@ -1,52 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1201211387> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026684> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026862> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30003704X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133758> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144474> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/10-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1901-03-15-19-30> ] .
 
-<https://performance.musiconn.de/event/10-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1901-03-15-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/10-philharmonisches-konzert-convent-garten-hamburg-grosser-saal-1901-03-15-19-30> a cto:CTO_0001005 ;
     rdfs:label "10. Philharmonisches Konzert, Convent-Garten (Hamburg) / Großer Saal, 15.3.1901, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1900-1901-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1901-03-15T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1901-03-15T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1201211387>,
-        <https://d-nb.info/gnd/300026684>,
-        <https://d-nb.info/gnd/300026862>,
-        <https://d-nb.info/gnd/30003704X>,
-        <https://d-nb.info/gnd/300133758>,
-        <https://d-nb.info/gnd/300144474> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1900-1901-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/1201211387>,
-        <https://d-nb.info/gnd/300026684>,
-        <https://d-nb.info/gnd/300026862>,
-        <https://d-nb.info/gnd/30003704X>,
-        <https://d-nb.info/gnd/300133758>,
-        <https://d-nb.info/gnd/300144474>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/convent-garten-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1201211387> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213968470> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188262515> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026862> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133758> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214737144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144474> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217003153> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026684> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180961626> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30003704X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1190157583874833970005> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1890-1924>,
-        <https://performance.musiconn.de/work/achilleus-wettspiele-zu-ehren-des-patroklus-bruch-max>,
-        <https://performance.musiconn.de/work/arabesken-klavier-op-18-c-dur-schumann-robert>,
-        <https://performance.musiconn.de/work/harald-der-wicking-vorspiel-heinisch-victor>,
-        <https://performance.musiconn.de/work/impromptus-klavier-op-36-fis-dur-chopin-frederic>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-r-190-g-moll-saint-saens-camille>,
-        <https://performance.musiconn.de/work/rhapsodien-klavier-op-79-nr-2-brahms-johannes>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-68-c-moll-brahms-johannes>,
-        <https://viaf.org/viaf/1190157583874833970005>,
-        <https://viaf.org/viaf/180961626>,
-        <https://viaf.org/viaf/188262515>,
-        <https://viaf.org/viaf/213968470>,
-        <https://viaf.org/viaf/214737144>,
-        <https://viaf.org/viaf/217003153> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/convent-garten-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/1190157583874833970005>,
-        <https://viaf.org/viaf/180961626>,
-        <https://viaf.org/viaf/188262515>,
-        <https://viaf.org/viaf/213968470>,
-        <https://viaf.org/viaf/214737144>,
-        <https://viaf.org/viaf/217003153> .
+        <https://performance.musiconn.de/work/harald-der-wicking-vorspiel-heinisch-victor> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1190157583874833970005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180961626> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188262515> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213968470> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214737144> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217003153> a nfdicore:NFDI_0001010 .
 

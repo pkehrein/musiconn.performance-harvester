@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1186075481> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300022107> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300470630> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-kammermusik-abend-alte-oper-frankfurt-am-main-mozartsaal-1994-10-04-20-30> ] .
 
-<https://performance.musiconn.de/event/1-kammermusik-abend-alte-oper-frankfurt-am-main-mozartsaal-1994-10-04-20-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-kammermusik-abend-alte-oper-frankfurt-am-main-mozartsaal-1994-10-04-20-30> a cto:CTO_0001005 ;
     rdfs:label "1. Kammermusik-Abend, Alte Oper (Frankfurt am Main) / Mozartsaal, 4.10.1994, 20:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1994-1995> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1994-10-04T20:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1994-10-04T20:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1186075481>,
-        <https://d-nb.info/gnd/300022107>,
-        <https://d-nb.info/gnd/300470630> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1994-1995> ;
-    cto:relatedItem <https://d-nb.info/gnd/1186075481>,
-        <https://d-nb.info/gnd/300022107>,
-        <https://d-nb.info/gnd/300470630>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-1-villa-lobos-heitor>,
-        <https://performance.musiconn.de/work/quartette-vl-1-2-va-vc-nr-17-villa-lobos-heitor>,
-        <https://performance.musiconn.de/work/quintette-gitarre-violine-2-viola-violoncello-g-448-d-dur-boccherini-luigi>,
-        <https://viaf.org/viaf/217014523>,
-        <https://viaf.org/viaf/219160750>,
-        <https://viaf.org/viaf/2284155832940933490002> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-am-main-mozartsaal> ;
-    cto:viaf <https://viaf.org/viaf/217014523>,
-        <https://viaf.org/viaf/219160750>,
-        <https://viaf.org/viaf/2284155832940933490002> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-am-main-mozartsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300470630> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1186075481> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219160750> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217014523> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2284155832940933490002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300022107> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/217014523> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219160750> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2284155832940933490002> a nfdicore:NFDI_0001010 .
 

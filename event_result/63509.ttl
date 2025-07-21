@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4074361-5> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/li-tre-cicisbei-ridicoli-luettich-1754-00-00> ] .
 
-<https://performance.musiconn.de/event/li-tre-cicisbei-ridicoli-luettich-1754-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/li-tre-cicisbei-ridicoli-luettich-1754-00-00> a cto:CTO_0001005 ;
     rdfs:label "Li tre cicisbei ridicoli, Lüttich, 1754" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1754-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1754-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4074361-5> ;
-    cto:relatedItem <https://performance.musiconn.de/source/biadego-catalogo>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4074361-5> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1146574785538150287> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/biadego-catalogo>,
         <https://performance.musiconn.de/work/li-tre-cicisbei-ridicoli-resta-natale> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4074361-5>,
-        <https://viaf.org/viaf/1146574785538150287> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
     cto:relatedPerson <https://performance.musiconn.de/person/crosa-giovanni>,
-        <https://performance.musiconn.de/person/resta-natale> ;
-    cto:viaf <https://viaf.org/viaf/1146574785538150287> .
+        <https://performance.musiconn.de/person/resta-natale> .
+
+<https://viaf.org/viaf/1146574785538150287> a nfdicore:NFDI_0001010 .
 

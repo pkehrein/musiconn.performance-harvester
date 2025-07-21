@@ -1,51 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300168071> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300168608> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300168977> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300685955> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/301017646> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-kammerkonzertplus-schloss-albrechtsberg-dresden-2008-05-18-19-00> ] .
 
-<https://performance.musiconn.de/event/2-kammerkonzertplus-schloss-albrechtsberg-dresden-2008-05-18-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-kammerkonzertplus-schloss-albrechtsberg-dresden-2008-05-18-19-00> a cto:CTO_0001005 ;
     rdfs:label "2. KammerkonzertPlus, Schloss Albrechtsberg (Dresden), 18.5.2008, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2007-2008> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2008-05-18T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2008-05-18T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300168071>,
-        <https://d-nb.info/gnd/300168608>,
-        <https://d-nb.info/gnd/300168977>,
-        <https://d-nb.info/gnd/300685955>,
-        <https://d-nb.info/gnd/301017646>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2007-2008> ;
-    cto:relatedItem <https://d-nb.info/gnd/300168071>,
-        <https://d-nb.info/gnd/300168608>,
-        <https://d-nb.info/gnd/300168977>,
-        <https://d-nb.info/gnd/300685955>,
-        <https://d-nb.info/gnd/301017646>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300168977> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211735652> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192575740> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300168071> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300168608> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301017646> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210939429> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196894677> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300685955> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177423163> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-orch-rv-146-vivaldi-antonio>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-2-orchester-rv-531-g-moll-vivaldi-antonio>,
-        <https://performance.musiconn.de/work/l-estro-armonico-n-8-vivaldi-antonio>,
-        <https://performance.musiconn.de/work/quintette-violine-2-viola-violoncello-kontrabass-g-338-boccherini-luigi>,
         <https://performance.musiconn.de/work/sinfonia-in-c-dur-vivaldi-antonio>,
-        <https://performance.musiconn.de/work/sinfonia-zu-hydaspes-mancini-francesco>,
-        <https://performance.musiconn.de/work/sonaten-trompete-orchester-nr-1-d-dur-torelli-giuseppe>,
-        <https://viaf.org/viaf/177423163>,
-        <https://viaf.org/viaf/192575740>,
-        <https://viaf.org/viaf/196894677>,
-        <https://viaf.org/viaf/210939429>,
-        <https://viaf.org/viaf/211735652> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/177423163>,
-        <https://viaf.org/viaf/192575740>,
-        <https://viaf.org/viaf/196894677>,
-        <https://viaf.org/viaf/210939429>,
-        <https://viaf.org/viaf/211735652>,
-        <https://viaf.org/viaf/237386709> .
+        <https://performance.musiconn.de/work/sinfonia-zu-hydaspes-mancini-francesco> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177423163> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192575740> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196894677> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210939429> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211735652> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
 

@@ -1,58 +1,83 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009976> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009984> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010001> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101414> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102461> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300103549> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300458762> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7544115-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-sankt-nicolai-lippstadt-2005-11-04> ] .
 
-<https://performance.musiconn.de/event/konzert-sankt-nicolai-lippstadt-2005-11-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-sankt-nicolai-lippstadt-2005-11-04> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Sankt Nicolai (Lippstadt), 4.11.2005" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2005-11-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2005-11-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300010001>,
-        <https://d-nb.info/gnd/300101414>,
-        <https://d-nb.info/gnd/300102461>,
-        <https://d-nb.info/gnd/300103549>,
-        <https://d-nb.info/gnd/300458762>,
-        <https://d-nb.info/gnd/7544115-9> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300009984>,
-        <https://d-nb.info/gnd/300010001>,
-        <https://d-nb.info/gnd/300101414>,
-        <https://d-nb.info/gnd/300102461>,
-        <https://d-nb.info/gnd/300103549>,
-        <https://d-nb.info/gnd/300458762>,
-        <https://performance.musiconn.de/source/motettenbuch-2005-06-1>,
-        <https://performance.musiconn.de/work/denn-er-hat-seinen-engeln-befohlen-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/der-geist-hilft-unser-schwachheit-auf-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/fuerchte-dich-nicht-ich-bin-bei-dir-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/jesu-meine-freude-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/o-sacrum-convivium-messiaen-olivier>,
-        <https://performance.musiconn.de/work/psalm-43-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/te-deum-op-132-ohse-reinhard>,
-        <https://viaf.org/viaf/174588556>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/179407683>,
-        <https://viaf.org/viaf/185302073>,
-        <https://viaf.org/viaf/214747921>,
-        <https://viaf.org/viaf/215924055> ;
-    cto:relatedLocation <https://d-nb.info/gnd/7544115-9>,
-        <https://viaf.org/viaf/249430049> ;
-    cto:viaf <https://viaf.org/viaf/174588556>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/177379672>,
-        <https://viaf.org/viaf/179407683>,
-        <https://viaf.org/viaf/185302073>,
-        <https://viaf.org/viaf/214747921>,
-        <https://viaf.org/viaf/215924055>,
-        <https://viaf.org/viaf/249430049> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7544115-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/249430049> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009976> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300103549> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174651654> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214747921> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101414> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177379672> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009984> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174588556> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179407683> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300458762> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102461> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185302073> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215924055> ],
+        <https://performance.musiconn.de/source/motettenbuch-2005-06-1> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174588556> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174651654> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177379672> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179407683> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185302073> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214747921> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215924055> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/249430049> a nfdicore:NFDI_0001010 .
 

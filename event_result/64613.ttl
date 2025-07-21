@@ -1,47 +1,67 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1235838331> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300188722> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300499221> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300830858> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7650250-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zender-2-89-1-hessisches-staatstheater-wiesbaden-1989-02-03> ] .
 
-<https://performance.musiconn.de/event/zender-2-89-1-hessisches-staatstheater-wiesbaden-1989-02-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zender-2-89-1-hessisches-staatstheater-wiesbaden-1989-02-03> a cto:CTO_0001005 ;
     rdfs:label "Zender 2/89/1, Hessisches Staatstheater (Wiesbaden), 3.2.1989" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1989-02-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1989-02-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1235838331>,
-        <https://d-nb.info/gnd/300188722>,
-        <https://d-nb.info/gnd/300499221>,
-        <https://d-nb.info/gnd/300830858>,
-        <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/7650250-8> ;
-    cto:relatedItem <https://d-nb.info/gnd/300188722>,
-        <https://d-nb.info/gnd/300499221>,
-        <https://d-nb.info/gnd/300830858>,
-        <https://d-nb.info/gnd/7650250-8>,
-        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/antiphonen-viola-orchester-baz-4-6-zimmermann-bernd-alois>,
-        <https://performance.musiconn.de/work/impressionen-orch-1986-yun-isang>,
-        <https://performance.musiconn.de/work/muji-no-kyo-zender-hans-1>,
-        <https://performance.musiconn.de/work/ta-ryong-2-pagh-paan-younghi>,
-        <https://viaf.org/viaf/190422129>,
-        <https://viaf.org/viaf/190439751>,
-        <https://viaf.org/viaf/193664860>,
-        <https://viaf.org/viaf/277820453> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1235838331>,
-        <https://viaf.org/viaf/149060678> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/149060678>,
-        <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/190422129>,
-        <https://viaf.org/viaf/190439751>,
-        <https://viaf.org/viaf/193664860>,
-        <https://viaf.org/viaf/277820453> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1235838331> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/149060678> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300830858> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300188722> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7650250-8> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190439751> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300499221> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193664860> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190422129> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/277820453> ],
+        <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/149060678> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190422129> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190439751> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193664860> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/277820453> a nfdicore:NFDI_0001010 .
 

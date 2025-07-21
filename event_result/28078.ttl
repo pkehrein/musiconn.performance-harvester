@@ -1,59 +1,78 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1135591830> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300048122> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101902> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170300> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170432> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300181825> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30022026X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/dresden-philharmonic-orchestra-light-guard-armory-detroit-1909-04-17-17-00> ] .
 
-<https://performance.musiconn.de/event/dresden-philharmonic-orchestra-light-guard-armory-detroit-1909-04-17-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/dresden-philharmonic-orchestra-light-guard-armory-detroit-1909-04-17-17-00> a cto:CTO_0001005 ;
     rdfs:label "Dresden Philharmonic Orchestra, Light Guard Armory (Detroit), 17.4.1909, 17:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1908-1909> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1909-04-17T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1909-04-17T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1135591830>,
-        <https://d-nb.info/gnd/300048122>,
-        <https://d-nb.info/gnd/300101902>,
-        <https://d-nb.info/gnd/300170300>,
-        <https://d-nb.info/gnd/300170432>,
-        <https://d-nb.info/gnd/300181825>,
-        <https://d-nb.info/gnd/30022026X> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1908-1909> ;
-    cto:relatedItem <https://d-nb.info/gnd/1135591830>,
-        <https://d-nb.info/gnd/300048122>,
-        <https://d-nb.info/gnd/300101902>,
-        <https://d-nb.info/gnd/300170300>,
-        <https://d-nb.info/gnd/300170432>,
-        <https://d-nb.info/gnd/300181825>,
-        <https://d-nb.info/gnd/30022026X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/light-guard-armory-detroit> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177003168> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30022026X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186708409> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179936100> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300181825> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215924093> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1135591830> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170300> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170432> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184260139> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300048122> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101902> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5154149844958502960001> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1908-1909>,
         <https://performance.musiconn.de/work/air-on-the-4th-corde-bach>,
         <https://performance.musiconn.de/work/damon-stange-max>,
-        <https://performance.musiconn.de/work/erlkoenig-schubert-franz>,
         <https://performance.musiconn.de/work/im-mitten-des-balles-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-mwv-o-14-e-moll-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/la-reine-de-saba-kavatine-gounod-charles>,
-        <https://performance.musiconn.de/work/le-cid-suite-massenet-jules>,
-        <https://performance.musiconn.de/work/octave-study-fassung-paganini-niccolo>,
-        <https://performance.musiconn.de/work/polonaisen-violine-orchester-nr-1-op-4-d-dur-wieniawski-henri>,
-        <https://performance.musiconn.de/work/rienzi-der-letzte-der-tribunen-ouvertuere-wagner-richard>,
-        <https://performance.musiconn.de/work/sinfonien-b-178-e-moll-dvorak-antonin>,
-        <https://performance.musiconn.de/work/tannhaeuser-und-der-saengerkrieg-auf-wartburg-freudig-begruessen-wir-die-edle-halle-wagner-richard>,
-        <https://viaf.org/viaf/177003168>,
-        <https://viaf.org/viaf/179936100>,
-        <https://viaf.org/viaf/184260139>,
-        <https://viaf.org/viaf/186708409>,
-        <https://viaf.org/viaf/215924093>,
-        <https://viaf.org/viaf/5154149844958502960001> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/light-guard-armory-detroit> ;
-    cto:viaf <https://viaf.org/viaf/177003168>,
-        <https://viaf.org/viaf/179936100>,
-        <https://viaf.org/viaf/184260139>,
-        <https://viaf.org/viaf/186708409>,
-        <https://viaf.org/viaf/215924093>,
-        <https://viaf.org/viaf/5154149844958502960001> .
+        <https://performance.musiconn.de/work/octave-study-fassung-paganini-niccolo> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177003168> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179936100> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184260139> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186708409> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215924093> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5154149844958502960001> a nfdicore:NFDI_0001010 .
 

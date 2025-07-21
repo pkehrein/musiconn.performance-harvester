@@ -1,56 +1,76 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1074125878> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/113609380X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015232> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300093152> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300093543> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300093934> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/dresdener-musik-schule-schluss-konzert-2-pruefungskonzert-gewerbehaus-dresden-gewerbehaus-saal-1927-04-28-19-30> ] .
 
-<https://performance.musiconn.de/event/dresdener-musik-schule-schluss-konzert-2-pruefungskonzert-gewerbehaus-dresden-gewerbehaus-saal-1927-04-28-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/dresdener-musik-schule-schluss-konzert-2-pruefungskonzert-gewerbehaus-dresden-gewerbehaus-saal-1927-04-28-19-30> a cto:CTO_0001005 ;
     rdfs:label "Dresdener Musik-Schule Schluss-Konzert (2. Prüfungskonzert), Gewerbehaus (Dresden). Gewerbehaus-Saal, 28.4.1927, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1926-1927> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1927-04-28T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1927-04-28T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1074125878>,
-        <https://d-nb.info/gnd/113609380X>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300015232>,
-        <https://d-nb.info/gnd/300093152>,
-        <https://d-nb.info/gnd/300093543>,
-        <https://d-nb.info/gnd/300093934> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1926-1927> ;
-    cto:relatedItem <https://d-nb.info/gnd/1074125878>,
-        <https://d-nb.info/gnd/113609380X>,
-        <https://d-nb.info/gnd/300015232>,
-        <https://d-nb.info/gnd/300093152>,
-        <https://d-nb.info/gnd/300093543>,
-        <https://d-nb.info/gnd/300093934>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/113609380X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306432112> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093152> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093934> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175441371> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015232> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316769442> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1074125878> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183472823> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178739886> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198523973> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093543> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/burleske-strauss-richard>,
-        <https://performance.musiconn.de/work/concerto-pathetique-liszt-franz>,
         <https://performance.musiconn.de/work/eine-kleine-musik-kuntzsch-alfred>,
-        <https://performance.musiconn.de/work/fantasie-ueber-ungarische-volksmelodien-liszt-franz>,
-        <https://performance.musiconn.de/work/fidelio-komm-hoffnung-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/geistliche-lieder-woo-730-heimweh-reger-max>,
-        <https://performance.musiconn.de/work/gesaenge-op-14-widmung-franz-robert>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-r-456-a-dur-liszt-franz>,
         <https://performance.musiconn.de/work/musik-fuer-orchester-instrumentiert-von-w-tschinkel-schneider-richard-ludwig>,
-        <https://performance.musiconn.de/work/variation-ueber-ein-ungarisches-thema-kehrer-willy>,
-        <https://viaf.org/viaf/175441371>,
-        <https://viaf.org/viaf/178739886>,
-        <https://viaf.org/viaf/183472823>,
-        <https://viaf.org/viaf/198523973>,
-        <https://viaf.org/viaf/306432112>,
-        <https://viaf.org/viaf/316769442> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/175441371>,
-        <https://viaf.org/viaf/178739886>,
-        <https://viaf.org/viaf/183472823>,
-        <https://viaf.org/viaf/198523973>,
-        <https://viaf.org/viaf/306432112>,
-        <https://viaf.org/viaf/316769442> .
+        <https://performance.musiconn.de/work/variation-ueber-ein-ungarisches-thema-kehrer-willy> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175441371> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178739886> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183472823> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198523973> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/306432112> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316769442> a nfdicore:NFDI_0001010 .
 

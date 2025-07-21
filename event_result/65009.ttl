@@ -1,51 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015453> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30006022X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300112165> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140061> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4688259-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/erstes-oeffentliches-concert-des-musik-vereins-rathaus-muenster-westf-friedenssaal-1865-01-14> ] .
 
-<https://performance.musiconn.de/event/erstes-oeffentliches-concert-des-musik-vereins-rathaus-muenster-westf-friedenssaal-1865-01-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/erstes-oeffentliches-concert-des-musik-vereins-rathaus-muenster-westf-friedenssaal-1865-01-14> a cto:CTO_0001005 ;
     rdfs:label "Erstes öffentliches Concert des Musik-Vereins, Rathaus Münster (Westf) / Friedenssaal, 14.1.1865" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sonderkonzerte-des-musikvereins-muenster-saison-1864-65> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1865-01-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1865-01-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015453>,
-        <https://d-nb.info/gnd/30006022X>,
-        <https://d-nb.info/gnd/300112165>,
-        <https://d-nb.info/gnd/300140061>,
-        <https://d-nb.info/gnd/4453573-9>,
-        <https://d-nb.info/gnd/4688259-5> ;
-    cto:itemOf <https://performance.musiconn.de/series/sonderkonzerte-des-musikvereins-muenster-saison-1864-65> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015453>,
-        <https://d-nb.info/gnd/30006022X>,
-        <https://d-nb.info/gnd/300112165>,
-        <https://d-nb.info/gnd/300140061>,
-        <https://d-nb.info/gnd/4688259-5>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184535172> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300112165> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015453> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30006022X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174381785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140061> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4688259-5> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/308292403> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183715682> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205758894> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1864-1865>,
-        <https://performance.musiconn.de/work/an-die-leier-schubert-franz>,
         <https://performance.musiconn.de/work/andante-menuett-und-allegro-violine-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/die-zauberfloete-ouvertuere-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/gesaenge-op-75-kennst-du-das-land-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/hercules-arie-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/iphigenie-en-aulide-ouvertuere-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-15-c-dur-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/orfeo-ed-euridice-szene-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/variationen-klavier-schubert-franz>,
-        <https://viaf.org/viaf/174381785>,
-        <https://viaf.org/viaf/183715682>,
-        <https://viaf.org/viaf/184535172>,
-        <https://viaf.org/viaf/205758894>,
-        <https://viaf.org/viaf/308292403> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/174381785>,
-        <https://viaf.org/viaf/183715682>,
-        <https://viaf.org/viaf/184535172>,
-        <https://viaf.org/viaf/205758894>,
-        <https://viaf.org/viaf/308292403> .
+        <https://performance.musiconn.de/work/variationen-klavier-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174381785> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183715682> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184535172> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205758894> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/308292403> a nfdicore:NFDI_0001010 .
 

@@ -1,42 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1059497794> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118540505> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118722700> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118733141> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/133112586> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/il-mondo-della-luna-kings-theatre-in-the-haymarket-london-1760-12-23> ] .
 
-<https://performance.musiconn.de/event/il-mondo-della-luna-kings-theatre-in-the-haymarket-london-1760-12-23> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/il-mondo-della-luna-kings-theatre-in-the-haymarket-london-1760-12-23> a cto:CTO_0001005 ;
     rdfs:label "Il mondo della luna, King's Theatre in the Haymarket (London), 23.12.1760" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/il-mondo-della-luna-4> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1760-12-23" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1760-12-23" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118733141> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/133112586> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118540505> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118722700> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kings-theatre-in-the-haymarket-london> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1059497794> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/294607870> ],
+        <https://performance.musiconn.de/source/willaert-opera> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1059497794>,
-        <https://d-nb.info/gnd/118540505>,
-        <https://d-nb.info/gnd/118722700>,
-        <https://d-nb.info/gnd/118733141>,
-        <https://d-nb.info/gnd/133112586> ;
-    cto:itemOf <https://performance.musiconn.de/series/il-mondo-della-luna-4> ;
-    cto:relatedItem <https://d-nb.info/gnd/1059497794>,
-        <https://performance.musiconn.de/source/willaert-opera>,
-        <https://performance.musiconn.de/work/il-mondo-della-luna-galuppi-baldassare-1>,
-        <https://viaf.org/viaf/294607870> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kings-theatre-in-the-haymarket-london> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118540505>,
-        <https://d-nb.info/gnd/118722700>,
-        <https://d-nb.info/gnd/118733141>,
-        <https://d-nb.info/gnd/133112586>,
-        <https://viaf.org/viaf/22327261>,
-        <https://viaf.org/viaf/34719940>,
-        <https://viaf.org/viaf/44299511>,
-        <https://viaf.org/viaf/64192672> ;
-    cto:viaf <https://viaf.org/viaf/22327261>,
-        <https://viaf.org/viaf/294607870>,
-        <https://viaf.org/viaf/34719940>,
-        <https://viaf.org/viaf/44299511>,
-        <https://viaf.org/viaf/64192672> .
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/44299511> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/22327261> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/34719940> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/64192672> ] .
+
+<https://viaf.org/viaf/22327261> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/294607870> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/34719940> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/44299511> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/64192672> a nfdicore:NFDI_0001010 .
 

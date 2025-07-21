@@ -1,46 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30001550X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015755> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145071> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300713924> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4453573-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-vereinskonzert-rathaus-muenster-westf-friedenssaal-1873-10-25> ] .
 
-<https://performance.musiconn.de/event/2-vereinskonzert-rathaus-muenster-westf-friedenssaal-1873-10-25> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-vereinskonzert-rathaus-muenster-westf-friedenssaal-1873-10-25> a cto:CTO_0001005 ;
     rdfs:label "2. Vereinskonzert, Rathaus Münster (Westf) / Friedenssaal, 25.10.1873" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1873-74> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1873-10-25" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1873-10-25" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30001550X>,
-        <https://d-nb.info/gnd/300015755>,
-        <https://d-nb.info/gnd/300145071>,
-        <https://d-nb.info/gnd/300713924>,
-        <https://d-nb.info/gnd/4453573-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1873-74> ;
-    cto:relatedItem <https://d-nb.info/gnd/30001550X>,
-        <https://d-nb.info/gnd/300015755>,
-        <https://d-nb.info/gnd/300145071>,
-        <https://d-nb.info/gnd/300713924>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4453573-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179831076> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185197829> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209880014> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179098535> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001550X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015755> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145071> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300713924> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1873-1874>,
         <https://performance.musiconn.de/work/deutsche-volkslieder-woo-verstohlen-geht-der-mond-auf-grimm-julius-otto>,
-        <https://performance.musiconn.de/work/genoveva-ouvertuere-schumann-robert>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-5-op-73-es-dur-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/lieder-ohne-worte-auswahl-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/meeres-stille-und-glueckliche-fahrt-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/romanzen-op-91-jaeger-wohlgemuth-schumann-robert>,
         <https://performance.musiconn.de/work/romanzen-und-balladen-op-64-die-soldatenbraut-arrangement-schumann-robert>,
-        <https://performance.musiconn.de/work/sinfonien-d-dur-haydn-joseph>,
-        <https://viaf.org/viaf/179098535>,
-        <https://viaf.org/viaf/179831076>,
-        <https://viaf.org/viaf/185197829>,
-        <https://viaf.org/viaf/209880014> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4453573-9> ;
-    cto:viaf <https://viaf.org/viaf/179098535>,
-        <https://viaf.org/viaf/179831076>,
-        <https://viaf.org/viaf/185197829>,
-        <https://viaf.org/viaf/209880014> .
+        <https://performance.musiconn.de/work/sinfonien-d-dur-haydn-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179098535> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179831076> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185197829> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209880014> a nfdicore:NFDI_0001010 .
 

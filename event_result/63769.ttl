@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1189929724> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300169728> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300174837> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1904-01-11> ] .
 
-<https://performance.musiconn.de/event/6-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1904-01-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1904-01-11> a cto:CTO_0001005 ;
     rdfs:label "6. Konzert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 11.1.1904" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/neue-abonnementkonzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1904-01-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1904-01-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1189929724>,
-        <https://d-nb.info/gnd/300169728>,
-        <https://d-nb.info/gnd/300174837> ;
-    cto:itemOf <https://performance.musiconn.de/series/neue-abonnementkonzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1189929724>,
-        <https://d-nb.info/gnd/300169728>,
-        <https://d-nb.info/gnd/300174837>,
-        <https://performance.musiconn.de/source/musikzeitschriften-in-leipzig>,
-        <https://performance.musiconn.de/work/eine-faust-ouvertuere-wagner-richard>,
-        <https://performance.musiconn.de/work/mazeppa-liszt-franz>,
-        <https://performance.musiconn.de/work/penthesilea-wolf-hugo>,
-        <https://viaf.org/viaf/181520539>,
-        <https://viaf.org/viaf/184487026>,
-        <https://viaf.org/viaf/8370156253579608110003> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/181520539>,
-        <https://viaf.org/viaf/184487026>,
-        <https://viaf.org/viaf/8370156253579608110003> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181520539> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184487026> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300174837> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300169728> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8370156253579608110003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1189929724> ],
+        <https://performance.musiconn.de/source/musikzeitschriften-in-leipzig> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181520539> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184487026> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8370156253579608110003> a nfdicore:NFDI_0001010 .
 

@@ -1,38 +1,49 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1151666920> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300083629> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300341954> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-kammerkonzert-schloss-albrechtsberg-dresden-2009-09-27-19-00> ] .
 
-<https://performance.musiconn.de/event/1-kammerkonzert-schloss-albrechtsberg-dresden-2009-09-27-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-kammerkonzert-schloss-albrechtsberg-dresden-2009-09-27-19-00> a cto:CTO_0001005 ;
     rdfs:label "1. Kammerkonzert, Schloss Albrechtsberg (Dresden), 27.9.2009, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2009-2010> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2009-09-27T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2009-09-27T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1151666920>,
-        <https://d-nb.info/gnd/300083629>,
-        <https://d-nb.info/gnd/300341954>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2009-2010> ;
-    cto:relatedItem <https://d-nb.info/gnd/1151666920>,
-        <https://d-nb.info/gnd/300083629>,
-        <https://d-nb.info/gnd/300341954>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190426296> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198523669> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300083629> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1151666920> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300341954> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/quintette-querfloete-oboe-klarinette-fagott-horn-nr-1-francaix-jean>,
-        <https://performance.musiconn.de/work/quintette-querfloete-oboe-klarinette-horn-fagott-carter-elliott>,
-        <https://performance.musiconn.de/work/quintette-querfloete-oboe-klarinette-horn-fagott-op-79-c-dur-klughardt-august>,
-        <https://performance.musiconn.de/work/quintetto-per-strumenti-a-fiato-no-1-fa-maggiore-cambini-giuseppe-maria>,
-        <https://viaf.org/viaf/190426296>,
-        <https://viaf.org/viaf/198523669> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/190426296>,
-        <https://viaf.org/viaf/198523669>,
-        <https://viaf.org/viaf/237386709> .
+        <https://performance.musiconn.de/work/quintetto-per-strumenti-a-fiato-no-1-fa-maggiore-cambini-giuseppe-maria> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/190426296> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198523669> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
 

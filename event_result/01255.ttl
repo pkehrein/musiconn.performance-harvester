@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1193941113> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1198234989> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300129777> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300199104> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1918-03-02-14-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1918-03-02-14-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1918-03-02-14-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 2.3.1918, 14:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1917-18> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1918-03-02T14:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1918-03-02T14:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1193941113>,
-        <https://d-nb.info/gnd/1198234989>,
-        <https://d-nb.info/gnd/300129777>,
-        <https://d-nb.info/gnd/300199104>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1917-18> ;
-    cto:relatedItem <https://d-nb.info/gnd/1193941113>,
-        <https://d-nb.info/gnd/1198234989>,
-        <https://d-nb.info/gnd/300129777>,
-        <https://d-nb.info/gnd/300199104>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197651374> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177108663> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300129777> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1198234989> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300199104> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1193941113> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/choral-motetten-op-102-kommt-her-zu-mir-spricht-gottes-sohn-herzogenberg-heinrich-von>,
-        <https://performance.musiconn.de/work/das-leiden-des-herrn-thiel-carl>,
-        <https://performance.musiconn.de/work/lieder-chor-op-90-im-himmelreich-bruch-max>,
-        <https://performance.musiconn.de/work/lobgesang-ich-harrete-des-herrn-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/sonaten-orgel-nr-1-op-27-c-moll-rheinberger-joseph>,
-        <https://viaf.org/viaf/177108663>,
-        <https://viaf.org/viaf/197651374> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/177108663>,
-        <https://viaf.org/viaf/197651374>,
-        <https://viaf.org/viaf/248189528> .
+        <https://performance.musiconn.de/work/das-leiden-des-herrn-thiel-carl> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177108663> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197651374> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
 

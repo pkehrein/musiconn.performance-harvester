@@ -1,35 +1,51 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300090846> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300090897> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300090927> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300561717> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/orchester-programm-franz-lehar-der-operettenkoenig-1927-02-27-19-30> ] .
 
-<https://performance.musiconn.de/event/orchester-programm-franz-lehar-der-operettenkoenig-1927-02-27-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/orchester-programm-franz-lehar-der-operettenkoenig-1927-02-27-19-30> a cto:CTO_0001005 ;
     rdfs:label "Orchester-Programm (Franz Lehar der Operettenkönig), 27.2.1927, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1926-1927> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1927-02-27T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1927-02-27T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300090846>,
-        <https://d-nb.info/gnd/300090897>,
-        <https://d-nb.info/gnd/300090927>,
-        <https://d-nb.info/gnd/300561717> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1926-1927> ;
-    cto:relatedItem <https://d-nb.info/gnd/300090846>,
-        <https://d-nb.info/gnd/300090897>,
-        <https://d-nb.info/gnd/300090927>,
-        <https://d-nb.info/gnd/300561717>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300090846> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300090897> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300561717> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300090927> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175925070> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191496883> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181178275> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184088139> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/an-der-grauen-donau-lehar-franz>,
         <https://performance.musiconn.de/work/clo-clo-komm-die-nacht-gehoert-der-suende-lehar-franz>,
         <https://performance.musiconn.de/work/der-graf-von-luxemburg-walzer-lehar-franz>,
-        <https://performance.musiconn.de/work/der-zarewitsch-einer-wird-kommen-lehar-franz>,
         <https://performance.musiconn.de/work/die-ideale-gattin-tausend-rote-rosen-lehar-franz>,
         <https://performance.musiconn.de/work/die-lustige-witwe-intermezzo-lehar-franz>,
         <https://performance.musiconn.de/work/endlich-allein-auswahl-lehar-franz>,
@@ -37,16 +53,14 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/fuerstenkind-kindchen-sei-huebsch-brav-lehar-franz>,
         <https://performance.musiconn.de/work/mariska-ungarisches-lied-und-czardas-lehar-franz>,
         <https://performance.musiconn.de/work/paganini-auswahl-lehar-franz>,
-        <https://performance.musiconn.de/work/paganini-liebe-du-himmel-auf-erden-lehar-franz>,
-        <https://performance.musiconn.de/work/wiener-frauen-ouvertuere-lehar-franz>,
-        <https://performance.musiconn.de/work/zigeunerliebe-zigeunerhochzeit-ballettszene-lehar-franz>,
-        <https://viaf.org/viaf/175925070>,
-        <https://viaf.org/viaf/181178275>,
-        <https://viaf.org/viaf/184088139>,
-        <https://viaf.org/viaf/191496883> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/175925070>,
-        <https://viaf.org/viaf/181178275>,
-        <https://viaf.org/viaf/184088139>,
-        <https://viaf.org/viaf/191496883> .
+        <https://performance.musiconn.de/work/zigeunerliebe-zigeunerhochzeit-ballettszene-lehar-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175925070> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181178275> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184088139> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191496883> a nfdicore:NFDI_0001010 .
 

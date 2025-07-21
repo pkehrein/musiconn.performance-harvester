@@ -1,46 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300025696> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026897> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30002701X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027052> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027206> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/philharmonie-im-schauspielhaus-6-schauspielhaus-dresden-2014-07-05-18-00> ] .
 
-<https://performance.musiconn.de/event/philharmonie-im-schauspielhaus-6-schauspielhaus-dresden-2014-07-05-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/philharmonie-im-schauspielhaus-6-schauspielhaus-dresden-2014-07-05-18-00> a cto:CTO_0001005 ;
     rdfs:label "Philharmonie im Schauspielhaus 6, Schauspielhaus (Dresden), 5.7.2014, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2013-2014> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2014-07-05T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2014-07-05T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300025696>,
-        <https://d-nb.info/gnd/300026897>,
-        <https://d-nb.info/gnd/30002701X>,
-        <https://d-nb.info/gnd/300027052>,
-        <https://d-nb.info/gnd/300027206> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2013-2014> ;
-    cto:relatedItem <https://d-nb.info/gnd/300025696>,
-        <https://d-nb.info/gnd/300026897>,
-        <https://d-nb.info/gnd/30002701X>,
-        <https://d-nb.info/gnd/300027052>,
-        <https://d-nb.info/gnd/300027206>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-violine-violoncello-orchester-op-102-a-moll-brahms-johannes>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-98-e-moll-brahms-johannes>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-nr-2-op-100-a-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/sonaten-violoncello-klavier-op-99-f-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-nr-3-op-101-c-moll-brahms-johannes>,
-        <https://viaf.org/viaf/194731012>,
-        <https://viaf.org/viaf/207911918>,
-        <https://viaf.org/viaf/209861083>,
-        <https://viaf.org/viaf/214736942>,
-        <https://viaf.org/viaf/215922307> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/schauspielhaus-dresden> ;
-    cto:viaf <https://viaf.org/viaf/194731012>,
-        <https://viaf.org/viaf/207911918>,
-        <https://viaf.org/viaf/209861083>,
-        <https://viaf.org/viaf/214736942>,
-        <https://viaf.org/viaf/215922307> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/schauspielhaus-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215922307> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30002701X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026897> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027052> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027206> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025696> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207911918> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209861083> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194731012> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214736942> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/194731012> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207911918> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209861083> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214736942> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215922307> a nfdicore:NFDI_0001010 .
 

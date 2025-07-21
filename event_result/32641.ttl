@@ -1,46 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1178499537> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300160356> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300168306> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300321600> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-kammerkonzert-schloss-albrechtsberg-dresden-2011-12-07-20-00> ] .
 
-<https://performance.musiconn.de/event/3-kammerkonzert-schloss-albrechtsberg-dresden-2011-12-07-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-kammerkonzert-schloss-albrechtsberg-dresden-2011-12-07-20-00> a cto:CTO_0001005 ;
     rdfs:label "3. Kammerkonzert, Schloss Albrechtsberg (Dresden), 7.12.2011, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2011-2012> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2011-12-07T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2011-12-07T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1178499537>,
-        <https://d-nb.info/gnd/300160356>,
-        <https://d-nb.info/gnd/300168306>,
-        <https://d-nb.info/gnd/300321600>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2011-2012> ;
-    cto:relatedItem <https://d-nb.info/gnd/1178499537>,
-        <https://d-nb.info/gnd/300160356>,
-        <https://d-nb.info/gnd/300168306>,
-        <https://d-nb.info/gnd/300321600>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174188890> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300321600> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300168306> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201858993> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1178499537> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300160356> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194734367> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1982155105767176320004> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-querfloete-klavier-basso-continuo-twv-42-a-3-a-dur-telemann-georg-philipp>,
-        <https://performance.musiconn.de/work/konzerte-querfloete-oboe-violine-fagott-basso-continuo-g-moll-rv-107-vivaldi-antonio>,
-        <https://performance.musiconn.de/work/konzerte-querfloete-violine-fagott-basso-continuo-rv-96-vivaldi-antonio>,
         <https://performance.musiconn.de/work/quintette-cembalo-floete-oboe-violine-violoncello-basso-continuo-d-dur-bach-johann-christian>,
-        <https://performance.musiconn.de/work/sonaten-oboe-basso-continuo-rv-53-c-moll-vivaldi-antonio>,
-        <https://performance.musiconn.de/work/sonaten-violine-basso-continuo-b-g-10-g-moll-tartini-giuseppe>,
-        <https://viaf.org/viaf/174188890>,
-        <https://viaf.org/viaf/194734367>,
-        <https://viaf.org/viaf/1982155105767176320004>,
-        <https://viaf.org/viaf/201858993> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/174188890>,
-        <https://viaf.org/viaf/194734367>,
-        <https://viaf.org/viaf/1982155105767176320004>,
-        <https://viaf.org/viaf/201858993>,
-        <https://viaf.org/viaf/237386709> .
+        <https://performance.musiconn.de/work/sonaten-oboe-basso-continuo-rv-53-c-moll-vivaldi-antonio> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174188890> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194734367> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/1982155105767176320004> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201858993> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
 

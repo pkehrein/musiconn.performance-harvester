@@ -1,44 +1,57 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300010265> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010737> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30006506X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300377711> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300454651> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-akademische-kammermusik-volkshaus-jena-grosser-saal-1953-02-24-19-30> ] .
 
-<https://performance.musiconn.de/event/2-akademische-kammermusik-volkshaus-jena-grosser-saal-1953-02-24-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-akademische-kammermusik-volkshaus-jena-grosser-saal-1953-02-24-19-30> a cto:CTO_0001005 ;
     rdfs:label "2. Akademische Kammermusik, Volkshaus (Jena) / Großer Saal, 24.2.1953, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/akademische-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1953-02-24T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1953-02-24T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300010265>,
-        <https://d-nb.info/gnd/300010737>,
-        <https://d-nb.info/gnd/30006506X>,
-        <https://d-nb.info/gnd/300377711>,
-        <https://d-nb.info/gnd/300454651> ;
-    cto:itemOf <https://performance.musiconn.de/series/akademische-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/300010265>,
-        <https://d-nb.info/gnd/300010737>,
-        <https://d-nb.info/gnd/30006506X>,
-        <https://d-nb.info/gnd/300377711>,
-        <https://d-nb.info/gnd/300454651>,
-        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/konzerte-org-e-moll-orgel-e-moll-ahrens-joseph>,
-        <https://performance.musiconn.de/work/konzerte-orgel-orchester-hwv-289-294-nr-5-f-dur-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/konzerte-orgel-orchester-hwv-306-311-nr-6-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/partiten-klavier-bwv-825-830-nr-4-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/praeludium-und-fuge-orgel-bwv-548-e-moll-bach-johann-sebastian>,
-        <https://viaf.org/viaf/189339413>,
-        <https://viaf.org/viaf/191506386>,
-        <https://viaf.org/viaf/207911449>,
-        <https://viaf.org/viaf/209870355> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/volkshaus-jena-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/189339413>,
-        <https://viaf.org/viaf/191506386>,
-        <https://viaf.org/viaf/207911449>,
-        <https://viaf.org/viaf/209870355> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/volkshaus-jena-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30006506X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010265> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189339413> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010737> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300454651> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300377711> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191506386> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209870355> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207911449> ],
+        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/189339413> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191506386> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207911449> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209870355> a nfdicore:NFDI_0001010 .
 

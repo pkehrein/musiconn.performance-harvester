@@ -1,42 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1227333528> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300039379> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300246404> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7615510-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/8-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1915-02-22-20-00> ] .
 
-<https://performance.musiconn.de/event/8-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1915-02-22-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/8-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1915-02-22-20-00> a cto:CTO_0001005 ;
     rdfs:label "8. Philharmonisches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 22.2.1915, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1914-1915-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1915-02-22T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1915-02-22T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1227333528>,
-        <https://d-nb.info/gnd/300039379>,
-        <https://d-nb.info/gnd/300246404>,
-        <https://d-nb.info/gnd/7615510-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1914-1915-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/1227333528>,
-        <https://d-nb.info/gnd/300039379>,
-        <https://d-nb.info/gnd/300246404>,
-        <https://d-nb.info/gnd/7615510-9>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1227333528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300246404> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201855530> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/302628504> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300039379> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7615510-9> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179231350> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178583086> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1890-1924>,
-        <https://performance.musiconn.de/work/barbarossa-hausegger-siegmund-von>,
-        <https://performance.musiconn.de/work/der-barbier-von-bagdad-ouvertuere-cornelius-peter>,
-        <https://performance.musiconn.de/work/gesaenge-singstimme-orchester-trv-180-gesang-der-apollopriesterin-strauss-richard>,
-        <https://performance.musiconn.de/work/gunloed-1-akt-1-szene-cornelius-peter>,
-        <https://performance.musiconn.de/work/italienische-serenade-wolf-hugo>,
-        <https://viaf.org/viaf/178583086>,
-        <https://viaf.org/viaf/179231350>,
-        <https://viaf.org/viaf/201855530>,
-        <https://viaf.org/viaf/302628504> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/178583086>,
-        <https://viaf.org/viaf/179231350>,
-        <https://viaf.org/viaf/201855530>,
-        <https://viaf.org/viaf/302628504> .
+        <https://performance.musiconn.de/work/gunloed-1-akt-1-szene-cornelius-peter> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178583086> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179231350> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201855530> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/302628504> a nfdicore:NFDI_0001010 .
 

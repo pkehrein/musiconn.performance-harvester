@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300013841> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30006926X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145934> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300484801> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-sonntags-konzert-staedtische-buehnen-frankfurt-am-main-oper-1973-11-04> ] .
 
-<https://performance.musiconn.de/event/2-sonntags-konzert-staedtische-buehnen-frankfurt-am-main-oper-1973-11-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-sonntags-konzert-staedtische-buehnen-frankfurt-am-main-oper-1973-11-04> a cto:CTO_0001005 ;
     rdfs:label "2. Sonntags-Konzert, Städtische Bühnen (Frankfurt am Main) / Oper, 4.11.1973" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1973-1974> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1973-11-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1973-11-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300013841>,
-        <https://d-nb.info/gnd/30006926X>,
-        <https://d-nb.info/gnd/300145934>,
-        <https://d-nb.info/gnd/300484801> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1973-1974> ;
-    cto:relatedItem <https://d-nb.info/gnd/300013841>,
-        <https://d-nb.info/gnd/30006926X>,
-        <https://d-nb.info/gnd/300145934>,
-        <https://d-nb.info/gnd/300484801>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/konzerte-floete-orchester-h-7f-d-1-d-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/konzerte-querfloete-orchester-petrassi-goffredo>,
-        <https://performance.musiconn.de/work/ouvertuere-scherzo-und-finale-schumann-robert>,
-        <https://performance.musiconn.de/work/tanc-szvit-bartok-bela>,
-        <https://viaf.org/viaf/195817053>,
-        <https://viaf.org/viaf/204581604>,
-        <https://viaf.org/viaf/268057968>,
-        <https://viaf.org/viaf/758151717046713900001> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-oper> ;
-    cto:viaf <https://viaf.org/viaf/195817053>,
-        <https://viaf.org/viaf/204581604>,
-        <https://viaf.org/viaf/268057968>,
-        <https://viaf.org/viaf/758151717046713900001> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-oper> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/268057968> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204581604> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30006926X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/758151717046713900001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300013841> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195817053> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145934> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300484801> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/195817053> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204581604> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/268057968> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/758151717046713900001> a nfdicore:NFDI_0001010 .
 

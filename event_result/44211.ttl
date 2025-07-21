@@ -1,24 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/301020493> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4348354-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/toene-des-lebens-benefizkonzert-zugunsten-des-prager-hauses-apolda-lutherkirche-apolda-2018-09-22-17-00> ] .
 
-<https://performance.musiconn.de/event/toene-des-lebens-benefizkonzert-zugunsten-des-prager-hauses-apolda-lutherkirche-apolda-2018-09-22-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/toene-des-lebens-benefizkonzert-zugunsten-des-prager-hauses-apolda-lutherkirche-apolda-2018-09-22-17-00> a cto:CTO_0001005 ;
     rdfs:label "Töne des Lebens - Benefizkonzert zugunsten des Prager-Hauses Apolda, Lutherkirche (Apolda), 22.9.2018, 17:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2018-09-22T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2018-09-22T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/301020493>,
-        <https://d-nb.info/gnd/4348354-9>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://d-nb.info/gnd/301020493>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4348354-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/246260997> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219960564> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301020493> ],
         <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/flyer-konzert-22-september-2018>,
         <https://performance.musiconn.de/source/programm-konzert-22-september-2018>,
@@ -27,20 +40,18 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/di-maschke-fueting-reiko-gordon-michl>,
         <https://performance.musiconn.de/work/hawa-nagila-fassung-gross-friedbert-idelsohn-abraham-z>,
         <https://performance.musiconn.de/work/hungerik-dein-ketzele-fassung-gross-friedbert-gebirtig-mordechai>,
-        <https://performance.musiconn.de/work/ich-hebe-meine-augen-auf-psalm-121-jadassohn-salomon>,
         <https://performance.musiconn.de/work/kiddusch-weill-kurt>,
         <https://performance.musiconn.de/work/lajla-fassung-sander-werner-zeira-mordechaj>,
         <https://performance.musiconn.de/work/lamnazeach-al-hagitit-psalm-8-rossi-salamone>,
         <https://performance.musiconn.de/work/ma-towu-lewandowski-louis>,
         <https://performance.musiconn.de/work/ojfn-weg-schtejt-a-bojm-jung-fredo-laskovsky-philip>,
         <https://performance.musiconn.de/work/tauw-lhaudauss-psalm-92-lampel-samuel>,
-        <https://performance.musiconn.de/work/toras-adonoi-psalm-19-7-9-lewandowski-louis>,
-        <https://viaf.org/viaf/219960564> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4348354-9>,
-        <https://viaf.org/viaf/246260997> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/219960564>,
-        <https://viaf.org/viaf/246260997> .
+        <https://performance.musiconn.de/work/toras-adonoi-psalm-19-7-9-lewandowski-louis> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219960564> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/246260997> a nfdicore:NFDI_0001010 .
 

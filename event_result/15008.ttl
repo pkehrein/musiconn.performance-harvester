@@ -1,60 +1,85 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/110471244X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102135> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30010250X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102704> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300103085> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300220391> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300484658> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300871007> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-palac-zofin-1859-02-03> ] .
 
-<https://performance.musiconn.de/event/konzert-palac-zofin-1859-02-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-palac-zofin-1859-02-03> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Palac Žofín, 3.2.1859" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1859-02-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1859-02-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/110471244X>,
-        <https://d-nb.info/gnd/300102135>,
-        <https://d-nb.info/gnd/30010250X>,
-        <https://d-nb.info/gnd/300102704>,
-        <https://d-nb.info/gnd/300103085>,
-        <https://d-nb.info/gnd/300220391>,
-        <https://d-nb.info/gnd/300484658>,
-        <https://d-nb.info/gnd/300871007> ;
-    cto:relatedItem <https://d-nb.info/gnd/300102135>,
-        <https://d-nb.info/gnd/30010250X>,
-        <https://d-nb.info/gnd/300102704>,
-        <https://d-nb.info/gnd/300103085>,
-        <https://d-nb.info/gnd/300220391>,
-        <https://d-nb.info/gnd/300484658>,
-        <https://d-nb.info/gnd/300871007>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/38146822017907380456> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/110471244X> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/palac-zofin> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30010250X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102704> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182459863> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1663154622428744710000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179427106> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193675394> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300871007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300220391> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102135> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218085312> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182743112> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300484658> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300103085> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185103526> ],
         <https://performance.musiconn.de/source/mitteilung-nach-recherche-michaela-freemanova-praha>,
-        <https://performance.musiconn.de/work/der-114-psalm-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/der-jaeger-abschied-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/erde-hoelle-und-himmel-auswahl-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/festgesang-an-die-kuenstler-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/musik-zu-ein-sommernachtstraum-hochzeitsmarsch-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/sinfonien-mwv-n-13-c-moll-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/verleih-uns-frieden-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/wanderlied-mwv-g-28-mendelssohn-bartholdy-felix>,
-        <https://viaf.org/viaf/1663154622428744710000>,
-        <https://viaf.org/viaf/179427106>,
-        <https://viaf.org/viaf/182459863>,
-        <https://viaf.org/viaf/182743112>,
-        <https://viaf.org/viaf/185103526>,
-        <https://viaf.org/viaf/193675394>,
-        <https://viaf.org/viaf/218085312> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/palac-zofin> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/110471244X>,
-        <https://viaf.org/viaf/38146822017907380456> ;
-    cto:viaf <https://viaf.org/viaf/1663154622428744710000>,
-        <https://viaf.org/viaf/179427106>,
-        <https://viaf.org/viaf/182459863>,
-        <https://viaf.org/viaf/182743112>,
-        <https://viaf.org/viaf/185103526>,
-        <https://viaf.org/viaf/193675394>,
-        <https://viaf.org/viaf/218085312>,
-        <https://viaf.org/viaf/38146822017907380456> .
+        <https://performance.musiconn.de/work/erde-hoelle-und-himmel-auswahl-mendelssohn-bartholdy-felix> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1663154622428744710000> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179427106> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182459863> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182743112> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185103526> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193675394> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218085312> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/38146822017907380456> a nfdicore:NFDI_0001010 .
 

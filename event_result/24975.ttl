@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1188718649> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015127> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015143> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145403> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/drittes-abonnement-concert-erstes-gewandhaus-leipzig-1859-10-20> ] .
 
-<https://performance.musiconn.de/event/drittes-abonnement-concert-erstes-gewandhaus-leipzig-1859-10-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/drittes-abonnement-concert-erstes-gewandhaus-leipzig-1859-10-20> a cto:CTO_0001005 ;
     rdfs:label "Drittes Abonnement-Concert, Erstes Gewandhaus (Leipzig), 20.10.1859" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1859-10-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1859-10-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/1188718649>,
-        <https://d-nb.info/gnd/300015127>,
-        <https://d-nb.info/gnd/300015143>,
-        <https://d-nb.info/gnd/300145403> ;
-    cto:relatedItem <https://d-nb.info/gnd/1188718649>,
-        <https://d-nb.info/gnd/300015127>,
-        <https://d-nb.info/gnd/300015143>,
-        <https://d-nb.info/gnd/300145403>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219935426> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186723831> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174573522> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015143> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015127> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145403> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1188718649> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5813156133194958430004> ],
         <https://performance.musiconn.de/source/programme-der-konzerte-im-gewandhaus-zu-leipzig-staedt-bibl-leipzig>,
-        <https://performance.musiconn.de/source/programmzettel>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-54-a-moll-schumann-robert>,
-        <https://performance.musiconn.de/work/musik-zum-trauerspiel-egmont-von-johann-wolfgang-von-goethe-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/musik-zum-trauerspiel-egmont-von-johann-wolfgang-von-goethe-ouvertuere-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-op-49-e-dur-veit-wenzel-heinrich>,
-        <https://viaf.org/viaf/174573522>,
-        <https://viaf.org/viaf/186723831>,
-        <https://viaf.org/viaf/219935426>,
-        <https://viaf.org/viaf/5813156133194958430004> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/174573522>,
-        <https://viaf.org/viaf/186723831>,
-        <https://viaf.org/viaf/219935426>,
-        <https://viaf.org/viaf/5813156133194958430004>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/source/programmzettel> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174573522> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186723831> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219935426> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5813156133194958430004> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

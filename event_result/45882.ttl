@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300003390> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300124201> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300142250> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncert-4-maja-sankt-petersburger-philharmonie-kleiner-saal-1995-05-04> ] .
 
-<https://performance.musiconn.de/event/koncert-4-maja-sankt-petersburger-philharmonie-kleiner-saal-1995-05-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncert-4-maja-sankt-petersburger-philharmonie-kleiner-saal-1995-05-04> a cto:CTO_0001005 ;
     rdfs:label "Koncert 4. maja, Sankt-Petersburger Philharmonie / Kleiner Saal, 4.5.1995" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1994-95> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1995-05-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1995-05-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300003390>,
-        <https://d-nb.info/gnd/300124201>,
-        <https://d-nb.info/gnd/300142250> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1994-95> ;
-    cto:relatedItem <https://d-nb.info/gnd/300003390>,
-        <https://d-nb.info/gnd/300124201>,
-        <https://d-nb.info/gnd/300142250>,
-        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1995-4-mai-kleiner-saal>,
-        <https://performance.musiconn.de/work/trio-elegiaque-op-9-rachmaninov-sergej-vasilevic>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-babaanyan-ano-harowtyowni>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-d-929-es-dur-schubert-franz>,
-        <https://viaf.org/viaf/190420990>,
-        <https://viaf.org/viaf/205761633>,
-        <https://viaf.org/viaf/218079699> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/190420990>,
-        <https://viaf.org/viaf/205761633>,
-        <https://viaf.org/viaf/218079699> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218079699> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205761633> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190420990> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300003390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300124201> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300142250> ],
+        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1995-4-mai-kleiner-saal> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/190420990> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205761633> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218079699> a nfdicore:NFDI_0001010 .
 

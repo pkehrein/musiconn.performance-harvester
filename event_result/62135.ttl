@@ -1,59 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1058880810> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1071433172> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1151537705> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30031938X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300444168> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300456859> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/i-concert-1898-10-01> ] .
 
-<https://performance.musiconn.de/event/i-concert-1898-10-01> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/i-concert-1898-10-01> a cto:CTO_0001005 ;
     rdfs:label "I. Concert, 1.10.1898" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1898-10-01" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1898-10-01" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1058880810>,
-        <https://d-nb.info/gnd/1071433172>,
-        <https://d-nb.info/gnd/1151537705>,
-        <https://d-nb.info/gnd/30031938X>,
-        <https://d-nb.info/gnd/300444168>,
-        <https://d-nb.info/gnd/300456859> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzertprogramme-des-liszt-vereins> ;
-    cto:relatedItem <https://d-nb.info/gnd/1058880810>,
-        <https://d-nb.info/gnd/1071433172>,
-        <https://d-nb.info/gnd/1151537705>,
-        <https://d-nb.info/gnd/30031938X>,
-        <https://d-nb.info/gnd/300444168>,
-        <https://d-nb.info/gnd/300456859>,
-        <https://performance.musiconn.de/work/der-rubin-ouvertuere-albert-eugen-d>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315962900> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197659165> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182127614> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176038212> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30031938X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300456859> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/310698023> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1058880810> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300444168> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1151537705> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1071433172> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176871781> ],
         <https://performance.musiconn.de/work/der-spielmann-jadassohn-salomon>,
         <https://performance.musiconn.de/work/der-wilde-jaeger-maedchenlied-sommer-hans>,
         <https://performance.musiconn.de/work/ein-lied-chastelards-fuchs-albert>,
         <https://performance.musiconn.de/work/fruehlingsgedraenge-schillings-max-von>,
-        <https://performance.musiconn.de/work/gedichte-von-scheffel-moerike-goethe-und-just-kerner-zur-ruh-zur-ruh-wolf-hugo>,
-        <https://performance.musiconn.de/work/jubelouvertuere-draeseke-felix>,
         <https://performance.musiconn.de/work/kein-schoenre-zeit-auf-erden-ruefer-philipp>,
-        <https://performance.musiconn.de/work/koenigskinder-vorspiel-humperdinck-engelbert>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-144-c-dur-reinecke-carl>,
         <https://performance.musiconn.de/work/liederseelen-zumpe-hermann>,
         <https://performance.musiconn.de/work/o-erde-scholz-bernhard>,
-        <https://performance.musiconn.de/work/ouverture-zu-shakespeares-zaehmung-der-widerspenstigen-rheinberger-joseph>,
         <https://performance.musiconn.de/work/variationen-op-24-rudorff-ernst>,
-        <https://performance.musiconn.de/work/winternacht-weingartner-felix>,
-        <https://viaf.org/viaf/176038212>,
-        <https://viaf.org/viaf/176871781>,
-        <https://viaf.org/viaf/182127614>,
-        <https://viaf.org/viaf/197659165>,
-        <https://viaf.org/viaf/310698023>,
-        <https://viaf.org/viaf/315962900> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/176038212>,
-        <https://viaf.org/viaf/176871781>,
-        <https://viaf.org/viaf/182127614>,
-        <https://viaf.org/viaf/197659165>,
-        <https://viaf.org/viaf/310698023>,
-        <https://viaf.org/viaf/315962900> .
+        <https://performance.musiconn.de/work/winternacht-weingartner-felix> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176038212> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176871781> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182127614> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197659165> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/310698023> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315962900> a nfdicore:NFDI_0001010 .
 

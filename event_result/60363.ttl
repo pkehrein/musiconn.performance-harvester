@@ -1,25 +1,27 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vilma-weber-von-webenau-verwehte-spuren-stadtmuseum-muenchen-2014-12-03> ] .
 
-<https://performance.musiconn.de/event/vilma-weber-von-webenau-verwehte-spuren-stadtmuseum-muenchen-2014-12-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vilma-weber-von-webenau-verwehte-spuren-stadtmuseum-muenchen-2014-12-03> a cto:CTO_0001005 ;
     rdfs:label "Vilma Weber von Webenau - Verwehte Spuren, Stadtmuseum (München), 3.12.2014" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/komponistinnen-entdecken-und-foerdern-veranstaltungsreihe-von-musica-femina-muenchen-ev> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2014-12-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2014-12-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:itemOf <https://performance.musiconn.de/series/komponistinnen-entdecken-und-foerdern-veranstaltungsreihe-von-musica-femina-muenchen-ev> ;
-    cto:relatedItem <https://performance.musiconn.de/source/programm-vilma-von-webenau-verwehte-spuren>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/142470171> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/programm-vilma-von-webenau-verwehte-spuren>,
         <https://performance.musiconn.de/work/klavierstueck-violett-rot-gruen-gelb-weber-von-webenau-vilma>,
         <https://performance.musiconn.de/work/kleines-stueck-violine-klavier-weber-von-webenau-vilma>,
         <https://performance.musiconn.de/work/vier-jahreszeiten-klavier-weber-von-webenau-vilma> ;
-    cto:relatedLocation <https://viaf.org/viaf/142470171> ;
-    cto:viaf <https://viaf.org/viaf/142470171> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/142470171> a nfdicore:NFDI_0001010 .
 

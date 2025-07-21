@@ -1,45 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/16031874-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009372> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300065078> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300084269> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111045> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-dresdner-kammerorchester-schauspielhaus-dresden-1985-10-08-20-00> ] .
 
-<https://performance.musiconn.de/event/konzert-dresdner-kammerorchester-schauspielhaus-dresden-1985-10-08-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-dresdner-kammerorchester-schauspielhaus-dresden-1985-10-08-20-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert Dresdner Kammerorchester, Schauspielhaus (Dresden), 8.10.1985, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/heinrich-schuetz-festtage-der-ddr-1985> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1985-10-08T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1985-10-08T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/16031874-9>,
-        <https://d-nb.info/gnd/300009372>,
-        <https://d-nb.info/gnd/300065078>,
-        <https://d-nb.info/gnd/300084269>,
-        <https://d-nb.info/gnd/300111045> ;
-    cto:itemOf <https://performance.musiconn.de/series/heinrich-schuetz-festtage-der-ddr-1985> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009372>,
-        <https://d-nb.info/gnd/300065078>,
-        <https://d-nb.info/gnd/300084269>,
-        <https://d-nb.info/gnd/300111045>,
-        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-21-heinrich-schuetz-ehrung-1954-2002>,
-        <https://performance.musiconn.de/work/kommentare-zu-drei-venezianischen-madrigalen-des-heinrich-schuetz-aus-dem-jahre-1611-koehler-siegfried>,
-        <https://performance.musiconn.de/work/konzerte-cembalo-orchester-bwv-1052-1058-nr-1-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/konzerte-orgel-orchester-hwv-289-294-nr-6-b-dur-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/sinfonien-kv-202-d-dur-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/178216538>,
-        <https://viaf.org/viaf/200778018>,
-        <https://viaf.org/viaf/202935959>,
-        <https://viaf.org/viaf/207913772> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/schauspielhaus-dresden> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/16031874-9>,
-        <https://viaf.org/viaf/156093049> ;
-    cto:viaf <https://viaf.org/viaf/156093049>,
-        <https://viaf.org/viaf/178216538>,
-        <https://viaf.org/viaf/200778018>,
-        <https://viaf.org/viaf/202935959>,
-        <https://viaf.org/viaf/207913772> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/16031874-9> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/156093049> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/schauspielhaus-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200778018> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009372> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111045> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178216538> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300065078> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202935959> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300084269> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207913772> ],
+        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-21-heinrich-schuetz-ehrung-1954-2002> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/156093049> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178216538> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200778018> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202935959> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207913772> a nfdicore:NFDI_0001010 .
 

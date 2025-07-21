@@ -1,57 +1,78 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1280300612> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300019416> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30014007X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145772> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300173849> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300421869> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4825114-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1897-01-19> ] .
 
-<https://performance.musiconn.de/event/5-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1897-01-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1897-01-19> a cto:CTO_0001005 ;
     rdfs:label "5. Philharmonisches Konzert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 19.1.1897" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1896-1897> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1897-01-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1897-01-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1280300612>,
-        <https://d-nb.info/gnd/300019416>,
-        <https://d-nb.info/gnd/30014007X>,
-        <https://d-nb.info/gnd/300145772>,
-        <https://d-nb.info/gnd/300173849>,
-        <https://d-nb.info/gnd/300421869>,
-        <https://d-nb.info/gnd/4825114-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1896-1897> ;
-    cto:relatedItem <https://d-nb.info/gnd/1280300612>,
-        <https://d-nb.info/gnd/300019416>,
-        <https://d-nb.info/gnd/30014007X>,
-        <https://d-nb.info/gnd/300145772>,
-        <https://d-nb.info/gnd/300173849>,
-        <https://d-nb.info/gnd/300421869>,
-        <https://d-nb.info/gnd/4825114-8>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7021167625780003660003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300421869> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/307169720> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/22145304740878610345> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300173849> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1280300612> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300019416> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185114977> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179881214> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4825114-8> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177208449> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30014007X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145772> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207915232> ],
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
-        <https://performance.musiconn.de/work/achilleus-aus-der-tiefe-des-grames-bruch-max>,
-        <https://performance.musiconn.de/work/an-die-musik-schubert-franz>,
-        <https://performance.musiconn.de/work/gesaenge-op-43-von-ewiger-liebe-brahms-johannes>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-2-op-22-d-moll-wieniawski-henri>,
-        <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-fruehlingsnacht-schumann-robert>,
-        <https://performance.musiconn.de/work/romanzen-violine-klavier-svendsen-johan-severin>,
-        <https://performance.musiconn.de/work/scenes-de-la-csarda-op-32-hubay-jeno>,
-        <https://performance.musiconn.de/work/symphonie-fantastique-berlioz-hector>,
-        <https://viaf.org/viaf/177208449>,
-        <https://viaf.org/viaf/179881214>,
-        <https://viaf.org/viaf/185114977>,
-        <https://viaf.org/viaf/207915232>,
-        <https://viaf.org/viaf/22145304740878610345>,
-        <https://viaf.org/viaf/307169720>,
-        <https://viaf.org/viaf/7021167625780003660003> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/177208449>,
-        <https://viaf.org/viaf/179881214>,
-        <https://viaf.org/viaf/185114977>,
-        <https://viaf.org/viaf/207915232>,
-        <https://viaf.org/viaf/22145304740878610345>,
-        <https://viaf.org/viaf/307169720>,
-        <https://viaf.org/viaf/7021167625780003660003> .
+        <https://performance.musiconn.de/work/romanzen-violine-klavier-svendsen-johan-severin> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177208449> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179881214> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185114977> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207915232> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/22145304740878610345> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/307169720> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7021167625780003660003> a nfdicore:NFDI_0001010 .
 

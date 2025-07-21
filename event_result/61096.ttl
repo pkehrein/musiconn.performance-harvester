@@ -1,37 +1,47 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300462085> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300674627> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7758249-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/traegerinnen-des-heidelberger-kuenstlerinnenpreises-providenzkirche-heidelberg-2004-06-09> ] .
 
-<https://performance.musiconn.de/event/traegerinnen-des-heidelberger-kuenstlerinnenpreises-providenzkirche-heidelberg-2004-06-09> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/traegerinnen-des-heidelberger-kuenstlerinnenpreises-providenzkirche-heidelberg-2004-06-09> a cto:CTO_0001005 ;
     rdfs:label "Trägerinnen des Heidelberger Künstlerinnenpreises, Providenzkirche (Heidelberg), 9.6.2004" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2004-06-09" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2004-06-09" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300462085>,
-        <https://d-nb.info/gnd/300674627>,
-        <https://d-nb.info/gnd/7758249-4> ;
-    cto:relatedItem <https://d-nb.info/gnd/300462085>,
-        <https://d-nb.info/gnd/300674627>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/providenz-kirche-heidelberg-musik-in-kirchen-und-kloestern-ev> ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7758249-4> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/238033318> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300462085> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300674627> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211719948> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/252530809> ],
         <https://performance.musiconn.de/source/programm-eroeffnungs-jubilaeumskonzert-traegerinnen-des-heidelberger-kuenstlerinnenpreises>,
         <https://performance.musiconn.de/work/hymnus-orgel-sprecher-magidenko-olga>,
         <https://performance.musiconn.de/work/ta-ryong-iv-schlagzeug-pagh-paan-younghi>,
-        <https://performance.musiconn.de/work/the-temptation-of-st-anthony-schonthal-ruth>,
-        <https://performance.musiconn.de/work/topographie-orgel-schlagzeug-magidenko-olga>,
-        <https://performance.musiconn.de/work/verstummen-schluenz-annette>,
-        <https://viaf.org/viaf/211719948>,
-        <https://viaf.org/viaf/252530809> ;
-    cto:relatedLocation <https://d-nb.info/gnd/7758249-4>,
-        <https://viaf.org/viaf/238033318> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/providenz-kirche-heidelberg-musik-in-kirchen-und-kloestern-ev> ;
-    cto:viaf <https://viaf.org/viaf/211719948>,
-        <https://viaf.org/viaf/238033318>,
-        <https://viaf.org/viaf/252530809> .
+        <https://performance.musiconn.de/work/topographie-orgel-schlagzeug-magidenko-olga> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/211719948> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/238033318> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/252530809> a nfdicore:NFDI_0001010 .
 

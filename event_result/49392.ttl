@@ -1,31 +1,36 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1220343307> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/simfoniceskij-koncert-24-april-1971-sankt-petersburger-philharmonie-1971-04-24> ] .
 
-<https://performance.musiconn.de/event/simfoniceskij-koncert-24-april-1971-sankt-petersburger-philharmonie-1971-04-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/simfoniceskij-koncert-24-april-1971-sankt-petersburger-philharmonie-1971-04-24> a cto:CTO_0001005 ;
     rdfs:label "Simfoničeskij koncert (24. April 1971), Sankt-Petersburger Philharmonie, 24.4.1971" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1971-04-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1971-04-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1220343307>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
-    cto:relatedItem <https://d-nb.info/gnd/1220343307>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1220343307> ],
         <https://performance.musiconn.de/source/7-leningrader-fruehling-1971-24-april-werkbeschreibung-1>,
         <https://performance.musiconn.de/source/7-leningrader-fruehling-1971-24-april-werkbeschreibung-2>,
         <https://performance.musiconn.de/source/7-leningrader-fruehling-1971-uebersicht>,
         <https://performance.musiconn.de/work/bronzovaja-saga-suite-evlachov-orest-aleksandrovic>,
-        <https://performance.musiconn.de/work/leningrad-firtic-georgij-i>,
-        <https://performance.musiconn.de/work/sinfonia-robusta-tiscenko-boris-ivanovic> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865> .
+        <https://performance.musiconn.de/work/leningrad-firtic-georgij-i> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
 

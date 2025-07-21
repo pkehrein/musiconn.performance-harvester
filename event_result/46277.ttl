@@ -1,49 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30016727X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300469144> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300710992> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vecer-muzyki-dlja-klassiceskoj-gitary-sankt-petersburger-philharmonie-2001-10-24> ] .
 
-<https://performance.musiconn.de/event/vecer-muzyki-dlja-klassiceskoj-gitary-sankt-petersburger-philharmonie-2001-10-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vecer-muzyki-dlja-klassiceskoj-gitary-sankt-petersburger-philharmonie-2001-10-24> a cto:CTO_0001005 ;
     rdfs:label "Večer muzyki dlja klassičeskoj gitary, Sankt-Petersburger Philharmonie, 24.10.2001" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-2001-2002> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2001-10-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2001-10-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30016727X>,
-        <https://d-nb.info/gnd/300469144>,
-        <https://d-nb.info/gnd/300710992>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-2001-2002> ;
-    cto:relatedItem <https://d-nb.info/gnd/30016727X>,
-        <https://d-nb.info/gnd/300469144>,
-        <https://d-nb.info/gnd/300710992>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207923037> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180573665> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300469144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215925636> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300710992> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30016727X> ],
         <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-2001-24-oktober>,
-        <https://performance.musiconn.de/work/appassionata-miranda-ronaldo>,
         <https://performance.musiconn.de/work/etudes-gitarre-nr-10-villa-lobos-heitor>,
-        <https://performance.musiconn.de/work/etudes-gitarre-nr-11-villa-lobos-heitor>,
         <https://performance.musiconn.de/work/etueden-gitarre-nr-1-mignone-francisco>,
         <https://performance.musiconn.de/work/etueden-gitarre-nr-4-mignone-francisco>,
         <https://performance.musiconn.de/work/etueden-gitarre-nr-5-mignone-francisco>,
         <https://performance.musiconn.de/work/etueden-gitarre-nr-6-mignone-francisco>,
         <https://performance.musiconn.de/work/grand-polonaise-op-24-bobrowicz-jan-n-de>,
         <https://performance.musiconn.de/work/preludes-gitarre-nr-4-villa-lobos-heitor>,
-        <https://performance.musiconn.de/work/sonaten-gitarre-nr-2-angulo-eduardo>,
         <https://performance.musiconn.de/work/sonaten-tasteninstrument-k-404-bearbeitung-fuer-gitarre-scarlatti-domenico>,
         <https://performance.musiconn.de/work/sonaten-tasteninstrument-k-474-es-dur-bearbeitung-fuer-gitarre-scarlatti-domenico>,
-        <https://performance.musiconn.de/work/sonaten-tasteninstrument-k-491-d-dur-bearbeitung-fuer-gitarre-scarlatti-domenico>,
-        <https://viaf.org/viaf/180573665>,
-        <https://viaf.org/viaf/207923037>,
-        <https://viaf.org/viaf/215925636> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/180573665>,
-        <https://viaf.org/viaf/207923037>,
-        <https://viaf.org/viaf/215925636> .
+        <https://performance.musiconn.de/work/sonaten-tasteninstrument-k-491-d-dur-bearbeitung-fuer-gitarre-scarlatti-domenico> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180573665> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207923037> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215925636> a nfdicore:NFDI_0001010 .
 

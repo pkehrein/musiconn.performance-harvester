@@ -1,42 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30001712X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300110138> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145756> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300257155> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/dritte-abonnements-soiree-fuer-kammermusik-rathaus-muenster-westf-kleiner-saal-1867-03-16> ] .
 
-<https://performance.musiconn.de/event/dritte-abonnements-soiree-fuer-kammermusik-rathaus-muenster-westf-kleiner-saal-1867-03-16> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/dritte-abonnements-soiree-fuer-kammermusik-rathaus-muenster-westf-kleiner-saal-1867-03-16> a cto:CTO_0001005 ;
     rdfs:label "Dritte Abonnements-Soirée für Kammermusik, Rathaus Münster (Westf) / Kleiner Saal, 16.3.1867" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sonderkonzerte-des-musikvereins-muenster-saison-1866-67> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1867-03-16" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1867-03-16" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30001712X>,
-        <https://d-nb.info/gnd/300110138>,
-        <https://d-nb.info/gnd/300145756>,
-        <https://d-nb.info/gnd/300257155> ;
-    cto:itemOf <https://performance.musiconn.de/series/sonderkonzerte-des-musikvereins-muenster-saison-1866-67> ;
-    cto:relatedItem <https://d-nb.info/gnd/30001712X>,
-        <https://d-nb.info/gnd/300110138>,
-        <https://d-nb.info/gnd/300145756>,
-        <https://d-nb.info/gnd/300257155>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/rathaus-muenster-westf-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214739102> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182274863> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300110138> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001712X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195811480> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300257155> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145756> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206833040> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1866-1867>,
-        <https://performance.musiconn.de/work/liederkreis-nach-heinrich-heine-mit-myrthen-und-rosen-schumann-robert>,
-        <https://performance.musiconn.de/work/liederkreis-op-24-schoene-wiege-schumann-robert>,
-        <https://performance.musiconn.de/work/quartette-streichinstrumente-d-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/quartette-violine-viola-violoncello-klavier-kv-478-g-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-op-30-nr-2-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/182274863>,
-        <https://viaf.org/viaf/195811480>,
-        <https://viaf.org/viaf/206833040>,
-        <https://viaf.org/viaf/214739102> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/rathaus-muenster-westf-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/182274863>,
-        <https://viaf.org/viaf/195811480>,
-        <https://viaf.org/viaf/206833040>,
-        <https://viaf.org/viaf/214739102> .
+        <https://performance.musiconn.de/work/quartette-streichinstrumente-d-dur-haydn-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182274863> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195811480> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206833040> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214739102> a nfdicore:NFDI_0001010 .
 

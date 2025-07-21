@@ -1,34 +1,41 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1097631419> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4194431-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/le-ballet-de-la-jeunesse-schloss-versailles-1686-01-28> ] .
 
-<https://performance.musiconn.de/event/le-ballet-de-la-jeunesse-schloss-versailles-1686-01-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/le-ballet-de-la-jeunesse-schloss-versailles-1686-01-28> a cto:CTO_0001005 ;
     rdfs:label "Le Ballet de la Jeunesse, Schloss Versailles, 28.1.1686" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1686-01-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1686-01-28" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1097631419>,
-        <https://d-nb.info/gnd/4194431-8> ;
-    cto:relatedItem <https://d-nb.info/gnd/1097631419>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4194431-8> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/233744168> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174401505> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1097631419> ],
         <https://performance.musiconn.de/source/beauchamps-1735-bd-3-84-85>,
         <https://performance.musiconn.de/source/hourcade-2002-302>,
         <https://performance.musiconn.de/source/mercure-galant-1686-bd-1-290-291-bd-2-292-296>,
         <https://performance.musiconn.de/source/musikalie-8>,
         <https://performance.musiconn.de/source/onlinequelle-176>,
         <https://performance.musiconn.de/source/onlinequelle-177>,
-        <https://performance.musiconn.de/source/textquelle-digitalisat-76>,
-        <https://performance.musiconn.de/work/ballet-de-la-jeunesse-lalande-michel-richard-de>,
-        <https://viaf.org/viaf/174401505> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4194431-8>,
-        <https://viaf.org/viaf/233744168> ;
-    cto:viaf <https://viaf.org/viaf/174401505>,
-        <https://viaf.org/viaf/233744168> .
+        <https://performance.musiconn.de/source/textquelle-digitalisat-76> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174401505> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/233744168> a nfdicore:NFDI_0001010 .
 

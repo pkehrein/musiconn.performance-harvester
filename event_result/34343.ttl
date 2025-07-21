@@ -4,24 +4,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4194431-8> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/la-felicite-schloss-versailles-1745-01-15> ] .
 
-<https://performance.musiconn.de/event/la-felicite-schloss-versailles-1745-01-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/la-felicite-schloss-versailles-1745-01-15> a cto:CTO_0001005 ;
     rdfs:label "La Félicité, Schloss Versailles, 15.1.1745" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1745-01-15" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1745-01-15" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4194431-8> ;
-    cto:relatedItem <https://performance.musiconn.de/source/la-valliere-1760-220-221>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/233744168> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4194431-8> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/la-valliere-1760-220-221>,
         <https://performance.musiconn.de/source/onlinequelle-580>,
         <https://performance.musiconn.de/source/onlinequelle-581>,
         <https://performance.musiconn.de/source/textquelle-digitalisat-260>,
         <https://performance.musiconn.de/work/la-felicite-rebel-francois> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4194431-8>,
-        <https://viaf.org/viaf/233744168> ;
-    cto:viaf <https://viaf.org/viaf/233744168> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/233744168> a nfdicore:NFDI_0001010 .
 

@@ -1,45 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1169787819> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1169788459> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1180424697> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001063X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-07-04-18-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-07-04-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1936-07-04-18-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 4.7.1936, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1935-36> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1936-07-04T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1936-07-04T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1169787819>,
-        <https://d-nb.info/gnd/1169788459>,
-        <https://d-nb.info/gnd/1180424697>,
-        <https://d-nb.info/gnd/30001063X>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1935-36> ;
-    cto:relatedItem <https://d-nb.info/gnd/1169787819>,
-        <https://d-nb.info/gnd/1169788459>,
-        <https://d-nb.info/gnd/1180424697>,
-        <https://d-nb.info/gnd/30001063X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1169788459> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219160443> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182358402> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/615155286636387180005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001063X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1027154075978911860004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1169787819> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1180424697> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/es-wandelt-was-wir-schauen-greis-siegfried>,
-        <https://performance.musiconn.de/work/geh-aus-mein-herz-und-suche-freud-rmwv-35-mauersberger-rudolf>,
-        <https://performance.musiconn.de/work/gottvaters-bluehendes-wunderkleid-unger-walter>,
-        <https://performance.musiconn.de/work/luthers-lob-der-musika-mauersberger-rudolf>,
-        <https://performance.musiconn.de/work/praeludium-und-fuge-orgel-bwv-539-d-moll-bach-johann-sebastian>,
-        <https://viaf.org/viaf/1027154075978911860004>,
-        <https://viaf.org/viaf/182358402>,
-        <https://viaf.org/viaf/219160443>,
-        <https://viaf.org/viaf/615155286636387180005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/1027154075978911860004>,
-        <https://viaf.org/viaf/182358402>,
-        <https://viaf.org/viaf/219160443>,
-        <https://viaf.org/viaf/248189528>,
-        <https://viaf.org/viaf/615155286636387180005> .
+        <https://performance.musiconn.de/work/gottvaters-bluehendes-wunderkleid-unger-walter> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1027154075978911860004> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182358402> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219160443> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/615155286636387180005> a nfdicore:NFDI_0001010 .
 

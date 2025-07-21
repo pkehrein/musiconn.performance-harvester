@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/105265326X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300037090> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300112165> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/achtes-abonnement-concert-erstes-gewandhaus-leipzig-1854-11-30> ] .
 
-<https://performance.musiconn.de/event/achtes-abonnement-concert-erstes-gewandhaus-leipzig-1854-11-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/achtes-abonnement-concert-erstes-gewandhaus-leipzig-1854-11-30> a cto:CTO_0001005 ;
     rdfs:label "Achtes Abonnement-Concert, Erstes Gewandhaus (Leipzig), 30.11.1854" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1854-11-30" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1854-11-30" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/105265326X>,
-        <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/300037090>,
-        <https://d-nb.info/gnd/300112165> ;
-    cto:relatedItem <https://d-nb.info/gnd/105265326X>,
-        <https://d-nb.info/gnd/300037090>,
-        <https://d-nb.info/gnd/300112165>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213966104> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309597646> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300037090> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300112165> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/105265326X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/308292403> ],
         <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
-        <https://performance.musiconn.de/source/programmzettel>,
-        <https://performance.musiconn.de/work/die-zauberfloete-ouvertuere-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-1-op-11-e-moll-chopin-frederic>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-120-fassung-1851-schumann-robert>,
-        <https://viaf.org/viaf/213966104>,
-        <https://viaf.org/viaf/308292403>,
-        <https://viaf.org/viaf/309597646> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/213966104>,
-        <https://viaf.org/viaf/308292403>,
-        <https://viaf.org/viaf/309597646>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/source/programmzettel> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/213966104> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/308292403> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309597646> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

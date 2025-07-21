@@ -1,31 +1,38 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300782365> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gottesdienst-thomaskirche-leipzig-2005-03-06> ] .
 
-<https://performance.musiconn.de/event/gottesdienst-thomaskirche-leipzig-2005-03-06> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gottesdienst-thomaskirche-leipzig-2005-03-06> a cto:CTO_0001005 ;
     rdfs:label "Gottesdienst, Thomaskirche (Leipzig), 6.3.2005" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2005-03-06" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2005-03-06" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300782365>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/300782365>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186101216> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300782365> ],
         <https://performance.musiconn.de/source/motettenbuch-2004-05>,
         <https://performance.musiconn.de/work/die-geistlichen-lieder-und-arien-aus-schemellis-gesangbuch-sei-gegruesset-jesu-guetig-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/fontana-disrael-was-betruebst-du-dich-meine-seele-schein-johann-hermann>,
         <https://performance.musiconn.de/work/fuerwahr-er-trug-unsre-krankheit-wir-danken-dir-herr-jesu-christ-golle-juergen>,
-        <https://performance.musiconn.de/work/psalmen-motetten-ach-herr-strafe-mich-nicht-neubert-guenter>,
-        <https://viaf.org/viaf/186101216> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/186101216> .
+        <https://performance.musiconn.de/work/psalmen-motetten-ach-herr-strafe-mich-nicht-neubert-guenter> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186101216> a nfdicore:NFDI_0001010 .
 

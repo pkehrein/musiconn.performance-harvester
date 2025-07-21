@@ -1,59 +1,82 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1072704544> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1072704706> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/119179511X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101783> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102429> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102585> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300232209> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4035206-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/conservatorium-der-musik-zu-leipzig-leipzig-1854-11-04-19-00> ] .
 
-<https://performance.musiconn.de/event/conservatorium-der-musik-zu-leipzig-leipzig-1854-11-04-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/conservatorium-der-musik-zu-leipzig-leipzig-1854-11-04-19-00> a cto:CTO_0001005 ;
     rdfs:label "Conservatorium der Musik zu Leipzig, Leipzig, 4.11.1854, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzert> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1854-11-04T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1854-11-04T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1072704544>,
-        <https://d-nb.info/gnd/1072704706>,
-        <https://d-nb.info/gnd/119179511X>,
-        <https://d-nb.info/gnd/300101783>,
-        <https://d-nb.info/gnd/300102429>,
-        <https://d-nb.info/gnd/300102585>,
-        <https://d-nb.info/gnd/300232209>,
-        <https://d-nb.info/gnd/4035206-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzert> ;
-    cto:relatedItem <https://d-nb.info/gnd/1072704544>,
-        <https://d-nb.info/gnd/1072704706>,
-        <https://d-nb.info/gnd/119179511X>,
-        <https://d-nb.info/gnd/300101783>,
-        <https://d-nb.info/gnd/300102429>,
-        <https://d-nb.info/gnd/300102585>,
-        <https://d-nb.info/gnd/300232209>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154310911> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4035206-7> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178615236> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208684106> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/119179511X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198527510> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102429> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300232209> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102585> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101783> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1072704544> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205761111> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1072704706> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316501928> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316501936> ],
         <https://performance.musiconn.de/source/konservatorium-der-musik-hochschule-fuer-musik-konzertprogramme-1843-1948>,
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-gegr-1834-von-robert-schumann>,
-        <https://performance.musiconn.de/source/signale-fuer-die-musikalische-welt>,
-        <https://performance.musiconn.de/work/fugen-kl-mwv-u-65-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/kirchen-musik-mitten-wir-im-leben-sind-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/opus-musicum-tomus-2-ecce-quomodo-moritur-iustus-gallus-jacobus>,
-        <https://performance.musiconn.de/work/paulus-der-du-die-menschen-laessest-sterben-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/praeludien-kl-mwv-u-157-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/praeludien-und-fugen-org-mwv-w-18-23-praeludium-mwv-w-21-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/quintette-violine-2-viola-2-violoncello-mwv-r-21-a-dur-mendelssohn-bartholdy-felix>,
-        <https://viaf.org/viaf/178615236>,
-        <https://viaf.org/viaf/198527510>,
-        <https://viaf.org/viaf/205761111>,
-        <https://viaf.org/viaf/208684106>,
-        <https://viaf.org/viaf/316501928>,
-        <https://viaf.org/viaf/316501936> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4035206-7>,
-        <https://viaf.org/viaf/154310911> ;
-    cto:viaf <https://viaf.org/viaf/154310911>,
-        <https://viaf.org/viaf/178615236>,
-        <https://viaf.org/viaf/198527510>,
-        <https://viaf.org/viaf/205761111>,
-        <https://viaf.org/viaf/208684106>,
-        <https://viaf.org/viaf/316501928>,
-        <https://viaf.org/viaf/316501936> .
+        <https://performance.musiconn.de/source/signale-fuer-die-musikalische-welt> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154310911> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178615236> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198527510> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205761111> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208684106> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316501928> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316501936> a nfdicore:NFDI_0001010 .
 

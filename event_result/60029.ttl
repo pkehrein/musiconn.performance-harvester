@@ -1,24 +1,33 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1241313-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4127793-4> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/komponistinnen-komponistinnen-im-spannungsfeld-europa-asien-muenchen-1990-05-05> ] .
 
-<https://performance.musiconn.de/event/komponistinnen-komponistinnen-im-spannungsfeld-europa-asien-muenchen-1990-05-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/komponistinnen-komponistinnen-im-spannungsfeld-europa-asien-muenchen-1990-05-05> a cto:CTO_0001005 ;
     rdfs:label "Komponistinnen : Komponistinnen im Spannungsfeld Europa-Asien, München, 5.5.1990" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/komponistinnen-neue-konzertreihe-im-muenchner-kulturleben> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1990-05-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1990-05-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1241313-6>,
-        <https://d-nb.info/gnd/4127793-4> ;
-    cto:itemOf <https://performance.musiconn.de/series/komponistinnen-neue-konzertreihe-im-muenchner-kulturleben> ;
-    cto:relatedItem <https://performance.musiconn.de/source/musica-femina-muenchen-e-v-programm-5-komponistinnenkonzert>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1241313-6> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/156839204> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4127793-4> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/241492071> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/musica-femina-muenchen-e-v-programm-5-komponistinnenkonzert>,
         <https://performance.musiconn.de/work/aus-wolkenschleiern-goebels-gisela>,
         <https://performance.musiconn.de/work/eine-einsame-frau-goebels-gisela>,
         <https://performance.musiconn.de/work/ich-muss-bald-sterben-goebels-gisela>,
@@ -29,10 +38,9 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/ueber-die-donnernden-wogen-goebels-gisela>,
         <https://performance.musiconn.de/work/vier-kleine-skizzen-fuer-floete-solo-yamashita-toyoko>,
         <https://performance.musiconn.de/work/wenn-sich-die-kraniche-goebels-gisela> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4127793-4>,
-        <https://viaf.org/viaf/241492071> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/1241313-6>,
-        <https://viaf.org/viaf/156839204> ;
-    cto:viaf <https://viaf.org/viaf/156839204>,
-        <https://viaf.org/viaf/241492071> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/156839204> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/241492071> a nfdicore:NFDI_0001010 .
 

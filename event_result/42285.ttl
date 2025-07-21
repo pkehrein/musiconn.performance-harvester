@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1052093795> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300013558> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111169> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-museums-konzert-staedtische-buehnen-frankfurt-am-main-grosses-haus-1962-01-29-20-00> ] .
 
-<https://performance.musiconn.de/event/7-museums-konzert-staedtische-buehnen-frankfurt-am-main-grosses-haus-1962-01-29-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-museums-konzert-staedtische-buehnen-frankfurt-am-main-grosses-haus-1962-01-29-20-00> a cto:CTO_0001005 ;
     rdfs:label "7. Museums-Konzert, Städtische Bühnen (Frankfurt am Main) / Großes Haus, 29.1.1962, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1961-1962> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1962-01-29T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1962-01-29T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1052093795>,
-        <https://d-nb.info/gnd/300013558>,
-        <https://d-nb.info/gnd/300111169> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1961-1962> ;
-    cto:relatedItem <https://d-nb.info/gnd/1052093795>,
-        <https://d-nb.info/gnd/300013558>,
-        <https://d-nb.info/gnd/300111169>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/konzerte-viola-orchester-sz-120-bartok-bela>,
-        <https://performance.musiconn.de/work/legende-vom-prinzen-eugen-op-11-berger-theodor>,
-        <https://performance.musiconn.de/work/sinfonien-kv-551-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/177215035>,
-        <https://viaf.org/viaf/182681837>,
-        <https://viaf.org/viaf/214736581> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-grosses-haus> ;
-    cto:viaf <https://viaf.org/viaf/177215035>,
-        <https://viaf.org/viaf/182681837>,
-        <https://viaf.org/viaf/214736581> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/staedtische-buehnen-frankfurt-am-main-grosses-haus> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111169> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1052093795> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182681837> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177215035> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214736581> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300013558> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177215035> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182681837> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214736581> a nfdicore:NFDI_0001010 .
 

@@ -4,27 +4,34 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/118722700> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/120517981> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/il-povero-superbo-hoftheater-bonn-1757-03-00> ] .
 
-<https://performance.musiconn.de/event/il-povero-superbo-hoftheater-bonn-1757-03-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/il-povero-superbo-hoftheater-bonn-1757-03-00> a cto:CTO_0001005 ;
     rdfs:label "Il povero superbo, Hoftheater (Bonn), 3/1757" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1757-03-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1757-03-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/118722700>,
-        <https://d-nb.info/gnd/120517981> ;
-    cto:relatedItem <https://performance.musiconn.de/source/meyer-bibliographia-vol-18>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118722700> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/120517981> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hoftheater-bonn> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/meyer-bibliographia-vol-18>,
         <https://performance.musiconn.de/source/theobald-opern-stagioni>,
         <https://performance.musiconn.de/work/il-povero-superbo-galuppi-baldassare> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hoftheater-bonn> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118722700>,
-        <https://d-nb.info/gnd/120517981>,
-        <https://viaf.org/viaf/22327261>,
-        <https://viaf.org/viaf/72226518> ;
-    cto:viaf <https://viaf.org/viaf/22327261>,
-        <https://viaf.org/viaf/72226518> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/22327261> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/72226518> ] .
+
+<https://viaf.org/viaf/22327261> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/72226518> a nfdicore:NFDI_0001010 .
 

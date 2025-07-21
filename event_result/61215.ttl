@@ -1,47 +1,63 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1078436851> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1099336988> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1279623969> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1279640200> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300501781> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300501811> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4329977-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/italienischer-abend-berliner-philharmonie-berlin-kammermusiksaal-2012-10-20> ] .
 
-<https://performance.musiconn.de/event/italienischer-abend-berliner-philharmonie-berlin-kammermusiksaal-2012-10-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/italienischer-abend-berliner-philharmonie-berlin-kammermusiksaal-2012-10-20> a cto:CTO_0001005 ;
     rdfs:label "Italienischer Abend, Berliner Philharmonie (Berlin) / Kammermusiksaal, 20.10.2012" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2012-10-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2012-10-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1078436851>,
-        <https://d-nb.info/gnd/1099336988>,
-        <https://d-nb.info/gnd/1279623969>,
-        <https://d-nb.info/gnd/1279640200>,
-        <https://d-nb.info/gnd/300501781>,
-        <https://d-nb.info/gnd/300501811>,
-        <https://d-nb.info/gnd/4329977-5> ;
-    cto:relatedItem <https://d-nb.info/gnd/1078436851>,
-        <https://d-nb.info/gnd/1099336988>,
-        <https://d-nb.info/gnd/1279623969>,
-        <https://d-nb.info/gnd/1279640200>,
-        <https://d-nb.info/gnd/300501781>,
-        <https://d-nb.info/gnd/300501811>,
-        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-10-programmhefte-kammerorchester-carl-philipp-emanuel-bach-2008-2014>,
-        <https://performance.musiconn.de/work/konzerte-op-7-nr-6-es-dur-locatelli-pietro-antonio>,
-        <https://performance.musiconn.de/work/konzerte-vc-orch-r-414-vivaldi-antonio>,
-        <https://performance.musiconn.de/work/konzerte-vc-orch-r-421-vivaldi-antonio>,
-        <https://performance.musiconn.de/work/sinfonien-d-dur-pergolesi-giovanni-battista>,
-        <https://performance.musiconn.de/work/sinfonien-und-konzerte-op-2-konzert-nr-4-g-dur-adagio-albinoni-tomaso>,
-        <https://performance.musiconn.de/work/sinfonien-wq-182-nr-2-bach-carl-philipp-emanuel>,
-        <https://viaf.org/viaf/178827838>,
-        <https://viaf.org/viaf/188274730>,
-        <https://viaf.org/viaf/192584531>,
-        <https://viaf.org/viaf/202144782952390386953> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4329977-5> ;
-    cto:viaf <https://viaf.org/viaf/178827838>,
-        <https://viaf.org/viaf/188274730>,
-        <https://viaf.org/viaf/192584531>,
-        <https://viaf.org/viaf/202144782952390386953> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4329977-5> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188274730> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192584531> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178827838> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300501781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1279640200> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1099336988> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300501811> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202144782952390386953> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1279623969> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1078436851> ],
+        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-10-programmhefte-kammerorchester-carl-philipp-emanuel-bach-2008-2014> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178827838> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188274730> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192584531> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202144782952390386953> a nfdicore:NFDI_0001010 .
 

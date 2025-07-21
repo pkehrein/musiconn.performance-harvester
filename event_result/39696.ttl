@@ -1,52 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1160971587> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015356> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30015545X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4279519-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4399716-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/9-serenade-schloss-pillnitz-dresden-1950-07-29-18-00> ] .
 
-<https://performance.musiconn.de/event/9-serenade-schloss-pillnitz-dresden-1950-07-29-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/9-serenade-schloss-pillnitz-dresden-1950-07-29-18-00> a cto:CTO_0001005 ;
     rdfs:label "9. Serenade, Schloss Pillnitz (Dresden), 29.7.1950, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1949-1950> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1950-07-29T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1950-07-29T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1160971587>,
-        <https://d-nb.info/gnd/300015356>,
-        <https://d-nb.info/gnd/30015545X>,
-        <https://d-nb.info/gnd/4279519-9>,
-        <https://d-nb.info/gnd/4399716-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1949-1950> ;
-    cto:relatedItem <https://d-nb.info/gnd/1160971587>,
-        <https://d-nb.info/gnd/300015356>,
-        <https://d-nb.info/gnd/30015545X>,
-        <https://d-nb.info/gnd/4399716-8>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173353325> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4279519-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4399716-8> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175777601> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1160971587> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5351152932555209830005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181002798> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30015545X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015356> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179877641> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/2-russische-volkslieder-es-leuchtet-der-mond-die-lichtung-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/3-schottische-lieder-haydn-joseph>,
-        <https://performance.musiconn.de/work/an-der-schoenen-blauen-donau-strauss-johann>,
         <https://performance.musiconn.de/work/aus-acht-kammergesaenge-ergoetzlichkeit-zur-rechten-zeit-der-unbestand-ist-ihm-verwandt-baussnern-waldemar-von>,
         <https://performance.musiconn.de/work/aus-internationale-volkslieder-polnisch-air-russe-air-cosaque-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/carmen-suite-no-1-intermezzo-bizet-georges>,
-        <https://performance.musiconn.de/work/kammergesaenge-baussnern-waldemar-von>,
-        <https://performance.musiconn.de/work/musik-zum-ballett-die-geschoepfe-des-prometheus-ouvertuere-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/pizzicato-polka-strauss-johann>,
         <https://performance.musiconn.de/work/schwedisches-volkslied-schlaf-mein-liebling-schlaf-ein-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/slawischer-tanz-nr-2-dvorak-antonin>,
-        <https://performance.musiconn.de/work/spanische-impressionen-mexikanisch-kubanisch-bizet-georges>,
-        <https://viaf.org/viaf/175777601>,
-        <https://viaf.org/viaf/179877641>,
-        <https://viaf.org/viaf/181002798>,
-        <https://viaf.org/viaf/5351152932555209830005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4279519-9>,
-        <https://viaf.org/viaf/173353325> ;
-    cto:viaf <https://viaf.org/viaf/173353325>,
-        <https://viaf.org/viaf/175777601>,
-        <https://viaf.org/viaf/179877641>,
-        <https://viaf.org/viaf/181002798>,
-        <https://viaf.org/viaf/5351152932555209830005> .
+        <https://performance.musiconn.de/work/spanische-impressionen-mexikanisch-kubanisch-bizet-georges> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/173353325> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175777601> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179877641> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181002798> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5351152932555209830005> a nfdicore:NFDI_0001010 .
 

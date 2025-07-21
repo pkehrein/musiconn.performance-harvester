@@ -1,36 +1,46 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300303327> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4505388-1> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/strasburgskij-filarmoniceskij-orkestr-sankt-petersburger-philharmonie-1974-11-30> ] .
 
-<https://performance.musiconn.de/event/strasburgskij-filarmoniceskij-orkestr-sankt-petersburger-philharmonie-1974-11-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/strasburgskij-filarmoniceskij-orkestr-sankt-petersburger-philharmonie-1974-11-30> a cto:CTO_0001005 ;
     rdfs:label "Strasburgskij filarmoničeskij orkestr, Sankt-Petersburger Philharmonie, 30.11.1974" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1974-75> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1974-11-30" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1974-11-30" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300303327>,
-        <https://d-nb.info/gnd/4505388-1>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1974-75> ;
-    cto:relatedItem <https://d-nb.info/gnd/300303327>,
-        <https://d-nb.info/gnd/4505388-1>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300303327> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4505388-1> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/300492703> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178056217> ],
         <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1974-30-november>,
         <https://performance.musiconn.de/work/24-preludes-pour-orchestre-constant-marius>,
-        <https://performance.musiconn.de/work/integrales-varese-edgard>,
-        <https://performance.musiconn.de/work/metaboles-dutilleux-henri>,
-        <https://performance.musiconn.de/work/svmphonie-de-danses-lesur-daniel>,
-        <https://viaf.org/viaf/178056217>,
-        <https://viaf.org/viaf/300492703> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/178056217>,
-        <https://viaf.org/viaf/300492703> .
+        <https://performance.musiconn.de/work/svmphonie-de-danses-lesur-daniel> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178056217> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/300492703> a nfdicore:NFDI_0001010 .
 

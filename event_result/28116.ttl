@@ -1,66 +1,93 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1193101301> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015488> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300025815> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30006022X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101058> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170092> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300174691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300271239> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/301002312> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ii-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1909-11-23-19-30> ] .
 
-<https://performance.musiconn.de/event/ii-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1909-11-23-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ii-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1909-11-23-19-30> a cto:CTO_0001005 ;
     rdfs:label "II. Philharmonisches Konzert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 23.11.1909, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1909-1910> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1909-11-23T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1909-11-23T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/1193101301>,
-        <https://d-nb.info/gnd/300015488>,
-        <https://d-nb.info/gnd/300025815>,
-        <https://d-nb.info/gnd/30006022X>,
-        <https://d-nb.info/gnd/300101058>,
-        <https://d-nb.info/gnd/300170092>,
-        <https://d-nb.info/gnd/300174691>,
-        <https://d-nb.info/gnd/300271239>,
-        <https://d-nb.info/gnd/301002312> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1909-1910> ;
-    cto:relatedItem <https://d-nb.info/gnd/1193101301>,
-        <https://d-nb.info/gnd/300015488>,
-        <https://d-nb.info/gnd/300025815>,
-        <https://d-nb.info/gnd/30006022X>,
-        <https://d-nb.info/gnd/300101058>,
-        <https://d-nb.info/gnd/300170092>,
-        <https://d-nb.info/gnd/300174691>,
-        <https://d-nb.info/gnd/300271239>,
-        <https://d-nb.info/gnd/301002312>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211712631> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301002312> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205758904> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015488> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186409367> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211735196> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30006022X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300271239> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025815> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182086643> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1193101301> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184922071> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186294670> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300174691> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174381785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170092> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101058> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1909-1910>,
-        <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-morgenlich-leuchtend-im-rosigen-schein-wagner-richard>,
-        <https://performance.musiconn.de/work/gedichte-von-goethe-epiphanias-wolf-hugo>,
-        <https://performance.musiconn.de/work/gedichte-von-robert-reinick-gesellenlied-wolf-hugo>,
-        <https://performance.musiconn.de/work/iphigenie-en-aulide-ouvertuere-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/joseph-champs-paternels-mehul-etienne-nicolas>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-3-op-37-c-moll-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/konzertschluss-zur-ouvertuere-von-christoph-willibald-glucks-iphigenie-in-aulis-wagner-richard>,
-        <https://performance.musiconn.de/work/lieder-op-47-botschaft-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-63-an-ein-bild-brahms-johannes>,
-        <https://performance.musiconn.de/work/rhapsodie-espagnole-arrangiert-liszt-franz>,
-        <https://viaf.org/viaf/174381785>,
-        <https://viaf.org/viaf/182086643>,
-        <https://viaf.org/viaf/184922071>,
-        <https://viaf.org/viaf/186294670>,
-        <https://viaf.org/viaf/186409367>,
-        <https://viaf.org/viaf/205758904>,
-        <https://viaf.org/viaf/211712631>,
-        <https://viaf.org/viaf/211735196> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/174381785>,
-        <https://viaf.org/viaf/182086643>,
-        <https://viaf.org/viaf/184922071>,
-        <https://viaf.org/viaf/186294670>,
-        <https://viaf.org/viaf/186409367>,
-        <https://viaf.org/viaf/205758904>,
-        <https://viaf.org/viaf/211712631>,
-        <https://viaf.org/viaf/211735196> .
+        <https://performance.musiconn.de/work/rhapsodie-espagnole-arrangiert-liszt-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174381785> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182086643> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184922071> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186294670> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186409367> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205758904> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211712631> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211735196> a nfdicore:NFDI_0001010 .
 

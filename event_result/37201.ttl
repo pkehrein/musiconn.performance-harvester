@@ -1,49 +1,64 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1161691219> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1176984233> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/121665316X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300074778> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/301013411> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/moderne-musik-rosensaal-jena-1930-05-19-20-00> ] .
 
-<https://performance.musiconn.de/event/moderne-musik-rosensaal-jena-1930-05-19-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/moderne-musik-rosensaal-jena-1930-05-19-20-00> a cto:CTO_0001005 ;
     rdfs:label "Moderne Musik, Rosensaal (Jena), 19.5.1930, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1930-05-19T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1930-05-19T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1161691219>,
-        <https://d-nb.info/gnd/1176984233>,
-        <https://d-nb.info/gnd/121665316X>,
-        <https://d-nb.info/gnd/300074778>,
-        <https://d-nb.info/gnd/301013411> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1161691219>,
-        <https://d-nb.info/gnd/1176984233>,
-        <https://d-nb.info/gnd/121665316X>,
-        <https://d-nb.info/gnd/300074778>,
-        <https://d-nb.info/gnd/301013411>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/rosensaal-jena> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300074778> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8963159880878418540004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/121665316X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208683297> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1176984233> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7866153063252719320002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1161691219> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4610154983544567860006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206859192> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301013411> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
         <https://performance.musiconn.de/work/episoden-kleine-stuecke-fuer-klavier-funk-heinrich>,
         <https://performance.musiconn.de/work/fuenf-lieder-fuer-sopran-funk-heinrich>,
-        <https://performance.musiconn.de/work/ich-will-dir-singen-ein-hohelied-stephan-rudi>,
-        <https://performance.musiconn.de/work/pastoral-suite-scott-cyril>,
-        <https://performance.musiconn.de/work/petite-suite-klavier-bartok-bela>,
-        <https://performance.musiconn.de/work/pierrot-amoureux-scott-cyril>,
-        <https://performance.musiconn.de/work/stuecke-violoncello-klavier-op-8-hindemith-paul>,
-        <https://performance.musiconn.de/work/vier-lieder-fuer-sopran-volkmann-otto>,
-        <https://viaf.org/viaf/206859192>,
-        <https://viaf.org/viaf/208683297>,
-        <https://viaf.org/viaf/4610154983544567860006>,
-        <https://viaf.org/viaf/7866153063252719320002>,
-        <https://viaf.org/viaf/8963159880878418540004> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/rosensaal-jena> ;
-    cto:viaf <https://viaf.org/viaf/206859192>,
-        <https://viaf.org/viaf/208683297>,
-        <https://viaf.org/viaf/4610154983544567860006>,
-        <https://viaf.org/viaf/7866153063252719320002>,
-        <https://viaf.org/viaf/8963159880878418540004> .
+        <https://performance.musiconn.de/work/vier-lieder-fuer-sopran-volkmann-otto> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/206859192> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208683297> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4610154983544567860006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7866153063252719320002> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8963159880878418540004> a nfdicore:NFDI_0001010 .
 

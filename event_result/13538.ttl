@@ -1,55 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1180674782> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011148> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300016417> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145160> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300288816> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300572700> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/abokonzert-3-zweites-gewandhaus-leipzig-1896-10-29> ] .
 
-<https://performance.musiconn.de/event/abokonzert-3-zweites-gewandhaus-leipzig-1896-10-29> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/abokonzert-3-zweites-gewandhaus-leipzig-1896-10-29> a cto:CTO_0001005 ;
     rdfs:label "Abokonzert 3, Zweites Gewandhaus (Leipzig), 29.10.1896" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1896-10-29" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1896-10-29" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1180674782>,
-        <https://d-nb.info/gnd/300011148>,
-        <https://d-nb.info/gnd/300016417>,
-        <https://d-nb.info/gnd/300145160>,
-        <https://d-nb.info/gnd/300288816>,
-        <https://d-nb.info/gnd/300572700>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/1180674782>,
-        <https://d-nb.info/gnd/300011148>,
-        <https://d-nb.info/gnd/300016417>,
-        <https://d-nb.info/gnd/300145160>,
-        <https://d-nb.info/gnd/300288816>,
-        <https://d-nb.info/gnd/300572700>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/303854706> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215925000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177026443> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300288816> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300572700> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202943193> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016417> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6021155286651987180005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1180674782> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011148> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210935680> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145160> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
-        <https://performance.musiconn.de/work/concerto-allegro-pathetique-ernst-heinrich-wilhelm>,
-        <https://performance.musiconn.de/work/gesaenge-gemischter-chor-op-59-jaegerlied-schumann-robert>,
-        <https://performance.musiconn.de/work/kirchliche-fest-ouvertuere-nicolai-otto>,
         <https://performance.musiconn.de/work/lieder-op-26-schlummerlied-holstein-franz-von>,
-        <https://performance.musiconn.de/work/sinfonien-nr-7-op-92-a-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-singet-dem-herrn-ein-neues-lied-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonaten-und-partiten-violine-bwv-1001-1006-partita-nr-2-chaconne-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/wallada-schreck-gustav>,
-        <https://viaf.org/viaf/177026443>,
-        <https://viaf.org/viaf/202943193>,
-        <https://viaf.org/viaf/210935680>,
-        <https://viaf.org/viaf/215925000>,
-        <https://viaf.org/viaf/303854706>,
-        <https://viaf.org/viaf/6021155286651987180005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/177026443>,
-        <https://viaf.org/viaf/202943193>,
-        <https://viaf.org/viaf/210935680>,
-        <https://viaf.org/viaf/215925000>,
-        <https://viaf.org/viaf/264523828>,
-        <https://viaf.org/viaf/303854706>,
-        <https://viaf.org/viaf/6021155286651987180005> .
+        <https://performance.musiconn.de/work/wallada-schreck-gustav> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177026443> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202943193> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210935680> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215925000> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/303854706> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6021155286651987180005> a nfdicore:NFDI_0001010 .
 

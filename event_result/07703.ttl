@@ -1,52 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1160315922> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1187966827> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1187967149> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1187967963> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118975777X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1189757796> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026226> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140061> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/grosses-konzert-des-dresdner-lehrer-gesangvereins-gewerbehaus-dresden-gewerbehaus-saal-1893-02-20-19-00> ] .
 
-<https://performance.musiconn.de/event/grosses-konzert-des-dresdner-lehrer-gesangvereins-gewerbehaus-dresden-gewerbehaus-saal-1893-02-20-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/grosses-konzert-des-dresdner-lehrer-gesangvereins-gewerbehaus-dresden-gewerbehaus-saal-1893-02-20-19-00> a cto:CTO_0001005 ;
     rdfs:label "Grosses Konzert des Dresdner Lehrer-Gesangvereins, Gewerbehaus (Dresden). Gewerbehaus-Saal, 20.2.1893, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1892-1893> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1893-02-20T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1893-02-20T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1160315922>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/1187966827>,
-        <https://d-nb.info/gnd/1187967149>,
-        <https://d-nb.info/gnd/1187967963>,
-        <https://d-nb.info/gnd/118975777X>,
-        <https://d-nb.info/gnd/1189757796>,
-        <https://d-nb.info/gnd/300026226>,
-        <https://d-nb.info/gnd/300140061> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1892-1893> ;
-    cto:relatedItem <https://d-nb.info/gnd/1160315922>,
-        <https://d-nb.info/gnd/1187966827>,
-        <https://d-nb.info/gnd/1187967149>,
-        <https://d-nb.info/gnd/1187967963>,
-        <https://d-nb.info/gnd/118975777X>,
-        <https://d-nb.info/gnd/1189757796>,
-        <https://d-nb.info/gnd/300026226>,
-        <https://d-nb.info/gnd/300140061>,
-        <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1892-1893>,
-        <https://performance.musiconn.de/work/an-die-leier-schubert-franz>,
-        <https://performance.musiconn.de/work/columbus-draeseke-felix>,
-        <https://performance.musiconn.de/work/dithyrambe-rietz-julius>,
-        <https://performance.musiconn.de/work/konzertouvertuere-zum-maerchen-die-wunderglocke-wermann-oskar>,
-        <https://performance.musiconn.de/work/lieder-op-65-der-blick-wermann-oskar>,
-        <https://performance.musiconn.de/work/lieder-op-65-fruehlingsahnen-wermann-oskar>,
-        <https://performance.musiconn.de/work/lieder-op-72-verlust-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-63-junge-lieder-1-brahms-johannes>,
-        <https://viaf.org/viaf/174585019>,
-        <https://viaf.org/viaf/183715682>,
-        <https://viaf.org/viaf/314152821990601040005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/174585019>,
-        <https://viaf.org/viaf/183715682>,
-        <https://viaf.org/viaf/314152821990601040005> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/314152821990601040005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1187966827> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1160315922> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140061> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1187967963> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118975777X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1187967149> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1189757796> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174585019> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183715682> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026226> ],
+        <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1892-1893> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174585019> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183715682> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/314152821990601040005> a nfdicore:NFDI_0001010 .
 

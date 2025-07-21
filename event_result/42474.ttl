@@ -1,35 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300026897> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30021927X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4018118-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/erstes-freitags-konzert-frankfurt-am-main-1942-09-18> ] .
 
-<https://performance.musiconn.de/event/erstes-freitags-konzert-frankfurt-am-main-1942-09-18> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/erstes-freitags-konzert-frankfurt-am-main-1942-09-18> a cto:CTO_0001005 ;
     rdfs:label "Erstes Freitags-Konzert, Frankfurt am Main, 18.9.1942" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1942-1943> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1942-09-18" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1942-09-18" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300026897>,
-        <https://d-nb.info/gnd/30021927X>,
-        <https://d-nb.info/gnd/4018118-2> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1942-1943> ;
-    cto:relatedItem <https://d-nb.info/gnd/300026897>,
-        <https://d-nb.info/gnd/30021927X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/151720959> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4018118-2> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219937666> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026897> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194731012> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30021927X> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/konzerte-orgel-orchester-hwv-289-294-nr-1-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-a-moll-fassung-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-98-e-moll-brahms-johannes>,
-        <https://viaf.org/viaf/194731012>,
-        <https://viaf.org/viaf/219937666> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4018118-2>,
-        <https://viaf.org/viaf/151720959> ;
-    cto:viaf <https://viaf.org/viaf/151720959>,
-        <https://viaf.org/viaf/194731012>,
-        <https://viaf.org/viaf/219937666> .
+        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-a-moll-fassung-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/151720959> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194731012> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219937666> a nfdicore:NFDI_0001010 .
 

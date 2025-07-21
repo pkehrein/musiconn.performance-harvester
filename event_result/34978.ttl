@@ -1,40 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300034172> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300070349> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300127820> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133782> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/9-philharmonisches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1963-03-30-19-30> ] .
 
-<https://performance.musiconn.de/event/9-philharmonisches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1963-03-30-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/9-philharmonisches-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1963-03-30-19-30> a cto:CTO_0001005 ;
     rdfs:label "9. Philharmonisches Konzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 30.3.1963, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1963-03-30T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1963-03-30T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300034172>,
-        <https://d-nb.info/gnd/300070349>,
-        <https://d-nb.info/gnd/300127820>,
-        <https://d-nb.info/gnd/300133782> ;
-    cto:relatedItem <https://d-nb.info/gnd/300034172>,
-        <https://d-nb.info/gnd/300070349>,
-        <https://d-nb.info/gnd/300127820>,
-        <https://d-nb.info/gnd/300133782>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-r-193-a-moll-saint-saens-camille>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-73-d-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/tondichtungen-nach-arnold-boecklin-reger-max>,
-        <https://performance.musiconn.de/work/variacii-na-temu-rokoko-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/176605857>,
-        <https://viaf.org/viaf/179045160>,
-        <https://viaf.org/viaf/179086534>,
-        <https://viaf.org/viaf/203708908> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/176605857>,
-        <https://viaf.org/viaf/179045160>,
-        <https://viaf.org/viaf/179086534>,
-        <https://viaf.org/viaf/203708908> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300127820> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300070349> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176605857> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133782> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300034172> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179045160> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203708908> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179086534> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176605857> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179045160> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179086534> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203708908> a nfdicore:NFDI_0001010 .
 

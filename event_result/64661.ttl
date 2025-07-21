@@ -1,24 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300376774> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4433695-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/paris-graz-10-89-1-koelner-philharmonie-koeln-1989-10-22> ] .
 
-<https://performance.musiconn.de/event/paris-graz-10-89-1-koelner-philharmonie-koeln-1989-10-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/paris-graz-10-89-1-koelner-philharmonie-koeln-1989-10-22> a cto:CTO_0001005 ;
     rdfs:label "Paris-Graz 10/89/1, Kölner Philharmonie (Köln), 22.10.1989" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1989-10-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1989-10-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300376774>,
-        <https://d-nb.info/gnd/3008405-2>,
-        <https://d-nb.info/gnd/4433695-0> ;
-    cto:relatedItem <https://d-nb.info/gnd/300376774>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4433695-0> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/239180838> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300376774> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214745904> ],
         <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
         <https://performance.musiconn.de/work/kompositionen-nr-147-braxton-anthony>,
         <https://performance.musiconn.de/work/studien-selbstspielklavier-nr-1-transkription-mikhashoff-yvar-nancarrow-conlon>,
@@ -27,14 +40,12 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/studien-selbstspielklavier-nr-6-transkription-mikhashoff-yvar-nancarrow-conlon>,
         <https://performance.musiconn.de/work/studien-selbstspielklavier-nr-7-transkription-mikhashoff-yvar-nancarrow-conlon>,
         <https://performance.musiconn.de/work/studien-selbstspielklavier-nr-9-transkription-mikhashoff-yvar-nancarrow-conlon>,
-        <https://performance.musiconn.de/work/stuecke-orch-nr-2-nancarrow-conlon>,
-        <https://performance.musiconn.de/work/the-country-that-gave-the-freedom-symbol-to-america-coleman-ornette>,
-        <https://viaf.org/viaf/214745904> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4433695-0>,
-        <https://viaf.org/viaf/239180838> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/214745904>,
-        <https://viaf.org/viaf/239180838> .
+        <https://performance.musiconn.de/work/the-country-that-gave-the-freedom-symbol-to-america-coleman-ornette> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214745904> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/239180838> a nfdicore:NFDI_0001010 .
 

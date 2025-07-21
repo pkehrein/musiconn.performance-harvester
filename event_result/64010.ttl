@@ -1,50 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300080476> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300164696> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30018218X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30019496X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300446039> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/uni-tournee-5-84-pumpwerk-wilhelmshaven-1984-05-09-20-30> ] .
 
-<https://performance.musiconn.de/event/uni-tournee-5-84-pumpwerk-wilhelmshaven-1984-05-09-20-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/uni-tournee-5-84-pumpwerk-wilhelmshaven-1984-05-09-20-30> a cto:CTO_0001005 ;
     rdfs:label "Uni-Tournee 5/84, Pumpwerk (Wilhelmshaven), 9.5.1984, 20:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/uni-tournee-1984-ensemble-modern-ensemble-der-gesellschaft-fuer-neue-musik> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1984-05-09T20:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1984-05-09T20:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300080476>,
-        <https://d-nb.info/gnd/300164696>,
-        <https://d-nb.info/gnd/30018218X>,
-        <https://d-nb.info/gnd/30019496X>,
-        <https://d-nb.info/gnd/300446039>,
-        <https://d-nb.info/gnd/3008405-2> ;
-    cto:itemOf <https://performance.musiconn.de/series/uni-tournee-1984-ensemble-modern-ensemble-der-gesellschaft-fuer-neue-musik> ;
-    cto:relatedItem <https://d-nb.info/gnd/300080476>,
-        <https://d-nb.info/gnd/300164696>,
-        <https://d-nb.info/gnd/30018218X>,
-        <https://d-nb.info/gnd/30019496X>,
-        <https://d-nb.info/gnd/300446039>,
-        <https://performance.musiconn.de/source/uni-tournee-ensemble-modern-ensemble-der-gesellschaft-fuer-neue-musik>,
-        <https://performance.musiconn.de/work/entrance-konrad-bernd>,
-        <https://performance.musiconn.de/work/folk-songs-berio-luciano>,
-        <https://performance.musiconn.de/work/maersche-um-den-sieg-zu-verfehlen-kagel-mauricio>,
-        <https://performance.musiconn.de/work/octandre-varese-edgard>,
-        <https://performance.musiconn.de/work/under-neonlight-1-mueller-siemens-detlev>,
-        <https://viaf.org/viaf/174142074>,
-        <https://viaf.org/viaf/176206029>,
-        <https://viaf.org/viaf/176814161>,
-        <https://viaf.org/viaf/188273149>,
-        <https://viaf.org/viaf/278415865> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/pumpwerk-wilhelmshaven> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/174142074>,
-        <https://viaf.org/viaf/176206029>,
-        <https://viaf.org/viaf/176814161>,
-        <https://viaf.org/viaf/188273149>,
-        <https://viaf.org/viaf/278415865> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/pumpwerk-wilhelmshaven> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176814161> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176206029> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/278415865> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300446039> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174142074> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30018218X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30019496X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300164696> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188273149> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300080476> ],
+        <https://performance.musiconn.de/source/uni-tournee-ensemble-modern-ensemble-der-gesellschaft-fuer-neue-musik> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174142074> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176206029> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176814161> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188273149> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/278415865> a nfdicore:NFDI_0001010 .
 

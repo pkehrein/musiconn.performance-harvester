@@ -1,49 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1060530414> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1137286792> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300087713> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300087721> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/einmaliges-operetten-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1950-01-07> ] .
 
-<https://performance.musiconn.de/event/einmaliges-operetten-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1950-01-07> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/einmaliges-operetten-konzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1950-01-07> a cto:CTO_0001005 ;
     rdfs:label "Einmaliges Operetten-Konzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 7.1.1950" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1949-1950> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1950-01-07" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1950-01-07" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1060530414>,
-        <https://d-nb.info/gnd/1137286792>,
-        <https://d-nb.info/gnd/300087713>,
-        <https://d-nb.info/gnd/300087721> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1949-1950> ;
-    cto:relatedItem <https://d-nb.info/gnd/1060530414>,
-        <https://d-nb.info/gnd/1137286792>,
-        <https://d-nb.info/gnd/300087713>,
-        <https://d-nb.info/gnd/300087721>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214738524> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300087721> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/72150172740700180003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300087713> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182760125> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311448921> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1060530414> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1137286792> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/bukolische-suite-kuenneke-eduard>,
-        <https://performance.musiconn.de/work/der-vetter-aus-dingsda-ich-bin-nur-ein-armer-wandergesell-kuenneke-eduard>,
-        <https://performance.musiconn.de/work/der-vetter-aus-dingsda-strahlender-mond-kuenneke-eduard>,
-        <https://performance.musiconn.de/work/die-lockende-flammet-ich-traeume-mit-offenen-augen-kuenneke-eduard>,
         <https://performance.musiconn.de/work/die-wunderbare-la-mervilleuse-ballettwalzer-aus-der-gleichnamigen-operette-kuenneke-eduard>,
         <https://performance.musiconn.de/work/ein-liebeslied-suess-lacht-mir-dein-mund-kuenneke-eduard>,
         <https://performance.musiconn.de/work/ein-liebeslied-zwei-sterne-kuenneke-eduard>,
         <https://performance.musiconn.de/work/hochzeit-mit-erika-das-herz-braucht-etwas-sonnenschein-kuenneke-eduard>,
         <https://performance.musiconn.de/work/melodienfolge-aus-der-operette-die-glueckliche-reise-kuenneke-eduard>,
         <https://performance.musiconn.de/work/robins-ende-ouvertuere-kuenneke-eduard>,
-        <https://performance.musiconn.de/work/taenzerische-suite-kuenneke-eduard>,
-        <https://performance.musiconn.de/work/zwei-intermezzi-fuer-grosses-orchester-aus-a-coeur-as-b-die-grosse-suenderin-kuenneke-eduard>,
-        <https://viaf.org/viaf/182760125>,
-        <https://viaf.org/viaf/214738524>,
-        <https://viaf.org/viaf/311448921>,
-        <https://viaf.org/viaf/72150172740700180003> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/182760125>,
-        <https://viaf.org/viaf/214738524>,
-        <https://viaf.org/viaf/311448921>,
-        <https://viaf.org/viaf/72150172740700180003> .
+        <https://performance.musiconn.de/work/zwei-intermezzi-fuer-grosses-orchester-aus-a-coeur-as-b-die-grosse-suenderin-kuenneke-eduard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182760125> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214738524> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311448921> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/72150172740700180003> a nfdicore:NFDI_0001010 .
 

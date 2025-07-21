@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4058282-6> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/die-unglueckliche-liebe-des-tapferen-jasons-stuttgart-1698-00-00> ] .
 
-<https://performance.musiconn.de/event/die-unglueckliche-liebe-des-tapferen-jasons-stuttgart-1698-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/die-unglueckliche-liebe-des-tapferen-jasons-stuttgart-1698-00-00> a cto:CTO_0001005 ;
     rdfs:label "Die unglückliche Liebe des tapferen Jasons, Stuttgart, 1698" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1698-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1698-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4058282-6> ;
-    cto:relatedItem <https://performance.musiconn.de/source/krauss-1908>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/150032508> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4058282-6> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/krauss-1908>,
         <https://performance.musiconn.de/source/sittard-1890>,
         <https://performance.musiconn.de/source/textquelle-fuer-die-unglueckliche-liebe-des-tapferen-jasons>,
         <https://performance.musiconn.de/work/die-unglueckliche-liebe-des-tapferen-jasons-fassung-kusser-johann-sigismund> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4058282-6>,
-        <https://viaf.org/viaf/150032508> ;
-    cto:viaf <https://viaf.org/viaf/150032508> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/150032508> a nfdicore:NFDI_0001010 .
 

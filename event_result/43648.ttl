@@ -4,30 +4,37 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4408780-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/musik-aus-der-synagoge-und-der-juedischen-tradition-des-19-jahrhunderts-hebraeische-und-jiddische-folklore-apostelkirche-muenster-westf-1990-09-27-20-00> ] .
 
-<https://performance.musiconn.de/event/musik-aus-der-synagoge-und-der-juedischen-tradition-des-19-jahrhunderts-hebraeische-und-jiddische-folklore-apostelkirche-muenster-westf-1990-09-27-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/musik-aus-der-synagoge-und-der-juedischen-tradition-des-19-jahrhunderts-hebraeische-und-jiddische-folklore-apostelkirche-muenster-westf-1990-09-27-20-00> a cto:CTO_0001005 ;
     rdfs:label "Musik aus der Synagoge und der jüdischen Tradition des 19. Jahrhunderts - Hebräische und jiddische Folklore, Apostelkirche Münster (Westf), 27.9.1990, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1990-09-27T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1990-09-27T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4408780-9>,
-        <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+        <https://performance.musiconn.de/corporation/gesellschaft-fuer-christlich-juedische-zusammenarbeit-muenster> ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4408780-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/235206232> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/einladung-konzert-27-september-1990>,
         <https://performance.musiconn.de/source/m-pfuetzenreuter-ein-ungewoehnliches-musikerlebnis-mit-dem-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/plakat-konzert-27-september-1990>,
         <https://performance.musiconn.de/source/robert-schuppert-wirken-im-sinne-von-lessings-ring-parabel-bewunderung-fuer-den-leipziger-synagogalchor-auf-einer-tournee-die-ihn-in-sieben-westdeutsche-staedte-fuehrte>,
         <https://performance.musiconn.de/source/synagogalchor-brachte-juedische-musik-in-romantischem-gewand-saenger-aus-leipzig-veranstalteten-konzert-in-der-apostelkirche> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4408780-9>,
-        <https://viaf.org/viaf/235206232> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://performance.musiconn.de/corporation/gesellschaft-fuer-christlich-juedische-zusammenarbeit-muenster>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770>,
-        <https://viaf.org/viaf/235206232> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/235206232> a nfdicore:NFDI_0001010 .
 

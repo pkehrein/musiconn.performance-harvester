@@ -4,19 +4,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/tvorceskij-vecer-olesja-s-cisko-i-borisa-v-saveleva-dom-kompozitorov-sankt-petersburg-1961-02-27> ] .
 
-<https://performance.musiconn.de/event/tvorceskij-vecer-olesja-s-cisko-i-borisa-v-saveleva-dom-kompozitorov-sankt-petersburg-1961-02-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/tvorceskij-vecer-olesja-s-cisko-i-borisa-v-saveleva-dom-kompozitorov-sankt-petersburg-1961-02-27> a cto:CTO_0001005 ;
     rdfs:label "Tvorčeskij večer Olesja S. Čiško i Borisa V. Savel'eva, Dom kompozitorov (Sankt Petersburg), 27.2.1961" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1961-02-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1961-02-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1200899989> ;
-    cto:relatedItem <https://performance.musiconn.de/source/leningrader-komponistenhaus-1961-27-februar>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/leningrader-komponistenhaus-1961-27-februar>,
         <https://performance.musiconn.de/work/aprel-cisko-oles-s>,
         <https://performance.musiconn.de/work/blesnet-li-den-cisko-oles-s>,
         <https://performance.musiconn.de/work/farforovaja-caska-cisko-oles-s>,
@@ -29,7 +32,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/stuecke-violoncello-cisko-oles-s>,
         <https://performance.musiconn.de/work/suiten-blaeserquartett-savelev-boris-v>,
         <https://performance.musiconn.de/work/ty-ne-stoj-pod-oknom-cisko-oles-s> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1200899989>,
-        <https://viaf.org/viaf/385157583849933970005> ;
-    cto:viaf <https://viaf.org/viaf/385157583849933970005> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
 

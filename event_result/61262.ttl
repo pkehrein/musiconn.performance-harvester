@@ -1,43 +1,59 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300005393> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300202415> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30026044X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4050739-7> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4530309-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/opus-1991-rotterdam-1991-11-18-20-15> ] .
 
-<https://performance.musiconn.de/event/opus-1991-rotterdam-1991-11-18-20-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/opus-1991-rotterdam-1991-11-18-20-15> a cto:CTO_0001005 ;
     rdfs:label "Opus 1991, Rotterdam, 18.11.1991, 20:15" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1991-11-18T20:15:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1991-11-18T20:15:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300005393>,
-        <https://d-nb.info/gnd/300202415>,
-        <https://d-nb.info/gnd/30026044X>,
-        <https://d-nb.info/gnd/4050739-7>,
-        <https://d-nb.info/gnd/4530309-5> ;
-    cto:relatedItem <https://d-nb.info/gnd/300005393>,
-        <https://d-nb.info/gnd/300202415>,
-        <https://d-nb.info/gnd/30026044X>,
-        <https://d-nb.info/gnd/4530309-5>,
-        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-6-programmhefte-kammerorchester-carl-philipp-emanuel-bach-1990-1992>,
-        <https://performance.musiconn.de/work/die-brandenburgischen-konzerte-nr-3-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/galimathias-musicum-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-82-87-nr-82-c-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/sinfonien-wq-179-es-dur-bach-carl-philipp-emanuel>,
-        <https://viaf.org/viaf/174590426>,
-        <https://viaf.org/viaf/185564041>,
-        <https://viaf.org/viaf/190417753>,
-        <https://viaf.org/viaf/209865397> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4050739-7>,
-        <https://viaf.org/viaf/123139768> ;
-    cto:viaf <https://viaf.org/viaf/123139768>,
-        <https://viaf.org/viaf/174590426>,
-        <https://viaf.org/viaf/185564041>,
-        <https://viaf.org/viaf/190417753>,
-        <https://viaf.org/viaf/209865397> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/123139768> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4050739-7> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190417753> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300005393> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209865397> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30026044X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4530309-5> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174590426> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185564041> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300202415> ],
+        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-6-programmhefte-kammerorchester-carl-philipp-emanuel-bach-1990-1992> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/123139768> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174590426> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185564041> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190417753> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209865397> a nfdicore:NFDI_0001010 .
 

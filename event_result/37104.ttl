@@ -1,57 +1,80 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1180640128> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300042205> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141734> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300272561> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30027257X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300283776> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300283784> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30038114X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzert-konzert-und-ballhaus-tivoli-freiberg-1979-06-28-20-00> ] .
 
-<https://performance.musiconn.de/event/sonderkonzert-konzert-und-ballhaus-tivoli-freiberg-1979-06-28-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzert-konzert-und-ballhaus-tivoli-freiberg-1979-06-28-20-00> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert, Konzert- und Ballhaus Tivoli (Freiberg), 28.6.1979, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1979-06-28T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1979-06-28T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1180640128>,
-        <https://d-nb.info/gnd/300042205>,
-        <https://d-nb.info/gnd/300141734>,
-        <https://d-nb.info/gnd/300272561>,
-        <https://d-nb.info/gnd/30027257X>,
-        <https://d-nb.info/gnd/300283776>,
-        <https://d-nb.info/gnd/300283784>,
-        <https://d-nb.info/gnd/30038114X> ;
-    cto:relatedItem <https://d-nb.info/gnd/300042205>,
-        <https://d-nb.info/gnd/300141734>,
-        <https://d-nb.info/gnd/300272561>,
-        <https://d-nb.info/gnd/30027257X>,
-        <https://d-nb.info/gnd/300283776>,
-        <https://d-nb.info/gnd/300283784>,
-        <https://d-nb.info/gnd/30038114X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1180640128> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/6869155286654387180002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30038114X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174989932> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141734> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300042205> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194737360> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196880483> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177470087> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206842181> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195811785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300283776> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300272561> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300283784> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30027257X> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/das-baechlein-strauss-richard>,
-        <https://performance.musiconn.de/work/gedichte-aus-letzte-blaetter-von-hermann-von-gilm-allerseelen-fassung-singstimme-orchester-strauss-richard>,
-        <https://performance.musiconn.de/work/la-mer-debussy-claude>,
-        <https://performance.musiconn.de/work/lieder-aus-quotletzte-blaetterquot-von-hermann-von-gilm-zueignung-fassung-singst-orch-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-op-27-morgen-fassung-singst-orch-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-op-32-liebeshymnus-singst-orch-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-op-37-meinem-kinde-fassung-singst-orch-strauss-richard>,
-        <https://performance.musiconn.de/work/sinfonien-d-200-d-dur-schubert-franz>,
-        <https://viaf.org/viaf/174989932>,
-        <https://viaf.org/viaf/177470087>,
-        <https://viaf.org/viaf/194737360>,
-        <https://viaf.org/viaf/195811785>,
-        <https://viaf.org/viaf/196880483>,
-        <https://viaf.org/viaf/206842181> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1180640128>,
-        <https://viaf.org/viaf/6869155286654387180002> ;
-    cto:viaf <https://viaf.org/viaf/174989932>,
-        <https://viaf.org/viaf/177470087>,
-        <https://viaf.org/viaf/194737360>,
-        <https://viaf.org/viaf/195811785>,
-        <https://viaf.org/viaf/196880483>,
-        <https://viaf.org/viaf/206842181>,
-        <https://viaf.org/viaf/6869155286654387180002> .
+        <https://performance.musiconn.de/work/gedichte-aus-letzte-blaetter-von-hermann-von-gilm-allerseelen-fassung-singstimme-orchester-strauss-richard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174989932> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177470087> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194737360> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195811785> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196880483> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206842181> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/6869155286654387180002> a nfdicore:NFDI_0001010 .
 

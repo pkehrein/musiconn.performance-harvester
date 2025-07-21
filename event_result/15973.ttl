@@ -1,70 +1,98 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1051857082> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1070114405> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300167083> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300206143> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300529066> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300877641> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/301005834> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7619458-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1884-11-18> ] .
 
-<https://performance.musiconn.de/event/3-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1884-11-18> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1884-11-18> a cto:CTO_0001005 ;
     rdfs:label "3. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 18.11.1884" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1884-1885> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1884-11-18" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1884-11-18" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1051857082>,
-        <https://d-nb.info/gnd/1070114405>,
-        <https://d-nb.info/gnd/300167083>,
-        <https://d-nb.info/gnd/300206143>,
-        <https://d-nb.info/gnd/300529066>,
-        <https://d-nb.info/gnd/300877641>,
-        <https://d-nb.info/gnd/301005834>,
-        <https://d-nb.info/gnd/4381134-6>,
-        <https://d-nb.info/gnd/7619458-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1884-1885> ;
-    cto:relatedItem <https://d-nb.info/gnd/1051857082>,
-        <https://d-nb.info/gnd/1070114405>,
-        <https://d-nb.info/gnd/300167083>,
-        <https://d-nb.info/gnd/300206143>,
-        <https://d-nb.info/gnd/300529066>,
-        <https://d-nb.info/gnd/300877641>,
-        <https://d-nb.info/gnd/301005834>,
-        <https://d-nb.info/gnd/7619458-9>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300877641> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1070114405> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/292927791> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192585371> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315579525> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197674478> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179823025> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300167083> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301005834> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7619458-9> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300206143> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1051857082> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204603217> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175620990> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189341684> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300529066> ],
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
         <https://performance.musiconn.de/work/am-felsenborn-reinecke-carl>,
         <https://performance.musiconn.de/work/das-erste-lied-grammann-carl>,
-        <https://performance.musiconn.de/work/euetden-violoncello-klavier-op-55-spinnlied-popper-david>,
-        <https://performance.musiconn.de/work/gesaenge-aus-dem-spanischen-liederbuch-op-21-und-schlaefst-du-jensen-adolf>,
-        <https://performance.musiconn.de/work/gesaenge-op-86-die-liebende-schreibt-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-46-a-moll-vieuxtemps-henri>,
         <https://performance.musiconn.de/work/morceaux-vc-kl-op-36-serenade-godard-benjamin>,
-        <https://performance.musiconn.de/work/morceaux-vc-kl-op-36-sur-le-lac-godard-benjamin>,
-        <https://performance.musiconn.de/work/ouvertuere-zu-einem-trauerspiel-bargiel-woldemar>,
-        <https://performance.musiconn.de/work/romanzen-und-balladen-op-64-die-soldatenbraut-schumann-robert>,
-        <https://performance.musiconn.de/work/scheideblick-klengel-paul>,
-        <https://performance.musiconn.de/work/sinfonien-nr-3-op-37-d-dur-klughardt-august>,
-        <https://viaf.org/viaf/175620990>,
-        <https://viaf.org/viaf/179823025>,
-        <https://viaf.org/viaf/189341684>,
-        <https://viaf.org/viaf/192585371>,
-        <https://viaf.org/viaf/197674478>,
-        <https://viaf.org/viaf/204603217>,
-        <https://viaf.org/viaf/292927791>,
-        <https://viaf.org/viaf/315579525> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/175620990>,
-        <https://viaf.org/viaf/179823025>,
-        <https://viaf.org/viaf/189341684>,
-        <https://viaf.org/viaf/192585371>,
-        <https://viaf.org/viaf/197674478>,
-        <https://viaf.org/viaf/204603217>,
-        <https://viaf.org/viaf/242717024>,
-        <https://viaf.org/viaf/292927791>,
-        <https://viaf.org/viaf/315579525> .
+        <https://performance.musiconn.de/work/scheideblick-klengel-paul> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175620990> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179823025> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189341684> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192585371> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197674478> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204603217> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/292927791> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315579525> a nfdicore:NFDI_0001010 .
 

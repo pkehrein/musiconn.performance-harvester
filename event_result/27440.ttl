@@ -1,44 +1,56 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30001502X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033362> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300048122> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300718411> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1900-03-15> ] .
 
-<https://performance.musiconn.de/event/philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1900-03-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1900-03-15> a cto:CTO_0001005 ;
     rdfs:label "Philharmonisches Konzert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 15.3.1900" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1899-1900> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1900-03-15" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1900-03-15" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30001502X>,
-        <https://d-nb.info/gnd/300033362>,
-        <https://d-nb.info/gnd/300048122>,
-        <https://d-nb.info/gnd/300718411> ;
-    cto:itemOf <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1899-1900> ;
-    cto:relatedItem <https://d-nb.info/gnd/30001502X>,
-        <https://d-nb.info/gnd/300033362>,
-        <https://d-nb.info/gnd/300048122>,
-        <https://d-nb.info/gnd/300718411>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185679071> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001502X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182059092> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033362> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300048122> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300718411> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204580748> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184260139> ],
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
-        <https://performance.musiconn.de/work/fantaisie-norvegienne-lalo-edouard>,
         <https://performance.musiconn.de/work/idylle-floersheim-otto>,
         <https://performance.musiconn.de/work/konzerte-klavier-orchester-g-moll-kranich-alvin>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-cs-54-d-dur-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/ouvertuere-zum-trauerspiel-coriolan-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-b-178-e-moll-dvorak-antonin>,
-        <https://performance.musiconn.de/work/ungarische-taenze-auswahl-fassung-violine-klavier-brahms-johannes>,
-        <https://viaf.org/viaf/182059092>,
-        <https://viaf.org/viaf/184260139>,
-        <https://viaf.org/viaf/185679071>,
-        <https://viaf.org/viaf/204580748> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/182059092>,
-        <https://viaf.org/viaf/184260139>,
-        <https://viaf.org/viaf/185679071>,
-        <https://viaf.org/viaf/204580748> .
+        <https://performance.musiconn.de/work/ungarische-taenze-auswahl-fassung-violine-klavier-brahms-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182059092> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184260139> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185679071> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204580748> a nfdicore:NFDI_0001010 .
 

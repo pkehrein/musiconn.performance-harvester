@@ -1,43 +1,56 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300002386> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300293690> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30092951X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4035206-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-leipzig-1984-12-13> ] .
 
-<https://performance.musiconn.de/event/konzert-leipzig-1984-12-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-leipzig-1984-12-13> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Leipzig, 13.12.1984" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1984-12-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1984-12-13" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300002386>,
-        <https://d-nb.info/gnd/300293690>,
-        <https://d-nb.info/gnd/30092951X>,
-        <https://d-nb.info/gnd/4035206-7> ;
-    cto:relatedItem <https://d-nb.info/gnd/300002386>,
-        <https://d-nb.info/gnd/300293690>,
-        <https://d-nb.info/gnd/30092951X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4035206-7> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154310911> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185725976> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30092951X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300002386> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300293690> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197648188> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181031602> ],
         <https://performance.musiconn.de/source/motettenbuch-1984>,
         <https://performance.musiconn.de/work/der-heiland-ist-geboren-weismann-wilhelm>,
-        <https://performance.musiconn.de/work/geistliche-chormusik-o-lieber-herre-gott-wecke-uns-auf-schuetz-heinrich>,
         <https://performance.musiconn.de/work/kindelein-zart-trexler-georg>,
         <https://performance.musiconn.de/work/maria-durch-ein-dornwald-ging-lenk-wolfgang>,
-        <https://performance.musiconn.de/work/neue-liebliche-und-zierliche-intraden-teil-1-mein-schoenste-zier-und-kleinod-altenburg-michael>,
-        <https://performance.musiconn.de/work/weihnachtslieder-die-koenige-cornelius-peter>,
         <https://performance.musiconn.de/work/weihnachtspastorale-der-hirt-bleischmidt-curt>,
-        <https://performance.musiconn.de/work/wie-soll-ich-dich-empfangen-chorsatz-stoetzner-christian>,
-        <https://viaf.org/viaf/181031602>,
-        <https://viaf.org/viaf/185725976>,
-        <https://viaf.org/viaf/197648188> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4035206-7>,
-        <https://viaf.org/viaf/154310911> ;
-    cto:viaf <https://viaf.org/viaf/154310911>,
-        <https://viaf.org/viaf/181031602>,
-        <https://viaf.org/viaf/185725976>,
-        <https://viaf.org/viaf/197648188> .
+        <https://performance.musiconn.de/work/wie-soll-ich-dich-empfangen-chorsatz-stoetzner-christian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154310911> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181031602> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185725976> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197648188> a nfdicore:NFDI_0001010 .
 

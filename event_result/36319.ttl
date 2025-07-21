@@ -1,33 +1,43 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300033842> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102666> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4537444-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/oesterreich-schweiz-1973-spreitenbach-1973-03-05> ] .
 
-<https://performance.musiconn.de/event/oesterreich-schweiz-1973-spreitenbach-1973-03-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/oesterreich-schweiz-1973-spreitenbach-1973-03-05> a cto:CTO_0001005 ;
     rdfs:label "Österreich/ Schweiz 1973, Spreitenbach, 5.3.1973" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1973-03-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1973-03-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300033842>,
-        <https://d-nb.info/gnd/300102666>,
-        <https://d-nb.info/gnd/4537444-2> ;
-    cto:relatedItem <https://d-nb.info/gnd/300033842>,
-        <https://d-nb.info/gnd/300102666>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/sinfonien-cs-27-h-moll-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/sinfonien-mwv-n-16-a-dur-mendelssohn-bartholdy-felix>,
-        <https://viaf.org/viaf/175005823>,
-        <https://viaf.org/viaf/175810435> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4537444-2>,
-        <https://viaf.org/viaf/237443686> ;
-    cto:viaf <https://viaf.org/viaf/175005823>,
-        <https://viaf.org/viaf/175810435>,
-        <https://viaf.org/viaf/237443686> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237443686> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4537444-2> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175005823> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102666> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175810435> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033842> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175005823> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175810435> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237443686> a nfdicore:NFDI_0001010 .
 

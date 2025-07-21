@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300025653> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026692> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026897> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027311> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/11-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1901-03-04> ] .
 
-<https://performance.musiconn.de/event/11-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1901-03-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/11-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1901-03-04> a cto:CTO_0001005 ;
     rdfs:label "11. Philharmonisches Konzert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 4.3.1901" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1900-1901> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1901-03-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1901-03-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300025653>,
-        <https://d-nb.info/gnd/300026692>,
-        <https://d-nb.info/gnd/300026897>,
-        <https://d-nb.info/gnd/300027311> ;
-    cto:itemOf <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1900-1901> ;
-    cto:relatedItem <https://d-nb.info/gnd/300025653>,
-        <https://d-nb.info/gnd/300026692>,
-        <https://d-nb.info/gnd/300026897>,
-        <https://d-nb.info/gnd/300027311>,
-        <https://performance.musiconn.de/source/musikalisches-wochenblatt-mw>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-2-op-83-b-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/rhapsodien-alt-maennerchor-orchester-op-53-brahms-johannes>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-98-e-moll-brahms-johannes>,
-        <https://performance.musiconn.de/work/variationen-ueber-ein-thema-von-joseph-haydn-brahms-johannes>,
-        <https://viaf.org/viaf/182661476>,
-        <https://viaf.org/viaf/194731012>,
-        <https://viaf.org/viaf/202936453>,
-        <https://viaf.org/viaf/311579680> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/182661476>,
-        <https://viaf.org/viaf/194731012>,
-        <https://viaf.org/viaf/202936453>,
-        <https://viaf.org/viaf/311579680> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026897> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182661476> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026692> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194731012> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311579680> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025653> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202936453> ],
+        <https://performance.musiconn.de/source/musikalisches-wochenblatt-mw> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182661476> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194731012> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202936453> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311579680> a nfdicore:NFDI_0001010 .
 

@@ -1,31 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30001578X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300158572> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-sonntags-konzert-alte-oper-frankfurt-a-main-grosser-saal-2003-11-16-11-00> ] .
 
-<https://performance.musiconn.de/event/3-sonntags-konzert-alte-oper-frankfurt-a-main-grosser-saal-2003-11-16-11-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-sonntags-konzert-alte-oper-frankfurt-a-main-grosser-saal-2003-11-16-11-00> a cto:CTO_0001005 ;
     rdfs:label "3. Sonntags-Konzert, Alte Oper (Frankfurt a. Main). Großer Saal, 16.11.2003, 11:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2004-2005> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2003-11-16T11:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2003-11-16T11:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30001578X>,
-        <https://d-nb.info/gnd/300158572> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2004-2005> ;
-    cto:relatedItem <https://d-nb.info/gnd/30001578X>,
-        <https://d-nb.info/gnd/300158572>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/messen-op-86-c-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/symphonie-de-psaumes-stravinsky-igor>,
-        <https://viaf.org/viaf/182361144>,
-        <https://viaf.org/viaf/199701248> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/182361144>,
-        <https://viaf.org/viaf/199701248> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300158572> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001578X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/199701248> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182361144> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182361144> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/199701248> a nfdicore:NFDI_0001010 .
 

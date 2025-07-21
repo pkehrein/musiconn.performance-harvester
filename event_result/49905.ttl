@@ -1,46 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300108753> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300243359> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300396236> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300741898> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7588164-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-auffuehrungsabend-museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal-1965-05-26-20-00> ] .
 
-<https://performance.musiconn.de/event/4-auffuehrungsabend-museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal-1965-05-26-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-auffuehrungsabend-museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal-1965-05-26-20-00> a cto:CTO_0001005 ;
     rdfs:label "4. Aufführungsabend, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Steinsaal, 26.5.1965, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/staatskapelle-dresden-spielzeit-1964-1965> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1965-05-26T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1965-05-26T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300108753>,
-        <https://d-nb.info/gnd/300243359>,
-        <https://d-nb.info/gnd/300396236>,
-        <https://d-nb.info/gnd/300741898>,
-        <https://d-nb.info/gnd/7588164-0> ;
-    cto:itemOf <https://performance.musiconn.de/series/staatskapelle-dresden-spielzeit-1964-1965> ;
-    cto:relatedItem <https://d-nb.info/gnd/300108753>,
-        <https://d-nb.info/gnd/300243359>,
-        <https://d-nb.info/gnd/300396236>,
-        <https://d-nb.info/gnd/300741898>,
-        <https://d-nb.info/gnd/7588164-0>,
-        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-1-staatskapelle-dresden-1955-1976>,
-        <https://performance.musiconn.de/work/konzerte-horn-orchester-kv-495-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/la-tentation-de-saint-antoine-egk-werner>,
-        <https://performance.musiconn.de/work/misero-o-sogno-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/musik-violine-orchester-egk-werner>,
-        <https://performance.musiconn.de/work/se-al-labbro-mio-non-credi-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/174249025>,
-        <https://viaf.org/viaf/183064757>,
-        <https://viaf.org/viaf/183317093>,
-        <https://viaf.org/viaf/203708313>,
-        <https://viaf.org/viaf/215931162> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal> ;
-    cto:viaf <https://viaf.org/viaf/174249025>,
-        <https://viaf.org/viaf/183064757>,
-        <https://viaf.org/viaf/183317093>,
-        <https://viaf.org/viaf/203708313>,
-        <https://viaf.org/viaf/215931162> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-steinsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174249025> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215931162> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7588164-0> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203708313> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183064757> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108753> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300396236> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183317093> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300243359> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300741898> ],
+        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-1-staatskapelle-dresden-1955-1976> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174249025> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183064757> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183317093> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203708313> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215931162> a nfdicore:NFDI_0001010 .
 

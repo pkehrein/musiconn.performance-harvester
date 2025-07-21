@@ -1,33 +1,43 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1221086324> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1221170791> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4386852-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-dom-st-nikolai-greifswald-1990-09-26> ] .
 
-<https://performance.musiconn.de/event/konzert-dom-st-nikolai-greifswald-1990-09-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-dom-st-nikolai-greifswald-1990-09-26> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Dom St. Nikolai (Greifswald), 26.9.1990" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1990-09-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1990-09-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1221086324>,
-        <https://d-nb.info/gnd/1221170791>,
-        <https://d-nb.info/gnd/4386852-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1221086324>,
-        <https://d-nb.info/gnd/1221170791>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1990-dresden-saechsische-landesbibliothek-dresden-1991>,
-        <https://performance.musiconn.de/work/komm-in-unsere-stolze-welt-schlenker-manfred>,
-        <https://performance.musiconn.de/work/turm-gesaenge-schlenker-manfred>,
-        <https://viaf.org/viaf/3066160546918510240006>,
-        <https://viaf.org/viaf/3442160546919710240002> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4386852-6>,
-        <https://viaf.org/viaf/129367885> ;
-    cto:viaf <https://viaf.org/viaf/129367885>,
-        <https://viaf.org/viaf/3066160546918510240006>,
-        <https://viaf.org/viaf/3442160546919710240002> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4386852-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/129367885> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3066160546918510240006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1221086324> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3442160546919710240002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1221170791> ],
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1990-dresden-saechsische-landesbibliothek-dresden-1991> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/129367885> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3066160546918510240006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3442160546919710240002> a nfdicore:NFDI_0001010 .
 

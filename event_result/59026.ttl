@@ -1,26 +1,31 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300728913> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4087295-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kammerabend-d-berliner-sinfonieorchesters-berlin-ost-1985-06-19> ] .
 
-<https://performance.musiconn.de/event/kammerabend-d-berliner-sinfonieorchesters-berlin-ost-1985-06-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kammerabend-d-berliner-sinfonieorchesters-berlin-ost-1985-06-19> a cto:CTO_0001005 ;
     rdfs:label "Kammerabend d. Berliner Sinfonieorchesters, Berlin (Ost), 19.6.1985" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1985-06-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1985-06-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300728913>,
-        <https://d-nb.info/gnd/4087295-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/300728913>,
-        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1985-und-nachtrag-1976-1984-dresden-saechsische-landesbibliothek-dresden-1986>,
-        <https://performance.musiconn.de/work/antipoden-buttkewitz-juergen> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4087295-6>,
-        <https://viaf.org/viaf/142472483> ;
-    cto:viaf <https://viaf.org/viaf/142472483> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4087295-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/142472483> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300728913> ],
+        <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1985-und-nachtrag-1976-1984-dresden-saechsische-landesbibliothek-dresden-1986> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/142472483> a nfdicore:NFDI_0001010 .
 

@@ -1,57 +1,78 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1297449886> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30009972X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156448> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156944> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170017> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171781> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30034984X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-1930-12-07-18-30> ] .
 
-<https://performance.musiconn.de/event/konzert-1930-12-07-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-1930-12-07-18-30> a cto:CTO_0001005 ;
     rdfs:label "Konzert, 7.12.1930, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1930-1931> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1930-12-07T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1930-12-07T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1297449886>,
-        <https://d-nb.info/gnd/30009972X>,
-        <https://d-nb.info/gnd/300156448>,
-        <https://d-nb.info/gnd/300156944>,
-        <https://d-nb.info/gnd/300170017>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/30034984X> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1930-1931> ;
-    cto:relatedItem <https://d-nb.info/gnd/1297449886>,
-        <https://d-nb.info/gnd/30009972X>,
-        <https://d-nb.info/gnd/300156448>,
-        <https://d-nb.info/gnd/300156944>,
-        <https://d-nb.info/gnd/300170017>,
-        <https://d-nb.info/gnd/300171781>,
-        <https://d-nb.info/gnd/30034984X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kaufmaennisches-vereinshaus-chemnitz> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180145376> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/240062855> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156448> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156944> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170017> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206835123> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30009972X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30034984X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175394382> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185346226> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309560042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1297449886> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/236980133> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171781> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/don-juan-strauss-richard>,
-        <https://performance.musiconn.de/work/japanisches-regenlied-marx-joseph>,
-        <https://performance.musiconn.de/work/lieder-op-27-caecilie-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-op-41-wiegenlied-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-folge-1-hat-dich-die-liebe-beruehrt-marx-joseph>,
-        <https://performance.musiconn.de/work/lohengrin-einsam-in-trueben-tagen-wagner-richard>,
-        <https://performance.musiconn.de/work/oberon-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/ouvertuere-zu-einem-lustspiel-von-shakespeare-scheinpflug-paul>,
-        <https://viaf.org/viaf/175394382>,
-        <https://viaf.org/viaf/180145376>,
-        <https://viaf.org/viaf/185346226>,
-        <https://viaf.org/viaf/206835123>,
-        <https://viaf.org/viaf/236980133>,
-        <https://viaf.org/viaf/240062855>,
-        <https://viaf.org/viaf/309560042> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kaufmaennisches-vereinshaus-chemnitz> ;
-    cto:viaf <https://viaf.org/viaf/175394382>,
-        <https://viaf.org/viaf/180145376>,
-        <https://viaf.org/viaf/185346226>,
-        <https://viaf.org/viaf/206835123>,
-        <https://viaf.org/viaf/236980133>,
-        <https://viaf.org/viaf/240062855>,
-        <https://viaf.org/viaf/309560042> .
+        <https://performance.musiconn.de/work/japanisches-regenlied-marx-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175394382> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180145376> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185346226> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206835123> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/236980133> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/240062855> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309560042> a nfdicore:NFDI_0001010 .
 

@@ -1,32 +1,40 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30002987X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300030029> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/bruckner-feier-gewerbehaus-dresden-gewerbehaus-saal-1936-10-14-20-00> ] .
 
-<https://performance.musiconn.de/event/bruckner-feier-gewerbehaus-dresden-gewerbehaus-saal-1936-10-14-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/bruckner-feier-gewerbehaus-dresden-gewerbehaus-saal-1936-10-14-20-00> a cto:CTO_0001005 ;
     rdfs:label "Bruckner-Feier, Gewerbehaus (Dresden). Gewerbehaus-Saal, 14.10.1936, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1936-1937> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1936-10-14T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1936-10-14T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/30002987X>,
-        <https://d-nb.info/gnd/300030029> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1936-1937> ;
-    cto:relatedItem <https://d-nb.info/gnd/30002987X>,
-        <https://d-nb.info/gnd/300030029>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/psalm-150-bruckner-anton>,
-        <https://performance.musiconn.de/work/sinfonien-wab-109-d-moll-bruckner-anton>,
-        <https://viaf.org/viaf/180665760>,
-        <https://viaf.org/viaf/198522310> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/180665760>,
-        <https://viaf.org/viaf/198522310> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180665760> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30002987X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300030029> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198522310> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180665760> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198522310> a nfdicore:NFDI_0001010 .
 

@@ -1,28 +1,30 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1211992489> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kamernyj-koncert-24-april-1973-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1973-04-24> ] .
 
-<https://performance.musiconn.de/event/kamernyj-koncert-24-april-1973-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1973-04-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kamernyj-koncert-24-april-1973-gosudarstvennaja-akademiceskaja-kapella-sankt-petersburg-koncertnyj-zal-1973-04-24> a cto:CTO_0001005 ;
     rdfs:label "Kamernyj koncert (24. April 1973), Gosudarstvennaja akademičeskaja kapella (Sankt Petersburg) / Koncertnyj zal, 24.4.1973" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1973-04-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1973-04-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1211992489> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
-    cto:relatedItem <https://performance.musiconn.de/source/9-leningrader-fruehling-1973-uebersicht>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1211992489> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/9-leningrader-fruehling-1973-uebersicht>,
         <https://performance.musiconn.de/work/diptich-kladnickij-vladislav-ivanovic>,
         <https://performance.musiconn.de/work/konzerte-horn-kammerorchester-manevic-aleksandr-m>,
         <https://performance.musiconn.de/work/konzerte-klavier-kammerorchester-okunev-german-g>,
         <https://performance.musiconn.de/work/krasnaja-flejta-arzoumanov-valery>,
         <https://performance.musiconn.de/work/skomorochi-cetyre-skomorosi-pesni-gavrilin-valerij-a>,
         <https://performance.musiconn.de/work/veresk-voronina-tatjana-aleksandrovna> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1211992489> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
 

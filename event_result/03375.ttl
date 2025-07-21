@@ -1,54 +1,72 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1273380843> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015143> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029225> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300157436> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171528> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30023466X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1891-11-13-18-30> ] .
 
-<https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1891-11-13-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1891-11-13-18-30> a cto:CTO_0001005 ;
     rdfs:label "Drittes Museums-Concert, Großer Konzertsaal (Frankfurt a. M.), 13.11.1891, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1891-1892> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1891-11-13T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1891-11-13T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1273380843>,
-        <https://d-nb.info/gnd/300015143>,
-        <https://d-nb.info/gnd/300029225>,
-        <https://d-nb.info/gnd/300157436>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/30023466X> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1891-1892> ;
-    cto:relatedItem <https://d-nb.info/gnd/1273380843>,
-        <https://d-nb.info/gnd/300015143>,
-        <https://d-nb.info/gnd/300029225>,
-        <https://d-nb.info/gnd/300157436>,
-        <https://d-nb.info/gnd/300171528>,
-        <https://d-nb.info/gnd/30023466X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1273380843> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186109452> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207911987> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195810944> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157436> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029225> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4612166959213447160006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30023466X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174573522> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177811557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015143> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/der-freischuetz-ouvertuere-weber-carl-maria-von>,
         <https://performance.musiconn.de/work/gavotte-d-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-nr-3-op-58-d-moll-bruch-max>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-w-1-22-a-moll-nr-2-viotti-giovanni-battista>,
         <https://performance.musiconn.de/work/menuette-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/musik-zum-trauerspiel-egmont-von-johann-wolfgang-von-goethe-ouvertuere-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/praeludium-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-50-c-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/tod-und-verklaerung-strauss-richard>,
-        <https://viaf.org/viaf/174573522>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/186109452>,
-        <https://viaf.org/viaf/195810944>,
-        <https://viaf.org/viaf/207911987>,
-        <https://viaf.org/viaf/4612166959213447160006> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/174573522>,
-        <https://viaf.org/viaf/177811557>,
-        <https://viaf.org/viaf/186109452>,
-        <https://viaf.org/viaf/195810944>,
-        <https://viaf.org/viaf/207911987>,
-        <https://viaf.org/viaf/4612166959213447160006> .
+        <https://performance.musiconn.de/work/praeludium-bach-johann-sebastian> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174573522> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177811557> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186109452> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195810944> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207911987> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4612166959213447160006> a nfdicore:NFDI_0001010 .
 

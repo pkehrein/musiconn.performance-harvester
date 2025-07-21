@@ -1,31 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1160764816> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171528> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/festkonzert-staatstheater-dresden-grosses-haus-1965-10-20-11-00> ] .
 
-<https://performance.musiconn.de/event/festkonzert-staatstheater-dresden-grosses-haus-1965-10-20-11-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/festkonzert-staatstheater-dresden-grosses-haus-1965-10-20-11-00> a cto:CTO_0001005 ;
     rdfs:label "Festkonzert, Staatstheater (Dresden) / Großes Haus, 20.10.1965, 11:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1965-10-20T11:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1965-10-20T11:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1160764816>,
-        <https://d-nb.info/gnd/300171528> ;
-    cto:relatedItem <https://d-nb.info/gnd/1160764816>,
-        <https://d-nb.info/gnd/300171528>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/staatstheater-dresden-grosses-haus> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1160764816> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177811557> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175237605> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/der-freischuetz-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/heroische-ouvertuere-buettner-paul>,
-        <https://performance.musiconn.de/work/neue-deutsche-volkslieder-chor-orch-hymne-auf-die-udssr-eisler-hanns>,
-        <https://viaf.org/viaf/175237605>,
-        <https://viaf.org/viaf/177811557> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/staatstheater-dresden-grosses-haus> ;
-    cto:viaf <https://viaf.org/viaf/175237605>,
-        <https://viaf.org/viaf/177811557> .
+        <https://performance.musiconn.de/work/neue-deutsche-volkslieder-chor-orch-hymne-auf-die-udssr-eisler-hanns> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175237605> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177811557> a nfdicore:NFDI_0001010 .
 

@@ -1,23 +1,27 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1079422277> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vortragsabend-schweizerhoehe-1903-06-06-16-30> ] .
 
-<https://performance.musiconn.de/event/vortragsabend-schweizerhoehe-1903-06-06-16-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vortragsabend-schweizerhoehe-1903-06-06-16-30> a cto:CTO_0001005 ;
     rdfs:label "Vortragsabend, Schweizerhöhe, 6.6.1903, 16:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vortragsabend> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1903-06-06T16:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1903-06-06T16:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1079422277> ;
-    cto:itemOf <https://performance.musiconn.de/series/vortragsabend> ;
-    cto:relatedItem <https://d-nb.info/gnd/1079422277>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/schweizerhoehe> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1079422277> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/164144898753050291102> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
         <https://performance.musiconn.de/work/adagio-violoncello-d-dur-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/duette-hiller-ferdinand-von>,
@@ -27,11 +31,10 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/gang-nach-dem-stern>,
         <https://performance.musiconn.de/work/menuett-d-dur-bearbeitung-haendel-georg-friedrich>,
         <https://performance.musiconn.de/work/quartette-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/romanzen-violoncello-klavier-op-17-e-moll-goltermann-georg>,
         <https://performance.musiconn.de/work/sonaten-violoncello-klavier-op-19-a-moll-rubinstejn-anton-g>,
         <https://performance.musiconn.de/work/violinstueck-bohm-carl>,
-        <https://performance.musiconn.de/work/violinstueck-rehfeldt>,
-        <https://viaf.org/viaf/164144898753050291102> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/schweizerhoehe> ;
-    cto:viaf <https://viaf.org/viaf/164144898753050291102> .
+        <https://performance.musiconn.de/work/violinstueck-rehfeldt> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/164144898753050291102> a nfdicore:NFDI_0001010 .
 

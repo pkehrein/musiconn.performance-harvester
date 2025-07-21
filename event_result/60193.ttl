@@ -1,53 +1,66 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1268966428> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1268966932> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1269119958> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1269123068> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/126912398X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1269124870> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1269731920> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015992> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7656201-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-kammerabend-gemaeldegalerie-alte-meister-dresden-gobelinsaal-1969-10-14-20-00> ] .
 
-<https://performance.musiconn.de/event/2-kammerabend-gemaeldegalerie-alte-meister-dresden-gobelinsaal-1969-10-14-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-kammerabend-gemaeldegalerie-alte-meister-dresden-gobelinsaal-1969-10-14-20-00> a cto:CTO_0001005 ;
     rdfs:label "2. Kammerabend, Gemäldegalerie Alte Meister (Dresden) / Gobelinsaal, 14.10.1969, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/staatskapelle-dresden-spielzeit-1969-1970> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1969-10-14T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1969-10-14T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1268966428>,
-        <https://d-nb.info/gnd/1268966932>,
-        <https://d-nb.info/gnd/1269119958>,
-        <https://d-nb.info/gnd/1269123068>,
-        <https://d-nb.info/gnd/126912398X>,
-        <https://d-nb.info/gnd/1269124870>,
-        <https://d-nb.info/gnd/1269731920>,
-        <https://d-nb.info/gnd/300015992>,
-        <https://d-nb.info/gnd/7656201-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/staatskapelle-dresden-spielzeit-1969-1970> ;
-    cto:relatedItem <https://d-nb.info/gnd/1268966428>,
-        <https://d-nb.info/gnd/1268966932>,
-        <https://d-nb.info/gnd/1269119958>,
-        <https://d-nb.info/gnd/1269123068>,
-        <https://d-nb.info/gnd/126912398X>,
-        <https://d-nb.info/gnd/1269124870>,
-        <https://d-nb.info/gnd/1269731920>,
-        <https://d-nb.info/gnd/300015992>,
-        <https://d-nb.info/gnd/7656201-3>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/gemaeldegalerie-alte-meister-dresden-gobelinsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015992> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1269124870> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1269731920> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7656201-3> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4592166535896312880005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1268966428> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1268966932> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185089590> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/126912398X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1269119958> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1269123068> ],
         <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-1-staatskapelle-dresden-1955-1976>,
-        <https://performance.musiconn.de/work/14-arten-den-regen-zu-beschreiben-eisler-hanns>,
-        <https://performance.musiconn.de/work/bruennlein-und-wald-weismann-wilhelm>,
-        <https://performance.musiconn.de/work/der-blumengarten-asriel-andre>,
-        <https://performance.musiconn.de/work/heimatlied-meyer-ernst-hermann>,
-        <https://performance.musiconn.de/work/hirtenlied-griesbach-karl-rudi>,
-        <https://performance.musiconn.de/work/lieder-auf-worte-von-bertolt-brecht-vom-glueck-des-gebens-wagner-regeny-rudolf>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-op-74-es-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sonaten-violoncello-klavier-op-96-thilman-johannes-paul>,
-        <https://performance.musiconn.de/work/traumliedchen-wegener-heinz>,
-        <https://performance.musiconn.de/work/wanderlied-gerster-ottmar>,
-        <https://viaf.org/viaf/185089590>,
-        <https://viaf.org/viaf/4592166535896312880005> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/gemaeldegalerie-alte-meister-dresden-gobelinsaal> ;
-    cto:viaf <https://viaf.org/viaf/185089590>,
-        <https://viaf.org/viaf/4592166535896312880005> .
+        <https://performance.musiconn.de/work/heimatlied-meyer-ernst-hermann> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185089590> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4592166535896312880005> a nfdicore:NFDI_0001010 .
 

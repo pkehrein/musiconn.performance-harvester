@@ -1,55 +1,73 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1078986045> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015372> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015526> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109784> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300298277> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300361416> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-museums-concert-grosser-konzertsaal-frankfurt-a-m-1872-10-25-18-30> ] .
 
-<https://performance.musiconn.de/event/2-museums-concert-grosser-konzertsaal-frankfurt-a-m-1872-10-25-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-museums-concert-grosser-konzertsaal-frankfurt-a-m-1872-10-25-18-30> a cto:CTO_0001005 ;
     rdfs:label "2. Museums-Concert, Großer Konzertsaal (Frankfurt a. M.), 25.10.1872, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1872-1873> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1872-10-25T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1872-10-25T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1078986045>,
-        <https://d-nb.info/gnd/300015372>,
-        <https://d-nb.info/gnd/300015526>,
-        <https://d-nb.info/gnd/300109784>,
-        <https://d-nb.info/gnd/300298277>,
-        <https://d-nb.info/gnd/300361416> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1872-1873> ;
-    cto:relatedItem <https://d-nb.info/gnd/1078986045>,
-        <https://d-nb.info/gnd/300015372>,
-        <https://d-nb.info/gnd/300015526>,
-        <https://d-nb.info/gnd/300109784>,
-        <https://d-nb.info/gnd/300298277>,
-        <https://d-nb.info/gnd/300361416>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179005803> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015526> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/26144814243123563973> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425016> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300361416> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109784> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1078986045> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218089021> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300298277> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015372> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175409418> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/54145858139323022840> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/alfonso-und-estrella-ouvertuere-schubert-franz>,
         <https://performance.musiconn.de/work/cavatine-raff-joseph-joachim>,
-        <https://performance.musiconn.de/work/in-questa-tomba-oscura-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-61-d-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/non-temer-amato-bene-kv-505-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sehnsucht-h-340-hensel-fanny>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-167-g-moll-raff-joseph-joachim>,
         <https://performance.musiconn.de/work/ungarische-taenze-nr-1-fassung-violine-joachim-joseph>,
         <https://performance.musiconn.de/work/ungarische-taenze-nr-3-fassung-violine-joachim-joseph>,
-        <https://performance.musiconn.de/work/ungarische-taenze-nr-6-fassung-violine-joachim-joseph>,
-        <https://viaf.org/viaf/175409418>,
-        <https://viaf.org/viaf/179005803>,
-        <https://viaf.org/viaf/179425016>,
-        <https://viaf.org/viaf/218089021>,
-        <https://viaf.org/viaf/26144814243123563973>,
-        <https://viaf.org/viaf/54145858139323022840> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/175409418>,
-        <https://viaf.org/viaf/179005803>,
-        <https://viaf.org/viaf/179425016>,
-        <https://viaf.org/viaf/218089021>,
-        <https://viaf.org/viaf/26144814243123563973>,
-        <https://viaf.org/viaf/54145858139323022840> .
+        <https://performance.musiconn.de/work/ungarische-taenze-nr-6-fassung-violine-joachim-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175409418> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179005803> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179425016> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218089021> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/26144814243123563973> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/54145858139323022840> a nfdicore:NFDI_0001010 .
 

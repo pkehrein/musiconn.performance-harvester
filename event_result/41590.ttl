@@ -1,57 +1,75 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1179276086> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155581> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156944> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170823> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300601352> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30081786X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/grosses-sonderkonzert-froehliche-weihnachten-fuer-jung-und-alt-faunpalast-dresden-1927-01-02-18-00> ] .
 
-<https://performance.musiconn.de/event/grosses-sonderkonzert-froehliche-weihnachten-fuer-jung-und-alt-faunpalast-dresden-1927-01-02-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/grosses-sonderkonzert-froehliche-weihnachten-fuer-jung-und-alt-faunpalast-dresden-1927-01-02-18-00> a cto:CTO_0001005 ;
     rdfs:label "Großes Sonderkonzert (Fröhliche Weihnachten für Jung und Alt), Faunpalast (Dresden), 2.1.1927, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1926-1927> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1927-01-02T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1927-01-02T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1179276086>,
-        <https://d-nb.info/gnd/300155581>,
-        <https://d-nb.info/gnd/300156944>,
-        <https://d-nb.info/gnd/300170823>,
-        <https://d-nb.info/gnd/300601352>,
-        <https://d-nb.info/gnd/30081786X> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1926-1927> ;
-    cto:relatedItem <https://d-nb.info/gnd/1179276086>,
-        <https://d-nb.info/gnd/300155581>,
-        <https://d-nb.info/gnd/300156944>,
-        <https://d-nb.info/gnd/300170823>,
-        <https://d-nb.info/gnd/300601352>,
-        <https://d-nb.info/gnd/30081786X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/faunpalast-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1179276086> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2186155191925282440002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209301276> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176654601> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156944> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300601352> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30081786X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/236980133> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170823> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184285009> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155581> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185351206> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/alt-wiener-tanzweisen-liebesleid-kreisler-fritz>,
         <https://performance.musiconn.de/work/der-nussknacker-vier-charaktertaenze-tschaikowski-peter-i>,
         <https://performance.musiconn.de/work/fantasie-ueber-haensel-und-gretel-humperdinck-engelbert>,
-        <https://performance.musiconn.de/work/froehliche-weihnachten-koedel-ernst>,
         <https://performance.musiconn.de/work/frohe-weihnachten-roick-r>,
         <https://performance.musiconn.de/work/im-automatensalon-vollstedt-robert>,
-        <https://performance.musiconn.de/work/les-patineurs-waldteufel-emil>,
-        <https://performance.musiconn.de/work/liebesfreud-kreisler-fritz>,
-        <https://performance.musiconn.de/work/lieder-op-41-wiegenlied-strauss-richard>,
-        <https://performance.musiconn.de/work/tritsch-tratsch-polka-strauss-johann>,
         <https://performance.musiconn.de/work/walzer-auswahl-chopin-frederic>,
-        <https://performance.musiconn.de/work/wiener-volksmusik-komzak-karl>,
-        <https://viaf.org/viaf/176654601>,
-        <https://viaf.org/viaf/184285009>,
-        <https://viaf.org/viaf/185351206>,
-        <https://viaf.org/viaf/209301276>,
-        <https://viaf.org/viaf/2186155191925282440002>,
-        <https://viaf.org/viaf/236980133> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/faunpalast-dresden> ;
-    cto:viaf <https://viaf.org/viaf/176654601>,
-        <https://viaf.org/viaf/184285009>,
-        <https://viaf.org/viaf/185351206>,
-        <https://viaf.org/viaf/209301276>,
-        <https://viaf.org/viaf/2186155191925282440002>,
-        <https://viaf.org/viaf/236980133> .
+        <https://performance.musiconn.de/work/wiener-volksmusik-komzak-karl> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176654601> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184285009> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185351206> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209301276> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2186155191925282440002> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/236980133> a nfdicore:NFDI_0001010 .
 

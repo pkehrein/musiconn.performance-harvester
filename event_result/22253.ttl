@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4300889-6> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gottesdienst-nikolaikirche-leipzig-1884-05-18> ] .
 
-<https://performance.musiconn.de/event/gottesdienst-nikolaikirche-leipzig-1884-05-18> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gottesdienst-nikolaikirche-leipzig-1884-05-18> a cto:CTO_0001005 ;
     rdfs:label "Gottesdienst, Nikolaikirche (Leipzig), 18.5.1884" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1884-05-18" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1884-05-18" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4300889-6> ;
-    cto:relatedItem <https://performance.musiconn.de/source/motettenbuch-1884-85>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173652475> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4300889-6> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/motettenbuch-1884-85>,
         <https://performance.musiconn.de/work/singet-und-spielet-dem-herrn-op-45-rust-wilhelm> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4300889-6>,
-        <https://viaf.org/viaf/173652475> ;
-    cto:viaf <https://viaf.org/viaf/173652475> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/173652475> a nfdicore:NFDI_0001010 .
 

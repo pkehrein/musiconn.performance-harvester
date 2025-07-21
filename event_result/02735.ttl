@@ -1,55 +1,73 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300145403> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145586> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145594> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300245904> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300362722> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4530309-5> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-museums-concert-grosser-konzertsaal-frankfurt-a-m-1866-11-09-18-30> ] .
 
-<https://performance.musiconn.de/event/3-museums-concert-grosser-konzertsaal-frankfurt-a-m-1866-11-09-18-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-museums-concert-grosser-konzertsaal-frankfurt-a-m-1866-11-09-18-30> a cto:CTO_0001005 ;
     rdfs:label "3. Museums-Concert, Großer Konzertsaal (Frankfurt a. M.), 9.11.1866, 18:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1866-1867> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1866-11-09T18:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1866-11-09T18:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300145403>,
-        <https://d-nb.info/gnd/300145586>,
-        <https://d-nb.info/gnd/300145594>,
-        <https://d-nb.info/gnd/300245904>,
-        <https://d-nb.info/gnd/300362722>,
-        <https://d-nb.info/gnd/4530309-5> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1866-1867> ;
-    cto:relatedItem <https://d-nb.info/gnd/300145403>,
-        <https://d-nb.info/gnd/300145586>,
-        <https://d-nb.info/gnd/300145594>,
-        <https://d-nb.info/gnd/300245904>,
-        <https://d-nb.info/gnd/300362722>,
-        <https://d-nb.info/gnd/4530309-5>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183594412> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300362722> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145586> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174234794> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180458511> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145403> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4530309-5> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174590426> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300245904> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219935426> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175227043> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145594> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/abu-hassan-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/gesaenge-des-harfners-aus-wilhelm-meister-schubert-franz>,
         <https://performance.musiconn.de/work/iphigenie-en-aulide-rezitativ-und-arie-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-54-a-moll-schumann-robert>,
         <https://performance.musiconn.de/work/lieder-ohne-worte-unbekanntes-teilwerk-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/lieder-op-40-der-soldat-schumann-robert>,
-        <https://performance.musiconn.de/work/lieder-op-40-der-spielmann-schumann-robert>,
         <https://performance.musiconn.de/work/rosamunde-fuerstin-von-zypern-zwischenaktmusik-schubert-franz>,
-        <https://performance.musiconn.de/work/scherzo-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-82-87-nr-82-c-dur-haydn-joseph>,
-        <https://viaf.org/viaf/174234794>,
-        <https://viaf.org/viaf/174590426>,
-        <https://viaf.org/viaf/175227043>,
-        <https://viaf.org/viaf/180458511>,
-        <https://viaf.org/viaf/183594412>,
-        <https://viaf.org/viaf/219935426> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/grosser-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/174234794>,
-        <https://viaf.org/viaf/174590426>,
-        <https://viaf.org/viaf/175227043>,
-        <https://viaf.org/viaf/180458511>,
-        <https://viaf.org/viaf/183594412>,
-        <https://viaf.org/viaf/219935426> .
+        <https://performance.musiconn.de/work/scherzo-weber-carl-maria-von> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174234794> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174590426> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175227043> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180458511> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183594412> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219935426> a nfdicore:NFDI_0001010 .
 

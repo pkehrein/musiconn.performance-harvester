@@ -1,56 +1,78 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/114257198X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1166465594> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300016379> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145837> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300389574> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300389590> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4439652-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zwanzigstes-abonnement-concert-zweites-gewandhaus-leipzig-1891-03-05> ] .
 
-<https://performance.musiconn.de/event/zwanzigstes-abonnement-concert-zweites-gewandhaus-leipzig-1891-03-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zwanzigstes-abonnement-concert-zweites-gewandhaus-leipzig-1891-03-05> a cto:CTO_0001005 ;
     rdfs:label "Zwanzigstes Abonnement-Concert, Zweites Gewandhaus (Leipzig), 5.3.1891" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1891-03-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1891-03-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/114257198X>,
-        <https://d-nb.info/gnd/1166465594>,
-        <https://d-nb.info/gnd/300016379>,
-        <https://d-nb.info/gnd/300145837>,
-        <https://d-nb.info/gnd/300389574>,
-        <https://d-nb.info/gnd/300389590>,
-        <https://d-nb.info/gnd/4439652-1> ;
-    cto:relatedItem <https://d-nb.info/gnd/114257198X>,
-        <https://d-nb.info/gnd/1166465594>,
-        <https://d-nb.info/gnd/300016379>,
-        <https://d-nb.info/gnd/300145837>,
-        <https://d-nb.info/gnd/300389574>,
-        <https://d-nb.info/gnd/300389590>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264523828> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4439652-1> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1166465594> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145837> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182666899> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300389574> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179248872> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/114257198X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183903707> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016379> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300389590> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212878467> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185701412> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174833962> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
         <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
-        <https://performance.musiconn.de/work/attente-wagner-richard>,
-        <https://performance.musiconn.de/work/dors-mon-enfant-wagner-richard>,
-        <https://performance.musiconn.de/work/gedichte-op-35-stille-liebe-schumann-robert>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-51-sehnsucht-schumann-robert>,
-        <https://performance.musiconn.de/work/manfred-ouvertuere-schumann-robert>,
         <https://performance.musiconn.de/work/pietro-von-abano-aus-dunklen-wolken-es-lebt-in-meinem-herzen-spohr-louis>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-op-60-b-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonien-orgel-orchester-nr-1-guilmant-alexandre>,
-        <https://viaf.org/viaf/174833962>,
-        <https://viaf.org/viaf/179248872>,
-        <https://viaf.org/viaf/182666899>,
-        <https://viaf.org/viaf/183903707>,
-        <https://viaf.org/viaf/185701412>,
-        <https://viaf.org/viaf/212878467> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4439652-1>,
-        <https://viaf.org/viaf/264523828> ;
-    cto:viaf <https://viaf.org/viaf/174833962>,
-        <https://viaf.org/viaf/179248872>,
-        <https://viaf.org/viaf/182666899>,
-        <https://viaf.org/viaf/183903707>,
-        <https://viaf.org/viaf/185701412>,
-        <https://viaf.org/viaf/212878467>,
-        <https://viaf.org/viaf/264523828> .
+        <https://performance.musiconn.de/work/sinfonien-orgel-orchester-nr-1-guilmant-alexandre> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174833962> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179248872> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182666899> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183903707> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185701412> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212878467> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264523828> a nfdicore:NFDI_0001010 .
 

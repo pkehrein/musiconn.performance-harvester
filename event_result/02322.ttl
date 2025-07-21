@@ -1,26 +1,29 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/115674234X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/die-falsche-catalani-theater-auf-dem-linckeschen-bad-dresden-1828-09-02-18-00> ] .
 
-<https://performance.musiconn.de/event/die-falsche-catalani-theater-auf-dem-linckeschen-bad-dresden-1828-09-02-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/die-falsche-catalani-theater-auf-dem-linckeschen-bad-dresden-1828-09-02-18-00> a cto:CTO_0001005 ;
     rdfs:label "Die falsche Catalani, Theater auf dem Linckeschen Bad (Dresden), 2.9.1828, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/koeniglich-saechsisches-hoftheater-spielzeit-1828> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1828-09-02T20:15:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1828-09-02T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/115674234X> ;
-    cto:itemOf <https://performance.musiconn.de/series/koeniglich-saechsisches-hoftheater-spielzeit-1828> ;
-    cto:relatedItem <https://d-nb.info/gnd/115674234X>,
-        <https://performance.musiconn.de/source/koenigliches-hoftheater-theaterzettel-dresden>,
-        <https://performance.musiconn.de/work/die-falsche-primadonna-schuster-ignaz>,
-        <https://viaf.org/viaf/187271862> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/theater-auf-dem-linckeschen-bad-dresden> ;
-    cto:viaf <https://viaf.org/viaf/187271862> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/theater-auf-dem-linckeschen-bad-dresden> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/115674234X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/187271862> ],
+        <https://performance.musiconn.de/source/koenigliches-hoftheater-theaterzettel-dresden> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/187271862> a nfdicore:NFDI_0001010 .
 

@@ -1,57 +1,79 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/112359838X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1222200015> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011504> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026862> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145586> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300171463> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300553196> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/5-volks-konzert-hamburger-volksoper-hamburg-1905-04-11-20-00> ] .
 
-<https://performance.musiconn.de/event/5-volks-konzert-hamburger-volksoper-hamburg-1905-04-11-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/5-volks-konzert-hamburger-volksoper-hamburg-1905-04-11-20-00> a cto:CTO_0001005 ;
     rdfs:label "5. Volks-Konzert, Hamburger Volksoper (Hamburg), 11.4.1905, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1904-1905-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1905-04-11T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1905-04-11T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/112359838X>,
-        <https://d-nb.info/gnd/1222200015>,
-        <https://d-nb.info/gnd/300011504>,
-        <https://d-nb.info/gnd/300026862>,
-        <https://d-nb.info/gnd/300145586>,
-        <https://d-nb.info/gnd/300171463>,
-        <https://d-nb.info/gnd/300553196> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1904-1905-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/112359838X>,
-        <https://d-nb.info/gnd/300011504>,
-        <https://d-nb.info/gnd/300026862>,
-        <https://d-nb.info/gnd/300145586>,
-        <https://d-nb.info/gnd/300171463>,
-        <https://d-nb.info/gnd/300553196>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1222200015> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/117159032786501182559> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300553196> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145586> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184120180> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011504> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184389086> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180458511> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/112359838X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217003153> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026862> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315209867> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177407019> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300171463> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
-        <https://performance.musiconn.de/work/dem-unendlichen-schubert-franz>,
-        <https://performance.musiconn.de/work/euryanthe-ouvertuere-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/fragment-aus-dem-aeschylus-schubert-franz>,
         <https://performance.musiconn.de/work/gedichte-von-eduard-moerike-gesang-weylas-fassung-singstimme-orchester-wolf-hugo>,
         <https://performance.musiconn.de/work/jung-dieterich-plueddemann-martin>,
-        <https://performance.musiconn.de/work/lieder-op-40-der-soldat-schumann-robert>,
-        <https://performance.musiconn.de/work/lieder-op-48-die-ehre-gottes-aus-der-natur-bearbeitung-singst-orch-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/ouvertueren-bwv-1068-d-dur-air-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sinfonien-nr-1-op-68-c-moll-brahms-johannes>,
-        <https://viaf.org/viaf/177407019>,
-        <https://viaf.org/viaf/180458511>,
-        <https://viaf.org/viaf/184120180>,
-        <https://viaf.org/viaf/184389086>,
-        <https://viaf.org/viaf/217003153>,
-        <https://viaf.org/viaf/315209867> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1222200015>,
-        <https://viaf.org/viaf/117159032786501182559> ;
-    cto:viaf <https://viaf.org/viaf/117159032786501182559>,
-        <https://viaf.org/viaf/177407019>,
-        <https://viaf.org/viaf/180458511>,
-        <https://viaf.org/viaf/184120180>,
-        <https://viaf.org/viaf/184389086>,
-        <https://viaf.org/viaf/217003153>,
-        <https://viaf.org/viaf/315209867> .
+        <https://performance.musiconn.de/work/lieder-op-48-die-ehre-gottes-aus-der-natur-bearbeitung-singst-orch-beethoven-ludwig-van> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/117159032786501182559> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177407019> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180458511> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184120180> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184389086> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217003153> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315209867> a nfdicore:NFDI_0001010 .
 

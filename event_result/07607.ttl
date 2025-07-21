@@ -1,46 +1,56 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300113625> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300801653> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4012995-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/programm-dresden-1889-11-11> ] .
 
-<https://performance.musiconn.de/event/programm-dresden-1889-11-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/programm-dresden-1889-11-11> a cto:CTO_0001005 ;
     rdfs:label "Programm, Dresden, 11.11.1889" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1889-11-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1889-11-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300113625>,
-        <https://d-nb.info/gnd/300801653>,
-        <https://d-nb.info/gnd/4012995-0> ;
-    cto:relatedItem <https://d-nb.info/gnd/300113625>,
-        <https://d-nb.info/gnd/300801653>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/146756224> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4012995-0> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184151063> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300113625> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179431041> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300801653> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1889-1890>,
         <https://performance.musiconn.de/work/air-varie-beriot-charles-auguste-de>,
-        <https://performance.musiconn.de/work/behuet-dich-gott-es-waer-zu-schoen-gewesen-nessler-victor-ernst>,
         <https://performance.musiconn.de/work/fantasien-violoncello-franchomme-auguste>,
         <https://performance.musiconn.de/work/favorite-fantasie-hartmann>,
         <https://performance.musiconn.de/work/forget-me-not-mercadante-saverio>,
         <https://performance.musiconn.de/work/kunstreiter-galopp-florus>,
         <https://performance.musiconn.de/work/la-tradito-la-madrilena-sanelle>,
         <https://performance.musiconn.de/work/loin-du-bal-fassung-fuer-klavier-gillet-ernest>,
-        <https://performance.musiconn.de/work/meditation-sur-le-1er-prelude-de-j-s-bach-gounod-charles>,
         <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-b-dur-1-satz-haydn-joseph>,
         <https://performance.musiconn.de/work/streicherserenade-marsch-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/zigeunerspiele-heimann-g>,
-        <https://viaf.org/viaf/179431041>,
-        <https://viaf.org/viaf/184151063> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4012995-0>,
-        <https://viaf.org/viaf/146756224> ;
+        <https://performance.musiconn.de/work/zigeunerspiele-heimann-g> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
     cto:relatedPerson <https://performance.musiconn.de/person/barthel-g>,
         <https://performance.musiconn.de/person/fischer-r>,
-        <https://performance.musiconn.de/person/keller-p> ;
-    cto:viaf <https://viaf.org/viaf/146756224>,
-        <https://viaf.org/viaf/179431041>,
-        <https://viaf.org/viaf/184151063> .
+        <https://performance.musiconn.de/person/keller-p> .
+
+<https://viaf.org/viaf/146756224> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179431041> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184151063> a nfdicore:NFDI_0001010 .
 

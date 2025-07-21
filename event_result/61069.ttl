@@ -1,47 +1,62 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300098030> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140339> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300309791> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30071856X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300796323> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-sinfoniekonzert-alte-oper-frankfurt-a-main-grosser-saal-2022-03-21-20-00> ] .
 
-<https://performance.musiconn.de/event/7-sinfoniekonzert-alte-oper-frankfurt-a-main-grosser-saal-2022-03-21-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-sinfoniekonzert-alte-oper-frankfurt-a-main-grosser-saal-2022-03-21-20-00> a cto:CTO_0001005 ;
     rdfs:label "7. Sinfoniekonzert, Alte Oper (Frankfurt a. Main). Großer Saal, 21.3.2022, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2021-2022> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2022-03-21T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2022-03-21T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300098030>,
-        <https://d-nb.info/gnd/300140339>,
-        <https://d-nb.info/gnd/300309791>,
-        <https://d-nb.info/gnd/30071856X>,
-        <https://d-nb.info/gnd/300796323> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-2021-2022> ;
-    cto:relatedItem <https://d-nb.info/gnd/300098030>,
-        <https://d-nb.info/gnd/300140339>,
-        <https://d-nb.info/gnd/300309791>,
-        <https://d-nb.info/gnd/30071856X>,
-        <https://d-nb.info/gnd/300796323>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300309791> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185579410> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7208156565732723500004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300098030> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203709180> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198524085> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206851059> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300796323> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140339> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30071856X> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/fantasien-klavier-4-haendig-d-940-f-moll-schubert-franz>,
-        <https://performance.musiconn.de/work/lieder-kl-r-243-gretchen-am-spinnrade-liszt-franz>,
-        <https://performance.musiconn.de/work/lieder-r-592-liszt-franz>,
-        <https://performance.musiconn.de/work/lieder-von-franz-schubert-d328-der-erlkoenig-fassung-orchester-schubert-franz-liszt-franz>,
-        <https://performance.musiconn.de/work/lieder-von-franz-schubert-s-558-die-junge-nonne-liszt-franz>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-g-dur-mahler-gustav>,
-        <https://viaf.org/viaf/185579410>,
-        <https://viaf.org/viaf/198524085>,
-        <https://viaf.org/viaf/203709180>,
-        <https://viaf.org/viaf/206851059>,
-        <https://viaf.org/viaf/7208156565732723500004> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/185579410>,
-        <https://viaf.org/viaf/198524085>,
-        <https://viaf.org/viaf/203709180>,
-        <https://viaf.org/viaf/206851059>,
-        <https://viaf.org/viaf/7208156565732723500004> .
+        <https://performance.musiconn.de/work/lieder-von-franz-schubert-d328-der-erlkoenig-fassung-orchester-schubert-franz-liszt-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185579410> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198524085> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203709180> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206851059> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7208156565732723500004> a nfdicore:NFDI_0001010 .
 

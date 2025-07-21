@@ -1,48 +1,67 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300008546> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029535> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300029780> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300211503> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300212348> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1992-01-11> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1992-01-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1992-01-11> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 11.1.1992" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1992-01-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1992-01-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300008546>,
-        <https://d-nb.info/gnd/300029535>,
-        <https://d-nb.info/gnd/300029780>,
-        <https://d-nb.info/gnd/300211503>,
-        <https://d-nb.info/gnd/300212348>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/300008546>,
-        <https://d-nb.info/gnd/300029535>,
-        <https://d-nb.info/gnd/300029780>,
-        <https://d-nb.info/gnd/300211503>,
-        <https://d-nb.info/gnd/300212348>,
-        <https://performance.musiconn.de/source/motettenbuch-1992>,
-        <https://performance.musiconn.de/work/ave-maria-wab-6-f-dur-bruckner-anton>,
-        <https://performance.musiconn.de/work/evangelischer-blumengarten-teil-1-das-wort-ward-fleisch-briegel-wolfgang-carl>,
-        <https://performance.musiconn.de/work/geistliche-chor-music-also-hat-gott-die-welt-geliebt-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/mein-liebster-jesus-ist-verloren-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/os-justi-bruckner-anton>,
-        <https://viaf.org/viaf/174185373>,
-        <https://viaf.org/viaf/175196168>,
-        <https://viaf.org/viaf/185091424>,
-        <https://viaf.org/viaf/194731077>,
-        <https://viaf.org/viaf/209865707> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/174185373>,
-        <https://viaf.org/viaf/175196168>,
-        <https://viaf.org/viaf/185091424>,
-        <https://viaf.org/viaf/194731077>,
-        <https://viaf.org/viaf/209865707> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185091424> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029535> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300212348> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194731077> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175196168> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029780> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209865707> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174185373> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300008546> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300211503> ],
+        <https://performance.musiconn.de/source/motettenbuch-1992> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174185373> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175196168> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185091424> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194731077> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209865707> a nfdicore:NFDI_0001010 .
 

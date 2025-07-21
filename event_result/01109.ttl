@@ -1,40 +1,51 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1179270770> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1191725472> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/301030847> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1914-10-10-14-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1914-10-10-14-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1914-10-10-14-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 10.10.1914, 14:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1914-15> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1914-10-10T14:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1914-10-10T14:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1179270770>,
-        <https://d-nb.info/gnd/1191725472>,
-        <https://d-nb.info/gnd/301030847>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1914-15> ;
-    cto:relatedItem <https://d-nb.info/gnd/1179270770>,
-        <https://d-nb.info/gnd/1191725472>,
-        <https://d-nb.info/gnd/301030847>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1179270770> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248251685> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301030847> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2637155191927482440004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1191725472> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
         <https://performance.musiconn.de/work/das-vater-unser-herr-herr-unsere-zuversicht-gulbins-max>,
-        <https://performance.musiconn.de/work/gesaenge-op-72-herr-unser-starker-held-vierling-georg>,
         <https://performance.musiconn.de/work/gott-befohlen-heidrich-maximilian>,
-        <https://performance.musiconn.de/work/in-deinem-namen-zieh-ich-aus-richter-otto>,
-        <https://performance.musiconn.de/work/leyer-und-schwerdt-gebet-vor-der-schlacht-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/praeludium-und-fuge-orgel-bwv-552-es-dur-praeludium-bach-johann-sebastian>,
-        <https://viaf.org/viaf/248251685>,
-        <https://viaf.org/viaf/2637155191927482440004> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/248189528>,
-        <https://viaf.org/viaf/248251685>,
-        <https://viaf.org/viaf/2637155191927482440004> .
+        <https://performance.musiconn.de/work/in-deinem-namen-zieh-ich-aus-richter-otto> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248251685> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2637155191927482440004> a nfdicore:NFDI_0001010 .
 

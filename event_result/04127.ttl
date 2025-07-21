@@ -1,24 +1,28 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/4012995-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/72-fastnachts-konzert-des-kreuzchors-dresden-vereinshaus-zinzendorfstrasse-17-dresden-1933-03-07-19-30> ] .
 
-<https://performance.musiconn.de/event/72-fastnachts-konzert-des-kreuzchors-dresden-vereinshaus-zinzendorfstrasse-17-dresden-1933-03-07-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/72-fastnachts-konzert-des-kreuzchors-dresden-vereinshaus-zinzendorfstrasse-17-dresden-1933-03-07-19-30> a cto:CTO_0001005 ;
     rdfs:label "72. Fastnachts-Konzert des Kreuzchors, Dresden, Vereinshaus Zinzendorfstraße 17 (Dresden), 7.3.1933, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1932-33> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1933-03-07T21:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1933-03-07T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4012995-0> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1932-33> ;
-    cto:relatedItem <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4012995-0>,
-        <https://viaf.org/viaf/146756224> ;
-    cto:viaf <https://viaf.org/viaf/146756224> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/146756224> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4012995-0> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/146756224> a nfdicore:NFDI_0001010 .
 

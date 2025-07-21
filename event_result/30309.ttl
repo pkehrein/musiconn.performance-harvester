@@ -1,42 +1,51 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1119746639> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30001001X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300687389> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-kammerkonzert-1991-04-21-19-30> ] .
 
-<https://performance.musiconn.de/event/6-kammerkonzert-1991-04-21-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-kammerkonzert-1991-04-21-19-30> a cto:CTO_0001005 ;
     rdfs:label "6. Kammerkonzert, 21.4.1991, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1990-1991> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1991-04-21T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1991-04-21T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1119746639>,
-        <https://d-nb.info/gnd/30001001X>,
-        <https://d-nb.info/gnd/300687389> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1990-1991> ;
-    cto:relatedItem <https://d-nb.info/gnd/1119746639>,
-        <https://d-nb.info/gnd/30001001X>,
-        <https://d-nb.info/gnd/300687389>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8359151595791205470006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300687389> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30001001X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182469156> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179400468> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1119746639> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/album-francese-chorstueck-rossini-gioachino>,
         <https://performance.musiconn.de/work/album-italiano-chorstueck-rossini-gioachino>,
-        <https://performance.musiconn.de/work/herbstlied-mwv-f-17-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/komm-jesu-komm-mein-leib-ist-muede-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/lieder-singstimme-klavier-schumann-robert>,
         <https://performance.musiconn.de/work/lieder-singstimme-klavier-strauss-richard>,
         <https://performance.musiconn.de/work/spanisches-liederspiel-stueck-schumann-robert>,
-        <https://performance.musiconn.de/work/varnatt-stenhammar-wilhelm>,
-        <https://performance.musiconn.de/work/weltliche-gesaenge-brahms-johannes>,
-        <https://viaf.org/viaf/179400468>,
-        <https://viaf.org/viaf/182469156>,
-        <https://viaf.org/viaf/8359151595791205470006> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/179400468>,
-        <https://viaf.org/viaf/182469156>,
-        <https://viaf.org/viaf/8359151595791205470006> .
+        <https://performance.musiconn.de/work/weltliche-gesaenge-brahms-johannes> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179400468> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182469156> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8359151595791205470006> a nfdicore:NFDI_0001010 .
 

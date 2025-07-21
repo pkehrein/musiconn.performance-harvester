@@ -1,45 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1165514516> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300016581> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300070799> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145306> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300220820> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ii-hauskonzert-1957-12-00> ] .
 
-<https://performance.musiconn.de/event/ii-hauskonzert-1957-12-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ii-hauskonzert-1957-12-00> a cto:CTO_0001005 ;
     rdfs:label "II. Hauskonzert, 12/1957" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1957-12-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1957-12-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1165514516>,
-        <https://d-nb.info/gnd/300016581>,
-        <https://d-nb.info/gnd/300070799>,
-        <https://d-nb.info/gnd/300145306>,
-        <https://d-nb.info/gnd/300220820> ;
-    cto:relatedItem <https://d-nb.info/gnd/1165514516>,
-        <https://d-nb.info/gnd/300016581>,
-        <https://d-nb.info/gnd/300070799>,
-        <https://d-nb.info/gnd/300145306>,
-        <https://d-nb.info/gnd/300220820>,
-        <https://performance.musiconn.de/source/plakate-programmhefte-und-rezensionen-aus-dem-nachlass-hermann-keller-2-programmhefte-1955-1984>,
-        <https://performance.musiconn.de/work/kinderszenen-schumann-robert>,
-        <https://performance.musiconn.de/work/krippenmusik-zur-weihnacht-niemann-walter>,
-        <https://performance.musiconn.de/work/na-zelenom-lugu-grecaninov-aleksandr-tichonovic>,
-        <https://performance.musiconn.de/work/sonaten-klavier-op-13-c-moll-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/stuecke-klavier-hob-17-6-f-moll-haydn-joseph>,
-        <https://viaf.org/viaf/174865068>,
-        <https://viaf.org/viaf/178042075>,
-        <https://viaf.org/viaf/201852607>,
-        <https://viaf.org/viaf/201856468>,
-        <https://viaf.org/viaf/301897126> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/allgemeine-berufsschule-am-steinsgraben-zeitz-aula> ;
-    cto:viaf <https://viaf.org/viaf/174865068>,
-        <https://viaf.org/viaf/178042075>,
-        <https://viaf.org/viaf/201852607>,
-        <https://viaf.org/viaf/201856468>,
-        <https://viaf.org/viaf/301897126> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/allgemeine-berufsschule-am-steinsgraben-zeitz-aula> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016581> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201852607> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1165514516> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300220820> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201856468> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178042075> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/301897126> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145306> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300070799> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174865068> ],
+        <https://performance.musiconn.de/source/plakate-programmhefte-und-rezensionen-aus-dem-nachlass-hermann-keller-2-programmhefte-1955-1984> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174865068> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178042075> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201852607> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201856468> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/301897126> a nfdicore:NFDI_0001010 .
 

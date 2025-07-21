@@ -1,37 +1,48 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1114757322> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141769> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7651367-1> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-konzert-gewerbehaus-dresden-gewerbehaus-saal-1944-01-05-17-00> ] .
 
-<https://performance.musiconn.de/event/1-konzert-gewerbehaus-dresden-gewerbehaus-saal-1944-01-05-17-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-konzert-gewerbehaus-dresden-gewerbehaus-saal-1944-01-05-17-00> a cto:CTO_0001005 ;
     rdfs:label "1. Konzert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 5.1.1944, 17:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1943-1944> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1944-01-05T17:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1944-01-05T17:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1114757322>,
-        <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/300141769>,
-        <https://d-nb.info/gnd/7651367-1> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1943-1944> ;
-    cto:relatedItem <https://d-nb.info/gnd/1114757322>,
-        <https://d-nb.info/gnd/300141769>,
-        <https://d-nb.info/gnd/7651367-1>,
-        <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1943-1944>,
-        <https://performance.musiconn.de/work/ballett-suite-reger-max>,
-        <https://performance.musiconn.de/work/lyrisches-konzert-schubert-heinz-richard>,
-        <https://performance.musiconn.de/work/sinfonien-d-589-c-dur-schubert-franz>,
-        <https://viaf.org/viaf/11146635511041980868>,
-        <https://viaf.org/viaf/182472076>,
-        <https://viaf.org/viaf/217006126> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/11146635511041980868>,
-        <https://viaf.org/viaf/182472076>,
-        <https://viaf.org/viaf/217006126> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141769> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/11146635511041980868> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1114757322> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182472076> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217006126> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7651367-1> ],
+        <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1943-1944> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/11146635511041980868> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182472076> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217006126> a nfdicore:NFDI_0001010 .
 

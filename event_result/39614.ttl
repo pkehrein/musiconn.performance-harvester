@@ -1,29 +1,36 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1029700753> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300011806> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/weihnachtsoratorium-martin-luther-kirche-dresden-1949-12-18-18-00> ] .
 
-<https://performance.musiconn.de/event/weihnachtsoratorium-martin-luther-kirche-dresden-1949-12-18-18-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/weihnachtsoratorium-martin-luther-kirche-dresden-1949-12-18-18-00> a cto:CTO_0001005 ;
     rdfs:label "Weihnachtsoratorium, Martin-Luther-Kirche (Dresden), 18.12.1949, 18:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1949-1950> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1949-12-18T18:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1949-12-18T18:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1029700753>,
-        <https://d-nb.info/gnd/300011806> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1949-1950> ;
-    cto:relatedItem <https://d-nb.info/gnd/300011806>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/weihnachts-oratorium-bach-johann-sebastian>,
-        <https://viaf.org/viaf/179045932> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1029700753>,
-        <https://viaf.org/viaf/294821359> ;
-    cto:viaf <https://viaf.org/viaf/179045932>,
-        <https://viaf.org/viaf/294821359> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/294821359> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1029700753> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179045932> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011806> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179045932> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/294821359> a nfdicore:NFDI_0001010 .
 

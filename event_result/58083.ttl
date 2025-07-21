@@ -4,23 +4,28 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/134512197> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4625181-9> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kammerkonzert-d-verband-der-komponisten-und-musikwissenschaftler-der-ddr-alte-handelsboerse-leipzig-1986-01-26> ] .
 
-<https://performance.musiconn.de/event/kammerkonzert-d-verband-der-komponisten-und-musikwissenschaftler-der-ddr-alte-handelsboerse-leipzig-1986-01-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kammerkonzert-d-verband-der-komponisten-und-musikwissenschaftler-der-ddr-alte-handelsboerse-leipzig-1986-01-26> a cto:CTO_0001005 ;
     rdfs:label "Kammerkonzert d. Verband der Komponisten und Musikwissenschaftler der DDR, Alte Handelsbörse (Leipzig), 26.1.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-01-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-01-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/134512197>,
-        <https://d-nb.info/gnd/4625181-9> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/134512197> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4625181-9> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
         <https://performance.musiconn.de/work/consort-sonate-fuer-englischhorn-viola-kontrabass-und-gitarre-treibmann-karl-ottomar> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4625181-9> ;
-    cto:relatedPerson <https://d-nb.info/gnd/134512197>,
-        <https://viaf.org/viaf/53295638> ;
-    cto:viaf <https://viaf.org/viaf/53295638> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/53295638> ] .
+
+<https://viaf.org/viaf/53295638> a nfdicore:NFDI_0001010 .
 

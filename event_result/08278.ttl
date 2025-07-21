@@ -1,53 +1,75 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300006683> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300008333> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102461> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102879> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300199023> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300955022> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2007-11-10> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2007-11-10> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2007-11-10> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 10.11.2007" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2007-11-10" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2007-11-10" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300006683>,
-        <https://d-nb.info/gnd/300008333>,
-        <https://d-nb.info/gnd/300102461>,
-        <https://d-nb.info/gnd/300102879>,
-        <https://d-nb.info/gnd/300199023>,
-        <https://d-nb.info/gnd/300955022>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/300006683>,
-        <https://d-nb.info/gnd/300008333>,
-        <https://d-nb.info/gnd/300102461>,
-        <https://d-nb.info/gnd/300102879>,
-        <https://d-nb.info/gnd/300199023>,
-        <https://d-nb.info/gnd/300955022>,
-        <https://performance.musiconn.de/source/motettenbuch-2007-08-1>,
-        <https://performance.musiconn.de/work/der-98-psalm-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/heilig-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/johannespassion-ach-herr-lass-dein-lieb-engelein-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/psalm-43-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/sprueche-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/wohl-dem-der-sich-auf-seinen-gott-bach-johann-sebastian>,
-        <https://viaf.org/viaf/174065606>,
-        <https://viaf.org/viaf/174588556>,
-        <https://viaf.org/viaf/179422369>,
-        <https://viaf.org/viaf/182696760>,
-        <https://viaf.org/viaf/183527340>,
-        <https://viaf.org/viaf/183962024> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/174065606>,
-        <https://viaf.org/viaf/174588556>,
-        <https://viaf.org/viaf/179422369>,
-        <https://viaf.org/viaf/182696760>,
-        <https://viaf.org/viaf/183527340>,
-        <https://viaf.org/viaf/183962024> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174065606> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300955022> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183527340> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102879> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174588556> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300199023> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182696760> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102461> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300008333> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300006683> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179422369> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183962024> ],
+        <https://performance.musiconn.de/source/motettenbuch-2007-08-1> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174065606> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174588556> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179422369> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182696760> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183527340> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183962024> a nfdicore:NFDI_0001010 .
 

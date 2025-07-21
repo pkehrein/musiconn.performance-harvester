@@ -4,24 +4,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/120517981> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/orazio-kotzentheater-prag-1745-00-00> ] .
 
-<https://performance.musiconn.de/event/orazio-kotzentheater-prag-1745-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/orazio-kotzentheater-prag-1745-00-00> a cto:CTO_0001005 ;
     rdfs:label "Orazio, Kotzentheater (Prag), 1745" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1745-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1745-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/120517981> ;
-    cto:relatedItem <https://performance.musiconn.de/source/baerwald-oper-vol-1>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/120517981> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kotzentheater-prag> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/baerwald-oper-vol-1>,
         <https://performance.musiconn.de/source/mueller-von-asow-mingotti>,
         <https://performance.musiconn.de/source/theobald-opern-stagioni>,
         <https://performance.musiconn.de/work/l-orazio-auletta-pietro> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kotzentheater-prag> ;
-    cto:relatedPerson <https://d-nb.info/gnd/120517981>,
-        <https://viaf.org/viaf/72226518> ;
-    cto:viaf <https://viaf.org/viaf/72226518> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/72226518> ] .
+
+<https://viaf.org/viaf/72226518> a nfdicore:NFDI_0001010 .
 

@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300034954> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300074441> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30015190X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300168195> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kamernye-ansambli-sankt-petersburger-philharmonie-1972-05-08> ] .
 
-<https://performance.musiconn.de/event/kamernye-ansambli-sankt-petersburger-philharmonie-1972-05-08> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kamernye-ansambli-sankt-petersburger-philharmonie-1972-05-08> a cto:CTO_0001005 ;
     rdfs:label "Kamernye ansambli, Sankt-Petersburger Philharmonie, 8.5.1972" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1971-72> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1972-05-08" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1972-05-08" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300034954>,
-        <https://d-nb.info/gnd/300074441>,
-        <https://d-nb.info/gnd/30015190X>,
-        <https://d-nb.info/gnd/300168195>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1971-72> ;
-    cto:relatedItem <https://d-nb.info/gnd/300034954>,
-        <https://d-nb.info/gnd/300074441>,
-        <https://d-nb.info/gnd/30015190X>,
-        <https://d-nb.info/gnd/300168195>,
-        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1972-8-mai>,
-        <https://performance.musiconn.de/work/kleine-kammermusik-hindemith-paul>,
-        <https://performance.musiconn.de/work/konzerte-blockfloete-oboe-fagott-rv-103-g-moll-vivaldi-antonio>,
-        <https://performance.musiconn.de/work/nonette-violine-viola-violoncello-kontrabass-querfloete-oboe-klarinette-fagott-horn-op-31-f-dur-spohr-louis>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-1-carter-elliott>,
-        <https://viaf.org/viaf/181045874>,
-        <https://viaf.org/viaf/194734028>,
-        <https://viaf.org/viaf/201855147>,
-        <https://viaf.org/viaf/218080467> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/181045874>,
-        <https://viaf.org/viaf/194734028>,
-        <https://viaf.org/viaf/201855147>,
-        <https://viaf.org/viaf/218080467> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201855147> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30015190X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300074441> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194734028> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181045874> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218080467> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300034954> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300168195> ],
+        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1972-8-mai> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181045874> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194734028> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201855147> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218080467> a nfdicore:NFDI_0001010 .
 

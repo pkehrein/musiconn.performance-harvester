@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4005728-8> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/aschenbroedel-berlin-1811-06-14> ] .
 
-<https://performance.musiconn.de/event/aschenbroedel-berlin-1811-06-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/aschenbroedel-berlin-1811-06-14> a cto:CTO_0001005 ;
     rdfs:label "Aschenbrödel, Berlin, 14.6.1811" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1811-06-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1811-06-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4005728-8> ;
-    cto:relatedItem <https://performance.musiconn.de/source/theater-datenbank-der-berliner-klassik>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4005728-8> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/122530980> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/theater-datenbank-der-berliner-klassik>,
         <https://performance.musiconn.de/work/cendrillon-fassung-1811-isouard-niccolo> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4005728-8>,
-        <https://viaf.org/viaf/122530980> ;
-    cto:viaf <https://viaf.org/viaf/122530980> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/122530980> a nfdicore:NFDI_0001010 .
 

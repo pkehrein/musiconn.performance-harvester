@@ -4,24 +4,31 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/118505505> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4200184-5> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/einfuehrung-von-lucas-hinrich-eding-zum-leichnamsgeschworenen-an-st-katharinen-sankt-katharinen-hamburg-1781-05-13> ] .
 
-<https://performance.musiconn.de/event/einfuehrung-von-lucas-hinrich-eding-zum-leichnamsgeschworenen-an-st-katharinen-sankt-katharinen-hamburg-1781-05-13> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/einfuehrung-von-lucas-hinrich-eding-zum-leichnamsgeschworenen-an-st-katharinen-sankt-katharinen-hamburg-1781-05-13> a cto:CTO_0001005 ;
     rdfs:label "Einführung von Lucas Hinrich Eding zum Leichnamsgeschworenen an St. Katharinen, Sankt Katharinen (Hamburg), 13.5.1781" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1781-05-13" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1781-05-13" ;
-    cto:elementOf n4c:E5320 ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118505505> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4200184-5> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/133739640> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/carl-philipp-emanuel-bach-dokumente-zu-leben-und-wirken-aus-der-zeitgenoessischen-hamburgischen-presse-1767-1790-leipziger-beitraege-zur-bach-forschung-4-hildesheim-u-a> ;
     cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/118505505>,
-        <https://d-nb.info/gnd/4200184-5> ;
-    cto:relatedItem <https://performance.musiconn.de/source/carl-philipp-emanuel-bach-dokumente-zu-leben-und-wirken-aus-der-zeitgenoessischen-hamburgischen-presse-1767-1790-leipziger-beitraege-zur-bach-forschung-4-hildesheim-u-a> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4200184-5>,
-        <https://viaf.org/viaf/133739640> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118505505>,
-        <https://viaf.org/viaf/204566> ;
-    cto:viaf <https://viaf.org/viaf/133739640>,
-        <https://viaf.org/viaf/204566> .
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204566> ] .
+
+<https://viaf.org/viaf/133739640> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204566> a nfdicore:NFDI_0001010 .
 

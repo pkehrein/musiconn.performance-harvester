@@ -1,55 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1279670444> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300056648> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300081448> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300206178> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300245564> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gitarren-soiree-haus-schevenstrasse-dresden-dresdner-zentrum-fuer-zeitgenoessische-musik-1987-06-28-19-30> ] .
 
-<https://performance.musiconn.de/event/gitarren-soiree-haus-schevenstrasse-dresden-dresdner-zentrum-fuer-zeitgenoessische-musik-1987-06-28-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gitarren-soiree-haus-schevenstrasse-dresden-dresdner-zentrum-fuer-zeitgenoessische-musik-1987-06-28-19-30> a cto:CTO_0001005 ;
     rdfs:label "Gitarren-Soiree, Haus Schevenstraße (Dresden), Dresdner Zentrum für Zeitgenössische Musik, 28.6.1987, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/begegnung-der-kuenste-begegnung-mit-kuenstlern> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-06-28T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-06-28T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1279670444>,
-        <https://d-nb.info/gnd/300056648>,
-        <https://d-nb.info/gnd/300081448>,
-        <https://d-nb.info/gnd/300206178>,
-        <https://d-nb.info/gnd/300245564> ;
-    cto:itemOf <https://performance.musiconn.de/series/begegnung-der-kuenste-begegnung-mit-kuenstlern> ;
-    cto:relatedItem <https://d-nb.info/gnd/1279670444>,
-        <https://d-nb.info/gnd/300056648>,
-        <https://d-nb.info/gnd/300081448>,
-        <https://d-nb.info/gnd/300206178>,
-        <https://d-nb.info/gnd/300245564>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/gitarrenduo-berlin> ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/dresdner-zentrum-fuer-zeitgenoessische-musik> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300206178> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191495930> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300056648> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201857092> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300081448> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193654206> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1279670444> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300245564> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7676167565619798750001> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207915968> ],
         <https://performance.musiconn.de/source/dresdner-zentrum-fuer-zeitgenoessische-musik-programmhefte-1987-1988>,
         <https://performance.musiconn.de/work/5-studien-fuer-gitarre-solo-huebschmann-werner>,
-        <https://performance.musiconn.de/work/bagatellen-git-1985-cilensek-johann>,
         <https://performance.musiconn.de/work/berceuse-brouwer-leo>,
         <https://performance.musiconn.de/work/danza-characteristica-brouwer-leo>,
-        <https://performance.musiconn.de/work/elegisch-ma-non-troppo-katzer-georg>,
         <https://performance.musiconn.de/work/etudes-gitarre-nr-10-villa-lobos-heitor>,
-        <https://performance.musiconn.de/work/etueden-git-1929-etuede-nr-7-villa-lobos-heitor>,
         <https://performance.musiconn.de/work/etueden-gitarre-nr-5-villa-lobos-heitor>,
         <https://performance.musiconn.de/work/etueden-gitarre-nr-6-villa-lobos-heitor>,
-        <https://performance.musiconn.de/work/metamorphosen-fuer-zwei-solo-gitarren-jaeger-karl-heinz>,
         <https://performance.musiconn.de/work/micro-piecas-brouwer-leo>,
-        <https://performance.musiconn.de/work/nur-12-saiten-bredemeyer-reiner>,
-        <https://performance.musiconn.de/work/picasso-adaptionen-ganzer-juergen>,
-        <https://viaf.org/viaf/191495930>,
-        <https://viaf.org/viaf/193654206>,
-        <https://viaf.org/viaf/201857092>,
-        <https://viaf.org/viaf/207915968>,
-        <https://viaf.org/viaf/7676167565619798750001> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/dresdner-zentrum-fuer-zeitgenoessische-musik> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/gitarrenduo-berlin> ;
-    cto:viaf <https://viaf.org/viaf/191495930>,
-        <https://viaf.org/viaf/193654206>,
-        <https://viaf.org/viaf/201857092>,
-        <https://viaf.org/viaf/207915968>,
-        <https://viaf.org/viaf/7676167565619798750001> .
+        <https://performance.musiconn.de/work/nur-12-saiten-bredemeyer-reiner> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/191495930> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193654206> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201857092> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207915968> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7676167565619798750001> a nfdicore:NFDI_0001010 .
 

@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1128664135> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300070268> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300229038> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-zykluskonzert-kulturpalast-dresden-festsaal-1976-02-06-20-00> ] .
 
-<https://performance.musiconn.de/event/4-zykluskonzert-kulturpalast-dresden-festsaal-1976-02-06-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-zykluskonzert-kulturpalast-dresden-festsaal-1976-02-06-20-00> a cto:CTO_0001005 ;
     rdfs:label "4. Zykluskonzert, Kulturpalast (Dresden) / Festsaal, 6.2.1976, 20:00" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1976-02-06T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1976-02-06T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1128664135>,
-        <https://d-nb.info/gnd/300070268>,
-        <https://d-nb.info/gnd/300229038> ;
-    cto:relatedItem <https://d-nb.info/gnd/1128664135>,
-        <https://d-nb.info/gnd/300070268>,
-        <https://d-nb.info/gnd/300229038>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185151521> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/224788895> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/173979371> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300229038> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1128664135> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300070268> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-13-programmhefte-1975-1977>,
-        <https://performance.musiconn.de/work/berenice-che-fai-haydn-joseph>,
-        <https://performance.musiconn.de/work/misera-me-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-49-f-moll-haydn-joseph>,
-        <https://viaf.org/viaf/173979371>,
-        <https://viaf.org/viaf/185151521>,
-        <https://viaf.org/viaf/224788895> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/173979371>,
-        <https://viaf.org/viaf/185151521>,
-        <https://viaf.org/viaf/224788895> .
+        <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-13-programmhefte-1975-1977> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/173979371> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185151521> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/224788895> a nfdicore:NFDI_0001010 .
 

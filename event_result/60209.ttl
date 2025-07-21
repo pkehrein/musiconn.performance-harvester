@@ -1,40 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/16334214-3> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300038321> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141750> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4066009-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-konzert-wien-1988-12-03> ] .
 
-<https://performance.musiconn.de/event/1-konzert-wien-1988-12-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-konzert-wien-1988-12-03> a cto:CTO_0001005 ;
     rdfs:label "1. Konzert, Wien, 3.12.1988" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/1-frauen-kammerorchester-von-oesterreich> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-12-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-12-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/16334214-3>,
-        <https://d-nb.info/gnd/300038321>,
-        <https://d-nb.info/gnd/300141750>,
-        <https://d-nb.info/gnd/4066009-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/1-frauen-kammerorchester-von-oesterreich> ;
-    cto:relatedItem <https://d-nb.info/gnd/300038321>,
-        <https://d-nb.info/gnd/300141750>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/16334214-3> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/220914825> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/137212727> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4066009-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141750> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198525332> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215922492> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300038321> ],
         <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-1-frauen-kammerorchester-von-oesterreich-saison-1988-1989>,
         <https://performance.musiconn.de/work/fast-eine-gediegene-musik-fuer-streichorchester-feldhofer-herbert>,
-        <https://performance.musiconn.de/work/konzertante-sinfonien-querfloete-2-orchester-g-dur-cimarosa-domenico>,
-        <https://performance.musiconn.de/work/konzerte-cembalo-orchester-g-moll-wilhelmine-friederike-sophie-brandenburg-bayreuth-markgraefin>,
-        <https://performance.musiconn.de/work/sinfonien-d-485-b-dur-schubert-franz>,
-        <https://viaf.org/viaf/198525332>,
-        <https://viaf.org/viaf/215922492> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4066009-6>,
-        <https://viaf.org/viaf/137212727> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/16334214-3>,
-        <https://viaf.org/viaf/220914825> ;
-    cto:viaf <https://viaf.org/viaf/137212727>,
-        <https://viaf.org/viaf/198525332>,
-        <https://viaf.org/viaf/215922492>,
-        <https://viaf.org/viaf/220914825> .
+        <https://performance.musiconn.de/work/konzerte-cembalo-orchester-g-moll-wilhelmine-friederike-sophie-brandenburg-bayreuth-markgraefin> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/137212727> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198525332> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215922492> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/220914825> a nfdicore:NFDI_0001010 .
 

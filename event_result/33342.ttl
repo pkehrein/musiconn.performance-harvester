@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1060085488> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145624> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300364792> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300584571> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/fruehlingskonzert-des-kinderchores-kulturpalast-dresden-2017-04-30-15-00> ] .
 
-<https://performance.musiconn.de/event/fruehlingskonzert-des-kinderchores-kulturpalast-dresden-2017-04-30-15-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/fruehlingskonzert-des-kinderchores-kulturpalast-dresden-2017-04-30-15-00> a cto:CTO_0001005 ;
     rdfs:label "Frühlingskonzert des Kinderchores, Kulturpalast (Dresden), 30.4.2017, 15:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2016-2017> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2017-04-30T15:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2017-04-30T15:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1060085488>,
-        <https://d-nb.info/gnd/300145624>,
-        <https://d-nb.info/gnd/300364792>,
-        <https://d-nb.info/gnd/300584571> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2016-2017> ;
-    cto:relatedItem <https://d-nb.info/gnd/300145624>,
-        <https://d-nb.info/gnd/300364792>,
-        <https://d-nb.info/gnd/300584571>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/gruss-mwv-k-71-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/lieder-op-43-schoen-bluemelein-schumann-robert>,
-        <https://performance.musiconn.de/work/zelena-se-snitka-eben-petr>,
-        <https://viaf.org/viaf/178956227>,
-        <https://viaf.org/viaf/185890302>,
-        <https://viaf.org/viaf/217006208> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1060085488>,
-        <https://viaf.org/viaf/311438221> ;
-    cto:viaf <https://viaf.org/viaf/178956227>,
-        <https://viaf.org/viaf/185890302>,
-        <https://viaf.org/viaf/217006208>,
-        <https://viaf.org/viaf/311438221> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1060085488> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311438221> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178956227> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300584571> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185890302> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145624> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217006208> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300364792> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178956227> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185890302> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217006208> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/311438221> a nfdicore:NFDI_0001010 .
 

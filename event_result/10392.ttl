@@ -1,72 +1,94 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1104273950> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1147769982> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300048866> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300121113> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300126794> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300211503> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300304528> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300431740> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-unbekannt-1990-12-20> ] .
 
-<https://performance.musiconn.de/event/konzert-unbekannt-1990-12-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-unbekannt-1990-12-20> a cto:CTO_0001005 ;
     rdfs:label "Konzert, [unbekannt], 20.12.1990" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1990-12-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1990-12-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1104273950>,
-        <https://d-nb.info/gnd/1147769982>,
-        <https://d-nb.info/gnd/300048866>,
-        <https://d-nb.info/gnd/300121113>,
-        <https://d-nb.info/gnd/300126794>,
-        <https://d-nb.info/gnd/300211503>,
-        <https://d-nb.info/gnd/300304528>,
-        <https://d-nb.info/gnd/300431740> ;
-    cto:relatedItem <https://d-nb.info/gnd/1104273950>,
-        <https://d-nb.info/gnd/1147769982>,
-        <https://d-nb.info/gnd/300048866>,
-        <https://d-nb.info/gnd/300121113>,
-        <https://d-nb.info/gnd/300126794>,
-        <https://d-nb.info/gnd/300211503>,
-        <https://d-nb.info/gnd/300304528>,
-        <https://d-nb.info/gnd/300431740>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/unbekannt> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196884590> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181197642> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316736830> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300431740> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1147769982> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/152146708119900841559> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1104273950> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300048866> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300126794> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175196168> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185090204> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300304528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181850865> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300121113> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300211503> ],
         <https://performance.musiconn.de/source/motettenbuch-1990>,
         <https://performance.musiconn.de/work/altboehmische-gesaenge-teil-2-die-engel-und-die-hirten-riedel-carl>,
         <https://performance.musiconn.de/work/altboehmische-gesaenge-teil-2-freu-dich-erd-und-sternenzelt-riedel-carl>,
         <https://performance.musiconn.de/work/altboehmische-gesaenge-teil-2-lasst-alle-gott-uns-loben-riedel-carl>,
         <https://performance.musiconn.de/work/choralkantaten-vom-himmel-hoch-da-komm-ich-her-auswahl-reger-max>,
         <https://performance.musiconn.de/work/der-jahreskreis-o-heiland-reiss-die-himmel-auf-distler-hugo>,
-        <https://performance.musiconn.de/work/deutsche-geistliche-gesaenge-weihnachtslied-reger-max>,
-        <https://performance.musiconn.de/work/deutsches-magnificat-swv-494-schuetz-heinrich>,
         <https://performance.musiconn.de/work/florilegium-portense-1603-joseph-lieber-joseph-mein-calvisius-sethus>,
-        <https://performance.musiconn.de/work/geistliche-chor-music-also-hat-gott-die-welt-geliebt-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-138-unser-lieben-frauen-traum-reger-max>,
-        <https://performance.musiconn.de/work/geistliche-volkslieder-o-jesulein-suess-reger-max>,
         <https://performance.musiconn.de/work/in-dulci-jubilo-thiel-carl>,
         <https://performance.musiconn.de/work/kleine-weihnachtsmotetten-still-still-still-weils-kindlein-schlafen-will-braeutigam-helmut>,
         <https://performance.musiconn.de/work/maria-durch-ein-dornwald-ging-weyrauch-johannes>,
-        <https://performance.musiconn.de/work/musae-sioniae-theil-6-es-ist-ein-ros-entsprungen-praetorius-michael>,
-        <https://performance.musiconn.de/work/neue-weihnachtsliedlein-freut-euch-ihr-lieben-christen-schroeter-leonhart>,
         <https://performance.musiconn.de/work/o-du-froehliche-rotzsch-hans-joachim>,
         <https://performance.musiconn.de/work/o-jesulein-zart-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/stille-nacht-heilige-nacht-chorsatz-schreck-gustav>,
         <https://performance.musiconn.de/work/suesser-die-glocken-nie-klingen-mauersberger-erhard>,
-        <https://performance.musiconn.de/work/uebers-gebirg-maria-geht-eccard-johannes>,
-        <https://performance.musiconn.de/work/vom-himmel-hoch-o-englein-kommt-mauersberger-erhard>,
-        <https://viaf.org/viaf/152146708119900841559>,
-        <https://viaf.org/viaf/175196168>,
-        <https://viaf.org/viaf/181197642>,
-        <https://viaf.org/viaf/181850865>,
-        <https://viaf.org/viaf/185090204>,
-        <https://viaf.org/viaf/196884590>,
-        <https://viaf.org/viaf/316736830> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/unbekannt> ;
-    cto:viaf <https://viaf.org/viaf/152146708119900841559>,
-        <https://viaf.org/viaf/175196168>,
-        <https://viaf.org/viaf/181197642>,
-        <https://viaf.org/viaf/181850865>,
-        <https://viaf.org/viaf/185090204>,
-        <https://viaf.org/viaf/196884590>,
-        <https://viaf.org/viaf/316736830> .
+        <https://performance.musiconn.de/work/vom-himmel-hoch-o-englein-kommt-mauersberger-erhard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/152146708119900841559> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175196168> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181197642> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181850865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185090204> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196884590> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316736830> a nfdicore:NFDI_0001010 .
 

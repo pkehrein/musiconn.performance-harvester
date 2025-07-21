@@ -1,32 +1,39 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1103676032> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4018118-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zweites-freitags-konzert-1937-10-08> ] .
 
-<https://performance.musiconn.de/event/zweites-freitags-konzert-1937-10-08> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zweites-freitags-konzert-1937-10-08> a cto:CTO_0001005 ;
     rdfs:label "Zweites Freitags-Konzert, 8.10.1937" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1937-1938> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1937-10-08" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1937-10-08" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1103676032>,
-        <https://d-nb.info/gnd/4018118-2> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1937-1938> ;
-    cto:relatedItem <https://d-nb.info/gnd/1103676032>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/151720959> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4018118-2> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/19146635442441981582> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1103676032> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
         <https://performance.musiconn.de/work/hymnen-op-18-hoeller-karl>,
         <https://performance.musiconn.de/work/kleine-suite-op-14-hessenberg-kurt>,
-        <https://performance.musiconn.de/work/musik-violine-orchester-1913-stephan-rudi>,
-        <https://performance.musiconn.de/work/sinfonien-nr-5-op-33-f-dur-trapp-max>,
-        <https://viaf.org/viaf/19146635442441981582> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4018118-2>,
-        <https://viaf.org/viaf/151720959> ;
-    cto:viaf <https://viaf.org/viaf/151720959>,
-        <https://viaf.org/viaf/19146635442441981582> .
+        <https://performance.musiconn.de/work/musik-violine-orchester-1913-stephan-rudi> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/151720959> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/19146635442441981582> a nfdicore:NFDI_0001010 .
 

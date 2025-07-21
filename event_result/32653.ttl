@@ -1,56 +1,78 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300104685> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300125143> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300125836> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133731> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300324537> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30038100X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5505831-0> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzerte-zum-jahreswechsel-kulturpalast-dresden-festsaal-2011-12-31-19-00> ] .
 
-<https://performance.musiconn.de/event/sonderkonzerte-zum-jahreswechsel-kulturpalast-dresden-festsaal-2011-12-31-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzerte-zum-jahreswechsel-kulturpalast-dresden-festsaal-2011-12-31-19-00> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzerte zum Jahreswechsel, Kulturpalast (Dresden) / Festsaal, 31.12.2011, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2011-2012> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2011-12-31T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2011-12-31T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300104685>,
-        <https://d-nb.info/gnd/300125143>,
-        <https://d-nb.info/gnd/300125836>,
-        <https://d-nb.info/gnd/300133731>,
-        <https://d-nb.info/gnd/300324537>,
-        <https://d-nb.info/gnd/30038100X>,
-        <https://d-nb.info/gnd/5505831-0> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2011-2012> ;
-    cto:relatedItem <https://d-nb.info/gnd/300104685>,
-        <https://d-nb.info/gnd/300125143>,
-        <https://d-nb.info/gnd/300125836>,
-        <https://d-nb.info/gnd/300133731>,
-        <https://d-nb.info/gnd/300324537>,
-        <https://d-nb.info/gnd/30038100X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/149844168> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5505831-0> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209870477> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184748854> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185557015> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133731> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183881641> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300125143> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300125836> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300104685> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182660580> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30038100X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183465659> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300324537> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/bolero-ravel-maurice>,
-        <https://performance.musiconn.de/work/introduction-et-rondo-capriccioso-saint-saens-camille>,
-        <https://performance.musiconn.de/work/la-reine-de-saba-walzer-gounod-charles>,
-        <https://performance.musiconn.de/work/la-valse-ravel-maurice>,
-        <https://performance.musiconn.de/work/la-vie-parisienne-ouvertuere-offenbach-jacques>,
-        <https://performance.musiconn.de/work/le-boeuf-sur-le-toit-milhaud-darius>,
-        <https://performance.musiconn.de/work/orphee-aux-enfers-cancan-offenbach-jacques>,
-        <https://viaf.org/viaf/182660580>,
-        <https://viaf.org/viaf/183465659>,
-        <https://viaf.org/viaf/183881641>,
-        <https://viaf.org/viaf/184748854>,
-        <https://viaf.org/viaf/185557015>,
-        <https://viaf.org/viaf/209870477> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5505831-0>,
-        <https://viaf.org/viaf/149844168> ;
-    cto:viaf <https://viaf.org/viaf/149844168>,
-        <https://viaf.org/viaf/182660580>,
-        <https://viaf.org/viaf/183465659>,
-        <https://viaf.org/viaf/183881641>,
-        <https://viaf.org/viaf/184748854>,
-        <https://viaf.org/viaf/185557015>,
-        <https://viaf.org/viaf/209870477> .
+        <https://performance.musiconn.de/work/la-reine-de-saba-walzer-gounod-charles> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/149844168> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182660580> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183465659> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183881641> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184748854> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185557015> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209870477> a nfdicore:NFDI_0001010 .
 

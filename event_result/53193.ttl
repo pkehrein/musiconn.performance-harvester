@@ -4,23 +4,28 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1051647657> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1084609428> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/die-hochzeit-des-figaro-gebaeude-der-koeniglichen-oper-berlin-berlin-1822-07-14> ] .
 
-<https://performance.musiconn.de/event/die-hochzeit-des-figaro-gebaeude-der-koeniglichen-oper-berlin-berlin-1822-07-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/die-hochzeit-des-figaro-gebaeude-der-koeniglichen-oper-berlin-berlin-1822-07-14> a cto:CTO_0001005 ;
     rdfs:label "Die Hochzeit des Figaro, Gebäude der Königlichen Oper Berlin (Berlin), 14.7.1822" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1822-07-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1822-07-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1051647657>,
-        <https://d-nb.info/gnd/1084609428> ;
-    cto:relatedItem <https://performance.musiconn.de/source/katalogisat-die-hochzeit-des-figaro-singspiel-in-2-abtheilungen-mit-tanz-aus-dem-franzoesischen-musik-von-mozart-14-july-1822>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1051647657> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1084609428> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/533149662172407020006> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/katalogisat-die-hochzeit-des-figaro-singspiel-in-2-abtheilungen-mit-tanz-aus-dem-franzoesischen-musik-von-mozart-14-july-1822>,
         <https://performance.musiconn.de/work/le-nozze-di-figaro-fassung-mozart-wolfgang-amadeus> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1084609428>,
-        <https://viaf.org/viaf/533149662172407020006> ;
-    cto:relatedPerson <https://d-nb.info/gnd/1051647657> ;
-    cto:viaf <https://viaf.org/viaf/533149662172407020006> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/533149662172407020006> a nfdicore:NFDI_0001010 .
 

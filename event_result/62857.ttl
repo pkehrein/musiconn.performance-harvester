@@ -4,27 +4,34 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/118540505> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/121409163> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/il-mercato-di-malmantile-teatro-de-salvaterra-lissabon-1763-00-00> ] .
 
-<https://performance.musiconn.de/event/il-mercato-di-malmantile-teatro-de-salvaterra-lissabon-1763-00-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/il-mercato-di-malmantile-teatro-de-salvaterra-lissabon-1763-00-00> a cto:CTO_0001005 ;
     rdfs:label "Il mercato di Malmantile, Teatro de Salvaterra (Lissabon), 1763" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1763-00-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1763-00-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/118540505>,
-        <https://d-nb.info/gnd/121409163> ;
-    cto:relatedItem <https://performance.musiconn.de/source/de-brito-opera>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/121409163> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118540505> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/teatro-de-salvaterra-lissabon> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/de-brito-opera>,
         <https://performance.musiconn.de/source/il-mercato-di-malmantile-dramma-giocoso-per-musica-di-polisseno-fegejo-pastor-arcade-da-rappresentarsi-nel-teatro-reale-di-salvaterra-nel-carnovale-dellanno-mdcclxiii>,
         <https://performance.musiconn.de/work/il-mercato-di-malmantile-fischietti-domenico-1> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/teatro-de-salvaterra-lissabon> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118540505>,
-        <https://d-nb.info/gnd/121409163>,
-        <https://viaf.org/viaf/118496187>,
-        <https://viaf.org/viaf/44299511> ;
-    cto:viaf <https://viaf.org/viaf/118496187>,
-        <https://viaf.org/viaf/44299511> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/44299511> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/118496187> ] .
+
+<https://viaf.org/viaf/118496187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/44299511> a nfdicore:NFDI_0001010 .
 

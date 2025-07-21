@@ -1,46 +1,61 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300238606> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300319614> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300549105> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300603002> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7595242-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncert-20-nojabrja-sankt-petersburger-philharmonie-kleiner-saal-1995-11-20> ] .
 
-<https://performance.musiconn.de/event/koncert-20-nojabrja-sankt-petersburger-philharmonie-kleiner-saal-1995-11-20> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncert-20-nojabrja-sankt-petersburger-philharmonie-kleiner-saal-1995-11-20> a cto:CTO_0001005 ;
     rdfs:label "Koncert 20. nojabrja, Sankt-Petersburger Philharmonie / Kleiner Saal, 20.11.1995" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1995-96> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1995-11-20" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1995-11-20" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300238606>,
-        <https://d-nb.info/gnd/300319614>,
-        <https://d-nb.info/gnd/300549105>,
-        <https://d-nb.info/gnd/300603002>,
-        <https://d-nb.info/gnd/7595242-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/sankt-petersburger-philharmonie-saison-1995-96> ;
-    cto:relatedItem <https://d-nb.info/gnd/300238606>,
-        <https://d-nb.info/gnd/300319614>,
-        <https://d-nb.info/gnd/300549105>,
-        <https://d-nb.info/gnd/300603002>,
-        <https://d-nb.info/gnd/7595242-7>,
-        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1995-20-november-kleiner-saal>,
-        <https://performance.musiconn.de/work/acustica-kagel-mauricio>,
-        <https://performance.musiconn.de/work/con-voce-kagel-mauricio>,
-        <https://performance.musiconn.de/work/fantasiestuecke-fl-kl-1988-kagel-mauricio>,
-        <https://performance.musiconn.de/work/programm-recitativarie-kagel-mauricio>,
-        <https://performance.musiconn.de/work/serenade-fuer-drei-spieler-kagel-mauricio>,
-        <https://viaf.org/viaf/178502370>,
-        <https://viaf.org/viaf/207925030>,
-        <https://viaf.org/viaf/209868722>,
-        <https://viaf.org/viaf/210940922>,
-        <https://viaf.org/viaf/213971176> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
-    cto:viaf <https://viaf.org/viaf/178502370>,
-        <https://viaf.org/viaf/207925030>,
-        <https://viaf.org/viaf/209868722>,
-        <https://viaf.org/viaf/210940922>,
-        <https://viaf.org/viaf/213971176> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/sankt-petersburger-philharmonie-kleiner-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210940922> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207925030> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300238606> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213971176> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300603002> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7595242-7> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300319614> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178502370> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300549105> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209868722> ],
+        <https://performance.musiconn.de/source/sankt-petersburger-philharmonie-konzert-1995-20-november-kleiner-saal> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/178502370> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207925030> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209868722> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210940922> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213971176> a nfdicore:NFDI_0001010 .
 

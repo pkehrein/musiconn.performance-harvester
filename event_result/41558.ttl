@@ -1,53 +1,71 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1150332182> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1182918212> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015143> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300155743> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300186703> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4399716-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-schuetzenhaus-radeberg-1926-11-13-19-00> ] .
 
-<https://performance.musiconn.de/event/konzert-schuetzenhaus-radeberg-1926-11-13-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-schuetzenhaus-radeberg-1926-11-13-19-00> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Schützenhaus (Radeberg), 13.11.1926, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1926-1927> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1926-11-13T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1926-11-13T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1150332182>,
-        <https://d-nb.info/gnd/1182918212>,
-        <https://d-nb.info/gnd/300015143>,
-        <https://d-nb.info/gnd/300155743>,
-        <https://d-nb.info/gnd/300186703>,
-        <https://d-nb.info/gnd/4399716-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1926-1927> ;
-    cto:relatedItem <https://d-nb.info/gnd/1150332182>,
-        <https://d-nb.info/gnd/1182918212>,
-        <https://d-nb.info/gnd/300015143>,
-        <https://d-nb.info/gnd/300155743>,
-        <https://d-nb.info/gnd/300186703>,
-        <https://d-nb.info/gnd/4399716-8>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/schuetzenhaus-radeberg> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300155743> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181002798> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300186703> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1825151595764305470006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1150332182> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174573522> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/294012196> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1182918212> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178291184> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/309564531> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015143> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4399716-8> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/an-der-schoenen-blauen-donau-strauss-johann>,
-        <https://performance.musiconn.de/work/der-rose-pilgerfahrt-schumann-robert>,
-        <https://performance.musiconn.de/work/der-zigeunerbaron-ouvertuere-strauss-johann>,
         <https://performance.musiconn.de/work/die-ronde-am-rhein-paulke-karl>,
-        <https://performance.musiconn.de/work/musik-zum-trauerspiel-egmont-von-johann-wolfgang-von-goethe-ouvertuere-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/schlafwandel-hegar-friedrich>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-36-d-dur-larghetto-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/vergangen-pache-johannes-1>,
-        <https://viaf.org/viaf/174573522>,
-        <https://viaf.org/viaf/178291184>,
-        <https://viaf.org/viaf/181002798>,
-        <https://viaf.org/viaf/1825151595764305470006>,
-        <https://viaf.org/viaf/294012196>,
-        <https://viaf.org/viaf/309564531> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/schuetzenhaus-radeberg> ;
-    cto:viaf <https://viaf.org/viaf/174573522>,
-        <https://viaf.org/viaf/178291184>,
-        <https://viaf.org/viaf/181002798>,
-        <https://viaf.org/viaf/1825151595764305470006>,
-        <https://viaf.org/viaf/294012196>,
-        <https://viaf.org/viaf/309564531> .
+        <https://performance.musiconn.de/work/vergangen-pache-johannes-1> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174573522> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178291184> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181002798> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/1825151595764305470006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/294012196> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/309564531> a nfdicore:NFDI_0001010 .
 

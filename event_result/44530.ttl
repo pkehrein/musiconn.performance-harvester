@@ -1,49 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1124547894> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300074859> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300151314> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300232071> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300660200> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ansambl-solistov-moskovskoj-gosudarstvennoj-filarmonii-sankt-petersburger-philharmonie-1988-05-30> ] .
 
-<https://performance.musiconn.de/event/ansambl-solistov-moskovskoj-gosudarstvennoj-filarmonii-sankt-petersburger-philharmonie-1988-05-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ansambl-solistov-moskovskoj-gosudarstvennoj-filarmonii-sankt-petersburger-philharmonie-1988-05-30> a cto:CTO_0001005 ;
     rdfs:label "Ansambl' solistov Moskovskoj gosudarstvennoj filarmonii, Sankt-Petersburger Philharmonie, 30.5.1988" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1987-88> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-05-30" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-05-30" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1124547894>,
-        <https://d-nb.info/gnd/300074859>,
-        <https://d-nb.info/gnd/300151314>,
-        <https://d-nb.info/gnd/300232071>,
-        <https://d-nb.info/gnd/300660200>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1987-88> ;
-    cto:relatedItem <https://d-nb.info/gnd/1124547894>,
-        <https://d-nb.info/gnd/300074859>,
-        <https://d-nb.info/gnd/300151314>,
-        <https://d-nb.info/gnd/300232071>,
-        <https://d-nb.info/gnd/300660200>,
-        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1988-30-mai>,
-        <https://performance.musiconn.de/work/baschmet-suite-traurige-pavane-cajkovskij-aleksandr-vladimirovic>,
-        <https://performance.musiconn.de/work/come-in-martynov-vladimir-ivanovic>,
-        <https://performance.musiconn.de/work/concerti-grossi-violine-2-cembalo-praepariertes-klavier-streichorchester-n-1-schnittke-alfred>,
-        <https://performance.musiconn.de/work/pesy-violine-4-viola-2-violoncello-2-op-11-schostakowitsch-dmitri-d>,
-        <https://performance.musiconn.de/work/trauermusik-hindemith-paul>,
-        <https://viaf.org/viaf/1210148753680241320004>,
-        <https://viaf.org/viaf/181898262>,
-        <https://viaf.org/viaf/182904574>,
-        <https://viaf.org/viaf/193658103>,
-        <https://viaf.org/viaf/204583638> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/1210148753680241320004>,
-        <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/181898262>,
-        <https://viaf.org/viaf/182904574>,
-        <https://viaf.org/viaf/193658103>,
-        <https://viaf.org/viaf/204583638> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1124547894> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300232071> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193658103> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181898262> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300074859> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182904574> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1210148753680241320004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204583638> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300660200> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300151314> ],
+        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1988-30-mai> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1210148753680241320004> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181898262> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182904574> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193658103> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204583638> a nfdicore:NFDI_0001010 .
 

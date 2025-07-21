@@ -1,51 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1190055872> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300016387> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300170475> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300182961> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300200374> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300348959> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/grosses-jubilaeums-concert-des-allgemeinen-musiker-vereins-gewerbehaus-dresden-gewerbehaus-saal-1894-10-19-19-00> ] .
 
-<https://performance.musiconn.de/event/grosses-jubilaeums-concert-des-allgemeinen-musiker-vereins-gewerbehaus-dresden-gewerbehaus-saal-1894-10-19-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/grosses-jubilaeums-concert-des-allgemeinen-musiker-vereins-gewerbehaus-dresden-gewerbehaus-saal-1894-10-19-19-00> a cto:CTO_0001005 ;
     rdfs:label "Grosses Jubiläums-Concert des Allgemeinen Musiker-Vereins, Gewerbehaus (Dresden). Gewerbehaus-Saal, 19.10.1894, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1894-1895> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1894-10-19T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1894-10-19T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/1190055872>,
-        <https://d-nb.info/gnd/300016387>,
-        <https://d-nb.info/gnd/300170475>,
-        <https://d-nb.info/gnd/300182961>,
-        <https://d-nb.info/gnd/300200374>,
-        <https://d-nb.info/gnd/300348959> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1894-1895> ;
-    cto:relatedItem <https://d-nb.info/gnd/1190055872>,
-        <https://d-nb.info/gnd/300016387>,
-        <https://d-nb.info/gnd/300170475>,
-        <https://d-nb.info/gnd/300182961>,
-        <https://d-nb.info/gnd/300200374>,
-        <https://d-nb.info/gnd/300348959>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016387> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2916150567609906370005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300182961> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/196885713> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1190055872> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190422559> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300170475> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/206833017> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180876630> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300348959> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300200374> ],
         <https://performance.musiconn.de/source/programmzettel-philharmonie-dresden-1894-1895>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-2-f-moll-arenskij-anton-stepanovic>,
-        <https://performance.musiconn.de/work/le-prophete-ihr-baalspriester-meyerbeer-giacomo>,
-        <https://performance.musiconn.de/work/lieder-w-108-komm-wir-wandeln-zusammen-cornelius-peter>,
-        <https://performance.musiconn.de/work/mazourkes-de-frederic-chopin-aime-moi-viardot-garcia-pauline>,
-        <https://performance.musiconn.de/work/sinfonien-nr-5-op-67-c-moll-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/tannhaeuser-und-der-saengerkrieg-auf-wartburg-ouvertuere-wagner-richard>,
-        <https://performance.musiconn.de/work/vor-meiner-wiege-schubert-franz>,
-        <https://viaf.org/viaf/180876630>,
-        <https://viaf.org/viaf/190422559>,
-        <https://viaf.org/viaf/196885713>,
-        <https://viaf.org/viaf/206833017>,
-        <https://viaf.org/viaf/2916150567609906370005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/180876630>,
-        <https://viaf.org/viaf/190422559>,
-        <https://viaf.org/viaf/196885713>,
-        <https://viaf.org/viaf/206833017>,
-        <https://viaf.org/viaf/2916150567609906370005> .
+        <https://performance.musiconn.de/work/le-prophete-ihr-baalspriester-meyerbeer-giacomo> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180876630> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190422559> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/196885713> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/206833017> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2916150567609906370005> a nfdicore:NFDI_0001010 .
 

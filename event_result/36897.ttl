@@ -1,49 +1,59 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1185822496> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109644> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300401779> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300904320> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1977-12-04> ] .
 
-<https://performance.musiconn.de/event/3-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1977-12-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-ausserordentliches-konzert-kulturpalast-dresden-festsaal-1977-12-04> a cto:CTO_0001005 ;
     rdfs:label "3. Außerordentliches Konzert, Kulturpalast (Dresden) / Festsaal, 4.12.1977" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1977-12-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1977-12-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1185822496>,
-        <https://d-nb.info/gnd/300109644>,
-        <https://d-nb.info/gnd/300401779>,
-        <https://d-nb.info/gnd/300904320> ;
-    cto:relatedItem <https://d-nb.info/gnd/1185822496>,
-        <https://d-nb.info/gnd/300109644>,
-        <https://d-nb.info/gnd/300401779>,
-        <https://d-nb.info/gnd/300904320>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300401779> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212887931> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/261268491> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300904320> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1185822496> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175810102> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109644> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/auf-lasst-uns-singen-morley-thomas>,
-        <https://performance.musiconn.de/work/der-uhrmacherladen-lischka-rainer>,
         <https://performance.musiconn.de/work/die-taube-meyer-ernst-hermann>,
         <https://performance.musiconn.de/work/frieden-wie-das-eigene-leben-schneider-klaus>,
         <https://performance.musiconn.de/work/gesaenge-des-hafis-pistorius-guenter>,
         <https://performance.musiconn.de/work/le-coq-est-mort-franck-melchior>,
         <https://performance.musiconn.de/work/madrigale-chor-gesualdo-carlo>,
-        <https://performance.musiconn.de/work/messen-kv-317-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/nach-einem-sprichwort-eisler-hanns>,
-        <https://performance.musiconn.de/work/nachtlied-nach-friedrich-hebbel-schumann-robert>,
-        <https://performance.musiconn.de/work/relation-von-dem-herrlichen-actu-oratorio-kompt-ihr-gspielen-franck-melchior>,
         <https://performance.musiconn.de/work/scherzi-musicali-stueck-monteverdi-claudio>,
         <https://performance.musiconn.de/work/senora-santa-ana-franck-melchior>,
         <https://performance.musiconn.de/work/wachet-auf-ihr-lieben-voegelein-gumpelzhaimer-adam>,
-        <https://performance.musiconn.de/work/wenn-ich-ein-voeglein-waer-anonym>,
-        <https://viaf.org/viaf/175810102>,
-        <https://viaf.org/viaf/212887931>,
-        <https://viaf.org/viaf/261268491> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/175810102>,
-        <https://viaf.org/viaf/212887931>,
-        <https://viaf.org/viaf/261268491> .
+        <https://performance.musiconn.de/work/wenn-ich-ein-voeglein-waer-anonym> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175810102> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212887931> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/261268491> a nfdicore:NFDI_0001010 .
 

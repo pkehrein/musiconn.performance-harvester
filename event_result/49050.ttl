@@ -1,36 +1,47 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300033842> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300131011> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300212100> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/80th-abonnement-concert-nihon-seinenkan-hall-tokyo-1930-12-14> ] .
 
-<https://performance.musiconn.de/event/80th-abonnement-concert-nihon-seinenkan-hall-tokyo-1930-12-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/80th-abonnement-concert-nihon-seinenkan-hall-tokyo-1930-12-14> a cto:CTO_0001005 ;
     rdfs:label "80th Abonnement Concert, Nihon Seinenkan Hall (Tokyo), 14.12.1930" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1930-12-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1930-12-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300033842>,
-        <https://d-nb.info/gnd/300131011>,
-        <https://d-nb.info/gnd/300212100> ;
-    cto:relatedItem <https://d-nb.info/gnd/300033842>,
-        <https://d-nb.info/gnd/300131011>,
-        <https://d-nb.info/gnd/300212100>,
-        <https://performance.musiconn.de/source/nhk-kokyo-gakudan-ed-nhk-1977-nhk-kokyo-gakudan-goju-nenshi-1926-1977-nhk-tokyo-nippon-hoso-shuppan-kyokai>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-30-rimskij-korsakov-nikolaj>,
-        <https://performance.musiconn.de/work/sinfonien-cs-27-h-moll-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/svetlyj-prazdnik-rimskij-korsakov-nikolaj>,
-        <https://viaf.org/viaf/175810435>,
-        <https://viaf.org/viaf/184128868>,
-        <https://viaf.org/viaf/207916174> ;
-    cto:relatedLocation <https://viaf.org/viaf/141981202> ;
-    cto:viaf <https://viaf.org/viaf/141981202>,
-        <https://viaf.org/viaf/175810435>,
-        <https://viaf.org/viaf/184128868>,
-        <https://viaf.org/viaf/207916174> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/141981202> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207916174> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175810435> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300131011> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033842> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300212100> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184128868> ],
+        <https://performance.musiconn.de/source/nhk-kokyo-gakudan-ed-nhk-1977-nhk-kokyo-gakudan-goju-nenshi-1926-1977-nhk-tokyo-nippon-hoso-shuppan-kyokai> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/141981202> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175810435> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184128868> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207916174> a nfdicore:NFDI_0001010 .
 

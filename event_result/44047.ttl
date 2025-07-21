@@ -4,19 +4,23 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/gedenkveranstaltung-des-sekretariats-des-hauptvorstands-der-cdu-haus-der-cdu-berlin-1988-11-02> ] .
 
-<https://performance.musiconn.de/event/gedenkveranstaltung-des-sekretariats-des-hauptvorstands-der-cdu-haus-der-cdu-berlin-1988-11-02> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/gedenkveranstaltung-des-sekretariats-des-hauptvorstands-der-cdu-haus-der-cdu-berlin-1988-11-02> a cto:CTO_0001005 ;
     rdfs:label "Gedenkveranstaltung des Sekretariats des Hauptvorstands der CDU, Haus der CDU (Berlin), 2.11.1988" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-11-02" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-11-02" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/5513287-X> ;
-    cto:relatedItem <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/haus-der-cdu-berlin> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/archiv-leipziger-synagogalchor>,
         <https://performance.musiconn.de/source/gedenken-der-cdu-an-den-faschistischen-pogrom-1938-ansprachen-von-gerald-goetting-und-siegmund-rotstein>,
         <https://performance.musiconn.de/source/programm-gedenkveranstaltung-2-november-1988>,
         <https://performance.musiconn.de/source/veranstaltung-der-cdu-anlaesslch-des-50-jahrestages-der-novemberpogrome-1938-mahnung-an-alle-humanistischen-kraefte-jeder-form-des-rassismus-entgegenzutreten-ansprachen-des-parteivorsitzenden-gerald-goetting-und-des-praesidenten-des-verbandes-der-juedischen-gemeinden-in-der-ddr-siegmund-rotstein-eindrucksvolles-konzert-des-leipziger-synagogalchores>,
@@ -30,8 +34,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/schma-kolenu-rumschinsky-joseph>,
         <https://performance.musiconn.de/work/sonate-fuer-klavier-asriel-andre>,
         <https://performance.musiconn.de/work/toras-adonoi-psalm-19-7-9-lewandowski-louis> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/haus-der-cdu-berlin> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5513287-X>,
-        <https://viaf.org/viaf/154106770> ;
-    cto:viaf <https://viaf.org/viaf/154106770> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
 

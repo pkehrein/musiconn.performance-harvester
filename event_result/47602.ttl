@@ -4,24 +4,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4020295-1> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-gera-1989-06-11> ] .
 
-<https://performance.musiconn.de/event/konzert-gera-1989-06-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-gera-1989-06-11> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Gera, 11.6.1989" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1989-06-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1989-06-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4020295-1> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1989-dresden-eigenverlag-der-saechsischen-landesbibliothek-dresden-1990>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4020295-1> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/235011362> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1989-dresden-eigenverlag-der-saechsischen-landesbibliothek-dresden-1990>,
         <https://performance.musiconn.de/work/spielplatz-als-ich-kam-durchs-oderluchs-golle-juergen>,
         <https://performance.musiconn.de/work/spielplatz-der-drachen-golle-juergen>,
         <https://performance.musiconn.de/work/spielplatz-die-kleine-lokomotive-golle-juergen>,
         <https://performance.musiconn.de/work/spielplatz-es-war-ein-kleiner-junge-golle-juergen> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4020295-1>,
-        <https://viaf.org/viaf/235011362> ;
-    cto:viaf <https://viaf.org/viaf/235011362> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/235011362> a nfdicore:NFDI_0001010 .
 

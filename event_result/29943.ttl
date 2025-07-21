@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1156749026> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300200358> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300205511> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300269137> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/7-kammerkonzert-blockhaus-dresden-1988-05-07-19-30> ] .
 
-<https://performance.musiconn.de/event/7-kammerkonzert-blockhaus-dresden-1988-05-07-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/7-kammerkonzert-blockhaus-dresden-1988-05-07-19-30> a cto:CTO_0001005 ;
     rdfs:label "7. Kammerkonzert, Blockhaus (Dresden), 7.5.1988, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1987-1988> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-05-07T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-05-07T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1156749026>,
-        <https://d-nb.info/gnd/300200358>,
-        <https://d-nb.info/gnd/300205511>,
-        <https://d-nb.info/gnd/300269137> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1987-1988> ;
-    cto:relatedItem <https://d-nb.info/gnd/300200358>,
-        <https://d-nb.info/gnd/300205511>,
-        <https://d-nb.info/gnd/300269137>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-hob-3-31-36-nr-34-d-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-jw-713-janacek-leos>,
-        <https://performance.musiconn.de/work/quartette-violine-2-viola-violoncello-nr-11-op-122-f-moll-schostakowitsch-dmitri-d>,
-        <https://viaf.org/viaf/192576521>,
-        <https://viaf.org/viaf/203712550>,
-        <https://viaf.org/viaf/219165301> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1156749026>,
-        <https://viaf.org/viaf/7980152502945210800008> ;
-    cto:viaf <https://viaf.org/viaf/192576521>,
-        <https://viaf.org/viaf/203712550>,
-        <https://viaf.org/viaf/219165301>,
-        <https://viaf.org/viaf/7980152502945210800008> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7980152502945210800008> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1156749026> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203712550> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300200358> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300269137> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219165301> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300205511> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192576521> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/192576521> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203712550> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219165301> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7980152502945210800008> a nfdicore:NFDI_0001010 .
 

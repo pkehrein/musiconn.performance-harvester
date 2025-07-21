@@ -1,66 +1,90 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1151449679> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1151451266> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1151451495> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1160404569> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300090714> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300090765> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300090781> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300090897> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/grosses-operettenkonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1949-01-00> ] .
 
-<https://performance.musiconn.de/event/grosses-operettenkonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1949-01-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/grosses-operettenkonzert-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1949-01-00> a cto:CTO_0001005 ;
     rdfs:label "Großes Operettenkonzert, Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 1/1949" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1948-1949> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1949-01-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1949-01-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1151449679>,
-        <https://d-nb.info/gnd/1151451266>,
-        <https://d-nb.info/gnd/1151451495>,
-        <https://d-nb.info/gnd/1160404569>,
-        <https://d-nb.info/gnd/300090714>,
-        <https://d-nb.info/gnd/300090765>,
-        <https://d-nb.info/gnd/300090781>,
-        <https://d-nb.info/gnd/300090897> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1948-1949> ;
-    cto:relatedItem <https://d-nb.info/gnd/1151449679>,
-        <https://d-nb.info/gnd/1151451266>,
-        <https://d-nb.info/gnd/1151451495>,
-        <https://d-nb.info/gnd/1160404569>,
-        <https://d-nb.info/gnd/300090714>,
-        <https://d-nb.info/gnd/300090765>,
-        <https://d-nb.info/gnd/300090781>,
-        <https://d-nb.info/gnd/300090897>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186733681> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300090765> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1151449679> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175591132> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175925070> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300090897> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300090714> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179131406> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1151451495> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183076408> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1151451266> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1160404569> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183690303> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300090781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186720635> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183583263> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/das-land-des-laechelns-dein-ist-mein-ganzes-herz-lehar-franz>,
-        <https://performance.musiconn.de/work/das-land-des-laechelns-immer-nur-laecheln-lehar-franz>,
-        <https://performance.musiconn.de/work/das-land-des-laechelns-von-apfelblueten-einen-kranz-lehar-franz>,
-        <https://performance.musiconn.de/work/das-land-des-laechelns-wer-hat-die-liebe-uns-ins-herz-gesenkt-lehar-franz>,
         <https://performance.musiconn.de/work/der-graf-von-luxemburg-walzer-lehar-franz>,
-        <https://performance.musiconn.de/work/die-lustige-witwe-ouvertuere-lehar-franz>,
         <https://performance.musiconn.de/work/die-lustige-witwe-viljalied-lehar-franz>,
         <https://performance.musiconn.de/work/giuditta-einer-wird-kommen-lehar-franz>,
-        <https://performance.musiconn.de/work/gold-und-silber-lehar-franz>,
-        <https://performance.musiconn.de/work/paganini-niemand-liebt-dich-so-wie-ich-lehar-franz>,
         <https://performance.musiconn.de/work/tatjana-ballettmusik-lehar-franz>,
-        <https://performance.musiconn.de/work/wiener-frauen-ouvertuere-lehar-franz>,
-        <https://performance.musiconn.de/work/zigeunerliebe-walzer-lehar-franz>,
-        <https://viaf.org/viaf/175591132>,
-        <https://viaf.org/viaf/175925070>,
-        <https://viaf.org/viaf/179131406>,
-        <https://viaf.org/viaf/183076408>,
-        <https://viaf.org/viaf/183583263>,
-        <https://viaf.org/viaf/183690303>,
-        <https://viaf.org/viaf/186720635>,
-        <https://viaf.org/viaf/186733681> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/175591132>,
-        <https://viaf.org/viaf/175925070>,
-        <https://viaf.org/viaf/179131406>,
-        <https://viaf.org/viaf/183076408>,
-        <https://viaf.org/viaf/183583263>,
-        <https://viaf.org/viaf/183690303>,
-        <https://viaf.org/viaf/186720635>,
-        <https://viaf.org/viaf/186733681> .
+        <https://performance.musiconn.de/work/zigeunerliebe-walzer-lehar-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175591132> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175925070> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179131406> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183076408> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183583263> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183690303> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186720635> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186733681> a nfdicore:NFDI_0001010 .
 

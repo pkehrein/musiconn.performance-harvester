@@ -1,22 +1,26 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1067157816> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/xerxes-louvre-grande-galerie-paris-1660-11-22> ] .
 
-<https://performance.musiconn.de/event/xerxes-louvre-grande-galerie-paris-1660-11-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/xerxes-louvre-grande-galerie-paris-1660-11-22> a cto:CTO_0001005 ;
     rdfs:label "Xerxès, Louvre, Grande Galerie (Paris), 22.11.1660" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1660-11-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1660-11-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1067157816> ;
-    cto:relatedItem <https://d-nb.info/gnd/1067157816>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/louvre-grande-galerie-paris> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176954834> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1067157816> ],
         <https://performance.musiconn.de/source/beauchamps-1735-bd-3-68>,
         <https://performance.musiconn.de/source/gazette-1660-11-29>,
         <https://performance.musiconn.de/source/hourcade-2002-273-1>,
@@ -24,9 +28,8 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/source/musikalie-digitalisat-10>,
         <https://performance.musiconn.de/source/onlinequelle-44>,
         <https://performance.musiconn.de/source/onlinequelle-45>,
-        <https://performance.musiconn.de/source/textquellen-digitalisat>,
-        <https://performance.musiconn.de/work/xerxes-lully-jean-baptiste>,
-        <https://viaf.org/viaf/176954834> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/louvre-grande-galerie-paris> ;
-    cto:viaf <https://viaf.org/viaf/176954834> .
+        <https://performance.musiconn.de/source/textquellen-digitalisat> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176954834> a nfdicore:NFDI_0001010 .
 

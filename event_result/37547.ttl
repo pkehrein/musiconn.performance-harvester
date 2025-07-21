@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300011598> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300017014> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300017545> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30002701X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-kammermusik-rosensaal-jena-1939-12-05> ] .
 
-<https://performance.musiconn.de/event/2-kammermusik-rosensaal-jena-1939-12-05> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-kammermusik-rosensaal-jena-1939-12-05> a cto:CTO_0001005 ;
     rdfs:label "2. Kammermusik, Rosensaal (Jena), 5.12.1939" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/akademische-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1939-12-05" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1939-12-05" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300011598>,
-        <https://d-nb.info/gnd/300017014>,
-        <https://d-nb.info/gnd/300017545>,
-        <https://d-nb.info/gnd/30002701X> ;
-    cto:itemOf <https://performance.musiconn.de/series/akademische-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/300011598>,
-        <https://d-nb.info/gnd/300017014>,
-        <https://d-nb.info/gnd/300017545>,
-        <https://d-nb.info/gnd/30002701X>,
-        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/sonaten-violoncello-klavier-op-102-nr-1-c-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sonaten-violoncello-klavier-op-99-f-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/suiten-violoncello-bwv-1007-1012-nr-6-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/variationen-ueber-das-thema-bei-maennern-welche-liebe-fuehlen-aus-der-oper-die-zauberfloete-von-wolfgang-amadeus-mozart-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/174325073>,
-        <https://viaf.org/viaf/189338350>,
-        <https://viaf.org/viaf/207911918>,
-        <https://viaf.org/viaf/212878335> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/rosensaal-jena> ;
-    cto:viaf <https://viaf.org/viaf/174325073>,
-        <https://viaf.org/viaf/189338350>,
-        <https://viaf.org/viaf/207911918>,
-        <https://viaf.org/viaf/212878335> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/rosensaal-jena> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189338350> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300017014> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011598> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207911918> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300017545> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174325073> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30002701X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212878335> ],
+        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174325073> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189338350> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/207911918> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212878335> a nfdicore:NFDI_0001010 .
 

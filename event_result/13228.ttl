@@ -1,22 +1,28 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30017005X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-buergerliche-schiessstaette-littau-1889-07-07> ] .
 
-<https://performance.musiconn.de/event/konzert-buergerliche-schiessstaette-littau-1889-07-07> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-buergerliche-schiessstaette-littau-1889-07-07> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Bürgerliche Schießstätte (Littau), 7.7.1889" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1889-07-07" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1889-07-07" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30017005X> ;
-    cto:relatedItem <https://d-nb.info/gnd/30017005X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/deutscher-musik-geselligkeitsverein-litovel>,
+        <https://performance.musiconn.de/corporation/musikverein-litovel> ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/buergerliche-schiessstaette-littau> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185891258> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30017005X> ],
         <https://performance.musiconn.de/source/programmzettel-einladung-deutscher-musik-geselligkeitsverein-litovel-littau-littau-07071889>,
         <https://performance.musiconn.de/work/das-deutsche-lied-kalivoda-jan-krtitel-vaclav>,
         <https://performance.musiconn.de/work/das-ist-mein-wien-wagner-joseph-franz>,
@@ -25,16 +31,13 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/gigerl-marsch-wagner-joseph-franz>,
         <https://performance.musiconn.de/work/lauter-solche-sachen-friton-gottfried>,
         <https://performance.musiconn.de/work/lied-der-deutschen-in-oesterreich-weinwurm-rudolf>,
-        <https://performance.musiconn.de/work/lohengrin-treulich-gefuehrt-ziehet-dahin-wagner-richard>,
         <https://performance.musiconn.de/work/o-schoene-zeit-o-selge-zeit-goetze-karl>,
         <https://performance.musiconn.de/work/o-wald-wie-ewig-schoen-abt-franz>,
         <https://performance.musiconn.de/work/ouvertueren-orchester-op-210-ziehrer-carl-michael>,
         <https://performance.musiconn.de/work/vor-dem-sturm-schoen-eduard>,
         <https://performance.musiconn.de/work/waldabendschein-schmoelzer-jakob-eduard>,
-        <https://performance.musiconn.de/work/wir-bleiben-treu-op-129-lichner-heinrich>,
-        <https://viaf.org/viaf/185891258> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/buergerliche-schiessstaette-littau> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/deutscher-musik-geselligkeitsverein-litovel>,
-        <https://performance.musiconn.de/corporation/musikverein-litovel> ;
-    cto:viaf <https://viaf.org/viaf/185891258> .
+        <https://performance.musiconn.de/work/wir-bleiben-treu-op-129-lichner-heinrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/185891258> a nfdicore:NFDI_0001010 .
 

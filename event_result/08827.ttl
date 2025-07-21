@@ -1,40 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/30051784X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300782322> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300782365> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1994-11-11> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1994-11-11> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1994-11-11> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 11.11.1994" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1994-11-11" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1994-11-11" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/30051784X>,
-        <https://d-nb.info/gnd/300782322>,
-        <https://d-nb.info/gnd/300782365>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/30051784X>,
-        <https://d-nb.info/gnd/300782322>,
-        <https://d-nb.info/gnd/300782365>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300782322> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30051784X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176408768> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300782365> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175596824> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186101216> ],
         <https://performance.musiconn.de/source/motettenbuch-1994-95>,
-        <https://performance.musiconn.de/work/fontana-disrael-da-jakob-vollendet-hatte-schein-johann-hermann>,
-        <https://performance.musiconn.de/work/fontana-disrael-unser-leben-waehret-siebzig-jahr-schein-johann-hermann>,
-        <https://performance.musiconn.de/work/fontana-disrael-was-betruebst-du-dich-meine-seele-schein-johann-hermann>,
         <https://performance.musiconn.de/work/losungen-1-ihr-habt-nun-traurigkeit-treibmann-karl-ottomar>,
-        <https://performance.musiconn.de/work/messen-1957-agnus-dei-dobos-kalman>,
-        <https://viaf.org/viaf/175596824>,
-        <https://viaf.org/viaf/176408768>,
-        <https://viaf.org/viaf/186101216> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/175596824>,
-        <https://viaf.org/viaf/176408768>,
-        <https://viaf.org/viaf/186101216> .
+        <https://performance.musiconn.de/work/messen-1957-agnus-dei-dobos-kalman> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175596824> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176408768> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186101216> a nfdicore:NFDI_0001010 .
 

@@ -1,49 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300016409> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300107498> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30010751X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300231555> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4304710-5> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7670815-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/sonderkonzert-genthin-1962-05-15> ] .
 
-<https://performance.musiconn.de/event/sonderkonzert-genthin-1962-05-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/sonderkonzert-genthin-1962-05-15> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert, Genthin, 15.5.1962" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1962-05-15" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1962-05-15" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300016409>,
-        <https://d-nb.info/gnd/300107498>,
-        <https://d-nb.info/gnd/30010751X>,
-        <https://d-nb.info/gnd/300231555>,
-        <https://d-nb.info/gnd/4304710-5>,
-        <https://d-nb.info/gnd/7670815-9> ;
-    cto:relatedItem <https://d-nb.info/gnd/300016409>,
-        <https://d-nb.info/gnd/300107498>,
-        <https://d-nb.info/gnd/30010751X>,
-        <https://d-nb.info/gnd/300231555>,
-        <https://d-nb.info/gnd/7670815-9>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/133670950> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4304710-5> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181867195> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213970972> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176838542> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193698494> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208684201> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7670815-9> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016409> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300107498> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300231555> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30010751X> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/deutsche-taenze-orchester-kv-600-nr-5-g-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/deutsche-taenze-orchester-kv-602-nr-3-c-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/deutsche-taenze-orchester-kv-605-nr-3-c-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-61-d-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/sinfonien-nr-6-op-68-f-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonietta-1960-kochan-guenter>,
-        <https://viaf.org/viaf/176838542>,
-        <https://viaf.org/viaf/181867195>,
-        <https://viaf.org/viaf/193698494>,
-        <https://viaf.org/viaf/208684201>,
-        <https://viaf.org/viaf/213970972> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4304710-5>,
-        <https://viaf.org/viaf/133670950> ;
-    cto:viaf <https://viaf.org/viaf/133670950>,
-        <https://viaf.org/viaf/176838542>,
-        <https://viaf.org/viaf/181867195>,
-        <https://viaf.org/viaf/193698494>,
-        <https://viaf.org/viaf/208684201>,
-        <https://viaf.org/viaf/213970972> .
+        <https://performance.musiconn.de/work/sinfonietta-1960-kochan-guenter> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/133670950> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176838542> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181867195> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193698494> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208684201> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213970972> a nfdicore:NFDI_0001010 .
 

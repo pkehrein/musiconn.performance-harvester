@@ -1,60 +1,80 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1088806457> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300056788> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140088> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144903> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30048898X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300488998> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-kurhaus-baden-baden-baden-baden-1949-04-19> ] .
 
-<https://performance.musiconn.de/event/konzert-kurhaus-baden-baden-baden-baden-1949-04-19> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-kurhaus-baden-baden-baden-baden-1949-04-19> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Kurhaus Baden-Baden (Baden-Baden), 19.4.1949" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1949-04-19" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1949-04-19" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1088806457>,
-        <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300056788>,
-        <https://d-nb.info/gnd/300140088>,
-        <https://d-nb.info/gnd/300144903>,
-        <https://d-nb.info/gnd/30048898X>,
-        <https://d-nb.info/gnd/300488998> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300056788>,
-        <https://d-nb.info/gnd/300140088>,
-        <https://d-nb.info/gnd/300144903>,
-        <https://d-nb.info/gnd/30048898X>,
-        <https://d-nb.info/gnd/300488998>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1088806457> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/134711552> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144903> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140088> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181348868> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181241390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300488998> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30048898X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/293130432> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/211720729> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192584176> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300056788> ],
         <https://performance.musiconn.de/source/motettenbuch-1948>,
-        <https://performance.musiconn.de/work/an-die-sonne-d-439-schubert-franz>,
         <https://performance.musiconn.de/work/ausgewaehlte-volkslieder-liebesschmerz-reger-max>,
-        <https://performance.musiconn.de/work/ballettos-1591-amor-vittorioso-gastoldi-giovanni-giacomo>,
         <https://performance.musiconn.de/work/bei-tag-und-nacht-schwefelhelzle-pepping-ernst>,
         <https://performance.musiconn.de/work/das-jahr-november-pepping-ernst>,
         <https://performance.musiconn.de/work/das-jahr-oktober-pepping-ernst>,
         <https://performance.musiconn.de/work/das-jahr-september-pepping-ernst>,
-        <https://performance.musiconn.de/work/gedichte-nach-emanuel-geibel-op-29-zigeunerleben-schumann-robert>,
         <https://performance.musiconn.de/work/il-primo-libro-di-canzon-villanesche-chi-la-gagliarda-donne-voimparare-donato-baldassare>,
         <https://performance.musiconn.de/work/jelaengerjelieber-und-vergissmeinnicht-schein-johann-hermann>,
         <https://performance.musiconn.de/work/lieder-op-39-im-walde-fassung-chor-schumann-robert>,
-        <https://performance.musiconn.de/work/lustgarten-neuer-teutscher-gesaeng-frisch-auf-lasst-uns-ein-guts-glas-wein-hassler-hans-leo>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/v-prirode-b-126-napadly-pisne-dvorak-antonin>,
-        <https://performance.musiconn.de/work/v-prirode-b-126-vecerni-les-rozvazal-zvonky-dvorak-antonin>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/181348868>,
-        <https://viaf.org/viaf/192584176>,
-        <https://viaf.org/viaf/211720729>,
-        <https://viaf.org/viaf/293130432> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1088806457>,
-        <https://viaf.org/viaf/134711552> ;
-    cto:viaf <https://viaf.org/viaf/134711552>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/181348868>,
-        <https://viaf.org/viaf/192584176>,
-        <https://viaf.org/viaf/211720729>,
-        <https://viaf.org/viaf/293130432> .
+        <https://performance.musiconn.de/work/lustgarten-neuer-teutscher-gesaeng-frisch-auf-lasst-uns-ein-guts-glas-wein-hassler-hans-leo> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/134711552> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181241390> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181348868> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192584176> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/211720729> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/293130432> a nfdicore:NFDI_0001010 .
 

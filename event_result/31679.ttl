@@ -1,48 +1,64 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300053525> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300172273> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300245858> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300417217> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4299852-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/3-kammerkonzert-schloss-albrechtsberg-dresden-2004-01-11-19-00> ] .
 
-<https://performance.musiconn.de/event/3-kammerkonzert-schloss-albrechtsberg-dresden-2004-01-11-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/3-kammerkonzert-schloss-albrechtsberg-dresden-2004-01-11-19-00> a cto:CTO_0001005 ;
     rdfs:label "3. Kammerkonzert, Schloss Albrechtsberg (Dresden), 11.1.2004, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2003-2004> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2004-01-11T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2004-01-11T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300053525>,
-        <https://d-nb.info/gnd/300172273>,
-        <https://d-nb.info/gnd/300245858>,
-        <https://d-nb.info/gnd/300417217>,
-        <https://d-nb.info/gnd/4299852-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2003-2004> ;
-    cto:relatedItem <https://d-nb.info/gnd/300053525>,
-        <https://d-nb.info/gnd/300172273>,
-        <https://d-nb.info/gnd/300245858>,
-        <https://d-nb.info/gnd/300417217>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237386709> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4299852-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205759708> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300417217> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180840827> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219164482> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300172273> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300053525> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300245858> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205764637> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/bukoliki-lutoslawski-witold>,
-        <https://performance.musiconn.de/work/duo-aus-sieben-inventionen-fortner-wolfgang>,
         <https://performance.musiconn.de/work/passacaglia-ueber-ein-thema-von-georg-friedrich-haendel-halvorsen-johan>,
-        <https://performance.musiconn.de/work/saetze-fuer-streichtrio-1925-1-webern-anton>,
-        <https://performance.musiconn.de/work/serenaden-violine-viola-violoncello-op-10-c-dur-dohnanyi-ernst-von>,
         <https://performance.musiconn.de/work/trios-violine-viola-violoncello-hob-v-anh-a-nr-1-haydn-joseph>,
         <https://performance.musiconn.de/work/trios-violine-viola-violoncello-hob-v-anh-a-nr-2-haydn-joseph>,
-        <https://performance.musiconn.de/work/trios-violine-viola-violoncello-hob-v-anh-a-nr-3-haydn-joseph>,
-        <https://viaf.org/viaf/180840827>,
-        <https://viaf.org/viaf/205759708>,
-        <https://viaf.org/viaf/205764637>,
-        <https://viaf.org/viaf/219164482> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4299852-9>,
-        <https://viaf.org/viaf/237386709> ;
-    cto:viaf <https://viaf.org/viaf/180840827>,
-        <https://viaf.org/viaf/205759708>,
-        <https://viaf.org/viaf/205764637>,
-        <https://viaf.org/viaf/219164482>,
-        <https://viaf.org/viaf/237386709> .
+        <https://performance.musiconn.de/work/trios-violine-viola-violoncello-hob-v-anh-a-nr-3-haydn-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/180840827> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205759708> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205764637> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219164482> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/237386709> a nfdicore:NFDI_0001010 .
 

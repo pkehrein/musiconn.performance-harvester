@@ -1,40 +1,50 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1074316916> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1148300619> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300798903> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/passionsmusik-friedenskirche-jena-1930-03-09-20-00> ] .
 
-<https://performance.musiconn.de/event/passionsmusik-friedenskirche-jena-1930-03-09-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/passionsmusik-friedenskirche-jena-1930-03-09-20-00> a cto:CTO_0001005 ;
     rdfs:label "Passionsmusik, Friedenskirche (Jena), 9.3.1930, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1930-03-09T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1930-03-09T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1074316916>,
-        <https://d-nb.info/gnd/1148300619>,
-        <https://d-nb.info/gnd/300798903> ;
-    cto:itemOf <https://performance.musiconn.de/series/oeffentliche-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1074316916>,
-        <https://d-nb.info/gnd/300798903>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1148300619> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4149151353529052720008> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1074316916> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300798903> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/316773941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192592555> ],
         <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
         <https://performance.musiconn.de/work/benigne-fac-domine-hasse-johann-adolf>,
         <https://performance.musiconn.de/work/crucifixus-hasse-johann-adolf>,
         <https://performance.musiconn.de/work/ecce-enim-hasse-johann-adolf>,
-        <https://performance.musiconn.de/work/libera-me-domine-hasse-johann-adolf>,
-        <https://performance.musiconn.de/work/miserere-c-moll-nr-1-miserere-mei-deus-hasse-johann-adolf>,
         <https://performance.musiconn.de/work/quoniam-si-voluisses-hasse-johann-adolf>,
         <https://performance.musiconn.de/work/tibi-soli-hasse-johann-adolf>,
-        <https://performance.musiconn.de/work/un-guardo-e-bastante-hasse-johann-adolf>,
-        <https://viaf.org/viaf/192592555>,
-        <https://viaf.org/viaf/316773941> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1148300619>,
-        <https://viaf.org/viaf/4149151353529052720008> ;
-    cto:viaf <https://viaf.org/viaf/192592555>,
-        <https://viaf.org/viaf/316773941>,
-        <https://viaf.org/viaf/4149151353529052720008> .
+        <https://performance.musiconn.de/work/un-guardo-e-bastante-hasse-johann-adolf> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/192592555> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/316773941> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4149151353529052720008> a nfdicore:NFDI_0001010 .
 

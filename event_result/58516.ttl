@@ -4,23 +4,28 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/129601446> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-konzerthalle-am-boulevard-halle-saale-1986-11-27> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-konzerthalle-am-boulevard-halle-saale-1986-11-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-konzerthalle-am-boulevard-halle-saale-1986-11-27> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Konzerthalle am Boulevard (Halle (Saale)), 27.11.1986" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1986-11-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1986-11-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/129601446> ;
-    cto:relatedItem <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/129601446> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/262997630> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1986-dresden-saechsische-landesbibliothek-dresden-1987>,
         <https://performance.musiconn.de/work/kleine-fantasie-ueber-das-kirchenlied-nun-ruhen-alle-waelder-fuer-orgel-braeutigam-volker> ;
-    cto:relatedLocation <https://viaf.org/viaf/262997630> ;
-    cto:relatedPerson <https://d-nb.info/gnd/129601446>,
-        <https://viaf.org/viaf/24205821> ;
-    cto:viaf <https://viaf.org/viaf/24205821>,
-        <https://viaf.org/viaf/262997630> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/24205821> ] .
+
+<https://viaf.org/viaf/24205821> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/262997630> a nfdicore:NFDI_0001010 .
 

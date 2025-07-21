@@ -1,40 +1,51 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175500941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300073925> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300077769> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300148585> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/beschwingtes-konzert-ballsaal-constantia-dresden-1946-01-06> ] .
 
-<https://performance.musiconn.de/event/beschwingtes-konzert-ballsaal-constantia-dresden-1946-01-06> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/beschwingtes-konzert-ballsaal-constantia-dresden-1946-01-06> a cto:CTO_0001005 ;
     rdfs:label "Beschwingtes Konzert, Ballsaal Constantia (Dresden), 6.1.1946" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1945-1946> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1946-01-06" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1946-01-06" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175500941>,
-        <https://d-nb.info/gnd/300073925>,
-        <https://d-nb.info/gnd/300077769>,
-        <https://d-nb.info/gnd/300148585> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1945-1946> ;
-    cto:relatedItem <https://d-nb.info/gnd/300073925>,
-        <https://d-nb.info/gnd/300077769>,
-        <https://d-nb.info/gnd/300148585>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175500941> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300073925> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300148585> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300077769> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179831228> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177408894> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175194258> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/carmen-ballettmusik-bizet-georges>,
-        <https://performance.musiconn.de/work/der-opernball-ouvertuere-heuberger-richard>,
-        <https://performance.musiconn.de/work/haensel-und-gretel-maerchenoper-vorspiel-humperdinck-engelbert>,
         <https://performance.musiconn.de/work/rhapsodie-liszt-franz>,
-        <https://performance.musiconn.de/work/serenaden-streichorchester-silvestrov-valentin-vasilovic>,
-        <https://performance.musiconn.de/work/valse-triste-sibelius-jean>,
-        <https://viaf.org/viaf/175194258>,
-        <https://viaf.org/viaf/177408894>,
-        <https://viaf.org/viaf/179831228> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175500941> ;
-    cto:viaf <https://viaf.org/viaf/175194258>,
-        <https://viaf.org/viaf/177408894>,
-        <https://viaf.org/viaf/179831228> .
+        <https://performance.musiconn.de/work/serenaden-streichorchester-silvestrov-valentin-vasilovic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175194258> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177408894> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179831228> a nfdicore:NFDI_0001010 .
 

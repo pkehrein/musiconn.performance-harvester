@@ -1,31 +1,37 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300033842> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300150741> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/portugal-spanien-1995-coliseu-dos-recreios-lissabon-1995-06-12-21-00> ] .
 
-<https://performance.musiconn.de/event/portugal-spanien-1995-coliseu-dos-recreios-lissabon-1995-06-12-21-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/portugal-spanien-1995-coliseu-dos-recreios-lissabon-1995-06-12-21-00> a cto:CTO_0001005 ;
     rdfs:label "Portugal / Spanien 1995, Coliseu dos Recreios (Lissabon), 12.6.1995, 21:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1994-1995> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1995-06-12T21:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1995-06-12T21:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300033842>,
-        <https://d-nb.info/gnd/300150741> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1994-1995> ;
-    cto:relatedItem <https://d-nb.info/gnd/300033842>,
-        <https://d-nb.info/gnd/300150741>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/konzerte-violoncello-orchester-op-107-es-dur-schostakowitsch-dmitri-d>,
-        <https://performance.musiconn.de/work/sinfonien-cs-27-h-moll-tschaikowski-peter-i>,
-        <https://viaf.org/viaf/175810435>,
-        <https://viaf.org/viaf/198525544> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/coliseu-dos-recreios-lissabon> ;
-    cto:viaf <https://viaf.org/viaf/175810435>,
-        <https://viaf.org/viaf/198525544> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/coliseu-dos-recreios-lissabon> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198525544> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300150741> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033842> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175810435> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175810435> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198525544> a nfdicore:NFDI_0001010 .
 

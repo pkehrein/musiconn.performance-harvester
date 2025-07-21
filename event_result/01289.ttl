@@ -1,44 +1,60 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1050858301> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1076689744> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300007701> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300993625> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/musikauffuehrung-zur-400jaehrigen-reformations-gedenkfeier-kreuzkirche-dresden-1917-10-27-20-00> ] .
 
-<https://performance.musiconn.de/event/musikauffuehrung-zur-400jaehrigen-reformations-gedenkfeier-kreuzkirche-dresden-1917-10-27-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/musikauffuehrung-zur-400jaehrigen-reformations-gedenkfeier-kreuzkirche-dresden-1917-10-27-20-00> a cto:CTO_0001005 ;
     rdfs:label "Musikaufführung zur 400jährigen Reformations-Gedenkfeier, Kreuzkirche (Dresden), 27.10.1917, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1917-18> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1917-10-27T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1917-10-27T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1050858301>,
-        <https://d-nb.info/gnd/1076689744>,
-        <https://d-nb.info/gnd/300007701>,
-        <https://d-nb.info/gnd/300993625>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1917-18> ;
-    cto:relatedItem <https://d-nb.info/gnd/1050858301>,
-        <https://d-nb.info/gnd/1076689744>,
-        <https://d-nb.info/gnd/300007701>,
-        <https://d-nb.info/gnd/300993625>,
-        <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/aus-tiefer-not-schrei-ich-zu-dir-mendelssohn-arnold-ludwig>,
-        <https://performance.musiconn.de/work/choralbearbeitungen-verschiedener-art-fantasia-super-komm-heiliger-geist-herre-gott-bwv-651-a-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/ein-feste-burg-ist-unser-gott-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/symphoniae-sacrae-swv-341-367-ich-werde-nicht-sterben-schuetz-heinrich>,
-        <https://viaf.org/viaf/174235902>,
-        <https://viaf.org/viaf/174964941>,
-        <https://viaf.org/viaf/205784952>,
-        <https://viaf.org/viaf/57144782951897672129> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/174235902>,
-        <https://viaf.org/viaf/174964941>,
-        <https://viaf.org/viaf/205784952>,
-        <https://viaf.org/viaf/248189528>,
-        <https://viaf.org/viaf/57144782951897672129> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1076689744> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205784952> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300007701> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174964941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300993625> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174235902> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1050858301> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/57144782951897672129> ],
+        <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174235902> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174964941> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205784952> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/57144782951897672129> a nfdicore:NFDI_0001010 .
 

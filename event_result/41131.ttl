@@ -1,56 +1,77 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300108508> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141777> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145721> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145756> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145772> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145888> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300808224> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/wiener-klassiker-gastspiel-hotel-stadt-zittau-neugersdorf-1947-09-27-20-00> ] .
 
-<https://performance.musiconn.de/event/wiener-klassiker-gastspiel-hotel-stadt-zittau-neugersdorf-1947-09-27-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/wiener-klassiker-gastspiel-hotel-stadt-zittau-neugersdorf-1947-09-27-20-00> a cto:CTO_0001005 ;
     rdfs:label "Wiener Klassiker - Gastspiel, Hotel Stadt Zittau (Neugersdorf), 27.9.1947, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1947-1948> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1947-09-27T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1947-09-27T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300108508>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300145721>,
-        <https://d-nb.info/gnd/300145756>,
-        <https://d-nb.info/gnd/300145772>,
-        <https://d-nb.info/gnd/300145888>,
-        <https://d-nb.info/gnd/300808224> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1947-1948> ;
-    cto:relatedItem <https://d-nb.info/gnd/300108508>,
-        <https://d-nb.info/gnd/300141777>,
-        <https://d-nb.info/gnd/300145721>,
-        <https://d-nb.info/gnd/300145756>,
-        <https://d-nb.info/gnd/300145772>,
-        <https://d-nb.info/gnd/300145888>,
-        <https://d-nb.info/gnd/300808224>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/eine-kleine-nachtmusik-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-op-127-dein-angesicht-schumann-robert>,
-        <https://performance.musiconn.de/work/liederkreis-nach-heinrich-heine-mit-myrthen-und-rosen-schumann-robert>,
-        <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-fruehlingsnacht-schumann-robert>,
-        <https://performance.musiconn.de/work/myrthen-du-bist-wie-eine-blume-schumann-robert>,
-        <https://performance.musiconn.de/work/sinfonien-d-759-h-moll-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-93-104-nr-9-haydn-joseph>,
-        <https://viaf.org/viaf/177348732>,
-        <https://viaf.org/viaf/179031703>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/182274863>,
-        <https://viaf.org/viaf/182680957>,
-        <https://viaf.org/viaf/185114977>,
-        <https://viaf.org/viaf/185522877> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hotel-stadt-zittau-neugersdorf> ;
-    cto:viaf <https://viaf.org/viaf/177348732>,
-        <https://viaf.org/viaf/179031703>,
-        <https://viaf.org/viaf/179425978>,
-        <https://viaf.org/viaf/182274863>,
-        <https://viaf.org/viaf/182680957>,
-        <https://viaf.org/viaf/185114977>,
-        <https://viaf.org/viaf/185522877> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hotel-stadt-zittau-neugersdorf> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179425978> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145888> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145772> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141777> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185522877> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145721> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179031703> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177348732> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182274863> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185114977> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182680957> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145756> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300808224> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300108508> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177348732> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179031703> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179425978> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182274863> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182680957> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185114977> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185522877> a nfdicore:NFDI_0001010 .
 

@@ -1,60 +1,81 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1033369276> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30002567X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300025777> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111169> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140924> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156758> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300288808> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1899-10-09> ] .
 
-<https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1899-10-09> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-philharmonisches-konzert-ehemaliger-krystallpalast-leipzig-alberthalle-1899-10-09> a cto:CTO_0001005 ;
     rdfs:label "1. Philharmonisches Konzert, Ehemaliger Krystallpalast (Leipzig). Alberthalle, 9.10.1899" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1899-1900> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1899-10-09" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1899-10-09" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1033369276>,
-        <https://d-nb.info/gnd/30002567X>,
-        <https://d-nb.info/gnd/300025777>,
-        <https://d-nb.info/gnd/300111169>,
-        <https://d-nb.info/gnd/300140924>,
-        <https://d-nb.info/gnd/300156758>,
-        <https://d-nb.info/gnd/300288808> ;
-    cto:itemOf <https://performance.musiconn.de/series/philharmonisches-konzert-saison-1899-1900> ;
-    cto:relatedItem <https://d-nb.info/gnd/1033369276>,
-        <https://d-nb.info/gnd/30002567X>,
-        <https://d-nb.info/gnd/300025777>,
-        <https://d-nb.info/gnd/300111169>,
-        <https://d-nb.info/gnd/300140924>,
-        <https://d-nb.info/gnd/300156758>,
-        <https://d-nb.info/gnd/300288808>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111169> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182681837> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1033369276> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30002567X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176196779> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025777> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300288808> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140924> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156758> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178620648> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/297601104> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182296322> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214736935> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183538483> ],
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
-        <https://performance.musiconn.de/work/airs-hongrois-varies-ernst-heinrich-wilhelm>,
         <https://performance.musiconn.de/work/die-kriegsgefangene-vorspiel-goldmark-karl>,
         <https://performance.musiconn.de/work/griselda-per-la-gloria-dadorarvi-bearbeitung-fuer-singstimme-und-orchester-bononcini-giovanni>,
         <https://performance.musiconn.de/work/in-questa-tomba-oscura-bearbeitung-fuer-singstimme-und-orchester-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/klavierstuecke-fuer-kleine-und-grosse-kinder-abendlied-bearbeitung-von-joseph-joachim-schumann-robert>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-op-77-d-dur-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-brahms-johannes>,
-        <https://performance.musiconn.de/work/lieder-schubert-franz>,
-        <https://performance.musiconn.de/work/lieder-strauss-richard>,
-        <https://performance.musiconn.de/work/scherzi-orch-op-45-goldmark-karl>,
-        <https://performance.musiconn.de/work/sinfonien-kv-551-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/176196779>,
-        <https://viaf.org/viaf/178620648>,
-        <https://viaf.org/viaf/182296322>,
-        <https://viaf.org/viaf/182681837>,
-        <https://viaf.org/viaf/183538483>,
-        <https://viaf.org/viaf/214736935>,
-        <https://viaf.org/viaf/297601104> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/ehemaliger-krystallpalast-leipzig-alberthalle> ;
-    cto:viaf <https://viaf.org/viaf/176196779>,
-        <https://viaf.org/viaf/178620648>,
-        <https://viaf.org/viaf/182296322>,
-        <https://viaf.org/viaf/182681837>,
-        <https://viaf.org/viaf/183538483>,
-        <https://viaf.org/viaf/214736935>,
-        <https://viaf.org/viaf/297601104> .
+        <https://performance.musiconn.de/work/klavierstuecke-fuer-kleine-und-grosse-kinder-abendlied-bearbeitung-von-joseph-joachim-schumann-robert> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176196779> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178620648> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182296322> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182681837> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183538483> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214736935> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/297601104> a nfdicore:NFDI_0001010 .
 

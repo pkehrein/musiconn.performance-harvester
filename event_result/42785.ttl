@@ -1,51 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1123528454> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300027419> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140371> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141238> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300144571> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300182961> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-kammermusik-konzert-hessischer-rundfunk-grosser-sendesaal-1951-03-02-20-15> ] .
 
-<https://performance.musiconn.de/event/6-kammermusik-konzert-hessischer-rundfunk-grosser-sendesaal-1951-03-02-20-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-kammermusik-konzert-hessischer-rundfunk-grosser-sendesaal-1951-03-02-20-15> a cto:CTO_0001005 ;
     rdfs:label "6. Kammermusik-Konzert, Hessischer Rundfunk. Großer Sendesaal, 2.3.1951, 20:15" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1950-1951> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1951-03-02T20:15:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1951-03-02T20:15:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1123528454>,
-        <https://d-nb.info/gnd/300027419>,
-        <https://d-nb.info/gnd/300140371>,
-        <https://d-nb.info/gnd/300141238>,
-        <https://d-nb.info/gnd/300144571>,
-        <https://d-nb.info/gnd/300182961> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1950-1951> ;
-    cto:relatedItem <https://d-nb.info/gnd/1123528454>,
-        <https://d-nb.info/gnd/300027419>,
-        <https://d-nb.info/gnd/300140371>,
-        <https://d-nb.info/gnd/300141238>,
-        <https://d-nb.info/gnd/300144571>,
-        <https://d-nb.info/gnd/300182961>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/der-gute-hirt-schubert-franz>,
-        <https://performance.musiconn.de/work/dichterliebe-schumann-robert>,
-        <https://performance.musiconn.de/work/fischerweise-schubert-franz>,
-        <https://performance.musiconn.de/work/nachtstueck-schubert-franz>,
-        <https://performance.musiconn.de/work/vor-meiner-wiege-schubert-franz>,
-        <https://performance.musiconn.de/work/zigeunerlieder-brahms-johannes>,
-        <https://viaf.org/viaf/175221440>,
-        <https://viaf.org/viaf/180876630>,
-        <https://viaf.org/viaf/185289360>,
-        <https://viaf.org/viaf/185328753>,
-        <https://viaf.org/viaf/186302964>,
-        <https://viaf.org/viaf/294884210> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hessischer-rundfunk-grosser-sendesaal> ;
-    cto:viaf <https://viaf.org/viaf/175221440>,
-        <https://viaf.org/viaf/180876630>,
-        <https://viaf.org/viaf/185289360>,
-        <https://viaf.org/viaf/185328753>,
-        <https://viaf.org/viaf/186302964>,
-        <https://viaf.org/viaf/294884210> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hessischer-rundfunk-grosser-sendesaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141238> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185289360> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300182961> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175221440> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186302964> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185328753> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1123528454> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300027419> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300144571> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140371> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180876630> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/294884210> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/175221440> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180876630> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185289360> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185328753> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186302964> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/294884210> a nfdicore:NFDI_0001010 .
 

@@ -1,50 +1,69 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1222200015> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1235355322> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300015585> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026684> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300133758> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300816669> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/4-volks-konzert-hamburger-volksoper-hamburg-1905-03-03-20-00> ] .
 
-<https://performance.musiconn.de/event/4-volks-konzert-hamburger-volksoper-hamburg-1905-03-03-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/4-volks-konzert-hamburger-volksoper-hamburg-1905-03-03-20-00> a cto:CTO_0001005 ;
     rdfs:label "4. Volks-Konzert, Hamburger Volksoper (Hamburg), 3.3.1905, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1904-1905-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1905-03-03T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1905-03-03T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1222200015>,
-        <https://d-nb.info/gnd/1235355322>,
-        <https://d-nb.info/gnd/300015585>,
-        <https://d-nb.info/gnd/300026684>,
-        <https://d-nb.info/gnd/300133758>,
-        <https://d-nb.info/gnd/300816669> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1904-1905-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/1235355322>,
-        <https://d-nb.info/gnd/300015585>,
-        <https://d-nb.info/gnd/300026684>,
-        <https://d-nb.info/gnd/300133758>,
-        <https://d-nb.info/gnd/300816669>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/117159032786501182559> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1222200015> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015585> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300816669> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213968470> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/188262515> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181427594> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175287865> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300133758> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1235355322> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2947162422741632460004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026684> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-r-190-g-moll-saint-saens-camille>,
-        <https://performance.musiconn.de/work/leonoren-ouvertuere-2-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/musik-zu-shakespeare-richard-iii-ouvertuere-volkmann-robert>,
-        <https://performance.musiconn.de/work/rhapsodien-klavier-op-79-nr-2-brahms-johannes>,
-        <https://performance.musiconn.de/work/sinfonien-b-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/suiten-klavier-op-91-d-dur-giga-con-variazioni-raff-joseph-joachim>,
-        <https://viaf.org/viaf/175287865>,
-        <https://viaf.org/viaf/181427594>,
-        <https://viaf.org/viaf/188262515>,
-        <https://viaf.org/viaf/213968470>,
-        <https://viaf.org/viaf/2947162422741632460004> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1222200015>,
-        <https://viaf.org/viaf/117159032786501182559> ;
-    cto:viaf <https://viaf.org/viaf/117159032786501182559>,
-        <https://viaf.org/viaf/175287865>,
-        <https://viaf.org/viaf/181427594>,
-        <https://viaf.org/viaf/188262515>,
-        <https://viaf.org/viaf/213968470>,
-        <https://viaf.org/viaf/2947162422741632460004> .
+        <https://performance.musiconn.de/work/sinfonien-b-dur-haydn-joseph> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/117159032786501182559> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175287865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181427594> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/188262515> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213968470> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2947162422741632460004> a nfdicore:NFDI_0001010 .
 

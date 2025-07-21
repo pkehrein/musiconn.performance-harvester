@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4005728-8> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/der-schiffskapitain-berlin-1817-10-04> ] .
 
-<https://performance.musiconn.de/event/der-schiffskapitain-berlin-1817-10-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/der-schiffskapitain-berlin-1817-10-04> a cto:CTO_0001005 ;
     rdfs:label "Der Schiffskapitain, Berlin, 4.10.1817" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1817-10-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1817-10-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4005728-8> ;
-    cto:relatedItem <https://performance.musiconn.de/source/berlinische-nachrichten-von-staats-und-gelehrten-sachen-04101817>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4005728-8> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/122530980> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/berlinische-nachrichten-von-staats-und-gelehrten-sachen-04101817>,
         <https://performance.musiconn.de/work/der-schiffskapitain-oder-die-unbefangenen-fassung-mozart-wolfgang-amadeus-mehul-etienne-nicolas-himmel-friedrich-heinrich-hiller-johann-adam-mueller-wenzel-dalayrac-nicolas-haibel-johann-jakob-verschiedene> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4005728-8>,
-        <https://viaf.org/viaf/122530980> ;
-    cto:viaf <https://viaf.org/viaf/122530980> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/122530980> a nfdicore:NFDI_0001010 .
 

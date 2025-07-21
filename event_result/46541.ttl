@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300015542> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300026870> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300531419> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-sonntags-konzert-alte-oper-frankfurt-a-main-grosser-saal-1991-10-13-11-00> ] .
 
-<https://performance.musiconn.de/event/2-sonntags-konzert-alte-oper-frankfurt-a-main-grosser-saal-1991-10-13-11-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-sonntags-konzert-alte-oper-frankfurt-a-main-grosser-saal-1991-10-13-11-00> a cto:CTO_0001005 ;
     rdfs:label "2. Sonntags-Konzert, Alte Oper (Frankfurt a. Main). Großer Saal, 13.10.1991, 11:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1991-1992> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1991-10-13T11:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1991-10-13T11:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300015542>,
-        <https://d-nb.info/gnd/300026870>,
-        <https://d-nb.info/gnd/300531419> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1991-1992> ;
-    cto:relatedItem <https://d-nb.info/gnd/300015542>,
-        <https://d-nb.info/gnd/300026870>,
-        <https://d-nb.info/gnd/300531419>,
-        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
-        <https://performance.musiconn.de/work/konzerte-violine-violoncello-klavier-orchester-op-56-c-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/sinfonie-in-einem-satz-orchester-baz-3-13-b-zimmermann-bernd-alois>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-73-d-dur-brahms-johannes>,
-        <https://viaf.org/viaf/183523652>,
-        <https://viaf.org/viaf/191495144>,
-        <https://viaf.org/viaf/204593729> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/183523652>,
-        <https://viaf.org/viaf/191495144>,
-        <https://viaf.org/viaf/204593729> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183523652> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300026870> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300015542> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204593729> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191495144> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300531419> ],
+        <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/183523652> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191495144> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204593729> a nfdicore:NFDI_0001010 .
 

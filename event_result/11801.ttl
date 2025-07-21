@@ -1,49 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1076295673> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300006950> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30012676X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300299079> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300364369> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4468631-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1967-01-28> ] .
 
-<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1967-01-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1967-01-28> a cto:CTO_0001005 ;
     rdfs:label "Motette, Thomaskirche (Leipzig), 28.1.1967" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1967-01-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1967-01-28" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1076295673>,
-        <https://d-nb.info/gnd/300006950>,
-        <https://d-nb.info/gnd/30012676X>,
-        <https://d-nb.info/gnd/300299079>,
-        <https://d-nb.info/gnd/300364369>,
-        <https://d-nb.info/gnd/4468631-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1076295673>,
-        <https://d-nb.info/gnd/300006950>,
-        <https://d-nb.info/gnd/30012676X>,
-        <https://d-nb.info/gnd/300299079>,
-        <https://d-nb.info/gnd/300364369>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132561712> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4468631-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/317085045> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/202944940> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300006950> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182292233> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300364369> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203713419> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177884880> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300299079> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1076295673> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30012676X> ],
         <https://performance.musiconn.de/source/motettenbuch-1967>,
-        <https://performance.musiconn.de/work/cantate-domino-canticum-novum-manicke-dietrich>,
-        <https://performance.musiconn.de/work/geistliche-gesaenge-op-138-morgengesang-reger-max>,
-        <https://performance.musiconn.de/work/geistliche-lieder-op-137-lass-dich-nur-nichts-nicht-dauern-reger-max>,
-        <https://performance.musiconn.de/work/geistliche-lieder-op-137-o-herre-gott-reger-max>,
-        <https://performance.musiconn.de/work/gleichwie-der-regen-und-schnee-vom-himmel-faellt-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/itt-hjartans-barn-hallgrimur-helgason>,
-        <https://viaf.org/viaf/177884880>,
-        <https://viaf.org/viaf/182292233>,
-        <https://viaf.org/viaf/202944940>,
-        <https://viaf.org/viaf/203713419>,
-        <https://viaf.org/viaf/317085045> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4468631-6>,
-        <https://viaf.org/viaf/132561712> ;
-    cto:viaf <https://viaf.org/viaf/132561712>,
-        <https://viaf.org/viaf/177884880>,
-        <https://viaf.org/viaf/182292233>,
-        <https://viaf.org/viaf/202944940>,
-        <https://viaf.org/viaf/203713419>,
-        <https://viaf.org/viaf/317085045> .
+        <https://performance.musiconn.de/work/cantate-domino-canticum-novum-manicke-dietrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132561712> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177884880> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182292233> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/202944940> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203713419> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/317085045> a nfdicore:NFDI_0001010 .
 

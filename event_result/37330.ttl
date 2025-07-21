@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1123677247> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300017138> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300197446> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30021314X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/drittes-akademisches-konzert-volkshaus-jena-saal-1929-12-16-20-00> ] .
 
-<https://performance.musiconn.de/event/drittes-akademisches-konzert-volkshaus-jena-saal-1929-12-16-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/drittes-akademisches-konzert-volkshaus-jena-saal-1929-12-16-20-00> a cto:CTO_0001005 ;
     rdfs:label "Drittes Akademisches Konzert, Volkshaus (Jena) / Saal, 16.12.1929, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/akademische-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1929-12-16T22:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1929-12-16T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1123677247>,
-        <https://d-nb.info/gnd/300017138>,
-        <https://d-nb.info/gnd/300197446>,
-        <https://d-nb.info/gnd/30021314X> ;
-    cto:itemOf <https://performance.musiconn.de/series/akademische-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/1123677247>,
-        <https://d-nb.info/gnd/300017138>,
-        <https://d-nb.info/gnd/300197446>,
-        <https://d-nb.info/gnd/30021314X>,
-        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/sonaten-klavier-d-575-h-dur-schubert-franz>,
-        <https://performance.musiconn.de/work/sonaten-und-partiten-violine-bwv-1001-1006-sonata-nr-3-adagio-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-kv-481-es-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-op-30-nr-3-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/207911695>,
-        <https://viaf.org/viaf/218084635>,
-        <https://viaf.org/viaf/219937433>,
-        <https://viaf.org/viaf/2731148523897220970000> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/volkshaus-jena-saal> ;
-    cto:viaf <https://viaf.org/viaf/207911695>,
-        <https://viaf.org/viaf/218084635>,
-        <https://viaf.org/viaf/219937433>,
-        <https://viaf.org/viaf/2731148523897220970000> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/volkshaus-jena-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300197446> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300017138> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/207911695> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219937433> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1123677247> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/2731148523897220970000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30021314X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/218084635> ],
+        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/207911695> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/218084635> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219937433> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/2731148523897220970000> a nfdicore:NFDI_0001010 .
 

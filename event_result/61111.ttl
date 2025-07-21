@@ -1,29 +1,32 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300072775> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/clementi-trio-koeln-mit-werken-fuer-klaviertrio-rathaus-kassel-buergersaal-1987-02-22> ] .
 
-<https://performance.musiconn.de/event/clementi-trio-koeln-mit-werken-fuer-klaviertrio-rathaus-kassel-buergersaal-1987-02-22> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/clementi-trio-koeln-mit-werken-fuer-klaviertrio-rathaus-kassel-buergersaal-1987-02-22> a cto:CTO_0001005 ;
     rdfs:label "Clementi-Trio, Köln mit Werken für Klaviertrio, Rathaus (Kassel) / Bürgersaal, 22.2.1987" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vom-schweigen-befreit-internationales-komponistinnenfestival-kassel-20-22-februar-1987> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-02-22" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-02-22" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300072775> ;
-    cto:itemOf <https://performance.musiconn.de/series/vom-schweigen-befreit-internationales-komponistinnenfestival-kassel-20-22-februar-1987> ;
-    cto:relatedItem <https://d-nb.info/gnd/300072775>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/rathaus-kassel-buergersaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205760235> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300072775> ],
         <https://performance.musiconn.de/source/nachlass-elke-mascha-blankenburg-programm-vom-schweigen-befreit-internationales-komponistinnenfestival-kassel-1987-programm-10-konzert-clementi-trio>,
         <https://performance.musiconn.de/work/mysterium-buffo-ii-violine-violoncello-klavier-koblenz-babette>,
         <https://performance.musiconn.de/work/tree-peace-violine-violoncello-klavier-oliveros-pauline>,
-        <https://performance.musiconn.de/work/trio-violine-violoncello-klavier-clarke-rebecca>,
-        <https://performance.musiconn.de/work/trios-violine-violoncello-klavier-h-465-d-moll-hensel-fanny>,
-        <https://viaf.org/viaf/205760235> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/rathaus-kassel-buergersaal> ;
-    cto:viaf <https://viaf.org/viaf/205760235> .
+        <https://performance.musiconn.de/work/trio-violine-violoncello-klavier-clarke-rebecca> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/205760235> a nfdicore:NFDI_0001010 .
 

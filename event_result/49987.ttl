@@ -1,43 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300112866> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300221800> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300271980> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300353499> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300395183> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/studentenkonzert-hochschule-fuer-musik-franz-liszt-weimar-saal-am-palais-1967-05-22-16-00> ] .
 
-<https://performance.musiconn.de/event/studentenkonzert-hochschule-fuer-musik-franz-liszt-weimar-saal-am-palais-1967-05-22-16-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/studentenkonzert-hochschule-fuer-musik-franz-liszt-weimar-saal-am-palais-1967-05-22-16-00> a cto:CTO_0001005 ;
     rdfs:label "Studentenkonzert, Hochschule für Musik Franz Liszt Weimar / Saal am Palais, 22.5.1967, 16:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/hochschulwoche-1967> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1967-05-22T16:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1967-05-22T16:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300112866>,
-        <https://d-nb.info/gnd/300221800>,
-        <https://d-nb.info/gnd/300271980>,
-        <https://d-nb.info/gnd/300353499>,
-        <https://d-nb.info/gnd/300395183> ;
-    cto:itemOf <https://performance.musiconn.de/series/hochschulwoche-1967> ;
-    cto:relatedItem <https://d-nb.info/gnd/300112866>,
-        <https://d-nb.info/gnd/300221800>,
-        <https://d-nb.info/gnd/300271980>,
-        <https://d-nb.info/gnd/300353499>,
-        <https://d-nb.info/gnd/300395183>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/hochschule-fuer-musik-franz-liszt-weimar-saal-am-palais> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300395183> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183505250> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/204589884> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300221800> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300112866> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300353499> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300271980> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193659241> ],
         <https://performance.musiconn.de/source/plakate-programmhefte-und-rezensionen-aus-dem-nachlass-hermann-keller-2-programmhefte-1955-1984>,
-        <https://performance.musiconn.de/work/capriccios-violine-ms-25-nr-4-paganini-niccolo>,
-        <https://performance.musiconn.de/work/detskaja-musorgskij-modest-petrovic>,
-        <https://performance.musiconn.de/work/sonaten-klavier-op-1-eisler-hanns>,
-        <https://performance.musiconn.de/work/sonaten-querfloete-klavier-hindemith-paul>,
-        <https://performance.musiconn.de/work/suiten-violoncello-op-131c-nr-3-a-moll-reger-max>,
-        <https://performance.musiconn.de/work/trios-oboe-fagott-klavier-fp-43-poulenc-francis>,
-        <https://viaf.org/viaf/183505250>,
-        <https://viaf.org/viaf/193659241>,
-        <https://viaf.org/viaf/204589884> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/hochschule-fuer-musik-franz-liszt-weimar-saal-am-palais> ;
-    cto:viaf <https://viaf.org/viaf/183505250>,
-        <https://viaf.org/viaf/193659241>,
-        <https://viaf.org/viaf/204589884> .
+        <https://performance.musiconn.de/work/capriccios-violine-ms-25-nr-4-paganini-niccolo> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/183505250> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193659241> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/204589884> a nfdicore:NFDI_0001010 .
 

@@ -1,42 +1,56 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175448915> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30011043X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111150> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156316> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300157436> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-grosses-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1924-11-11-19-00> ] .
 
-<https://performance.musiconn.de/event/2-grosses-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1924-11-11-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-grosses-philharmonisches-konzert-gewerbehaus-dresden-gewerbehaus-saal-1924-11-11-19-00> a cto:CTO_0001005 ;
     rdfs:label "2. Großes Philharmonisches Konzert, Gewerbehaus (Dresden). Gewerbehaus-Saal, 11.11.1924, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1924-1925> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1924-11-11T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1924-11-11T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175448915>,
-        <https://d-nb.info/gnd/30011043X>,
-        <https://d-nb.info/gnd/300111150>,
-        <https://d-nb.info/gnd/300156316>,
-        <https://d-nb.info/gnd/300157436> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1924-1925> ;
-    cto:relatedItem <https://d-nb.info/gnd/30011043X>,
-        <https://d-nb.info/gnd/300111150>,
-        <https://d-nb.info/gnd/300156316>,
-        <https://d-nb.info/gnd/300157436>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/ariadne-auf-naxos-noch-glaub-ich-dem-einen-strauss-richard>,
-        <https://performance.musiconn.de/work/il-re-pastore-lamero-saro-costante-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-kv-550-g-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/tod-und-verklaerung-strauss-richard>,
-        <https://viaf.org/viaf/184315015>,
-        <https://viaf.org/viaf/186109452>,
-        <https://viaf.org/viaf/193655042>,
-        <https://viaf.org/viaf/233855664> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1175448915> ;
-    cto:viaf <https://viaf.org/viaf/184315015>,
-        <https://viaf.org/viaf/186109452>,
-        <https://viaf.org/viaf/193655042>,
-        <https://viaf.org/viaf/233855664> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175448915> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157436> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186109452> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193655042> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/233855664> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156316> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111150> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184315015> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30011043X> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/184315015> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186109452> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193655042> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/233855664> a nfdicore:NFDI_0001010 .
 

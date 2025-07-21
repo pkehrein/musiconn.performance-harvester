@@ -1,42 +1,55 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300005393> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300157274> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300172648> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300717237> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300820178> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/93rd-abonnement-concert-nihon-seinenkan-hall-tokyo-1931-09-24> ] .
 
-<https://performance.musiconn.de/event/93rd-abonnement-concert-nihon-seinenkan-hall-tokyo-1931-09-24> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/93rd-abonnement-concert-nihon-seinenkan-hall-tokyo-1931-09-24> a cto:CTO_0001005 ;
     rdfs:label "93rd Abonnement Concert, Nihon Seinenkan Hall (Tokyo), 24.9.1931" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1931-09-24" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1931-09-24" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300005393>,
-        <https://d-nb.info/gnd/300157274>,
-        <https://d-nb.info/gnd/300172648>,
-        <https://d-nb.info/gnd/300717237>,
-        <https://d-nb.info/gnd/300820178> ;
-    cto:relatedItem <https://d-nb.info/gnd/300005393>,
-        <https://d-nb.info/gnd/300157274>,
-        <https://d-nb.info/gnd/300172648>,
-        <https://d-nb.info/gnd/300717237>,
-        <https://d-nb.info/gnd/300820178>,
-        <https://performance.musiconn.de/source/nhk-kokyo-gakudan-ed-nhk-1977-nhk-kokyo-gakudan-goju-nenshi-1926-1977-nhk-tokyo-nippon-hoso-shuppan-kyokai>,
-        <https://performance.musiconn.de/work/der-geburtstag-der-infantin-schreker-franz>,
-        <https://performance.musiconn.de/work/die-brandenburgischen-konzerte-nr-3-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/serenaden-blasorchester-op-7-es-dur-strauss-richard>,
-        <https://performance.musiconn.de/work/sinfonien-hob-1-90-92-nr-91-es-dur-haydn-joseph>,
-        <https://performance.musiconn.de/work/svanda-dudak-weinberger-jaromir>,
-        <https://viaf.org/viaf/190417753>,
-        <https://viaf.org/viaf/200780123>,
-        <https://viaf.org/viaf/208699697> ;
-    cto:relatedLocation <https://viaf.org/viaf/141981202> ;
-    cto:viaf <https://viaf.org/viaf/141981202>,
-        <https://viaf.org/viaf/190417753>,
-        <https://viaf.org/viaf/200780123>,
-        <https://viaf.org/viaf/208699697> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/141981202> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300172648> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300820178> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157274> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190417753> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300005393> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/208699697> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/200780123> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300717237> ],
+        <https://performance.musiconn.de/source/nhk-kokyo-gakudan-ed-nhk-1977-nhk-kokyo-gakudan-goju-nenshi-1926-1977-nhk-tokyo-nippon-hoso-shuppan-kyokai> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/141981202> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190417753> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/200780123> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/208699697> a nfdicore:NFDI_0001010 .
 

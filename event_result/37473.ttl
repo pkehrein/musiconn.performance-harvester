@@ -1,41 +1,53 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300011253> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300157347> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30030417X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300890206> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ii-akadem-kammermusik-rosensaal-jena-1931-12-01-20-00> ] .
 
-<https://performance.musiconn.de/event/ii-akadem-kammermusik-rosensaal-jena-1931-12-01-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ii-akadem-kammermusik-rosensaal-jena-1931-12-01-20-00> a cto:CTO_0001005 ;
     rdfs:label "II. Akadem. Kammermusik, Rosensaal (Jena), 1.12.1931, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/akademische-konzerte> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1931-12-01T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1931-12-01T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300011253>,
-        <https://d-nb.info/gnd/300157347>,
-        <https://d-nb.info/gnd/30030417X>,
-        <https://d-nb.info/gnd/300890206> ;
-    cto:itemOf <https://performance.musiconn.de/series/akademische-konzerte> ;
-    cto:relatedItem <https://d-nb.info/gnd/300011253>,
-        <https://d-nb.info/gnd/300157347>,
-        <https://d-nb.info/gnd/30030417X>,
-        <https://d-nb.info/gnd/300890206>,
-        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate>,
-        <https://performance.musiconn.de/work/konzert-in-ungarischer-weise-joachim-joseph>,
-        <https://performance.musiconn.de/work/rondos-klavier-4-haendig-d-951-a-dur-schubert-franz>,
-        <https://performance.musiconn.de/work/sonaten-violine-klavier-op-18-strauss-richard>,
-        <https://performance.musiconn.de/work/sonaten-vl-bc-bwv-1023-bach-johann-sebastian>,
-        <https://viaf.org/viaf/177212586>,
-        <https://viaf.org/viaf/212878326>,
-        <https://viaf.org/viaf/213972981>,
-        <https://viaf.org/viaf/215925295> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/rosensaal-jena> ;
-    cto:viaf <https://viaf.org/viaf/177212586>,
-        <https://viaf.org/viaf/212878326>,
-        <https://viaf.org/viaf/213972981>,
-        <https://viaf.org/viaf/215925295> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/rosensaal-jena> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300011253> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30030417X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177212586> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300157347> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300890206> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213972981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215925295> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/212878326> ],
+        <https://performance.musiconn.de/source/jenaer-konzerte-programme-und-plakate> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/177212586> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/212878326> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213972981> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215925295> a nfdicore:NFDI_0001010 .
 

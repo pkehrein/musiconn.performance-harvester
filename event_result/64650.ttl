@@ -1,35 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300375506> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300829620> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zagrosek-7-89-2-alte-oper-frankfurt-a-main-grosser-saal-1989-09-06> ] .
 
-<https://performance.musiconn.de/event/zagrosek-7-89-2-alte-oper-frankfurt-a-main-grosser-saal-1989-09-06> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zagrosek-7-89-2-alte-oper-frankfurt-a-main-grosser-saal-1989-09-06> a cto:CTO_0001005 ;
     rdfs:label "Zagrosek 7/89/2, Alte Oper (Frankfurt a. Main). Großer Saal, 6.9.1989" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1989-09-06" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1989-09-06" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300375506>,
-        <https://d-nb.info/gnd/300829620>,
-        <https://d-nb.info/gnd/3008405-2> ;
-    cto:relatedItem <https://d-nb.info/gnd/300375506>,
-        <https://d-nb.info/gnd/300829620>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300829620> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174761013> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300375506> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181774738> ],
         <https://performance.musiconn.de/source/pue-info-archiv-ensemble-modern>,
-        <https://performance.musiconn.de/work/befreiung-goebbels-heiner>,
-        <https://performance.musiconn.de/work/chants-de-la-revolution-sont-des-chants-de-lamour-riehm-rolf>,
-        <https://performance.musiconn.de/work/kammersinfonie-nr-2-yun-isang>,
-        <https://viaf.org/viaf/174761013>,
-        <https://viaf.org/viaf/181774738> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-a-main-grosser-saal> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/174761013>,
-        <https://viaf.org/viaf/181774738> .
+        <https://performance.musiconn.de/work/chants-de-la-revolution-sont-des-chants-de-lamour-riehm-rolf> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174761013> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181774738> a nfdicore:NFDI_0001010 .
 

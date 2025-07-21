@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300088981> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102666> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300505639> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1911-11-09-20-00> ] .
 
-<https://performance.musiconn.de/event/2-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1911-11-09-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-symphonie-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1911-11-09-20-00> a cto:CTO_0001005 ;
     rdfs:label "2. Symphonie-Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 9.11.1911, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1911-1912-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1911-11-09T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1911-11-09T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300088981>,
-        <https://d-nb.info/gnd/300102666>,
-        <https://d-nb.info/gnd/300505639> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1911-1912-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/300088981>,
-        <https://d-nb.info/gnd/300102666>,
-        <https://d-nb.info/gnd/300505639>,
-        <https://performance.musiconn.de/source/gedruckte-konzertprogramme-symphonie-konzerte-1908-1933>,
-        <https://performance.musiconn.de/work/cyrano-de-bergerac-foerster-josef-bohuslav>,
-        <https://performance.musiconn.de/work/sinfonien-mwv-n-16-a-dur-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/symphonie-espagnole-lalo-edouard>,
-        <https://viaf.org/viaf/174000601>,
-        <https://viaf.org/viaf/175005823>,
-        <https://viaf.org/viaf/179215200> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/174000601>,
-        <https://viaf.org/viaf/175005823>,
-        <https://viaf.org/viaf/179215200> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102666> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175005823> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179215200> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174000601> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300505639> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300088981> ],
+        <https://performance.musiconn.de/source/gedruckte-konzertprogramme-symphonie-konzerte-1908-1933> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174000601> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175005823> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179215200> a nfdicore:NFDI_0001010 .
 

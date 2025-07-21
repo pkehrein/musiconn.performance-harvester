@@ -1,58 +1,79 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1257380729> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300118279> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300177801> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7613268-7> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7613269-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7613270-5> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7613271-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/eroeffnungskonzert-kulturpalast-dresden-festsaal-1988-10-01-19-30> ] .
 
-<https://performance.musiconn.de/event/eroeffnungskonzert-kulturpalast-dresden-festsaal-1988-10-01-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/eroeffnungskonzert-kulturpalast-dresden-festsaal-1988-10-01-19-30> a cto:CTO_0001005 ;
     rdfs:label "Eröffnungskonzert, Kulturpalast (Dresden) / Festsaal, 1.10.1988, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/2-dresdner-tage-der-zeitgenoessischen-musik-1988> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-10-01T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-10-01T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1257380729>,
-        <https://d-nb.info/gnd/300118279>,
-        <https://d-nb.info/gnd/300177801>,
-        <https://d-nb.info/gnd/7613268-7>,
-        <https://d-nb.info/gnd/7613269-9>,
-        <https://d-nb.info/gnd/7613270-5>,
-        <https://d-nb.info/gnd/7613271-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/2-dresdner-tage-der-zeitgenoessischen-musik-1988> ;
-    cto:relatedItem <https://d-nb.info/gnd/1257380729>,
-        <https://d-nb.info/gnd/300118279>,
-        <https://d-nb.info/gnd/300177801>,
-        <https://d-nb.info/gnd/7613268-7>,
-        <https://d-nb.info/gnd/7613269-9>,
-        <https://d-nb.info/gnd/7613270-5>,
-        <https://d-nb.info/gnd/7613271-7>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300177801> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7613268-7> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7613271-7> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/195847764> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198526088> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300118279> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7613269-9> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193696823> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203750186> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1257380729> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/194774372> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/294337175> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191540215> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7613270-5> ],
         <https://performance.musiconn.de/source/dresdner-zentrum-fuer-zeitgenoessische-musik-programmhefte-1987-1988>,
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-45-dresdner-tage-fuer-zeitgenoessische-musik-1988-1989-1991>,
-        <https://performance.musiconn.de/work/juedische-chronik-i-prolog-blacher-boris>,
-        <https://performance.musiconn.de/work/juedische-chronik-ii-wagner-regeny-rudolf>,
-        <https://performance.musiconn.de/work/juedische-chronik-iii-ghetto-hartmann-karl-amadeus>,
-        <https://performance.musiconn.de/work/juedische-chronik-iv-aufstand-henze-hans-werner>,
-        <https://performance.musiconn.de/work/juedische-chronik-v-epilog-dessau-paul>,
-        <https://performance.musiconn.de/work/sieh-meine-augen-zimmermann-udo>,
-        <https://performance.musiconn.de/work/thren-penderecki-krzysztof>,
-        <https://viaf.org/viaf/191540215>,
-        <https://viaf.org/viaf/193696823>,
-        <https://viaf.org/viaf/194774372>,
-        <https://viaf.org/viaf/195847764>,
-        <https://viaf.org/viaf/198526088>,
-        <https://viaf.org/viaf/203750186>,
-        <https://viaf.org/viaf/294337175> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/191540215>,
-        <https://viaf.org/viaf/193696823>,
-        <https://viaf.org/viaf/194774372>,
-        <https://viaf.org/viaf/195847764>,
-        <https://viaf.org/viaf/198526088>,
-        <https://viaf.org/viaf/203750186>,
-        <https://viaf.org/viaf/294337175> .
+        <https://performance.musiconn.de/source/programmhefte-und-rezensionen-aus-dem-nachlass-friedbert-streller-45-dresdner-tage-fuer-zeitgenoessische-musik-1988-1989-1991> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/191540215> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193696823> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/194774372> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/195847764> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198526088> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203750186> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/294337175> a nfdicore:NFDI_0001010 .
 

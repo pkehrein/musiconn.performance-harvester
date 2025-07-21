@@ -4,47 +4,74 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1036753131> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1037001184> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1037360540> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1037360907> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1084609428> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/117357030> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/135674190> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-gebaeude-der-koeniglichen-oper-berlin-berlin-1818-10-26> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-gebaeude-der-koeniglichen-oper-berlin-berlin-1818-10-26> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-gebaeude-der-koeniglichen-oper-berlin-berlin-1818-10-26> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Gebäude der Königlichen Oper Berlin (Berlin), 26.10.1818" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1818-10-26" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1818-10-26" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1036753131>,
-        <https://d-nb.info/gnd/1037001184>,
-        <https://d-nb.info/gnd/1037360540>,
-        <https://d-nb.info/gnd/1037360907>,
-        <https://d-nb.info/gnd/1084609428>,
-        <https://d-nb.info/gnd/117357030>,
-        <https://d-nb.info/gnd/135674190> ;
-    cto:relatedItem <https://performance.musiconn.de/source/katalogisat-die-jungfrau-von-orleans-romantische-tragoedie-in-5-abtheilungen-von-schiller-26-october-1818>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1037001184> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1036753131> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/117357030> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1037360540> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1037360907> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/135674190> ] ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/533149662172407020006> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1084609428> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/katalogisat-die-jungfrau-von-orleans-romantische-tragoedie-in-5-abtheilungen-von-schiller-26-october-1818>,
         <https://performance.musiconn.de/source/katalogisat-die-schwestern-von-prag-komisches-singspiel-in-2-abtheilungen-vom-verfasser-und-komponisten-des-neusonntagskindes-29-october-1818>,
         <https://performance.musiconn.de/work/die-jungfrau-von-orleans-fassung-weber-bernhard-anselm>,
         <https://performance.musiconn.de/work/die-schwestern-von-prag-fassung-1813-mueller-wenzel> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1084609428>,
-        <https://viaf.org/viaf/533149662172407020006> ;
-    cto:relatedPerson <https://d-nb.info/gnd/1036753131>,
-        <https://d-nb.info/gnd/1037001184>,
-        <https://d-nb.info/gnd/1037360540>,
-        <https://d-nb.info/gnd/1037360907>,
-        <https://d-nb.info/gnd/117357030>,
-        <https://d-nb.info/gnd/135674190>,
-        <https://viaf.org/viaf/303917666>,
-        <https://viaf.org/viaf/304021596>,
-        <https://viaf.org/viaf/304793986>,
-        <https://viaf.org/viaf/304937926>,
-        <https://viaf.org/viaf/304937939>,
-        <https://viaf.org/viaf/8609239> ;
-    cto:viaf <https://viaf.org/viaf/303917666>,
-        <https://viaf.org/viaf/304021596>,
-        <https://viaf.org/viaf/304793986>,
-        <https://viaf.org/viaf/304937926>,
-        <https://viaf.org/viaf/304937939>,
-        <https://viaf.org/viaf/533149662172407020006>,
-        <https://viaf.org/viaf/8609239> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/304937939> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8609239> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/304937926> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/304793986> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/303917666> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/304021596> ] .
+
+<https://viaf.org/viaf/303917666> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/304021596> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/304793986> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/304937926> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/304937939> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/533149662172407020006> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8609239> a nfdicore:NFDI_0001010 .
 

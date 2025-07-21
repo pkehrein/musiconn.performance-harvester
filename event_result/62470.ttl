@@ -4,22 +4,25 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4011446-6> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/i-portentosi-effetti-della-madre-natura-den-haag-1755-08-25> ] .
 
-<https://performance.musiconn.de/event/i-portentosi-effetti-della-madre-natura-den-haag-1755-08-25> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/i-portentosi-effetti-della-madre-natura-den-haag-1755-08-25> a cto:CTO_0001005 ;
     rdfs:label "I portentosi effetti della madre natura, Den Haag, 25.8.1755" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1755-08-25" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1755-08-25" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4011446-6> ;
-    cto:relatedItem <https://performance.musiconn.de/source/rasch-opera>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4011446-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/151996116> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/rasch-opera>,
         <https://performance.musiconn.de/work/i-portentosi-effetti-della-madre-natura-scarlatti-giuseppe> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4011446-6>,
-        <https://viaf.org/viaf/151996116> ;
-    cto:relatedPerson <https://performance.musiconn.de/person/ferrari-francesco> ;
-    cto:viaf <https://viaf.org/viaf/151996116> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:relatedPerson <https://performance.musiconn.de/person/ferrari-francesco> .
+
+<https://viaf.org/viaf/151996116> a nfdicore:NFDI_0001010 .
 

@@ -1,56 +1,76 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1070114499> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1187967963> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1223825892> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140061> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145772> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300863993> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/9-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1885-03-03> ] .
 
-<https://performance.musiconn.de/event/9-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1885-03-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/9-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1885-03-03> a cto:CTO_0001005 ;
     rdfs:label "9. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 3.3.1885" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1884-1885> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1885-03-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1885-03-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1070114499>,
-        <https://d-nb.info/gnd/1187967963>,
-        <https://d-nb.info/gnd/1223825892>,
-        <https://d-nb.info/gnd/300140061>,
-        <https://d-nb.info/gnd/300145772>,
-        <https://d-nb.info/gnd/300863993>,
-        <https://d-nb.info/gnd/4381134-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1884-1885> ;
-    cto:relatedItem <https://d-nb.info/gnd/1070114499>,
-        <https://d-nb.info/gnd/1187967963>,
-        <https://d-nb.info/gnd/1223825892>,
-        <https://d-nb.info/gnd/300140061>,
-        <https://d-nb.info/gnd/300145772>,
-        <https://d-nb.info/gnd/300863993>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145772> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1187967963> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1223825892> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183715682> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300863993> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209884064> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1070114499> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185114977> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7693160909260012870003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315579530> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140061> ],
         <https://performance.musiconn.de/source/neue-zeitschrift-fuer-musik-nzfm>,
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/stadtgeschichtliches-museum-leipzig>,
-        <https://performance.musiconn.de/work/an-die-leier-schubert-franz>,
-        <https://performance.musiconn.de/work/arien-op-124-reinecke-carl>,
         <https://performance.musiconn.de/work/ich-liebe-dich-grieg-edvard>,
-        <https://performance.musiconn.de/work/lieder-op-72-verlust-rubinstejn-anton-g>,
-        <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-fruehlingsnacht-schumann-robert>,
-        <https://performance.musiconn.de/work/ouvertuere-zu-medea-bargiel-woldemar>,
-        <https://performance.musiconn.de/work/sinfonien-op-50-herzogenberg-heinrich-von>,
-        <https://performance.musiconn.de/work/variationen-ueber-ein-eigenes-thema-bearbeitung-fuer-orchester-schubert-franz>,
-        <https://viaf.org/viaf/183715682>,
-        <https://viaf.org/viaf/185114977>,
-        <https://viaf.org/viaf/209884064>,
-        <https://viaf.org/viaf/315579530>,
-        <https://viaf.org/viaf/7693160909260012870003> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/183715682>,
-        <https://viaf.org/viaf/185114977>,
-        <https://viaf.org/viaf/209884064>,
-        <https://viaf.org/viaf/242717024>,
-        <https://viaf.org/viaf/315579530>,
-        <https://viaf.org/viaf/7693160909260012870003> .
+        <https://performance.musiconn.de/work/variationen-ueber-ein-eigenes-thema-bearbeitung-fuer-orchester-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/183715682> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185114977> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209884064> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315579530> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7693160909260012870003> a nfdicore:NFDI_0001010 .
 

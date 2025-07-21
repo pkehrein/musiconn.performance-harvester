@@ -1,48 +1,65 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1194342469> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1267638338> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300005539> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30000995X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300093551> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267676-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1916-05-13-14-00> ] .
 
-<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1916-05-13-14-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1916-05-13-14-00> a cto:CTO_0001005 ;
     rdfs:label "Vesper in der Kreuzkirche, Kreuzkirche (Dresden), 13.5.1916, 14:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1915-16> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1916-05-13T14:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1916-05-13T14:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1194342469>,
-        <https://d-nb.info/gnd/1267638338>,
-        <https://d-nb.info/gnd/300005539>,
-        <https://d-nb.info/gnd/30000995X>,
-        <https://d-nb.info/gnd/300093551>,
-        <https://d-nb.info/gnd/4267676-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/vesper-in-der-kreuzkirche-1915-16> ;
-    cto:relatedItem <https://d-nb.info/gnd/1194342469>,
-        <https://d-nb.info/gnd/1267638338>,
-        <https://d-nb.info/gnd/300005539>,
-        <https://d-nb.info/gnd/30000995X>,
-        <https://d-nb.info/gnd/300093551>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267676-9> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/248189528> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185711418> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300093551> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300005539> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201850694> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1267638338> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1194342469> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1170147967345584200005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4980166293203100710006> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30000995X> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
-        <https://performance.musiconn.de/work/choraele-aus-der-sammlung-joh-seb-bachs-vierstimmige-choralgesaenge-dir-dir-jehova-will-ich-singen-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/die-beste-zeit-im-jahr-ist-mein-mendelssohn-arnold-ludwig>,
-        <https://performance.musiconn.de/work/die-psyche-ladet-die-waldvoegelein-zum-lobe-gottes-ein-reimann-heinrich>,
-        <https://performance.musiconn.de/work/fantasie-und-fuge-ueber-das-thema-b-a-c-h-liszt-franz>,
-        <https://performance.musiconn.de/work/josua-horch-auf-der-muntern-voegel-lied-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-alles-was-odem-hat-lobe-den-herrn-bach-johann-sebastian>,
-        <https://viaf.org/viaf/1170147967345584200005>,
-        <https://viaf.org/viaf/185711418>,
-        <https://viaf.org/viaf/201850694>,
-        <https://viaf.org/viaf/4980166293203100710006> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267676-9>,
-        <https://viaf.org/viaf/248189528> ;
-    cto:viaf <https://viaf.org/viaf/1170147967345584200005>,
-        <https://viaf.org/viaf/185711418>,
-        <https://viaf.org/viaf/201850694>,
-        <https://viaf.org/viaf/248189528>,
-        <https://viaf.org/viaf/4980166293203100710006> .
+        <https://performance.musiconn.de/work/josua-horch-auf-der-muntern-voegel-lied-haendel-georg-friedrich> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1170147967345584200005> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185711418> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201850694> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/248189528> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4980166293203100710006> a nfdicore:NFDI_0001010 .
 

@@ -1,30 +1,34 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300123779> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4427972-3> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-ausserordentliches-konzert-kulturpalast-dresden-festsaal-2002-10-06-19-30> ] .
 
-<https://performance.musiconn.de/event/2-ausserordentliches-konzert-kulturpalast-dresden-festsaal-2002-10-06-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-ausserordentliches-konzert-kulturpalast-dresden-festsaal-2002-10-06-19-30> a cto:CTO_0001005 ;
     rdfs:label "2. Außerordentliches Konzert, Kulturpalast (Dresden) / Festsaal, 6.10.2002, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2002-2003> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2002-10-06T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2002-10-06T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300123779>,
-        <https://d-nb.info/gnd/4427972-3> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2002-2003> ;
-    cto:relatedItem <https://d-nb.info/gnd/300123779>,
-        <https://d-nb.info/gnd/4427972-3>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300123779> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4427972-3> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219935037> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/kartinki-s-vystavki-fassung-ravel-ravel-maurice>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-nr-2-op-18-rachmaninov-sergej-vasilevic>,
-        <https://performance.musiconn.de/work/rapsodie-espagnole-ravel-maurice>,
-        <https://viaf.org/viaf/219935037> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/219935037> .
+        <https://performance.musiconn.de/work/kartinki-s-vystavki-fassung-ravel-ravel-maurice> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/219935037> a nfdicore:NFDI_0001010 .
 

@@ -1,60 +1,82 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1175922277> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1185451218> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1185530282> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1186852747> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009941> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300025874> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300107153> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140290> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30047329X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konsert-filipstads-kyrka-filipstad-1937-10-30-20-00> ] .
 
-<https://performance.musiconn.de/event/konsert-filipstads-kyrka-filipstad-1937-10-30-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konsert-filipstads-kyrka-filipstad-1937-10-30-20-00> a cto:CTO_0001005 ;
     rdfs:label "Konsert, Filipstads kyrka (Filipstad), 30.10.1937, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1937-38> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1937-10-30T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1937-10-30T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1175922277>,
-        <https://d-nb.info/gnd/1185451218>,
-        <https://d-nb.info/gnd/1185530282>,
-        <https://d-nb.info/gnd/1186852747>,
-        <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300025874>,
-        <https://d-nb.info/gnd/300107153>,
-        <https://d-nb.info/gnd/300140290>,
-        <https://d-nb.info/gnd/30047329X> ;
-    cto:itemOf <https://performance.musiconn.de/series/kreuzchor-dresden-schuljahr-1937-38> ;
-    cto:relatedItem <https://d-nb.info/gnd/1175922277>,
-        <https://d-nb.info/gnd/1185451218>,
-        <https://d-nb.info/gnd/1185530282>,
-        <https://d-nb.info/gnd/300009941>,
-        <https://d-nb.info/gnd/300025874>,
-        <https://d-nb.info/gnd/300107153>,
-        <https://d-nb.info/gnd/300140290>,
-        <https://d-nb.info/gnd/30047329X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1186852747> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1175922277> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185469755> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183944429> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/4304154867604060100008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025874> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140290> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183833597> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1185530282> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009941> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300107153> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181241390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1185451218> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30047329X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/215932985> ],
         <https://performance.musiconn.de/source/programme-des-dresdner-kreuzchores>,
         <https://performance.musiconn.de/work/aftonstaemning-haegg-gustaf>,
-        <https://performance.musiconn.de/work/assumpta-est-maria-messe-sanctus-palestrina-giovanni-pierluigi-da>,
-        <https://performance.musiconn.de/work/ave-verum-corpus-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/choralmotetten-op-71-wie-schoen-leuchtet-der-morgenstern-schumann-georg>,
-        <https://performance.musiconn.de/work/der-mond-ist-aufgegangen-mauersberger-rudolf>,
-        <https://performance.musiconn.de/work/deutsche-messe-zum-eingang-schubert-franz>,
-        <https://performance.musiconn.de/work/ellens-gesang-d-839-schubert-franz>,
-        <https://performance.musiconn.de/work/lieder-op-49-wiegenlied-brahms-johannes>,
-        <https://performance.musiconn.de/work/priere-guilmant-alexandre>,
-        <https://performance.musiconn.de/work/singet-dem-herrn-ein-neues-lied-bwv-225-bach-johann-sebastian>,
-        <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/183833597>,
-        <https://viaf.org/viaf/183944429>,
-        <https://viaf.org/viaf/185469755>,
-        <https://viaf.org/viaf/215932985>,
-        <https://viaf.org/viaf/4304154867604060100008> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1186852747> ;
-    cto:viaf <https://viaf.org/viaf/181241390>,
-        <https://viaf.org/viaf/183833597>,
-        <https://viaf.org/viaf/183944429>,
-        <https://viaf.org/viaf/185469755>,
-        <https://viaf.org/viaf/215932985>,
-        <https://viaf.org/viaf/4304154867604060100008> .
+        <https://performance.musiconn.de/work/priere-guilmant-alexandre> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181241390> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183833597> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183944429> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185469755> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/215932985> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/4304154867604060100008> a nfdicore:NFDI_0001010 .
 

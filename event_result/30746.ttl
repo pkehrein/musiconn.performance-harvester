@@ -1,36 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300141785> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300169841> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30017053X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/spanien-frankreich-deutschland-1995-palau-de-la-musica-valencia-1995-05-07-19-30> ] .
 
-<https://performance.musiconn.de/event/spanien-frankreich-deutschland-1995-palau-de-la-musica-valencia-1995-05-07-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/spanien-frankreich-deutschland-1995-palau-de-la-musica-valencia-1995-05-07-19-30> a cto:CTO_0001005 ;
     rdfs:label "Spanien / Frankreich / Deutschland 1995, Palau de la Música (València), 7.5.1995, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1994-1995> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1995-05-07T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1995-05-07T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300169841>,
-        <https://d-nb.info/gnd/30017053X> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1994-1995> ;
-    cto:relatedItem <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300169841>,
-        <https://d-nb.info/gnd/30017053X>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/gedichte-wagner-richard>,
-        <https://performance.musiconn.de/work/sinfonien-d-944-c-dur-schubert-franz>,
-        <https://performance.musiconn.de/work/tristan-und-isolde-vorspiel-wagner-richard>,
-        <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/174994615>,
-        <https://viaf.org/viaf/176605842> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/palau-de-la-musica-valencia> ;
-    cto:viaf <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/174994615>,
-        <https://viaf.org/viaf/176605842> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/palau-de-la-musica-valencia> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174994615> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300169841> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174994351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30017053X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176605842> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174994351> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174994615> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176605842> a nfdicore:NFDI_0001010 .
 

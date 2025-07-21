@@ -1,49 +1,64 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1079132007> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300033311> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300107390> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300109156> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300665121> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/15-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1929-10-20-19-30> ] .
 
-<https://performance.musiconn.de/event/15-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1929-10-20-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/15-volkstuemliches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1929-10-20-19-30> a cto:CTO_0001005 ;
     rdfs:label "15. Volkstümliches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 20.10.1929, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1929-1930-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1929-10-20T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1929-10-20T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1079132007>,
-        <https://d-nb.info/gnd/300033311>,
-        <https://d-nb.info/gnd/300107390>,
-        <https://d-nb.info/gnd/300109156>,
-        <https://d-nb.info/gnd/300665121> ;
-    cto:itemOf <https://performance.musiconn.de/series/saison-1929-1930-der-philharmonischen-gesellschaft-hamburg> ;
-    cto:relatedItem <https://d-nb.info/gnd/1079132007>,
-        <https://d-nb.info/gnd/300033311>,
-        <https://d-nb.info/gnd/300107390>,
-        <https://d-nb.info/gnd/300109156>,
-        <https://d-nb.info/gnd/300665121>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/315232786> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191512436> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174188651> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1079132007> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300107390> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109156> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/166144898916350291362> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/305991582> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300033311> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300665121> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-volkstuemliche-konzerte>,
         <https://performance.musiconn.de/work/cephale-et-procris-drei-tanzstuecke-bearbeitung-von-felix-mottl-gretry-andre-ernest-modeste>,
-        <https://performance.musiconn.de/work/cosi-fan-tutte-ouvertuere-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/der-rosenkavalier-walzer-strauss-richard>,
-        <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-einleitung-zum-3-akt-tanz-der-lehrbuben-aufzug-der-meistersinger-und-gruss-an-hans-sachs-wagner-richard>,
-        <https://performance.musiconn.de/work/italjanskoe-kapriccio-na-temy-narodnych-pesen-tschaikowski-peter-i>,
-        <https://performance.musiconn.de/work/konzerte-violine-orchester-kv-219-a-dur-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/sinfonien-d-759-h-moll-allegro-moderato-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-d-759-h-moll-andante-con-moto-schubert-franz>,
-        <https://viaf.org/viaf/166144898916350291362>,
-        <https://viaf.org/viaf/174188651>,
-        <https://viaf.org/viaf/191512436>,
-        <https://viaf.org/viaf/305991582>,
-        <https://viaf.org/viaf/315232786> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
-    cto:viaf <https://viaf.org/viaf/166144898916350291362>,
-        <https://viaf.org/viaf/174188651>,
-        <https://viaf.org/viaf/191512436>,
-        <https://viaf.org/viaf/305991582>,
-        <https://viaf.org/viaf/315232786> .
+        <https://performance.musiconn.de/work/die-meistersinger-von-nuernberg-einleitung-zum-3-akt-tanz-der-lehrbuben-aufzug-der-meistersinger-und-gruss-an-hans-sachs-wagner-richard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/166144898916350291362> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174188651> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191512436> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/305991582> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/315232786> a nfdicore:NFDI_0001010 .
 

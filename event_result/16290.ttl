@@ -1,36 +1,46 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300296207> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300897669> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/zehntes-abonnement-concert-erstes-gewandhaus-leipzig-1848-12-14> ] .
 
-<https://performance.musiconn.de/event/zehntes-abonnement-concert-erstes-gewandhaus-leipzig-1848-12-14> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/zehntes-abonnement-concert-erstes-gewandhaus-leipzig-1848-12-14> a cto:CTO_0001005 ;
     rdfs:label "Zehntes Abonnement-Concert, Erstes Gewandhaus (Leipzig), 14.12.1848" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1848-12-14" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1848-12-14" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/300296207>,
-        <https://d-nb.info/gnd/300897669> ;
-    cto:relatedItem <https://d-nb.info/gnd/300296207>,
-        <https://d-nb.info/gnd/300897669>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300897669> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300296207> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186104867> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213989836> ],
         <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/work/concertinos-floete-orchester-haake-wilhelm>,
-        <https://performance.musiconn.de/work/medee-ouvertuere-cherubini-luigi>,
-        <https://performance.musiconn.de/work/medee-zwischenaktmusik-cherubini-luigi>,
-        <https://performance.musiconn.de/work/sinfonien-op-137-spohr-louis>,
-        <https://viaf.org/viaf/186104867>,
-        <https://viaf.org/viaf/213989836> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/186104867>,
-        <https://viaf.org/viaf/213989836>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/work/medee-zwischenaktmusik-cherubini-luigi> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/186104867> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213989836> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

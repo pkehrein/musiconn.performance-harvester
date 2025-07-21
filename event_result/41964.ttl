@@ -1,71 +1,98 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1136100962> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1172326894> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300060335> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156936> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300212801> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30021281X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300789092> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300992041> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7578801-9> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/dritter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1926-10-22-19-00> ] .
 
-<https://performance.musiconn.de/event/dritter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1926-10-22-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/dritter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1926-10-22-19-00> a cto:CTO_0001005 ;
     rdfs:label "Dritter Kammermusik-Abend, Kleiner Konzertsaal (Frankfurt a. M.), 22.10.1926, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1926-1927> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1926-10-22T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1926-10-22T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1136100962>,
-        <https://d-nb.info/gnd/1172326894>,
-        <https://d-nb.info/gnd/300060335>,
-        <https://d-nb.info/gnd/300156936>,
-        <https://d-nb.info/gnd/300212801>,
-        <https://d-nb.info/gnd/30021281X>,
-        <https://d-nb.info/gnd/300789092>,
-        <https://d-nb.info/gnd/300992041>,
-        <https://d-nb.info/gnd/7578801-9> ;
-    cto:itemOf <https://performance.musiconn.de/series/frankfurter-museums-gesellschaft-spielzeit-1926-1927> ;
-    cto:relatedItem <https://d-nb.info/gnd/1136100962>,
-        <https://d-nb.info/gnd/1172326894>,
-        <https://d-nb.info/gnd/300060335>,
-        <https://d-nb.info/gnd/300156936>,
-        <https://d-nb.info/gnd/300212801>,
-        <https://d-nb.info/gnd/30021281X>,
-        <https://d-nb.info/gnd/300789092>,
-        <https://d-nb.info/gnd/300992041>,
-        <https://d-nb.info/gnd/7578801-9>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174925548> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1136100962> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190422920> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192576858> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7578801-9> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300212801> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1172326894> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300789092> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30021281X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156936> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182460126> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185330250> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300992041> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300060335> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183267227> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178419032> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/183470446> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184085041> ],
         <https://performance.musiconn.de/source/programmarchiv-der-frankfurter-museums-gesellschaft>,
         <https://performance.musiconn.de/work/hymnus-an-die-sonne-rimskij-korsakov-nikolaj>,
         <https://performance.musiconn.de/work/ich-bin-der-welt-abhanden-gekommen-mahler-gustav>,
         <https://performance.musiconn.de/work/la-clemenza-di-tito-arie-des-sextus-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/lieder-op-1-kraj-ty-moj-grecaninov-aleksandr-tichonovic>,
-        <https://performance.musiconn.de/work/lieder-op-27-ruhe-meine-seele-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-op-39-befreit-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-op-48-kling-strauss-richard>,
-        <https://performance.musiconn.de/work/lieder-op-5-stepbju-idu-ja-unyloju-grecaninov-aleksandr-tichonovic>,
-        <https://performance.musiconn.de/work/lieder-singstimme-orchester-1905-um-mitternacht-mahler-gustav>,
-        <https://performance.musiconn.de/work/lieder-und-gesaenge-aus-der-jugendzeit-scheiden-und-meiden-mahler-gustav>,
-        <https://performance.musiconn.de/work/orfeo-ed-euridice-che-faro-senza-euridice-gluck-christoph-willibald>,
-        <https://performance.musiconn.de/work/romanzen-singstimme-klavier-cs-211-216-ni-slova-o-drug-moj-tschaikowski-peter-i>,
         <https://performance.musiconn.de/work/wer-hat-dies-liedlein-erdacht-mahler-gustav>,
-        <https://performance.musiconn.de/work/winterliebe-strauss-richard>,
-        <https://viaf.org/viaf/174925548>,
-        <https://viaf.org/viaf/178419032>,
-        <https://viaf.org/viaf/182460126>,
-        <https://viaf.org/viaf/183267227>,
-        <https://viaf.org/viaf/183470446>,
-        <https://viaf.org/viaf/184085041>,
-        <https://viaf.org/viaf/185330250>,
-        <https://viaf.org/viaf/190422920>,
-        <https://viaf.org/viaf/192576858> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kleiner-konzertsaal-frankfurt-a-m> ;
-    cto:viaf <https://viaf.org/viaf/174925548>,
-        <https://viaf.org/viaf/178419032>,
-        <https://viaf.org/viaf/182460126>,
-        <https://viaf.org/viaf/183267227>,
-        <https://viaf.org/viaf/183470446>,
-        <https://viaf.org/viaf/184085041>,
-        <https://viaf.org/viaf/185330250>,
-        <https://viaf.org/viaf/190422920>,
-        <https://viaf.org/viaf/192576858> .
+        <https://performance.musiconn.de/work/winterliebe-strauss-richard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174925548> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178419032> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182460126> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183267227> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/183470446> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184085041> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185330250> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190422920> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/192576858> a nfdicore:NFDI_0001010 .
 

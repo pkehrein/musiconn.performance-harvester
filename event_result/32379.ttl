@@ -1,61 +1,85 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300001533> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300001541> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300001568> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300001592> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300001606> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300101597> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300102658> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4347325-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/1-ausserordentliches-konzert-kulturpalast-dresden-festsaal-2009-09-26-19-30> ] .
 
-<https://performance.musiconn.de/event/1-ausserordentliches-konzert-kulturpalast-dresden-festsaal-2009-09-26-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/1-ausserordentliches-konzert-kulturpalast-dresden-festsaal-2009-09-26-19-30> a cto:CTO_0001005 ;
     rdfs:label "1. Außerordentliches Konzert, Kulturpalast (Dresden) / Festsaal, 26.9.2009, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2009-2010> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2009-09-26T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2009-09-26T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300001533>,
-        <https://d-nb.info/gnd/300001541>,
-        <https://d-nb.info/gnd/300001568>,
-        <https://d-nb.info/gnd/300001592>,
-        <https://d-nb.info/gnd/300001606>,
-        <https://d-nb.info/gnd/300101597>,
-        <https://d-nb.info/gnd/300102658>,
-        <https://d-nb.info/gnd/4347325-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2009-2010> ;
-    cto:relatedItem <https://d-nb.info/gnd/300001533>,
-        <https://d-nb.info/gnd/300001541>,
-        <https://d-nb.info/gnd/300001568>,
-        <https://d-nb.info/gnd/300001592>,
-        <https://d-nb.info/gnd/300001606>,
-        <https://d-nb.info/gnd/300101597>,
-        <https://d-nb.info/gnd/300102658>,
-        <https://d-nb.info/gnd/4347325-8>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/el-sombrero-de-tres-picos-falla-manuel-de>,
-        <https://performance.musiconn.de/work/konzert-ouvertuere-zu-den-hebriden-op-26-mwv-p-7-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/sinfonien-mwv-n-18-a-moll-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/suite-espagnole-t-61-asturias-albeniz-isaac>,
-        <https://performance.musiconn.de/work/suite-espagnole-t-61-granada-albeniz-isaac>,
-        <https://performance.musiconn.de/work/suite-espagnole-t-61-sevilla-albeniz-isaac>,
-        <https://performance.musiconn.de/work/suite-espanola-no-1-aragon-albeniz-isaac>,
-        <https://performance.musiconn.de/work/suite-espanola-no-1-castilla-albeniz-isaac>,
-        <https://viaf.org/viaf/176282278>,
-        <https://viaf.org/viaf/177991085>,
-        <https://viaf.org/viaf/179073088>,
-        <https://viaf.org/viaf/181874528>,
-        <https://viaf.org/viaf/182685162>,
-        <https://viaf.org/viaf/185886550>,
-        <https://viaf.org/viaf/185890974>,
-        <https://viaf.org/viaf/191497132> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
-    cto:viaf <https://viaf.org/viaf/176282278>,
-        <https://viaf.org/viaf/177991085>,
-        <https://viaf.org/viaf/179073088>,
-        <https://viaf.org/viaf/181874528>,
-        <https://viaf.org/viaf/182685162>,
-        <https://viaf.org/viaf/185886550>,
-        <https://viaf.org/viaf/185890974>,
-        <https://viaf.org/viaf/191497132> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4347325-8> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300001541> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176282278> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185890974> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177991085> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179073088> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300001568> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300001592> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185886550> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300102658> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300001606> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191497132> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300101597> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181874528> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182685162> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300001533> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176282278> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177991085> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179073088> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/181874528> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182685162> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185886550> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185890974> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191497132> a nfdicore:NFDI_0001010 .
 

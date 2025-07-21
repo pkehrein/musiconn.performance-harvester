@@ -1,27 +1,32 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1155754409> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1237902096> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/koncert-russkogo-narodnogo-orkestra-im-v-v-andreeva-leningradskogo-radio-i-televidenija-koncertnyj-zal-u-finljandskogo-1965-04-25> ] .
 
-<https://performance.musiconn.de/event/koncert-russkogo-narodnogo-orkestra-im-v-v-andreeva-leningradskogo-radio-i-televidenija-koncertnyj-zal-u-finljandskogo-1965-04-25> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/koncert-russkogo-narodnogo-orkestra-im-v-v-andreeva-leningradskogo-radio-i-televidenija-koncertnyj-zal-u-finljandskogo-1965-04-25> a cto:CTO_0001005 ;
     rdfs:label "Koncert Russkogo narodnogo orkestra im. V. V. Andreeva Leningradskogo radio i televidenija, Koncertnyj zal u Finljandskogo, 25.4.1965" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1965-04-25" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1965-04-25" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1155754409>,
-        <https://d-nb.info/gnd/1237902096> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
-    cto:relatedItem <https://d-nb.info/gnd/1155754409>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1237902096> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3888152381774201950008> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1155754409> ],
         <https://performance.musiconn.de/source/leningrader-fruehling-1965-20-24-25-april>,
         <https://performance.musiconn.de/source/leningrader-fruehling-1965-uebersicht>,
-        <https://performance.musiconn.de/work/capriccios-akkordeon-repnikov-albin-leonidovic>,
         <https://performance.musiconn.de/work/ijulskim-vecerom-nosov-georgij-n>,
         <https://performance.musiconn.de/work/ja-rodilsja-na-russkoj-zemle-nosov-georgij-n>,
         <https://performance.musiconn.de/work/jaroslavskaja-kadril-zarickij-jurij-markovic>,
@@ -33,8 +38,8 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/russkaja-uvertjura-zarickij-jurij-markovic>,
         <https://performance.musiconn.de/work/veselaja-uvertjura-levi-natalia-nikolaevna>,
         <https://performance.musiconn.de/work/veselye-gusli-kravcenko-boris>,
-        <https://performance.musiconn.de/work/zelenaja-okolica-ferkelman-michail-jakovlevic>,
-        <https://viaf.org/viaf/3888152381774201950008> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1237902096> ;
-    cto:viaf <https://viaf.org/viaf/3888152381774201950008> .
+        <https://performance.musiconn.de/work/zelenaja-okolica-ferkelman-michail-jakovlevic> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/3888152381774201950008> a nfdicore:NFDI_0001010 .
 

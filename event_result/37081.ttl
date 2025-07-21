@@ -1,49 +1,68 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1179242351> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1179256948> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300151829> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30019174X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300740360> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4066009-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/oesterreich-1979-wien-1979-05-06> ] .
 
-<https://performance.musiconn.de/event/oesterreich-1979-wien-1979-05-06> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/oesterreich-1979-wien-1979-05-06> a cto:CTO_0001005 ;
     rdfs:label "Österreich 1979, Wien, 6.5.1979" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1979-05-06" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1979-05-06" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1179242351>,
-        <https://d-nb.info/gnd/1179256948>,
-        <https://d-nb.info/gnd/300151829>,
-        <https://d-nb.info/gnd/30019174X>,
-        <https://d-nb.info/gnd/300740360>,
-        <https://d-nb.info/gnd/4066009-6> ;
-    cto:relatedItem <https://d-nb.info/gnd/1179242351>,
-        <https://d-nb.info/gnd/1179256948>,
-        <https://d-nb.info/gnd/300151829>,
-        <https://d-nb.info/gnd/30019174X>,
-        <https://d-nb.info/gnd/300740360>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4066009-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/137212727> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30019174X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1179242351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/5904155191945282440000> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3226155191930382440004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219164964> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300151829> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300740360> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205762601> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217021789> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1179256948> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/kartinki-s-vystavki-fassung-ravel-ravel-maurice>,
-        <https://performance.musiconn.de/work/konzert-in-form-einer-gesangszene-spohr-louis>,
-        <https://performance.musiconn.de/work/slovanske-tance-b-147-nr-1-dvorak-antonin>,
-        <https://performance.musiconn.de/work/slovanske-tance-b-147-nr-2-dvorak-antonin>,
-        <https://performance.musiconn.de/work/slovanske-tance-b-147-nr-7-dvorak-antonin>,
-        <https://performance.musiconn.de/work/slovanske-tance-b-83-nr-8-dvorak-antonin>,
-        <https://viaf.org/viaf/205762601>,
-        <https://viaf.org/viaf/217021789>,
-        <https://viaf.org/viaf/219164964>,
-        <https://viaf.org/viaf/3226155191930382440004>,
-        <https://viaf.org/viaf/5904155191945282440000> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4066009-6>,
-        <https://viaf.org/viaf/137212727> ;
-    cto:viaf <https://viaf.org/viaf/137212727>,
-        <https://viaf.org/viaf/205762601>,
-        <https://viaf.org/viaf/217021789>,
-        <https://viaf.org/viaf/219164964>,
-        <https://viaf.org/viaf/3226155191930382440004>,
-        <https://viaf.org/viaf/5904155191945282440000> .
+        <https://performance.musiconn.de/work/kartinki-s-vystavki-fassung-ravel-ravel-maurice> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/137212727> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205762601> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217021789> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219164964> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3226155191930382440004> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/5904155191945282440000> a nfdicore:NFDI_0001010 .
 

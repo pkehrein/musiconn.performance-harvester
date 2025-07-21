@@ -4,23 +4,26 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1084609428> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/auffuehrung-gebaeude-der-koeniglichen-oper-berlin-berlin-1819-08-28> ] .
 
-<https://performance.musiconn.de/event/auffuehrung-gebaeude-der-koeniglichen-oper-berlin-berlin-1819-08-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/auffuehrung-gebaeude-der-koeniglichen-oper-berlin-berlin-1819-08-28> a cto:CTO_0001005 ;
     rdfs:label "Aufführung, Gebäude der Königlichen Oper Berlin (Berlin), 28.8.1819" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1819-08-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1819-08-28" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1084609428> ;
-    cto:relatedItem <https://performance.musiconn.de/source/katalogisat-der-schiffskapitain-oder-die-unbefangenen-vaudeville-in-1-aufzug-frei-nach-dem-franzoesischen-des-theaulon-bearbeitet-von-c-blum-28-august-1819>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1084609428> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/533149662172407020006> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/katalogisat-der-schiffskapitain-oder-die-unbefangenen-vaudeville-in-1-aufzug-frei-nach-dem-franzoesischen-des-theaulon-bearbeitet-von-c-blum-28-august-1819>,
         <https://performance.musiconn.de/source/katalogisat-die-laune-des-verliebten-schaeferspiel-in-versen-in-1-aufzug-von-goethe-28-august-1819>,
         <https://performance.musiconn.de/work/der-schiffskapitain-oder-die-unbefangenen-fassung-mozart-wolfgang-amadeus-mehul-etienne-nicolas-himmel-friedrich-heinrich-hiller-johann-adam-mueller-wenzel-dalayrac-nicolas-haibel-johann-jakob-verschiedene>,
         <https://performance.musiconn.de/work/die-laune-des-verliebten-fassung-guerrlich-joseph-augustin> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1084609428>,
-        <https://viaf.org/viaf/533149662172407020006> ;
-    cto:viaf <https://viaf.org/viaf/533149662172407020006> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/533149662172407020006> a nfdicore:NFDI_0001010 .
 

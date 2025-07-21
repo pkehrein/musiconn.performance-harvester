@@ -1,27 +1,32 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/126241329X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4018298-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-bad-freienwalde-oder-1988-06-03> ] .
 
-<https://performance.musiconn.de/event/konzert-bad-freienwalde-oder-1988-06-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-bad-freienwalde-oder-1988-06-03> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Bad Freienwalde (Oder), 3.6.1988" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1988-06-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1988-06-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/126241329X>,
-        <https://d-nb.info/gnd/4018298-8> ;
-    cto:relatedItem <https://d-nb.info/gnd/126241329X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1372148269761605230000> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4018298-8> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/126241329X> ],
         <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1988-dresden-saechsische-landesbibliothek-dresden-1989>,
-        <https://performance.musiconn.de/work/einsamkeit-nellessen-hermann-josef>,
         <https://performance.musiconn.de/work/nobody-knows-nellessen-hermann-josef> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4018298-8>,
-        <https://viaf.org/viaf/1372148269761605230000> ;
-    cto:viaf <https://viaf.org/viaf/1372148269761605230000> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/1372148269761605230000> a nfdicore:NFDI_0001010 .
 

@@ -1,55 +1,74 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300055501> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300111169> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300140924> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300145489> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4381134-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7678105-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/6-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1850-01-28> ] .
 
-<https://performance.musiconn.de/event/6-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1850-01-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/6-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1850-01-28> a cto:CTO_0001005 ;
     rdfs:label "6. Abonnementkonzert, Alte Buchhändlerbörse (Leipzig), 28.1.1850" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1849-1850> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1850-01-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1850-01-28" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300055501>,
-        <https://d-nb.info/gnd/300111169>,
-        <https://d-nb.info/gnd/300140924>,
-        <https://d-nb.info/gnd/300145489>,
-        <https://d-nb.info/gnd/4381134-6>,
-        <https://d-nb.info/gnd/7678105-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/konzerte-des-musikvereins-euterpe-saison-1849-1850> ;
-    cto:relatedItem <https://d-nb.info/gnd/300055501>,
-        <https://d-nb.info/gnd/300111169>,
-        <https://d-nb.info/gnd/300140924>,
-        <https://d-nb.info/gnd/300145489>,
-        <https://d-nb.info/gnd/7678105-7>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/242717024> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4381134-6> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140924> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209861785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300145489> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182681837> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185699454> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7678105-7> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182296322> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/264838981> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300055501> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300111169> ],
         <https://performance.musiconn.de/source/programmzettel>,
         <https://performance.musiconn.de/source/senff-bartholf-hrsg-signale-fuer-die-musikalische-welt-leipzig-1843-1941>,
         <https://performance.musiconn.de/source/stadtbibliothek-leipzig>,
         <https://performance.musiconn.de/source/whistling-carl-wilhelm-der-musikverein-euterpe-zu-leipzig-1824-1874-leipzig-1874>,
         <https://performance.musiconn.de/work/gesangsszenen-horn-orchester-eisner-carl>,
-        <https://performance.musiconn.de/work/konzerte-querfloete-orchester-op-84-d-dur-fuerstenau-anton-bernhard>,
-        <https://performance.musiconn.de/work/la-clemenza-di-tito-deh-per-questo-istante-solo-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/lieder-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/lieder-schubert-franz>,
-        <https://performance.musiconn.de/work/lieder-schumann-robert>,
-        <https://performance.musiconn.de/work/ouvertueren-horn-august>,
-        <https://performance.musiconn.de/work/sinfonien-kv-551-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/182296322>,
-        <https://viaf.org/viaf/182681837>,
-        <https://viaf.org/viaf/185699454>,
-        <https://viaf.org/viaf/209861785>,
-        <https://viaf.org/viaf/264838981> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4381134-6>,
-        <https://viaf.org/viaf/242717024> ;
-    cto:viaf <https://viaf.org/viaf/182296322>,
-        <https://viaf.org/viaf/182681837>,
-        <https://viaf.org/viaf/185699454>,
-        <https://viaf.org/viaf/209861785>,
-        <https://viaf.org/viaf/242717024>,
-        <https://viaf.org/viaf/264838981> .
+        <https://performance.musiconn.de/work/ouvertueren-horn-august> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/182296322> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/182681837> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185699454> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209861785> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/242717024> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/264838981> a nfdicore:NFDI_0001010 .
 

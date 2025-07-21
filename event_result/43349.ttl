@@ -1,39 +1,52 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300109016> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300162944> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300219687> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5204449-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/londonskij-simfoniceskij-orkestr-sankt-petersburger-philharmonie-1971-04-15> ] .
 
-<https://performance.musiconn.de/event/londonskij-simfoniceskij-orkestr-sankt-petersburger-philharmonie-1971-04-15> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/londonskij-simfoniceskij-orkestr-sankt-petersburger-philharmonie-1971-04-15> a cto:CTO_0001005 ;
     rdfs:label "Londonskij simfoničeskij orkestr, Sankt-Petersburger Philharmonie, 15.4.1971" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1970-71> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1971-04-15" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1971-04-15" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300109016>,
-        <https://d-nb.info/gnd/300162944>,
-        <https://d-nb.info/gnd/300219687>,
-        <https://d-nb.info/gnd/5204449-X> ;
-    cto:itemOf <https://performance.musiconn.de/series/leningrader-philharmonie-saison-1970-71> ;
-    cto:relatedItem <https://d-nb.info/gnd/300109016>,
-        <https://d-nb.info/gnd/300162944>,
-        <https://d-nb.info/gnd/300219687>,
-        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1971-15-april>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-kv-491-c-moll-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/konzerte-streichorchester-2-tippett-michael>,
-        <https://performance.musiconn.de/work/sinfonien-nr-4-f-moll-vaughan-williams-ralph>,
-        <https://viaf.org/viaf/191497291>,
-        <https://viaf.org/viaf/201854974>,
-        <https://viaf.org/viaf/213970634> ;
-    cto:relatedLocation <https://d-nb.info/gnd/5204449-X>,
-        <https://viaf.org/viaf/128026865> ;
-    cto:viaf <https://viaf.org/viaf/128026865>,
-        <https://viaf.org/viaf/191497291>,
-        <https://viaf.org/viaf/201854974>,
-        <https://viaf.org/viaf/213970634> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5204449-X> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/128026865> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300109016> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300219687> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191497291> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201854974> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/213970634> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300162944> ],
+        <https://performance.musiconn.de/source/leningrader-philharmonie-konzert-1971-15-april> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/128026865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191497291> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/201854974> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/213970634> a nfdicore:NFDI_0001010 .
 

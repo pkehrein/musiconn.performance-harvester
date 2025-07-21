@@ -1,61 +1,85 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300140452> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141785> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300274270> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300300182> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300411480> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300553196> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300782403> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/301025134> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/festkonzert-finanzministerium-berlin-kongress-saal-1953-01-31-19-00> ] .
 
-<https://performance.musiconn.de/event/festkonzert-finanzministerium-berlin-kongress-saal-1953-01-31-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/festkonzert-finanzministerium-berlin-kongress-saal-1953-01-31-19-00> a cto:CTO_0001005 ;
     rdfs:label "Festkonzert, Finanzministerium (Berlin) / Kongress-Saal, 31.1.1953, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1952-1953> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1953-01-31T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1953-01-31T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300140452>,
-        <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300274270>,
-        <https://d-nb.info/gnd/300300182>,
-        <https://d-nb.info/gnd/300411480>,
-        <https://d-nb.info/gnd/300553196>,
-        <https://d-nb.info/gnd/300782403>,
-        <https://d-nb.info/gnd/301025134> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1952-1953> ;
-    cto:relatedItem <https://d-nb.info/gnd/300140452>,
-        <https://d-nb.info/gnd/300141785>,
-        <https://d-nb.info/gnd/300274270>,
-        <https://d-nb.info/gnd/300300182>,
-        <https://d-nb.info/gnd/300411480>,
-        <https://d-nb.info/gnd/300553196>,
-        <https://d-nb.info/gnd/300782403>,
-        <https://d-nb.info/gnd/301025134>,
-        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/dem-unendlichen-schubert-franz>,
-        <https://performance.musiconn.de/work/ganymed-schubert-franz>,
-        <https://performance.musiconn.de/work/gesang-der-geister-ueber-den-wassern-d-714-schubert-franz>,
-        <https://performance.musiconn.de/work/rastlose-liebe-schubert-franz>,
-        <https://performance.musiconn.de/work/sinfonien-d-944-c-dur-schubert-franz>,
-        <https://performance.musiconn.de/work/winterreise-der-leiermann-schubert-franz>,
-        <https://performance.musiconn.de/work/winterreise-der-wegweiser-schubert-franz>,
-        <https://performance.musiconn.de/work/winterreise-fruehlingstraum-schubert-franz>,
-        <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/175384030>,
-        <https://viaf.org/viaf/176272233>,
-        <https://viaf.org/viaf/178472326>,
-        <https://viaf.org/viaf/180450745>,
-        <https://viaf.org/viaf/184389086>,
-        <https://viaf.org/viaf/186503427>,
-        <https://viaf.org/viaf/186510649> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/finanzministerium-berlin-kongress-saal> ;
-    cto:viaf <https://viaf.org/viaf/174994351>,
-        <https://viaf.org/viaf/175384030>,
-        <https://viaf.org/viaf/176272233>,
-        <https://viaf.org/viaf/178472326>,
-        <https://viaf.org/viaf/180450745>,
-        <https://viaf.org/viaf/184389086>,
-        <https://viaf.org/viaf/186503427>,
-        <https://viaf.org/viaf/186510649> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/finanzministerium-berlin-kongress-saal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141785> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186510649> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176272233> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/301025134> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/175384030> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/184389086> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300553196> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174994351> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178472326> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186503427> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300411480> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300300182> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300782403> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/180450745> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300140452> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300274270> ],
+        <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174994351> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/175384030> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176272233> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178472326> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/180450745> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/184389086> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186503427> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186510649> a nfdicore:NFDI_0001010 .
 

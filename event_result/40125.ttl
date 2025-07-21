@@ -1,42 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300098928> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300141726> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300151829> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300272987> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/romantiker-zyklus-2-abend-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1952-11-16-19-00> ] .
 
-<https://performance.musiconn.de/event/romantiker-zyklus-2-abend-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1952-11-16-19-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/romantiker-zyklus-2-abend-museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal-1952-11-16-19-00> a cto:CTO_0001005 ;
     rdfs:label "Romantiker-Zyklus (2. Abend), Museumsbau des Deutschen Hygiene-Museum (Dresden) / Kongresssaal, 16.11.1952, 19:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1952-1953> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1952-11-16T19:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1952-11-16T19:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300098928>,
-        <https://d-nb.info/gnd/300141726>,
-        <https://d-nb.info/gnd/300151829>,
-        <https://d-nb.info/gnd/300272987> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-1952-1953> ;
-    cto:relatedItem <https://d-nb.info/gnd/300098928>,
-        <https://d-nb.info/gnd/300141726>,
-        <https://d-nb.info/gnd/300151829>,
-        <https://d-nb.info/gnd/300272987>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210938800> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205762601> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300141726> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/185087314> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300151829> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300272987> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300098928> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/181963292> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/4-lieder-dem-unendlichen-der-zwerg-abendroethe-lebensmuth-schubert-franz>,
-        <https://performance.musiconn.de/work/hans-heiling-ouvertuere-marschner-heinrich>,
-        <https://performance.musiconn.de/work/konzert-in-form-einer-gesangszene-spohr-louis>,
-        <https://performance.musiconn.de/work/ouvertuere-zum-beherrscher-der-geister-weber-carl-maria-von>,
-        <https://performance.musiconn.de/work/sinfonien-d-125-b-dur-schubert-franz>,
-        <https://viaf.org/viaf/181963292>,
-        <https://viaf.org/viaf/185087314>,
-        <https://viaf.org/viaf/205762601>,
-        <https://viaf.org/viaf/210938800> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/museumsbau-des-deutschen-hygiene-museum-dresden-kongresssaal> ;
-    cto:viaf <https://viaf.org/viaf/181963292>,
-        <https://viaf.org/viaf/185087314>,
-        <https://viaf.org/viaf/205762601>,
-        <https://viaf.org/viaf/210938800> .
+        <https://performance.musiconn.de/work/4-lieder-dem-unendlichen-der-zwerg-abendroethe-lebensmuth-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/181963292> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/185087314> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/205762601> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210938800> a nfdicore:NFDI_0001010 .
 

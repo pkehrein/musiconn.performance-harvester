@@ -1,51 +1,70 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1170723691> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300010648> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300094817> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146086> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300146477> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30101857X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/viertes-abonnement-concert-erstes-gewandhaus-leipzig-1881-10-27> ] .
 
-<https://performance.musiconn.de/event/viertes-abonnement-concert-erstes-gewandhaus-leipzig-1881-10-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/viertes-abonnement-concert-erstes-gewandhaus-leipzig-1881-10-27> a cto:CTO_0001005 ;
     rdfs:label "Viertes Abonnement-Concert, Erstes Gewandhaus (Leipzig), 27.10.1881" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1881-10-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1881-10-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1170723691>,
-        <https://d-nb.info/gnd/300010648>,
-        <https://d-nb.info/gnd/300094817>,
-        <https://d-nb.info/gnd/300146086>,
-        <https://d-nb.info/gnd/300146477>,
-        <https://d-nb.info/gnd/30101857X> ;
-    cto:relatedItem <https://d-nb.info/gnd/300010648>,
-        <https://d-nb.info/gnd/300094817>,
-        <https://d-nb.info/gnd/300146086>,
-        <https://d-nb.info/gnd/300146477>,
-        <https://d-nb.info/gnd/30101857X>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/8198154198335520230002> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170723691> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176123806> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193655982> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146086> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198549427> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300094817> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/210935667> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/189341326> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300010648> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30101857X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146477> ],
         <https://performance.musiconn.de/source/die-gewandhauskonzerte-zu-leipzig-1781-1981-mit-e-zusammenfassenden-rueckblick-von-d-anfaengen-bis-1781-im-auftr-d-gewandhauses-zu-leipzig-hrsg-von-johannes-forner>,
         <https://performance.musiconn.de/source/konzertzettel-gewandhaus-zu-leipzig>,
         <https://performance.musiconn.de/work/ein-zyklus-von-phantasiestuecken-roentgen-julius>,
-        <https://performance.musiconn.de/work/konzerte-klavier-orchester-op-18-d-dur-roentgen-julius>,
-        <https://performance.musiconn.de/work/ouvertuere-zu-demetrius-von-schiller-hiller-ferdinand-von>,
-        <https://performance.musiconn.de/work/romanzen-klavier-op-28-nr-2-schumann-robert>,
-        <https://performance.musiconn.de/work/sinfonien-nr-2-op-61-c-dur-schumann-robert>,
-        <https://performance.musiconn.de/work/tasso-liszt-franz>,
-        <https://performance.musiconn.de/work/toccata-und-fuge-orgel-bwv-540-f-dur-bach-johann-sebastian>,
-        <https://viaf.org/viaf/176123806>,
-        <https://viaf.org/viaf/189341326>,
-        <https://viaf.org/viaf/193655982>,
-        <https://viaf.org/viaf/198549427>,
-        <https://viaf.org/viaf/210935667> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1170723691>,
-        <https://viaf.org/viaf/8198154198335520230002> ;
-    cto:viaf <https://viaf.org/viaf/176123806>,
-        <https://viaf.org/viaf/189341326>,
-        <https://viaf.org/viaf/193655982>,
-        <https://viaf.org/viaf/198549427>,
-        <https://viaf.org/viaf/210935667>,
-        <https://viaf.org/viaf/8198154198335520230002> .
+        <https://performance.musiconn.de/work/ouvertuere-zu-demetrius-von-schiller-hiller-ferdinand-von> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/176123806> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/189341326> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193655982> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198549427> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/210935667> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/8198154198335520230002> a nfdicore:NFDI_0001010 .
 

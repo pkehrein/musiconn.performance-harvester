@@ -4,24 +4,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4277998-4> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ballet-danse-a-la-representation-doedipe-schloss-fontainebleau-fontainebleau-1664-08-03> ] .
 
-<https://performance.musiconn.de/event/ballet-danse-a-la-representation-doedipe-schloss-fontainebleau-fontainebleau-1664-08-03> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ballet-danse-a-la-representation-doedipe-schloss-fontainebleau-fontainebleau-1664-08-03> a cto:CTO_0001005 ;
     rdfs:label "Ballet dansé à la représentation d’Œdipe, Schloss Fontainebleau (Fontainebleau), 3.8.1664" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1664-08-03" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1664-08-03" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4277998-4> ;
-    cto:relatedItem <https://performance.musiconn.de/source/beauchamps-1735-bd-3-71>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4277998-4> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/237368299> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/beauchamps-1735-bd-3-71>,
         <https://performance.musiconn.de/source/gazette-1664-08-08>,
         <https://performance.musiconn.de/source/hourcade-2002-278>,
         <https://performance.musiconn.de/source/onlinequelle-70>,
         <https://performance.musiconn.de/work/ballet-danse-a-la-representation-doedipe> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4277998-4>,
-        <https://viaf.org/viaf/237368299> ;
-    cto:viaf <https://viaf.org/viaf/237368299> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/237368299> a nfdicore:NFDI_0001010 .
 

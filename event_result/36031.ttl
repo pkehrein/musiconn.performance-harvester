@@ -1,37 +1,48 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300009674> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/30006442X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300202415> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/kammerkonzert-universitaetsklinikum-carl-gustav-carus-dresden-1970-11-25-19-30> ] .
 
-<https://performance.musiconn.de/event/kammerkonzert-universitaetsklinikum-carl-gustav-carus-dresden-1970-11-25-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/kammerkonzert-universitaetsklinikum-carl-gustav-carus-dresden-1970-11-25-19-30> a cto:CTO_0001005 ;
     rdfs:label "Kammerkonzert, Universitätsklinikum Carl Gustav Carus (Dresden), 25.11.1970, 19:30" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1970-11-25T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1970-11-25T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300009674>,
-        <https://d-nb.info/gnd/30006442X>,
-        <https://d-nb.info/gnd/300202415> ;
-    cto:relatedItem <https://d-nb.info/gnd/300009674>,
-        <https://d-nb.info/gnd/30006442X>,
-        <https://d-nb.info/gnd/300202415>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/147522720> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198523236> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217002782> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300202415> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009674> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209865397> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/30006442X> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/concerti-grossi-orchester-hwv-319-330-nr-6-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/konzerte-violine-kammerorchester-steuer-egbert>,
-        <https://performance.musiconn.de/work/konzerte-violine-streichorchester-bwv-1041-a-moll-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/sinfonien-wq-179-es-dur-bach-carl-philipp-emanuel>,
-        <https://viaf.org/viaf/198523236>,
-        <https://viaf.org/viaf/209865397>,
-        <https://viaf.org/viaf/217002782> ;
-    cto:relatedLocation <https://viaf.org/viaf/147522720> ;
-    cto:viaf <https://viaf.org/viaf/147522720>,
-        <https://viaf.org/viaf/198523236>,
-        <https://viaf.org/viaf/209865397>,
-        <https://viaf.org/viaf/217002782> .
+        <https://performance.musiconn.de/work/konzerte-violine-kammerorchester-steuer-egbert> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/147522720> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198523236> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/209865397> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217002782> a nfdicore:NFDI_0001010 .
 

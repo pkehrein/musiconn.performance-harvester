@@ -1,57 +1,79 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1051647355> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1074379810> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1104398923> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300014864> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300016255> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300274270> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4040608-8> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/2-caecilienfestkonzert-muenster-westf-1866-01-28> ] .
 
-<https://performance.musiconn.de/event/2-caecilienfestkonzert-muenster-westf-1866-01-28> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/2-caecilienfestkonzert-muenster-westf-1866-01-28> a cto:CTO_0001005 ;
     rdfs:label "2. Cäcilienfestkonzert, Münster (Westf), 28.1.1866" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1865-66> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1866-01-28" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1866-01-28" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1051647355>,
-        <https://d-nb.info/gnd/1074379810>,
-        <https://d-nb.info/gnd/1104398923>,
-        <https://d-nb.info/gnd/300014864>,
-        <https://d-nb.info/gnd/300016255>,
-        <https://d-nb.info/gnd/300274270>,
-        <https://d-nb.info/gnd/4040608-8> ;
-    cto:itemOf <https://performance.musiconn.de/series/vereinskonzerte-des-musikvereins-muenster-saison-1865-66> ;
-    cto:relatedItem <https://d-nb.info/gnd/1051647355>,
-        <https://d-nb.info/gnd/1074379810>,
-        <https://d-nb.info/gnd/1104398923>,
-        <https://d-nb.info/gnd/300014864>,
-        <https://d-nb.info/gnd/300016255>,
-        <https://d-nb.info/gnd/300274270>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/132447077> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4040608-8> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/178472326> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1051647355> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1104398923> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186319957> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300016255> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/197648518> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179497381> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300014864> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/3477148523900220970003> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1074379810> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176629780> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300274270> ],
         <https://performance.musiconn.de/source/konzertprogramme-von-julius-otto-grimm-1865-1866>,
         <https://performance.musiconn.de/work/adagio-spohr-louis>,
-        <https://performance.musiconn.de/work/an-die-ferne-geliebte-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/kirchen-arie-stradella-alessandro>,
-        <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-in-der-fremde-schumann-robert>,
-        <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-intermezzo-schumann-robert>,
-        <https://performance.musiconn.de/work/liederkreis-nach-joseph-freiherrn-von-eichendorff-waldesgespraech-schumann-robert>,
-        <https://performance.musiconn.de/work/septette-op-20-es-dur-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/winterreise-fruehlingstraum-schubert-franz>,
-        <https://performance.musiconn.de/work/winterreise-rueckblick-schubert-franz>,
-        <https://viaf.org/viaf/176629780>,
-        <https://viaf.org/viaf/178472326>,
-        <https://viaf.org/viaf/179497381>,
-        <https://viaf.org/viaf/186319957>,
-        <https://viaf.org/viaf/197648518>,
-        <https://viaf.org/viaf/3477148523900220970003> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4040608-8>,
-        <https://viaf.org/viaf/132447077> ;
-    cto:viaf <https://viaf.org/viaf/132447077>,
-        <https://viaf.org/viaf/176629780>,
-        <https://viaf.org/viaf/178472326>,
-        <https://viaf.org/viaf/179497381>,
-        <https://viaf.org/viaf/186319957>,
-        <https://viaf.org/viaf/197648518>,
-        <https://viaf.org/viaf/3477148523900220970003> .
+        <https://performance.musiconn.de/work/winterreise-rueckblick-schubert-franz> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/132447077> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176629780> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/178472326> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179497381> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186319957> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/197648518> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/3477148523900220970003> a nfdicore:NFDI_0001010 .
 

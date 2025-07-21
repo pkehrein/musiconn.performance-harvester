@@ -1,35 +1,45 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300156634> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300156693> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4336039-7> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/philharmonie-im-albertinum-15-albertinum-dresden-2014-06-08-19-30> ] .
 
-<https://performance.musiconn.de/event/philharmonie-im-albertinum-15-albertinum-dresden-2014-06-08-19-30> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/philharmonie-im-albertinum-15-albertinum-dresden-2014-06-08-19-30> a cto:CTO_0001005 ;
     rdfs:label "Philharmonie im Albertinum 15, Albertinum (Dresden), 8.6.2014, 19:30" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2013-2014> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2014-06-08T19:30:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2014-06-08T19:30:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300156634>,
-        <https://d-nb.info/gnd/300156693>,
-        <https://d-nb.info/gnd/4336039-7> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2013-2014> ;
-    cto:relatedItem <https://d-nb.info/gnd/300156634>,
-        <https://d-nb.info/gnd/300156693>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4336039-7> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/126175762> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214740116> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/176606862> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156693> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300156634> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/capriccio-sextett-strauss-richard>,
-        <https://performance.musiconn.de/work/ein-heldenleben-strauss-richard>,
-        <https://performance.musiconn.de/work/konzerte-oboe-orchester-av-144-d-dur-strauss-richard>,
-        <https://viaf.org/viaf/176606862>,
-        <https://viaf.org/viaf/214740116> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4336039-7>,
-        <https://viaf.org/viaf/126175762> ;
-    cto:viaf <https://viaf.org/viaf/126175762>,
-        <https://viaf.org/viaf/176606862>,
-        <https://viaf.org/viaf/214740116> .
+        <https://performance.musiconn.de/work/capriccio-sextett-strauss-richard> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/126175762> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/176606862> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/214740116> a nfdicore:NFDI_0001010 .
 

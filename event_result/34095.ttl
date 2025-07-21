@@ -4,20 +4,21 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/4222712-4> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/ballet-chateau-de-chantilly-chantilly-1697-02-00> ] .
 
-<https://performance.musiconn.de/event/ballet-chateau-de-chantilly-chantilly-1697-02-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/ballet-chateau-de-chantilly-chantilly-1697-02-00> a cto:CTO_0001005 ;
     rdfs:label "Ballet, Château de Chantilly (Chantilly), 2/1697" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1697-02-00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1697-02-00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/4222712-4> ;
-    cto:relatedItem <https://performance.musiconn.de/source/hourcade-2002-318>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4222712-4> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/hourcade-2002-318>,
         <https://performance.musiconn.de/source/mercure-galant-1697-bd-2-253-260>,
         <https://performance.musiconn.de/work/ballet> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4222712-4> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
 

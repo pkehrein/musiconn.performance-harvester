@@ -1,41 +1,54 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300049846> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300064411> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300867573> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4267117-6> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/dresdner-philharmonie-in-der-frauenkirche-frauenkirche-dresden-2010-04-24-20-00> ] .
 
-<https://performance.musiconn.de/event/dresdner-philharmonie-in-der-frauenkirche-frauenkirche-dresden-2010-04-24-20-00> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/dresdner-philharmonie-in-der-frauenkirche-frauenkirche-dresden-2010-04-24-20-00> a cto:CTO_0001005 ;
     rdfs:label "Dresdner Philharmonie in der Frauenkirche, Frauenkirche (Dresden), 24.4.2010, 20:00" ;
+    obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2009-2010> ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "2010-04-24T20:00:00" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "2010-04-24T20:00:00" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300049846>,
-        <https://d-nb.info/gnd/300064411>,
-        <https://d-nb.info/gnd/300867573>,
-        <https://d-nb.info/gnd/4267117-6> ;
-    cto:itemOf <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2009-2010> ;
-    cto:relatedItem <https://d-nb.info/gnd/300049846>,
-        <https://d-nb.info/gnd/300064411>,
-        <https://d-nb.info/gnd/300867573>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4267117-6> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/292514672> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300049846> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300867573> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179081714> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/203707304> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/191495734> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300064411> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
-        <https://performance.musiconn.de/work/cessate-omai-cessate-vivaldi-antonio>,
-        <https://performance.musiconn.de/work/concerti-grossi-hwv-319-330-konzert-hwv-323-haendel-georg-friedrich>,
-        <https://performance.musiconn.de/work/serenaden-streichorchester-op-20-elgar-edward>,
         <https://performance.musiconn.de/work/sinfonia-nr3-vivaldi-antonio>,
-        <https://performance.musiconn.de/work/wayfaring-stranger>,
-        <https://viaf.org/viaf/179081714>,
-        <https://viaf.org/viaf/191495734>,
-        <https://viaf.org/viaf/203707304> ;
-    cto:relatedLocation <https://d-nb.info/gnd/4267117-6>,
-        <https://viaf.org/viaf/292514672> ;
-    cto:viaf <https://viaf.org/viaf/179081714>,
-        <https://viaf.org/viaf/191495734>,
-        <https://viaf.org/viaf/203707304>,
-        <https://viaf.org/viaf/292514672> .
+        <https://performance.musiconn.de/work/wayfaring-stranger> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/179081714> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/191495734> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/203707304> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/292514672> a nfdicore:NFDI_0001010 .
 

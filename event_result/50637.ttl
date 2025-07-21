@@ -4,21 +4,24 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<https://d-nb.info/gnd/1084609428> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/das-kaethchen-von-heilbronn-gebaeude-der-koeniglichen-oper-berlin-berlin-1824-07-04> ] .
 
-<https://performance.musiconn.de/event/das-kaethchen-von-heilbronn-gebaeude-der-koeniglichen-oper-berlin-berlin-1824-07-04> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/das-kaethchen-von-heilbronn-gebaeude-der-koeniglichen-oper-berlin-berlin-1824-07-04> a cto:CTO_0001005 ;
     rdfs:label "Das Käthchen von Heilbronn, Gebäude der Königlichen Oper Berlin (Berlin), 4.7.1824" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1824-07-04" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1824-07-04" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1084609428> ;
-    cto:relatedItem <https://performance.musiconn.de/source/katalogisat-das-kaethchen-von-heilbronn-grosses-ritter-schauspiel-in-5-akten-nebst-einem-vorspiel-in-1-akt-genannt-das-vehmgericht-von-heinrich-v-kleist-fuer-die-buehnen-bearbeitet-von-holbein-4-july-1824>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/533149662172407020006> ],
+        [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1084609428> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/source/katalogisat-das-kaethchen-von-heilbronn-grosses-ritter-schauspiel-in-5-akten-nebst-einem-vorspiel-in-1-akt-genannt-das-vehmgericht-von-heinrich-v-kleist-fuer-die-buehnen-bearbeitet-von-holbein-4-july-1824>,
         <https://performance.musiconn.de/work/das-kaethchen-von-heilbronn-fassung-bohrer-anton> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1084609428>,
-        <https://viaf.org/viaf/533149662172407020006> ;
-    cto:viaf <https://viaf.org/viaf/533149662172407020006> .
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/533149662172407020006> a nfdicore:NFDI_0001010 .
 

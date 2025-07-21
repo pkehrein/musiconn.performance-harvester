@@ -1,48 +1,67 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/300175736> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300188722> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300188730> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300373082> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300373090> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3008405-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/yun-2-87-alte-oper-frankfurt-am-main-mozartsaal-1987-02-09> ] .
 
-<https://performance.musiconn.de/event/yun-2-87-alte-oper-frankfurt-am-main-mozartsaal-1987-02-09> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/yun-2-87-alte-oper-frankfurt-am-main-mozartsaal-1987-02-09> a cto:CTO_0001005 ;
     rdfs:label "Yun 2/87, Alte Oper (Frankfurt am Main) / Mozartsaal, 9.2.1987" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1987-02-09" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1987-02-09" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/300175736>,
-        <https://d-nb.info/gnd/300188722>,
-        <https://d-nb.info/gnd/300188730>,
-        <https://d-nb.info/gnd/300373082>,
-        <https://d-nb.info/gnd/300373090>,
-        <https://d-nb.info/gnd/3008405-2> ;
-    cto:relatedItem <https://d-nb.info/gnd/300175736>,
-        <https://d-nb.info/gnd/300188722>,
-        <https://d-nb.info/gnd/300188730>,
-        <https://d-nb.info/gnd/300373082>,
-        <https://d-nb.info/gnd/300373090>,
-        <https://performance.musiconn.de/work/gong-hu-yun-isang>,
-        <https://performance.musiconn.de/work/impressionen-orch-1986-yun-isang>,
-        <https://performance.musiconn.de/work/mugung-dong-yun-isang>,
-        <https://performance.musiconn.de/work/oktette-klarinette-fagott-horn-violine-2-viola-violoncello-kontrabass-yun-isang>,
-        <https://performance.musiconn.de/work/teile-dich-nacht-yun-isang>,
-        <https://viaf.org/viaf/179910623>,
-        <https://viaf.org/viaf/186391960>,
-        <https://viaf.org/viaf/190422129>,
-        <https://viaf.org/viaf/217011846>,
-        <https://viaf.org/viaf/219936138> ;
-    cto:relatedLocation <https://performance.musiconn.de/location/alte-oper-frankfurt-am-main-mozartsaal> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3008405-2>,
-        <https://viaf.org/viaf/158825187> ;
-    cto:viaf <https://viaf.org/viaf/158825187>,
-        <https://viaf.org/viaf/179910623>,
-        <https://viaf.org/viaf/186391960>,
-        <https://viaf.org/viaf/190422129>,
-        <https://viaf.org/viaf/217011846>,
-        <https://viaf.org/viaf/219936138> .
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3008405-2> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/158825187> ] ;
+    cto:CTO_0001011 <https://performance.musiconn.de/location/alte-oper-frankfurt-am-main-mozartsaal> ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300188722> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/179910623> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300373090> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/219936138> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300175736> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300373082> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217011846> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/186391960> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/190422129> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300188730> ] ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/158825187> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/179910623> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/186391960> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/190422129> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217011846> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/219936138> a nfdicore:NFDI_0001010 .
 

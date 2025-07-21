@@ -1,66 +1,90 @@
 @prefix cto: <https://nfdi4culture.de/ontology#> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
+
+<https://d-nb.info/gnd/1024521451> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1151740497> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1190581752> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300009976> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300137346> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300143737> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300191545> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/300281935> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-theater-plauen-1971-06-27> ] .
 
-<https://performance.musiconn.de/event/konzert-theater-plauen-1971-06-27> a nfdicore:Event,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/event/konzert-theater-plauen-1971-06-27> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Theater (Plauen), 27.6.1971" ;
+    nfdicore:NFDI_0000192 n4c:E1841 ;
     nfdicore:endDate "1971-06-27" ;
-    nfdicore:publisher n4c:E1841 ;
     nfdicore:startDate "1971-06-27" ;
-    cto:elementOf n4c:E5320 ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
-    cto:gnd <https://d-nb.info/gnd/1024521451>,
-        <https://d-nb.info/gnd/1151740497>,
-        <https://d-nb.info/gnd/1190581752>,
-        <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300137346>,
-        <https://d-nb.info/gnd/300143737>,
-        <https://d-nb.info/gnd/300191545>,
-        <https://d-nb.info/gnd/300281935> ;
-    cto:relatedItem <https://d-nb.info/gnd/1024521451>,
-        <https://d-nb.info/gnd/1151740497>,
-        <https://d-nb.info/gnd/300009976>,
-        <https://d-nb.info/gnd/300137346>,
-        <https://d-nb.info/gnd/300143737>,
-        <https://d-nb.info/gnd/300191545>,
-        <https://d-nb.info/gnd/300281935>,
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1190581752> ] ;
+    cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300137346> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300191545> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/198528865> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/217005968> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300281935> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1151740497> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/7358151778233618130005> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174110202> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/177438686> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300143737> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300009976> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/258601107> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/193655948> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174651654> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1024521451> ],
         <https://performance.musiconn.de/source/motettenbuch-1970-71>,
-        <https://performance.musiconn.de/work/auf-dem-see-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/ausfahrt-kuhn-siegfried>,
         <https://performance.musiconn.de/work/bei-tag-und-nacht-schwefelhelzle-pepping-ernst>,
-        <https://performance.musiconn.de/work/der-geist-hilft-unser-schwachheit-auf-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/die-nachtigall-mwv-f-24-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/frisch-auf-singet-all-ihr-musici-demantius-christoph>,
         <https://performance.musiconn.de/work/heidenroeslein-weismann-wilhelm>,
-        <https://performance.musiconn.de/work/hodie-cantamus-weismann-wilhelm>,
         <https://performance.musiconn.de/work/il-primo-libro-di-canzon-villanesche-chi-la-gagliarda-donne-voimparare-donato-baldassare>,
         <https://performance.musiconn.de/work/ja-der-bergsche-fuhrmann-pepping-ernst>,
-        <https://performance.musiconn.de/work/kume-kum-geselle-min-david-johann-nepomuk>,
-        <https://performance.musiconn.de/work/libro-de-villanelle-moresche-et-altre-canzoni-o-la-o-che-bon-eccho-lasso-orlando-di>,
-        <https://performance.musiconn.de/work/psalmen-davids-psalm-98-schuetz-heinrich>,
-        <https://performance.musiconn.de/work/studentenschmaus-holla-gut-gsell-schein-johann-hermann>,
-        <https://performance.musiconn.de/work/und-in-dem-schneegebirge-pepping-ernst>,
-        <https://viaf.org/viaf/174110202>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/177438686>,
-        <https://viaf.org/viaf/193655948>,
-        <https://viaf.org/viaf/198528865>,
-        <https://viaf.org/viaf/217005968>,
-        <https://viaf.org/viaf/258601107>,
-        <https://viaf.org/viaf/7358151778233618130005> ;
-    cto:relatedLocation <https://d-nb.info/gnd/1190581752> ;
-    cto:viaf <https://viaf.org/viaf/174110202>,
-        <https://viaf.org/viaf/174651654>,
-        <https://viaf.org/viaf/177438686>,
-        <https://viaf.org/viaf/193655948>,
-        <https://viaf.org/viaf/198528865>,
-        <https://viaf.org/viaf/217005968>,
-        <https://viaf.org/viaf/258601107>,
-        <https://viaf.org/viaf/7358151778233618130005> .
+        <https://performance.musiconn.de/work/und-in-dem-schneegebirge-pepping-ernst> ;
+    cto:elementType <http://vocab.getty.edu/aat/300069451> .
+
+<https://viaf.org/viaf/174110202> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/174651654> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/177438686> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/193655948> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/198528865> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/217005968> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/258601107> a nfdicore:NFDI_0001010 .
+
+<https://viaf.org/viaf/7358151778233618130005> a nfdicore:NFDI_0001010 .
 
