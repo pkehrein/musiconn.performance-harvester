@@ -4,14 +4,15 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://vocab.getty.edu/page/aat/300262956> a cto:CTO_0001029 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
             schema1:item <https://performance.musiconn.de/event/konzert-akademixerkeller-leipzig-1988-09-15> ] .
 
 <https://performance.musiconn.de/event/konzert-akademixerkeller-leipzig-1988-09-15> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Akademixerkeller (Leipzig), 15.9.1988" ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
     nfdicore:NFDI_0000192 n4c:E1841 ;
-    nfdicore:endDate "1988-09-15" ;
-    nfdicore:startDate "1988-09-15" ;
     cto:CTO_0001006 n4c:E5320 ;
     cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
             nfdicore:NFDI_0001006 <https://d-nb.info/gnd/134435303> ],
@@ -20,13 +21,16 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
     cto:CTO_0001011 <https://performance.musiconn.de/location/akademixerkeller-leipzig> ;
     cto:CTO_0001019 <https://performance.musiconn.de/source/ludwig-mueller-zeitgenoessisches-musikschaffen-in-der-deutschen-demokratischen-republik-urauffuehrungen-1988-dresden-saechsische-landesbibliothek-dresden-1989>,
         <https://performance.musiconn.de/work/37-3-5895-kross-erik-bunk-detlef> ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> ;
+    cto:CTO_0001025 [ a schema1:MusicEvent ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/page/aat/300262956> ;
+    cto:CTO_0001070 "1988-09-15" ;
+    cto:CTO_0001080 n4c:E3087 ;
     cto:relatedPerson [ a nfdicore:NFDI_0000004 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/102481144> ],
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/102481144> ],
         [ a nfdicore:NFDI_0000004 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/102481144> ] .
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/102481144> ] .
+
+<http://viaf.org/viaf/102481144> a nfdicore:NFDI_0001010 .
 
 <https://d-nb.info/gnd/134435303> a nfdicore:NFDI_0001009 .
-
-<https://viaf.org/viaf/102481144> a nfdicore:NFDI_0001010 .
 

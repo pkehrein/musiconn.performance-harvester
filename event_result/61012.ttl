@@ -4,6 +4,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/155414399> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/page/aat/300262956> a cto:CTO_0001029 .
+
 <https://d-nb.info/gnd/2000648-2> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
@@ -11,14 +15,13 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
 
 <https://performance.musiconn.de/event/komponistinnen-matinee-1-lieder-und-klavierwerke-von-fanny-hensel-und-felix-mendelssohn-bartholdy-kammerspiele-nuernberg> a cto:CTO_0001005 ;
     rdfs:label "Komponistinnen - Matinee 1: Lieder und Klavierwerke von Fanny Hensel und Felix Mendelssohn Bartholdy, Kammerspiele (Nürnberg)" ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
     nfdicore:NFDI_0000192 n4c:E1841 ;
-    nfdicore:endDate "1997-09-29" ;
-    nfdicore:startDate "1997-09-29" ;
     cto:CTO_0001006 n4c:E5320 ;
     cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
-            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/2000648-2> ],
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/155414399> ],
         [ a nfdicore:NFDI_0000003 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/155414399> ],
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/2000648-2> ],
         <https://performance.musiconn.de/corporation/bayrischer-rundfunk-studio-franken>,
         <https://performance.musiconn.de/corporation/staedtische-buehnen-nuernberg> ;
     cto:CTO_0001011 <https://performance.musiconn.de/location/kammerspiele-nuernberg> ;
@@ -27,7 +30,8 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/klavierwerke-mendelssohn-bartholdy-felix>,
         <https://performance.musiconn.de/work/lieder-hensel-fanny-1>,
         <https://performance.musiconn.de/work/lieder-mendelssohn-bartholdy-felix-1> ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> .
-
-<https://viaf.org/viaf/155414399> a nfdicore:NFDI_0001010 .
+    cto:CTO_0001025 [ a schema1:MusicEvent ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/page/aat/300262956> ;
+    cto:CTO_0001070 "1997-09-29" ;
+    cto:CTO_0001080 n4c:E3087 .
 

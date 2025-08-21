@@ -5,6 +5,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/14144648156623778469> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/205759211> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/page/aat/300262956> a cto:CTO_0001029 .
+
 <https://d-nb.info/gnd/300008228> a nfdicore:NFDI_0001009 .
 
 <https://d-nb.info/gnd/300029748> a nfdicore:NFDI_0001009 .
@@ -14,24 +20,22 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
 
 <https://performance.musiconn.de/event/10-zyklus-konzert-kulturpalast-dresden-festsaal-1975-06-13> a cto:CTO_0001005 ;
     rdfs:label "10. Zyklus Konzert, Kulturpalast (Dresden) / Festsaal, 13.6.1975" ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
     nfdicore:NFDI_0000192 n4c:E1841 ;
-    nfdicore:endDate "1975-06-13" ;
-    nfdicore:startDate "1975-06-13" ;
     cto:CTO_0001006 n4c:E5320 ;
     cto:CTO_0001011 <https://performance.musiconn.de/location/kulturpalast-dresden-festsaal> ;
     cto:CTO_0001019 [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/14144648156623778469> ],
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029748> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/205759211> ],
         [ a obo:BFO_0000001 ;
             nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300008228> ],
         [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300029748> ],
-        [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/205759211> ],
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/14144648156623778469> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/source/programmhefte-und-pressestimmen-aus-dem-vorlass-hartmut-haenchen-13-programmhefte-1975-1977> ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> .
-
-<https://viaf.org/viaf/14144648156623778469> a nfdicore:NFDI_0001010 .
-
-<https://viaf.org/viaf/205759211> a nfdicore:NFDI_0001010 .
+    cto:CTO_0001025 [ a schema1:MusicEvent ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/page/aat/300262956> ;
+    cto:CTO_0001070 "1975-06-13" ;
+    cto:CTO_0001080 n4c:E3087 .
 

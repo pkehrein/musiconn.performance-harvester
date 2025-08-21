@@ -4,6 +4,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/page/aat/300262956> a cto:CTO_0001029 .
+
 <https://d-nb.info/gnd/5513287-X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
@@ -11,14 +15,13 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
 
 <https://performance.musiconn.de/event/festkonzert-60-jahre-leipziger-synagogalchor-neues-gewandhaus-leipzig-grosser-saal-2022-11-12-20-00> a cto:CTO_0001005 ;
     rdfs:label "Festkonzert 60 Jahre Leipziger Synagogalchor, Neues Gewandhaus (Leipzig) / Großer Saal, 12.11.2022, 20:00" ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
     nfdicore:NFDI_0000192 n4c:E1841 ;
-    nfdicore:endDate "2022-11-12T22:00:00" ;
-    nfdicore:startDate "2022-11-12T20:00:00" ;
     cto:CTO_0001006 n4c:E5320 ;
     cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
-            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/154106770> ],
         [ a nfdicore:NFDI_0000003 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/154106770> ],
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5513287-X> ],
         <https://performance.musiconn.de/corporation/mendelssohn-kammerorchester-leipzig> ;
     cto:CTO_0001011 <https://performance.musiconn.de/location/neues-gewandhaus-leipzig-grosser-saal> ;
     cto:CTO_0001019 <https://performance.musiconn.de/source/christine-schmitt-uns-vereint-die-musik>,
@@ -41,7 +44,8 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/toras-adonoi-psalm-19-7-9-lewandowski-louis>,
         <https://performance.musiconn.de/work/veyn-nisht-franke-bernd-gebirtig-mordechai>,
         <https://performance.musiconn.de/work/wie-ein-hirsch-lechzet-nach-frischem-wasser-psalm-42-und-43-lewandowski-louis> ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> .
-
-<https://viaf.org/viaf/154106770> a nfdicore:NFDI_0001010 .
+    cto:CTO_0001025 [ a schema1:MusicEvent ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/page/aat/300262956> ;
+    cto:CTO_0001070 "2022-11-12T20:00:00" ;
+    cto:CTO_0001080 n4c:E3087 .
 

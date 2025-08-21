@@ -5,6 +5,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/201850694> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/738148390821210830004> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/page/aat/300262956> a cto:CTO_0001029 .
+
 <https://d-nb.info/gnd/1122658370> a nfdicore:NFDI_0001009 .
 
 <https://d-nb.info/gnd/300005539> a nfdicore:NFDI_0001009 .
@@ -14,24 +20,22 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
 
 <https://performance.musiconn.de/event/konzert-thomasschule-leipzig-2000-11-16> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Thomasschule (Leipzig), 16.11.2000" ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
     nfdicore:NFDI_0000192 n4c:E1841 ;
-    nfdicore:endDate "2000-11-16" ;
-    nfdicore:startDate "2000-11-16" ;
     cto:CTO_0001006 n4c:E5320 ;
     cto:CTO_0001011 <https://performance.musiconn.de/location/thomasschule-leipzig> ;
     cto:CTO_0001019 [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/738148390821210830004> ],
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/738148390821210830004> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1122658370> ],
         [ a obo:BFO_0000001 ;
             nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300005539> ],
         [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/201850694> ],
-        [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1122658370> ],
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/201850694> ],
         <https://performance.musiconn.de/source/motettenbuch-2000-01>,
         <https://performance.musiconn.de/work/notenbuch-der-anna-magdalena-bach-teil-2-schaffs-mit-mir-gott-nach-deinem-willen-bach-johann-sebastian> ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> .
-
-<https://viaf.org/viaf/201850694> a nfdicore:NFDI_0001010 .
-
-<https://viaf.org/viaf/738148390821210830004> a nfdicore:NFDI_0001010 .
+    cto:CTO_0001025 [ a schema1:MusicEvent ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/page/aat/300262956> ;
+    cto:CTO_0001070 "2000-11-16" ;
+    cto:CTO_0001080 n4c:E3087 .
 

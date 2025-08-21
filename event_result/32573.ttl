@@ -5,6 +5,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/214736942> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/306409869> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/page/aat/300262956> a cto:CTO_0001029 .
+
 <https://d-nb.info/gnd/300025696> a nfdicore:NFDI_0001009 .
 
 <https://d-nb.info/gnd/300146469> a nfdicore:NFDI_0001009 .
@@ -15,24 +21,22 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
 <https://performance.musiconn.de/event/osteuropa-2011-kolarac-hall-belgrad-2011-04-12-20-00> a cto:CTO_0001005 ;
     rdfs:label "Osteuropa 2011, Kolarac Hall (Belgrad), 12.4.2011, 20:00" ;
     obo:BFO_0000050 <https://performance.musiconn.de/series/dresdner-philharmonie-spielzeit-2010-2011> ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
     nfdicore:NFDI_0000192 n4c:E1841 ;
-    nfdicore:endDate "2011-04-12T20:00:00" ;
-    nfdicore:startDate "2011-04-12T20:00:00" ;
     cto:CTO_0001006 n4c:E5320 ;
     cto:CTO_0001011 <https://performance.musiconn.de/location/kolarac-hall-belgrad> ;
     cto:CTO_0001019 [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214736942> ],
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146469> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/306409869> ],
         [ a obo:BFO_0000001 ;
             nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025696> ],
         [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300146469> ],
-        [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/306409869> ],
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/214736942> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie>,
         <https://performance.musiconn.de/work/hamlet-ouvertuere-liszt-franz> ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> .
-
-<https://viaf.org/viaf/214736942> a nfdicore:NFDI_0001010 .
-
-<https://viaf.org/viaf/306409869> a nfdicore:NFDI_0001010 .
+    cto:CTO_0001025 [ a schema1:MusicEvent ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/page/aat/300262956> ;
+    cto:CTO_0001070 "2011-04-12T20:00:00" ;
+    cto:CTO_0001080 n4c:E3087 .
 

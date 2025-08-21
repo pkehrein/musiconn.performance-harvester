@@ -5,6 +5,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/317082335> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/page/aat/300262956> a cto:CTO_0001029 .
+
 <https://d-nb.info/gnd/107618233X> a nfdicore:NFDI_0001009 .
 
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
@@ -12,19 +16,19 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
 
 <https://performance.musiconn.de/event/konzert-gasthaus-nr-1-kronstadt-1862-08-24> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Gasthaus Nr. 1 (Kronstadt), 24.8.1862" ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
     nfdicore:NFDI_0000192 n4c:E1841 ;
-    nfdicore:endDate "1862-08-24" ;
-    nfdicore:startDate "1862-08-24" ;
     cto:CTO_0001006 n4c:E5320 ;
     cto:CTO_0001011 <https://performance.musiconn.de/location/gasthaus-nr-1-kronstadt> ;
     cto:CTO_0001019 [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/317082335> ],
-        [ a obo:BFO_0000001 ;
             nfdicore:NFDI_0001006 <https://d-nb.info/gnd/107618233X> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/317082335> ],
         <https://performance.musiconn.de/source/programmzettel-kronstaedter-maennergesangverein-kronstadt-kronstadt-24081862>,
         <https://performance.musiconn.de/work/abschied-vom-walde-mauss-heinrich>,
         <https://performance.musiconn.de/work/die-gunst-des-augenblicks-op-79-markull-friedrich-wilhelm> ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> .
-
-<https://viaf.org/viaf/317082335> a nfdicore:NFDI_0001010 .
+    cto:CTO_0001025 [ a schema1:MusicEvent ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/page/aat/300262956> ;
+    cto:CTO_0001070 "1862-08-24" ;
+    cto:CTO_0001080 n4c:E3087 .
 

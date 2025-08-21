@@ -5,6 +5,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/182269781> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/260363976> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/page/aat/300262956> a cto:CTO_0001029 .
+
 <https://d-nb.info/gnd/1023959356> a nfdicore:NFDI_0001009 .
 
 <https://d-nb.info/gnd/300062427> a nfdicore:NFDI_0001009 .
@@ -14,28 +20,26 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
 
 <https://performance.musiconn.de/event/konzert-skarbek-theater-lemberg-lviv-1902-10-04> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Skarbek-Theater (Lemberg / L'viv), 4.10.1902" ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
     nfdicore:NFDI_0000192 n4c:E1841 ;
-    nfdicore:endDate "1902-10-04" ;
-    nfdicore:startDate "1902-10-04" ;
     cto:CTO_0001006 n4c:E5320 ;
     cto:CTO_0001011 <https://performance.musiconn.de/location/skarbek-theater-lemberg-lviv> ;
     cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/182269781> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/260363976> ],
+        [ a obo:BFO_0000001 ;
             nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300062427> ],
         [ a obo:BFO_0000001 ;
             nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1023959356> ],
-        [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/260363976> ],
-        [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/182269781> ],
         <https://performance.musiconn.de/source/mitteilung-nach-recherche-lidia-melnik-lviv>,
         <https://performance.musiconn.de/work/don-giovanni-duett-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/il-barbiere-di-siviglia-arie-rossini-gioachino>,
         <https://performance.musiconn.de/work/messalina-arie-lara-isidore-de>,
         <https://performance.musiconn.de/work/si-vous-laviez-compris-fassung-singstimme-orchester-denza-luigi>,
         <https://performance.musiconn.de/work/zaza-arie-leoncavallo-ruggiero> ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> .
-
-<https://viaf.org/viaf/182269781> a nfdicore:NFDI_0001010 .
-
-<https://viaf.org/viaf/260363976> a nfdicore:NFDI_0001010 .
+    cto:CTO_0001025 [ a schema1:MusicEvent ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/page/aat/300262956> ;
+    cto:CTO_0001070 "1902-10-04" ;
+    cto:CTO_0001080 n4c:E3087 .
 

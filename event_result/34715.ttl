@@ -5,6 +5,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/1332147871993275170004> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/209863522> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/page/aat/300262956> a cto:CTO_0001029 .
+
 <https://d-nb.info/gnd/300078064> a nfdicore:NFDI_0001009 .
 
 <https://d-nb.info/gnd/300125585> a nfdicore:NFDI_0001009 .
@@ -14,23 +20,21 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
 
 <https://performance.musiconn.de/event/sonderkonzert-kuppelsaal-pillnitz-1961-06-30-20-00> a cto:CTO_0001005 ;
     rdfs:label "Sonderkonzert, Kuppelsaal (Pillnitz), 30.6.1961, 20:00" ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
     nfdicore:NFDI_0000192 n4c:E1841 ;
-    nfdicore:endDate "1961-06-30T20:00:00" ;
-    nfdicore:startDate "1961-06-30T20:00:00" ;
     cto:CTO_0001006 n4c:E5320 ;
     cto:CTO_0001011 <https://performance.musiconn.de/location/kuppelsaal-pillnitz> ;
     cto:CTO_0001019 [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300078064> ],
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/1332147871993275170004> ],
         [ a obo:BFO_0000001 ;
             nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300125585> ],
         [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/209863522> ],
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300078064> ],
         [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/1332147871993275170004> ],
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/209863522> ],
         <https://performance.musiconn.de/source/konzertarchiv-der-dresdner-philharmonie> ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> .
-
-<https://viaf.org/viaf/1332147871993275170004> a nfdicore:NFDI_0001010 .
-
-<https://viaf.org/viaf/209863522> a nfdicore:NFDI_0001010 .
+    cto:CTO_0001025 [ a schema1:MusicEvent ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/page/aat/300262956> ;
+    cto:CTO_0001070 "1961-06-30T20:00:00" ;
+    cto:CTO_0001080 n4c:E3087 .
 

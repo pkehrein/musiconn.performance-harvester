@@ -5,6 +5,14 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/174438291> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/311596224> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/408151172689639210002> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/page/aat/300262956> a cto:CTO_0001029 .
+
 <https://d-nb.info/gnd/1060922754> a nfdicore:NFDI_0001009 .
 
 <https://d-nb.info/gnd/1116036975> a nfdicore:NFDI_0001009 .
@@ -16,22 +24,21 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
 
 <https://performance.musiconn.de/event/konzert-deutsches-haus-bruenn-1927-12-16> a cto:CTO_0001005 ;
     rdfs:label "Konzert, Deutsches Haus (Brünn), 16.12.1927" ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
     nfdicore:NFDI_0000192 n4c:E1841 ;
-    nfdicore:endDate "1927-12-16" ;
-    nfdicore:startDate "1927-12-16" ;
     cto:CTO_0001006 n4c:E5320 ;
     cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/408151172689639210002> ],
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/408151172689639210002> ],
         [ a nfdicore:NFDI_0000005 ;
             nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1116036975> ] ;
     cto:CTO_0001019 [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/174438291> ],
+        [ a obo:BFO_0000001 ;
             nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1060922754> ],
         [ a obo:BFO_0000001 ;
             nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300851413> ],
         [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/311596224> ],
-        [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/174438291> ],
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/311596224> ],
         <https://performance.musiconn.de/source/programmheft-bruenner-maennergesangverein-bruenn-vom-16121927>,
         <https://performance.musiconn.de/work/choral-motetten-op-71-wachet-auf-ruft-uns-die-stimme-schumann-georg>,
         <https://performance.musiconn.de/work/der-schatzgraeber-wiegenlied-der-els-schreker-franz>,
@@ -43,11 +50,8 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/lieder-op-7-rosengruss-schreker-franz>,
         <https://performance.musiconn.de/work/marienlied-rinaldini-joseph>,
         <https://performance.musiconn.de/work/sonnenaufgang-hausegger-siegmund-von> ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> .
-
-<https://viaf.org/viaf/174438291> a nfdicore:NFDI_0001010 .
-
-<https://viaf.org/viaf/311596224> a nfdicore:NFDI_0001010 .
-
-<https://viaf.org/viaf/408151172689639210002> a nfdicore:NFDI_0001010 .
+    cto:CTO_0001025 [ a schema1:MusicEvent ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/page/aat/300262956> ;
+    cto:CTO_0001070 "1927-12-16" ;
+    cto:CTO_0001080 n4c:E3087 .
 

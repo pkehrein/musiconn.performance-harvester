@@ -5,6 +5,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/page/aat/300262956> a cto:CTO_0001029 .
+
 <https://d-nb.info/gnd/1200899989> a nfdicore:NFDI_0001009 .
 
 <https://d-nb.info/gnd/1226165680> a nfdicore:NFDI_0001009 .
@@ -15,14 +19,13 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
 <https://performance.musiconn.de/event/kamernyj-koncert-8-april-1975-dom-kompozitorov-sankt-petersburg-1975-04-08> a cto:CTO_0001005 ;
     rdfs:label "Kamernyj koncert (8. April 1975), Dom kompozitorov (Sankt Petersburg), 8.4.1975" ;
     obo:BFO_0000050 <https://performance.musiconn.de/series/leningradskaja-muzykalnaja-vesna> ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
     nfdicore:NFDI_0000192 n4c:E1841 ;
-    nfdicore:endDate "1975-04-08" ;
-    nfdicore:startDate "1975-04-08" ;
     cto:CTO_0001006 n4c:E5320 ;
     cto:CTO_0001011 [ a nfdicore:NFDI_0000005 ;
-            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ],
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/385157583849933970005> ],
         [ a nfdicore:NFDI_0000005 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/385157583849933970005> ] ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1200899989> ] ;
     cto:CTO_0001019 [ a obo:BFO_0000001 ;
             nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1226165680> ],
         <https://performance.musiconn.de/source/11-leningrader-fruehling-1975-uebersicht>,
@@ -42,7 +45,8 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/tovarisci-evlachov-orest-aleksandrovic>,
         <https://performance.musiconn.de/work/v-puskinskom-parke-levi-natalia-nikolaevna>,
         <https://performance.musiconn.de/work/vesna-auswahl-zivotov-aleksej-s> ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> .
-
-<https://viaf.org/viaf/385157583849933970005> a nfdicore:NFDI_0001010 .
+    cto:CTO_0001025 [ a schema1:MusicEvent ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/page/aat/300262956> ;
+    cto:CTO_0001070 "1975-04-08" ;
+    cto:CTO_0001080 n4c:E3087 .
 

@@ -5,6 +5,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/192571945> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/214736942> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/page/aat/300262956> a cto:CTO_0001029 .
+
 <https://d-nb.info/gnd/300005377> a nfdicore:NFDI_0001009 .
 
 <https://d-nb.info/gnd/300025696> a nfdicore:NFDI_0001009 .
@@ -15,24 +21,22 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
 <https://performance.musiconn.de/event/1-philharmonisches-konzert-laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal-1928-10-08> a cto:CTO_0001005 ;
     rdfs:label "1. Philharmonisches Konzert, Laeiszhalle - Musikhalle Hamburg (Hamburg). Großer Saal, 8.10.1928" ;
     obo:BFO_0000050 <https://performance.musiconn.de/series/saison-1928-1929-der-philharmonischen-gesellschaft-hamburg> ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
     nfdicore:NFDI_0000192 n4c:E1841 ;
-    nfdicore:endDate "1928-10-08" ;
-    nfdicore:startDate "1928-10-08" ;
     cto:CTO_0001006 n4c:E5320 ;
     cto:CTO_0001011 <https://performance.musiconn.de/location/laeiszhalle-musikhalle-hamburg-hamburg-grosser-saal> ;
     cto:CTO_0001019 [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/214736942> ],
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/192571945> ],
+        [ a obo:BFO_0000001 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025696> ],
         [ a obo:BFO_0000001 ;
             nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300005377> ],
         [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://viaf.org/viaf/192571945> ],
-        [ a obo:BFO_0000001 ;
-            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/300025696> ],
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/214736942> ],
         <https://performance.musiconn.de/source/gedruckte-konzertprogramme-philharmonische-konzerte-1925-1937>,
         <https://performance.musiconn.de/work/passacaglien-orchester-op-22-prohaska-carl> ;
-    cto:elementType <http://vocab.getty.edu/aat/300069451> .
-
-<https://viaf.org/viaf/192571945> a nfdicore:NFDI_0001010 .
-
-<https://viaf.org/viaf/214736942> a nfdicore:NFDI_0001010 .
+    cto:CTO_0001025 [ a schema1:MusicEvent ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/page/aat/300262956> ;
+    cto:CTO_0001070 "1928-10-08" ;
+    cto:CTO_0001080 n4c:E3087 .
 
