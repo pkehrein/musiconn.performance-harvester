@@ -31,20 +31,15 @@ OBO = Namespace("http://purl.obolibrary.org/obo/")
 
 
 def concat_files(concat_events, concat_works):
-    header = True
     count = 0
     with open("feed.ttl", 'w', encoding='utf-8') as file:
+        header = "@prefix cto: <https://nfdi4culture.de/ontology/> .\n@prefix n4c: <https://nfdi4culture.de/id/> .\n@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .\n@prefix obo: <http://purl.obolibrary.org/obo/> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix schema1: <http://schema.org/> .\n"
+        file.write(header)
         if concat_events:
             for filename in os.listdir('event_result/'):
                 filepath = os.path.join('event_result/', filename)
                 with open(filepath, 'r', encoding='utf-8') as readfile:
-                    if header:
-                        modified_content = readfile.read()
-                        header = False
-                    else:
-                        content = readfile.read()
-                        modified_content = remove_header(content)
-                    file.write(modified_content)
+                    file.write((remove_header(readfile.read())))
                 count += 1
         if concat_works:
             for filename in os.listdir('work_result/'):
@@ -101,6 +96,7 @@ def add_events(events, file_path, start_index):
         graph.add((event_id, CTO.CTO_0001080, Literal("https://performance.musiconn.de/api")))
         graph.add((event_id, NFDICORE.NFDI_0000146, N4C.E3087))
         graph.add((event_id, NFDICORE.NFDI_0001008, URIRef(event_id)))
+        graph.add((event_id, NFDICORE.NFDI_0000142, N4C.E6406))
         bnc = BNode()
         graph.add((event_id, CTO.CTO_0001025, bnc))
         graph.add((bnc, RDF.type, SCHEMA.MusicEvent))
