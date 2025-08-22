@@ -4,6 +4,7 @@ import os
 import re
 import time
 from argparse import ArgumentParser
+from datetime import datetime
 
 import requests
 from rdflib import Graph
@@ -22,33 +23,35 @@ event_count = 0
 work_count = 0
 save_meta = False
 N4C = Namespace("https://nfdi4culture.de/id/")
-CTO = Namespace("https://nfdi4culture.de/ontology#")
-NFDICORE = Namespace("https://nfdi.fiz-karlsruhe.de/ontology#")
+CTO = Namespace("https://nfdi4culture.de/ontology/")
+NFDICORE = Namespace("https://nfdi.fiz-karlsruhe.de/ontology/")
 SCHEMA = Namespace("http://schema.org/")
 RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 OBO = Namespace("http://purl.obolibrary.org/obo/")
 
 
-def concat_files():
+def concat_files(concat_events, concat_works):
     header = True
     count = 0
     with open("feed.ttl", 'w', encoding='utf-8') as file:
-        for filename in os.listdir('event_result/'):
-            filepath = os.path.join('event_result/', filename)
-            with open(filepath, 'r', encoding='utf-8') as readfile:
-                if header:
-                    modified_content = readfile.read()
-                    header = False
-                else:
-                    content = readfile.read()
-                    modified_content = remove_header(content)
-                file.write(modified_content)
-            count += 1
-        for filename in os.listdir('work_result/'):
-            filepath = os.path.join('work_result/', filename)
-            with open(filepath, 'r', encoding='utf-8') as readfile:
-                file.write((remove_header(readfile.read())))
-            count += 1
+        if concat_events:
+            for filename in os.listdir('event_result/'):
+                filepath = os.path.join('event_result/', filename)
+                with open(filepath, 'r', encoding='utf-8') as readfile:
+                    if header:
+                        modified_content = readfile.read()
+                        header = False
+                    else:
+                        content = readfile.read()
+                        modified_content = remove_header(content)
+                    file.write(modified_content)
+                count += 1
+        if concat_works:
+            for filename in os.listdir('work_result/'):
+                filepath = os.path.join('work_result/', filename)
+                with open(filepath, 'r', encoding='utf-8') as readfile:
+                    file.write((remove_header(readfile.read())))
+                count += 1
     with open("feed.ttl", 'r', encoding='utf-8') as file:
         check_file(file.read())
     print(f"##### Finished concatenating {count} turtle-files into feed.ttl #####")
@@ -56,7 +59,7 @@ def concat_files():
 
 def remove_header(content):
     modified_content = re.sub('@.*\n', "", content)
-    return re.sub('.*schema:dateModified.*\n', "", modified_content)
+    return modified_content
 
 
 def check_file(content):
@@ -70,8 +73,8 @@ def init_graph():
     graph.bind("cto", CTO)
     graph.bind("nfdicore", NFDICORE)
     graph.bind("n4c", N4C)
-    graph.bind("schema", SCHEMA)
     graph.bind("obo", OBO)
+    graph.bind("schema", SCHEMA)
     return graph
 
 def format_uri_gnd(uri):
@@ -85,25 +88,29 @@ def add_events(events, file_path, start_index):
     for event in events:
         graph = init_graph()
         event_id = URIRef(event['schema:event']['@id'])
-        bn = BNode()
-        graph.add((N4C.E5320, SCHEMA.dataFeedElement, bn))
-        graph.add((bn, RDF.type, SCHEMA.DataFeedItem))
-        graph.add((bn, SCHEMA.item, event_id))
+        date = datetime.today().strftime('%Y-%m-%d')
+        bnd = BNode()
+        graph.add((N4C.E5320, SCHEMA.dataFeedElement, bnd))
+        graph.add((bnd, RDF.type, SCHEMA.DataFeedItem))
+        graph.add((bnd, SCHEMA.item, event_id))
+        graph.add((bnd, SCHEMA.dateModified, Literal(date)))
         graph.add((event_id, RDF.type, CTO.CTO_0001005))
-        graph.add((event_id, NFDICORE.NFDI_0000192, URIRef("https://nfdi4culture.de/id/E1841")))
+        graph.add((event_id, NFDICORE.NFDI_0000191, URIRef("https://nfdi4culture.de/id/E1841")))
         graph.add((event_id, CTO.CTO_0001006, URIRef("https://nfdi4culture.de/id/E5320")))
         graph.add((event_id, RDFS.label, Literal(event['schema:event']['schema:name'])))
-        graph.add((event_id, CTO.CTO_0001080, N4C.E3087))
+        graph.add((event_id, CTO.CTO_0001080, Literal("https://performance.musiconn.de/api")))
         graph.add((event_id, NFDICORE.NFDI_0000146, N4C.E3087))
+        graph.add((event_id, NFDICORE.NFDI_0001008, URIRef(event_id)))
         bnc = BNode()
         graph.add((event_id, CTO.CTO_0001025, bnc))
         graph.add((bnc, RDF.type, SCHEMA.MusicEvent))
-        graph.add((event_id, CTO.CTO_0001026, URIRef('http://vocab.getty.edu/page/aat/300262956')))
-        graph.add((URIRef('http://vocab.getty.edu/page/aat/300262956'), RDF.type, CTO.CTO_0001029))
+        graph.add((event_id, CTO.CTO_0001026, URIRef('http://vocab.getty.edu/aat/300262956')))
+        graph.add((URIRef('http://vocab.getty.edu/aat/300262956'), RDF.type, CTO.CTO_0001029))
         if event['schema:event']['schema:temporalCoverage']['@value'] is not None:
             eventdate = event['schema:event']['schema:temporalCoverage']['@value']
             startdate = eventdate[:eventdate.index('/')]
-            graph.add((event_id, CTO.CTO_0001070, Literal(re.sub('T\\s+$', '', startdate))))
+            temporal_coverage = re.sub('T\\S+$', '', startdate)
+            graph.add((event_id, CTO.CTO_0001070, Literal(temporal_coverage)))
 
         if event['schema:event']['schema:location'] is not None:
             location = event['schema:event']['schema:location']
@@ -208,22 +215,7 @@ def add_events(events, file_path, start_index):
         if event['schema:event']['schema:workPerformed'] is not None:
             for works in event['schema:event']['schema:workPerformed']:
                 for work in works['@id']:
-                    if works['@id'][work]['gnd'] is not None:
-                        uri_wor_gnd = format_uri_gnd(works['@id'][work]['gnd'])
-                        bn9 = BNode()
-                        graph.add((event_id, CTO.CTO_0001019, bn9))
-                        graph.add((bn9, RDF.type, OBO.BFO_0000001))
-                        graph.add((bn9, NFDICORE.NFDI_0001006, URIRef(uri_wor_gnd)))
-                        graph.add((URIRef(uri_wor_gnd), RDF.type, NFDICORE.NFDI_0001009))
-                    if works['@id'][work]['viaf'] is not None:
-                        uri_wor_viaf = format_uri_viaf(works['@id'][work]['viaf'])
-                        bn10 = BNode()
-                        graph.add((event_id, CTO.CTO_0001019, bn10))
-                        graph.add((bn10, RDF.type, OBO.BFO_0000001))
-                        graph.add((bn10, NFDICORE.NFDI_0001006, URIRef(uri_wor_viaf)))
-                        graph.add((URIRef(uri_wor_viaf), RDF.type, NFDICORE.NFDI_0001010))
-                    if works['@id'][work]['gnd'] is None and works['@id'][work]['viaf'] is None:
-                        graph.add((event_id, CTO.CTO_0001019, URIRef(work)))
+                    graph.add((event_id, CTO.CTO_0001019, URIRef(work)))
         turtle_data = graph.serialize(format='turtle')
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(f"{file_path}{str(start_index + 1).zfill(5)}.ttl", 'w', encoding='utf-8') as file:
@@ -257,10 +249,6 @@ def add_works(works, file_path, start_index):
                     graph.add((work_id, CTO.viaf, URIRef(composer['@id'][comp_item]['viaf'])))
                 if composer['@id'][comp_item]['gnd'] is None and composer['@id'][comp_item]['viaf'] is None:
                     graph.add((work_id, CTO.relatedPerson, URIRef(comp_item)))
-        descriptions = work['schema:MusicComposition']['schema:description']
-        if descriptions is not None:
-            for desc_index, description in enumerate(descriptions):
-                graph.add((work_id, CTO.abstract, Literal(((descriptions[desc_index]['@value']).replace("\n", "")).replace("@", "(at)"))))
         genres = work['schema:MusicComposition']['schema:genre']
         if genres is not None:
             for genre in genres:
@@ -361,6 +349,8 @@ def parse_arguments():
     parser.add_argument('-W', '--disableWorks', action='store_true', help="Disable harvesting, mapping and "
                                                                           "transformation to turtle for the "
                                                                           "item-type work")
+    parser.add_argument('--disConcatEvents', action='store_false', default=True, help="Set this flag together with the singleFile-argument to disable the concatenation of events.")
+    parser.add_argument('--disConcatWorks', action='store_false', default=True, help="Set this flag together with the singleFile-argument to disable concatenation of works.")
     return parser.parse_args()
 
 
@@ -637,7 +627,7 @@ def parse_time(item):
 
 
 def process_json_data(wait_time, harvest_count, start_index_event, start_index_work, single_file, load_events, load_works,
-                      disable_events, disable_works):
+                      disable_events, disable_works, concat_events, concat_works):
     header = fetch_json_data("https://performance.musiconn.de/api?action=query&format=json&entity=null", wait_time)
     parse_category_sizes(header)
     if harvest_count > 0:
@@ -698,7 +688,7 @@ def process_json_data(wait_time, harvest_count, start_index_event, start_index_w
         print(f"########## Finished harvesting and mapping category work ##########")
 
     if single_file:
-        concat_files()
+        concat_files(concat_events, concat_works)
 
     if save_meta:
         save_meta_data_to_json(location_auth, 'authorities/location.json')
@@ -797,4 +787,4 @@ if __name__ == "__main__":
 
     load_meta_data()
     process_json_data(args.wait, args.count, args.startIndexEvent, args.startIndexWork, args.singleFile,
-                      args.loadEvents, args.loadWorks, args.disableEvents, args.disableWorks)
+                      args.loadEvents, args.loadWorks, args.disableEvents, args.disableWorks, args.disConcatEvents, args.disConcatWorks)
