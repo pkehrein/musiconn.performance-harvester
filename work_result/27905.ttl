@@ -1,27 +1,37 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/32192606> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/118975579> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4040357-9> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/motetten-1572-victoria-tomas-luis-de> ] .
 
-<https://performance.musiconn.de/work/motetten-1572-victoria-tomas-luis-de> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/motetten-1572-victoria-tomas-luis-de> a cto:CTO_0001005 ;
     rdfs:label "Motetten (1572) (Victoria, Tomás Luis de)" ;
-    schema1:includedComposition <https://d-nb.info/gnd/300241674>,
-        <https://performance.musiconn.de/work/motetten-1572-o-quam-gloriosum-est-regnum-victoria-tomas-luis-de>,
-        <https://viaf.org/viaf/2146332770118730741> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Es existiert ein weitere Motettenband von 1583, daher die Unterscheidung mit ErscheinungsjahrFür 4-6 und 8 Stimmen33 Motetten: 1. O quam gloriosum est regnum 2. Doctor bonus amicus Dei 3. Quam pulchri sunt gressus tui 4. O decus apostolicum 5. O magnum mysterium 6. Magi viderunt stellam 7. Senex puerum portabat 8. Sancta Maria succurre miseris 9. Ne timeas Maria 10. Pueri Hebræorum 11. Vere languores nostros 12. O vos omnes 13. O regem cæli / Natus est nobis 14. O sacrum convivium / Mens impletur gratia 15. Ascendens Christus in altum / Ascendit Deus in jubilatione 16. Dum complerentur / Dum ergo essent 17. Ave Regina cælorum / Gaude gloriosa 18. Regina cæli lætare / Resurrexit sicut dixit 19. Alma redemptoris mater / Tu quæ genuisti 20. Ecce, ecce Dominus veniet / Ecce, ecce apparebit Dominus 21. Cum beatus Ignatius / Ignis, crux, bestiæ confractio ossium 22. Descendit angelus Domini / Ne timeas 23. Gaude Maria virgo 24. Quem vidistis pastores / Dicite, quid nam vidistis? 25. Vadam et circuibo civitatem / Qualis est dilectus tuus 26. Tu es Petrus / Quodcumque ligaveris 27. Vidi speciosam / Quæ est ista 28. Benedicta sit sancta Trinitas 29. O sacrum convivium 30. Surrexit pastor bonus 31. Congratulamini mihi 32. Salve Regina / Ad te suspiramus / Et Jesum / O clemens, O pia 33. Ave Maria" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118975579>,
-        <https://d-nb.info/gnd/300241674>,
-        <https://d-nb.info/gnd/4040357-9> ;
-    cto:isPartOf <https://d-nb.info/gnd/4040357-9> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118975579>,
-        <https://viaf.org/viaf/32192606> ;
-    cto:viaf <https://viaf.org/viaf/2146332770118730741>,
-        <https://viaf.org/viaf/32192606> .
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4040357-9> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/motetten-1572-victoria-tomas-luis-de> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/32192606> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118975579> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/motetten-1572-o-quam-gloriosum-est-regnum-victoria-tomas-luis-de> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

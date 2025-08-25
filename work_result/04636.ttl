@@ -1,19 +1,45 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/12304462> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/221396927> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/11850553X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/3000108-0> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4032359-6> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/italienisches-konzert-bach-johann-sebastian> ] .
 
-<https://performance.musiconn.de/work/italienisches-konzert-bach-johann-sebastian> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/italienisches-konzert-bach-johann-sebastian> a cto:CTO_0001005 ;
     rdfs:label "Italienisches Konzert (Bach, Johann Sebastian)" ;
-    schema1:includedComposition <https://d-nb.info/gnd/300181329>,
-        <https://performance.musiconn.de/work/italienisches-konzert-satz-1-bach-johann-sebastian>,
-        <https://viaf.org/viaf/207915485> ;
-    schema1:subjectOf <https://performance.musiconn.de/event/4-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1861-11-26>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4032359-6> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/italienisches-konzert-bach-johann-sebastian> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/12304462> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/11850553X> ] ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/3000108-0> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/221396927> ],
+        <https://performance.musiconn.de/corporation/euterpe-orchester-leipzig> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/event/4-abonnementkonzert-alte-buchhaendlerboerse-leipzig-1861-11-26>,
         <https://performance.musiconn.de/event/6-vereinskonzert-rathaus-muenster-westf-friedenssaal-1890-02-20>,
         <https://performance.musiconn.de/event/74-fastnachtskonzert-des-kreuzchors-vereinshaus-zinzendorfstrasse-17-dresden-1935-03-05-19-30>,
         <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1877-02-03>,
@@ -21,21 +47,9 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/event/cetvertaja-leningradskaja-muzykalnaja-vesna-sankt-petersburger-philharmonie-kleiner-saal-1968-04-24>,
         <https://performance.musiconn.de/event/erstes-sonntags-konzert-grosser-konzertsaal-frankfurt-a-m-1912-11-17-17-30>,
         <https://performance.musiconn.de/event/fuenfzehnter-letzter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1941-05-06-19-00>,
-        <https://performance.musiconn.de/event/zweiter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1929-10-25-19-30> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Wurde zusammen mit der Ouvertüre nach französischer Art BWV 831 als 2. Teil der Klavierübung veröffentlicht" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/11850553X>,
-        <https://d-nb.info/gnd/3000108-0>,
-        <https://d-nb.info/gnd/300181329>,
-        <https://d-nb.info/gnd/4032359-6> ;
-    cto:isPartOf <https://d-nb.info/gnd/4032359-6> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/3000108-0>,
-        <https://performance.musiconn.de/corporation/euterpe-orchester-leipzig>,
-        <https://viaf.org/viaf/221396927> ;
-    cto:relatedPerson <https://d-nb.info/gnd/11850553X>,
-        <https://viaf.org/viaf/12304462> ;
-    cto:viaf <https://viaf.org/viaf/12304462>,
-        <https://viaf.org/viaf/207915485>,
-        <https://viaf.org/viaf/221396927> .
+        <https://performance.musiconn.de/event/zweiter-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1929-10-25-19-30>,
+        <https://performance.musiconn.de/work/italienisches-konzert-satz-1-bach-johann-sebastian> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

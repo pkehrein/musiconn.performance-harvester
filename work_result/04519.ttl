@@ -1,43 +1,41 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/61586869> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/118679848> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4040357-9> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/geistliche-chormusik-distler-hugo> ] .
 
-<https://performance.musiconn.de/work/geistliche-chormusik-distler-hugo> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/geistliche-chormusik-distler-hugo> a cto:CTO_0001005 ;
     rdfs:label "Geistliche Chormusik (Distler, Hugo)" ;
-    schema1:includedComposition <https://d-nb.info/gnd/1174830565>,
-        <https://d-nb.info/gnd/300430701>,
-        <https://d-nb.info/gnd/300774869>,
-        <https://d-nb.info/gnd/300816855>,
-        <https://performance.musiconn.de/work/geistliche-chormusik-das-ist-je-gewisslich-wahr-distler-hugo>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4040357-9> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/geistliche-chormusik-distler-hugo> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118679848> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/61586869> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/geistliche-chormusik-das-ist-je-gewisslich-wahr-distler-hugo>,
         <https://performance.musiconn.de/work/geistliche-chormusik-op-12-auswahl-distler-hugo>,
         <https://performance.musiconn.de/work/geistliche-chormusik-op-12-totentanz-distler-hugo>,
         <https://performance.musiconn.de/work/geistliche-chormusik-singet-frisch-und-wohlgemut-distler-hugo>,
-        <https://performance.musiconn.de/work/geistliche-chormusik-wach-auf-du-deutsches-reich-distler-hugo>,
-        <https://viaf.org/viaf/177906821>,
-        <https://viaf.org/viaf/181278449>,
-        <https://viaf.org/viaf/295509394>,
-        <https://viaf.org/viaf/3413154741641953110005> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "neun Motetten für gemischten Chor" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1174830565>,
-        <https://d-nb.info/gnd/118679848>,
-        <https://d-nb.info/gnd/300430701>,
-        <https://d-nb.info/gnd/300774869>,
-        <https://d-nb.info/gnd/300816855>,
-        <https://d-nb.info/gnd/4040357-9> ;
-    cto:isPartOf <https://d-nb.info/gnd/4040357-9> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118679848>,
-        <https://viaf.org/viaf/61586869> ;
-    cto:viaf <https://viaf.org/viaf/177906821>,
-        <https://viaf.org/viaf/181278449>,
-        <https://viaf.org/viaf/295509394>,
-        <https://viaf.org/viaf/3413154741641953110005>,
-        <https://viaf.org/viaf/61586869> .
+        <https://performance.musiconn.de/work/geistliche-chormusik-wach-auf-du-deutsches-reich-distler-hugo> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

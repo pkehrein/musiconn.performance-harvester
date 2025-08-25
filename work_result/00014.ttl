@@ -1,29 +1,44 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/158420977> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/7575200> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/11875081X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4043582-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5084847-1> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/samson-et-dalila-saint-saens-camille> ] .
 
-<https://performance.musiconn.de/work/samson-et-dalila-saint-saens-camille> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/samson-et-dalila-saint-saens-camille> a cto:CTO_0001005 ;
     rdfs:label "Samson et Dalila (Saint-Saëns, Camille)" ;
-    schema1:includedComposition <https://d-nb.info/gnd/300133944>,
-        <https://d-nb.info/gnd/300133952>,
-        <https://d-nb.info/gnd/300133960>,
-        <https://performance.musiconn.de/work/melodien-aus-der-oper-samson-et-dalila-saint-saens-camille>,
-        <https://performance.musiconn.de/work/samson-et-dalila-amour-viens-aider-ma-faiblesse-saint-saens-camille>,
-        <https://performance.musiconn.de/work/samson-et-dalila-arie-der-dalila-saint-saens-camille>,
-        <https://performance.musiconn.de/work/samson-et-dalila-arie-saint-saens-camille>,
-        <https://performance.musiconn.de/work/samson-et-dalila-bacchanale-saint-saens-camille>,
-        <https://performance.musiconn.de/work/samson-et-dalila-die-sonne-sie-lachte-saint-saens-camille>,
-        <https://performance.musiconn.de/work/samson-et-dalila-mon-coeur-souvre-a-ta-voix-saint-saens-camille>,
-        <https://performance.musiconn.de/work/samson-et-dalila-samson-recherchant-ma-presence-saint-saens-camille>,
-        <https://viaf.org/viaf/184688671>,
-        <https://viaf.org/viaf/186507063> ;
-    schema1:subjectOf <https://performance.musiconn.de/event/samson-und-dalila-1910-01-16-19-30>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4043582-9> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/samson-et-dalila-saint-saens-camille> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/11875081X> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/7575200> ] ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5084847-1> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/158420977> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/event/samson-und-dalila-1910-01-16-19-30>,
         <https://performance.musiconn.de/event/samson-und-dalila-semperoper-dresden-1901-12-18-19-30>,
         <https://performance.musiconn.de/event/samson-und-dalila-semperoper-dresden-1902-08-26-19-30>,
         <https://performance.musiconn.de/event/samson-und-dalila-semperoper-dresden-1903-09-02-19-30>,
@@ -45,22 +60,16 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/event/samson-und-dalila-semperoper-dresden-1910-12-28-19-30>,
         <https://performance.musiconn.de/event/samson-und-dalila-semperoper-dresden-1911-03-12-19-30>,
         <https://performance.musiconn.de/event/samson-und-dalila-semperoper-dresden-1913-01-30-19-30>,
-        <https://performance.musiconn.de/event/samson-und-dalila-semperoper-dresden-1913-04-10-19-30> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/11875081X>,
-        <https://d-nb.info/gnd/300133944>,
-        <https://d-nb.info/gnd/300133952>,
-        <https://d-nb.info/gnd/300133960>,
-        <https://d-nb.info/gnd/4043582-9>,
-        <https://d-nb.info/gnd/5084847-1> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
-        <https://viaf.org/viaf/158420977> ;
-    cto:relatedPerson <https://d-nb.info/gnd/11875081X>,
-        <https://viaf.org/viaf/7575200> ;
-    cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/184688671>,
-        <https://viaf.org/viaf/186507063>,
-        <https://viaf.org/viaf/7575200> .
+        <https://performance.musiconn.de/event/samson-und-dalila-semperoper-dresden-1913-04-10-19-30>,
+        <https://performance.musiconn.de/work/melodien-aus-der-oper-samson-et-dalila-saint-saens-camille>,
+        <https://performance.musiconn.de/work/samson-et-dalila-amour-viens-aider-ma-faiblesse-saint-saens-camille>,
+        <https://performance.musiconn.de/work/samson-et-dalila-arie-der-dalila-saint-saens-camille>,
+        <https://performance.musiconn.de/work/samson-et-dalila-arie-saint-saens-camille>,
+        <https://performance.musiconn.de/work/samson-et-dalila-bacchanale-saint-saens-camille>,
+        <https://performance.musiconn.de/work/samson-et-dalila-die-sonne-sie-lachte-saint-saens-camille>,
+        <https://performance.musiconn.de/work/samson-et-dalila-mon-coeur-souvre-a-ta-voix-saint-saens-camille>,
+        <https://performance.musiconn.de/work/samson-et-dalila-samson-recherchant-ma-presence-saint-saens-camille> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

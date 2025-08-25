@@ -1,20 +1,32 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/73098371> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/134757378> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/drei-stuecke-fuer-4-gitarren-haeupl-horst> ] .
 
-<https://performance.musiconn.de/work/drei-stuecke-fuer-4-gitarren-haeupl-horst> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/drei-stuecke-fuer-4-gitarren-haeupl-horst> a cto:CTO_0001005 ;
     rdfs:label "Drei Stücke für 4 Gitarren (Häupl, Horst)" ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/134757378> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/musikschule-karl-marx-stadt-gitarren-quartett> ;
-    cto:relatedPerson <https://d-nb.info/gnd/134757378>,
-        <https://viaf.org/viaf/73098371> ;
-    cto:viaf <https://viaf.org/viaf/73098371> .
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/drei-stuecke-fuer-4-gitarren-haeupl-horst> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/73098371> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/134757378> ] ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/musikschule-karl-marx-stadt-gitarren-quartett> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

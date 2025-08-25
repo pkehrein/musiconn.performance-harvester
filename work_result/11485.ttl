@@ -1,40 +1,71 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/27251423> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/29719275> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/5705360> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/6792154198372720230007> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/8138433> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/116400420> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/116757957> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1170633536> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/117301558> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118610961> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4189844-8> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/wiegenlieder-d-498-schubert-franz> ] .
 
-<https://performance.musiconn.de/work/wiegenlieder-d-498-schubert-franz> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/wiegenlieder-d-498-schubert-franz> a cto:CTO_0001005 ;
     rdfs:label "Wiegenlieder, D 498 (Schubert, Franz)" ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/116400420>,
-        <https://d-nb.info/gnd/116757957>,
-        <https://d-nb.info/gnd/1170633536>,
-        <https://d-nb.info/gnd/117301558>,
-        <https://d-nb.info/gnd/118610961>,
-        <https://d-nb.info/gnd/4189844-8> ;
-    cto:isPartOf <https://d-nb.info/gnd/4189844-8> ;
-    cto:relatedPerson <https://d-nb.info/gnd/116400420>,
-        <https://d-nb.info/gnd/116757957>,
-        <https://d-nb.info/gnd/1170633536>,
-        <https://d-nb.info/gnd/117301558>,
-        <https://d-nb.info/gnd/118610961>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4189844-8> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/wiegenlieder-d-498-schubert-franz> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/6792154198372720230007> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/116400420> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/116757957> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/27251423> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118610961> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1170633536> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/5705360> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/117301558> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/29719275> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/8138433> ],
         <https://performance.musiconn.de/person/anonym>,
         <https://performance.musiconn.de/person/ascher-elisabeth>,
-        <https://performance.musiconn.de/person/kreisler-charlotte>,
-        <https://viaf.org/viaf/27251423>,
-        <https://viaf.org/viaf/29719275>,
-        <https://viaf.org/viaf/5705360>,
-        <https://viaf.org/viaf/6792154198372720230007>,
-        <https://viaf.org/viaf/8138433> ;
-    cto:viaf <https://viaf.org/viaf/27251423>,
-        <https://viaf.org/viaf/29719275>,
-        <https://viaf.org/viaf/5705360>,
-        <https://viaf.org/viaf/6792154198372720230007>,
-        <https://viaf.org/viaf/8138433> .
+        <https://performance.musiconn.de/person/kreisler-charlotte> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

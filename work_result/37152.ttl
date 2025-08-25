@@ -1,25 +1,36 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/79689909> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/134600258> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/7-stuecke-aus-kammermusik-fuer-blechblaeser-kopf-klaus-dieter> ] .
 
-<https://performance.musiconn.de/work/7-stuecke-aus-kammermusik-fuer-blechblaeser-kopf-klaus-dieter> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/7-stuecke-aus-kammermusik-fuer-blechblaeser-kopf-klaus-dieter> a cto:CTO_0001005 ;
     rdfs:label "7 Stücke aus \"Kammermusik für Blechbläser\" (Kopf, Klaus-Dieter)" ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "1. Jagdszene 1, 2. Jagdszene 2, 3. Habanera, 4. Auf dem Rummelplatz, 5. Altfranzösischer Tanz, 6. Burlesko, 7. Rondo" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/134600258> ;
-    cto:relatedPerson <https://d-nb.info/gnd/134600258>,
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/7-stuecke-aus-kammermusik-fuer-blechblaeser-kopf-klaus-dieter> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/79689909> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/134600258> ],
         <https://performance.musiconn.de/person/beyer-eberhard>,
         <https://performance.musiconn.de/person/gromakowski-joerg>,
         <https://performance.musiconn.de/person/jakobsen-fritz>,
         <https://performance.musiconn.de/person/kohlmann-achim>,
-        <https://performance.musiconn.de/person/sellmons-klaus>,
-        <https://viaf.org/viaf/79689909> ;
-    cto:viaf <https://viaf.org/viaf/79689909> .
+        <https://performance.musiconn.de/person/sellmons-klaus> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

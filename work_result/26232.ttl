@@ -1,25 +1,41 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/49415249> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/1130357813> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/12339788X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4030993-9> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/skazki-gavrilin-valerij-a> ] .
 
-<https://performance.musiconn.de/work/skazki-gavrilin-valerij-a> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/skazki-gavrilin-valerij-a> a cto:CTO_0001005 ;
     rdfs:label "Skazki (Gavrilin, Valerij A.)" ;
-    schema1:includedComposition <https://performance.musiconn.de/work/poechal-tit-po-drova-gavrilin-valerij-a> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Eine Sammlung von Klavierstücken, enthält:1. General idet (kartinki iz staroj knigi)2. Poechal Tit po drova (skazočka)3. Nasten’kin son (son pod Novyj god)4. A nu-ka, mal’čiki5. Lisa i bober6. Kak u babuški kozel" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1130357813>,
-        <https://d-nb.info/gnd/12339788X>,
-        <https://d-nb.info/gnd/4030993-9> ;
-    cto:isPartOf <https://d-nb.info/gnd/1130357813>,
-        <https://d-nb.info/gnd/4030993-9> ;
-    cto:relatedPerson <https://d-nb.info/gnd/12339788X>,
-        <https://viaf.org/viaf/49415249> ;
-    cto:viaf <https://viaf.org/viaf/49415249> .
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4030993-9> ],
+        [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1130357813> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/skazki-gavrilin-valerij-a> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/49415249> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/12339788X> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/poechal-tit-po-drova-gavrilin-valerij-a> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

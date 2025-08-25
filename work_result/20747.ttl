@@ -1,33 +1,52 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/101084064> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/124118160> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/5690152932556709830006> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/10046898-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1160881359> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118798936> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/es-ist-ein-ros-entsprungen-1> ] .
 
-<https://performance.musiconn.de/work/es-ist-ein-ros-entsprungen-1> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/es-ist-ein-ros-entsprungen-1> a cto:CTO_0001005 ;
     rdfs:label "Es ist ein Ros entsprungen" ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Dt. traditionelles Weihnachtslied (Text bezieht sich auf Jesaja 11,1a); evang. Textfassung der 2. Strophe von Michael Prätorius 1609; weitere drei Strophen von Friedrich Layritz 1844" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/10046898-6>,
-        <https://d-nb.info/gnd/1160881359>,
-        <https://d-nb.info/gnd/118798936> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/10046898-6>,
-        <https://d-nb.info/gnd/1160881359>,
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/es-ist-ein-ros-entsprungen-1> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/101084064> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118798936> ] ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1160881359> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/124118160> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/10046898-6> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/5690152932556709830006> ],
         <https://performance.musiconn.de/corporation/a-cappella-chor-jena>,
         <https://performance.musiconn.de/corporation/maennergesangverein-jena-doppelquartett>,
         <https://performance.musiconn.de/corporation/singakademie-jena-maennerchor>,
         <https://performance.musiconn.de/corporation/volkshochschule-jena-a-cappella-chor>,
-        <https://performance.musiconn.de/corporation/volkshochschule-jena-singgruppe>,
-        <https://viaf.org/viaf/124118160>,
-        <https://viaf.org/viaf/5690152932556709830006> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118798936>,
-        <https://viaf.org/viaf/101084064> ;
-    cto:viaf <https://viaf.org/viaf/101084064>,
-        <https://viaf.org/viaf/124118160>,
-        <https://viaf.org/viaf/5690152932556709830006> .
+        <https://performance.musiconn.de/corporation/volkshochschule-jena-singgruppe> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

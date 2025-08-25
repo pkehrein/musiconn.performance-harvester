@@ -1,64 +1,66 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/133022259> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/143907952> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/33146825124407631545> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/71577105> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/1078514259> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118509675> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4035669-3> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5054203-5> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/815129-5> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/les-nuits-dete-berlioz-hector> ] .
 
-<https://performance.musiconn.de/work/les-nuits-dete-berlioz-hector> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/les-nuits-dete-berlioz-hector> a cto:CTO_0001005 ;
     rdfs:label "Les nuits d'été (Berlioz, Hector)" ;
-    schema1:includedComposition <https://d-nb.info/gnd/1072709643>,
-        <https://d-nb.info/gnd/1167965779>,
-        <https://d-nb.info/gnd/1167966317>,
-        <https://d-nb.info/gnd/1264255144>,
-        <https://d-nb.info/gnd/300488459>,
-        <https://d-nb.info/gnd/300762666>,
-        <https://performance.musiconn.de/work/les-nuits-dete-absence-berlioz-hector>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4035669-3> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/les-nuits-dete-berlioz-hector> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118509675> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/71577105> ] ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1078514259> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5054203-5> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/33146825124407631545> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/133022259> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/143907952> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/815129-5> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/les-nuits-dete-absence-berlioz-hector>,
         <https://performance.musiconn.de/work/les-nuits-dete-au-cimetiere-berlioz-hector>,
         <https://performance.musiconn.de/work/les-nuits-dete-h-81a-sur-les-lagunes-berlioz-hector>,
         <https://performance.musiconn.de/work/les-nuits-dete-l-ile-inconnue-berlioz-hector>,
         <https://performance.musiconn.de/work/les-nuits-dete-le-spectre-de-la-rose-berlioz-hector>,
-        <https://performance.musiconn.de/work/les-nuits-dete-villanelle-berlioz-hector>,
-        <https://viaf.org/viaf/176827557>,
-        <https://viaf.org/viaf/179476906>,
-        <https://viaf.org/viaf/181037473>,
-        <https://viaf.org/viaf/181286454>,
-        <https://viaf.org/viaf/193672108>,
-        <https://viaf.org/viaf/383153834734164450008> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Umfasst 6 Lieder; es existiert ein Arrangement des Komponisten für Singstimme (verschiedene Stimmlagen) und Orchester" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1072709643>,
-        <https://d-nb.info/gnd/1078514259>,
-        <https://d-nb.info/gnd/1167965779>,
-        <https://d-nb.info/gnd/1167966317>,
-        <https://d-nb.info/gnd/118509675>,
-        <https://d-nb.info/gnd/1264255144>,
-        <https://d-nb.info/gnd/300488459>,
-        <https://d-nb.info/gnd/300762666>,
-        <https://d-nb.info/gnd/4035669-3>,
-        <https://d-nb.info/gnd/5054203-5>,
-        <https://d-nb.info/gnd/815129-5> ;
-    cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/1078514259>,
-        <https://d-nb.info/gnd/5054203-5>,
-        <https://d-nb.info/gnd/815129-5>,
-        <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/143907952>,
-        <https://viaf.org/viaf/33146825124407631545> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118509675>,
-        <https://viaf.org/viaf/71577105> ;
-    cto:viaf <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/143907952>,
-        <https://viaf.org/viaf/176827557>,
-        <https://viaf.org/viaf/179476906>,
-        <https://viaf.org/viaf/181037473>,
-        <https://viaf.org/viaf/181286454>,
-        <https://viaf.org/viaf/193672108>,
-        <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/383153834734164450008>,
-        <https://viaf.org/viaf/71577105> .
+        <https://performance.musiconn.de/work/les-nuits-dete-villanelle-berlioz-hector> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

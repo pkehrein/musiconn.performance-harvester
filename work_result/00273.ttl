@@ -1,31 +1,46 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/158420977> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/24796264> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/11861911X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5084847-1> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/feuersnot-strauss-richard> ] .
 
-<https://performance.musiconn.de/work/feuersnot-strauss-richard> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/feuersnot-strauss-richard> a cto:CTO_0001005 ;
     rdfs:label "Feuersnot (Strauss, Richard)" ;
-    schema1:includedComposition <https://performance.musiconn.de/work/feuersnot-liebesszene-strauss-richard> ;
-    schema1:subjectOf <https://performance.musiconn.de/event/175-vorstellung-semperoper-dresden-1904-09-01-19-30>,
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/feuersnot-strauss-richard> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/11861911X> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/24796264> ] ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5084847-1> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/158420977> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/event/175-vorstellung-semperoper-dresden-1904-09-01-19-30>,
         <https://performance.musiconn.de/event/178-vorstellung-semperoper-dresden-1904-09-04-19-30>,
         <https://performance.musiconn.de/event/188-vorstellung-semperoper-dresden-1904-09-14-19-30>,
         <https://performance.musiconn.de/event/238-vorstellung-semperoper-dresden-1901-11-26-19-30>,
         <https://performance.musiconn.de/event/242-vorstellung-semperoper-dresden-1901-12-01-19-00>,
-        <https://performance.musiconn.de/event/feuersnot-semperoper-dresden-1909-01-03-19-30> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Singgedicht in einem Aufzug" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/11861911X>,
-        <https://d-nb.info/gnd/5084847-1> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
-        <https://viaf.org/viaf/158420977> ;
-    cto:relatedPerson <https://d-nb.info/gnd/11861911X>,
-        <https://viaf.org/viaf/24796264> ;
-    cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/24796264> .
+        <https://performance.musiconn.de/event/feuersnot-semperoper-dresden-1909-01-03-19-30>,
+        <https://performance.musiconn.de/work/feuersnot-liebesszene-strauss-richard> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

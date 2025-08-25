@@ -1,48 +1,74 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/12304462> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/126591981> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/136181816> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/147445728> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/150245159> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/11850553X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1212749-8> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/2018088-3> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/2026867-1> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4029509-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5259529-8> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/erschallet-ihr-lieder-bwv-1721-bach-johann-sebastian> ] .
 
-<https://performance.musiconn.de/work/erschallet-ihr-lieder-bwv-1721-bach-johann-sebastian> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/erschallet-ihr-lieder-bwv-1721-bach-johann-sebastian> a cto:CTO_0001005 ;
     rdfs:label "Erschallet, ihr Lieder, BWV 172.1 (Bach, Johann Sebastian)" ;
-    schema1:includedComposition <https://d-nb.info/gnd/300686439>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4029509-6> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/erschallet-ihr-lieder-bwv-1721-bach-johann-sebastian> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/11850553X> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/12304462> ] ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/2026867-1> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/150245159> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/2018088-3> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/136181816> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5259529-8> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/147445728> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1212749-8> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/126591981> ],
+        <https://performance.musiconn.de/corporation/internationales-jugendcamp-der-leipziger-partnerstaedte-orchester>,
+        <https://performance.musiconn.de/corporation/kombinat-veb-carl-zeiss-jena-arbeitersinfonieorchester> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2008-05-10>,
         <https://performance.musiconn.de/work/erschallet-ihr-lieder-bwv-1721-auswahl-bach-johann-sebastian>,
         <https://performance.musiconn.de/work/erschallet-ihr-lieder-erschallet-ihr-lieder-bach-johann-sebastian>,
-        <https://performance.musiconn.de/work/erschallet-ihr-lieder-von-gott-koemmt-mir-ein-freudenschein-arrangiert-bach-johann-sebastian>,
-        <https://viaf.org/viaf/183933215> ;
-    schema1:subjectOf <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-2008-05-10> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Kantate zum 1. Pfingsttag (Feria 1 Pentecostes)Weimarer Fassung in C (1714)Unvollständig überliefert" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/11850553X>,
-        <https://d-nb.info/gnd/1212749-8>,
-        <https://d-nb.info/gnd/2018088-3>,
-        <https://d-nb.info/gnd/2026867-1>,
-        <https://d-nb.info/gnd/300686439>,
-        <https://d-nb.info/gnd/4029509-6>,
-        <https://d-nb.info/gnd/5259529-8> ;
-    cto:isPartOf <https://d-nb.info/gnd/4029509-6> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/1212749-8>,
-        <https://d-nb.info/gnd/2018088-3>,
-        <https://d-nb.info/gnd/2026867-1>,
-        <https://d-nb.info/gnd/5259529-8>,
-        <https://performance.musiconn.de/corporation/internationales-jugendcamp-der-leipziger-partnerstaedte-orchester>,
-        <https://performance.musiconn.de/corporation/kombinat-veb-carl-zeiss-jena-arbeitersinfonieorchester>,
-        <https://viaf.org/viaf/126591981>,
-        <https://viaf.org/viaf/136181816>,
-        <https://viaf.org/viaf/147445728>,
-        <https://viaf.org/viaf/150245159> ;
-    cto:relatedPerson <https://d-nb.info/gnd/11850553X>,
-        <https://viaf.org/viaf/12304462> ;
-    cto:viaf <https://viaf.org/viaf/12304462>,
-        <https://viaf.org/viaf/126591981>,
-        <https://viaf.org/viaf/136181816>,
-        <https://viaf.org/viaf/147445728>,
-        <https://viaf.org/viaf/150245159>,
-        <https://viaf.org/viaf/183933215> .
+        <https://performance.musiconn.de/work/erschallet-ihr-lieder-von-gott-koemmt-mir-ein-freudenschein-arrangiert-bach-johann-sebastian> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

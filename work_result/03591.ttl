@@ -1,24 +1,60 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/133022259> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/136181816> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/32182557> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/33146825124407631545> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/1078514259> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118508288> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/2018088-3> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4143955-7> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/815129-5> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/musik-zum-ballett-die-geschoepfe-des-prometheus-beethoven-ludwig-van> ] .
 
-<https://performance.musiconn.de/work/musik-zum-ballett-die-geschoepfe-des-prometheus-beethoven-ludwig-van> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/musik-zum-ballett-die-geschoepfe-des-prometheus-beethoven-ludwig-van> a cto:CTO_0001005 ;
     rdfs:label "Musik zum Ballett \"Die Geschöpfe des Prometheus\" (Beethoven, Ludwig van)" ;
-    schema1:includedComposition <https://d-nb.info/gnd/1156564166>,
-        <https://d-nb.info/gnd/117709438X>,
-        <https://d-nb.info/gnd/1177094584>,
-        <https://d-nb.info/gnd/117709469X>,
-        <https://d-nb.info/gnd/1177094894>,
-        <https://d-nb.info/gnd/1273357965>,
-        <https://d-nb.info/gnd/300015356>,
-        <https://d-nb.info/gnd/300404581>,
-        <https://performance.musiconn.de/work/musik-zum-ballett-beethoven-ludwig-van>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4143955-7> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/musik-zum-ballett-die-geschoepfe-des-prometheus-beethoven-ludwig-van> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118508288> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/32182557> ] ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/2018088-3> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/133022259> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/136181816> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/33146825124407631545> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/815129-5> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1078514259> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/musik-zum-ballett-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/musik-zum-ballett-die-geschoepfe-des-prometheus-adagio-andante-quasi-allegretto-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/musik-zum-ballett-die-geschoepfe-des-prometheus-allegro-grazioso-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/musik-zum-ballett-die-geschoepfe-des-prometheus-andante-quasi-allegretto-beethoven-ludwig-van>,
@@ -29,41 +65,8 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/musik-zum-ballett-die-geschoepfe-des-prometheus-ouvertuere-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/musik-zum-ballett-die-geschoepfe-des-prometheus-pastorale-beethoven-ludwig-van>,
         <https://performance.musiconn.de/work/musik-zum-ballett-die-geschoepfe-des-prometheus-saetze-aus-der-balletmusik-beethoven-ludwig-van>,
-        <https://performance.musiconn.de/work/musik-zum-ballett-die-geschoepfe-des-prometheus-un-poco-adagio-allegro-beethoven-ludwig-van>,
-        <https://viaf.org/viaf/179877641>,
-        <https://viaf.org/viaf/184815717>,
-        <https://viaf.org/viaf/3592166959209847160001>,
-        <https://viaf.org/viaf/8120152502863810800004> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1078514259>,
-        <https://d-nb.info/gnd/1156564166>,
-        <https://d-nb.info/gnd/117709438X>,
-        <https://d-nb.info/gnd/1177094584>,
-        <https://d-nb.info/gnd/117709469X>,
-        <https://d-nb.info/gnd/1177094894>,
-        <https://d-nb.info/gnd/118508288>,
-        <https://d-nb.info/gnd/1273357965>,
-        <https://d-nb.info/gnd/2018088-3>,
-        <https://d-nb.info/gnd/300015356>,
-        <https://d-nb.info/gnd/300404581>,
-        <https://d-nb.info/gnd/4143955-7>,
-        <https://d-nb.info/gnd/815129-5> ;
-    cto:isPartOf <https://d-nb.info/gnd/4143955-7> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/1078514259>,
-        <https://d-nb.info/gnd/2018088-3>,
-        <https://d-nb.info/gnd/815129-5>,
-        <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/136181816>,
-        <https://viaf.org/viaf/33146825124407631545> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118508288>,
-        <https://viaf.org/viaf/32182557> ;
-    cto:viaf <https://viaf.org/viaf/133022259>,
-        <https://viaf.org/viaf/136181816>,
-        <https://viaf.org/viaf/179877641>,
-        <https://viaf.org/viaf/184815717>,
-        <https://viaf.org/viaf/32182557>,
-        <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/3592166959209847160001>,
-        <https://viaf.org/viaf/8120152502863810800004> .
+        <https://performance.musiconn.de/work/musik-zum-ballett-die-geschoepfe-des-prometheus-un-poco-adagio-allegro-beethoven-ludwig-van> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

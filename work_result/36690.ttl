@@ -1,20 +1,28 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/streichquartett-1986-in-4-saetzen-mueller-dietrich> ] .
 
-<https://performance.musiconn.de/work/streichquartett-1986-in-4-saetzen-mueller-dietrich> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/streichquartett-1986-in-4-saetzen-mueller-dietrich> a cto:CTO_0001005 ;
     rdfs:label "Streichquartett 1986 in 4 Sätzen (Müller, Dietrich)" ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:relatedPerson <https://performance.musiconn.de/person/juenemann-astrid>,
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/streichquartett-1986-in-4-saetzen-mueller-dietrich> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 <https://performance.musiconn.de/person/juenemann-astrid>,
         <https://performance.musiconn.de/person/meyer-christine>,
         <https://performance.musiconn.de/person/mueller-dietrich>,
         <https://performance.musiconn.de/person/mueller-matthias>,
-        <https://performance.musiconn.de/person/willenberg-antje> .
+        <https://performance.musiconn.de/person/willenberg-antje> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

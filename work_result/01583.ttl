@@ -1,50 +1,85 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/125161774> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/135652398> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/136181816> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/174024482> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/33146825124407631545> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/7573295> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/1078514259> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118514253> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/16176317-0> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1707136-7> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/2018088-3> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4131189-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5178186-4> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/gesaenge-frauen-chor-horn-2-harfe-op-17-der-gaertner-brahms-johannes> ] .
 
-<https://performance.musiconn.de/work/gesaenge-frauen-chor-horn-2-harfe-op-17-der-gaertner-brahms-johannes> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/gesaenge-frauen-chor-horn-2-harfe-op-17-der-gaertner-brahms-johannes> a cto:CTO_0001005 ;
     rdfs:label "Gesänge, Frauen-Chor, Horn (2), Harfe, op. 17. Der Gärtner (Brahms, Johannes)" ;
-    schema1:subjectOf <https://performance.musiconn.de/event/4-museums-concert-grosser-konzertsaal-frankfurt-a-m-1863-11-20-18-30>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4131189-9> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/gesaenge-frauen-chor-horn-2-harfe-op-17-der-gaertner-brahms-johannes> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118514253> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/7573295> ] ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/135652398> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1078514259> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1707136-7> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5178186-4> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/33146825124407631545> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/125161774> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/174024482> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/2018088-3> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/16176317-0> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/136181816> ],
+        <https://performance.musiconn.de/corporation/damensing-verein-olmuetz>,
+        <https://performance.musiconn.de/corporation/maenner-gesang-verein-olmuetz> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/event/4-museums-concert-grosser-konzertsaal-frankfurt-a-m-1863-11-20-18-30>,
         <https://performance.musiconn.de/event/6-kammerkonzert-schloss-albrechtsberg-dresden-2002-06-23-19-00>,
         <https://performance.musiconn.de/event/abokonzert-20-zweites-gewandhaus-leipzig-1903-03-05>,
         <https://performance.musiconn.de/event/achtes-sonntags-concert-grosser-konzertsaal-frankfurt-a-m-1900-02-18-17-30>,
         <https://performance.musiconn.de/event/drittes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1887-11-04-18-30>,
         <https://performance.musiconn.de/event/elftes-museums-concert-grosser-konzertsaal-frankfurt-a-m-1892-03-18-18-30>,
         <https://performance.musiconn.de/event/konzert-koeniglich-staedtischer-redouten-saal-olmuetz-1906-03-04> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1078514259>,
-        <https://d-nb.info/gnd/118514253>,
-        <https://d-nb.info/gnd/16176317-0>,
-        <https://d-nb.info/gnd/1707136-7>,
-        <https://d-nb.info/gnd/2018088-3>,
-        <https://d-nb.info/gnd/4131189-9>,
-        <https://d-nb.info/gnd/5178186-4> ;
-    cto:isPartOf <https://d-nb.info/gnd/4131189-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/1078514259>,
-        <https://d-nb.info/gnd/16176317-0>,
-        <https://d-nb.info/gnd/1707136-7>,
-        <https://d-nb.info/gnd/2018088-3>,
-        <https://d-nb.info/gnd/5178186-4>,
-        <https://performance.musiconn.de/corporation/damensing-verein-olmuetz>,
-        <https://performance.musiconn.de/corporation/maenner-gesang-verein-olmuetz>,
-        <https://viaf.org/viaf/125161774>,
-        <https://viaf.org/viaf/135652398>,
-        <https://viaf.org/viaf/136181816>,
-        <https://viaf.org/viaf/174024482>,
-        <https://viaf.org/viaf/33146825124407631545> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118514253>,
-        <https://viaf.org/viaf/7573295> ;
-    cto:viaf <https://viaf.org/viaf/125161774>,
-        <https://viaf.org/viaf/135652398>,
-        <https://viaf.org/viaf/136181816>,
-        <https://viaf.org/viaf/174024482>,
-        <https://viaf.org/viaf/33146825124407631545>,
-        <https://viaf.org/viaf/7573295> .
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

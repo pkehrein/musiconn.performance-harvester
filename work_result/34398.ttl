@@ -1,30 +1,49 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/137626098> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/57799645> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/79610054> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/133344444> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/134406818> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/6048051-8> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/dresdner-version-tutschku-hans-hintzenstern-matthias-von-peter-mario-hintzenstern-michael-von> ] .
 
-<https://performance.musiconn.de/work/dresdner-version-tutschku-hans-hintzenstern-matthias-von-peter-mario-hintzenstern-michael-von> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/dresdner-version-tutschku-hans-hintzenstern-matthias-von-peter-mario-hintzenstern-michael-von> a cto:CTO_0001005 ;
     rdfs:label "Dresdner Version (Tutschku, Hans, Hintzenstern, Matthias von, Peter, Mario, Hintzenstern, Michael von)" ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Prozesskomposition des Ensembles für Intuitive Komposition Weimar zu einer DiashowDurch die Beschäftigung mit der synästhetischen Tradition der Bauhauszeit kam die Idee zu der Komposition. Essentieller Bestandteil neben der Prozesskomposition der Instrumentalisten ist auch die Dia-Show, die durch die projizierende Person variiert werden kann." ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/133344444>,
-        <https://d-nb.info/gnd/134406818>,
-        <https://d-nb.info/gnd/6048051-8> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/6048051-8>,
-        <https://viaf.org/viaf/137626098> ;
-    cto:relatedPerson <https://d-nb.info/gnd/133344444>,
-        <https://d-nb.info/gnd/134406818>,
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/dresdner-version-tutschku-hans-hintzenstern-matthias-von-peter-mario-hintzenstern-michael-von> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/79610054> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/57799645> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/133344444> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/134406818> ],
         <https://performance.musiconn.de/person/hintzenstern-matthias-von>,
-        <https://performance.musiconn.de/person/peter-mario>,
-        <https://viaf.org/viaf/57799645>,
-        <https://viaf.org/viaf/79610054> ;
-    cto:viaf <https://viaf.org/viaf/137626098>,
-        <https://viaf.org/viaf/57799645>,
-        <https://viaf.org/viaf/79610054> .
+        <https://performance.musiconn.de/person/peter-mario> ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/6048051-8> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/137626098> ] ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

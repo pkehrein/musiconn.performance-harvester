@@ -1,38 +1,40 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/53433423> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/135099579> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4364812-5> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/bagatellen-klavier-meyer-selb-horst> ] .
 
-<https://performance.musiconn.de/work/bagatellen-klavier-meyer-selb-horst> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/bagatellen-klavier-meyer-selb-horst> a cto:CTO_0001005 ;
     rdfs:label "Bagatellen, Klavier (Meyer-Selb, Horst)" ;
-    schema1:includedComposition <https://d-nb.info/gnd/1221222783>,
-        <https://d-nb.info/gnd/1221223275>,
-        <https://d-nb.info/gnd/1221223852>,
-        <https://performance.musiconn.de/work/drei-bagatellen-fuer-klavier-a-b-c-meyer-selb-horst>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4364812-5> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/bagatellen-klavier-meyer-selb-horst> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/53433423> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/135099579> ],
+        <https://performance.musiconn.de/person/faltenbacher-joerg> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/drei-bagatellen-fuer-klavier-a-b-c-meyer-selb-horst>,
         <https://performance.musiconn.de/work/drei-bagatellen-fuer-klavier-elegie-meyer-selb-horst>,
-        <https://performance.musiconn.de/work/drei-bagatellen-fuer-klavier-rundgesang-meyer-selb-horst>,
-        <https://viaf.org/viaf/10160546909210240000>,
-        <https://viaf.org/viaf/4129160546921910240001>,
-        <https://viaf.org/viaf/6253160546928610240001> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Umfasst: A-B-C, Elegie, Rundgesang" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1221222783>,
-        <https://d-nb.info/gnd/1221223275>,
-        <https://d-nb.info/gnd/1221223852>,
-        <https://d-nb.info/gnd/135099579>,
-        <https://d-nb.info/gnd/4364812-5> ;
-    cto:isPartOf <https://d-nb.info/gnd/4364812-5> ;
-    cto:relatedPerson <https://d-nb.info/gnd/135099579>,
-        <https://performance.musiconn.de/person/faltenbacher-joerg>,
-        <https://viaf.org/viaf/53433423> ;
-    cto:viaf <https://viaf.org/viaf/10160546909210240000>,
-        <https://viaf.org/viaf/4129160546921910240001>,
-        <https://viaf.org/viaf/53433423>,
-        <https://viaf.org/viaf/6253160546928610240001> .
+        <https://performance.musiconn.de/work/drei-bagatellen-fuer-klavier-rundgesang-meyer-selb-horst> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

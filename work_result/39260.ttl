@@ -1,34 +1,58 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/10983861> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/2220166777262131940008> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/490151246539144131819> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/114609681X> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1271794063> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/131623885> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4058023-4> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4136998-1> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/impressionen-gruber-simone> ] .
 
-<https://performance.musiconn.de/work/impressionen-gruber-simone> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/impressionen-gruber-simone> a cto:CTO_0001005 ;
     rdfs:label "Impressionen (Gruber, Simone)" ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Impressionen für StreichquartettUA 12.5.2012 München, Seidlvilla" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/114609681X>,
-        <https://d-nb.info/gnd/1271794063>,
-        <https://d-nb.info/gnd/131623885>,
-        <https://d-nb.info/gnd/4058023-4>,
-        <https://d-nb.info/gnd/4136998-1> ;
-    cto:isPartOf <https://d-nb.info/gnd/4058023-4>,
-        <https://d-nb.info/gnd/4136998-1> ;
-    cto:relatedPerson <https://d-nb.info/gnd/114609681X>,
-        <https://d-nb.info/gnd/1271794063>,
-        <https://d-nb.info/gnd/131623885>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4136998-1> ],
+        [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4058023-4> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/impressionen-gruber-simone> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/114609681X> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1271794063> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/490151246539144131819> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/10983861> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/2220166777262131940008> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/131623885> ],
         <https://performance.musiconn.de/person/mais-max-peter>,
-        <https://performance.musiconn.de/person/zedler-nina>,
-        <https://viaf.org/viaf/10983861>,
-        <https://viaf.org/viaf/2220166777262131940008>,
-        <https://viaf.org/viaf/490151246539144131819> ;
-    cto:viaf <https://viaf.org/viaf/10983861>,
-        <https://viaf.org/viaf/2220166777262131940008>,
-        <https://viaf.org/viaf/490151246539144131819> .
+        <https://performance.musiconn.de/person/zedler-nina> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

@@ -88,20 +88,33 @@ def add_events(events, file_path, start_index):
         graph.add((N4C.E5320, SCHEMA.dataFeedElement, bnd))
         graph.add((bnd, RDF.type, SCHEMA.DataFeedItem))
         graph.add((bnd, SCHEMA.item, event_id))
+        # schema:dateModified
         graph.add((bnd, SCHEMA.dateModified, Literal(date)))
+        # cto:source
         graph.add((event_id, RDF.type, CTO.CTO_0001005))
-        graph.add((event_id, NFDICORE.NFDI_0000191, URIRef("https://nfdi4culture.de/id/E1841")))
-        graph.add((event_id, CTO.CTO_0001006, URIRef("https://nfdi4culture.de/id/E5320")))
+        # nfdicore:published_by
+        graph.add((event_id, NFDICORE.NFDI_0000191, N4C.E1841))
+        # cto:is_referenced_in
+        graph.add((event_id, CTO.CTO_0001006, N4C.E5320))
+        # rdfs:label
         graph.add((event_id, RDFS.label, Literal(event['schema:event']['schema:name'])))
+        # cto:has_source_file (in this case the musiconn.performance api)
         graph.add((event_id, CTO.CTO_0001080, Literal("https://performance.musiconn.de/api")))
+        # nfdicore:has_media_type (in this case json)
         graph.add((event_id, NFDICORE.NFDI_0000146, N4C.E3087))
+        # nfdicore: has_url
         graph.add((event_id, NFDICORE.NFDI_0001008, URIRef(event_id)))
+        # nfdicore: has_license (in this case cc by 3.0)
         graph.add((event_id, NFDICORE.NFDI_0000142, N4C.E6406))
+        # blank node to link an external identifier to the work via cto:is_about_real_world_entity
         bnc = BNode()
         graph.add((event_id, CTO.CTO_0001025, bnc))
         graph.add((bnc, RDF.type, SCHEMA.MusicEvent))
+        # cto:has_external_classifier
         graph.add((event_id, CTO.CTO_0001026, URIRef('http://vocab.getty.edu/aat/300262956')))
+        # cto:aat_classifier
         graph.add((URIRef('http://vocab.getty.edu/aat/300262956'), RDF.type, CTO.CTO_0001029))
+
         if event['schema:event']['schema:temporalCoverage']['@value'] is not None:
             eventdate = event['schema:event']['schema:temporalCoverage']['@value']
             startdate = eventdate[:eventdate.index('/')]
@@ -184,12 +197,12 @@ def add_events(events, file_path, start_index):
                         if performer['@id'][person]['viaf'] is not None:
                             uri_pers_viaf = format_uri_viaf(performer['@id'][person]['viaf'])
                             bn6 = BNode()
-                            graph.add((event_id, CTO.relatedPerson, bn6))
+                            graph.add((event_id, CTO.CTO_0001009, bn6))
                             graph.add((bn6, RDF.type, NFDICORE.NFDI_0000004))
                             graph.add((bn6, NFDICORE.NFDI_0001006, URIRef(uri_pers_viaf)))
                             graph.add((URIRef(uri_pers_viaf), RDF.type, NFDICORE.NFDI_0001010))
                         if performer['@id'][person]['gnd'] is None and performer['@id'][person]['viaf'] is None:
-                            graph.add((event_id, CTO.relatedPerson, URIRef(person)))
+                            graph.add((event_id, CTO.CTO_0001009, URIRef(person)))
                 if performer['@type'] == 'schema:PerformingGroup':
                     for group in performer['@id']:
                         if performer['@id'][group]['gnd'] is not None:
@@ -224,64 +237,104 @@ def add_works(works, file_path, start_index):
     for work in works:
         graph = init_graph()
         work_id = URIRef(work['schema:MusicComposition']['@id'])
-        bn = BNode()
-        graph.add((N4C.E5320, SCHEMA.dataFeedElement, bn))
-        graph.add((bn, RDF.type, SCHEMA.DataFeedItem))
-        graph.add((bn, SCHEMA.item, work_id))
-        graph.add((work_id, RDF.type, CTO.DataFeedElement))
-        graph.add((work_id, RDF.type, SCHEMA.MusicComposition))
-        graph.add((work_id, NFDICORE.publisher, URIRef("https://nfdi4culture.de/id/E1841")))
-        graph.add((work_id, CTO.elementOf, URIRef("https://nfdi4culture.de/id/E5320")))
+        date = datetime.today().strftime('%Y-%m-%d')
+        bnd = BNode()
+        graph.add((N4C.E5320, SCHEMA.dataFeedElement, bnd))
+        graph.add((bnd, RDF.type, SCHEMA.DataFeedItem))
+        graph.add((bnd, SCHEMA.item, work_id))
+        # schema:dateModified
+        graph.add((bnd, SCHEMA.dateModified, Literal(date)))
+        # cto:source
+        graph.add((work_id, RDF.type, CTO.CTO_0001005))
+        # nfdicore:published_by
+        graph.add((work_id, NFDICORE.NFDI_0000191, N4C.E1841))
+        # cto:is_referenced_in
+        graph.add((work_id, CTO.CTO_0001006, N4C.E5320))
+        # rdfs:label
         graph.add((work_id, RDFS.label, Literal(work['schema:MusicComposition']['schema:name'])))
+        # cto:has_source_file (in this case the musiconn.performance api)
+        graph.add((work_id, CTO.CTO_0001080, Literal("https://performance.musiconn.de/api")))
+        # nfdicore:has_media_type (in this case json)
+        graph.add((work_id, NFDICORE.NFDI_0000146, N4C.E3087))
+        # nfdicore: has_url
+        graph.add((work_id, NFDICORE.NFDI_0001008, URIRef(work_id)))
+        # nfdicore: has_license (in this case cc by 3.0)
+        graph.add((work_id, NFDICORE.NFDI_0000142, N4C.E6406))
+        # blank node to link an external identifier to the work via cto:is_about_real_world_entity
+        bnc = BNode()
+        graph.add((work_id, CTO.CTO_0001025, bnc))
+        graph.add((bnc, RDF.type, SCHEMA.MusicComposition))
+        # cto:has_external_classifier
+        graph.add((work_id, CTO.CTO_0001026, URIRef('http://vocab.getty.edu/aat/300417577')))
+        # cto:aat_classifier
+        graph.add((URIRef('http://vocab.getty.edu/aat/300417577'), RDF.type, CTO.CTO_0001029))
 
         composers = work['schema:MusicComposition']['schema:composer']
         for composer in composers:
             for comp_item in composer['@id']:
                 if composer['@id'][comp_item]['gnd'] is not None:
-                    graph.add((work_id, CTO.relatedPerson, URIRef(composer['@id'][comp_item]['gnd'])))
-                    graph.add((work_id, CTO.gnd, URIRef((composer['@id'][comp_item]['gnd']))))
+                    uri_pers_gnd = format_uri_gnd(composer['@id'][comp_item]['gnd'])
+                    bn1 = BNode()
+                    # cto:has_related_person
+                    graph.add((work_id, CTO.CTO_0001009, bn1))
+                    # nfdicore:person
+                    graph.add((bn1, RDF.type, NFDICORE.NFDI_0000004))
+                    # nfdicore:has_external_identifier
+                    graph.add((bn1, NFDICORE.NFDI_0001006, URIRef(uri_pers_gnd)))
+                    # nfdicore:gnd_identifier
+                    graph.add((URIRef(uri_pers_gnd), RDF.type, NFDICORE.NFDI_0001009))
                 if composer['@id'][comp_item]['viaf'] is not None:
-                    graph.add((work_id, CTO.relatedPerson, URIRef(composer['@id'][comp_item]['viaf'])))
-                    graph.add((work_id, CTO.viaf, URIRef(composer['@id'][comp_item]['viaf'])))
+                    uri_pers_viaf = format_uri_viaf(composer['@id'][comp_item]['viaf'])
+                    bn2 = BNode()
+                    # cto:has_related_person
+                    graph.add((work_id, CTO.CTO_0001009, bn2))
+                    # nfdicore:person
+                    graph.add((bn2, RDF.type, NFDICORE.NFDI_0000004))
+                    # nfdicore:has_external_identifier
+                    graph.add((bn2, NFDICORE.NFDI_0001006, URIRef(uri_pers_viaf)))
+                    # nfdicore:viaf_identifier
+                    graph.add((URIRef(uri_pers_viaf), RDF.type, NFDICORE.NFDI_0001010))
                 if composer['@id'][comp_item]['gnd'] is None and composer['@id'][comp_item]['viaf'] is None:
-                    graph.add((work_id, CTO.relatedPerson, URIRef(comp_item)))
+                    graph.add((work_id, CTO.CTO_0001009, URIRef(comp_item)))
         genres = work['schema:MusicComposition']['schema:genre']
         if genres is not None:
             for genre in genres:
                 for genre_item in genre['@id']:
                     if genre['@id'][genre_item]['gnd'] is not None:
-                        graph.add((work_id, CTO.isPartOf, URIRef(genre['@id'][genre_item]['gnd'])))
-                        graph.add((work_id, CTO.gnd, URIRef(genre['@id'][genre_item]['gnd'])))
+                        uri_gen_gnd = format_uri_gnd(genre['@id'][genre_item]['gnd'])
+                        bn3 = BNode()
+                        # obo:part of
+                        graph.add((work_id, OBO.BFO_0000050, bn3))
+                        # cto:collection
+                        graph.add((bn3, RDF.type, CTO.NFDI_0000107))
+                        # nfdicore:has_external_identifier
+                        graph.add((bn3, NFDICORE.NFDI_0001006, URIRef(uri_gen_gnd)))
+                        # nfdicore: gnd_identifier
+                        graph.add((URIRef(uri_gen_gnd), RDF.type, NFDICORE.NFDI_0001009))
                     if genre['@id'][genre_item]['viaf'] is not None:
-                        graph.add((work_id, CTO.isPartOf, URIRef(genre['@id'][genre_item]['viaf'])))
-                        graph.add((work_id, CTO.viaf, URIRef(genre['@id'][genre_item]['viaf'])))
+                        uri_gen_viaf = format_uri_gnd(genre['@id'][genre_item]['viaf'])
+                        bn4 = BNode()
+                        # obo:part of
+                        graph.add((work_id, OBO.BFO_0000050, bn4))
+                        # cto:collection
+                        graph.add((bn4, RDF.type, CTO.NFDI_0000107))
+                        # nfdicore:has_external_identifier
+                        graph.add((bn4, NFDICORE.NFDI_0001006, URIRef(uri_gen_viaf)))
+                        # nfdicore: viaf_identifier
+                        graph.add((URIRef(uri_gen_viaf), RDF.type, NFDICORE.NFDI_0001010))
                     if genre['@id'][genre_item]['gnd'] is None and genre['@id'][genre_item]['viaf'] is None:
-                        graph.add((work_id, CTO.isPartOf, URIRef(genre_item)))
+                        graph.add((work_id, OBO.BFO_0000050, URIRef(genre_item)))
 
         compositions = work['schema:MusicComposition']['schema:includedComposition']
         for comp_index, composition in enumerate(compositions):
             for composition_item in compositions[comp_index]['@id']:
-                graph.add((work_id, SCHEMA.includedComposition, URIRef(composition_item)))
-                if compositions[comp_index]['@id'][composition_item]['gnd'] is not None:
-                    graph.add((work_id, SCHEMA.includedComposition,
-                               URIRef(compositions[comp_index]['@id'][composition_item]['gnd'])))
-                    graph.add((work_id, CTO.gnd, URIRef(compositions[comp_index]['@id'][composition_item]['gnd'])))
-                if compositions[comp_index]['@id'][composition_item]['viaf'] is not None:
-                    graph.add((work_id, SCHEMA.includedComposition,
-                               URIRef(compositions[comp_index]['@id'][composition_item]['viaf'])))
-                    graph.add((work_id, CTO.viaf, URIRef(compositions[comp_index]['@id'][composition_item]['viaf'])))
+                graph.add((work_id, CTO.CTO_0001019, URIRef(composition_item)))
 
         events = work['schema:MusicComposition']['schema:subjectOf']
         if events is not None:
             for event in events:
                 for event_item in event['@id']:
-                    graph.add((work_id, SCHEMA.subjectOf, URIRef(event_item)))
-                    if event['@id'][event_item]['gnd'] is not None:
-                        graph.add((work_id, SCHEMA.subjectOf, URIRef(event['@id'][event_item]['gnd'])))
-                        graph.add((work_id, CTO.gnd, URIRef(event['@id'][event_item]['gnd'])))
-                    if event['@id'][event_item]['viaf'] is not None:
-                        graph.add((work_id, SCHEMA.subjectOf, URIRef(event['@id'][event_item]['viaf'])))
-                        graph.add((work_id, CTO.viaf, URIRef(event['@id'][event_item]['viaf'])))
+                    graph.add((work_id, CTO.CTO_0001019, URIRef(event_item)))
 
         contributors = work['schema:MusicComposition']['schema:contributor']
         if contributors is not None:
@@ -289,23 +342,55 @@ def add_works(works, file_path, start_index):
                 if contributor['@type'] == 'schema:Person':
                     for person in contributor['@id']:
                         if contributor['@id'][person]['gnd'] is not None:
-                            graph.add((work_id, CTO.relatedPerson, URIRef(contributor['@id'][person]['gnd'])))
-                            graph.add((work_id, CTO.gnd, URIRef(contributor['@id'][person]['gnd'])))
+                            uri_con_pers_gnd = format_uri_gnd(contributor['@id'][person]['gnd'])
+                            bn5 = BNode()
+                            # cto:has_related_person
+                            graph.add((work_id, CTO.CTO_0001009, bn5))
+                            # nfdicore:person
+                            graph.add((bn5, RDF.type, NFDICORE.NFDI_0000004))
+                            # nfdicore:has_external_identifier
+                            graph.add((bn5, NFDICORE.NFDI_0001006, URIRef(uri_con_pers_gnd)))
+                            # nfdicore:gnd_identifier
+                            graph.add((URIRef(uri_con_pers_gnd), RDF.type, NFDICORE.NFDI_0001009))
                         if contributor['@id'][person]['viaf'] is not None:
-                            graph.add((work_id, CTO.relatedPerson, URIRef(contributor['@id'][person]['viaf'])))
-                            graph.add((work_id, CTO.viaf, URIRef(contributor['@id'][person]['viaf'])))
+                            uri_con_pers_viaf = format_uri_viaf(contributor['@id'][person]['viaf'])
+                            bn6 = BNode()
+                            # cto:has_related_person
+                            graph.add((work_id, CTO.CTO_0001009, bn6))
+                            # nfdicore:person
+                            graph.add((bn6, RDF.type, NFDICORE.NFDI_0000004))
+                            # nfdicore:has_external_identifier
+                            graph.add((bn6, NFDICORE.NFDI_0001006, URIRef(uri_con_pers_viaf)))
+                            # nfdicore:viaf_identifier
+                            graph.add((URIRef(uri_con_pers_viaf), RDF.type, NFDICORE.NFDI_0001010))
                         if contributor['@id'][person]['gnd'] is None and contributor['@id'][person]['viaf'] is None:
-                            graph.add((work_id, CTO.relatedPerson, URIRef(person)))
+                            graph.add((work_id, CTO.CTO_0001009, URIRef(person)))
                 if contributor['@type'] == 'schema:PerformingGroup':
                     for group in contributor['@id']:
                         if contributor['@id'][group]['gnd'] is not None:
-                            graph.add((work_id, CTO.relatedOrganization, URIRef(contributor['@id'][group]['gnd'])))
-                            graph.add((work_id, CTO.gnd, URIRef(contributor['@id'][group]['gnd'])))
+                            uri_con_gro_gnd = format_uri_gnd(contributor['@id'][group]['gnd'])
+                            bn7 = BNode()
+                            # cto:has_related_organization
+                            graph.add((work_id, CTO.CTO_0001010, bn7))
+                            # nfdicore:organization
+                            graph.add((bn7, RDF.type, NFDICORE.NFDI_0000003))
+                            # nfdicore:has_external_identifier
+                            graph.add((bn7, NFDICORE.NFDI_0001006, URIRef(uri_con_gro_gnd)))
+                            # nfdicore:gnd_identifier
+                            graph.add((URIRef(uri_con_gro_gnd), RDF.type, NFDICORE.NFDI_0001009))
                         if contributor['@id'][group]['viaf'] is not None:
-                            graph.add((work_id, CTO.relatedOrganization, URIRef(contributor['@id'][group]['viaf'])))
-                            graph.add((work_id, CTO.viaf, URIRef(contributor['@id'][group]['viaf'])))
+                            uri_con_gro_viaf = format_uri_viaf(contributor['@id'][group]['viaf'])
+                            bn8 = BNode()
+                            # cto:has_related_organization
+                            graph.add((work_id, CTO.CTO_0001010, bn8))
+                            # nfdicore:organization
+                            graph.add((bn8, RDF.type, NFDICORE.NFDI_0000003))
+                            # nfdicore:has_external_identifier
+                            graph.add((bn8, NFDICORE.NFDI_0001006, URIRef(uri_con_gro_viaf)))
+                            # nfdicore:viaf_identifier
+                            graph.add((URIRef(uri_con_gro_viaf), RDF.type, NFDICORE.NFDI_0001010))
                         if contributor['@id'][group]['gnd'] is None and contributor['@id'][group]['viaf'] is None:
-                            graph.add((work_id, CTO.relatedOrganization, URIRef(group)))
+                            graph.add((work_id, CTO.CTO_0001010, URIRef(group)))
         turtle_data = graph.serialize(format='turtle')
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(f"{file_path}{str(start_index + 1).zfill(5)}.ttl", 'w', encoding='utf-8') as file:

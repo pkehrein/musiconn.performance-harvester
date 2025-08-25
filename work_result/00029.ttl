@@ -1,29 +1,44 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/158420977> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/24788088> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/118587684> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4043582-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5084847-1> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-nicolai-otto> ] .
 
-<https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-nicolai-otto> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-nicolai-otto> a cto:CTO_0001005 ;
     rdfs:label "Die lustigen Weiber von Windsor (Nicolai, Otto)" ;
-    schema1:includedComposition <https://d-nb.info/gnd/1136925643>,
-        <https://d-nb.info/gnd/300113986>,
-        <https://d-nb.info/gnd/300114001>,
-        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-arie-der-frau-fluth-nicolai-otto>,
-        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-arien-nicolai-otto>,
-        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-in-einen-waschkorb-nicolai-otto>,
-        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-nun-eilt-herbei-nicolai-otto>,
-        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-ouvertuere-nicolai-otto>,
-        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-rezitativ-und-arie-nicolai-otto>,
-        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-so-hat-denn-der-schwank-nicolai-otto>,
-        <https://viaf.org/viaf/177421663>,
-        <https://viaf.org/viaf/182136771>,
-        <https://viaf.org/viaf/182760028> ;
-    schema1:subjectOf <https://performance.musiconn.de/event/die-lustigen-weiber-von-windsor-interimstheater-am-zwingerwall-dresden-1877-03-13-19-00>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4043582-9> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-nicolai-otto> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118587684> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/24788088> ] ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5084847-1> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/158420977> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/event/die-lustigen-weiber-von-windsor-interimstheater-am-zwingerwall-dresden-1877-03-13-19-00>,
         <https://performance.musiconn.de/event/die-lustigen-weiber-von-windsor-interimstheater-am-zwingerwall-dresden-1877-06-29-19-00>,
         <https://performance.musiconn.de/event/die-lustigen-weiber-von-windsor-interimstheater-am-zwingerwall-dresden-1877-09-23-19-00>,
         <https://performance.musiconn.de/event/die-lustigen-weiber-von-windsor-interimstheater-am-zwingerwall-dresden-1877-12-02-19-00>,
@@ -70,24 +85,15 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/event/die-lustigen-weiber-von-windsor-semperoper-dresden-1912-04-24-19-30>,
         <https://performance.musiconn.de/event/die-lustigen-weiber-von-windsor-semperoper-dresden-1913-02-03-19-30>,
         <https://performance.musiconn.de/event/die-lustigen-weiber-von-windsor-semperoper-dresden-1913-04-07-20-00>,
-        <https://performance.musiconn.de/event/die-lustigen-weiber-von-windsor-semperoper-dresden-1913-05-09-19-30> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Komisch-phantastische Oper in drei Akten" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1136925643>,
-        <https://d-nb.info/gnd/118587684>,
-        <https://d-nb.info/gnd/300113986>,
-        <https://d-nb.info/gnd/300114001>,
-        <https://d-nb.info/gnd/4043582-9>,
-        <https://d-nb.info/gnd/5084847-1> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
-        <https://viaf.org/viaf/158420977> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118587684>,
-        <https://viaf.org/viaf/24788088> ;
-    cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/177421663>,
-        <https://viaf.org/viaf/182136771>,
-        <https://viaf.org/viaf/182760028>,
-        <https://viaf.org/viaf/24788088> .
+        <https://performance.musiconn.de/event/die-lustigen-weiber-von-windsor-semperoper-dresden-1913-05-09-19-30>,
+        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-arie-der-frau-fluth-nicolai-otto>,
+        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-arien-nicolai-otto>,
+        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-in-einen-waschkorb-nicolai-otto>,
+        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-nun-eilt-herbei-nicolai-otto>,
+        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-ouvertuere-nicolai-otto>,
+        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-rezitativ-und-arie-nicolai-otto>,
+        <https://performance.musiconn.de/work/die-lustigen-weiber-von-windsor-so-hat-denn-der-schwank-nicolai-otto> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

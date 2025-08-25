@@ -1,33 +1,37 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/76580801> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/102533431> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/musicalische-seelenlust-theil-1-michael-tobias> ] .
 
-<https://performance.musiconn.de/work/musicalische-seelenlust-theil-1-michael-tobias> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/musicalische-seelenlust-theil-1-michael-tobias> a cto:CTO_0001005 ;
     rdfs:label "Musicalische Seelenlust ..., Theil 1 (Michael, Tobias)" ;
-    schema1:includedComposition <https://d-nb.info/gnd/1259296598>,
-        <https://d-nb.info/gnd/1259296962>,
-        <https://d-nb.info/gnd/30057388X>,
-        <https://performance.musiconn.de/work/musicalische-seelenlust-teil-1-aus-der-tiefe-rufe-ich-herr-zu-dir-michael-tobias>,
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/musicalische-seelenlust-theil-1-michael-tobias> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/102533431> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/76580801> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/musicalische-seelenlust-teil-1-aus-der-tiefe-rufe-ich-herr-zu-dir-michael-tobias>,
         <https://performance.musiconn.de/work/musicalische-seelenlust-teil-1-gott-ist-unser-zuversicht-und-staerke-michael-tobias>,
         <https://performance.musiconn.de/work/musicalische-seelenlust-theil-1-auswahl-michael-tobias>,
         <https://performance.musiconn.de/work/musicalische-seelenlust-theil-1-gott-ist-unsre-zuversicht-michael-tobias>,
         <https://performance.musiconn.de/work/musicalische-seelenlust-theil-1-meine-schafe-hoeren-meine-stimme-michael-tobias>,
-        <https://performance.musiconn.de/work/musikalische-seelenlust-teil-1-ich-bin-gewiss-michael-tobias>,
-        <https://viaf.org/viaf/199716617> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/102533431>,
-        <https://d-nb.info/gnd/1259296598>,
-        <https://d-nb.info/gnd/1259296962>,
-        <https://d-nb.info/gnd/30057388X> ;
-    cto:relatedPerson <https://d-nb.info/gnd/102533431>,
-        <https://viaf.org/viaf/76580801> ;
-    cto:viaf <https://viaf.org/viaf/199716617>,
-        <https://viaf.org/viaf/76580801> .
+        <https://performance.musiconn.de/work/musikalische-seelenlust-teil-1-ich-bin-gewiss-michael-tobias> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

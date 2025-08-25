@@ -1,18 +1,68 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/139053206> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/146006730> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/150245159> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/157753597> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/2665666> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/118580779> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/1212749-8> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/2019238-1> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/2074419-5> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4125676-1> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/65492-9> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/hear-my-prayer-mendelssohn-bartholdy-felix> ] .
 
-<https://performance.musiconn.de/work/hear-my-prayer-mendelssohn-bartholdy-felix> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/hear-my-prayer-mendelssohn-bartholdy-felix> a cto:CTO_0001005 ;
     rdfs:label "Hear my prayer (Mendelssohn Bartholdy, Felix)" ;
-    schema1:includedComposition <https://performance.musiconn.de/work/hear-my-prayer-bearbeitung-von-j-o-grimm-mendelssohn-bartholdy-felix>,
-        <https://performance.musiconn.de/work/hear-my-prayer-fassung-sopran-chor-orchester-mendelssohn-bartholdy-felix> ;
-    schema1:subjectOf <https://performance.musiconn.de/event/7-vereinskonzert-rathaus-muenster-westf-friedenssaal-1872-02-07>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4125676-1> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/hear-my-prayer-mendelssohn-bartholdy-felix> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/2665666> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118580779> ] ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/157753597> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1212749-8> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/139053206> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/150245159> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/146006730> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/2019238-1> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/2074419-5> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/65492-9> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/event/7-vereinskonzert-rathaus-muenster-westf-friedenssaal-1872-02-07>,
         <https://performance.musiconn.de/event/abendunterhaltung-leipzig-1877-03-20>,
         <https://performance.musiconn.de/event/abokonzert-20-zweites-gewandhaus-leipzig-1894-03-01>,
         <https://performance.musiconn.de/event/concert-zum-besten-des-katholischen-frauen-vereins-rathaus-muenster-westf-friedenssaal-1865-04-22>,
@@ -24,30 +74,10 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/event/motette-thomaskirche-leipzig-1877-06-09>,
         <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1914-03-07-14-00>,
         <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1915-06-19-14-00>,
-        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1916-01-29-14-00> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Text nach dem 55. Psalm" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118580779>,
-        <https://d-nb.info/gnd/1212749-8>,
-        <https://d-nb.info/gnd/2019238-1>,
-        <https://d-nb.info/gnd/2074419-5>,
-        <https://d-nb.info/gnd/4125676-1>,
-        <https://d-nb.info/gnd/65492-9> ;
-    cto:isPartOf <https://d-nb.info/gnd/4125676-1> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/1212749-8>,
-        <https://d-nb.info/gnd/2019238-1>,
-        <https://d-nb.info/gnd/2074419-5>,
-        <https://d-nb.info/gnd/65492-9>,
-        <https://viaf.org/viaf/139053206>,
-        <https://viaf.org/viaf/146006730>,
-        <https://viaf.org/viaf/150245159>,
-        <https://viaf.org/viaf/157753597> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118580779>,
-        <https://viaf.org/viaf/2665666> ;
-    cto:viaf <https://viaf.org/viaf/139053206>,
-        <https://viaf.org/viaf/146006730>,
-        <https://viaf.org/viaf/150245159>,
-        <https://viaf.org/viaf/157753597>,
-        <https://viaf.org/viaf/2665666> .
+        <https://performance.musiconn.de/event/vesper-in-der-kreuzkirche-kreuzkirche-dresden-1916-01-29-14-00>,
+        <https://performance.musiconn.de/work/hear-my-prayer-bearbeitung-von-j-o-grimm-mendelssohn-bartholdy-felix>,
+        <https://performance.musiconn.de/work/hear-my-prayer-fassung-sopran-chor-orchester-mendelssohn-bartholdy-felix> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

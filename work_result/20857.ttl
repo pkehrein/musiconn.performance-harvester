@@ -1,29 +1,41 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/40111596> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/1130357813> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/115593373> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4036774-5> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/des-knaben-wunderhorn> ] .
 
-<https://performance.musiconn.de/work/des-knaben-wunderhorn> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/des-knaben-wunderhorn> a cto:CTO_0001005 ;
     rdfs:label "Des Knaben Wunderhorn" ;
-    schema1:includedComposition <https://d-nb.info/gnd/1156656427>,
-        <https://performance.musiconn.de/work/lass-rauschen-lieb-lass-rauschen>,
-        <https://viaf.org/viaf/3084152502802410800007> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Zeit- und Sachbezug: Sammlung von Volksliedtexten, Hauptwerk der Romantik. - Inhalt: Anthologie in 3 Teilen, Liebes-, Soldaten-, Wander- und Kinderlieder vom Mittelalter bis ins 18. Jahrhundert. Anders als die Kindermärchen der Grimms arrangierten Arnim und Brentano die überlieferten Texte neu, d.h. sie passten die Mundart der zeitgenössischen Sprache an und überarbeiteten den Inhalt künstlerisch. Die Liedersammlung zielte auf ein an gepflegter Unterhaltung interessiertes gebildetes Publikum. - Überlieferung: Bd. 1 erschien 1805, vordatiert auf 1806, Bde. 2 und 3 folgten 1808, vermehrte (Teil-)Auflagen 1819, 1845-54." ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1130357813>,
-        <https://d-nb.info/gnd/115593373>,
-        <https://d-nb.info/gnd/1156656427>,
-        <https://d-nb.info/gnd/4036774-5> ;
-    cto:isPartOf <https://d-nb.info/gnd/1130357813>,
-        <https://d-nb.info/gnd/4036774-5> ;
-    cto:relatedPerson <https://d-nb.info/gnd/115593373>,
-        <https://viaf.org/viaf/40111596> ;
-    cto:viaf <https://viaf.org/viaf/3084152502802410800007>,
-        <https://viaf.org/viaf/40111596> .
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4036774-5> ],
+        [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/1130357813> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/des-knaben-wunderhorn> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/115593373> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/40111596> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/lass-rauschen-lieb-lass-rauschen> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

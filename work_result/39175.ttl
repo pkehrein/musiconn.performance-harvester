@@ -1,27 +1,43 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/2535006> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/118580736> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4035669-3> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4297924-9> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/6-lieder-op-7-hensel-fanny> ] .
 
-<https://performance.musiconn.de/work/6-lieder-op-7-hensel-fanny> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/6-lieder-op-7-hensel-fanny> a cto:CTO_0001005 ;
     rdfs:label "6 Lieder, op. 7 (Hensel, Fanny)" ;
-    schema1:includedComposition <https://performance.musiconn.de/work/nachtwanderer-op-7-nr-1-hensel-fanny> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Sechs (6) Lieder für Sopran und Klavier, op. 71. Nachtwanderer (J.Eichendorff)(Ich wandre durch die stille Nacht)2. Erwin (J.W.v.Goethe)(Ihr verblühet, süsse Rosen, meine Liebe trug euch nicht)3. Frühling (J.Eichendorff)(Uebern Garten durch die Lüfte)4. Du bist die Ruh (F.Rückert)(Du bist die Ruh, der Friede mild, die Sehnsucht du, und was sie stillt)5. Bitte (N.Lenau)(Weil' auf mir, du dunkles Auge)6. Dein ist mein Herz (N.Lenau)(Dein ist mein Herz, mein Schmerz dein eigen)Widmung: Frau R. Lejeune Dirichlet" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118580736>,
-        <https://d-nb.info/gnd/4035669-3>,
-        <https://d-nb.info/gnd/4297924-9> ;
-    cto:isPartOf <https://d-nb.info/gnd/4035669-3>,
-        <https://d-nb.info/gnd/4297924-9> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118580736>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4297924-9> ],
+        [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4035669-3> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/6-lieder-op-7-hensel-fanny> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/2535006> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118580736> ],
         <https://performance.musiconn.de/person/brosch-renate>,
-        <https://performance.musiconn.de/person/geiger-susanne-1955>,
-        <https://viaf.org/viaf/2535006> ;
-    cto:viaf <https://viaf.org/viaf/2535006> .
+        <https://performance.musiconn.de/person/geiger-susanne-1955> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/nachtwanderer-op-7-nr-1-hensel-fanny> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

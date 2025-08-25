@@ -1,27 +1,41 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/196754979> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/104067020> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4205436-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4327215-0> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/partito-de-ricercari-canzoni-alla-francese-cima-gian-paolo> ] .
 
-<https://performance.musiconn.de/work/partito-de-ricercari-canzoni-alla-francese-cima-gian-paolo> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/partito-de-ricercari-canzoni-alla-francese-cima-gian-paolo> a cto:CTO_0001005 ;
     rdfs:label "Partito de ricercari, & canzoni alla francese (Cima, Gian Paolo)" ;
-    schema1:includedComposition <https://d-nb.info/gnd/1257999338>,
-        <https://performance.musiconn.de/work/partito-de-ricercari-canzoni-alla-francese-la-scabrosa-cima-gian-paolo> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Als Corpus of early keyboard music, Band 20 herausgegebenUmfasst die Werke: Ricercar primo -- Ricercar secondo -- Ricercar terzo -- Ricercar quarto -- Ricercar quinto -- Ricercar sesto -- Ricercar settimo -- La morosa, canzon 1 -- La valeria, canzon 2 -- La gentile, canzon 3 -- La pace, canzon 4 -- La curta, canzon 5 -- La vaga, canzon 6 -- Fantasia, 7 -- Capriccio, 8 -- La gratiosa, canzon 9 -- Canzon 10 -- La tripola, canzon 11 -- La doppia, canzon 12 -- Canzon 13 -- La gustosa, canzon 14 -- La scabrosa, canzon 15 -- La nouella, canzon 16 [Di Andrea Cima] -- Breue regola con 12 essempi -- Ricercar, secondo tono -- L'istesso, vna voce più basso -- Ricercar, quinto tono -- L'istesso, più alto vna semidiapente -- Double canon -- [Enigma musicale]." ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/104067020>,
-        <https://d-nb.info/gnd/1257999338>,
-        <https://d-nb.info/gnd/4205436-9>,
-        <https://d-nb.info/gnd/4327215-0> ;
-    cto:isPartOf <https://d-nb.info/gnd/4205436-9>,
-        <https://d-nb.info/gnd/4327215-0> ;
-    cto:relatedPerson <https://d-nb.info/gnd/104067020>,
-        <https://viaf.org/viaf/196754979> ;
-    cto:viaf <https://viaf.org/viaf/196754979> .
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4205436-9> ],
+        [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4327215-0> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/partito-de-ricercari-canzoni-alla-francese-cima-gian-paolo> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/196754979> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/104067020> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/partito-de-ricercari-canzoni-alla-francese-la-scabrosa-cima-gian-paolo> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

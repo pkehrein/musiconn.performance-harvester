@@ -1,27 +1,37 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/2656905> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/118781847> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4188301-9> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/villanellen-buch-5-marenzio-luca> ] .
 
-<https://performance.musiconn.de/work/villanellen-buch-5-marenzio-luca> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/villanellen-buch-5-marenzio-luca> a cto:CTO_0001005 ;
     rdfs:label "Villanellen, Buch 5 (Marenzio, Luca)" ;
-    schema1:includedComposition <https://d-nb.info/gnd/1175160989>,
-        <https://performance.musiconn.de/work/villanellen-buch-5-se-la-vostra-partita-marenzio-luca>,
-        <https://viaf.org/viaf/178074384> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "1. Si dolci son i strai 2. Ahime ch'io peno 3. Dunque sol per amare 4. Se per servirti ogn'hora 5. Se m'uccidi crudele 6. Non posso piu soffrire 7. Seguir'una ch'odia 8. Poi che di si vil foco 9. Io son pur sciolto Amor 10. Tu m'uccidi cor mio 11. La farfalla 12. Donna che con l'ardore 13. Io son rimaso solo 14. La bella donna mia 15. Viva fiamma d'Amor 16. Ecco il dardo col qual 17. Ahime qual'empia sorte 18. Coro e dolce conforto 19. Poi che da voi ben mio 20. Molti animai selvaggi 21. Di pianti e di sospir 22. Hor gitevi a fidare 23. Lungi dal mio bel 24. Se la vostra partita 25. Non piu gl'Arabi sumi" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1175160989>,
-        <https://d-nb.info/gnd/118781847>,
-        <https://d-nb.info/gnd/4188301-9> ;
-    cto:isPartOf <https://d-nb.info/gnd/4188301-9> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118781847>,
-        <https://viaf.org/viaf/2656905> ;
-    cto:viaf <https://viaf.org/viaf/178074384>,
-        <https://viaf.org/viaf/2656905> .
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4188301-9> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/villanellen-buch-5-marenzio-luca> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/2656905> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118781847> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/villanellen-buch-5-se-la-vostra-partita-marenzio-luca> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

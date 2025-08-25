@@ -1,16 +1,42 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/7575259> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/118611666> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4187414-6> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/7644081-3> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/andante-und-variationen-klavier-2-op-46-b-dur-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/andante-und-variationen-klavier-2-op-46-b-dur-schumann-robert> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/andante-und-variationen-klavier-2-op-46-b-dur-schumann-robert> a cto:CTO_0001005 ;
     rdfs:label "Andante und Variationen, Klavier (2), op. 46 (B-Dur) (Schumann, Robert)" ;
-    schema1:subjectOf <https://performance.musiconn.de/event/2-vereinskonzert-rathaus-muenster-westf-friedenssaal-1869-10-30>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/7644081-3> ],
+        [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4187414-6> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/andante-und-variationen-klavier-2-op-46-b-dur-schumann-robert> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118611666> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/7575259> ] ;
+    cto:CTO_0001010 <https://performance.musiconn.de/corporation/klavierduo-alfons-und-aloys-kontarsky>,
+        <https://performance.musiconn.de/corporation/klavierduo-kurt-bauer-heidi-bung> ;
+    cto:CTO_0001019 <https://performance.musiconn.de/event/2-vereinskonzert-rathaus-muenster-westf-friedenssaal-1869-10-30>,
         <https://performance.musiconn.de/event/6-kammermusik-abend-buchhaendler-haus-frankfurt-am-main-cantate-saal-1963-03-01-20-00>,
         <https://performance.musiconn.de/event/6-kammermusik-abend-kleiner-konzertsaal-frankfurt-a-m-1877-01-08-19-00>,
         <https://performance.musiconn.de/event/8-kammermusik-abend-buchhaendler-haus-frankfurt-am-main-cantate-saal-1966-05-05-20-00>,
@@ -18,17 +44,7 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/event/concert-von-julius-otto-grimm-rathaus-muenster-westf-friedenssaal-1865-03-11>,
         <https://performance.musiconn.de/event/einladung-des-conservatoriums-der-musik-zu-leipzig-zur-feier-des-geburtstages-sr-majestaet-des-koenigs-johann-conservatorium-der-musik-1861-12-12-11-00>,
         <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1846-06-21> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Revidierte Fassung" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118611666>,
-        <https://d-nb.info/gnd/4187414-6>,
-        <https://d-nb.info/gnd/7644081-3> ;
-    cto:isPartOf <https://d-nb.info/gnd/4187414-6>,
-        <https://d-nb.info/gnd/7644081-3> ;
-    cto:relatedOrganization <https://performance.musiconn.de/corporation/klavierduo-alfons-und-aloys-kontarsky>,
-        <https://performance.musiconn.de/corporation/klavierduo-kurt-bauer-heidi-bung> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118611666>,
-        <https://viaf.org/viaf/7575259> ;
-    cto:viaf <https://viaf.org/viaf/7575259> .
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

@@ -1,19 +1,45 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/158420977> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/32197206> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/118584596> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4043582-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5084847-1> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/la-clemenza-di-tito-mozart-wolfgang-amadeus> ] .
 
-<https://performance.musiconn.de/work/la-clemenza-di-tito-mozart-wolfgang-amadeus> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/la-clemenza-di-tito-mozart-wolfgang-amadeus> a cto:CTO_0001005 ;
     rdfs:label "La clemenza di Tito (Mozart, Wolfgang Amadeus)" ;
-    schema1:includedComposition <https://d-nb.info/gnd/1135602220>,
-        <https://d-nb.info/gnd/300107277>,
-        <https://d-nb.info/gnd/300107285>,
-        <https://d-nb.info/gnd/7678105-7>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4043582-9> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/la-clemenza-di-tito-mozart-wolfgang-amadeus> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/32197206> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118584596> ] ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/158420977> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5084847-1> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1838-01-21>,
+        <https://performance.musiconn.de/event/titus-morettisches-opernhaus-dresden-1836-02-05-18-00>,
         <https://performance.musiconn.de/work/la-clemenza-di-tito-arie-des-sextus-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/la-clemenza-di-tito-arie-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/la-clemenza-di-tito-deh-per-questo-istante-solo-mozart-wolfgang-amadeus>,
@@ -25,32 +51,8 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/la-clemenza-di-tito-o-goetter-wie-stuermt-und-fluthet-bebt-und-schaudert-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/la-clemenza-di-tito-ouvertuere-mozart-wolfgang-amadeus>,
         <https://performance.musiconn.de/work/la-clemenza-di-tito-parto-parto-mozart-wolfgang-amadeus>,
-        <https://performance.musiconn.de/work/la-clemenza-di-tito-quintett-und-erstes-finale-mozart-wolfgang-amadeus>,
-        <https://viaf.org/viaf/175191562>,
-        <https://viaf.org/viaf/179626357>,
-        <https://viaf.org/viaf/185688111>,
-        <https://viaf.org/viaf/185699454> ;
-    schema1:subjectOf <https://performance.musiconn.de/event/sonntagsmusik-leipziger-strasse-3-berlin-1838-01-21>,
-        <https://performance.musiconn.de/event/titus-morettisches-opernhaus-dresden-1836-02-05-18-00> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Opera seria in 2 Akten" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1135602220>,
-        <https://d-nb.info/gnd/118584596>,
-        <https://d-nb.info/gnd/300107277>,
-        <https://d-nb.info/gnd/300107285>,
-        <https://d-nb.info/gnd/4043582-9>,
-        <https://d-nb.info/gnd/5084847-1>,
-        <https://d-nb.info/gnd/7678105-7> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
-        <https://viaf.org/viaf/158420977> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118584596>,
-        <https://viaf.org/viaf/32197206> ;
-    cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/175191562>,
-        <https://viaf.org/viaf/179626357>,
-        <https://viaf.org/viaf/185688111>,
-        <https://viaf.org/viaf/185699454>,
-        <https://viaf.org/viaf/32197206> .
+        <https://performance.musiconn.de/work/la-clemenza-di-tito-quintett-und-erstes-finale-mozart-wolfgang-amadeus> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

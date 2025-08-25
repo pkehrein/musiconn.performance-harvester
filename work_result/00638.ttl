@@ -1,56 +1,51 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/64755166> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/7575259> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/116322160> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/118611666> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4155614-8> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/fugen-ueber-den-namen-bach-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/fugen-ueber-den-namen-bach-schumann-robert> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/fugen-ueber-den-namen-bach-schumann-robert> a cto:CTO_0001005 ;
     rdfs:label "Fugen über den Namen BACH (Schumann, Robert)" ;
-    schema1:includedComposition <https://d-nb.info/gnd/117266742X>,
-        <https://d-nb.info/gnd/1192461991>,
-        <https://d-nb.info/gnd/1192463501>,
-        <https://d-nb.info/gnd/300144873>,
-        <https://d-nb.info/gnd/300144881>,
-        <https://d-nb.info/gnd/300642164>,
-        <https://performance.musiconn.de/work/fugen-ueber-den-namen-bach-b-dur-schumann-robert>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4155614-8> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/fugen-ueber-den-namen-bach-schumann-robert> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118611666> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/7575259> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/64755166> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/116322160> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/fugen-ueber-den-namen-bach-b-dur-schumann-robert>,
         <https://performance.musiconn.de/work/fugen-ueber-den-namen-bach-fuge-nr-1-schumann-robert>,
         <https://performance.musiconn.de/work/fugen-ueber-den-namen-bach-fuge-nr-2-schumann-robert>,
         <https://performance.musiconn.de/work/fugen-ueber-den-namen-bach-fuge-nr-3-schumann-robert>,
         <https://performance.musiconn.de/work/fugen-ueber-den-namen-bach-fuge-nr-4-schumann-robert>,
         <https://performance.musiconn.de/work/fugen-ueber-den-namen-bach-fuge-nr-5-schumann-robert>,
-        <https://performance.musiconn.de/work/fugen-ueber-den-namen-bach-fuge-nr-6-schumann-robert>,
-        <https://viaf.org/viaf/201854421>,
-        <https://viaf.org/viaf/208685050>,
-        <https://viaf.org/viaf/219948951>,
-        <https://viaf.org/viaf/4258154441739035460005>,
-        <https://viaf.org/viaf/4670156565754423500004>,
-        <https://viaf.org/viaf/5113156565755723500001> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/116322160>,
-        <https://d-nb.info/gnd/117266742X>,
-        <https://d-nb.info/gnd/118611666>,
-        <https://d-nb.info/gnd/1192461991>,
-        <https://d-nb.info/gnd/1192463501>,
-        <https://d-nb.info/gnd/300144873>,
-        <https://d-nb.info/gnd/300144881>,
-        <https://d-nb.info/gnd/300642164>,
-        <https://d-nb.info/gnd/4155614-8> ;
-    cto:isPartOf <https://d-nb.info/gnd/4155614-8> ;
-    cto:relatedPerson <https://d-nb.info/gnd/116322160>,
-        <https://d-nb.info/gnd/118611666>,
-        <https://viaf.org/viaf/64755166>,
-        <https://viaf.org/viaf/7575259> ;
-    cto:viaf <https://viaf.org/viaf/201854421>,
-        <https://viaf.org/viaf/208685050>,
-        <https://viaf.org/viaf/219948951>,
-        <https://viaf.org/viaf/4258154441739035460005>,
-        <https://viaf.org/viaf/4670156565754423500004>,
-        <https://viaf.org/viaf/5113156565755723500001>,
-        <https://viaf.org/viaf/64755166>,
-        <https://viaf.org/viaf/7575259> .
+        <https://performance.musiconn.de/work/fugen-ueber-den-namen-bach-fuge-nr-6-schumann-robert> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

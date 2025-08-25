@@ -1,31 +1,36 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/7575259> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/118611666> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4035669-3> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/myrthen-schumann-robert> ] .
 
-<https://performance.musiconn.de/work/myrthen-schumann-robert> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/myrthen-schumann-robert> a cto:CTO_0001005 ;
     rdfs:label "Myrthen (Schumann, Robert)" ;
-    schema1:includedComposition <https://d-nb.info/gnd/1051649927>,
-        <https://d-nb.info/gnd/1053737408>,
-        <https://d-nb.info/gnd/1208798839>,
-        <https://d-nb.info/gnd/1208799193>,
-        <https://d-nb.info/gnd/1208799797>,
-        <https://d-nb.info/gnd/1208801325>,
-        <https://d-nb.info/gnd/1208802151>,
-        <https://d-nb.info/gnd/1208802720>,
-        <https://d-nb.info/gnd/1208803212>,
-        <https://d-nb.info/gnd/300145888>,
-        <https://d-nb.info/gnd/300145896>,
-        <https://d-nb.info/gnd/300298773>,
-        <https://d-nb.info/gnd/300323530>,
-        <https://d-nb.info/gnd/30047296X>,
-        <https://d-nb.info/gnd/30049713X>,
-        <https://performance.musiconn.de/work/myrthen-aus-den-oestlichen-rosen-schumann-robert>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4035669-3> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/myrthen-schumann-robert> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/7575259> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118611666> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/myrthen-aus-den-oestlichen-rosen-schumann-robert>,
         <https://performance.musiconn.de/work/myrthen-der-nussbaum-schumann-robert>,
         <https://performance.musiconn.de/work/myrthen-die-hochlaender-witwe-schumann-robert>,
         <https://performance.musiconn.de/work/myrthen-die-lotosblume-schumann-robert>,
@@ -39,59 +44,8 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/work/myrthen-venetianische-lieder-nr-1-schumann-robert>,
         <https://performance.musiconn.de/work/myrthen-venetianische-lieder-nr-2-schumann-robert>,
         <https://performance.musiconn.de/work/myrthen-weit-weit-schumann-robert>,
-        <https://performance.musiconn.de/work/myrthen-zum-schluss-schumann-robert>,
-        <https://viaf.org/viaf/175229404>,
-        <https://viaf.org/viaf/175293532>,
-        <https://viaf.org/viaf/176505911>,
-        <https://viaf.org/viaf/179452288>,
-        <https://viaf.org/viaf/180941051>,
-        <https://viaf.org/viaf/182564095>,
-        <https://viaf.org/viaf/182680957>,
-        <https://viaf.org/viaf/183782899>,
-        <https://viaf.org/viaf/184893824>,
-        <https://viaf.org/viaf/186225632>,
-        <https://viaf.org/viaf/186632024>,
-        <https://viaf.org/viaf/186719550>,
-        <https://viaf.org/viaf/2352147270593935700003>,
-        <https://viaf.org/viaf/2469158792841939040003>,
-        <https://viaf.org/viaf/6316158792791039040002> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "26 Lieder in vier Heften" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/1051649927>,
-        <https://d-nb.info/gnd/1053737408>,
-        <https://d-nb.info/gnd/118611666>,
-        <https://d-nb.info/gnd/1208798839>,
-        <https://d-nb.info/gnd/1208799193>,
-        <https://d-nb.info/gnd/1208799797>,
-        <https://d-nb.info/gnd/1208801325>,
-        <https://d-nb.info/gnd/1208802151>,
-        <https://d-nb.info/gnd/1208802720>,
-        <https://d-nb.info/gnd/1208803212>,
-        <https://d-nb.info/gnd/300145888>,
-        <https://d-nb.info/gnd/300145896>,
-        <https://d-nb.info/gnd/300298773>,
-        <https://d-nb.info/gnd/300323530>,
-        <https://d-nb.info/gnd/30047296X>,
-        <https://d-nb.info/gnd/30049713X>,
-        <https://d-nb.info/gnd/4035669-3> ;
-    cto:isPartOf <https://d-nb.info/gnd/4035669-3> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118611666>,
-        <https://viaf.org/viaf/7575259> ;
-    cto:viaf <https://viaf.org/viaf/175229404>,
-        <https://viaf.org/viaf/175293532>,
-        <https://viaf.org/viaf/176505911>,
-        <https://viaf.org/viaf/179452288>,
-        <https://viaf.org/viaf/180941051>,
-        <https://viaf.org/viaf/182564095>,
-        <https://viaf.org/viaf/182680957>,
-        <https://viaf.org/viaf/183782899>,
-        <https://viaf.org/viaf/184893824>,
-        <https://viaf.org/viaf/186225632>,
-        <https://viaf.org/viaf/186632024>,
-        <https://viaf.org/viaf/186719550>,
-        <https://viaf.org/viaf/2352147270593935700003>,
-        <https://viaf.org/viaf/2469158792841939040003>,
-        <https://viaf.org/viaf/6316158792791039040002>,
-        <https://viaf.org/viaf/7575259> .
+        <https://performance.musiconn.de/work/myrthen-zum-schluss-schumann-robert> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

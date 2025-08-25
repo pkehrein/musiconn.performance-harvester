@@ -1,25 +1,32 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/27487880> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/103779671> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/baal> ] .
 
-<https://performance.musiconn.de/work/baal> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/baal> a cto:CTO_0001005 ;
     rdfs:label "Baal" ;
-    schema1:includedComposition <https://d-nb.info/gnd/122950088X>,
-        <https://performance.musiconn.de/work/baal-1>,
-        <https://viaf.org/viaf/5576161634383910850002> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Produktion der BBC. - Erstsendung: 02.03.1982. - Laufzeit: 64 Minutenfreie Filmbearbeitung nach der 3. Fassung des Baal-Stoffes von Brecht mit David Bowie in der Hauptrolle des Baal machte das Stück im anglo-amerikanischen Raum bekannt (Kindler)" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/103779671>,
-        <https://d-nb.info/gnd/122950088X> ;
-    cto:relatedPerson <https://d-nb.info/gnd/103779671>,
-        <https://viaf.org/viaf/27487880> ;
-    cto:viaf <https://viaf.org/viaf/27487880>,
-        <https://viaf.org/viaf/5576161634383910850002> .
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/baal> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/103779671> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/27487880> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/baal-1> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

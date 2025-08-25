@@ -1,26 +1,41 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/12572538> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/120052059> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4379530-4> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/quintette-klavier-zwei-violinen-viola-violoncello-bacewicz-grazyna> ] .
 
-<https://performance.musiconn.de/work/quintette-klavier-zwei-violinen-viola-violoncello-bacewicz-grazyna> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/quintette-klavier-zwei-violinen-viola-violoncello-bacewicz-grazyna> a cto:CTO_0001005 ;
     rdfs:label "Quintette, Klavier, zwei Violinen, Viola, Violoncello (Bacewicz, Grażyna)" ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/120052059>,
-        <https://d-nb.info/gnd/4379530-4> ;
-    cto:isPartOf <https://d-nb.info/gnd/4379530-4> ;
-    cto:relatedPerson <https://d-nb.info/gnd/120052059>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4379530-4> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/quintette-klavier-zwei-violinen-viola-violoncello-bacewicz-grazyna> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/120052059> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/12572538> ],
         <https://performance.musiconn.de/person/belck-monica>,
         <https://performance.musiconn.de/person/eggebrecht-kupsa-renate>,
         <https://performance.musiconn.de/person/heise-jutta>,
         <https://performance.musiconn.de/person/kupsa-friedemann>,
-        <https://performance.musiconn.de/person/prossel-elisabeth>,
-        <https://viaf.org/viaf/12572538> ;
-    cto:viaf <https://viaf.org/viaf/12572538> .
+        <https://performance.musiconn.de/person/prossel-elisabeth> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

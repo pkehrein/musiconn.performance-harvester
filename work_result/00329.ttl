@@ -1,28 +1,44 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/158420977> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/95156473> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/118596942> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4043582-9> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/5084847-1> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/madama-butterfly-puccini-giacomo> ] .
 
-<https://performance.musiconn.de/work/madama-butterfly-puccini-giacomo> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/madama-butterfly-puccini-giacomo> a cto:CTO_0001005 ;
     rdfs:label "Madama Butterfly (Puccini, Giacomo)" ;
-    schema1:includedComposition <https://d-nb.info/gnd/300122276>,
-        <https://d-nb.info/gnd/300122284>,
-        <https://performance.musiconn.de/work/madama-butterfly-addio-fiorito-asil-puccini-giacomo>,
-        <https://performance.musiconn.de/work/madama-butterfly-un-bel-di-vedremo-puccini-giacomo>,
-        <https://performance.musiconn.de/work/madame-butterfly-3-akt-einleitung-puccini-giacomo>,
-        <https://performance.musiconn.de/work/madame-butterfly-arie-der-butterfly-puccini-giacomo>,
-        <https://performance.musiconn.de/work/madame-butterfly-arie-puccini-giacomo>,
-        <https://performance.musiconn.de/work/madame-butterfly-leb-wohl-mein-bluetenreich-puccini-giacomo>,
-        <https://performance.musiconn.de/work/madame-butterfly-vogliatemi-bene-puccini-giacomo>,
-        <https://performance.musiconn.de/work/madame-butterfly-wiegenlied-puccini-giacomo>,
-        <https://viaf.org/viaf/183881493>,
-        <https://viaf.org/viaf/185689784> ;
-    schema1:subjectOf <https://performance.musiconn.de/event/madame-butterfly-1909-11-19-19-30>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4043582-9> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/madama-butterfly-puccini-giacomo> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118596942> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/95156473> ] ;
+    cto:CTO_0001010 [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/158420977> ],
+        [ a nfdicore:NFDI_0000003 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/5084847-1> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/event/madame-butterfly-1909-11-19-19-30>,
         <https://performance.musiconn.de/event/madame-butterfly-1909-11-27-19-30>,
         <https://performance.musiconn.de/event/madame-butterfly-1909-12-01-19-30>,
         <https://performance.musiconn.de/event/madame-butterfly-1909-12-05-19-30>,
@@ -56,22 +72,16 @@ n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
         <https://performance.musiconn.de/event/madame-butterfly-semperoper-dresden-1913-03-25-19-30>,
         <https://performance.musiconn.de/event/madame-butterfly-semperoper-dresden-1913-04-26-19-30>,
         <https://performance.musiconn.de/event/madame-butterfly-semperoper-dresden-1913-05-05>,
-        <https://performance.musiconn.de/event/madame-butterfly-semperoper-dresden-1913-05-27-19-30> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Oper in 2 Akten. Es gibt eine Version in 3 Akten." ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118596942>,
-        <https://d-nb.info/gnd/300122276>,
-        <https://d-nb.info/gnd/300122284>,
-        <https://d-nb.info/gnd/4043582-9>,
-        <https://d-nb.info/gnd/5084847-1> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedOrganization <https://d-nb.info/gnd/5084847-1>,
-        <https://viaf.org/viaf/158420977> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118596942>,
-        <https://viaf.org/viaf/95156473> ;
-    cto:viaf <https://viaf.org/viaf/158420977>,
-        <https://viaf.org/viaf/183881493>,
-        <https://viaf.org/viaf/185689784>,
-        <https://viaf.org/viaf/95156473> .
+        <https://performance.musiconn.de/event/madame-butterfly-semperoper-dresden-1913-05-27-19-30>,
+        <https://performance.musiconn.de/work/madama-butterfly-addio-fiorito-asil-puccini-giacomo>,
+        <https://performance.musiconn.de/work/madama-butterfly-un-bel-di-vedremo-puccini-giacomo>,
+        <https://performance.musiconn.de/work/madame-butterfly-3-akt-einleitung-puccini-giacomo>,
+        <https://performance.musiconn.de/work/madame-butterfly-arie-der-butterfly-puccini-giacomo>,
+        <https://performance.musiconn.de/work/madame-butterfly-arie-puccini-giacomo>,
+        <https://performance.musiconn.de/work/madame-butterfly-leb-wohl-mein-bluetenreich-puccini-giacomo>,
+        <https://performance.musiconn.de/work/madame-butterfly-vogliatemi-bene-puccini-giacomo>,
+        <https://performance.musiconn.de/work/madame-butterfly-wiegenlied-puccini-giacomo> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

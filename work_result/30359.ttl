@@ -1,33 +1,57 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/80126484> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/134634632> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/135350190> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4043582-9> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/welt-fest-spiele-heyn-thomas> ] .
 
-<https://performance.musiconn.de/work/welt-fest-spiele-heyn-thomas> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<http://viaf.org/viaf/6583270> a nfdicore:NFDI_0001010 .
+
+<https://d-nb.info/gnd/134634675> a nfdicore:NFDI_0001009 .
+
+<https://performance.musiconn.de/work/welt-fest-spiele-heyn-thomas> a cto:CTO_0001005 ;
     rdfs:label "Welt fest - Spiele! (Heyn, Thomas)" ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Uraufgeführt am 13.05.1989 Kammermusiktheater im Haus der Volkskunst LeipzigUmfasst drei Teile: 1. Der Ozeanflug (Brecht-Weill), 2. Die Metamorphosen der Anna K. (Text Ralph Oehme), 3. \"Das innerste Afrika\", Szenische Improviation für 5 Darsteller/Sänger u. 3 Musiker (Text: Volker Braun)" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/134634632>,
-        <https://d-nb.info/gnd/134634675>,
-        <https://d-nb.info/gnd/135350190>,
-        <https://d-nb.info/gnd/4043582-9> ;
-    cto:isPartOf <https://d-nb.info/gnd/4043582-9> ;
-    cto:relatedPerson <https://d-nb.info/gnd/134634632>,
-        <https://d-nb.info/gnd/134634675>,
-        <https://d-nb.info/gnd/135350190>,
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4043582-9> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/welt-fest-spiele-heyn-thomas> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/134634675> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/6583270> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/134634675> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/80126484> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/134634632> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/135350190> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/6583270> ],
         <https://performance.musiconn.de/person/albrecht-cordula>,
         <https://performance.musiconn.de/person/bangratsch-stanislaus>,
         <https://performance.musiconn.de/person/fritze-katrin>,
         <https://performance.musiconn.de/person/klame-michael>,
-        <https://performance.musiconn.de/person/wollenberg-jens-paul>,
-        <https://viaf.org/viaf/6583270>,
-        <https://viaf.org/viaf/80126484> ;
-    cto:viaf <https://viaf.org/viaf/6583270>,
-        <https://viaf.org/viaf/80126484> .
+        <https://performance.musiconn.de/person/wollenberg-jens-paul> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

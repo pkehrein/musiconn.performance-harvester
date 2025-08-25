@@ -1,25 +1,41 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/17406901> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/118989936> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4035669-3> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/4297924-9> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/clairieres-dans-le-ciel-boulanger-lili> ] .
 
-<https://performance.musiconn.de/work/clairieres-dans-le-ciel-boulanger-lili> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/clairieres-dans-le-ciel-boulanger-lili> a cto:CTO_0001005 ;
     rdfs:label "Clairières dans le ciel (Boulanger, Lili)" ;
-    schema1:includedComposition <https://performance.musiconn.de/work/clairieres-dans-le-ciel-auswahl-boulanger-lili> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "13 Lieder für Singstimme und Klaviernach Gedichten von Francis JammesWidmung: Gabriel Fauré1. Elle était descendue (á Gabriel Fauré)2. Elle est gravement gaie (á ma petite Miki)3. Parfois, je suis triste (á Fernand Francell)4. Un Poète disait (á Yvonne Brothier)5. Au pied de mon lit (á ma chère Maman)6. Si tout ceci n'est qu'un pauvre rêve (á mon grand ami Mr. Tito Ricordi)7. Nous nous aimerons (á Henri Albers)8. Vous m'avez regardé avec toute votre âme9. Les lilas qui avaient fleuri (á R[odolphe?] Plamondon (1876-1940)10. Deux ancolies (á mes chères Marthe et Richard Bouwens van der Boijen)11. Par ce que j'ai souffert (á David Devries)12. Je garde une médaille13. Demain fera un an (á mon ami Roger Ducasse (Jean Roger-Ducasse)Erstveröffentlichung 1919Alternativfassung: für Singstimme und Orchester" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118989936>,
-        <https://d-nb.info/gnd/4035669-3>,
-        <https://d-nb.info/gnd/4297924-9> ;
-    cto:isPartOf <https://d-nb.info/gnd/4035669-3>,
-        <https://d-nb.info/gnd/4297924-9> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118989936>,
-        <https://viaf.org/viaf/17406901> ;
-    cto:viaf <https://viaf.org/viaf/17406901> .
+    obo:BFO_0000050 [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4035669-3> ],
+        [ a cto:NFDI_0000107 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/4297924-9> ] ;
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/clairieres-dans-le-ciel-boulanger-lili> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/17406901> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118989936> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/clairieres-dans-le-ciel-auswahl-boulanger-lili> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 

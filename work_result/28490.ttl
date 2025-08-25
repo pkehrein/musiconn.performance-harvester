@@ -1,25 +1,40 @@
-@prefix cto: <https://nfdi4culture.de/ontology#> .
+@prefix cto: <https://nfdi4culture.de/ontology/> .
 @prefix n4c: <https://nfdi4culture.de/id/> .
-@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology#> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
 
+<http://viaf.org/viaf/71579098> a nfdicore:NFDI_0001010 .
+
+<http://viaf.org/viaf/85870027> a nfdicore:NFDI_0001010 .
+
+<http://vocab.getty.edu/aat/300417577> a cto:CTO_0001029 .
+
+<https://d-nb.info/gnd/118596721> a nfdicore:NFDI_0001009 .
+
+<https://d-nb.info/gnd/134763947> a nfdicore:NFDI_0001009 .
+
 n4c:E5320 schema1:dataFeedElement [ a schema1:DataFeedItem ;
+            schema1:dateModified "2025-08-25" ;
             schema1:item <https://performance.musiconn.de/work/mimoletnosti-prokofiev-sergei-sergeyevich> ] .
 
-<https://performance.musiconn.de/work/mimoletnosti-prokofiev-sergei-sergeyevich> a schema1:MusicComposition,
-        cto:DataFeedElement ;
+<https://performance.musiconn.de/work/mimoletnosti-prokofiev-sergei-sergeyevich> a cto:CTO_0001005 ;
     rdfs:label "Mimolëtnosti (Prokofiev, Sergei Sergeyevich)" ;
-    schema1:includedComposition <https://performance.musiconn.de/work/mimoletnosti-auswahl-prokofiev-sergei-sergeyevich> ;
-    nfdicore:publisher n4c:E1841 ;
-    cto:abstract "Zyklus von 20 Klavierstücken: 1. Lentamente 2. Andante 3. Allegretto 4. Animato 5. Molto giocoso 6. Con eleganza 7. Pittoresco (Arpa) 8. Commodo 9. Allegro tranquillo 10. Ridicolosamente 11. Con vivacità 12. Assai moderato 13. Allegretto 14. Feroce 15. Inquieto 16. Dolente 17. Poetico 18. Con una dolce lentezza 19. Presto agitatissimo e molto accentuato 20. Lento irrealmente" ;
-    cto:elementOf n4c:E5320 ;
-    cto:gnd <https://d-nb.info/gnd/118596721>,
-        <https://d-nb.info/gnd/134763947> ;
-    cto:relatedPerson <https://d-nb.info/gnd/118596721>,
-        <https://d-nb.info/gnd/134763947>,
-        <https://viaf.org/viaf/71579098>,
-        <https://viaf.org/viaf/85870027> ;
-    cto:viaf <https://viaf.org/viaf/71579098>,
-        <https://viaf.org/viaf/85870027> .
+    nfdicore:NFDI_0000142 n4c:E6406 ;
+    nfdicore:NFDI_0000146 n4c:E3087 ;
+    nfdicore:NFDI_0000191 n4c:E1841 ;
+    nfdicore:NFDI_0001008 <https://performance.musiconn.de/work/mimoletnosti-prokofiev-sergei-sergeyevich> ;
+    cto:CTO_0001006 n4c:E5320 ;
+    cto:CTO_0001009 [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/118596721> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <https://d-nb.info/gnd/134763947> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/85870027> ],
+        [ a nfdicore:NFDI_0000004 ;
+            nfdicore:NFDI_0001006 <http://viaf.org/viaf/71579098> ] ;
+    cto:CTO_0001019 <https://performance.musiconn.de/work/mimoletnosti-auswahl-prokofiev-sergei-sergeyevich> ;
+    cto:CTO_0001025 [ a schema1:MusicComposition ] ;
+    cto:CTO_0001026 <http://vocab.getty.edu/aat/300417577> ;
+    cto:CTO_0001080 "https://performance.musiconn.de/api" .
 
