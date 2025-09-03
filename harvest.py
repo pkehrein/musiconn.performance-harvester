@@ -269,6 +269,24 @@ def add_works(works, file_path, start_index):
         # cto:aat_classifier
         graph.add((URIRef('http://vocab.getty.edu/aat/300417577'), RDF.type, CTO.CTO_0001029))
 
+        work_identifier = work['schema:MusicComposition']['@id']
+
+        for auth in work_auth:
+            authority = list(work_auth[auth].keys())
+            if work_identifier == authority[0]:
+                work_gnd = work_auth[auth][work_identifier]['gnd']
+                if work_gnd is not None:
+                    uri_work_gnd = format_uri_gnd(work_gnd)
+                    graph.add((work_id, NFDICORE.NFDI_0001006, URIRef(uri_work_gnd)))
+                    graph.add((URIRef(uri_work_gnd), RDF.type, NFDICORE.NFDI0001009))
+
+                work_viaf = work_auth[auth][work_identifier]['viaf']
+                if work_viaf is not None:
+                    uri_work_viaf = format_uri_viaf(work_viaf)
+                    graph.add((work_id, NFDICORE.NFDI0001006, URIRef(uri_work_viaf)))
+                    graph.add((URIRef(uri_work_viaf), RDF.type, NFDICORE.NFDI0001010))
+                break
+
         composers = work['schema:MusicComposition']['schema:composer']
         for composer in composers:
             for comp_item in composer['@id']:
@@ -312,7 +330,7 @@ def add_works(works, file_path, start_index):
                         # nfdicore: gnd_identifier
                         graph.add((URIRef(uri_gen_gnd), RDF.type, NFDICORE.NFDI_0001009))
                     if genre['@id'][genre_item]['viaf'] is not None:
-                        uri_gen_viaf = format_uri_gnd(genre['@id'][genre_item]['viaf'])
+                        uri_gen_viaf = format_uri_viaf(genre['@id'][genre_item]['viaf'])
                         bn4 = BNode()
                         # obo:part of
                         graph.add((work_id, OBO.BFO_0000050, bn4))
@@ -807,7 +825,7 @@ def fetch_authorities(authority_list, wait_time):
     for authority in authority_list:
         auth_data = fetch_json_data(
             f"https://performance.musiconn.de/api?action=get&format=json&authority={authority['authority']}", wait_time)
-        if auth_data:
+        if auth_data and not auth_data["authority"][str(authority['authority'])]['url']:
             auth_link = auth_data["authority"][str(authority['authority'])]['links'][0]
             data_list.append(auth_link)
     return data_list
